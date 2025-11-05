@@ -5,6 +5,9 @@
 
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+
+# файл для парсинга всех школ в Саратове
+
 """
 Парсер 2GIS для школ Саратова с использованием Selenium
 Извлекает: название школы, URL страницы, адрес
@@ -24,6 +27,7 @@ except ImportError:
 
 import time
 import json
+import os
 from urllib.parse import urljoin, urlparse
 
 try:
@@ -32,6 +36,10 @@ try:
 except ImportError:
     PYAUTOGUI_AVAILABLE = False
     print("[WARN] pyautogui не установлен. Установите: pip install pyautogui")
+
+# Путь к папке output относительно текущего файла
+OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "output")
+
 
 class TwoGisSchoolParser:
     def __init__(self):
@@ -282,7 +290,7 @@ class TwoGisSchoolParser:
             except NoSuchElementException:
                 print(f"[ERROR] Кнопка с классом '_n5hmn94' не найдена")
                 return False
-                
+            
         except Exception as e:
             print(f"[ERROR] Ошибка при нажатии на кнопку: {e}")
             import traceback
@@ -300,9 +308,10 @@ class TwoGisSchoolParser:
             # Остальные страницы с /page/N
             return f"{base_url}/page/{page_num}"
     
-    def save_page_to_json(self, schools, page_num, output_dir="2gis_all_schools"):
+    def save_page_to_json(self, schools, page_num, output_dir=None):
         """Сохраняет результаты одной страницы в отдельный JSON файл"""
-        import os
+        if output_dir is None:
+            output_dir = OUTPUT_DIR
         
         try:
             # Создаем директорию, если её нет
@@ -326,9 +335,14 @@ class TwoGisSchoolParser:
         except Exception as e:
             print(f"[ERROR] Ошибка при сохранении файла: {e}")
     
-    def save_to_json(self, schools, filename="2gis_all_schools.json"):
+    def save_to_json(self, schools, filename=None):
         """Сохраняет результаты в JSON файл"""
+        if filename is None:
+            filename = os.path.join(OUTPUT_DIR, "all_schools.json")
+        
         try:
+            os.makedirs(os.path.dirname(filename) if os.path.dirname(filename) else OUTPUT_DIR, exist_ok=True)
+            
             with open(filename, 'w', encoding='utf-8') as f:
                 json.dump({
                     "source": "2GIS",
@@ -424,7 +438,7 @@ def main():
         parser.save_to_json(all_schools)
         
         print(f"\n[OK] Парсинг завершен! Всего элементов: {len(all_schools)}")
-        print(f"[OK] Файлы сохранены в папку: 2gis_all_schools/")
+        print(f"[OK] Файлы сохранены в папку: {OUTPUT_DIR}")
         
     except Exception as e:
         print(f"[ERROR] Ошибка: {e}")

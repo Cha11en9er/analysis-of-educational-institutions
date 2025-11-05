@@ -1,0 +1,69 @@
+{
+  "source": "2GIS",
+  "topic": "Школы Саратова",
+  "description": "Сырые данные со страницы (без фильтрации)",
+  "page": 1,
+  "total_elements": 12,
+  "data": [
+    {
+      "name": "Средняя школа №83",
+      "link": "https://2gis.ru/saratov/firm/70000001037362342",
+      "review_link": "https://2gis.ru/saratov/firm/70000001037362342/tab/reviews"
+    },
+    {
+      "name": "Школа",
+      "link": "https://2gis.ru/saratov/station/6052497978294439",
+      "review_link": "https://2gis.ru/saratov/firm/6052497978294439/tab/reviews"
+    },
+    {
+      "name": "Maximum Education",
+      "link": "https://2gis.ru/saratov/firm/70000001063207425",
+      "review_link": "https://2gis.ru/saratov/firm/70000001063207425/tab/reviews"
+    },
+    {
+      "name": "Частная школа начальных классов",
+      "link": "https://2gis.ru/saratov/firm/70000001079636032",
+      "review_link": "https://2gis.ru/saratov/firm/70000001079636032/tab/reviews"
+    },
+    {
+      "name": "Средняя школа №86",
+      "link": "https://2gis.ru/saratov/firm/6052240280256869",
+      "review_link": "https://2gis.ru/saratov/firm/6052240280256869/tab/reviews"
+    },
+    {
+      "name": "Медицинский предуниверсарий",
+      "link": "https://2gis.ru/saratov/firm/6052240280262677",
+      "review_link": "https://2gis.ru/saratov/firm/6052240280262677/tab/reviews"
+    },
+    {
+      "name": "Средняя общеобразовательная школа №67 им. О.И. Янковского",
+      "link": "https://2gis.ru/saratov/firm/6052240280256838",
+      "review_link": "https://2gis.ru/saratov/firm/6052240280256838/tab/reviews"
+    },
+    {
+      "name": "Ласточкино",
+      "link": "https://2gis.ru/saratov/firm/70000001079218611",
+      "review_link": "https://2gis.ru/saratov/firm/70000001079218611/tab/reviews"
+    },
+    {
+      "name": "Лицей №3",
+      "link": "https://2gis.ru/saratov/firm/6052240280257712",
+      "review_link": "https://2gis.ru/saratov/firm/6052240280257712/tab/reviews"
+    },
+    {
+      "name": "Гимназия №7",
+      "link": "https://2gis.ru/saratov/firm/70000001030556823",
+      "review_link": "https://2gis.ru/saratov/firm/70000001030556823/tab/reviews"
+    },
+    {
+      "name": "Гимназия №4 им. Героя Советского Союза В.М. Безбокова",
+      "link": "https://2gis.ru/saratov/firm/6052240280257235",
+      "review_link": "https://2gis.ru/saratov/firm/6052240280257235/tab/reviews"
+    },
+    {
+      "name": "Аврора",
+      "link": "https://2gis.ru/saratov/firm/70000001035603313",
+      "review_link": "https://2gis.ru/saratov/firm/70000001035603313/tab/reviews"
+    }
+  ]
+}

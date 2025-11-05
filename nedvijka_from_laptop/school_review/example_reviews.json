@@ -1,0 +1,19 @@
+{
+    "resource": "2gis",
+    "schools": [
+      { "id": "",
+       "name": "",
+       "full_name": "",
+       "adres": "",
+       "rating_2gis": "",
+        "url": "" }
+    ],
+    "reviews": [
+      {
+        "school_id": "",
+        "date": "",
+        "text": "",
+        "weightы": ""
+      }
+    ]
+  }

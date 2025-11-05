@@ -1,0 +1,24 @@
+{
+    "school_name": [
+        {
+            "name": "Средняя школа №83",
+            "link": "https://2gis.ru/saratov/firm/70000001037362342",
+            "review_link": "https://2gis.ru/saratov/firm/70000001037362342/tab/reviews"
+        },
+        {
+            "name": "Медицинский предуниверсарий",
+            "link": "https://2gis.ru/saratov/firm/6052240280262677",
+            "review_link": "https://2gis.ru/saratov/firm/6052240280262677/tab/reviews"
+        },
+        {
+            "name": "Гимназия №7 ",
+            "link": "https://2gis.ru/saratov/firm/70000001030556823",
+            "review_link": "https://2gis.ru/saratov/firm/70000001030556823/tab/reviews"
+        },
+        {
+            "name": "Аврора",
+            "link": "https://2gis.ru/saratov/firm/70000001035603313",
+            "review_link": "https://2gis.ru/saratov/firm/70000001035603313/tab/reviews"
+        }
+    ]
+}

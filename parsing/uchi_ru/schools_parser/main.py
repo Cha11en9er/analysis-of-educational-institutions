@@ -9,7 +9,13 @@ import requests
 from bs4 import BeautifulSoup
 import time
 import urllib.parse
+import os
+import json
 from typing import List, Set
+
+# Путь к папке output относительно текущего файла
+OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "output")
+
 
 class UchiRuParser:
     def __init__(self):
@@ -73,9 +79,39 @@ class UchiRuParser:
             
         print(f"\nПарсинг завершен. Найдено уникальных записей: {len(self.results)}")
     
-    def save_to_txt(self, filename: str = "schools_data.txt"):
-        """Сохраняет результаты в txt файл"""
+    def save_to_json(self, filename: str = None):
+        """Сохраняет результаты в JSON файл"""
+        if filename is None:
+            os.makedirs(OUTPUT_DIR, exist_ok=True)
+            filename = os.path.join(OUTPUT_DIR, "schools_uchi_ru.json")
+        
         try:
+            schools_list = sorted(list(self.results))
+            data = {
+                "source": "uchi.ru",
+                "topic": "Школы Саратова",
+                "description": "Данные школ с сайта uchi.ru",
+                "total_schools": len(schools_list),
+                "data": [{"name": name} for name in schools_list]
+            }
+            
+            os.makedirs(os.path.dirname(filename) if os.path.dirname(filename) else OUTPUT_DIR, exist_ok=True)
+            with open(filename, 'w', encoding='utf-8') as f:
+                json.dump(data, f, ensure_ascii=False, indent=2)
+            
+            print(f"Данные сохранены в файл: {filename}")
+            
+        except Exception as e:
+            print(f"Ошибка при сохранении файла: {e}")
+    
+    def save_to_txt(self, filename: str = None):
+        """Сохраняет результаты в txt файл"""
+        if filename is None:
+            os.makedirs(OUTPUT_DIR, exist_ok=True)
+            filename = os.path.join(OUTPUT_DIR, "schools_data.txt")
+        
+        try:
+            os.makedirs(os.path.dirname(filename) if os.path.dirname(filename) else OUTPUT_DIR, exist_ok=True)
             with open(filename, 'w', encoding='utf-8') as f:
                 f.write("Данные школ с сайта uchi.ru\n")
                 f.write("=" * 50 + "\n\n")
@@ -96,6 +132,7 @@ class UchiRuParser:
         print("=" * 30)
         
         self.parse_all_pages(1, 15)
+        self.save_to_json()
         self.save_to_txt()
         
         print("\nПарсинг завершен успешно!")
@@ -106,3 +143,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+

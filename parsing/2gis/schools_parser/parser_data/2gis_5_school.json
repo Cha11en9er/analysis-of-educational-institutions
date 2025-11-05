@@ -1,0 +1,31 @@
+{
+    "source": "2GIS",
+    "topic": "Школы Саратова",
+    "total_elements": 208,
+    "data": [
+        {
+            "id": "1",
+            "name": "Средняя школа №83",
+            "url": "https://2gis.ru/saratov/firm/70000001037362342",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001037362342/tab/reviews"
+        },
+        {
+            "id": "7",
+            "name": "Средняя общеобразовательная школа №67 им. О.И. Янковского",
+            "url": "https://2gis.ru/saratov/firm/6052240280256838",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256838/tab/reviews"
+        },
+        {
+            "id": "9",
+            "name": "Лицей №3",
+            "url": "https://2gis.ru/saratov/firm/6052240280257712",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257712/tab/reviews"
+        },
+        {
+            "id": "10",
+            "name": "Гимназия №7",
+            "url": "https://2gis.ru/saratov/firm/70000001030556823",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001030556823/tab/reviews"
+        }
+    ]
+}
