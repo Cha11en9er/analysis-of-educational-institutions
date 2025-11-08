@@ -1,18 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Парсер карточек школ 2ГИС на Selenium.
-Читает ссылки из файла со списком школ и сохраняет данные отзывов по шаблону:
+Парсер отзывов школ 2ГИС на Selenium.
+Читает ссылки из файла со списком школ и сохраняет все отзывы в один файл:
 
-schools: [{ id, name, full_name, adres, rating_2gis, url }]
-reviews: [{ school_id, date, text, weightы }]
+reviews: [{ school_id, date, text, likes_count }]
 
-Также создаёт для каждой школы отдельный файл в каталоге output:
-<id>_2gis_review.json
+Сохраняет все отзывы в файл: 2gis_reviews_data/2gis_scools_reviews.json
 """
 
 import json
 import os
+import re
 import time
 from typing import Dict, Any, List
 
@@ -26,7 +25,9 @@ from selenium.webdriver import ActionChains
 
 
 # Пути относительно текущего файла
-OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "output")
+REVIEWS_DATA_DIR = os.path.join(os.path.dirname(__file__), "2gis_reviews_data")
+REVIEWS_OUTPUT_FILE = os.path.join(REVIEWS_DATA_DIR, "2gis_scools_reviews.json")
+DEBUG_HTML_DIR = os.path.join(os.path.dirname(__file__), "debug_html")
 
 
 def setup_driver() -> webdriver.Chrome:
@@ -58,107 +59,350 @@ def wait_text_or_empty(driver: webdriver.Chrome, by: By, locator: str, timeout: 
         return ""
 
 
-def parse_card(driver: webdriver.Chrome, url: str) -> Dict[str, Any]:
-    driver.get(url)
 
-    # Небольшая пауза, чтобы прогрузились динамические блоки
-    time.sleep(1.0)
 
-    name = wait_text_or_empty(driver, By.CLASS_NAME, "_1x89xo5")
-    full_name = wait_text_or_empty(driver, By.CLASS_NAME, "_bgn3t31")
+def extract_reviews_from_json(html: str) -> List[Dict[str, Any]]:
+    """Извлекает отзывы из JSON данных в HTML"""
+    reviews_data = []
+    processed_texts = set()  # Для избежания дубликатов
+    
+    # Сначала пытаемся найти JSON в script тегах
+    script_pattern = r'<script[^>]*type\s*=\s*["\']application/json["\'][^>]*>(.*?)</script>'
+    script_matches = re.finditer(script_pattern, html, re.DOTALL | re.IGNORECASE)
+    
+    for script_match in script_matches:
+        script_content = script_match.group(1)
+        try:
+            # Пытаемся распарсить JSON
+            data = json.loads(script_content)
+            # Рекурсивно ищем отзывы в JSON структуре
+            reviews = _find_reviews_in_json(data)
+            for review in reviews:
+                text = review.get('text', '')
+                if text and text not in processed_texts:
+                    processed_texts.add(text)
+                    reviews_data.append(review)
+        except:
+            pass
+    
+    # Если не нашли в script тегах, ищем JSON объекты напрямую в HTML
+    # Ищем все места, где есть "text" и "likes_count" в пределах разумного расстояния
+    if not reviews_data:
+        # Ищем паттерн для текста отзыва
+        text_pattern = r'"text"\s*:\s*"((?:[^"\\]|\\.)*)"'
+        
+        for text_match in re.finditer(text_pattern, html):
+            text_pos = text_match.start()
+            text = text_match.group(1)
+            # Декодируем escape-последовательности
+            text = text.replace('\\"', '"').replace('\\n', '\n').replace('\\r', '\r').replace('\\\\', '\\')
+            
+            # Пропускаем пустые тексты и дубликаты
+            if not text or text in processed_texts:
+                continue
+            
+            # Ищем likes_count в окрестности (в пределах 1500 символов)
+            context_start = max(0, text_pos - 500)
+            context_end = min(len(html), text_pos + 1500)
+            context = html[context_start:context_end]
+            
+            likes_match = re.search(r'"likes_count"\s*:\s*(\d+)', context)
+            if not likes_match:
+                continue
+            
+            likes_count = int(likes_match.group(1))
+            
+            # Ищем дату в разных форматах (расширяем контекст для поиска даты)
+            date = ''
+            date_context_start = max(0, text_pos - 1000)
+            date_context_end = min(len(html), text_pos + 2000)
+            date_context = html[date_context_start:date_context_end]
+            
+            date_patterns = [
+                r'"date"\s*:\s*"((?:[^"\\]|\\.)*)"',
+                r'"created_at"\s*:\s*"((?:[^"\\]|\\.)*)"',
+                r'"published_at"\s*:\s*"((?:[^"\\]|\\.)*)"',
+            ]
+            for date_pattern in date_patterns:
+                date_match = re.search(date_pattern, date_context)
+                if date_match:
+                    date = date_match.group(1).replace('\\"', '"').replace('\\n', '\n').replace('\\r', '\r')
+                    break
+            
+            processed_texts.add(text)
+            reviews_data.append({
+                'text': text,
+                'likes_count': likes_count,
+                'date': date
+            })
+    
+    return reviews_data
 
-    adres_part1 = wait_text_or_empty(driver, By.CLASS_NAME, "_1p8iqzw")
-    adres_part2 = wait_text_or_empty(driver, By.CLASS_NAME, "_2lcm958")
-    adres = (adres_part1 + ". " if adres_part1 else "") + adres_part2
 
-    rating_2gis = wait_text_or_empty(driver, By.CLASS_NAME, "_y10azs")
-
-    return {
-        "name": name,
-        "full_name": full_name,
-        "adres": adres,
-        "rating_2gis": rating_2gis,
-        "url": url,
-    }
+def _find_reviews_in_json(data: Any, path: str = '') -> List[Dict[str, Any]]:
+    """Рекурсивно ищет отзывы в JSON структуре"""
+    reviews = []
+    
+    if isinstance(data, dict):
+        # Проверяем, является ли это объектом отзыва
+        if 'text' in data and 'likes_count' in data:
+            review = {
+                'text': data.get('text', ''),
+                'likes_count': int(data.get('likes_count', 0)),
+                'date': data.get('date', data.get('created_at', data.get('published_at', '')))
+            }
+            reviews.append(review)
+        else:
+            # Рекурсивно ищем в значениях словаря
+            for key, value in data.items():
+                reviews.extend(_find_reviews_in_json(value, f"{path}.{key}"))
+    elif isinstance(data, list):
+        # Рекурсивно ищем в элементах списка
+        for idx, item in enumerate(data):
+            reviews.extend(_find_reviews_in_json(item, f"{path}[{idx}]"))
+    
+    return reviews
 
 
 def parse_reviews(driver: webdriver.Chrome, review_url: str, school_id: str) -> list:
-    """Парсит отзывы, теперь с физической прокруткой мыши!"""
-    driver.get(review_url)
-    # Сохраняем HTML страницы для дебага
+    """Парсит отзывы из JSON данных в HTML и даты из DOM"""
     try:
-        dom_path = os.path.join(OUTPUT_DIR, f"{school_id}_2gis_reviews_dom.html")
-        os.makedirs(OUTPUT_DIR, exist_ok=True)
-        with open(dom_path, "w", encoding="utf-8") as f:
-            f.write(driver.page_source)
+        driver.get(review_url)
     except Exception as e:
-        print(f"[warn] Не удалось сохранить DOM для id={school_id}: {e}")
-    # Физическая прокрутка мыши
+        print(f"[error] Не удалось загрузить страницу для школы {school_id}: {e}")
+        return []
+    
+    # Ждём загрузки элементов отзывов (может не быть, если отзывов нет)
     try:
-        # Размер окна
-        width = driver.execute_script("return window.innerWidth")
-        height = driver.execute_script("return window.innerHeight")
-        x = int(width * 0.375)
-        y = int(height * 0.5)
-        actions = ActionChains(driver)
-        actions.move_by_offset(x, y).perform()
-        time.sleep(0.2)
-        # Несколько раз крутим колесо вниз (обычно 100-300 на скролл)
-        for _ in range(4):
-            driver.execute_script('window.scrollBy(0, 300);')
-            actions = ActionChains(driver)
-            actions.wheel(0, 350).perform()  # Вниз (в пикселях)
-            time.sleep(0.7)
-        # Вернуть мышь в начало (во избежание ошибок)
-        actions.move_by_offset(-x, -y).perform()
-    except Exception as e:
-        print(f"[warn] Не удалось выполнить физическую прокрутку: {e}")
-    # Ищем все длинные тексты
-    review_elems = driver.find_elements(By.CLASS_NAME, '_1wlx08h')
-    # Если длинных 0 — ищем короткие
-    if not review_elems:
-        review_elems = driver.find_elements(By.CLASS_NAME, '_1msln3t')
-    reviews = []
-    for elem in review_elems:
-        # Сам текст
-        text = elem.text.strip()
-        # Пытаемся найти дату — ищем ближайший вверх _a5f6uz или _1k5soqfl, внутри ищем дату
-        date = ''
+        WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.CLASS_NAME, '_a5f6uz'))
+        )
+    except TimeoutException:
+        # Проверяем, есть ли вообще отзывы на странице
         try:
-            par = elem
-            for _ in range(3):
-                par = par.find_element(By.XPATH, '..')
+            # Ищем любые признаки отзывов
+            has_reviews = driver.find_elements(By.CLASS_NAME, '_1wlx08h') or \
+                         driver.find_elements(By.CLASS_NAME, '_1msln3t') or \
+                         driver.find_elements(By.CLASS_NAME, '_a5f6uz')
+            if not has_reviews:
+                print(f"[info] У школы {school_id} нет отзывов")
+                return []
+        except:
+            pass
+        print(f"[warn] Таймаут ожидания загрузки отзывов для школы {school_id}")
+    
+    time.sleep(2.0)  # Дополнительная пауза для загрузки данных
+    
+    # Прокрутка для загрузки всех отзывов
+    try:
+        for i in range(6):  # Увеличиваем количество прокруток
+            driver.execute_script('window.scrollBy(0, 500);')
+            time.sleep(1.0)  # Увеличиваем паузу
+    except Exception as e:
+        print(f"[warn] Не удалось выполнить прокрутку: {e}")
+    
+    time.sleep(2.0)  # Пауза после прокрутки для загрузки данных
+    
+    # Получаем HTML контент
+    try:
+        html_content = driver.page_source
+    except Exception as e:
+        print(f"[error] Не удалось получить HTML для школы {school_id}: {e}")
+        return []
+    
+    # Сохраняем HTML для отладки
+    try:
+        os.makedirs(DEBUG_HTML_DIR, exist_ok=True)
+        html_file = os.path.join(DEBUG_HTML_DIR, f"{school_id}_reviews.html")
+        with open(html_file, "w", encoding="utf-8") as f:
+            f.write(f"<!-- URL: {review_url} -->\n")
+            f.write(f"<!-- School ID: {school_id} -->\n")
+            f.write(html_content)
+        print(f"[debug] Сохранён HTML: {school_id}_reviews.html")
+    except Exception as e:
+        print(f"[warn] Не удалось сохранить HTML: {e}")
+    
+    # Сначала пытаемся извлечь отзывы из JSON данных в HTML
+    try:
+        json_reviews = extract_reviews_from_json(html_content)
+        print(f"[debug] Извлечено отзывов из JSON: {len(json_reviews)}")
+    except Exception as e:
+        print(f"[error] Ошибка при извлечении отзывов из JSON для школы {school_id}: {e}")
+        json_reviews = []
+    
+    # Если нашли отзывы в JSON, используем их, но даты извлекаем из DOM
+    if json_reviews:
+        try:
+            # Извлекаем все тексты отзывов из DOM для сопоставления с датами
+            text_elements_long = driver.find_elements(By.CLASS_NAME, '_1wlx08h')
+            text_elements_short = driver.find_elements(By.CLASS_NAME, '_1msln3t')
+            dom_texts = []
+            
+            # Сопоставляем тексты и даты из DOM
+            for text_elem in text_elements_long + text_elements_short:
                 try:
-                    date = par.find_element(By.CLASS_NAME, '_a5f6uz').text.strip()
-                    break
-                except Exception:
+                    text = text_elem.text.strip()
+                    if not text:
+                        continue
+                    
+                    # Ищем дату для этого текста - ищем ближайший элемент _a5f6uz в родительских элементах
+                    date = ''
+                    try:
+                        par = text_elem
+                        for _ in range(10):  # Ищем в родительских элементах
+                            par = par.find_element(By.XPATH, '..')
+                            try:
+                                date_elem = par.find_element(By.CLASS_NAME, '_a5f6uz')
+                                date = date_elem.text.strip()
+                                if date:
+                                    break
+                            except:
+                                continue
+                    except:
+                        pass
+                    
+                    if text and text not in [t['text'] for t in dom_texts]:
+                        dom_texts.append({'text': text, 'date': date})
+                except Exception as e:
+                    print(f"[warn] Ошибка при обработке элемента текста: {e}")
                     continue
-        except Exception:
-            date = ''
-        # Пытаемся найти реакцию рядом вверх
-        weighty = None
-        try:
-            par = elem
-            for _ in range(4):
-                par = par.find_element(By.XPATH, '..')
-                reacts = par.find_elements(By.CLASS_NAME, '_e296pg')
-                if reacts:
-                    # В первом таком ищем _qdh7m6f
-                    if reacts[0].find_elements(By.CLASS_NAME, '_qdh7m6f'):
-                        weighty = True
-                    break
-        except Exception:
-            weighty = None
-        if text or date:
-            reviews.append({
-                'school_id': school_id,
-                'date': date,
-                'text': text,
-                'weightы': weighty
-            })
-    if not reviews:
-        print(f'❗ Отзывов/элементов с _1wlx08h или _1msln3t не найдено для школы {school_id}!')
-    return reviews
+            
+            print(f"[debug] Найдено текстов в DOM: {len(dom_texts)}")
+            
+            # Сопоставляем JSON отзывы с датами из DOM
+            reviews = []
+            for review_data in json_reviews:
+                try:
+                    text = review_data.get('text', '')
+                    date = review_data.get('date', '')
+                    
+                    # Если дата не найдена в JSON, ищем её в DOM по тексту
+                    if not date:
+                        # Ищем точное совпадение текста
+                        for dom_item in dom_texts:
+                            if dom_item['text'] == text or text.startswith(dom_item['text'][:50]) or dom_item['text'].startswith(text[:50]):
+                                date = dom_item['date']
+                                break
+                        
+                        # Если не нашли точное совпадение, ищем частичное
+                        if not date:
+                            for dom_item in dom_texts:
+                                # Сравниваем первые 100 символов
+                                text_start = text[:100] if len(text) > 100 else text
+                                dom_text_start = dom_item['text'][:100] if len(dom_item['text']) > 100 else dom_item['text']
+                                if text_start == dom_text_start or (len(text_start) > 50 and text_start in dom_text_start) or (len(dom_text_start) > 50 and dom_text_start in text_start):
+                                    date = dom_item['date']
+                                    break
+                    
+                    reviews.append({
+                        'school_id': school_id,
+                        'date': date,
+                        'text': text,
+                        'likes_count': review_data.get('likes_count', 0)
+                    })
+                except Exception as e:
+                    print(f"[warn] Ошибка при обработке отзыва: {e}")
+                    continue
+            
+            print(f"[debug] Обработано отзывов из JSON с датами из DOM: {len(reviews)}")
+            return reviews
+        except Exception as e:
+            print(f"[error] Ошибка при извлечении дат из DOM для школы {school_id}: {e}")
+            # Возвращаем отзывы без дат, если не удалось извлечь даты
+            reviews = []
+            for review_data in json_reviews:
+                reviews.append({
+                    'school_id': school_id,
+                    'date': review_data.get('date', ''),
+                    'text': review_data.get('text', ''),
+                    'likes_count': review_data.get('likes_count', 0)
+                })
+            return reviews
+    
+    # Если не нашли в JSON, используем старый метод парсинга DOM
+    print("[debug] JSON отзывы не найдены, используем парсинг DOM")
+    
+    try:
+        # Ищем контейнеры отзывов - ищем элементы с классом, который содержит отзывы
+        # Пробуем найти все контейнеры отзывов
+        review_containers = driver.find_elements(By.CSS_SELECTOR, '[class*="_172gbf8"], [class*="_1k5soqfl"]')
+        if not review_containers:
+            # Альтернативный способ - ищем по структуре
+            try:
+                review_containers = driver.find_elements(By.XPATH, "//div[contains(@class, '_') and .//div[contains(@class, '_a5f6uz')]]")
+            except:
+                review_containers = []
+        
+        print(f"[debug] Найдено контейнеров отзывов: {len(review_containers)}")
+        
+        if not review_containers:
+            print(f"[info] У школы {school_id} нет отзывов (контейнеры не найдены)")
+            return []
+        
+        reviews = []
+        processed_texts = set()  # Для избежания дубликатов
+        
+        # Для каждого контейнера извлекаем данные отзыва
+        for idx, container in enumerate(review_containers):
+            try:
+                # Ищем текст отзыва
+                text_elem = None
+                try:
+                    text_elem = container.find_element(By.CLASS_NAME, '_1wlx08h')
+                except:
+                    try:
+                        text_elem = container.find_element(By.CLASS_NAME, '_1msln3t')
+                    except:
+                        pass
+                
+                if not text_elem:
+                    continue
+                
+                text = text_elem.text.strip()
+                if not text or text in processed_texts:
+                    continue
+                
+                processed_texts.add(text)
+                
+                # Ищем дату
+                date = ''
+                try:
+                    date_elem = container.find_element(By.CLASS_NAME, '_a5f6uz')
+                    date = date_elem.text.strip()
+                except:
+                    pass
+                
+                # Извлекаем likes_count из JSON в HTML
+                likes_count = 0
+                try:
+                    # Ищем JSON данные для этого отзыва в HTML
+                    # Ищем текст отзыва в HTML и рядом с ним ищем likes_count
+                    text_escaped = re.escape(text[:100])  # Первые 100 символов для поиска
+                    pattern = rf'{text_escaped}.*?"likes_count"\s*:\s*(\d+)'
+                    match = re.search(pattern, html_content, re.DOTALL)
+                    if match:
+                        likes_count = int(match.group(1))
+                except Exception as e:
+                    print(f"[debug] Не удалось извлечь likes_count для отзыва {idx}: {e}")
+                
+                reviews.append({
+                    'school_id': school_id,
+                    'date': date,
+                    'text': text,
+                    'likes_count': likes_count
+                })
+                
+                print(f"[debug] Обработан отзыв {idx}: текст (длина: {len(text)}), дата: {date}, likes_count: {likes_count}")
+                
+            except Exception as e:
+                print(f"[debug] Ошибка при обработке контейнера {idx}: {e}")
+                continue
+        
+        print(f"[debug] Обработано контейнеров: {len(review_containers)}, найдено уникальных отзывов: {len(reviews)}")
+        return reviews
+    except Exception as e:
+        print(f"[error] Ошибка при парсинге DOM для школы {school_id}: {e}")
+        return []
 
 
 def _load_json_allowing_line_comments(path: str) -> Dict[str, Any]:
@@ -213,51 +457,37 @@ def load_input_links(input_file: str) -> List[Dict[str, str]]:
     """Загружает список школ из входного JSON файла"""
     data = _load_json_allowing_line_comments(input_file)
     # Поддерживаем разные форматы входного файла
-    if "school_name" in data:
-        return data.get("school_name", [])
-    elif "data" in data:
+    if "data" in data:
         return data.get("data", [])
+    elif "school_name" in data:
+        return data.get("school_name", [])
     else:
         return data if isinstance(data, list) else []
 
 
-def ensure_output_dir() -> None:
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-
-
-def save_aggregate(schools: list, reviews: list) -> None:
-    """Сохраняет агрегированный файл со всеми школами и отзывами"""
-    ensure_output_dir()
-    aggregate_file = os.path.join(OUTPUT_DIR, "schools_2gis.json")
+def save_all_reviews(reviews: list) -> None:
+    """Сохраняет все отзывы в один файл"""
+    os.makedirs(REVIEWS_DATA_DIR, exist_ok=True)
+    
+    # Загружаем существующие отзывы, если файл есть
+    existing_reviews = []
+    if os.path.exists(REVIEWS_OUTPUT_FILE):
+        try:
+            with open(REVIEWS_OUTPUT_FILE, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                existing_reviews = data.get("reviews", [])
+        except Exception:
+            existing_reviews = []
+    
+    # Объединяем старые и новые отзывы
+    all_reviews = existing_reviews + reviews
+    
+    # Сохраняем все отзывы
     payload = {
         "resource": "2gis",
-        "schools": schools,
-        "reviews": reviews,
+        "reviews": all_reviews,
     }
-    with open(aggregate_file, "w", encoding="utf-8") as f:
-        json.dump(payload, f, ensure_ascii=False, indent=2)
-
-
-def save_school_file(school: dict, reviews: list) -> None:
-    """Сохраняет отдельный файл для каждой школы"""
-    ensure_output_dir()
-    school_id = school["id"]
-    filename = os.path.join(OUTPUT_DIR, f"{school_id}_2gis_review.json")
-    payload = {
-        "resource": "2gis",
-        "schools": [
-            {
-                "id": school["id"],
-                "name": school.get("name", ""),
-                "full_name": school.get("full_name", ""),
-                "adres": school.get("adres", ""),
-                "rating_2gis": school.get("rating_2gis", ""),
-                "url": school.get("url", ""),
-            }
-        ],
-        "reviews": reviews,
-    }
-    with open(filename, "w", encoding="utf-8") as f:
+    with open(REVIEWS_OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
 
 
@@ -266,14 +496,14 @@ def main(input_file: str = None) -> None:
     Основная функция парсинга отзывов
     
     Args:
-        input_file: Путь к JSON файлу со списком школ (должен содержать поля 'link' и 'review_link')
-                   Если не указан, ищет файл в текущей директории или родительской
+        input_file: Путь к JSON файлу со списком школ (должен содержать поля 'feedback_link')
+                   Если не указан, ищет файл в текущей директории
     """
     # Ищем входной файл
     if input_file is None:
         # Ищем в разных местах
         possible_paths = [
-            os.path.join(os.path.dirname(__file__), "..", "..", "..", "2gis_all_schools.json"),
+            os.path.join(os.path.dirname(__file__), "2gis_reviews_data", "2gis_schools_with_info.json"),
             os.path.join(os.path.dirname(__file__), "input.json"),
         ]
         input_file = None
@@ -284,44 +514,40 @@ def main(input_file: str = None) -> None:
         
         if input_file is None:
             print("Ошибка: не найден входной файл со списком школ")
-            print("Укажите путь к файлу с полями 'link' и 'review_link' для каждой школы")
+            print("Укажите путь к файлу с полем 'feedback_link' для каждой школы")
             return
     
-    ensure_output_dir()
-    links = load_input_links(input_file)
-    if not links:
+    schools_data = load_input_links(input_file)
+    if not schools_data:
         print(f"Файл {input_file} пуст или не содержит данных о школах")
         return
 
     driver = setup_driver()
-    collected = []
     all_reviews = []
 
     try:
-        for idx, item in enumerate(links, start=1):
-            url = item.get("link", "").strip() or item.get("url", "").strip()
-            review_url = item.get("review_link", "").strip()
-            if not url:
+        for item in schools_data:
+            school_id = item.get("id", "").strip()
+            feedback_link = item.get("feedback_link", "").strip()
+            
+            if not school_id:
+                print(f"Пропущена запись без id: {item.get('name', 'неизвестно')}")
                 continue
 
-            card = parse_card(driver, url)
-            school_row = {
-                "id": str(idx),
-                **card,
-            }
-            collected.append(school_row)
-
             # Парсинг отзывов
-            reviews = []
-            if review_url:
-                reviews = parse_reviews(driver, review_url, str(idx))
+            if feedback_link:
+                print(f"Парсинг отзывов для школы {school_id}: {item.get('name', 'неизвестно')}")
+                reviews = parse_reviews(driver, feedback_link, school_id)
                 all_reviews.extend(reviews)
-            save_school_file(school_row, reviews)
+                print(f"  Найдено отзывов: {len(reviews)}")
+            else:
+                print(f"Пропущена школа {school_id}: нет feedback_link")
+            
             time.sleep(0.5)
 
-        # Общий агрегированный файл
-        save_aggregate(collected, all_reviews)
-        print(f"Готово. Сохранено школ: {len(collected)}")
+        # Сохраняем все отзывы в один файл
+        save_all_reviews(all_reviews)
+        print(f"Готово. Всего отзывов: {len(all_reviews)}")
 
     finally:
         driver.quit()
