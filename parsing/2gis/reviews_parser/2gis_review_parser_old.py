@@ -207,28 +207,17 @@ def _find_reviews_in_json(data: Any, path: str = '') -> List[Dict[str, Any]]:
     
     if isinstance(data, dict):
         # Проверяем, является ли это объектом отзыва
-        # Отзыв должен иметь текст и likes_count (media может быть пустым массивом или содержать фотографии)
         if 'text' in data and 'likes_count' in data:
-            # Проверяем, что это действительно отзыв (имеет rating или provider или object)
-            # Это помогает отличить отзыв от других объектов с text и likes_count
-            is_review = (
-                'rating' in data or 
-                'provider' in data or 
-                'object' in data or
-                'id' in data  # ID отзыва
-            )
-            
-            if is_review:
-                review = {
-                    'text': data.get('text', ''),
-                    'likes_count': int(data.get('likes_count', 0)),
-                    'date': data.get('date', data.get('created_at', data.get('published_at', '')))
-                }
-                reviews.append(review)
-        
-        # Рекурсивно ищем в значениях словаря (даже если нашли отзыв, продолжаем поиск)
-        for key, value in data.items():
-            reviews.extend(_find_reviews_in_json(value, f"{path}.{key}"))
+            review = {
+                'text': data.get('text', ''),
+                'likes_count': int(data.get('likes_count', 0)),
+                'date': data.get('date', data.get('created_at', data.get('published_at', '')))
+            }
+            reviews.append(review)
+        else:
+            # Рекурсивно ищем в значениях словаря
+            for key, value in data.items():
+                reviews.extend(_find_reviews_in_json(value, f"{path}.{key}"))
     elif isinstance(data, list):
         # Рекурсивно ищем в элементах списка
         for idx, item in enumerate(data):
@@ -269,7 +258,7 @@ def parse_reviews(driver: webdriver.Chrome, review_url: str, school_id: str) -> 
     # Физическая прокрутка для загрузки всех отзывов через pyautogui
     print(f"[info] Начинаем физическую прокрутку страницы для загрузки всех отзывов...")
     try:
-        scroll_page_with_pyautogui(duration=3.0, scroll_distance=2000, scroll_step=10)
+        scroll_page_with_pyautogui(duration=12.0, scroll_distance=4000, scroll_step=8)
     except Exception as e:
         print(f"[warn] Ошибка при физической прокрутке: {e}")
         # Fallback на обычную прокрутку через JavaScript
@@ -351,8 +340,6 @@ def parse_reviews(driver: webdriver.Chrome, review_url: str, school_id: str) -> 
             
             # Сопоставляем JSON отзывы с датами из DOM
             reviews = []
-            processed_dom_texts = set()  # Тексты, которые уже обработаны из JSON
-            
             for review_data in json_reviews:
                 try:
                     text = review_data.get('text', '')
@@ -364,7 +351,6 @@ def parse_reviews(driver: webdriver.Chrome, review_url: str, school_id: str) -> 
                         for dom_item in dom_texts:
                             if dom_item['text'] == text or text.startswith(dom_item['text'][:50]) or dom_item['text'].startswith(text[:50]):
                                 date = dom_item['date']
-                                processed_dom_texts.add(dom_item['text'])
                                 break
                         
                         # Если не нашли точное совпадение, ищем частичное
@@ -375,7 +361,6 @@ def parse_reviews(driver: webdriver.Chrome, review_url: str, school_id: str) -> 
                                 dom_text_start = dom_item['text'][:100] if len(dom_item['text']) > 100 else dom_item['text']
                                 if text_start == dom_text_start or (len(text_start) > 50 and text_start in dom_text_start) or (len(dom_text_start) > 50 and dom_text_start in text_start):
                                     date = dom_item['date']
-                                    processed_dom_texts.add(dom_item['text'])
                                     break
                     
                     reviews.append({
@@ -387,29 +372,6 @@ def parse_reviews(driver: webdriver.Chrome, review_url: str, school_id: str) -> 
                 except Exception as e:
                     print(f"[warn] Ошибка при обработке отзыва: {e}")
                     continue
-            
-            # Добавляем отзывы из DOM, которые не были найдены в JSON (например, с фотографиями)
-            for dom_item in dom_texts:
-                if dom_item['text'] not in processed_dom_texts:
-                    # Ищем likes_count для этого текста в HTML
-                    likes_count = 0
-                    try:
-                        # Ищем текст в HTML и рядом с ним ищем likes_count
-                        text_escaped = re.escape(dom_item['text'][:100])  # Первые 100 символов для поиска
-                        pattern = rf'{text_escaped}.*?"likes_count"\s*:\s*(\d+)'
-                        match = re.search(pattern, html_content, re.DOTALL)
-                        if match:
-                            likes_count = int(match.group(1))
-                    except:
-                        pass
-                    
-                    reviews.append({
-                        'school_id': school_id,
-                        'date': dom_item['date'],
-                        'text': dom_item['text'],
-                        'likes_count': likes_count
-                    })
-                    print(f"[debug] Добавлен отзыв из DOM (не найден в JSON): текст (длина: {len(dom_item['text'])}), дата: {dom_item['date']}, likes_count: {likes_count}")
             
             print(f"[debug] Обработано отзывов из JSON с датами из DOM: {len(reviews)}")
             return reviews
