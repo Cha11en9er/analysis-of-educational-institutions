@@ -1,0 +1,303 @@
+{
+  "source": "google_maps",
+  "topic": "Школы Саратова",
+  "description": "Данные школ получены через парсинг Google Maps",
+  "total_schools": 59,
+  "data": [
+    {
+      "id": "1",
+      "name": "АРИСТОТЕЛЬ",
+      "url": "https://www.google.com/maps/place/%D0%90%D0%A0%D0%98%D0%A1%D0%A2%D0%9E%D0%A2%D0%95%D0%9B%D0%AC/data=!4m7!3m6!1s0x4114c7ede38da659:0x8a7989355d30ddc0!8m2!3d51.5261424!4d46.0526344!16s%2Fg%2F11clyqy28n!19sChIJWaaN4-3HFEERwN0wXTWJeYo?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "2",
+      "name": "МОУ СОШ 6",
+      "url": "https://www.google.com/maps/place/%D0%9C%D0%9E%D0%A3+%D0%A1%D0%9E%D0%A8+6/data=!4m7!3m6!1s0x4114c75e10b87855:0x3750fcf8f39da2b1!8m2!3d51.5217865!4d46.0101243!16s%2Fg%2F11rwqqqt73!19sChIJVXi4EF7HFEERsaKd8_j8UDc?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "3",
+      "name": "Средняя общеобразовательная школа № 67, МОУ",
+      "url": "https://www.google.com/maps/place/%D0%A1%D1%80%D0%B5%D0%B4%D0%BD%D1%8F%D1%8F+%D0%BE%D0%B1%D1%89%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F+%D1%88%D0%BA%D0%BE%D0%BB%D0%B0+%E2%84%96+67,+%D0%9C%D0%9E%D0%A3/data=!4m7!3m6!1s0x416c1dd5a050fc73:0x5651ec38bad8557d!8m2!3d51.5378388!4d46.0140567!16s%2Fg%2F11h1cz2zj!19sChIJc_xQoNUdbEERfVXYujjsUVY?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "4",
+      "name": "Школа № 7",
+      "url": "https://www.google.com/maps/place/%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0+%E2%84%96+7/data=!4m7!3m6!1s0x4114c7ac879f7a73:0xc1c6742bf5b66440!8m2!3d51.5319608!4d45.9884659!16s%2Fg%2F1hc4c6wkn!19sChIJc3qfh6zHFEERQGS29St0xsE?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "5",
+      "name": "Школа № 2 имени INSTASAMKI",
+      "url": "https://www.google.com/maps/place/%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0+%E2%84%96+2+%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8+INSTASAMKI/data=!4m7!3m6!1s0x4114c7ba933dff63:0x64405d932f10970a!8m2!3d51.5297429!4d46.010432!16s%2Fg%2F1hc3d2spc!19sChIJY_89k7rHFEERCpcQL5NdQGQ?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "6",
+      "name": "Гимнaзия №2",
+      "url": "https://www.google.com/maps/place/%D0%93%D0%B8%D0%BC%D0%BDa%D0%B7%D0%B8%D1%8F+%E2%84%962/data=!4m7!3m6!1s0x4114c79346a992c5:0x2a2a1b9bccdb72!8m2!3d51.524671!4d46.040292!16s%2Fg%2F11y26yjz_!19sChIJxZKpRpPHFEERctvMmxsqKgA?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "7",
+      "name": "Школа № 70",
+      "url": "https://www.google.com/maps/place/%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0+%E2%84%96+70/data=!4m7!3m6!1s0x4114c633cb4f4571:0xbe1182616d3f5ae5!8m2!3d51.551341!4d46.0148811!16s%2Fg%2F1hc1ww60t!19sChIJcUVPyzPGFEER5Vo_bWGCEb4?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "8",
+      "name": "Школа № 24",
+      "url": "https://www.google.com/maps/place/%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0+%E2%84%96+24/data=!4m7!3m6!1s0x4114c883bd2e4cfd:0x7b655646fcfe71bc!8m2!3d51.5639698!4d46.0244895!16s%2Fg%2F1hc2w3wgb!19sChIJ_UwuvYPIFEERvHH-_EZWZXs?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "9",
+      "name": "Школа № 45",
+      "url": "https://www.google.com/maps/place/%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0+%E2%84%96+45/data=!4m7!3m6!1s0x4114c70bff92ab2d:0xe162035ad54f0e82!8m2!3d51.5165139!4d45.9925696!16s%2Fg%2F1hc8gfh2m!19sChIJLauS_wvHFEERgg5P1VoDYuE?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "10",
+      "name": "Школа-интернат АОП № 5 г.Саратова",
+      "url": "https://www.google.com/maps/place/%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%82+%D0%90%D0%9E%D0%9F+%E2%84%96+5+%D0%B3.%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2%D0%B0/data=!4m7!3m6!1s0x4114c7e6c9ea42b7:0x7d276735e88c2c36!8m2!3d51.535734!4d46.0580486!16s%2Fg%2F11gzphtg4!19sChIJt0LqyebHFEERNiyM6DVnJ30?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "11",
+      "name": "Гимназия № 4",
+      "url": "https://www.google.com/maps/place/%D0%93%D0%B8%D0%BC%D0%BD%D0%B0%D0%B7%D0%B8%D1%8F+%E2%84%96+4/data=!4m7!3m6!1s0x4114c7e8fcad3975:0xd5fdce6f6578b89c!8m2!3d51.532181!4d46.04846!16s%2Fg%2F1hc3059jn!19sChIJdTmt_OjHFEERnLh4ZW_O_dU?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "12",
+      "name": "Школа № 93",
+      "url": "https://www.google.com/maps/place/%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0+%E2%84%96+93/data=!4m7!3m6!1s0x4114c89ccbde5b5d:0xcb8a42e8c5700781!8m2!3d51.5653116!4d46.0247073!16s%2Fg%2F1hc1l7l98!19sChIJXVvey5zIFEERgQdwxehCiss?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "13",
+      "name": "Средняя общеобразовательная школа №106",
+      "url": "https://www.google.com/maps/place/%D0%A1%D1%80%D0%B5%D0%B4%D0%BD%D1%8F%D1%8F+%D0%BE%D0%B1%D1%89%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F+%D1%88%D0%BA%D0%BE%D0%BB%D0%B0+%E2%84%96106/data=!4m7!3m6!1s0x4114c71936a26a81:0x60032ae21e7a5a54!8m2!3d51.515166!4d45.96482!16s%2Fg%2F1hc3n0cv9!19sChIJgWqiNhnHFEERVFp6HuIqA2A?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "14",
+      "name": "Школа № 95",
+      "url": "https://www.google.com/maps/place/%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0+%E2%84%96+95/data=!4m7!3m6!1s0x4114c7a7375ef835:0xbbb14fd8dca887e1!8m2!3d51.5212135!4d46.0005569!16s%2Fg%2F1hc2rtp3p!19sChIJNfheN6fHFEER4Yeo3NhPsbs?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "15",
+      "name": "Средняя общеобразовательная школа № 103",
+      "url": "https://www.google.com/maps/place/%D0%A1%D1%80%D0%B5%D0%B4%D0%BD%D1%8F%D1%8F+%D0%BE%D0%B1%D1%89%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F+%D1%88%D0%BA%D0%BE%D0%BB%D0%B0+%E2%84%96+103/data=!4m7!3m6!1s0x4114cf5b82bec12d:0x7c30a2d6f671f11c!8m2!3d51.5975483!4d45.9712317!16s%2Fg%2F1hc242wm_!19sChIJLcG-glvPFEERHPFx9taiMHw?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "16",
+      "name": "Школа № 73",
+      "url": "https://www.google.com/maps/place/%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0+%E2%84%96+73/data=!4m7!3m6!1s0x4114c629e4468871:0xa54a118317a8abe6!8m2!3d51.559384!4d46.025492!16s%2Fg%2F1hc9c80h_!19sChIJcYhG5CnGFEER5quoF4MRSqU?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "17",
+      "name": "Гимназия № 1",
+      "url": "https://www.google.com/maps/place/%D0%93%D0%B8%D0%BC%D0%BD%D0%B0%D0%B7%D0%B8%D1%8F+%E2%84%96+1/data=!4m7!3m6!1s0x4114c7ec0231ad1f:0xbb301c0b481f26bf!8m2!3d51.5257432!4d46.0250782!16s%2Fg%2F121_jr9l!19sChIJH60xAuzHFEERvyYfSAscMLs?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "18",
+      "name": "Школа № 23",
+      "url": "https://www.google.com/maps/place/%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0+%E2%84%96+23/data=!4m7!3m6!1s0x4114c6e08e9ca5b3:0x59e9ef07384c90f2!8m2!3d51.5104974!4d45.9538242!16s%2Fg%2F1hc30n846!19sChIJs6WcjuDGFEER8pBMOAfv6Vk?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "19",
+      "name": "Школа №18",
+      "url": "https://www.google.com/maps/place/%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0+%E2%84%9618/data=!4m7!3m6!1s0x4114c7b82ab27eab:0xcf91f119c1adaee5!8m2!3d51.5347546!4d46.0164428!16s%2Fg%2F1hc3zq5dn!19sChIJq36yKrjHFEER5a6twRnxkc8?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "20",
+      "name": "Лицей №37",
+      "url": "https://www.google.com/maps/place/%D0%9B%D0%B8%D1%86%D0%B5%D0%B9+%E2%84%9637/data=!4m7!3m6!1s0x4114c7ba28c4a047:0x23dd90b7ba86cbe1!8m2!3d51.53132!4d46.0156145!16s%2Fg%2F1hb_gpz09!19sChIJR6DEKLrHFEER4cuGureQ3SM?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "21",
+      "name": "Школа для обучающихся по адаптированным образовательным программам № 2 г.Саратова",
+      "url": "https://www.google.com/maps/place/%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0+%D0%B4%D0%BB%D1%8F+%D0%BE%D0%B1%D1%83%D1%87%D0%B0%D1%8E%D1%89%D0%B8%D1%85%D1%81%D1%8F+%D0%BF%D0%BE+%D0%B0%D0%B4%D0%B0%D0%BF%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%BC+%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%BC+%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0%D0%BC+%E2%84%96+2+%D0%B3.%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2%D0%B0/data=!4m7!3m6!1s0x4114c7c403a03279:0xacba79f2e6f5d56d!8m2!3d51.5378057!4d46.0314266!16s%2Fg%2F1hc139cmm!19sChIJeTKgA8THFEERbdX15vJ5uqw?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "22",
+      "name": "Средняя общеобразовательная школа № 40, МОУ",
+      "url": "https://www.google.com/maps/place/%D0%A1%D1%80%D0%B5%D0%B4%D0%BD%D1%8F%D1%8F+%D0%BE%D0%B1%D1%89%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F+%D1%88%D0%BA%D0%BE%D0%BB%D0%B0+%E2%84%96+40,+%D0%9C%D0%9E%D0%A3/data=!4m7!3m6!1s0x4114c0d32f477f13:0xd11c76d583dce91b!8m2!3d51.4991783!4d45.9334543!16s%2Fg%2F1hc2y3bw8!19sChIJE39HL9PAFEERG-ncg9V2HNE?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "23",
+      "name": "Новая школа",
+      "url": "https://www.google.com/maps/place/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F+%D1%88%D0%BA%D0%BE%D0%BB%D0%B0/data=!4m7!3m6!1s0x4114c64938f28bc5:0x473df052c628c633!8m2!3d51.5444127!4d45.9924243!16s%2Fg%2F11n_ty1nn9!19sChIJxYvyOEnGFEERM8YoxlLwPUc?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "24",
+      "name": "Лицей №3 имени А.С. Пушкина",
+      "url": "https://www.google.com/maps/place/%D0%9B%D0%B8%D1%86%D0%B5%D0%B9+%E2%84%963+%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8+%D0%90.%D0%A1.+%D0%9F%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D0%B0/data=!4m7!3m6!1s0x4114c7beaca7c6c9:0xc98b284c225653!8m2!3d51.5296216!4d46.0203925!16s%2Fg%2F1hc5k1hwz!19sChIJycanrL7HFEERU1YiTCiLyQA?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "25",
+      "name": "Средняя общеобразовательная школа № 51",
+      "url": "https://www.google.com/maps/place/%D0%A1%D1%80%D0%B5%D0%B4%D0%BD%D1%8F%D1%8F+%D0%BE%D0%B1%D1%89%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F+%D1%88%D0%BA%D0%BE%D0%BB%D0%B0+%E2%84%96+51/data=!4m7!3m6!1s0x4114c61fee1012f7:0x6e191d1c071a4c68!8m2!3d51.5690705!4d46.0058445!16s%2Fg%2F11dftp5d0f!19sChIJ9xIQ7h_GFEERaEwaBxwdGW4?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "26",
+      "name": "Школа № 17",
+      "url": "https://www.google.com/maps/place/%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0+%E2%84%96+17/data=!4m7!3m6!1s0x4114c63db0a1afb5:0x8c0b1b4ada425c5!8m2!3d51.559398!4d45.9915039!16s%2Fg%2F1hc4h4xsw!19sChIJta-hsD3GFEERxSWkrbSxwAg?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "27",
+      "name": "Средняя общеобразовательная школа № 86, МОУ",
+      "url": "https://www.google.com/maps/place/%D0%A1%D1%80%D0%B5%D0%B4%D0%BD%D1%8F%D1%8F+%D0%BE%D0%B1%D1%89%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F+%D1%88%D0%BA%D0%BE%D0%BB%D0%B0+%E2%84%96+86,+%D0%9C%D0%9E%D0%A3/data=!4m7!3m6!1s0x4114c59ad2bad757:0xb82e9b1be75eec9!8m2!3d51.5980524!4d45.9235658!16s%2Fg%2F1hc25bk1d!19sChIJV9e60prFFEERye51vrHpggs?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "28",
+      "name": "Лицей № 15",
+      "url": "https://www.google.com/maps/place/%D0%9B%D0%B8%D1%86%D0%B5%D0%B9+%E2%84%96+15/data=!4m7!3m6!1s0x4114c72524caedaf:0x61a1b5bd3ad7b6c6!8m2!3d51.50568!4d45.952813!16s%2Fg%2F1hc32nbtp!19sChIJr-3KJCXHFEERxrbXOr21oWE?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "29",
+      "name": "Школа для обучающихся по адаптированным образовательным программам № 1 г.Саратова",
+      "url": "https://www.google.com/maps/place/%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0+%D0%B4%D0%BB%D1%8F+%D0%BE%D0%B1%D1%83%D1%87%D0%B0%D1%8E%D1%89%D0%B8%D1%85%D1%81%D1%8F+%D0%BF%D0%BE+%D0%B0%D0%B4%D0%B0%D0%BF%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%BC+%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%BC+%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0%D0%BC+%E2%84%96+1+%D0%B3.%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2%D0%B0/data=!4m7!3m6!1s0x4114c7bec07ea4a9:0x1ec4fd9a833473fd!8m2!3d51.529492!4d46.0231991!16s%2Fg%2F11cn0tlq80!19sChIJqaR-wL7HFEER_XM0g5r9xB4?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "30",
+      "name": "Школа № 55",
+      "url": "https://www.google.com/maps/place/%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0+%E2%84%96+55/data=!4m7!3m6!1s0x4114cf37aa754209:0xe660aa35b83b02cd!8m2!3d51.6026678!4d46.0010482!16s%2Fg%2F1hc4zlcqc!19sChIJCUJ1qjfPFEERzQI7uDWqYOY?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "31",
+      "name": "Школа № 48",
+      "url": "https://www.google.com/maps/place/%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0+%E2%84%96+48/data=!4m7!3m6!1s0x4114cf5dc6671347:0x6583d164103f7302!8m2!3d51.599186!4d45.9641921!16s%2Fg%2F1hc22wtlp!19sChIJRxNnxl3PFEERAnM_EGTRg2U?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "32",
+      "name": "ГАОУ СО \"Лицей-интернат 64\"",
+      "url": "https://www.google.com/maps/place/%D0%93%D0%90%D0%9E%D0%A3+%D0%A1%D0%9E+%22%D0%9B%D0%B8%D1%86%D0%B5%D0%B9-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%82+64%22/data=!4m7!3m6!1s0x4114c7b4cf055555:0x34ee546d2f74d5e5!8m2!3d51.5403333!4d46.00281!16s%2Fg%2F11r9qzc4jc!19sChIJVVUFz7THFEER5dV0L21U7jQ?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "33",
+      "name": "Гимназия №3",
+      "url": "https://www.google.com/maps/place/%D0%93%D0%B8%D0%BC%D0%BD%D0%B0%D0%B7%D0%B8%D1%8F+%E2%84%963/data=!4m7!3m6!1s0x4114c7b4a8cda3e9:0x6d6456535c99cb32!8m2!3d51.538516!4d46.0032966!16s%2Fg%2F1hc24f7kh!19sChIJ6aPNqLTHFEERMsuZXFNWZG0?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "34",
+      "name": "Школа",
+      "url": "https://www.google.com/maps/place/%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0/data=!4m7!3m6!1s0x4114cf36d7e84d95:0x50e460041922cd16!8m2!3d51.6037432!4d46.0041092!16s%2Fg%2F11c5z_b6rw!19sChIJlU3o1zbPFEERFs0iGQRg5FA?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "35",
+      "name": "Муниципальное автономное общеобразовательное учреждение \"Гимназия №31\"",
+      "url": "https://www.google.com/maps/place/%D0%9C%D1%83%D0%BD%D0%B8%D1%86%D0%B8%D0%BF%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5+%D0%B0%D0%B2%D1%82%D0%BE%D0%BD%D0%BE%D0%BC%D0%BD%D0%BE%D0%B5+%D0%BE%D0%B1%D1%89%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5+%D1%83%D1%87%D1%80%D0%B5%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5+%22%D0%93%D0%B8%D0%BC%D0%BD%D0%B0%D0%B7%D0%B8%D1%8F+%E2%84%9631%22/data=!4m7!3m6!1s0x4114c0fc57b8a7bd:0x1148bcd6a379c7ea!8m2!3d51.5630723!4d45.9994234!16s%2Fg%2F1hc262zb0!19sChIJvae4V_zAFEER6sd5o9a8SBE?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "36",
+      "name": "ГБОУ СО \"Школа-интернат АОП №3 г. Саратова\"",
+      "url": "https://www.google.com/maps/place/%D0%93%D0%91%D0%9E%D0%A3+%D0%A1%D0%9E+%22%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%82+%D0%90%D0%9E%D0%9F+%E2%84%963+%D0%B3.+%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2%D0%B0%22/data=!4m7!3m6!1s0x4114c61e494a762f:0xc0f914d10e9a62f3!8m2!3d51.570606!4d46.00079!16s%2Fg%2F1pzsxssx4!19sChIJL3ZKSR7GFEER82KaDtEU-cA?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "37",
+      "name": "Гимназия № 75 им. Д,М. Карбышева",
+      "url": "https://www.google.com/maps/place/%D0%93%D0%B8%D0%BC%D0%BD%D0%B0%D0%B7%D0%B8%D1%8F+%E2%84%96+75+%D0%B8%D0%BC.+%D0%94,%D0%9C.+%D0%9A%D0%B0%D1%80%D0%B1%D1%8B%D1%88%D0%B5%D0%B2%D0%B0/data=!4m7!3m6!1s0x4114c5f7ea7994e5:0x57314e5f53deca10!8m2!3d51.5898109!4d45.9638033!16s%2Fg%2F1hc6wg9xv!19sChIJ5ZR56vfFFEEREMreU19OMVc?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "38",
+      "name": "Школа № 52",
+      "url": "https://www.google.com/maps/place/%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0+%E2%84%96+52/data=!4m7!3m6!1s0x4114c7bba7308857:0x870898ffadf700e6!8m2!3d51.572396!4d45.884796!16s%2Fg%2F11b6zptrbl!19sChIJV4gwp7vHFEER5gD3rf-YCIc?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "39",
+      "name": "Лицей гуманитарных наук",
+      "url": "https://www.google.com/maps/place/%D0%9B%D0%B8%D1%86%D0%B5%D0%B9+%D0%B3%D1%83%D0%BC%D0%B0%D0%BD%D0%B8%D1%82%D0%B0%D1%80%D0%BD%D1%8B%D1%85+%D0%BD%D0%B0%D1%83%D0%BA/data=!4m7!3m6!1s0x4114c6361d2c57d7:0x120b46ea0f2f1a6d!8m2!3d51.5510486!4d46.0122204!16s%2Fg%2F12hqr00x3!19sChIJ11csHTbGFEERbRovD-pGCxI?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "40",
+      "name": "Муниципальное образовательное учреждение Средняя общеобразовательная школа 102",
+      "url": "https://www.google.com/maps/place/%D0%9C%D1%83%D0%BD%D0%B8%D1%86%D0%B8%D0%BF%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5+%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5+%D1%83%D1%87%D1%80%D0%B5%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5+%D0%A1%D1%80%D0%B5%D0%B4%D0%BD%D1%8F%D1%8F+%D0%BE%D0%B1%D1%89%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F+%D1%88%D0%BA%D0%BE%D0%BB%D0%B0+102/data=!4m7!3m6!1s0x4114c5f5b4fe46b3:0xffd82ac249c1d0a5!8m2!3d51.59324!4d45.954922!16s%2Fg%2F1hc9wfm19!19sChIJs0b-tPXFFEERpdDBScIq2P8?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "41",
+      "name": "Средняя общеобразовательная школа № 22 имени Героя Советского Союза П.Т.Пономарева",
+      "url": "https://www.google.com/maps/place/%D0%A1%D1%80%D0%B5%D0%B4%D0%BD%D1%8F%D1%8F+%D0%BE%D0%B1%D1%89%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F+%D1%88%D0%BA%D0%BE%D0%BB%D0%B0+%E2%84%96+22+%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8+%D0%93%D0%B5%D1%80%D0%BE%D1%8F+%D0%A1%D0%BE%D0%B2%D0%B5%D1%82%D1%81%D0%BA%D0%BE%D0%B3%D0%BE+%D0%A1%D0%BE%D1%8E%D0%B7%D0%B0+%D0%9F.%D0%A2.%D0%9F%D0%BE%D0%BD%D0%BE%D0%BC%D0%B0%D1%80%D0%B5%D0%B2%D0%B0/data=!4m7!3m6!1s0x4114c726d34d3031:0xa64e1080d0ea3c30!8m2!3d51.5119159!4d45.9440036!16s%2Fg%2F11r8n9jg7!19sChIJMTBN0ybHFEERMDzq0IAQTqY?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "42",
+      "name": "Школа № 101",
+      "url": "https://www.google.com/maps/place/%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0+%E2%84%96+101/data=!4m7!3m6!1s0x4114cf14d4a57bed:0xf3a6b2a198ba7833!8m2!3d51.6120208!4d45.9758948!16s%2Fg%2F11g_qwtc0!19sChIJ7Xul1BTPFEERM3i6mKGypvM?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "43",
+      "name": "ШКОЛА ВОЛШЕБНИКОВ, студия развивающего обучения",
+      "url": "https://www.google.com/maps/place/%D0%A8%D0%9A%D0%9E%D0%9B%D0%90+%D0%92%D0%9E%D0%9B%D0%A8%D0%95%D0%91%D0%9D%D0%98%D0%9A%D0%9E%D0%92,+%D1%81%D1%82%D1%83%D0%B4%D0%B8%D1%8F+%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D0%B2%D0%B0%D1%8E%D1%89%D0%B5%D0%B3%D0%BE+%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D1%8F/data=!4m7!3m6!1s0x4114c7b7043a409d:0x42b4bbda04fde67!8m2!3d51.535601!4d46.013398!16s%2Fg%2F11bzrrrmd0!19sChIJnUA6BLfHFEERZ95PoL1LKwQ?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "44",
+      "name": "МОУ Лицей № 50",
+      "url": "https://www.google.com/maps/place/%D0%9C%D0%9E%D0%A3+%D0%9B%D0%B8%D1%86%D0%B5%D0%B9+%E2%84%96+50/data=!4m7!3m6!1s0x4114cf5f9b8239b9:0xf8dc46f67cf6620b!8m2!3d51.595453!4d45.957312!16s%2Fg%2F1hc4ksjpd!19sChIJuTmCm1_PFEERC2L2fPZG3Pg?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "45",
+      "name": "Гимназия 58",
+      "url": "https://www.google.com/maps/place/%D0%93%D0%B8%D0%BC%D0%BD%D0%B0%D0%B7%D0%B8%D1%8F+58/data=!4m7!3m6!1s0x4114c19f6bcaa07f:0x695999fc6dc69f79!8m2!3d51.4911723!4d45.9244945!16s%2Fg%2F11ph4b_jqv!19sChIJf6DKa5_BFEEReZ_GbfyZWWk?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "46",
+      "name": "Школа № 49",
+      "url": "https://www.google.com/maps/place/%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0+%E2%84%96+49/data=!4m7!3m6!1s0x4114cf473867cdff:0x52aafbde13ddae72!8m2!3d51.604618!4d45.9882599!16s%2Fg%2F1hc2zzkc9!19sChIJ_81nOEfPFEERcq7dE977qlI?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "47",
+      "name": "Средняя общеобразовательная школа № 105 МОУ",
+      "url": "https://www.google.com/maps/place/%D0%A1%D1%80%D0%B5%D0%B4%D0%BD%D1%8F%D1%8F+%D0%BE%D0%B1%D1%89%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F+%D1%88%D0%BA%D0%BE%D0%BB%D0%B0+%E2%84%96+105+%D0%9C%D0%9E%D0%A3/data=!4m7!3m6!1s0x4114c4fcda1cf577:0x7df146ec8b563ea5!8m2!3d51.5893343!4d45.8540968!16s%2Fg%2F1vqmgxj6!19sChIJd_Uc2vzEFEERpT5Wi-xG8X0?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "48",
+      "name": "СОШ «Аврора»",
+      "url": "https://www.google.com/maps/place/%D0%A1%D0%9E%D0%A8+%C2%AB%D0%90%D0%B2%D1%80%D0%BE%D1%80%D0%B0%C2%BB/data=!4m7!3m6!1s0x4114cf28df535f17:0xff74a541d91289e8!8m2!3d51.6112748!4d46.0198702!16s%2Fg%2F11lkz07dwp!19sChIJF19T3yjPFEER6IkS2UGldP8?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "49",
+      "name": "СРЕДНЯЯ ОБЩЕОБРАЗОВАТЕЛЬНАЯ ШКОЛА № 34 С УГЛУБЛЕННЫМ ИЗУЧЕНИЕМ ХУДОЖЕСТВЕННО-ЭСТЕТИЧЕСКИХ ПРЕДМЕТОВ",
+      "url": "https://www.google.com/maps/place/%D0%A1%D0%A0%D0%95%D0%94%D0%9D%D0%AF%D0%AF+%D0%9E%D0%91%D0%A9%D0%95%D0%9E%D0%91%D0%A0%D0%90%D0%97%D0%9E%D0%92%D0%90%D0%A2%D0%95%D0%9B%D0%AC%D0%9D%D0%90%D0%AF+%D0%A8%D0%9A%D0%9E%D0%9B%D0%90+%E2%84%96+34+%D0%A1+%D0%A3%D0%93%D0%9B%D0%A3%D0%91%D0%9B%D0%95%D0%9D%D0%9D%D0%AB%D0%9C+%D0%98%D0%97%D0%A3%D0%A7%D0%95%D0%9D%D0%98%D0%95%D0%9C+%D0%A5%D0%A3%D0%94%D0%9E%D0%96%D0%95%D0%A1%D0%A2%D0%92%D0%95%D0%9D%D0%9D%D0%9E-%D0%AD%D0%A1%D0%A2%D0%95%D0%A2%D0%98%D0%A7%D0%95%D0%A1%D0%9A%D0%98%D0%A5+%D0%9F%D0%A0%D0%95%D0%94%D0%9C%D0%95%D0%A2%D0%9E%D0%92/data=!4m7!3m6!1s0x4114c0d32e9761db:0x1489f86fe55d35be!8m2!3d51.498945!4d45.933242!16s%2Fg%2F11bzrl5clk!19sChIJ22GXLtPAFEERvjVd5W_4iRQ?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "50",
+      "name": "Лицей № 36",
+      "url": "https://www.google.com/maps/place/%D0%9B%D0%B8%D1%86%D0%B5%D0%B9+%E2%84%96+36/data=!4m7!3m6!1s0x4114c5e2cd0cd641:0xc7ae9179b84e3287!8m2!3d51.577736!4d45.963847!16s%2Fg%2F1hc25ys8l!19sChIJQdYMzeLFFEERhzJOuHmRrsc?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "51",
+      "name": "Лицей № 56",
+      "url": "https://www.google.com/maps/place/%D0%9B%D0%B8%D1%86%D0%B5%D0%B9+%E2%84%96+56/data=!4m7!3m6!1s0x4114cf420c335f65:0xb107a123e1bba75!8m2!3d51.60521!4d45.9734327!16s%2Fg%2F11xmwmnym!19sChIJZV8zDELPFEERdbobPhJ6EAs?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "52",
+      "name": "СОИРО",
+      "url": "https://www.google.com/maps/place/%D0%A1%D0%9E%D0%98%D0%A0%D0%9E/data=!4m7!3m6!1s0x4114c7faac9fcd1f:0x432bfab30e788476!8m2!3d51.529095!4d46.0613021!16s%2Fg%2F11d_6_pqbt!19sChIJH82frPrHFEERdoR4DrP6K0M?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "53",
+      "name": "Гимназия №34 Г.Д. Ермолаева",
+      "url": "https://www.google.com/maps/place/%D0%93%D0%B8%D0%BC%D0%BD%D0%B0%D0%B7%D0%B8%D1%8F+%E2%84%9634+%D0%93.%D0%94.+%D0%95%D1%80%D0%BC%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%B0/data=!4m7!3m6!1s0x4114c0d29526c4bb:0xd68e93ef3b46e21b!8m2!3d51.4977523!4d45.9345339!16s%2Fg%2F1hc89q3c5!19sChIJu8QmldLAFEERG-JGO--TjtY?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "54",
+      "name": "ИТ-Академия I-Genio",
+      "url": "https://www.google.com/maps/place/%D0%98%D0%A2-%D0%90%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%B8%D1%8F+I-Genio/data=!4m7!3m6!1s0x4114cf7b5aa71ed3:0xd91c83d93d561c46!8m2!3d51.609322!4d46.018167!16s%2Fg%2F11h18c18q8!19sChIJ0x6nWnvPFEERRhxWPdmDHNk?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "55",
+      "name": "ГБУ СО \"РЦОКО\"",
+      "url": "https://www.google.com/maps/place/%D0%93%D0%91%D0%A3+%D0%A1%D0%9E+%22%D0%A0%D0%A6%D0%9E%D0%9A%D0%9E%22/data=!4m7!3m6!1s0x4114c795cf11fe59:0x60a5ba8bbd4eb383!8m2!3d51.5252497!4d46.0304702!16s%2Fg%2F1q2wj0bgh!19sChIJWf4Rz5XHFEERg7NOvYu6pWA?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "56",
+      "name": "МОУ Лицей № 47",
+      "url": "https://www.google.com/maps/place/%D0%9C%D0%9E%D0%A3+%D0%9B%D0%B8%D1%86%D0%B5%D0%B9+%E2%84%96+47/data=!4m7!3m6!1s0x4114c57630769b69:0x9b4afea59c325143!8m2!3d51.6019689!4d45.907572!16s%2Fg%2F1hc1kc631!19sChIJaZt2MHbFFEERQ1EynKX-Sps?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "57",
+      "name": "Средняя общеобразовательная школа №59 с углубленным изучением предметов",
+      "url": "https://www.google.com/maps/place/%D0%A1%D1%80%D0%B5%D0%B4%D0%BD%D1%8F%D1%8F+%D0%BE%D0%B1%D1%89%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F+%D1%88%D0%BA%D0%BE%D0%BB%D0%B0+%E2%84%9659+%D1%81+%D1%83%D0%B3%D0%BB%D1%83%D0%B1%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%BC+%D0%B8%D0%B7%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC+%D0%BF%D1%80%D0%B5%D0%B4%D0%BC%D0%B5%D1%82%D0%BE%D0%B2/data=!4m7!3m6!1s0x4114c0fcd59cb0fb:0xe57cc156693f130!8m2!3d51.4821392!4d45.8867527!16s%2Fg%2F11gz9z1bm!19sChIJ-7Cc1fzAFEERMPGTZhXMVw4?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "58",
+      "name": "Саратовская кадетская школа-интернат №2 имени В.В.Талалихина",
+      "url": "https://www.google.com/maps/place/%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BA%D0%B0%D0%B4%D0%B5%D1%82%D1%81%D0%BA%D0%B0%D1%8F+%D1%88%D0%BA%D0%BE%D0%BB%D0%B0-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%82+%E2%84%962+%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8+%D0%92.%D0%92.%D0%A2%D0%B0%D0%BB%D0%B0%D0%BB%D0%B8%D1%85%D0%B8%D0%BD%D0%B0/data=!4m7!3m6!1s0x4114cf36d7de3afd:0x7575fbbae4707bfc!8m2!3d51.6038079!4d46.0038548!16s%2Fg%2F1hc3j6md2!19sChIJ_Tre1zbPFEER_Htw5Lr7dXU?authuser=0&hl=ru&rclk=1"
+    },
+    {
+      "id": "59",
+      "name": "Гуманитарно-экономический лицей",
+      "url": "https://www.google.com/maps/place/%D0%93%D1%83%D0%BC%D0%B0%D0%BD%D0%B8%D1%82%D0%B0%D1%80%D0%BD%D0%BE-%D1%8D%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9+%D0%BB%D0%B8%D1%86%D0%B5%D0%B9/data=!4m7!3m6!1s0x4114c7dc8feb406f:0xca61b3e41b21493d!8m2!3d51.5387244!4d46.0428357!16s%2Fg%2F12hp4t8wh!19sChIJb0Drj9zHFEERPUkhG-SzYco?authuser=0&hl=ru&rclk=1"
+    }
+  ]
+}

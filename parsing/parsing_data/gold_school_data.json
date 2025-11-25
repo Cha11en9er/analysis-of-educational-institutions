@@ -1,0 +1,3518 @@
+{
+    "topic": "Школы Саратова",
+    "total_elements": 439,
+    "data": [
+        {
+            "id": 1,
+            "name": "Прогимназия Идеал",
+            "adress": "ул. имени Н.Г. Чернышевского, 16А, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/"
+            }
+        },
+        {
+            "id": 2,
+            "name": "Средняя общеобразовательная школа № 77",
+            "adress": "Саратов, Шелковичная улица",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/secondary_school_77/1028265778/"
+            }
+        },
+        {
+            "id": 3,
+            "name": "МОУ Средняя общеобразовательная школа № 6",
+            "adress": "ул. имени В.Н. Симбирцева, 34, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/secondary_school_6/90738861676/"
+            }
+        },
+        {
+            "id": 4,
+            "name": "Средняя общеобразовательная школа № 6",
+            "adress": "ул. Куйбышева, 138, Маркс",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_6_mou/1069981402/"
+            }
+        },
+        {
+            "id": 5,
+            "name": "Средняя общеобразовательная школа № 95",
+            "adress": "2-я Садовая ул., 23, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_95_mou/1133121667/"
+            }
+        },
+        {
+            "id": 6,
+            "name": "Средняя общеобразовательная школа № 18 имени О.П. Табакова",
+            "adress": "ул. имени В.Г. Рахова, 124, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_18_s_uglublennym_izucheniyem_predmetov_frunzenskogo_rayona_goroda_saratova/92543720504/"
+            }
+        },
+        {
+            "id": 7,
+            "name": "Средняя общеобразовательная школа № 70",
+            "adress": "Большая Садовая ул., 240, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/secondary_school_70/107243058092/"
+            }
+        },
+        {
+            "id": 8,
+            "name": "Средняя общеобразовательная школа № 73",
+            "adress": "2-й Магнитный пр., 44, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/secondary_school_73/1032739814/"
+            }
+        },
+        {
+            "id": 9,
+            "name": "Средняя общеобразовательная школа № 45",
+            "adress": "Дегтярная ул., 12, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/mei_secondary_school_45/1134269325/"
+            }
+        },
+        {
+            "id": 10,
+            "name": "Школа № 67 имени О.И. Янковского",
+            "adress": "ул. имени Е.И. Пугачёва, 123, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/shkola_67_imeni_o_i_yankovskogo/1115737362/"
+            }
+        },
+        {
+            "id": 11,
+            "name": "Средняя школа № 2 имени В.П. Тихонова",
+            "adress": "ул. имени И.В. Мичурина, 16, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/shkola_2_s_uglublennym_izucheniyem_otdelnykh_predmetov_im_v_p_tikhonova/83182503409/"
+            }
+        },
+        {
+            "id": 12,
+            "name": "Средняя общеобразовательная школа № 9",
+            "adress": "Соляная ул., 17, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_9_volzhskogo_rayona_g_saratova/1096289996/"
+            }
+        },
+        {
+            "id": 13,
+            "name": "Средняя общеобразовательная школа №9",
+            "adress": "Саратов, Соляная улица, 17",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256518"
+            }
+        },
+        {
+            "id": 14,
+            "name": "Гимназия № 2",
+            "adress": "ул. имени Н.Г. Чернышевского, 138, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/mou_gymnasium_2_of_the_city_of_saratov/1044083499/"
+            }
+        },
+        {
+            "id": 15,
+            "name": "Гимназия №2",
+            "adress": "Саратов, улица им. Чернышевского Н.Г., 138",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280257229"
+            }
+        },
+        {
+            "id": 16,
+            "name": "Основная общеобразовательная школа школа № 14",
+            "adress": "1-я Садовая ул., 35, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/school_14/1068794906/"
+            }
+        },
+        {
+            "id": 17,
+            "name": "Средняя общеобразовательная школа № 94",
+            "adress": "просп. имени 50 лет Октября, 75, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/mou_sosh_94/1017609783/"
+            }
+        },
+        {
+            "id": 18,
+            "name": "Школа № 97 Октябрьского района города Саратова",
+            "adress": "ул. имени В.Г. Клочкова, 77, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/mou_97/85769787611/"
+            }
+        },
+        {
+            "id": 19,
+            "name": "Средняя общеобразовательная школа № 10",
+            "adress": "ул. имени В.А. Рогожина, 24/32, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/munitsipalnoye_obshcheobrazovatelnoye_ucherezhdeniyesrednyaya_obshcheobrazovatelnaya_shkola_10_volzhskogo_rayona_g_saratov/177322688958/"
+            }
+        },
+        {
+            "id": 20,
+            "name": "Средняя общеобразовательная школа № 23 им. С. В. Астраханцева",
+            "adress": "5-й Нагорный пр., 3, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_23/189525180132/"
+            }
+        },
+        {
+            "id": 21,
+            "name": "Средняя школа № 76",
+            "adress": "Вишнёвая ул., 16, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/mou_srednyaya_obshcheobrazovatelnaya_shkola_76/1211441882/"
+            }
+        },
+        {
+            "id": 22,
+            "name": "Средняя общеобразовательная школа № 1",
+            "adress": "ул. имени С.Т. Разина, 32, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/mou_sosh_1_frunzenskogo_rayona_goroda_saratova/199355486831/"
+            }
+        },
+        {
+            "id": 23,
+            "name": "Средняя общеобразовательная школа № 1",
+            "adress": "Интернациональная ул., 41, Маркс",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_1_mou/142035100075/"
+            }
+        },
+        {
+            "id": 24,
+            "name": "Средняя общеобразовательная школа № 1",
+            "adress": "Школьная ул., 4, рабочий посёлок Степное",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_1_r_p_stepnoye_sovetskogo_rayona_mou/5727707303/"
+            }
+        },
+        {
+            "id": 25,
+            "name": "Средняя школа № 51",
+            "adress": "Артиллерийская ул., 27, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/munitsipalnoye_obshcheobrazovatelnoye_uchrezhdeniye_srednyaya_obshcheobrazovatelnaya_shkola_51/1041347543/"
+            }
+        },
+        {
+            "id": 26,
+            "name": "Средняя общеобразовательная школа № 8",
+            "adress": "Соборная ул., 33, Саратов подъезд 1",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/mou_sosh_8/1100719618/"
+            }
+        },
+        {
+            "id": 27,
+            "name": "Средняя общеобразовательная школа № 8",
+            "adress": "ул. имени А.Н. Радищева, 18/1, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/school_8/1082134116/"
+            }
+        },
+        {
+            "id": 28,
+            "name": "Лицей-интернат естественных наук",
+            "adress": "Советская ул., 60, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/litsey_internat_yestestvennykh_nauk/1046815252/"
+            }
+        },
+        {
+            "id": 29,
+            "name": "Средняя общеобразовательная школа № 21 имени П.А. Столыпина",
+            "adress": "ул. имени И.Н. Посадского, 193, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_21_im_p_a_stolypina/1029954455/"
+            }
+        },
+        {
+            "id": 30,
+            "name": "Средняя общеобразовательная школа № 59",
+            "adress": "ул. имени Н.Г. Маркина, 17/39, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/munitsipalnoye_obrazovatelnoye_uchrezhdeniye_srednyaya_obshcheobrazovatelnaya_shkola_59_s_uglublennym_izucheniyem_predmetov/86852847691/"
+            }
+        },
+        {
+            "id": 31,
+            "name": "Средняя общеобразовательная школа № 55",
+            "adress": "ул. имени А.П. Чехова, 1А, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/secondary_school_55/1061907716/"
+            }
+        },
+        {
+            "id": 32,
+            "name": "Лицей № 24 имени М.М. Расковой",
+            "adress": "ул. имени Н.Е. Жуковского, 24, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/shkola_24/1026210237/"
+            }
+        },
+        {
+            "id": 33,
+            "name": "Средняя общеобразовательная школа № 84",
+            "adress": "Южно-Зелёная ул., 11А, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_84/245199771434/"
+            }
+        },
+        {
+            "id": 34,
+            "name": "Средняя школа № 46",
+            "adress": "Овражная ул., 2Б, Саратов Главный корпус: Ипподромная, зд 19А Корпус Городские просторы: ул Долгина, д.5",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/mou_sosh_46/1076928061/"
+            }
+        },
+        {
+            "id": 35,
+            "name": "Средняя школа №46",
+            "adress": "Саратов, Ипподромная улица, 19а",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280289029"
+            }
+        },
+        {
+            "id": 36,
+            "name": "Средняя школа №46",
+            "adress": "Саратов, улица им. Евгения Долгина, 5",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001092731870"
+            }
+        },
+        {
+            "id": 37,
+            "name": "Школа № 100",
+            "adress": "1-й пр. имени И.В. Панфилова, 3, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/shkola_100/1057602578/"
+            }
+        },
+        {
+            "id": 38,
+            "name": "Средняя общеобразовательная школа № 106",
+            "adress": "Огородная ул., 33, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/secondary_school_106/210122755916/"
+            }
+        },
+        {
+            "id": 39,
+            "name": "Средняя общеобразовательная школа № 72",
+            "adress": "Бережная ул., 1, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_72/83700291925/"
+            }
+        },
+        {
+            "id": 40,
+            "name": "Средняя общеобразовательная школа №72",
+            "adress": "Саратов, Бережная улица, 1",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256845"
+            }
+        },
+        {
+            "id": 41,
+            "name": "Средняя общеобразовательная школа № 22 имени Героя Советского Союза П.Т. Пономарёва",
+            "adress": "Ростовская ул., 29, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/secondary_school_no_22_named_after_hero_of_the_soviet_union_p_t_ponomarev/75061546307/"
+            }
+        },
+        {
+            "id": 42,
+            "name": "Средняя общеобразовательная школа № 43 имени В.Ф. Маргелова",
+            "adress": "ул. имени П.Т. Пономарёва, 49, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/secondary_school_no_43_named_after_v_f_margelov/106386579987/"
+            }
+        },
+        {
+            "id": 43,
+            "name": "Основная общеобразовательная школа № 17",
+            "adress": "Наумовская ул., 11, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/basic_secondary_school_17/1131316636/"
+            }
+        },
+        {
+            "id": 44,
+            "name": "Гимназия № 1",
+            "adress": "ул. имени И.В. Мичурина, 88, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/gymnasium_1/1074329395/"
+            }
+        },
+        {
+            "id": 45,
+            "name": "Гимназия №1",
+            "adress": "Саратов, Мичурина улица, 88",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280257227"
+            }
+        },
+        {
+            "id": 46,
+            "name": "Школа № 102",
+            "adress": "Саратов, 3-й Студёный проезд",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/shkola_102/134553044381/"
+            }
+        },
+        {
+            "id": 47,
+            "name": "Средняя общеобразовательная школа Аврора",
+            "adress": "ул. имени П.Ф. Батавина, 23, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_avrora/132394050649/"
+            }
+        },
+        {
+            "id": 48,
+            "name": "Гимназия № 4",
+            "adress": "Вознесенская ул., 5, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/gymnasium_4/1110657902/"
+            }
+        },
+        {
+            "id": 49,
+            "name": "Средняя общеобразовательная школа № 71",
+            "adress": "ул. Танкистов, 126, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/secondary_school_71/1006274417/"
+            }
+        },
+        {
+            "id": 50,
+            "name": "Средняя школа № 66 имени Н. И. Вавилова",
+            "adress": "Державинская ул., 1, посёлок Юбилейный, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/secondary_school_no_66_named_after_n_i_vavilov/1133728010/"
+            }
+        },
+        {
+            "id": 51,
+            "name": "Средняя общеобразовательная школа Иволгино",
+            "adress": "Малая Розовая ул., 2, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_ivolgino/113743269350/"
+            }
+        },
+        {
+            "id": 52,
+            "name": "Гимназия № 3",
+            "adress": "Большая Казачья ул., 121, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/gymnasium_3/1041553719/"
+            }
+        },
+        {
+            "id": 53,
+            "name": "Гимназия №3",
+            "adress": "Саратов, улица Большая Казачья, 121",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280257233"
+            }
+        },
+        {
+            "id": 54,
+            "name": "Гимназия № 31",
+            "adress": "Лесная ул., 1/9, Кировский район, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/gimnaziya_31/1053734696/"
+            }
+        },
+        {
+            "id": 55,
+            "name": "Гимназия №31",
+            "adress": "Саратов, Лесная улица, 1/9",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256624"
+            }
+        },
+        {
+            "id": 56,
+            "name": "Средняя общеобразовательная школа № 54 имени И.А. Евтеева",
+            "adress": "Тракторная ул., 33, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/shkola_54/1797953720/"
+            }
+        },
+        {
+            "id": 57,
+            "name": "Лицей № 2",
+            "adress": "1-я линия, 9/4, микрорайон Октябрьский, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/litsey_2/1129908336/"
+            }
+        },
+        {
+            "id": 58,
+            "name": "Лицей №2",
+            "adress": "Саратов, 1-я линия, 9/4",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280289243"
+            }
+        },
+        {
+            "id": 59,
+            "name": "Гимназия № 34 имени Г.Д. Ермолаева",
+            "adress": "Кавказская ул., 17, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/shkola_40/42110567774/"
+            }
+        },
+        {
+            "id": 60,
+            "name": "Гимназия № 34 имени Г.Д. Ермолаева",
+            "adress": "просп. Энтузиастов, 48, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/gimnaziya_34_imeni_g_d_yermolayeva/37872328167/"
+            }
+        },
+        {
+            "id": 61,
+            "name": "Средняя общеобразовательная школа № 41",
+            "adress": "Тверская ул., 45, Ленинский район, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/secondary_school_41/1078289826/"
+            }
+        },
+        {
+            "id": 62,
+            "name": "Школа № 101",
+            "adress": "ул. имени В.И. Лебедева-Кумача, 73А, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_101/1049005491/"
+            }
+        },
+        {
+            "id": 63,
+            "name": "Гимназия гуманитарных наук",
+            "adress": "ул. имени Н.И. Вавилова, 36, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/gymnasium_of_humanities/1116621737/"
+            }
+        },
+        {
+            "id": 64,
+            "name": "Гимназия гуманитарных наук",
+            "adress": "Большая Казачья ул., 58, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/gimnaziya_gumanitarnykh_nauk/70576329582/"
+            }
+        },
+        {
+            "id": 65,
+            "name": "Гимназия гуманитарных наук",
+            "adress": "​Улица им. Вавилова Н.И., 36",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280257713"
+            }
+        },
+        {
+            "id": 66,
+            "name": "Гимназия гуманитарных наук",
+            "adress": "​Улица Большая Казачья, 58",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001067895343"
+            }
+        },
+        {
+            "id": 67,
+            "name": "Лицей № 47",
+            "adress": "3-я Степная ул., 6, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/lyceum_47/1043541140/"
+            }
+        },
+        {
+            "id": 68,
+            "name": "Лицей №47",
+            "adress": "Саратов, Степная 3-я улица, 6",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256683"
+            }
+        },
+        {
+            "id": 69,
+            "name": "Средняя общеобразовательная школа № 44 имени Героя России Н.В. Исаева",
+            "adress": "Перспективная ул., 9/10, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/shkola_44/106290889117/"
+            }
+        },
+        {
+            "id": 70,
+            "name": "Лицей-интернат 64",
+            "adress": "ул. имени С.Т. Разина, 73, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/litsey_internat_64/98803499793/"
+            }
+        },
+        {
+            "id": 71,
+            "name": "Средняя общеобразовательная школа № 48",
+            "adress": "ул. имени В.И. Загороднева, 2, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_48/38102825946/"
+            }
+        },
+        {
+            "id": 72,
+            "name": "Средняя общеобразовательная школа № 103",
+            "adress": "Производственная ул., 5, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/secondary_school_103/1010150388/"
+            }
+        },
+        {
+            "id": 73,
+            "name": "Средняя общеобразовательная школа № 60 имени Героя Советского Союза П.Ф. Батавина",
+            "adress": "ул. имени П.Ф. Батавина, 6А, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/mou_sosh_60/1052700989/"
+            }
+        },
+        {
+            "id": 74,
+            "name": "Средняя образовательная школа № 61",
+            "adress": "ул. имени И.П. Бардина, 3, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/shkola_61/88383529263/"
+            }
+        },
+        {
+            "id": 75,
+            "name": "Лицей Звезда",
+            "adress": "Техническая ул., 3/1, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/zvezda/192903085019/"
+            }
+        },
+        {
+            "id": 76,
+            "name": "Средняя школа № 57",
+            "adress": "Перспективная ул., 29, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/munitsipalnoye_obshcheobrazovatelnoye_uchrezhdeniye_srednyaya_obshcheobrazovatelnaya_shkola_57/65307562578/"
+            }
+        },
+        {
+            "id": 77,
+            "name": "Средняя школа №57",
+            "adress": "Саратов, Перспективная улица, 29",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256723"
+            }
+        },
+        {
+            "id": 78,
+            "name": "Средняя общеобразовательная школа № 86",
+            "adress": "2-й Московский пр., 5, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/sarschool86/16042452222/"
+            }
+        },
+        {
+            "id": 79,
+            "name": "Школа Уникум",
+            "adress": "Железнодорожная ул., 29, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/shkola_unikum/1031121342/"
+            }
+        },
+        {
+            "id": 80,
+            "name": "Средняя общеобразовательная школа № 64",
+            "adress": "Стахановская ул., 8, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_64/120490931607/"
+            }
+        },
+        {
+            "id": 81,
+            "name": "Средняя общеобразовательная школа № 38",
+            "adress": "Южная ул., 46, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/mou_sosh_38/1113508152/"
+            }
+        },
+        {
+            "id": 82,
+            "name": "Средняя общеобразовательная школа №38",
+            "adress": "Саратов, Южная улица, 46",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256654"
+            }
+        },
+        {
+            "id": 83,
+            "name": "Специальная коррекционная общеобразовательная школа № 1 VIII вида",
+            "adress": "Вольская ул., 30, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/sbei_saratov_region_school_for_students_of_po_adapted_educational_programs_1_of_the_city_of_saratov/1006472275/"
+            }
+        },
+        {
+            "id": 84,
+            "name": "Лицей № 53",
+            "adress": "4-й пр. имени Н.Г. Чернышевского, 2, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/lyceum_53_saratov/1062463037/"
+            }
+        },
+        {
+            "id": 85,
+            "name": "Лицей №53",
+            "adress": "Саратов, 4-й проезд им. Н.Г. Чернышевского, 2",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256715"
+            }
+        },
+        {
+            "id": 86,
+            "name": "Лицей № 62",
+            "adress": "Ильинская площадь, 1, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/maou_lyceum_62/1132108231/"
+            }
+        },
+        {
+            "id": 87,
+            "name": "Лицей №62",
+            "adress": "Саратов, Ильинская площадь, 1",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280257291"
+            }
+        },
+        {
+            "id": 88,
+            "name": "Гимназия № 108",
+            "adress": "просп. имени 50 лет Октября, 107, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/gimnaziya_108/1067532669/"
+            }
+        },
+        {
+            "id": 89,
+            "name": "Гимназия №108",
+            "adress": "Саратов, проспект им. 50 лет Октября, 107",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256545"
+            }
+        },
+        {
+            "id": 90,
+            "name": "Лицей № 15",
+            "adress": "просп. Энтузиастов, 14, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/lyceum_15/1388328792/"
+            }
+        },
+        {
+            "id": 91,
+            "name": "Лицей №15",
+            "adress": "Саратов, проспект Энтузиастов, 14",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280266592"
+            }
+        },
+        {
+            "id": 92,
+            "name": "Лицей № 24 имени М.М. Расковой, корпус № 2",
+            "adress": "Саратов, улица имени Героя Советского Союза Р.Е. Ароновой",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/munitsipalnoye_obrazovatelnoye_uchrezhdeniye_srednyaya_obshcheobrazovatelnaya_shkola_93/227625211666/"
+            }
+        },
+        {
+            "id": 93,
+            "name": "Гуманитарно-экономический лицей",
+            "adress": "Большая Горная ул., 141, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/mou_gumanitarno_ekonomichesky_litsey/1092967532/"
+            }
+        },
+        {
+            "id": 94,
+            "name": "Гуманитарно-экономический лицей",
+            "adress": "1-я Садовая ул., 2, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/gumanitarno_ekonomicheskiy_litsey/162780296026/"
+            }
+        },
+        {
+            "id": 95,
+            "name": "Гуманитарно-экономический лицей",
+            "adress": "Саратов, Садовая 1-я улица, 2",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280257292"
+            }
+        },
+        {
+            "id": 96,
+            "name": "Гуманитарно-экономический лицей",
+            "adress": "Саратов, Большая Горная улица, 139/141",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256547"
+            }
+        },
+        {
+            "id": 97,
+            "name": "Гимназия № 7",
+            "adress": "Федоровская ул., 3, посёлок Юбилейный, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/gymnasium_7/1032138559/"
+            }
+        },
+        {
+            "id": 98,
+            "name": "Гимназия № 7",
+            "adress": "ул. имени А.П. Муленкова, 10А, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/gimnaziya_7/161310028795/"
+            }
+        },
+        {
+            "id": 99,
+            "name": "Гимназия №7",
+            "adress": "Саратов, улица им. Муленкова А.П., 10а",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001030556823"
+            }
+        },
+        {
+            "id": 100,
+            "name": "Гимназия №7",
+            "adress": "Саратов, Фёдоровская улица, 3",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280262278"
+            }
+        },
+        {
+            "id": 101,
+            "name": "Средняя общеобразовательная школа № 49",
+            "adress": "Перспективная ул., 10А, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/mou_sosh_49_leninskogo_rayona_goroda_saratova/2392968816/"
+            }
+        },
+        {
+            "id": 102,
+            "name": "Средняя общеобразовательная школа № 90",
+            "adress": "Заречная ул., 2А, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/secondary_school_90/106467648031/"
+            }
+        },
+        {
+            "id": 103,
+            "name": "Средняя общеобразовательная школа №90",
+            "adress": "Саратов, Заречная улица, 2/1",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256876"
+            }
+        },
+        {
+            "id": 104,
+            "name": "Лицей № 4",
+            "adress": "Московская ул., 64, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/munitsipalnoye_obshcheobrazovatelnoye_uchrezhdeniye_litsey_4/1010589817/"
+            }
+        },
+        {
+            "id": 105,
+            "name": "Лицей №4",
+            "adress": "Саратов, Московская улица, 64 / им. Радищева А.Н. улица, 32",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256669"
+            }
+        },
+        {
+            "id": 106,
+            "name": "Лицей прикладных наук имени Д.И. Трубецкова",
+            "adress": "Комсомольская ул., 39, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/litsey_prikladnykh_nauk/1061363313/"
+            }
+        },
+        {
+            "id": 107,
+            "name": "Школа № 26",
+            "adress": "Ново-Крекингская ул., 47, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola_26_mou/244703926854/"
+            }
+        },
+        {
+            "id": 108,
+            "name": "Покровская православная классическая гимназия имени святого Александра Невского",
+            "adress": "ул. имени А.М. Горького, 83, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/pokrovskaya_pravoslavnaya_klassicheskaya_gimnaziya_imeni_svyatogo_aleksandra_nevskogo/1225212315/"
+            }
+        },
+        {
+            "id": 109,
+            "name": "Лицей Солярис",
+            "adress": "ул. имени С.П. Лисина, 7Б, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/solaris/34634068768/"
+            }
+        },
+        {
+            "id": 110,
+            "name": "Школа-интернат № 3",
+            "adress": "Селекционный пр., 3, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/gbou_so_shkola_internat_aop_3_g_saratova/228497961048/"
+            }
+        },
+        {
+            "id": 111,
+            "name": "Школа-интернат №3",
+            "adress": "Энгельс, Петровская улица, 32",
+            "source": {
+                "2gis_url": "https://2gis.ru/engels/firm/6052240280292344"
+            }
+        },
+        {
+            "id": 112,
+            "name": "Школа-интернат №3",
+            "adress": "Саратов, Селекционный проезд, 3",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280292293"
+            }
+        },
+        {
+            "id": 113,
+            "name": "Прогимназия № 237 Семицветик",
+            "adress": "ул. имени И.Н. Посадского, 308А, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/progymnasium_237_semitsvetik/1098995346/"
+            }
+        },
+        {
+            "id": 114,
+            "name": "Прогимназия № 237 Семицветик",
+            "adress": "ул. имени И.Н. Посадского, 308, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/progymnasium_237_semitsvetik/20478037455/"
+            }
+        },
+        {
+            "id": 115,
+            "name": "Основная общеобразовательная школа № 78",
+            "adress": "Огородная ул., 173, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/mou_osnovnaya_obshcheobrazovatelnaya_shkola_78/181981552893/"
+            }
+        },
+        {
+            "id": 116,
+            "name": "Основная общеобразовательная школа №78",
+            "adress": "Саратов, Огородная улица, 173",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256859"
+            }
+        },
+        {
+            "id": 117,
+            "name": "Гимназия № 5",
+            "adress": "Азовская ул., 15, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/gimnaziya_5/27235900030/"
+            }
+        },
+        {
+            "id": 118,
+            "name": "Гимназия № 5",
+            "adress": "1-й Тульский пр., 6А, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/gimnaziya_5/1056412780/"
+            }
+        },
+        {
+            "id": 119,
+            "name": "Гимназия №5",
+            "adress": "Саратов, Азовская улица, 15",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256661"
+            }
+        },
+        {
+            "id": 120,
+            "name": "Гимназия №5",
+            "adress": "Саратов, 1-й Тульский проезд, 6а",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280257236"
+            }
+        },
+        {
+            "id": 121,
+            "name": "Основная общеобразовательная школа № 91",
+            "adress": "Саратов, микрорайон Новый Увек",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/munitsipalnoye_obshcheobrazovatelnoye_uchrezhdeniye_osnovnaya_obshcheobrazovatelnaya_shkola_91/1074530766/"
+            }
+        },
+        {
+            "id": 122,
+            "name": "Основная общеобразовательная школа №91",
+            "adress": "Саратов, Увекская улица, 31а",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256877"
+            }
+        },
+        {
+            "id": 123,
+            "name": "Основная общеобразовательная школа №91",
+            "adress": "Саратов, 1-й Нефтяной проезд, 1 к1",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280394901"
+            }
+        },
+        {
+            "id": 124,
+            "name": "Инженерный лицей",
+            "adress": "ул. имени В.Г. Клочкова, 85, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/litsey_internat_6/1052539347/"
+            }
+        },
+        {
+            "id": 125,
+            "name": "Инженерный лицей",
+            "adress": "Саратов, им. Клочкова В.Г. улица, 85",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280393652"
+            }
+        },
+        {
+            "id": 126,
+            "name": "Лицей № 50",
+            "adress": "ул. имени В.И. Загороднева, 16, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/lyceum_50/158041622369/"
+            }
+        },
+        {
+            "id": 127,
+            "name": "Лицей №50",
+            "adress": "Саратов, им. Загороднева В.И. улица, 16",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256702"
+            }
+        },
+        {
+            "id": 128,
+            "name": "Гимназия № 75 имени Д.М. Карбышева",
+            "adress": "Осенняя ул., 5, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/mou_sosh_75/197267336586/"
+            }
+        },
+        {
+            "id": 129,
+            "name": "Средняя общеобразовательная школа № 105",
+            "adress": "ул. Строителей, 14А, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/mou_sosh_105/233289274520/"
+            }
+        },
+        {
+            "id": 130,
+            "name": "Лицей гуманитарных наук",
+            "adress": "Большая Садовая ул., 224А, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/lyceum_of_humanities/1008160365/"
+            }
+        },
+        {
+            "id": 131,
+            "name": "Лицей гуманитарных наук",
+            "adress": "Саратов, Большая Садовая улица, 224а",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280266608"
+            }
+        },
+        {
+            "id": 132,
+            "name": "Лицей № 37",
+            "adress": "Мирный пер., 3, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/litsey_37/1022515372/"
+            }
+        },
+        {
+            "id": 133,
+            "name": "Лицей №37",
+            "adress": "Саратов, Мирный переулок, 3",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280257284"
+            }
+        },
+        {
+            "id": 134,
+            "name": "Физико-технический лицей № 1",
+            "adress": "Московская ул., 143, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/maou_physicotechnical_lyceum_1/1053419817/"
+            }
+        },
+        {
+            "id": 135,
+            "name": "Физико-технический лицей №1",
+            "adress": "Саратов, Московская улица, 141",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001035292813"
+            }
+        },
+        {
+            "id": 136,
+            "name": "Физико-технический лицей №1",
+            "adress": "Саратов, Московская улица, 143",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280263306"
+            }
+        },
+        {
+            "id": 137,
+            "name": "Физико-технический лицей №1",
+            "adress": "Саратов, Железнодорожная улица, 74",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280257282"
+            }
+        },
+        {
+            "id": 138,
+            "name": "Лицей математики и информатики",
+            "adress": "ул. имени И.Н. Посадского, 246, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/lyceum_of_mathematics_and_informatics/1083755421/"
+            }
+        },
+        {
+            "id": 139,
+            "name": "Лицей математики и информатики",
+            "adress": "Саратов, им. Посадского И.Н. улица, 246",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280257714"
+            }
+        },
+        {
+            "id": 140,
+            "name": "Гимназия № 34, филиал Авиатор",
+            "adress": "Саратов, бульвар имени Николая Денисова",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/gymnasium_34_aviator_branch/85144212428/"
+            }
+        },
+        {
+            "id": 141,
+            "name": "Лицей № 3 имени А. С. Пушкина",
+            "adress": "Советская ул., 46, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/litsey_3_im_a_s_pushkina/1021305516/"
+            }
+        },
+        {
+            "id": 142,
+            "name": "Национальная татарская гимназия",
+            "adress": "ул. имени А.Н. Радищева, 32, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/national_tatar_gymnasium/223623648005/"
+            }
+        },
+        {
+            "id": 143,
+            "name": "Основная общеобразовательная школа № 81",
+            "adress": "Васильковская ул., 17, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola_81/1045200569/"
+            }
+        },
+        {
+            "id": 144,
+            "name": "Прогимназия Олимпионик имени С. П. Лисина",
+            "adress": "ул. имени С.П. Лисина, 14, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/progimnaziya_olimpionik_imeni_s_p_lisina/79179913211/"
+            }
+        },
+        {
+            "id": 145,
+            "name": "Средняя общеобразовательная школа № 83",
+            "adress": "Крымская ул., 2, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_83/1013287750/"
+            }
+        },
+        {
+            "id": 146,
+            "name": "Школа-интернат для обучающихся по адаптированным общеобразовательным программам № 4",
+            "adress": "ул. имени Н.Г. Чернышевского, 157, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/boarding_school_4/18629834848/"
+            }
+        },
+        {
+            "id": 147,
+            "name": "Специальная коррекционная общеобразовательная школа № 4 VIII вида",
+            "adress": "ул. имени В.И. Загороднева, 19, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/special_correctional_general_education_school_4_of_the_viii_type/15410306125/"
+            }
+        },
+        {
+            "id": 148,
+            "name": "Средняя общеобразовательная школа № 16",
+            "adress": "Брянская ул., 3, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/kadetskaya_shkola_16/1781697901/"
+            }
+        },
+        {
+            "id": 149,
+            "name": "Средняя общеобразовательная школа № 16",
+            "adress": "Лесопильная ул., 17, посёлок Лесопильный, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_16/36621252093/"
+            }
+        },
+        {
+            "id": 150,
+            "name": "ГБОУ Со школа-интернат для обучающихся по адаптированным образовательным программам № 5 г. Саратова",
+            "adress": "ул. имени В.А. Рогожина, 22, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/gosudarstvennoye_byudzhetnoye_obshcheobrazovatelnoye_uchrezhdeniye_so_shkola_internat_dlya_obuchayushchikhsya_po_adaptirovannym_obrazovatelnym_programmam_5_g_saratova/1010417963/"
+            }
+        },
+        {
+            "id": 151,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "рабочий посёлок Соколовый, микрорайон ДОС, 23А",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/mou_srednyaya_obshcheobrazovatelnaya_shkola_r_p_sokolovy_saratovskogo_rayona_saratovskoy_oblasti/1794041153/"
+            }
+        },
+        {
+            "id": 152,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Большая Советская ул., 66, село Усть-Курдюм",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola/96171276878/"
+            }
+        },
+        {
+            "id": 153,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Октябрьская ул., 1А, посёлок Дубки",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_p_dubki/1122122108/"
+            }
+        },
+        {
+            "id": 154,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Тепличная ул., 112, посёлок Тепличный",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/mou_sosh_p_teplichny/1066677686/"
+            }
+        },
+        {
+            "id": 155,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Советская ул., 92, село Шумейка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_mou/205363559312/"
+            }
+        },
+        {
+            "id": 156,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Школьная ул., 2Б, село Березина Речка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola/19967004294/"
+            }
+        },
+        {
+            "id": 157,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Полевая ул., 7Д, посёлок Расково",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola/1128025996/"
+            }
+        },
+        {
+            "id": 158,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "муниципальное образование Саратов, село Александровка, Привокзальная улица",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola/3418580769/"
+            }
+        },
+        {
+            "id": 159,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "ул. Калинина, 4А, посёлок Красный Текстильщик",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_r_p_krasny_tekstilshchik_mou/1073503849/"
+            }
+        },
+        {
+            "id": 160,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Советская ул., 46, село Клещевка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_s_kleshchevka_mou/10083086448/"
+            }
+        },
+        {
+            "id": 161,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Школьная ул., 1, село Сторожевка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/storozhevkovskaya_shkola/1095189450/"
+            }
+        },
+        {
+            "id": 162,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Центральная ул., 9, село Михайловка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_s_mikhaylovka_mou/1033286870/"
+            }
+        },
+        {
+            "id": 163,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Лесная ул., 32, рабочий посёлок Красный Октябрь",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola/167563501653/"
+            }
+        },
+        {
+            "id": 164,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "ул. Чапаева, 43, посёлок имени Карла Маркса",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_mou/1001603676/"
+            }
+        },
+        {
+            "id": 165,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "бул. Вавилова, 7, посёлок Новопушкинское",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/mou_sosh_p_novopushkinskoye/1691542469/"
+            }
+        },
+        {
+            "id": 166,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Школьная ул., 13, посёлок Коминтерн",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola/1133944251/"
+            }
+        },
+        {
+            "id": 167,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "ул. Ленина, 71А, село Широкое",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_mou/43353596858/"
+            }
+        },
+        {
+            "id": 168,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "муниципальное образование Саратов, село Синенькие",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_s_sinenkiye_mou/1071027891/"
+            }
+        },
+        {
+            "id": 169,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "ул. Гагарина, 2, село Красный Яр",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_mou/1123606920/"
+            }
+        },
+        {
+            "id": 170,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "ул. Ленина, 2А, село Звонаревка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_s_zvonarevka_mou/234389613317/"
+            }
+        },
+        {
+            "id": 171,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Крайняя ул., 10, село Воскресенское",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_mou/139567973757/"
+            }
+        },
+        {
+            "id": 172,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "ул. Ленина, 2, село Новая Терновка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_mou/1004799565/"
+            }
+        },
+        {
+            "id": 173,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Школьная ул., 50, село Елшанка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_mou/1129004730/"
+            }
+        },
+        {
+            "id": 174,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "ул. Революции, 13, село Павловка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_s_pavlovka_mou/1054197223/"
+            }
+        },
+        {
+            "id": 175,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "ул. Ленина, 13А, посёлок Лощинный",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_mou/1037836131/"
+            }
+        },
+        {
+            "id": 176,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Саратовская область, Советский район, рабочий посёлок Пушкино",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola/36745595696/"
+            }
+        },
+        {
+            "id": 177,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "ул. Гагарина, 19А, село Баскатовка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_s_baskatovka_mou/210360594291/"
+            }
+        },
+        {
+            "id": 178,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Школьная ул., 17, село Сосновка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/munitsipalnoye_obshcheobrazovatelnoye_uchrezhdeniye_srednyaya_obshcheobrazovatelnaya_shkola_s_sosnovka_saratovskogo_rayona_saratovskoy_oblasti/1544870243/"
+            }
+        },
+        {
+            "id": 179,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Школьная ул., 27, село Липовка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola/1129984765/"
+            }
+        },
+        {
+            "id": 180,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Рабочая ул., 8, село Большая Каменка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_s_vyazovka_filial_mou/107027387869/"
+            }
+        },
+        {
+            "id": 181,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "ул. Уханова, 115, село Октябрьский Городок",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_mou/42916883779/"
+            }
+        },
+        {
+            "id": 182,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Школьная ул., 12, село Мечетное",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola/112639397097/"
+            }
+        },
+        {
+            "id": 183,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "ул. 50 лет Пионерии, 13, рабочий посёлок Советское",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola/96994100242/"
+            }
+        },
+        {
+            "id": 184,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Советская ул., 13, село Зеленый Дол",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_mou/1065221235/"
+            }
+        },
+        {
+            "id": 185,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Школьная ул., 1, посёлок Бурный",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola/14732394529/"
+            }
+        },
+        {
+            "id": 186,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Молодёжная ул., 1Б, д. Юрловка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola/120888445825/"
+            }
+        },
+        {
+            "id": 187,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Садовая ул., 5, село Золотая Степь",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola/39953531532/"
+            }
+        },
+        {
+            "id": 188,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Рабочая ул., 22, село Широкополье",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola/1110712678/"
+            }
+        },
+        {
+            "id": 189,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Центральная ул., 16, село Заветы Ильича",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola/146206339145/"
+            }
+        },
+        {
+            "id": 190,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Школьная ул., 2, посёлок Садовый",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_mou/64933824381/"
+            }
+        },
+        {
+            "id": 191,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Школьная ул., 42А, село Рыбушка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_s_rybushka_mou/1095561951/"
+            }
+        },
+        {
+            "id": 192,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "ул. Ленина, 1, село Каменка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_s_kamenka_mou/1016198689/"
+            }
+        },
+        {
+            "id": 193,
+            "name": "Средняя общеобразовательная школа МОУ",
+            "adress": "Саратовская область, Татищевский район, Вязовское муниципальное образование, село Мизино-Лапшиновка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_mou/1083435451/"
+            }
+        },
+        {
+            "id": 194,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Центральная ул., 4, село Идолга",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_s_idolga_mou/1118682025/"
+            }
+        },
+        {
+            "id": 195,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Школьная ул., 15, село Большая Ивановка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_mou/69408471283/"
+            }
+        },
+        {
+            "id": 196,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Школьная ул., 1, село Мизино-Лапшиновка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola/31469112174/"
+            }
+        },
+        {
+            "id": 197,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Центральная ул., 12, д. Ершовка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola/32918137588/"
+            }
+        },
+        {
+            "id": 198,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "площадь Мира, 5, посёлок Гремячий",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola/24820172108/"
+            }
+        },
+        {
+            "id": 199,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Школьная ул., 12, село Большая Дмитриевка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola/80096376534/"
+            }
+        },
+        {
+            "id": 200,
+            "name": "Средняя общеобразовательная школа",
+            "adress": "Школьная ул., 1, село Букатовка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_mou/1065150151/"
+            }
+        },
+        {
+            "id": 201,
+            "name": "Гимназия № 89",
+            "adress": "Мало-Елшанская ул., 5, стр. 3, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/gimnaziya_89/70848925534/"
+            }
+        },
+        {
+            "id": 202,
+            "name": "Гимназия №89",
+            "adress": "Саратов, Мало-Елшанская улица, 5",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256871"
+            }
+        },
+        {
+            "id": 203,
+            "name": "Школа для обучающихся по адаптированным образовательным программам № 2",
+            "adress": "Симбирская ул., 9, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/gosudarstvennoye_byudzhetnoye_obshcheobrazovatelnoye_uchrezhdeniye_saratovskoy_oblasti_shkola_dlya_obuchayushchikhsya_po_adaptivnym_obrazovatelnym_programmam_2_goroda_saratov/72111282236/"
+            }
+        },
+        {
+            "id": 204,
+            "name": "Средняя общеобразовательная школа № 69",
+            "adress": "ул. Мелиораторов, 1А, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/secondary_school_69/1007151057/"
+            }
+        },
+        {
+            "id": 205,
+            "name": "МАОУ Лицей № 36",
+            "adress": "Одесская ул., 7, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/maou_litsey_36/1122418848/"
+            }
+        },
+        {
+            "id": 206,
+            "name": "Лицей №36",
+            "adress": "Саратов, Одесская улица, 7",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256652"
+            }
+        },
+        {
+            "id": 207,
+            "name": "Медико-биологический лицей",
+            "adress": "ул. имени Ф.А. Блинова, 27, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/maou_mediko_biologichesky_litsey_goroda_saratova/1174614164/"
+            }
+        },
+        {
+            "id": 208,
+            "name": "Медико-биологический лицей",
+            "adress": "Саратов, Блинова улица, 27",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280266524"
+            }
+        },
+        {
+            "id": 209,
+            "name": "Лицей № 107",
+            "adress": "Державинская ул., 10, посёлок Юбилейный, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/lyceum_107/1021761978/"
+            }
+        },
+        {
+            "id": 210,
+            "name": "Лицей №107",
+            "adress": "Саратов, Державинская улица, 10",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280266504"
+            }
+        },
+        {
+            "id": 211,
+            "name": "Школа № 6",
+            "adress": "Пролетарская ул., 8, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/school_6/1075874246/"
+            }
+        },
+        {
+            "id": 212,
+            "name": "Школа №6",
+            "adress": "Саратов, Пролетарская улица, 8",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280292317"
+            }
+        },
+        {
+            "id": 213,
+            "name": "Средняя школа с этнокультурным еврейским компонентом",
+            "adress": "Селекционный пр., 5, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/secondary_school_with_an_ethnocultural_jewish_component/1160168382/"
+            }
+        },
+        {
+            "id": 214,
+            "name": "Гимназия Д.А.Р",
+            "adress": "Гвардейская ул., 15Е, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/gymnasium_d_a_r/1065478073/"
+            }
+        },
+        {
+            "id": 215,
+            "name": "Национальная татарская гимназия, начальная школа",
+            "adress": "Мясницкая ул., 4, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/national_tatar_gymnasium_primary_school/1731589729/"
+            }
+        },
+        {
+            "id": 216,
+            "name": "Средняя общеобразовательная школа имени Героя Советского Союза Н.В. Котлова",
+            "adress": "муниципальное образование Саратов, село Багаевка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_s_bagayevka_mou/1128007298/"
+            }
+        },
+        {
+            "id": 217,
+            "name": "Средняя общеобразовательная школа № 42",
+            "adress": "рабочий посёлок Приволжский, станция Анисовка, 3-й квартал, 26А",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_42/1140685497/"
+            }
+        },
+        {
+            "id": 218,
+            "name": "Основная общеобразовательная школа",
+            "adress": "Овражная ул., 30, посёлок Прибрежный",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/shkola_poselka_pribrezhny/31241374117/"
+            }
+        },
+        {
+            "id": 219,
+            "name": "Основная общеобразовательная школа",
+            "adress": "Коммунарная ул., 2Б, село Константиновка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_s_konstantinovka_mou/1118788439/"
+            }
+        },
+        {
+            "id": 220,
+            "name": "Основная общеобразовательная школа",
+            "adress": "Советская ул., 40, село Чардым",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola/1115200692/"
+            }
+        },
+        {
+            "id": 221,
+            "name": "Основная общеобразовательная школа",
+            "adress": "ул. Жукова, 10, село Ленинское",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola/65096242718/"
+            }
+        },
+        {
+            "id": 222,
+            "name": "Основная общеобразовательная школа",
+            "adress": "Большевистский пер., 14Б, село Квасниковка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola/11727730633/"
+            }
+        },
+        {
+            "id": 223,
+            "name": "Основная общеобразовательная школа",
+            "adress": "ул. Чкалова, 11, село Безымянное",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_mou/1100134460/"
+            }
+        },
+        {
+            "id": 224,
+            "name": "Основная общеобразовательная школа",
+            "adress": "ул. Ленина, 26, посёлок Взлетный",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_mou/1041722184/"
+            }
+        },
+        {
+            "id": 225,
+            "name": "Основная общеобразовательная школа",
+            "adress": "Почтовая ул., 24, село Бородаевка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola/80552123512/"
+            }
+        },
+        {
+            "id": 226,
+            "name": "Основная общеобразовательная школа",
+            "adress": "Центральная ул., 13, село Старицкое",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/munitsipalnoye_byudzhetnoye_obshcheobrazovatelnoye_uchrezhdeniye_osnovnaya_obshcheobrazovatelnaya_shkola_sela_staritskoye/1801539903/"
+            }
+        },
+        {
+            "id": 227,
+            "name": "Основная общеобразовательная школа",
+            "adress": "Школьная ул., 27, село Новокривовка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola/203065922288/"
+            }
+        },
+        {
+            "id": 228,
+            "name": "Основная общеобразовательная школа",
+            "adress": "Центральная ул., 15, посёлок Центральная Усадьба совхоза 15 лет Октября",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola_p_ts_u_sovkhoza_15_let_oktyabrya_mou/188643694515/"
+            }
+        },
+        {
+            "id": 229,
+            "name": "Основная общеобразовательная школа",
+            "adress": "ул. Зои Космодемьянской, 10А, село Березовка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola/146803550229/"
+            }
+        },
+        {
+            "id": 230,
+            "name": "Основная общеобразовательная школа",
+            "adress": "Школьная ул., 12, посёлок Славянка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola_mou/160567615696/"
+            }
+        },
+        {
+            "id": 231,
+            "name": "Основная общеобразовательная школа",
+            "adress": "Северная ул., 21, село Большая Федоровка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola_mou/54892895457/"
+            }
+        },
+        {
+            "id": 232,
+            "name": "Основная общеобразовательная школа",
+            "adress": "Школьная ул., 2, село Усовка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola_mou/1076094518/"
+            }
+        },
+        {
+            "id": 233,
+            "name": "МОУ Основная общеобразовательная школа",
+            "adress": "ул. Шигаева, 128А, село Кувыка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola_mou/25250150820/"
+            }
+        },
+        {
+            "id": 234,
+            "name": "Основная общеобразовательная школа",
+            "adress": "ул. Шигаева, 92, село Кувыка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola/22969176367/"
+            }
+        },
+        {
+            "id": 235,
+            "name": "Основная общеобразовательная школа МОУ",
+            "adress": "Саратовская область, Татищевский район, Ягодно-Полянское муниципальное образование, село Полчаниновка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola_mou/1112937105/"
+            }
+        },
+        {
+            "id": 236,
+            "name": "Основная общеобразовательная школа",
+            "adress": "Ивановский, Центральная улица, 31",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001030113512"
+            }
+        },
+        {
+            "id": 237,
+            "name": "Основная общеобразовательная школа",
+            "adress": "Константиновка, Коммунарная улица, 2Б",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001030145539"
+            }
+        },
+        {
+            "id": 238,
+            "name": "Гимназия № 87",
+            "adress": "Перспективная ул., 9А, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/gimnaziya_87/1044478710/"
+            }
+        },
+        {
+            "id": 239,
+            "name": "Гимназия №87",
+            "adress": "Саратов, Перспективная улица, 9а",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280257238"
+            }
+        },
+        {
+            "id": 240,
+            "name": "Гимназия № 58",
+            "adress": "ул. имени М.М. Расковой, 12, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/gimnaziya_58/44228629428/"
+            }
+        },
+        {
+            "id": 241,
+            "name": "Гимназия №58",
+            "adress": "Саратов, им. Расковой М.М. улица, 12",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280257237"
+            }
+        },
+        {
+            "id": 242,
+            "name": "Средняя общеобразовательная школа № 80 Ласточкино",
+            "adress": "ул. Романтиков, 85, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_80_lastochkino/10978663729/"
+            }
+        },
+        {
+            "id": 243,
+            "name": "Школа № 91",
+            "adress": "1-й Нефтяной пр., 1Д, посёлок Нефтяной, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/school_91/1125641939/"
+            }
+        },
+        {
+            "id": 244,
+            "name": "Средняя общеобразовательнаяя школа № 21",
+            "adress": "ул. Гагарина, 17Б, рабочий посёлок Приволжский",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_21_mou/167301814790/"
+            }
+        },
+        {
+            "id": 245,
+            "name": "Средняя общеобразовательная школа № 66 имени Н.И. Вавилова",
+            "adress": "Казанская ул., 29, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/secondary_school_66_named_after_n_i_vavilov_building_eureka/1060813617/"
+            }
+        },
+        {
+            "id": 246,
+            "name": "Начальная школа-детский сад № 88",
+            "adress": "Саратов, посёлок Латухино",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/nachalnaya_shkola_detskiy_sad_88/59711643737/"
+            }
+        },
+        {
+            "id": 247,
+            "name": "Общеобразовательная школа",
+            "adress": "Школьная ул., 1, посёлок Пробуждение",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/obshcheobrazovatelnaya_shkola_poselka_probuzhdeniye/1030842539/"
+            }
+        },
+        {
+            "id": 248,
+            "name": "Средняя общеобразовательная школа имени Р.Е. Ароновой",
+            "adress": "ул. Мира, 20, село Генеральское",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_imeni_r_ye_aronovoy/1108758041/"
+            }
+        },
+        {
+            "id": 249,
+            "name": "Лицей № 56",
+            "adress": "3-й пр. Строителей, 3, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/lyceum_56/143737145201/"
+            }
+        },
+        {
+            "id": 250,
+            "name": "Лицей №56",
+            "adress": "Саратов, Строителей 3-й проезд, 3",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256530"
+            }
+        },
+        {
+            "id": 251,
+            "name": "Средняя школа № 46, корпус № 2 Городские просторы",
+            "adress": "ул. имени Евгения Долгина, 5, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_shkola_46_korpus_2_gorodskiye_prostory/39057501147/"
+            }
+        },
+        {
+            "id": 252,
+            "name": "Средняя общеобразовательнаяя школа",
+            "adress": "Школьная ул., 2А, посёлок Придорожный",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnayaya_shkola/1071003412/"
+            }
+        },
+        {
+            "id": 253,
+            "name": "Средняя общеобразовательнаяя школа",
+            "adress": "Школьная ул., 28/1, село Марфино",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/marfinskaya_srednyaya_shkola_mou/1120724034/"
+            }
+        },
+        {
+            "id": 254,
+            "name": "Средняя общеообразовательная школа",
+            "adress": "Саратовская область, Саратовский район, станция Тарханы",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_st_tarkhany_mou/1048217957/"
+            }
+        },
+        {
+            "id": 255,
+            "name": "Средняя общеообразовательная школа",
+            "adress": "Центральная ул., 33, село Березовка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_mbou/3583376866/"
+            }
+        },
+        {
+            "id": 256,
+            "name": "Физико-технический лицей № 1, корпус № 2",
+            "adress": "Железнодорожная ул., 74, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/physico_tehnical_lyceum_1_korpus_2/1034685609/"
+            }
+        },
+        {
+            "id": 257,
+            "name": "СОШ п. Расково, филиал",
+            "adress": "Дорожная ул., 14, хутор Малая Скатовка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/sosh_p_raskovo_filial/216760074215/"
+            }
+        },
+        {
+            "id": 258,
+            "name": "Средняя общеобразовательная школа № 31",
+            "adress": "ул. Гагарина, 65А, рабочий посёлок Приволжский",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_31/1192949001/"
+            }
+        },
+        {
+            "id": 259,
+            "name": "Вязовская средняя общеобразовательная школа",
+            "adress": "Пролетарская ул., 1, село Вязовка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_mou/148980272194/"
+            }
+        },
+        {
+            "id": 260,
+            "name": "Школа-студия балета Татьяны Картушиной",
+            "adress": "Соборная ул., 9, Саратов этаж 3",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/kartushinaballetstudio/219592175469/"
+            }
+        },
+        {
+            "id": 261,
+            "name": "Средняя общеобразовательная школа имени Героя Советского Союза П.Т. Пономарёва",
+            "adress": "Школьная ул., 10, станция Курдюм",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_imeni_geroya_sovetskogo_soyuza_p_t_ponomaryova/157274998371/"
+            }
+        },
+        {
+            "id": 262,
+            "name": "Средняя общеобразовательная школа № 3 имени В.Н. Щёголева",
+            "adress": "ул. Кузнецова, 12, посёлок Светлый",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_3_imeni_v_n_shchyogoleva/122726949104/"
+            }
+        },
+        {
+            "id": 263,
+            "name": "Средняя общеобразовательная школа № 2 имени В.А. Коновалова",
+            "adress": "ул. Кузнецова, 10, посёлок Светлый",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_2_imeni_v_a_konovalova/56898094387/"
+            }
+        },
+        {
+            "id": 264,
+            "name": "Школа № 71",
+            "adress": "Городская ул., 74, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/mou_sosh_71/38485495120/"
+            }
+        },
+        {
+            "id": 265,
+            "name": "Ивановская средняя школа",
+            "adress": "Центральная ул., 31, посёлок Ивановский",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_p_ivanovsky_mou/97147276622/"
+            }
+        },
+        {
+            "id": 266,
+            "name": "Школа-интернат для обучающихся по адаптированным образовательным программам № 5 г. Саратова, центр психолого-педагогического и медико-социального сопровождения",
+            "adress": "Северная ул., 3, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/shkola_internat_dlya_obuchayushchikhsya_po_adaptirovannym_obrazovatelnym_programmam_5_g_saratova_tsentr_psikhologo_pedagogicheskogo_i_mediko_sotsialnogo_soprovozhdeniya/35813893759/"
+            }
+        },
+        {
+            "id": 267,
+            "name": "МОУ Средняя Общеобразовательная школа Села Поповка Саратовского района Саратовской области",
+            "adress": "Школьная ул., 41, село Поповка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_s_popovka_mou/1109207108/"
+            }
+        },
+        {
+            "id": 268,
+            "name": "Средняя общеобразовательная школа п. Сергиевский Саратовского района Саратовской области",
+            "adress": "Октябрьская ул., 21, посёлок Сергиевский",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_p_sergiyevsky_mou/1009783213/"
+            }
+        },
+        {
+            "id": 269,
+            "name": "Раскатовская средняя общеобразовательная школа",
+            "adress": "ул. Мелиораторов, 12, село Раскатово",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_s_raskatovo_mou/1010944321/"
+            }
+        },
+        {
+            "id": 270,
+            "name": "Школа села Сабуровка",
+            "adress": "муниципальное образование Саратов, село Сабуровка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/shkola_sela_saburovka/19885077244/"
+            }
+        },
+        {
+            "id": 271,
+            "name": "Средняя общеобразовательная школа № 4",
+            "adress": "ул. Интернациональная площадь, 10, Маркс",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_4/1068315176/"
+            }
+        },
+        {
+            "id": 272,
+            "name": "Средняя общеобразовательная школа имени Ю.А. Гагарина",
+            "adress": "Революционная ул., 3, село Узморье",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_imeni_yu_a_gagarina/1008304759/"
+            }
+        },
+        {
+            "id": 273,
+            "name": "МОУ Средняя общеобразовательная школа село Подстепное",
+            "adress": "ул. Кирова, 44Г, село Подстепное",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_mou/1114460108/"
+            }
+        },
+        {
+            "id": 274,
+            "name": "МОУ Средняя общеобразовательная школа п. Осиновский",
+            "adress": "Школьная ул., 8, посёлок Осиновский",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_s_osinovka_mou/1080697321/"
+            }
+        },
+        {
+            "id": 275,
+            "name": "Средняя общеобразовательная школа № 3 имени Л.Г. Венедиктовой",
+            "adress": "просп. Строителей, 22, Маркс",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_3_imeni_l_g_venediktovoy/10656737450/"
+            }
+        },
+        {
+            "id": 276,
+            "name": "Марксовская специальная общеобразовательная школа открытого типа",
+            "adress": "ул. Карла Маркса, 119, Маркс",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/gosudarstvennoye_spetsialnoye_uchebno_vospitatelnoye_uchrezhdeniye_dlya_detey_i_podrostkov_s_deviantnym_povedeniyem_otcrytogo_tipa_marksovskaya_spetsialnaya_obshcheobrazovatelnaya_shkola/1063991942/"
+            }
+        },
+        {
+            "id": 277,
+            "name": "Лицей",
+            "adress": "Рабочая ул., 195, Маркс",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/lyceum/141725102287/"
+            }
+        },
+        {
+            "id": 278,
+            "name": "Лицей",
+            "adress": "ул. Димитрова, 20, рабочий посёлок Степное",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/litsey_r_p_stepnoye_sovetskogo_rayona/244850983558/"
+            }
+        },
+        {
+            "id": 279,
+            "name": "Лицей",
+            "adress": "ул. Куйбышева, 188, Маркс",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/litsey/24103267958/"
+            }
+        },
+        {
+            "id": 280,
+            "name": "Средняя общеобразовательная школа имени Ю.В. Фисенко",
+            "adress": "Комсомольская ул., 85, село Подлесное",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_s_podlesnoye_mou/1024653384/"
+            }
+        },
+        {
+            "id": 281,
+            "name": "Школа села Курдюм",
+            "adress": "ул. Пономарёва, 24, село Курдюм",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/shkola_sela_kurdyum/196993386722/"
+            }
+        },
+        {
+            "id": 282,
+            "name": "Школа",
+            "adress": "ул. Карла Маркса, 6А, село Приволжское",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_s_privolzhskoye_mou/1037203670/"
+            }
+        },
+        {
+            "id": 283,
+            "name": "Школа",
+            "adress": "Юбилейная ул., 23, село Карамышка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola_mou/214562612084/"
+            }
+        },
+        {
+            "id": 284,
+            "name": "Школа",
+            "adress": "Центральная ул., 29, село Куликовка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_s_oktyabrsky_gorodok_filial_mou/139525976910/"
+            }
+        },
+        {
+            "id": 285,
+            "name": "Школа",
+            "adress": "Красноармейская ул., 12, село Сосновка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/shkola/12286207885/"
+            }
+        },
+        {
+            "id": 286,
+            "name": "Основная Общеобразовательная школа с. Александровка Советского района Саратовской области",
+            "adress": "Школьная ул., 15, село Александровка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola_s_aleksandrovka_sovetskogo_rayona_saratovskoy_oblasti/218732458409/"
+            }
+        },
+        {
+            "id": 287,
+            "name": "Начальная общеобразовательная школа № 232, детский сад",
+            "adress": "Перспективная ул., 8В, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/primary_secondary_school_232/1005673156/"
+            }
+        },
+        {
+            "id": 288,
+            "name": "Татищевский Лицей",
+            "adress": "Школьная ул., 8, рабочий посёлок Татищево",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_1_r_p_tatishchevo_mou/1083137360/"
+            }
+        },
+        {
+            "id": 289,
+            "name": "Средняя школа",
+            "adress": "Саратовская область, Советский район, село Розовое, Школьная улица",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_shkola/52232416399/"
+            }
+        },
+        {
+            "id": 290,
+            "name": "Средняя школа",
+            "adress": "Тепличный, Тепличная улица, 112",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280303737"
+            }
+        },
+        {
+            "id": 291,
+            "name": "Средняя школа",
+            "adress": "Березина Речка, Школьная улица, 2Б",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280497529"
+            }
+        },
+        {
+            "id": 292,
+            "name": "Средняя школа",
+            "adress": "Соколовый, ДОС, 23а",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280303750"
+            }
+        },
+        {
+            "id": 293,
+            "name": "Средняя школа",
+            "adress": "Клещевка, Советская улица, 46",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001030061741"
+            }
+        },
+        {
+            "id": 294,
+            "name": "Средняя школа",
+            "adress": "Красный Текстильщик, улица Калинина, 4а",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280303744"
+            }
+        },
+        {
+            "id": 295,
+            "name": "Средняя школа",
+            "adress": "Красный Октябрь, Лесная улица, 32",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001030227566"
+            }
+        },
+        {
+            "id": 296,
+            "name": "Средняя школа",
+            "adress": "Тарханы, Школьная улица, 1 к1",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001029992407"
+            }
+        },
+        {
+            "id": 297,
+            "name": "Средняя школа",
+            "adress": "Рыбушка, Школьная улица, 42",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001053991773"
+            }
+        },
+        {
+            "id": 298,
+            "name": "Средняя школа",
+            "adress": "Александровка, Привокзальная улица, 3",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280303756"
+            }
+        },
+        {
+            "id": 299,
+            "name": "Средняя школа",
+            "adress": "Усть-Курдюм, Большая Советская улица, 66",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280303802"
+            }
+        },
+        {
+            "id": 300,
+            "name": "Средняя школа",
+            "adress": "Малая Скатовка, Дорожная улица, 14",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001030225001"
+            }
+        },
+        {
+            "id": 301,
+            "name": "Средняя школа",
+            "adress": "Михайловка, Центральная улица, 9",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001030112946"
+            }
+        },
+        {
+            "id": 302,
+            "name": "Средняя школа",
+            "adress": "Поповка, Школьная улица, 41",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001053983327"
+            }
+        },
+        {
+            "id": 303,
+            "name": "Средняя школа",
+            "adress": "Сосновка, Школьная улица, 17",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001057023519"
+            }
+        },
+        {
+            "id": 304,
+            "name": "Средняя школа",
+            "adress": "Сергиевский, Октябрьская улица, 21",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001030112734"
+            }
+        },
+        {
+            "id": 305,
+            "name": "Средняя школа",
+            "adress": "Синенькие, Комсомольская улица, 22",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001029926415"
+            }
+        },
+        {
+            "id": 306,
+            "name": "Средняя школа",
+            "adress": "Юрловка, Молодёжная улица, 1а",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001057022691"
+            }
+        },
+        {
+            "id": 307,
+            "name": "Средняя общеобразовательная школа имени Героя Советского Союза В.К. Венцова",
+            "adress": "ул. Ленина, 74, село Орловское",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_imeni_geroya_sovetskogo_soyuza_v_k_ventsova/74726058800/"
+            }
+        },
+        {
+            "id": 308,
+            "name": "Основная общеобразовательная школа, филиал",
+            "adress": "Школьная ул., 15, село Любимово",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola_filial/60943519207/"
+            }
+        },
+        {
+            "id": 309,
+            "name": "МОУ ООШ С. Андреевка",
+            "adress": "Молодёжная ул., 23А, д. Андреевка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola_mou/1108106105/"
+            }
+        },
+        {
+            "id": 310,
+            "name": "МОУ Средняя общеобразовательная школа № 3",
+            "adress": "просп. Ленина, 22, Маркс",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_3_mou/1098740390/"
+            }
+        },
+        {
+            "id": 311,
+            "name": "Основная Общеобразовательная школа С. Титоренко",
+            "adress": "Школьная ул., 32, станция Титоренко",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/mbou_osnovnaya_obshcheobrazovatelnaya_shkola_sela_titorenko/1894025507/"
+            }
+        },
+        {
+            "id": 312,
+            "name": "Начальная школа",
+            "adress": "Клубная ул., 17, село Пионерское",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/nachalnaya_shkola/197580771046/"
+            }
+        },
+        {
+            "id": 313,
+            "name": "Начальная школа",
+            "adress": "Вишнёвая ул., 10, село Кошели",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/nachalnaya_obshcheobrazovatelnaya_shkola_mou/1021343089/"
+            }
+        },
+        {
+            "id": 314,
+            "name": "Средняя общеобразовательная школа, корпус № 2",
+            "adress": "Московская ул., 7, село Широкое",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_korpus_2/149404644006/"
+            }
+        },
+        {
+            "id": 315,
+            "name": "МОУ Средняя общеобразовательная школа с. Сторожёвка, филиал",
+            "adress": "Саратовская область, Татищевский район, Сторожевское муниципальное образование, село Курдюм",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_s_storozhyovka_filial_mou/1042971258/"
+            }
+        },
+        {
+            "id": 316,
+            "name": "Средняя общеобразовательная школа, филиал",
+            "adress": "Центральная ул., 40, село Калининское",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_s_kalininskoye/1041757781/"
+            }
+        },
+        {
+            "id": 317,
+            "name": "Основная общеобразовательная школа № 7",
+            "adress": "Пионерская ул., 14, железнодорожная станция Паницкая",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola_7/8840116764/"
+            }
+        },
+        {
+            "id": 318,
+            "name": "Школа-интернат",
+            "adress": "просп. Ленина, 11, Маркс",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/gou_marksovskaya_spetsialnaya_shkola_internat_viii_vida_dlya_obuchayushchikhsya_vospitannikov_s_otkloneniyami_v_razvitii/1058769140/"
+            }
+        },
+        {
+            "id": 319,
+            "name": "Карамановская основная общеобразовательная школа, филиал",
+            "adress": "Саратовская область, Марксовский район, Подлесновское муниципальное образование, село Караман",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_s_karaman/1001559568/"
+            }
+        },
+        {
+            "id": 320,
+            "name": "Языковская средняя школа МОУ",
+            "adress": "Школьная ул., 1А, село Иваново-Языковка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/yazykovskaya_srednyaya_shkola_mou/1032285657/"
+            }
+        },
+        {
+            "id": 321,
+            "name": "Школа танцев",
+            "adress": "Астраханская ул., 47, Саратов",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/shkola_tantsev/208751243933/"
+            }
+        },
+        {
+            "id": 322,
+            "name": "Подлесная средняя школа имени Ю.В. Фисенко, Ястребовский филиал",
+            "adress": "Первомайская ул., 14А, село Ястребовка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola_mou/1015012706/"
+            }
+        },
+        {
+            "id": 323,
+            "name": "Средняя общеобразовательная школа № 1, филиал",
+            "adress": "Центральная ул., 41А, д. Македоновка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_1_r_p_tatishchevo_filial_mou/85949251688/"
+            }
+        },
+        {
+            "id": 324,
+            "name": "МОУ ООШ с. Студеновка Воскресенского района Саратовской области",
+            "adress": "ул. Тростянка, 25А, село Студеновка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola_mou/1122906681/"
+            }
+        },
+        {
+            "id": 325,
+            "name": "МОУ СОШ с. Большая Ивановка",
+            "adress": "Школьная ул., 15, село Большая Ивановка",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/mou_sosh_s_bolshaya_ivanovka/62866856177/"
+            }
+        },
+        {
+            "id": 326,
+            "name": "Средняя общеобразовательная школа с. Орловское МОУ",
+            "adress": "Саратовская область, Марксовский район, Подлесновское муниципальное образование, село Орловское",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_s_orlovskoye_mou/1075323305/"
+            }
+        },
+        {
+            "id": 327,
+            "name": "МОУ Начальная общеобразовательная школа-детский сад",
+            "adress": "Школьная ул., 1, село Карякино",
+            "source": {
+                "yandex_maps_url": "https://yandex.com/maps/org/mou_nachalnaya_obshcheobrazovatelnaya_shkola_detskiy_sad/128357189027/"
+            }
+        },
+        {
+            "id": 328,
+            "name": "Средняя школа №83",
+            "adress": "Саратов, Крымская улица, 2",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001037362342"
+            }
+        },
+        {
+            "id": 329,
+            "name": "Maximum Education",
+            "adress": "Фрунзенский район, Саратов, 410012",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001063207425"
+            }
+        },
+        {
+            "id": 330,
+            "name": "Top IT",
+            "adress": "​Большая Горная улица, 310а к20",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001096260245"
+            }
+        },
+        {
+            "id": 331,
+            "name": "Top IT",
+            "adress": "​Мичурина улица, 166/168",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001104111327"
+            }
+        },
+        {
+            "id": 332,
+            "name": "Englishhall",
+            "adress": "Площадь им. Орджоникидзе Г.К., 1в",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001091559215"
+            }
+        },
+        {
+            "id": 333,
+            "name": "Vortex",
+            "adress": "​ЖК Близнецы-2​Им. академика О.К. Антонова улица, 24",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280264052"
+            }
+        },
+        {
+            "id": 334,
+            "name": "Частная школа начальных классов",
+            "adress": "Саратов",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001079636032"
+            }
+        },
+        {
+            "id": 335,
+            "name": "Средняя школа №86",
+            "adress": "Саратов, Московский 2-й проезд, 5",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256869"
+            }
+        },
+        {
+            "id": 336,
+            "name": "Медицинский предуниверсарий",
+            "adress": "Саратов, Саратовский государственный медицинский университет им. В.И. Разумовского",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280262677"
+            }
+        },
+        {
+            "id": 337,
+            "name": "Средняя общеобразовательная школа №67 им. О.И. Янковского",
+            "adress": "Саратов, улица им. Пугачёва Е.И., 123 / Московская улица, 151",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256838"
+            }
+        },
+        {
+            "id": 338,
+            "name": "Ласточкино",
+            "adress": "Саратов, улица Романтиков, 85",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001079218611"
+            }
+        },
+        {
+            "id": 339,
+            "name": "Лицей №3",
+            "adress": "Саратов, Советская улица, 46/1",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280257712"
+            }
+        },
+        {
+            "id": 340,
+            "name": "Гимназия №4 им. Героя Советского Союза В.М. Безбокова",
+            "adress": "Саратов, Вознесенская улица, 5",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280257235"
+            }
+        },
+        {
+            "id": 341,
+            "name": "Аврора",
+            "adress": "Саратов, Аврора",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001035603313"
+            }
+        },
+        {
+            "id": 342,
+            "name": "Основная школа №17",
+            "adress": "Саратов, Наумовская улица, 11",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256554"
+            }
+        },
+        {
+            "id": 343,
+            "name": "Школа №2 г.",
+            "adress": "Саратов, Гоголя улица, 42 / Симбирская улица, 9",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256558"
+            }
+        },
+        {
+            "id": 344,
+            "name": "Центр образования",
+            "adress": "Саратов, Вольская улица, 30 / им. Пушкина А.С. улица, 27/30",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280391694"
+            }
+        },
+        {
+            "id": 345,
+            "name": "Русская православная классическая гимназия",
+            "adress": "Саратов, им. Челюскинцев улица, 12",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280257239"
+            }
+        },
+        {
+            "id": 346,
+            "name": "Русская православная классическая гимназия",
+            "adress": "​Им. Рогожина В.А. улица, 24/32​4 этаж",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001025091889"
+            }
+        },
+        {
+            "id": 347,
+            "name": "Покровская православная классическая гимназия г. Саратова им. Святого благоверного князя А. Невского",
+            "adress": "Саратов, им. Горького А.М. улица, 83",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280516554"
+            }
+        },
+        {
+            "id": 348,
+            "name": "Средняя школа №16",
+            "adress": "Саратов, Брянская улица, 3",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256552"
+            }
+        },
+        {
+            "id": 349,
+            "name": "Средняя школа №16",
+            "adress": "Саратов, Лесопильная улица, 17",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256519"
+            }
+        },
+        {
+            "id": 350,
+            "name": "Средняя школа №22",
+            "adress": "Саратов, Ростовская улица, 29",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256560"
+            }
+        },
+        {
+            "id": 351,
+            "name": "Средняя школа №69",
+            "adress": "Саратов, Мелиораторов улица, 1Б",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280465039"
+            }
+        },
+        {
+            "id": 352,
+            "name": "Основная школа №14",
+            "adress": "Саратов, Садовая 1-я улица, 35",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256549"
+            }
+        },
+        {
+            "id": 353,
+            "name": "Татарская гимназия",
+            "adress": "Саратов, Мясницкая улица, 4",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280268203"
+            }
+        },
+        {
+            "id": 354,
+            "name": "Татарская гимназия",
+            "adress": "​Московская улица, 64",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280266554"
+            }
+        },
+        {
+            "id": 355,
+            "name": "Основная школа №81",
+            "adress": "Васильковская улица, 17",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256862"
+            }
+        },
+        {
+            "id": 356,
+            "name": "Лицей №24",
+            "adress": "Саратов, им. Жуковского Н.Е. улица, 24а",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256584"
+            }
+        },
+        {
+            "id": 357,
+            "name": "Лицей №24",
+            "adress": "Саратов, им. Жуковского Н.Е. улица, 1",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256878"
+            }
+        },
+        {
+            "id": 358,
+            "name": "Средняя общеобразовательная школа №8 Волжского района г. Саратова",
+            "adress": "Саратов, им. Радищева А.Н. улица, 18/1",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256613"
+            }
+        },
+        {
+            "id": 359,
+            "name": "Средняя общеобразовательная школа №8 Волжского района г. Саратова",
+            "adress": "Саратов, Соборная улица, 33",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280263676"
+            }
+        },
+        {
+            "id": 360,
+            "name": "Школа-интернат №5",
+            "adress": "Саратов, Северная улица, 3",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280257974"
+            }
+        },
+        {
+            "id": 361,
+            "name": "Школа-интернат №5",
+            "adress": "Саратов, им. Рогожина В.А. улица, 22",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280266750"
+            }
+        },
+        {
+            "id": 362,
+            "name": "Средняя школа №105",
+            "adress": "Саратов, Строителей улица, 5",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256543"
+            }
+        },
+        {
+            "id": 363,
+            "name": "Начальная Общеобразовательная школа №232",
+            "adress": "Саратов, Перспективная улица, 8в",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256568"
+            }
+        },
+        {
+            "id": 364,
+            "name": "Средняя школа №10",
+            "adress": "Саратов, им. Рогожина В.А. улица, 24/32",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280289139"
+            }
+        },
+        {
+            "id": 365,
+            "name": "Средняя школа им. П.А. Мельникова",
+            "adress": "Сторожевка, Школьная улица, 1",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280497832"
+            }
+        },
+        {
+            "id": 366,
+            "name": "Средняя школа им. П.А. Мельникова",
+            "adress": "Курдюм, Пономарёва улица, 24",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001030392146"
+            }
+        },
+        {
+            "id": 367,
+            "name": "Гимназия №34",
+            "adress": "Саратов, Барнаульский тупик, 10",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001100413612"
+            }
+        },
+        {
+            "id": 368,
+            "name": "Гимназия №34",
+            "adress": "Саратов, Кавказская улица, 17",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256671"
+            }
+        },
+        {
+            "id": 369,
+            "name": "Гимназия №34",
+            "adress": "Саратов, проспект Энтузиастов, 48",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256532"
+            }
+        },
+        {
+            "id": 370,
+            "name": "Средняя общеобразовательная школа с этнокультурным еврейским компонентом образования",
+            "adress": "Саратов, Селекционный проезд, 5",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280257722"
+            }
+        },
+        {
+            "id": 371,
+            "name": "Средняя общеобразовательная школа пос. Расково Муниципального образования Город Саратов",
+            "adress": "Расково, Полевая улица, 7 к1",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280303734"
+            }
+        },
+        {
+            "id": 372,
+            "name": "Средняя общеобразовательная школа №5",
+            "adress": "Саратов, Огородная улица, 196а",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001074186219"
+            }
+        },
+        {
+            "id": 373,
+            "name": "Средняя общеобразовательная школа №5",
+            "adress": "Саратов, Огородная улица, 196",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256689"
+            }
+        },
+        {
+            "id": 374,
+            "name": "Средняя школа №12",
+            "adress": "Энгельс, улица Пушкина, 1а",
+            "source": {
+                "2gis_url": "https://2gis.ru/engels/firm/6052240280292193"
+            }
+        },
+        {
+            "id": 375,
+            "name": "Средняя школа №7",
+            "adress": "Энгельс, Студенческая улица, 187а/1",
+            "source": {
+                "2gis_url": "https://2gis.ru/engels/firm/70000001033671066"
+            }
+        },
+        {
+            "id": 376,
+            "name": "Средняя школа №7",
+            "adress": "Саратов, Аткарская улица, 1в",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256840"
+            }
+        },
+        {
+            "id": 377,
+            "name": "Спортивная школа олимпийского резерва №3 г. Саратова",
+            "adress": "​Большой Динамовский проезд, 5",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001036977585"
+            }
+        },
+        {
+            "id": 378,
+            "name": "Средняя общеобразовательная школа пос. Дубки Муниципального образования Город Саратов",
+            "adress": "Дубки, Октябрьская улица, 1а",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280303730"
+            }
+        },
+        {
+            "id": 379,
+            "name": "Саратовский областной базовый медицинский колледж",
+            "adress": "Саратов, Саратовский областной базовый медицинский колледж",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280300695"
+            }
+        },
+        {
+            "id": 380,
+            "name": "Средняя школа П.Т. Пономарева",
+            "adress": "Курдюм, Школьная улица, 10",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052241280342503"
+            }
+        },
+        {
+            "id": 381,
+            "name": "Средняя школа им. Героя Советского Союза Н.В. Котлова",
+            "adress": "Багаевка, Советская улица, 1",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280303759"
+            }
+        },
+        {
+            "id": 382,
+            "name": "Основная школа",
+            "adress": "Гагаринский район, пос. Центральная усадьба совхоза 15 лет Октября, Саратов городской округ, Саратовская область, 410521",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001057832088"
+            }
+        },
+        {
+            "id": 383,
+            "name": "Средняя школа №3",
+            "adress": "Светлый, Кузнецова улица, 12",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001030224707"
+            }
+        },
+        {
+            "id": 384,
+            "name": "Средняя школа №2",
+            "adress": "Светлый, Кузнецова улица, 10",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001030153366"
+            }
+        },
+        {
+            "id": 385,
+            "name": "Средняя школа №2",
+            "adress": "Саратов, Мичурина улица, 16",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256534"
+            }
+        },
+        {
+            "id": 386,
+            "name": "Саратовский национальный исследовательский государственный университет им. Н.Г. Чернышевского",
+            "adress": "Саратов, Саратовский национальный исследовательский государственный университет им. Н.Г. Чернышевского",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052695547086562"
+            }
+        },
+        {
+            "id": 387,
+            "name": "Средняя общеобразовательная школа №19",
+            "adress": "Паницкая, Пионерская улица, 14",
+            "source": {
+                "2gis_url": "https://2gis.ru/firm/70000001053984119"
+            }
+        },
+        {
+            "id": 388,
+            "name": "Школа борьбы братьев Набиевых",
+            "adress": "​3-й Дегтярный проезд, 2 к1",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001097366931"
+            }
+        },
+        {
+            "id": 389,
+            "name": "Солярис",
+            "adress": "Саратов, улица им. Лисина С.П., 7Б",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001027154065"
+            }
+        },
+        {
+            "id": 390,
+            "name": "Солярис",
+            "adress": "Саратов, проспект Героев Отечества, 11а",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001055487050"
+            }
+        },
+        {
+            "id": 391,
+            "name": "Авиатор",
+            "adress": "Саратов, бульвар им. Денисова Николая, 4",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001045221097"
+            }
+        },
+        {
+            "id": 392,
+            "name": "Средняя школа №55",
+            "adress": "Саратов, улица им. Чехова А.П., 1а",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256719"
+            }
+        },
+        {
+            "id": 393,
+            "name": "Средняя школа №1",
+            "adress": "Саратов, улица им. Разина С.Т., 32",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256536"
+            }
+        },
+        {
+            "id": 394,
+            "name": "Звезда",
+            "adress": "Саратов, Техническая улица, 3/1",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001043610537"
+            }
+        },
+        {
+            "id": 395,
+            "name": "Средняя школа №77",
+            "adress": "Саратов, Шелковичная улица, 141",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256857"
+            }
+        },
+        {
+            "id": 396,
+            "name": "Средняя школа №77",
+            "adress": "Саратов, Новоузенская улица, 143",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001078805388"
+            }
+        },
+        {
+            "id": 397,
+            "name": "Средняя общеобразовательная школа №51",
+            "adress": "Саратов, Артиллерийская улица, 27",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256707"
+            }
+        },
+        {
+            "id": 398,
+            "name": "Средняя общеобразовательная школа №18 с углубленным изучением предметов им. О.П. Табакова",
+            "adress": "Саратов, Рахова улица, 124",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256555"
+            }
+        },
+        {
+            "id": 399,
+            "name": "Средняя школа №100",
+            "adress": "Саратов, 1-й проезд им. И.В. Панфилова, 3",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256538"
+            }
+        },
+        {
+            "id": 400,
+            "name": "Иволгино",
+            "adress": "Саратов, Малая Розовая улица, 2",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001064247526"
+            }
+        },
+        {
+            "id": 401,
+            "name": "Средняя школа №11",
+            "adress": "Саратов, 1-й Соколовогорский проезд, 1 к1",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256546"
+            }
+        },
+        {
+            "id": 402,
+            "name": "Средняя школа №103",
+            "adress": "Саратов, Производственная улица, 5",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256541"
+            }
+        },
+        {
+            "id": 403,
+            "name": "Средняя школа №95",
+            "adress": "Саратов, 2-я Садовая улица, 23г",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256885"
+            }
+        },
+        {
+            "id": 404,
+            "name": "Средняя школа №44",
+            "adress": "Саратов, Перспективная улица, 9/10 ст1",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256680"
+            }
+        },
+        {
+            "id": 405,
+            "name": "Средняя школа №66",
+            "adress": "Саратов, Державинская улица, 1 ст1",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280393748"
+            }
+        },
+        {
+            "id": 406,
+            "name": "Средняя школа №66",
+            "adress": "Саратов, Казанская улица, 29",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280599759"
+            }
+        },
+        {
+            "id": 407,
+            "name": "Средняя школа №97",
+            "adress": "Саратов, им. Клочкова В.Г. улица, 77",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256886"
+            }
+        },
+        {
+            "id": 408,
+            "name": "Гимназия №75 им. Д.М. Карбышева",
+            "adress": "Саратов, Осенняя улица, 5",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256852"
+            }
+        },
+        {
+            "id": 409,
+            "name": "Средняя школа №21",
+            "adress": "Саратов, им. Посадского И.Н. улица, 193",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256522"
+            }
+        },
+        {
+            "id": 410,
+            "name": "Средняя общеобразовательная школа №52",
+            "adress": "Саратов, Широкая улица, 34 / Большой Поливановский проезд, 11",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256712"
+            }
+        },
+        {
+            "id": 411,
+            "name": "Средняя школа №73",
+            "adress": "Саратов, 2-й Магнитный проезд, 44",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256848"
+            }
+        },
+        {
+            "id": 412,
+            "name": "Средняя школа №70",
+            "adress": "Саратов, Большая Садовая улица, 240",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256843"
+            }
+        },
+        {
+            "id": 413,
+            "name": "Средняя школа №102",
+            "adress": "Саратов, улица им. Шехурдина А.П., 56а",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256540"
+            }
+        },
+        {
+            "id": 414,
+            "name": "Средняя школа №41",
+            "adress": "Саратов, Тверская улица, 45",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256673"
+            }
+        },
+        {
+            "id": 415,
+            "name": "Средняя школа №45",
+            "adress": "Саратов, Дегтярная улица, 12",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256681"
+            }
+        },
+        {
+            "id": 416,
+            "name": "Средняя школа №94",
+            "adress": "Саратов, проспект им. 50 лет Октября, 75",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256879"
+            }
+        },
+        {
+            "id": 417,
+            "name": "Средняя школа №84",
+            "adress": "Саратов, улица Южно-Зелёная, 11а",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256868"
+            }
+        },
+        {
+            "id": 418,
+            "name": "Средняя школа №43",
+            "adress": "Саратов, Пономарёва улица, 49",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256679"
+            }
+        },
+        {
+            "id": 419,
+            "name": "Средняя школа №23",
+            "adress": "Саратов, 5-й Нагорный проезд, 3",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256561"
+            }
+        },
+        {
+            "id": 420,
+            "name": "Средняя общеобразовательная школа №101",
+            "adress": "Саратов, улица им. Лебедева-Кумача В.И., 73а",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256539"
+            }
+        },
+        {
+            "id": 421,
+            "name": "Средняя школа №82",
+            "adress": "Саратов, 2-я Садовая улица, 106а к1",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256864"
+            }
+        },
+        {
+            "id": 422,
+            "name": "Средняя общеобразовательная школа №76 им. М.Г. Галицкого",
+            "adress": "Саратов, Вишнёвая улица, 16",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256855"
+            }
+        },
+        {
+            "id": 423,
+            "name": "Средняя школа №49",
+            "adress": "Саратов, Перспективная улица, 10а",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256686"
+            }
+        },
+        {
+            "id": 424,
+            "name": "Уникум",
+            "adress": "Саратов, Железнодорожная улица, 29",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280266763"
+            }
+        },
+        {
+            "id": 425,
+            "name": "Средняя школа №61",
+            "adress": "Саратов, им. Бардина И.П. улица, 3",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256814"
+            }
+        },
+        {
+            "id": 426,
+            "name": "Средняя школа №6",
+            "adress": "Саратов, им. Симбирцева В.Н. улица, 34",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280266447"
+            }
+        },
+        {
+            "id": 427,
+            "name": "Лицей прикладных наук им. Д.И. Трубецкова",
+            "adress": "Саратов, Комсомольская улица, 39",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280266628"
+            }
+        },
+        {
+            "id": 428,
+            "name": "Средняя школа №60",
+            "adress": "Саратов, улица им. Батавина П.Ф., 6а",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256811"
+            }
+        },
+        {
+            "id": 429,
+            "name": "Средняя школа №106",
+            "adress": "Саратов, Огородная улица, 33",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256544"
+            }
+        },
+        {
+            "id": 430,
+            "name": "Средняя школа №63",
+            "adress": "Саратов, им. Уфимцева К.Г. улица, 4а",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256819"
+            }
+        },
+        {
+            "id": 431,
+            "name": "Средняя школа №48",
+            "adress": "Саратов, им. Загороднева В.И. улица, 2",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256685"
+            }
+        },
+        {
+            "id": 432,
+            "name": "Средняя общеобразовательная школа №54 им. И.А. Евтеева",
+            "adress": "Саратов, Тракторная улица, 33а",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256717"
+            }
+        },
+        {
+            "id": 433,
+            "name": "Школа-интернат для обучающихся по адаптированным образовательным программам №4",
+            "adress": "Саратов, улица им. Чернышевского Н.Г., 157",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280292297"
+            }
+        },
+        {
+            "id": 434,
+            "name": "Вечерняя школа №9",
+            "adress": "Саратов, Васильковская улица, 17",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/70000001026170909"
+            }
+        },
+        {
+            "id": 435,
+            "name": "Школа №4",
+            "adress": "Саратов, им. Загороднева В.И. улица, 19",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256664"
+            }
+        },
+        {
+            "id": 436,
+            "name": "Средняя школа №71",
+            "adress": "Саратов, Танкистов улица, 126",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256844"
+            }
+        },
+        {
+            "id": 437,
+            "name": "Средняя школа №64",
+            "adress": "Саратов, Стахановская улица, 8",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256822"
+            }
+        },
+        {
+            "id": 438,
+            "name": "Средняя школа №59",
+            "adress": "Саратов, улица им. Маркина Н.Г., 17/39",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256531"
+            }
+        },
+        {
+            "id": 439,
+            "name": "Основная общеобразовательная школа №26 им. В.Д. Хомяковой",
+            "adress": "Саратов, Ново-Крекингская улица, 47",
+            "source": {
+                "2gis_url": "https://2gis.ru/saratov/firm/6052240280256587"
+            }
+        }
+    ]
+}
