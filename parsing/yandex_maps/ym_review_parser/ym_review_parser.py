@@ -23,12 +23,14 @@ except ImportError:
 
 
 # Пути относительно текущего файла
-CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))  # yandex_reviews_parser
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))  # ym_review_parser
 YM_ROOT = os.path.dirname(CURRENT_DIR)  # yandex_maps
-DATA_DIR = os.path.join(YM_ROOT, "data", "ym_reviews_data")
+DATA_DIR = os.path.normpath(os.path.join(YM_ROOT, "ym_data", "ym_reviews_data"))
 DEBUG_HTML_DIR = os.path.join(DATA_DIR, "debug_html")
-INPUT_FILE = os.path.join(DATA_DIR, "ym_reviews_test_data.json")
-OUTPUT_FILE = os.path.join(DATA_DIR, "ym_reviews_output.json")
+INPUT_DIR = os.path.join(DATA_DIR, "input")
+OUTPUT_DIR = os.path.join(DATA_DIR, "output")
+INPUT_FILE = os.path.join(INPUT_DIR, "ym_test_review_school.json")
+OUTPUT_FILE = os.path.join(OUTPUT_DIR, "ym_review_output.json")
 
 
 class Review:
@@ -44,14 +46,16 @@ class Review:
     def __str__(self):
         return f'rate: {self.rating}, text: {self.text[:50]}..., date: {self.date}, likes: {self.likes}, dislikes: {self.dislikes}'
     
-    def to_dict(self) -> Dict[str, Any]:
+    def to_dict(self, school_id: str = None) -> Dict[str, Any]:
         """Преобразует отзыв в словарь для сохранения в JSON"""
-        result = {
-            "text": self.text,
-            "date": self.date,
-            "like": self.likes,
-            "dislike": self.dislikes
-        }
+        result = {}
+        # Добавляем school_id первым, если указан
+        if school_id is not None:
+            result["school_id"] = school_id
+        result["date"] = self.date
+        result["text"] = self.text
+        result["likes_count"] = self.likes
+        result["dislikes_count"] = self.dislikes
         # Добавляем рейтинг только если он не равен 0
         if self.rating > 0:
             result["rating"] = self.rating
@@ -140,172 +144,173 @@ class YandexMapsReviewsParser:
                 break
     
     @staticmethod
-    def _expand_all_reviews(driver: webdriver.Chrome) -> None:
+    def _extract_reviews_from_json(html: str) -> List[Dict[str, Any]]:
         """
-        Ищет и нажимает все кнопки "Ещё" для раскрытия полного текста отзывов.
-        Прокручивает страницу и нажимает кнопки последовательно.
+        Извлекает отзывы из JSON данных в HTML.
+        Ищет объекты с полями reviewId, text, rating, updatedTime, reactions.
+        
+        Returns:
+            Список словарей с данными отзывов из JSON
         """
-        print("[INFO] Поиск и нажатие кнопок 'Ещё' для раскрытия отзывов...")
+        json_reviews = []
+        processed_review_ids = set()
         
-        # Сначала подсчитываем все кнопки "Ещё" на странице
-        total_buttons_found = driver.execute_script(
-            """
-            const buttons = document.querySelectorAll('span.business-review-view__expand[aria-label="Ещё"]');
-            return buttons.length;
-            """
-        )
-        print(f"[INFO] Всего найдено кнопок 'Ещё' на странице: {total_buttons_found}")
-        
-        if total_buttons_found == 0:
-            print("[WARN] Кнопки 'Ещё' не найдены на странице")
-            return
-        
-        # Прокручиваем scroll контейнер в начало, чтобы видеть первые кнопки
-        print("[INFO] Прокрутка к началу отзывов...")
-        driver.execute_script(
-            """
-            const scrollContainer = document.getElementsByClassName('scroll__container')[0];
-            if (scrollContainer) {
-                scrollContainer.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            }
-            """
-        )
-        time.sleep(1)  # Ждём завершения прокрутки
-        
-        # Используем Selenium для последовательного нажатия на все кнопки
-        from selenium.webdriver.common.by import By
-        from selenium.webdriver.common.action_chains import ActionChains
-        
-        total_clicked = 0
-        max_attempts = total_buttons_found * 2  # Максимум попыток
-        attempt = 0
-        
-        while attempt < max_attempts:
-            try:
-                # Находим все кнопки "Ещё"
-                expand_buttons = driver.find_elements(By.CSS_SELECTOR, 'span.business-review-view__expand[aria-label="Ещё"]')
-                
-                if len(expand_buttons) == 0:
-                    # Проверяем, может быть кнопки уже все раскрыты
-                    remaining = driver.execute_script(
-                        """return document.querySelectorAll('span.business-review-view__expand[aria-label="Ещё"]').length;"""
-                    )
-                    if remaining == 0:
-                        print("[INFO] Все кнопки 'Ещё' уже обработаны")
-                        break
-                    # Если кнопки есть, но Selenium их не нашёл, прокручиваем
-                    driver.execute_script(
-                        """const scrollContainer = document.getElementsByClassName('scroll__container')[0];
-                        if (scrollContainer) {
-                            scrollContainer.scrollBy({top: 300, behavior: 'smooth'});
-                        }"""
-                    )
-                    time.sleep(0.5)
-                    attempt += 1
-                    continue
-                
-                clicked_in_iteration = 0
-                
-                # Проходим по всем найденным кнопкам
-                for button in expand_buttons:
-                    try:
-                        # Проверяем текст кнопки
-                        if button.text.strip() != 'Ещё':
+        try:
+            # Метод 1: Ищем массив "reviews" в JSON
+            # Ищем паттерн "reviews":[{...}]
+            reviews_array_pattern = r'"reviews"\s*:\s*\['
+            array_matches = list(re.finditer(reviews_array_pattern, html, re.IGNORECASE))
+            
+            for array_match in array_matches:
+                try:
+                    array_start = array_match.end()  # Позиция после "["
+                    # Ищем закрывающую скобку массива
+                    bracket_count = 1
+                    array_end = array_start
+                    
+                    for i in range(array_start, min(array_start + 500000, len(html))):
+                        if html[i] == '[':
+                            bracket_count += 1
+                        elif html[i] == ']':
+                            bracket_count -= 1
+                            if bracket_count == 0:
+                                array_end = i
+                                break
+                    
+                    if array_end <= array_start:
+                        continue
+                    
+                    array_content = html[array_start:array_end]
+                    
+                    # Ищем отдельные объекты в массиве
+                    # Ищем начало каждого объекта (открывающая фигурная скобка)
+                    obj_start = 0
+                    while obj_start < len(array_content):
+                        obj_start = array_content.find('{', obj_start)
+                        if obj_start == -1:
+                            break
+                        
+                        # Парсим объект от { до }
+                        brace_count = 0
+                        obj_end = obj_start
+                        in_string = False
+                        escape = False
+                        
+                        for i in range(obj_start, len(array_content)):
+                            ch = array_content[i]
+                            
+                            if escape:
+                                escape = False
+                                continue
+                            
+                            if ch == '\\':
+                                escape = True
+                                continue
+                            
+                            if ch == '"' and not escape:
+                                in_string = not in_string
+                                continue
+                            
+                            if not in_string:
+                                if ch == '{':
+                                    brace_count += 1
+                                elif ch == '}':
+                                    brace_count -= 1
+                                    if brace_count == 0:
+                                        obj_end = i + 1
+                                        break
+                        
+                        if obj_end <= obj_start:
+                            obj_start += 1
                             continue
                         
-                        # Прокручиваем к кнопке внутри scroll контейнера
-                        driver.execute_script(
-                            """
-                            const scrollContainer = document.getElementsByClassName('scroll__container')[0];
-                            if (scrollContainer && arguments[0]) {
-                                const button = arguments[0];
-                                const buttonRect = button.getBoundingClientRect();
-                                const containerRect = scrollContainer.getBoundingClientRect();
-                                const scrollTop = scrollContainer.scrollTop;
-                                const relativeTop = buttonRect.top - containerRect.top + scrollTop;
-                                
-                                scrollContainer.scrollTo({
-                                    top: Math.max(0, relativeTop - 150),
-                                    behavior: 'smooth'
-                                });
-                            }
-                            """,
-                            button
-                        )
-                        time.sleep(0.3)  # Ждём прокрутки
+                        # Извлекаем JSON объект
+                        obj_str = array_content[obj_start:obj_end]
                         
-                        # Пробуем кликнуть через Selenium
                         try:
-                            # Используем ActionChains для более надёжного клика
-                            actions = ActionChains(driver)
-                            actions.move_to_element(button).click().perform()
-                            clicked_in_iteration += 1
-                            total_clicked += 1
-                            time.sleep(0.2)
-                        except Exception as e1:
-                            # Если не получилось через ActionChains, пробуем обычный click
-                            try:
-                                button.click()
-                                clicked_in_iteration += 1
-                                total_clicked += 1
-                                time.sleep(0.2)
-                            except Exception as e2:
-                                # Если и это не сработало, пробуем через JavaScript
-                                try:
-                                    driver.execute_script("arguments[0].click();", button)
-                                    clicked_in_iteration += 1
-                                    total_clicked += 1
-                                    time.sleep(0.2)
-                                except Exception as e3:
-                                    # Пробуем через родительский элемент
-                                    try:
-                                        parent = driver.execute_script(
-                                            "return arguments[0].closest('span.spoiler-view__button');",
-                                            button
-                                        )
-                                        if parent:
-                                            driver.execute_script("arguments[0].click();", parent)
-                                            clicked_in_iteration += 1
-                                            total_clicked += 1
-                                            time.sleep(0.2)
-                                    except:
-                                        pass
+                            review_obj = json.loads(obj_str)
+                            if 'text' in review_obj:
+                                review_id = review_obj.get('reviewId') or review_obj.get('id') or str(len(json_reviews))
+                                if review_id not in processed_review_ids:
+                                    json_reviews.append(review_obj)
+                                    processed_review_ids.add(review_id)
+                        except json.JSONDecodeError:
+                            pass
                         
+                        obj_start = obj_end
+                        
+                except Exception as e:
+                    continue
+            
+            # Метод 2: Ищем отдельные объекты с полем "text" (более универсальный подход)
+            # Ищем паттерн "text":"..." и извлекаем полный объект
+            if len(json_reviews) < 5:  # Если нашли мало отзывов, пробуем альтернативный метод
+                # Ищем паттерн начала текста отзыва
+                text_pattern = r'"text"\s*:\s*"'
+                for match in re.finditer(text_pattern, html):
+                    try:
+                        # Находим начало объекта (ищем открывающую фигурную скобку перед text)
+                        text_start_pos = match.start()
+                        # Ищем начало объекта (может быть за 100-500 символов до text)
+                        search_start = max(0, text_start_pos - 500)
+                        obj_start = html.rfind('{', search_start, text_start_pos)
+                        
+                        if obj_start == -1:
+                            continue
+                        
+                        # Парсим объект от { до }
+                        brace_count = 0
+                        obj_end = obj_start
+                        in_string = False
+                        escape = False
+                        
+                        for i in range(obj_start, min(obj_start + 10000, len(html))):
+                            ch = html[i]
+                            
+                            if escape:
+                                escape = False
+                                continue
+                            
+                            if ch == '\\':
+                                escape = True
+                                continue
+                            
+                            if ch == '"' and not escape:
+                                in_string = not in_string
+                                continue
+                            
+                            if not in_string:
+                                if ch == '{':
+                                    brace_count += 1
+                                elif ch == '}':
+                                    brace_count -= 1
+                                    if brace_count == 0:
+                                        obj_end = i + 1
+                                        break
+                        
+                        if obj_end <= obj_start:
+                            continue
+                        
+                        obj_str = html[obj_start:obj_end]
+                        
+                        try:
+                            review_obj = json.loads(obj_str)
+                            if 'text' in review_obj and isinstance(review_obj.get('text'), str) and len(review_obj.get('text', '')) > 20:
+                                review_id = review_obj.get('reviewId') or review_obj.get('id') or f"text_{hash(review_obj.get('text', '')[:50])}"
+                                if review_id not in processed_review_ids:
+                                    json_reviews.append(review_obj)
+                                    processed_review_ids.add(review_id)
+                        except json.JSONDecodeError:
+                            pass
+                            
                     except Exception as e:
                         continue
-                
-                if clicked_in_iteration > 0:
-                    print(f"[INFO] Нажато кнопок 'Ещё' в попытке {attempt + 1}: {clicked_in_iteration} (всего: {total_clicked})")
-                    time.sleep(0.5)  # Пауза для обновления DOM
-                else:
-                    # Если не нажали ни одной кнопки, прокручиваем дальше
-                    driver.execute_script(
-                        """const scrollContainer = document.getElementsByClassName('scroll__container')[0];
-                        if (scrollContainer) {
-                            scrollContainer.scrollBy({top: 400, behavior: 'smooth'});
-                        }"""
-                    )
-                    time.sleep(0.5)
-                
-                attempt += 1
-                
-                # Проверяем, остались ли ещё нераскрытые отзывы
-                remaining_buttons = driver.execute_script(
-                    """return document.querySelectorAll('span.business-review-view__expand[aria-label="Ещё"]').length;"""
-                )
-                if remaining_buttons == 0:
-                    print("[INFO] Все кнопки 'Ещё' обработаны")
-                    break
-                
-            except Exception as e:
-                print(f"[WARN] Ошибка при нажатии кнопок 'Ещё': {e}")
-                break
+            
+        except Exception as e:
+            print(f"[WARN] Ошибка при извлечении отзывов из JSON: {e}")
         
-        print(f"[OK] Всего нажато кнопок 'Ещё': {total_clicked} из {total_buttons_found}")
-        time.sleep(1.5)  # Финальная пауза для завершения всех анимаций и обновления DOM
+        print(f"[DEBUG] Извлечено отзывов из JSON: {len(json_reviews)}")
+        return json_reviews
     
     def _parse_page(self, url: str, org_id: str = None, org_name: str = None) -> tuple[List[Review], Dict[str, Any]]:
         """
@@ -337,9 +342,6 @@ class YandexMapsReviewsParser:
             self._scroll_to_bottom(self.driver)
             time.sleep(2)  # Дополнительная пауза после прокрутки
             
-            # Нажимаем все кнопки "Ещё" для раскрытия полного текста отзывов
-            self._expand_all_reviews(self.driver)
-            
             # Сохраняем HTML для отладки
             html_content = self.driver.page_source
             debug_info["raw_html_length"] = len(html_content)
@@ -358,47 +360,9 @@ class YandexMapsReviewsParser:
             except Exception as e:
                 print(f"[WARN] Не удалось сохранить HTML: {e}")
             
-            # Пробуем найти JSON данные в HTML (Яндекс карты часто хранят данные в JSON)
-            print("\n[DEBUG] Поиск JSON данных в HTML...")
-            json_data_found = False
-            try:
-                # Ищем JSON в script тегах
-                json_patterns = [
-                    r'<script[^>]*>.*?({.*?"reviews?":.*?}).*?</script>',
-                    r'window\.__INITIAL_STATE__\s*=\s*({.*?});',
-                    r'window\.__DATA__\s*=\s*({.*?});',
-                    r'var\s+data\s*=\s*({.*?});',
-                ]
-                
-                for pattern in json_patterns:
-                    matches = re.findall(pattern, html_content, re.DOTALL | re.IGNORECASE)
-                    if matches:
-                        print(f"[DEBUG] Найдены JSON данные по паттерну: {pattern[:50]}... ({len(matches)} совпадений)")
-                        json_data_found = True
-                        # Сохраняем первый найденный JSON для анализа
-                        if len(matches) > 0:
-                            try:
-                                json_preview = matches[0][:500] if len(matches[0]) > 500 else matches[0]
-                                print(f"[DEBUG] Превью JSON (первые 500 символов): {json_preview}")
-                            except:
-                                pass
-                        break
-                
-                # Ищем все script теги с JSON
-                script_tags = re.findall(r'<script[^>]*>(.*?)</script>', html_content, re.DOTALL)
-                json_scripts = []
-                for script in script_tags:
-                    if 'review' in script.lower() or 'rating' in script.lower():
-                        json_scripts.append(script[:200])  # Первые 200 символов
-                
-                if json_scripts:
-                    print(f"[DEBUG] Найдено script тегов с упоминанием review/rating: {len(json_scripts)}")
-                    debug_info["found_elements"]["json_scripts_count"] = len(json_scripts)
-                    for i, script_preview in enumerate(json_scripts[:3]):
-                        print(f"  [{i+1}] Превью: {script_preview}...")
-                
-            except Exception as e:
-                print(f"[WARN] Ошибка при поиске JSON данных: {e}")
+            # Извлекаем отзывы из JSON в HTML
+            print("\n[DEBUG] Извлечение отзывов из JSON в HTML...")
+            json_reviews_data = self._extract_reviews_from_json(html_content)
             
             bs = BeautifulSoup(html_content, 'html.parser')
             
@@ -591,8 +555,46 @@ class YandexMapsReviewsParser:
                                     pass
                     
                     if review_text:  # Добавляем только если есть текст
-                        res.append(Review(rate, review_text, review_date, likes, dislikes))
-                        print(f"[DEBUG] Найден отзыв: рейтинг={rate}, дата={review_date}, лайки={likes}, дизлайки={dislikes}, текст (первые 50 символов)='{review_text[:50]}...'")
+                        # Сопоставляем с отзывами из JSON и используем более полный текст
+                        dom_text_normalized = ' '.join(review_text.split())
+                        
+                        # Ищем соответствующий отзыв в JSON по началу текста
+                        json_text = review_text
+                        json_rating = rate
+                        json_likes = likes
+                        json_dislikes = dislikes
+                        
+                        for json_review in json_reviews_data:
+                            json_review_text = json_review.get('text', '')
+                            if not json_review_text:
+                                continue
+                            
+                            json_review_text_normalized = ' '.join(json_review_text.split())
+                            
+                            # Сравниваем первые 50 символов для сопоставления
+                            dom_start = dom_text_normalized[:50] if len(dom_text_normalized) > 50 else dom_text_normalized
+                            json_start = json_review_text_normalized[:50] if len(json_review_text_normalized) > 50 else json_review_text_normalized
+                            
+                            # Если начало совпадает и JSON текст длиннее - используем его
+                            if dom_start and json_start and (
+                                dom_start == json_start or 
+                                (len(dom_start) > 30 and dom_start in json_review_text_normalized) or
+                                (len(json_start) > 30 and json_start in dom_text_normalized)
+                            ):
+                                if len(json_review_text) > len(review_text):
+                                    json_text = json_review_text
+                                    # Обновляем данные из JSON, если они есть
+                                    if 'rating' in json_review:
+                                        json_rating = json_review.get('rating', rate)
+                                    if 'reactions' in json_review:
+                                        reactions = json_review.get('reactions', {})
+                                        json_likes = reactions.get('likes', likes)
+                                        json_dislikes = reactions.get('dislikes', dislikes)
+                                    print(f"[DEBUG] Использован полный текст из JSON (было {len(review_text)} символов, стало {len(json_text)} символов)")
+                                break
+                        
+                        res.append(Review(json_rating, json_text, review_date, json_likes, json_dislikes))
+                        print(f"[DEBUG] Найден отзыв: рейтинг={json_rating}, дата={review_date}, лайки={json_likes}, дизлайки={json_dislikes}, текст (первые 50 символов)='{json_text[:50]}...'")
                 except Exception as e:
                     print(f"[WARN] Ошибка при парсинге отдельного отзыва: {e}")
                     import traceback
@@ -638,7 +640,26 @@ class YandexMapsReviewsParser:
             Словарь с результатами парсинга
         """
         if input_file is None:
-            input_file = INPUT_FILE
+            # Ищем входной файл в разных местах
+            possible_paths = [
+                INPUT_FILE,
+                os.path.join(INPUT_DIR, "ym_test_review_school.json"),
+                os.path.join(INPUT_DIR, "ym_gold_all_school_data.json"),
+                os.path.join(DATA_DIR, "ym_test_review_school.json"),
+            ]
+            input_file = None
+            for path in possible_paths:
+                if os.path.exists(path):
+                    input_file = path
+                    break
+            
+            if input_file is None:
+                print("[ERROR] Не найден входной файл со списком организаций")
+                print(f"Искали в следующих местах:")
+                for path in possible_paths:
+                    print(f"  - {path}")
+                return {}
+        
         if output_file is None:
             output_file = OUTPUT_FILE
         
@@ -653,11 +674,15 @@ class YandexMapsReviewsParser:
         # Создаем директорию для выходного файла, если её нет
         os.makedirs(os.path.dirname(output_file), exist_ok=True)
         
-        results = {
-            "source": "yandex_maps",
-            "parsed_at": time.strftime("%Y-%m-%d %H:%M:%S"),
-            "organizations": []
-        }
+        # Загружаем существующие отзывы, если файл есть
+        all_reviews = []
+        if os.path.exists(output_file):
+            try:
+                with open(output_file, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    all_reviews = data.get("reviews", [])
+            except Exception:
+                all_reviews = []
         
         try:
             self.setup_driver()
@@ -669,6 +694,15 @@ class YandexMapsReviewsParser:
                 
                 if not feedback_link:
                     print(f"[WARN] Пропущена организация {org_name}: нет ссылки на отзывы")
+                    # Добавляем запись с null для организации без ссылки
+                    all_reviews.append({
+                        "school_id": str(org_id) if org_id else None,
+                        "date": None,
+                        "text": None,
+                        "likes_count": None,
+                        "dislikes_count": None,
+                        "rating": None
+                    })
                     continue
                 
                 print(f"\n[INFO] Парсинг отзывов для: {org_name} (ID: {org_id})")
@@ -676,17 +710,37 @@ class YandexMapsReviewsParser:
                 
                 reviews, debug_info = self._parse_page(feedback_link, org_id=str(org_id), org_name=org_name)
                 
-                org_result = {
-                    "id": org_id,
-                    "name": org_name,
-                    "url": org.get('url'),
-                    "yandex_id": org.get('yandex_id'),
-                    "reviews_count": len(reviews),
-                    "reviews": [review.to_dict() for review in reviews]
-                }
+                # Удаляем старые отзывы для этой школы
+                all_reviews = [r for r in all_reviews if r.get('school_id') != str(org_id)]
                 
-                results["organizations"].append(org_result)
+                # Добавляем новые отзывы
+                if reviews:
+                    for review in reviews:
+                        all_reviews.append(review.to_dict(school_id=str(org_id)))
+                else:
+                    # Если отзывов нет, добавляем запись с null
+                    all_reviews.append({
+                        "school_id": str(org_id),
+                        "date": None,
+                        "text": None,
+                        "likes_count": None,
+                        "dislikes_count": None,
+                        "rating": None
+                    })
+                
                 print(f"[OK] Получено отзывов: {len(reviews)}")
+                
+                # Сохраняем результаты после каждой организации
+                results = {
+                    "resource": "yandex_maps",
+                    "reviews": all_reviews
+                }
+                try:
+                    with open(output_file, 'w', encoding='utf-8') as f:
+                        json.dump(results, f, ensure_ascii=False, indent=2)
+                    print(f"[OK] Сохранено отзывов для школы {org_id}")
+                except Exception as e:
+                    print(f"[WARN] Не удалось сохранить результаты: {e}")
                 
                 # Небольшая пауза между запросами
                 time.sleep(2)
@@ -694,11 +748,16 @@ class YandexMapsReviewsParser:
         finally:
             self.close_driver()
         
-        # Сохраняем результаты
+        # Финальное сохранение результатов
+        results = {
+            "resource": "yandex_maps",
+            "reviews": all_reviews
+        }
         try:
             with open(output_file, 'w', encoding='utf-8') as f:
                 json.dump(results, f, ensure_ascii=False, indent=2)
             print(f"\n[OK] Результаты сохранены в: {output_file}")
+            print(f"[OK] Всего отзывов: {len(all_reviews)}")
         except Exception as e:
             print(f"[ERROR] Ошибка при сохранении результатов: {e}")
         

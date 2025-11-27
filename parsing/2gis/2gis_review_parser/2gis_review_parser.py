@@ -26,9 +26,9 @@ from selenium.webdriver import ActionChains
 
 
 # Пути относительно текущего файла
-REVIEWS_DATA_DIR = os.path.join(os.path.dirname(__file__), "2gis_reviews_data")
-REVIEWS_OUTPUT_FILE = os.path.join(REVIEWS_DATA_DIR, "2gis_scools_reviews.json")
-DEBUG_HTML_DIR = os.path.join(os.path.dirname(__file__), "debug_html")
+REVIEWS_DATA_DIR = os.path.normpath(os.path.join(os.path.dirname(__file__), "..", "2gis_data", "2gis_review_data"))
+REVIEWS_OUTPUT_FILE = os.path.join(REVIEWS_DATA_DIR, "output", "2gis_scools_reviews.json")
+DEBUG_HTML_DIR = os.path.join(REVIEWS_DATA_DIR, "debug_html")
 
 
 def setup_driver() -> webdriver.Chrome:
@@ -60,15 +60,15 @@ def wait_text_or_empty(driver: webdriver.Chrome, by: By, locator: str, timeout: 
         return ""
 
 
-def scroll_page_with_pyautogui(duration: float = 10.0, scroll_distance: int = 3000, scroll_step: int = 6) -> None:
+def scroll_page_with_pyautogui(duration: float = 3.0, scroll_distance: int = 3000, scroll_step: int = 20) -> None:
     """
     Прокручивает страницу вниз с помощью pyautogui.
     Перемещает курсор в правую середину окна и медленно прокручивает вниз.
     
     Args:
-        duration: Длительность прокрутки в секундах (по умолчанию 10 секунд)
+        duration: Длительность прокрутки в секундах (по умолчанию 3 секунды)
         scroll_distance: Расстояние прокрутки в пикселях (по умолчанию 3000)
-        scroll_step: Размер одного шага прокрутки в пикселях (по умолчанию 6)
+        scroll_step: Размер одного шага прокрутки в пикселях (по умолчанию 20)
                     Больше значение = быстрее прокрутка, но менее плавно
                     Меньше значение = медленнее прокрутка, но более плавно
     
@@ -77,8 +77,7 @@ def scroll_page_with_pyautogui(duration: float = 10.0, scroll_distance: int = 30
     """
     try:
         # Пауза перед началом прокрутки
-        print(f"[info] Пауза 3 секунды перед началом прокрутки...")
-        time.sleep(3.0)
+        time.sleep(0.5)
         
         # Получаем размеры экрана
         screen_width, screen_height = pyautogui.size()
@@ -88,37 +87,24 @@ def scroll_page_with_pyautogui(duration: float = 10.0, scroll_distance: int = 30
         target_x = int(screen_width * 0.25)  # Правая треть
         target_y = int(screen_height * 0.5)    # Середина по вертикали
         
-        print(f"[info] Перемещение курсора в позицию ({target_x}, {target_y})")
-        
-        # Плавно перемещаем курсор в целевую позицию
-        pyautogui.moveTo(target_x, target_y, duration=0.5)
-        time.sleep(0.3)  # Небольшая пауза после перемещения
+        # Быстро перемещаем курсор в целевую позицию
+        pyautogui.moveTo(target_x, target_y, duration=0.1)
+        time.sleep(0.1)  # Небольшая пауза после перемещения
         
         # Вычисляем количество шагов прокрутки
         steps = max(1, int(scroll_distance / scroll_step))  # Минимум 1 шаг
-        step_duration = duration / steps
+        step_duration = duration / steps if steps > 0 else 0
         
-        print(f"[info] Начало прокрутки: {scroll_distance}px за {duration} секунд")
-        print(f"[info] Размер шага: {scroll_step}px, количество шагов: {steps}")
-        
-        # Медленно прокручиваем вниз
+        # Прокручиваем вниз
         for i in range(steps):
             pyautogui.scroll(-scroll_step)  # Прокрутка вниз (отрицательное значение)
-            time.sleep(step_duration)
-            
-            # Выводим прогресс каждые 10% прокрутки
-            if steps >= 10 and i > 0 and i % (steps // 10) == 0:
-                progress = int((i / steps) * 100)
-                print(f"[info] Прогресс прокрутки: {progress}%")
+            if step_duration > 0:
+                time.sleep(step_duration)
         
-        print(f"[info] Прокрутка завершена")
-        print(f"[info] Ожидание загрузки всех данных после прокрутки...")
-        time.sleep(5.0)  # Пауза после прокрутки для загрузки динамического контента
-        print(f"[info] Данные должны быть загружены")
+        time.sleep(1.0)  # Пауза после прокрутки для загрузки динамического контента
         
     except Exception as e:
-        print(f"[warn] Ошибка при прокрутке через pyautogui: {e}")
-        print(f"[warn] Продолжаем без прокрутки...")
+        pass
 
 
 
@@ -150,22 +136,89 @@ def extract_reviews_from_json(html: str) -> List[Dict[str, Any]]:
     # Если не нашли в script тегах, ищем JSON объекты напрямую в HTML
     # Ищем все места, где есть "text" и "likes_count" в пределах разумного расстояния
     if not reviews_data:
-        # Ищем паттерн для текста отзыва
-        text_pattern = r'"text"\s*:\s*"((?:[^"\\]|\\.)*)"'
+        # Улучшенный паттерн для текста отзыва - правильно обрабатывает все escape-последовательности
+        # Используем более надежный метод: ищем начало строки и извлекаем до закрывающей кавычки с учетом escape
+        text_pattern = r'"text"\s*:\s*"'
         
         for text_match in re.finditer(text_pattern, html):
-            text_pos = text_match.start()
-            text = text_match.group(1)
-            # Декодируем escape-последовательности
-            text = text.replace('\\"', '"').replace('\\n', '\n').replace('\\r', '\r').replace('\\\\', '\\')
+            text_start_pos = text_match.end()  # Позиция после открывающей кавычки
+            text_end_pos = text_start_pos
+            
+            # Вручную парсим строку JSON, учитывая escape-последовательности
+            # Ограничиваем поиск до 10000 символов, чтобы не искать слишком долго
+            max_search_length = min(text_start_pos + 10000, len(html))
+            i = text_start_pos
+            while i < max_search_length:
+                if html[i] == '\\' and i + 1 < len(html):
+                    # Пропускаем escape-символ и следующий символ
+                    # Проверяем, что следующий символ валидный для escape-последовательности
+                    next_char = html[i + 1]
+                    if next_char in ['"', '\\', 'n', 'r', 't', 'u', '/']:
+                        i += 2
+                        # Для \uXXXX нужно пропустить еще 4 символа
+                        if next_char == 'u' and i + 4 < len(html):
+                            i += 4
+                        continue
+                    else:
+                        # Невалидная escape-последовательность, пропускаем только \
+                        i += 1
+                        continue
+                elif html[i] == '"':
+                    # Нашли потенциальную закрывающую кавычку
+                    # Проверяем, что после неё идет валидный JSON символ (запятая, закрывающая скобка, двоеточие для следующего поля)
+                    if i + 1 < len(html):
+                        next_char = html[i + 1]
+                        # Валидные символы после закрывающей кавычки в JSON
+                        if next_char in [',', '}', ']', ' ', '\n', '\r', '\t', ':']:
+                            text_end_pos = i
+                            break
+                        # Если следующий символ - это начало нового поля (буква), это тоже валидно
+                        elif next_char.isalpha() or next_char == '"':
+                            text_end_pos = i
+                            break
+                    else:
+                        # Конец строки - это тоже валидно
+                        text_end_pos = i
+                        break
+                i += 1
+            
+            if text_end_pos == text_start_pos:
+                continue  # Не нашли закрывающую кавычку
+            
+            # Извлекаем текст с escape-последовательностями
+            text_with_escapes = html[text_start_pos:text_end_pos]
+            
+            # Проверяем, что текст не слишком короткий (возможно, это не полный текст)
+            # Но не пропускаем, так как могут быть короткие отзывы
+            
+            # Декодируем escape-последовательности через json.loads для надежности
+            try:
+                # Оборачиваем в JSON строку для правильного декодирования
+                text = json.loads('"' + text_with_escapes + '"')
+            except json.JSONDecodeError:
+                # Fallback на ручное декодирование (более полное)
+                text = text_with_escapes
+                # Обрабатываем все escape-последовательности в правильном порядке
+                text = text.replace('\\\\', '\\TEMP_BACKSLASH\\')  # Временная замена для двойных обратных слешей
+                text = text.replace('\\"', '"')
+                text = text.replace('\\n', '\n')
+                text = text.replace('\\r', '\r')
+                text = text.replace('\\t', '\t')
+                text = text.replace('\\/', '/')
+                text = text.replace('\\TEMP_BACKSLASH\\', '\\')  # Возвращаем обратные слеши
+            except Exception:
+                # Если всё ещё ошибка, используем текст как есть
+                text = text_with_escapes
             
             # Пропускаем пустые тексты и дубликаты
             if not text or text in processed_texts:
                 continue
             
+            text_pos = text_match.start()
+            
             # Ищем likes_count в окрестности (в пределах 1500 символов)
             context_start = max(0, text_pos - 500)
-            context_end = min(len(html), text_pos + 1500)
+            context_end = min(len(html), text_end_pos + 1500)
             context = html[context_start:context_end]
             
             likes_match = re.search(r'"likes_count"\s*:\s*(\d+)', context)
@@ -177,18 +230,35 @@ def extract_reviews_from_json(html: str) -> List[Dict[str, Any]]:
             # Ищем дату в разных форматах (расширяем контекст для поиска даты)
             date = ''
             date_context_start = max(0, text_pos - 1000)
-            date_context_end = min(len(html), text_pos + 2000)
+            date_context_end = min(len(html), text_end_pos + 2000)
             date_context = html[date_context_start:date_context_end]
             
+            # Улучшенный поиск даты с правильной обработкой escape-последовательностей
             date_patterns = [
-                r'"date"\s*:\s*"((?:[^"\\]|\\.)*)"',
-                r'"created_at"\s*:\s*"((?:[^"\\]|\\.)*)"',
-                r'"published_at"\s*:\s*"((?:[^"\\]|\\.)*)"',
+                r'"date"\s*:\s*"',
+                r'"created_at"\s*:\s*"',
+                r'"published_at"\s*:\s*"',
             ]
             for date_pattern in date_patterns:
                 date_match = re.search(date_pattern, date_context)
                 if date_match:
-                    date = date_match.group(1).replace('\\"', '"').replace('\\n', '\n').replace('\\r', '\r')
+                    date_start = date_match.end()
+                    date_end = date_start
+                    i = date_start
+                    while i < len(date_context):
+                        if date_context[i] == '\\' and i + 1 < len(date_context):
+                            i += 2
+                            continue
+                        elif date_context[i] == '"':
+                            date_end = i
+                            break
+                        i += 1
+                    if date_end > date_start:
+                        date_with_escapes = date_context[date_start:date_end]
+                        try:
+                            date = json.loads('"' + date_with_escapes + '"')
+                        except:
+                            date = date_with_escapes.replace('\\"', '"').replace('\\n', '\n').replace('\\r', '\r')
                     break
             
             processed_texts.add(text)
@@ -259,29 +329,31 @@ def parse_reviews(driver: webdriver.Chrome, review_url: str, school_id: str) -> 
                          driver.find_elements(By.CLASS_NAME, '_a5f6uz')
             if not has_reviews:
                 print(f"[info] У школы {school_id} нет отзывов")
-                return []
+                return [{
+                    'school_id': school_id,
+                    'date': None,
+                    'text': None,
+                    'likes_count': None
+                }]
         except:
             pass
         print(f"[warn] Таймаут ожидания загрузки отзывов для школы {school_id}")
     
-    time.sleep(2.0)  # Дополнительная пауза для загрузки данных
+    time.sleep(1.0)  # Дополнительная пауза для загрузки данных
     
     # Физическая прокрутка для загрузки всех отзывов через pyautogui
-    print(f"[info] Начинаем физическую прокрутку страницы для загрузки всех отзывов...")
     try:
-        scroll_page_with_pyautogui(duration=3.0, scroll_distance=2000, scroll_step=10)
+        scroll_page_with_pyautogui(duration=2.0, scroll_distance=2000, scroll_step=30)
     except Exception as e:
-        print(f"[warn] Ошибка при физической прокрутке: {e}")
         # Fallback на обычную прокрутку через JavaScript
-        print(f"[info] Используем резервную прокрутку через JavaScript...")
         try:
-            for i in range(8):
+            for i in range(5):
                 driver.execute_script('window.scrollBy(0, 500);')
-                time.sleep(1.0)
+                time.sleep(0.3)
         except Exception as e2:
-            print(f"[warn] Не удалось выполнить резервную прокрутку: {e2}")
+            pass
     
-    time.sleep(3.0)  # Дополнительная пауза после прокрутки для загрузки данных
+    time.sleep(1.5)  # Дополнительная пауза после прокрутки для загрузки данных
     
     # Получаем HTML контент
     try:
@@ -360,20 +432,46 @@ def parse_reviews(driver: webdriver.Chrome, review_url: str, school_id: str) -> 
                     
                     # Если дата не найдена в JSON, ищем её в DOM по тексту
                     if not date:
-                        # Ищем точное совпадение текста
+                        # Нормализуем текст для сравнения (убираем лишние пробелы и переносы)
+                        def normalize_text(t):
+                            return ' '.join(t.split())
+                        
+                        text_normalized = normalize_text(text)
+                        
+                        # Ищем точное совпадение текста (нормализованного)
                         for dom_item in dom_texts:
-                            if dom_item['text'] == text or text.startswith(dom_item['text'][:50]) or dom_item['text'].startswith(text[:50]):
+                            dom_text_normalized = normalize_text(dom_item['text'])
+                            if dom_text_normalized == text_normalized:
                                 date = dom_item['date']
                                 processed_dom_texts.add(dom_item['text'])
                                 break
                         
-                        # Если не нашли точное совпадение, ищем частичное
+                        # Если не нашли точное совпадение, ищем по началу текста
                         if not date:
                             for dom_item in dom_texts:
-                                # Сравниваем первые 100 символов
-                                text_start = text[:100] if len(text) > 100 else text
-                                dom_text_start = dom_item['text'][:100] if len(dom_item['text']) > 100 else dom_item['text']
-                                if text_start == dom_text_start or (len(text_start) > 50 and text_start in dom_text_start) or (len(dom_text_start) > 50 and dom_text_start in text_start):
+                                dom_text_normalized = normalize_text(dom_item['text'])
+                                # Сравниваем первые 50 символов нормализованного текста
+                                text_start = text_normalized[:50] if len(text_normalized) > 50 else text_normalized
+                                dom_text_start = dom_text_normalized[:50] if len(dom_text_normalized) > 50 else dom_text_normalized
+                                
+                                if text_start and dom_text_start and (
+                                    text_start == dom_text_start or 
+                                    (len(text_start) > 30 and text_start in dom_text_normalized) or 
+                                    (len(dom_text_start) > 30 and dom_text_start in text_normalized)
+                                ):
+                                    date = dom_item['date']
+                                    processed_dom_texts.add(dom_item['text'])
+                                    break
+                        
+                        # Если всё ещё не нашли, ищем по любому совпадению начала
+                        if not date:
+                            for dom_item in dom_texts:
+                                dom_text_normalized = normalize_text(dom_item['text'])
+                                # Сравниваем первые 30 символов
+                                text_start = text_normalized[:30] if len(text_normalized) > 30 else text_normalized
+                                dom_text_start = dom_text_normalized[:30] if len(dom_text_normalized) > 30 else dom_text_normalized
+                                
+                                if text_start and dom_text_start and text_start == dom_text_start:
                                     date = dom_item['date']
                                     processed_dom_texts.add(dom_item['text'])
                                     break
@@ -387,29 +485,6 @@ def parse_reviews(driver: webdriver.Chrome, review_url: str, school_id: str) -> 
                 except Exception as e:
                     print(f"[warn] Ошибка при обработке отзыва: {e}")
                     continue
-            
-            # Добавляем отзывы из DOM, которые не были найдены в JSON (например, с фотографиями)
-            for dom_item in dom_texts:
-                if dom_item['text'] not in processed_dom_texts:
-                    # Ищем likes_count для этого текста в HTML
-                    likes_count = 0
-                    try:
-                        # Ищем текст в HTML и рядом с ним ищем likes_count
-                        text_escaped = re.escape(dom_item['text'][:100])  # Первые 100 символов для поиска
-                        pattern = rf'{text_escaped}.*?"likes_count"\s*:\s*(\d+)'
-                        match = re.search(pattern, html_content, re.DOTALL)
-                        if match:
-                            likes_count = int(match.group(1))
-                    except:
-                        pass
-                    
-                    reviews.append({
-                        'school_id': school_id,
-                        'date': dom_item['date'],
-                        'text': dom_item['text'],
-                        'likes_count': likes_count
-                    })
-                    print(f"[debug] Добавлен отзыв из DOM (не найден в JSON): текст (длина: {len(dom_item['text'])}), дата: {dom_item['date']}, likes_count: {likes_count}")
             
             print(f"[debug] Обработано отзывов из JSON с датами из DOM: {len(reviews)}")
             return reviews
@@ -444,7 +519,12 @@ def parse_reviews(driver: webdriver.Chrome, review_url: str, school_id: str) -> 
         
         if not review_containers:
             print(f"[info] У школы {school_id} нет отзывов (контейнеры не найдены)")
-            return []
+            return [{
+                'school_id': school_id,
+                'date': None,
+                'text': None,
+                'likes_count': None
+            }]
         
         reviews = []
         processed_texts = set()  # Для избежания дубликатов
@@ -483,12 +563,30 @@ def parse_reviews(driver: webdriver.Chrome, review_url: str, school_id: str) -> 
                 likes_count = 0
                 try:
                     # Ищем JSON данные для этого отзыва в HTML
-                    # Ищем текст отзыва в HTML и рядом с ним ищем likes_count
-                    text_escaped = re.escape(text[:100])  # Первые 100 символов для поиска
-                    pattern = rf'{text_escaped}.*?"likes_count"\s*:\s*(\d+)'
-                    match = re.search(pattern, html_content, re.DOTALL)
-                    if match:
-                        likes_count = int(match.group(1))
+                    # Используем более надежный метод: ищем начало текста в JSON и извлекаем до закрывающей кавычки
+                    # Берем первые 30 символов текста для поиска (меньше, чтобы избежать проблем с кавычками и спецсимволами)
+                    text_search = text[:30] if len(text) > 30 else text
+                    # Экранируем специальные символы для regex
+                    text_search_escaped = re.escape(text_search)
+                    
+                    # Ищем позицию текста (или его начала) в HTML - ищем как в экранированном, так и в неэкранированном виде
+                    text_positions = []
+                    # Поиск точного совпадения (текст может быть в DOM или в JSON)
+                    for match_obj in re.finditer(text_search_escaped, html_content):
+                        text_positions.append(match_obj.start())
+                    
+                    # Для каждой позиции ищем ближайший likes_count в JSON
+                    for text_pos in text_positions:
+                        # Ищем в окрестности (в пределах 3000 символов)
+                        search_start = max(0, text_pos - 1000)
+                        search_end = min(len(html_content), text_pos + 3000)
+                        search_context = html_content[search_start:search_end]
+                        
+                        # Ищем "likes_count" в этом контексте
+                        likes_match = re.search(r'"likes_count"\s*:\s*(\d+)', search_context)
+                        if likes_match:
+                            likes_count = int(likes_match.group(1))
+                            break
                 except Exception as e:
                     print(f"[debug] Не удалось извлечь likes_count для отзыва {idx}: {e}")
                 
@@ -572,19 +670,46 @@ def load_input_links(input_file: str) -> List[Dict[str, str]]:
         return data if isinstance(data, list) else []
 
 
-def save_all_reviews(reviews: list) -> None:
-    """Сохраняет все отзывы в один файл"""
-    os.makedirs(REVIEWS_DATA_DIR, exist_ok=True)
-    
-    # Загружаем существующие отзывы, если файл есть
-    existing_reviews = []
+def load_existing_reviews() -> list:
+    """Загружает существующие отзывы из файла"""
     if os.path.exists(REVIEWS_OUTPUT_FILE):
         try:
             with open(REVIEWS_OUTPUT_FILE, "r", encoding="utf-8") as f:
                 data = json.load(f)
-                existing_reviews = data.get("reviews", [])
+                return data.get("reviews", [])
         except Exception:
-            existing_reviews = []
+            return []
+    return []
+
+
+def save_reviews_for_school(school_id: str, reviews: list) -> None:
+    """Сохраняет отзывы для одной школы, удаляя старые отзывы этой школы"""
+    os.makedirs(REVIEWS_DATA_DIR, exist_ok=True)
+    
+    # Загружаем существующие отзывы
+    existing_reviews = load_existing_reviews()
+    
+    # Удаляем старые отзывы для этой школы
+    existing_reviews = [r for r in existing_reviews if r.get('school_id') != school_id]
+    
+    # Добавляем новые отзывы
+    all_reviews = existing_reviews + reviews
+    
+    # Сохраняем все отзывы
+    payload = {
+        "resource": "2gis",
+        "reviews": all_reviews,
+    }
+    with open(REVIEWS_OUTPUT_FILE, "w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2)
+
+
+def save_all_reviews(reviews: list) -> None:
+    """Сохраняет все отзывы в один файл (для обратной совместимости)"""
+    os.makedirs(REVIEWS_DATA_DIR, exist_ok=True)
+    
+    # Загружаем существующие отзывы, если файл есть
+    existing_reviews = load_existing_reviews()
     
     # Объединяем старые и новые отзывы
     all_reviews = existing_reviews + reviews
@@ -610,6 +735,8 @@ def main(input_file: str = None) -> None:
     if input_file is None:
         # Ищем в разных местах
         possible_paths = [
+            os.path.join(REVIEWS_DATA_DIR, "input", "2gis_test_review_school.json"),
+            os.path.join(REVIEWS_DATA_DIR, "input", "2gis_schools_with_info.json"),
             os.path.join(os.path.dirname(__file__), "2gis_reviews_data", "2gis_schools_with_info.json"),
             os.path.join(os.path.dirname(__file__), "input.json"),
         ]
@@ -647,14 +774,16 @@ def main(input_file: str = None) -> None:
                 reviews = parse_reviews(driver, feedback_link, school_id)
                 all_reviews.extend(reviews)
                 print(f"  Найдено отзывов: {len(reviews)}")
+                
+                # Сохраняем отзывы для этой школы сразу после обработки
+                save_reviews_for_school(school_id, reviews)
+                print(f"  Сохранено отзывов для школы {school_id}")
             else:
                 print(f"Пропущена школа {school_id}: нет feedback_link")
             
             time.sleep(0.5)
 
-        # Сохраняем все отзывы в один файл
-        save_all_reviews(all_reviews)
-        print(f"Готово. Всего отзывов: {len(all_reviews)}")
+        print(f"Готово. Всего отзывов обработано: {len(all_reviews)}")
 
     finally:
         driver.quit()

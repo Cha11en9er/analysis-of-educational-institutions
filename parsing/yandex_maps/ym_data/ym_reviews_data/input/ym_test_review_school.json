@@ -1,0 +1,24 @@
+{
+    "source": "yandex_maps",
+    "topic": "Школы Саратова",
+    "data": [
+        {
+            "id": "1",
+            "name": "Прогимназия Идеал",
+            "url": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+            "feedback_link": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+            "yandex_id": "1003889825",
+            "adres": "ул. имени Н.Г. Чернышевского, 16А, Саратов",
+            "reviews_count": 35
+        },
+        {
+            "id": "2",
+            "name": "Средняя общеобразовательная школа № 77",
+            "url": "https://yandex.com/maps/org/secondary_school_77/1028265778/",
+            "feedback_link": "https://yandex.com/maps/org/secondary_school_77/1028265778/reviews/",
+            "yandex_id": "1028265778",
+            "adres": "Саратов, Шелковичная улица",
+            "reviews_count": 62
+        }
+    ]
+}

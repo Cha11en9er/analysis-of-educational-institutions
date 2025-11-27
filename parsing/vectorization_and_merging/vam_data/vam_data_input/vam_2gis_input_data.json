@@ -1,0 +1,1609 @@
+{
+    "source": "2GIS",
+    "topic": "Школы Саратова",
+    "total_elements": 178,
+    "data": [
+        {
+            "id": "1",
+            "name": "Средняя школа №83",
+            "url": "https://2gis.ru/saratov/firm/70000001037362342",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001037362342/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №83",
+            "adres": "Саратов, Крымская улица, 2",
+            "cadastral_number": "64:48:020331:1356"
+        },
+        {
+            "id": "3",
+            "name": "Maximum Education",
+            "url": "https://2gis.ru/saratov/firm/70000001063207425",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001063207425/tab/reviews",
+            "full_name": null,
+            "adres": "Фрунзенский район, Саратов, 410012",
+            "cadastral_number": null
+        },
+        {
+            "id": "4",
+            "name": "Частная школа начальных классов",
+            "url": "https://2gis.ru/saratov/firm/70000001079636032",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001079636032/tab/reviews",
+            "full_name": null,
+            "adres": "Саратов",
+            "cadastral_number": null
+        },
+        {
+            "id": "5",
+            "name": "Средняя школа №86",
+            "url": "https://2gis.ru/saratov/firm/6052240280256869",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256869/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №86",
+            "adres": "Саратов, Московский 2-й проезд, 5",
+            "cadastral_number": "64:48:040234:109"
+        },
+        {
+            "id": "6",
+            "name": "Медицинский предуниверсарий",
+            "url": "https://2gis.ru/saratov/firm/6052240280262677",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280262677/tab/reviews",
+            "full_name": "ФГБОУ ВО Саратовский государственный медицинский университет им. В.И. Разумовского",
+            "adres": "Саратов, Саратовский государственный медицинский университет им. В.И. Разумовского",
+            "cadastral_number": null
+        },
+        {
+            "id": "7",
+            "name": "Средняя общеобразовательная школа №67 им. О.И. Янковского",
+            "url": "https://2gis.ru/saratov/firm/6052240280256838",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256838/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №67 им. О.И. Янковского",
+            "adres": "Саратов, улица им. Пугачёва Е.И., 123 / Московская улица, 151",
+            "cadastral_number": null
+        },
+        {
+            "id": "8",
+            "name": "Ласточкино",
+            "url": "https://2gis.ru/saratov/firm/70000001079218611",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001079218611/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №80 Ласточкино",
+            "adres": "Саратов, улица Романтиков, 85",
+            "cadastral_number": "64:48:040424:1903"
+        },
+        {
+            "id": "9",
+            "name": "Лицей №3",
+            "url": "https://2gis.ru/saratov/firm/6052240280257712",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257712/tab/reviews",
+            "full_name": null,
+            "adres": "Саратов, Советская улица, 46/1",
+            "cadastral_number": null
+        },
+        {
+            "id": "10",
+            "name": "Гимназия №7",
+            "url": "https://2gis.ru/saratov/firm/70000001030556823",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001030556823/tab/reviews",
+            "full_name": "МОУ Гимназия №7 им. К. Д. Ушинского",
+            "adres": "Саратов, улица им. Муленкова А.П., 10а",
+            "cadastral_number": "64:48:010115:11275"
+        },
+        {
+            "id": "11",
+            "name": "Гимназия №4 им. Героя Советского Союза В.М. Безбокова",
+            "url": "https://2gis.ru/saratov/firm/6052240280257235",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257235/tab/reviews",
+            "full_name": "МАОУ Гимназия №4 им. Героя Советского Союза В.М. Безбокова",
+            "adres": "Саратов, Вознесенская улица, 5",
+            "cadastral_number": null
+        },
+        {
+            "id": "12",
+            "name": "Аврора",
+            "url": "https://2gis.ru/saratov/firm/70000001035603313",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001035603313/tab/reviews",
+            "full_name": "МАОУ Аврора средняя общеобразовательная школа",
+            "adres": "Саратов, Аврора",
+            "cadastral_number": null
+        },
+        {
+            "id": "13",
+            "name": "Основная школа №17",
+            "url": "https://2gis.ru/saratov/firm/6052240280256554",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256554/tab/reviews",
+            "full_name": "МОУ Основная общеобразовательная школа №17",
+            "adres": "Саратов, Наумовская улица, 11",
+            "cadastral_number": "64:48:030310:1507"
+        },
+        {
+            "id": "14",
+            "name": "Школа №2 г.",
+            "url": "https://2gis.ru/saratov/firm/6052240280256558",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256558/tab/reviews",
+            "full_name": "ГБОУ Школа для обучающихся по адаптированным образовательным программам №2 г. Саратова",
+            "adres": "Саратов, Гоголя улица, 42 / Симбирская улица, 9",
+            "cadastral_number": null
+        },
+        {
+            "id": "15",
+            "name": "Центр образования",
+            "url": "https://2gis.ru/saratov/firm/6052240280391694",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280391694/tab/reviews",
+            "full_name": "ГБОУ Центр образования и психолого-педагогического, медико-социального сопровождения детей",
+            "adres": "Саратов, Вольская улица, 30 / им. Пушкина А.С. улица, 27/30",
+            "cadastral_number": null
+        },
+        {
+            "id": "16",
+            "name": "Русская православная классическая гимназия",
+            "url": "https://2gis.ru/saratov/firm/6052240280257239",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257239/tab/reviews",
+            "full_name": "МОУ Русская православная классическая гимназия им. преподобного Сергия Радонежского",
+            "adres": "Саратов, им. Челюскинцев улица, 12",
+            "cadastral_number": "64:48:010254:48"
+        },
+        {
+            "id": "17",
+            "name": "Покровская православная классическая гимназия г. Саратова им. Святого благоверного князя А. Невского",
+            "url": "https://2gis.ru/saratov/firm/6052240280516554",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280516554/tab/reviews",
+            "full_name": "ЧОУ Покровская православная классическая гимназия г. Саратова им. Святого благоверного князя А. Невского",
+            "adres": "Саратов, им. Горького А.М. улица, 83",
+            "cadastral_number": null
+        },
+        {
+            "id": "18",
+            "name": "Средняя школа №16",
+            "url": "https://2gis.ru/saratov/firm/6052240280256552",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256552/tab/reviews",
+            "full_name": "МАОУ Средняя общеобразовательная школа №16",
+            "adres": "Саратов, Брянская улица, 3",
+            "cadastral_number": "64:50:020601:243"
+        },
+        {
+            "id": "19",
+            "name": "Средняя школа №22",
+            "url": "https://2gis.ru/saratov/firm/6052240280256560",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256560/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №22 им. Героя Советского Союза П.Т. Пономарёва",
+            "adres": "Саратов, Ростовская улица, 29",
+            "cadastral_number": "64:48:000000:19823"
+        },
+        {
+            "id": "20",
+            "name": "Средняя школа №69",
+            "url": "https://2gis.ru/saratov/firm/6052240280465039",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280465039/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №69 им. дважды Героя Советского Союза Н.М. Скоморохова",
+            "adres": "Саратов, Мелиораторов улица, 1Б",
+            "cadastral_number": null
+        },
+        {
+            "id": "21",
+            "name": "Средняя общеобразовательная школа №90",
+            "url": "https://2gis.ru/saratov/firm/6052240280256876",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256876/tab/reviews",
+            "full_name": "МАОУ Средняя общеобразовательная школа №90",
+            "adres": "Саратов, Заречная улица, 2/1",
+            "cadastral_number": null
+        },
+        {
+            "id": "22",
+            "name": "Основная школа №14",
+            "url": "https://2gis.ru/saratov/firm/6052240280256549",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256549/tab/reviews",
+            "full_name": "МОУ Основная общеобразовательная школа №14",
+            "adres": "Саратов, Садовая 1-я улица, 35",
+            "cadastral_number": "64:48:030411:67"
+        },
+        {
+            "id": "23",
+            "name": "Татарская гимназия",
+            "url": "https://2gis.ru/saratov/firm/6052240280268203",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280268203/tab/reviews",
+            "full_name": "МОУ Национальная (татарская) гимназия им. героя Советского Союза Г.Г. Рамаева",
+            "adres": "Саратов, Мясницкая улица, 4",
+            "cadastral_number": "64:48:010240:216"
+        },
+        {
+            "id": "24",
+            "name": "Татарская гимназия",
+            "url": "https://2gis.ru/saratov/firm/6052240280266554",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280266554/tab/reviews",
+            "full_name": "МОУ Национальная (татарская) гимназия им. героя Советского Союза Г.Г. Рамаева",
+            "adres": "​Московская улица, 64",
+            "cadastral_number": "64:48:030342:409"
+        },
+        {
+            "id": "25",
+            "name": "Гимназия гуманитарных наук",
+            "url": "https://2gis.ru/saratov/firm/6052240280257713",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257713/tab/reviews",
+            "full_name": "АНОО Гимназия гуманитарных наук",
+            "adres": "​Улица им. Вавилова Н.И., 36",
+            "cadastral_number": "64:48:000000:18467"
+        },
+        {
+            "id": "26",
+            "name": "Основная школа №81",
+            "url": "https://2gis.ru/saratov/firm/6052240280256862",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256862/tab/reviews",
+            "full_name": "МОУ Основная общеобразовательная школа №81",
+            "adres": "Васильковская улица, 17",
+            "cadastral_number": "64:48:020354:518"
+        },
+        {
+            "id": "27",
+            "name": "Гимназия №5",
+            "url": "https://2gis.ru/saratov/firm/6052240280256661",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256661/tab/reviews",
+            "full_name": "МОУ Гимназия №5",
+            "adres": "Саратов, Азовская улица, 15",
+            "cadastral_number": "64:48:020462:835"
+        },
+        {
+            "id": "28",
+            "name": "Top IT",
+            "url": "https://2gis.ru/saratov/firm/70000001096260245",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001096260245/tab/reviews",
+            "full_name": null,
+            "adres": "​Большая Горная улица, 310а к20",
+            "cadastral_number": null
+        },
+        {
+            "id": "29",
+            "name": "Лицей №24",
+            "url": "https://2gis.ru/saratov/firm/6052240280256584",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256584/tab/reviews",
+            "full_name": "МАОУ Лицей №24 им. М.М. Расковой",
+            "adres": "Саратов, им. Жуковского Н.Е. улица, 24а",
+            "cadastral_number": null
+        },
+        {
+            "id": "30",
+            "name": "Гуманитарно-экономический лицей",
+            "url": "https://2gis.ru/saratov/firm/6052240280257292",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257292/tab/reviews",
+            "full_name": "МОУ Гуманитарно-экономический лицей",
+            "adres": "Саратов, Садовая 1-я улица, 2",
+            "cadastral_number": null
+        },
+        {
+            "id": "31",
+            "name": "Средняя общеобразовательная школа №8 Волжского района г. Саратова",
+            "url": "https://2gis.ru/saratov/firm/6052240280256613",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256613/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №8 Волжского района г. Саратова",
+            "adres": "Саратов, им. Радищева А.Н. улица, 18/1",
+            "cadastral_number": null
+        },
+        {
+            "id": "32",
+            "name": "Школа-интернат №5",
+            "url": "https://2gis.ru/saratov/firm/6052240280257974",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257974/tab/reviews",
+            "full_name": "ГБОУ Школа-интернат для обучающихся по адаптированным образовательным программам №5",
+            "adres": "Саратов, Северная улица, 3",
+            "cadastral_number": "64:48:010252:113"
+        },
+        {
+            "id": "33",
+            "name": "Top IT",
+            "url": "https://2gis.ru/saratov/firm/70000001104111327",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001104111327/tab/reviews",
+            "full_name": null,
+            "adres": "​Мичурина улица, 166/168",
+            "cadastral_number": "64:48:000000:27198"
+        },
+        {
+            "id": "34",
+            "name": "Средняя школа №16",
+            "url": "https://2gis.ru/saratov/firm/6052240280256519",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256519/tab/reviews",
+            "full_name": "МАОУ Средняя общеобразовательная школа №16",
+            "adres": "Саратов, Лесопильная улица, 17",
+            "cadastral_number": null
+        },
+        {
+            "id": "35",
+            "name": "Физико-технический лицей №1",
+            "url": "https://2gis.ru/saratov/firm/70000001035292813",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001035292813/tab/reviews",
+            "full_name": "ГАОУ Физико-технический лицей №1",
+            "adres": "Саратов, Московская улица, 141",
+            "cadastral_number": "64:48:030457:753"
+        },
+        {
+            "id": "36",
+            "name": "Средняя школа №105",
+            "url": "https://2gis.ru/saratov/firm/6052240280256543",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256543/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №105",
+            "adres": "Саратов, Строителей улица, 5",
+            "cadastral_number": null
+        },
+        {
+            "id": "37",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/6052240280303737",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280303737/tab/reviews",
+            "full_name": "МАОУ Средняя общеобразовательная школа пос. Тепличный Муниципального образования Город Саратов",
+            "adres": "Тепличный, Тепличная улица, 112",
+            "cadastral_number": "64:30:000000:1102"
+        },
+        {
+            "id": "38",
+            "name": "Начальная Общеобразовательная школа №232",
+            "url": "https://2gis.ru/saratov/firm/6052240280256568",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256568/tab/reviews",
+            "full_name": "МОУ Начальная Общеобразовательная школа №232",
+            "adres": "Саратов, Перспективная улица, 8в",
+            "cadastral_number": null
+        },
+        {
+            "id": "39",
+            "name": "Основная общеобразовательная школа №91",
+            "url": "https://2gis.ru/saratov/firm/6052240280256877",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256877/tab/reviews",
+            "full_name": "МБОУ Основная общеобразовательная школа №91",
+            "adres": "Саратов, Увекская улица, 31а",
+            "cadastral_number": null
+        },
+        {
+            "id": "40",
+            "name": "Русская православная классическая гимназия",
+            "url": "https://2gis.ru/saratov/firm/70000001025091889",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001025091889/tab/reviews",
+            "full_name": "МОУ Русская православная классическая гимназия им. преподобного Сергия Радонежского",
+            "adres": "​Им. Рогожина В.А. улица, 24/32​4 этаж",
+            "cadastral_number": null
+        },
+        {
+            "id": "41",
+            "name": "Гимназия гуманитарных наук",
+            "url": "https://2gis.ru/saratov/firm/70000001067895343",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001067895343/tab/reviews",
+            "full_name": "АНОО Гимназия гуманитарных наук",
+            "adres": "​Улица Большая Казачья, 58",
+            "cadastral_number": "64:48:030458:757"
+        },
+        {
+            "id": "43",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/6052240280497529",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280497529/tab/reviews",
+            "full_name": "МАОУ Средняя общеобразовательная школа с. Березина Речка муниципального образования Город Саратов",
+            "adres": "Березина Речка, Школьная улица, 2Б",
+            "cadastral_number": "64:32:071021:67"
+        },
+        {
+            "id": "44",
+            "name": "Средняя школа №10",
+            "url": "https://2gis.ru/saratov/firm/6052240280289139",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280289139/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №10",
+            "adres": "Саратов, им. Рогожина В.А. улица, 24/32",
+            "cadastral_number": "64:48:000000:7823"
+        },
+        {
+            "id": "45",
+            "name": "Средняя школа им. П.А. Мельникова",
+            "url": "https://2gis.ru/saratov/firm/6052240280497832",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280497832/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа с. Сторожевка им. Героя Советского Союза П.А. Мельникова",
+            "adres": "Сторожевка, Школьная улица, 1",
+            "cadastral_number": "64:34:171414:200"
+        },
+        {
+            "id": "46",
+            "name": "Основная общеобразовательная школа №91",
+            "url": "https://2gis.ru/saratov/firm/6052240280394901",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280394901/tab/reviews",
+            "full_name": "МБОУ Основная общеобразовательная школа №91",
+            "adres": "Саратов, 1-й Нефтяной проезд, 1 к1",
+            "cadastral_number": null
+        },
+        {
+            "id": "47",
+            "name": "Гимназия №34",
+            "url": "https://2gis.ru/saratov/firm/70000001100413612",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001100413612/tab/reviews",
+            "full_name": "МОУ Гимназия №34 им. Героя Советского Союза Г.Д. Ермолаева",
+            "adres": "Саратов, Барнаульский тупик, 10",
+            "cadastral_number": "64:48:020333:80"
+        },
+        {
+            "id": "49",
+            "name": "Englishhall",
+            "url": "https://2gis.ru/saratov/firm/70000001091559215",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001091559215/tab/reviews",
+            "full_name": null,
+            "adres": "Площадь им. Орджоникидзе Г.К., 1в",
+            "cadastral_number": null
+        },
+        {
+            "id": "51",
+            "name": "Средняя общеобразовательная школа с этнокультурным еврейским компонентом образования",
+            "url": "https://2gis.ru/saratov/firm/6052240280257722",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257722/tab/reviews",
+            "full_name": "ЧОУ Средняя общеобразовательная школа с этнокультурным еврейским компонентом образования",
+            "adres": "Саратов, Селекционный проезд, 5",
+            "cadastral_number": "64:48:000000:43278"
+        },
+        {
+            "id": "52",
+            "name": "Средняя общеобразовательная школа пос. Расково Муниципального образования Город Саратов",
+            "url": "https://2gis.ru/saratov/firm/6052240280303734",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280303734/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа пос. Расково Муниципального образования Город Саратов",
+            "adres": "Расково, Полевая улица, 7 к1",
+            "cadastral_number": null
+        },
+        {
+            "id": "53",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/6052240280303750",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280303750/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа рп. Соколовый муниципального образования Город Саратов",
+            "adres": "Соколовый, ДОС, 23а",
+            "cadastral_number": null
+        },
+        {
+            "id": "55",
+            "name": "Средняя общеобразовательная школа №5",
+            "url": "https://2gis.ru/saratov/firm/70000001074186219",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001074186219/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №5",
+            "adres": "Саратов, Огородная улица, 196а",
+            "cadastral_number": "64:48:020244:601"
+        },
+        {
+            "id": "57",
+            "name": "Vortex",
+            "url": "https://2gis.ru/saratov/firm/6052240280264052",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280264052/tab/reviews",
+            "full_name": "ЧПОУ Саратовская бизнес школа индустрии красоты",
+            "adres": "​ЖК Близнецы-2​Им. академика О.К. Антонова улица, 24",
+            "cadastral_number": null
+        },
+        {
+            "id": "60",
+            "name": "Средняя школа №12",
+            "url": "https://2gis.ru/engels/firm/6052240280292193",
+            "feedback_link": "https://2gis.ru/engels/firm/6052240280292193/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №12 им. М. Ф. Суханова",
+            "adres": "Энгельс, улица Пушкина, 1а",
+            "cadastral_number": "64:50:010502:581"
+        },
+        {
+            "id": "61",
+            "name": "Средняя школа №7",
+            "url": "https://2gis.ru/engels/firm/70000001033671066",
+            "feedback_link": "https://2gis.ru/engels/firm/70000001033671066/tab/reviews",
+            "full_name": "МАОУ Средняя общеобразовательная школа №7",
+            "adres": "Энгельс, Студенческая улица, 187а/1",
+            "cadastral_number": null
+        },
+        {
+            "id": "62",
+            "name": "Школа-интернат №3",
+            "url": "https://2gis.ru/engels/firm/6052240280292344",
+            "feedback_link": "https://2gis.ru/engels/firm/6052240280292344/tab/reviews",
+            "full_name": "ГБОУ Школа-интернат для обучающихся по адаптированным образовательным программам №3",
+            "adres": "Энгельс, Петровская улица, 32",
+            "cadastral_number": null
+        },
+        {
+            "id": "63",
+            "name": "Спортивная школа олимпийского резерва №3 г. Саратова",
+            "url": "https://2gis.ru/saratov/firm/70000001036977585",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001036977585/tab/reviews",
+            "full_name": "МАУ ДО СШОР №3",
+            "adres": "​Большой Динамовский проезд, 5",
+            "cadastral_number": null
+        },
+        {
+            "id": "64",
+            "name": "Средняя общеобразовательная школа пос. Дубки Муниципального образования Город Саратов",
+            "url": "https://2gis.ru/saratov/firm/6052240280303730",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280303730/tab/reviews",
+            "full_name": "МАОУ Средняя общеобразовательная школа пос. Дубки Муниципального образования Город Саратов",
+            "adres": "Дубки, Октябрьская улица, 1а",
+            "cadastral_number": "64:32:014918:54"
+        },
+        {
+            "id": "66",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/70000001030061741",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001030061741/tab/reviews",
+            "full_name": "МАОУ Средняя общеобразовательная школа с. Клещевка муниципального образования Город Саратов",
+            "adres": "Клещевка, Советская улица, 46",
+            "cadastral_number": null
+        },
+        {
+            "id": "68",
+            "name": "Саратовский областной базовый медицинский колледж",
+            "url": "https://2gis.ru/saratov/firm/6052240280300695",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280300695/tab/reviews",
+            "full_name": "ГАПОУ Саратовский областной базовый медицинский колледж",
+            "adres": "Саратов, Саратовский областной базовый медицинский колледж",
+            "cadastral_number": null
+        },
+        {
+            "id": "69",
+            "name": "Средняя школа П.Т. Пономарева",
+            "url": "https://2gis.ru/saratov/firm/6052241280342503",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052241280342503/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа ст. Курдюм им. Героя Советского Союза П.Т. Пономарева",
+            "adres": "Курдюм, Школьная улица, 10",
+            "cadastral_number": null
+        },
+        {
+            "id": "70",
+            "name": "Средняя школа им. Героя Советского Союза Н.В. Котлова",
+            "url": "https://2gis.ru/saratov/firm/6052240280303759",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280303759/tab/reviews",
+            "full_name": "МАОУ Средняя общеобразовательная школа с. Багаевка Муниципального образования Город Саратов им. Героя Советского Союза Н.В. Котлова",
+            "adres": "Багаевка, Советская улица, 1",
+            "cadastral_number": "64:32:072304:57"
+        },
+        {
+            "id": "71",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/6052240280303744",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280303744/tab/reviews",
+            "full_name": "МАОУ Средняя общеобразовательная школа п. Красный Текстильщик",
+            "adres": "Красный Текстильщик, улица Калинина, 4а",
+            "cadastral_number": "64:32:051803:204"
+        },
+        {
+            "id": "72",
+            "name": "Основная школа",
+            "url": "https://2gis.ru/saratov/firm/70000001057832088",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001057832088/tab/reviews",
+            "full_name": "МАОУ Основная общеобразовательная школа П.Ц.У. Совхоза 15 лет Октября",
+            "adres": "Гагаринский район, пос. Центральная усадьба совхоза 15 лет Октября, Саратов городской округ, Саратовская область, 410521",
+            "cadastral_number": null
+        },
+        {
+            "id": "73",
+            "name": "Средняя школа №3",
+            "url": "https://2gis.ru/saratov/firm/70000001030224707",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001030224707/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №3 им. В.Н. Щеголева",
+            "adres": "Светлый, Кузнецова улица, 12",
+            "cadastral_number": null
+        },
+        {
+            "id": "74",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/70000001030227566",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001030227566/tab/reviews",
+            "full_name": "МАОУ Средняя общеобразовательная школа р.п. Красный Октябрь муниципального образования Город Саратов",
+            "adres": "Красный Октябрь, Лесная улица, 32",
+            "cadastral_number": "64:32:052404:63"
+        },
+        {
+            "id": "75",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/70000001029992407",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001029992407/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа ст. Тарханы муниципального образования Город Саратов",
+            "adres": "Тарханы, Школьная улица, 1 к1",
+            "cadastral_number": null
+        },
+        {
+            "id": "79",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/70000001053991773",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001053991773/tab/reviews",
+            "full_name": "МАОУ Средняя общеобразовательная школа с. Рыбушка",
+            "adres": "Рыбушка, Школьная улица, 42",
+            "cadastral_number": null
+        },
+        {
+            "id": "80",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/6052240280303756",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280303756/tab/reviews",
+            "full_name": "МОАУ Средняя общеобразовательная школа с. Александровка муниципального образования Город Саратов",
+            "adres": "Александровка, Привокзальная улица, 3",
+            "cadastral_number": "64:32:071515:174"
+        },
+        {
+            "id": "81",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/6052240280303802",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280303802/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа с. Усть-Курдюм муниципального образования Город Саратов",
+            "adres": "Усть-Курдюм, Большая Советская улица, 66",
+            "cadastral_number": "64:32:023314:1466"
+        },
+        {
+            "id": "82",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/70000001030225001",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001030225001/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа х. Малая Скатовка",
+            "adres": "Малая Скатовка, Дорожная улица, 14",
+            "cadastral_number": "64:32:052702:372"
+        },
+        {
+            "id": "83",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/70000001030112946",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001030112946/tab/reviews",
+            "full_name": "МАОУ Средняя общеобразовательная школа с. Михайловка муниципального образования Город Саратов",
+            "adres": "Михайловка, Центральная улица, 9",
+            "cadastral_number": null
+        },
+        {
+            "id": "84",
+            "name": "Средняя школа им. П.А. Мельникова",
+            "url": "https://2gis.ru/saratov/firm/70000001030392146",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001030392146/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа с. Сторожевка им. Героя Советского Союза П.А. Мельникова",
+            "adres": "Курдюм, Пономарёва улица, 24",
+            "cadastral_number": "64:34:000000:1722"
+        },
+        {
+            "id": "85",
+            "name": "Основная общеобразовательная школа",
+            "url": "https://2gis.ru/saratov/firm/70000001030113512",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001030113512/tab/reviews",
+            "full_name": "МОУ Основная общеобразовательная школа",
+            "adres": "Ивановский, Центральная улица, 31",
+            "cadastral_number": null
+        },
+        {
+            "id": "86",
+            "name": "Основная общеобразовательная школа",
+            "url": "https://2gis.ru/saratov/firm/70000001030145539",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001030145539/tab/reviews",
+            "full_name": "МОУ Основная общеобразовательная школа",
+            "adres": "Константиновка, Коммунарная улица, 2Б",
+            "cadastral_number": "64:32:061908:37"
+        },
+        {
+            "id": "89",
+            "name": "Средняя школа №2",
+            "url": "https://2gis.ru/saratov/firm/70000001030153366",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001030153366/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №2 им. В.А. Коновалова",
+            "adres": "Светлый, Кузнецова улица, 10",
+            "cadastral_number": "64:52:010101:589"
+        },
+        {
+            "id": "90",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/70000001053983327",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001053983327/tab/reviews",
+            "full_name": "МАОУ Средняя общеобразовательная школа с. Поповка",
+            "adres": "Поповка, Школьная улица, 41",
+            "cadastral_number": "64:32:000000:8942"
+        },
+        {
+            "id": "91",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/70000001057023519",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001057023519/tab/reviews",
+            "full_name": "МАОУ Средняя общеобразовательная школа с. Сосновка муниципального образования г. Саратов",
+            "adres": "Сосновка, Школьная улица, 17",
+            "cadastral_number": "64:32:060112:257"
+        },
+        {
+            "id": "93",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/70000001030112734",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001030112734/tab/reviews",
+            "full_name": "МАОУ Средняя общеобразовательная школа п. Сергиевский",
+            "adres": "Сергиевский, Октябрьская улица, 21",
+            "cadastral_number": "64:32:081807:115"
+        },
+        {
+            "id": "94",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/70000001029926415",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001029926415/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа с. Синенькие",
+            "adres": "Синенькие, Комсомольская улица, 22",
+            "cadastral_number": "64:32:084301:236"
+        },
+        {
+            "id": "96",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/70000001057022691",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001057022691/tab/reviews",
+            "full_name": "МАОУ Средняя общеобразовательная школа д. Юрловка муниципального образования Город Саратов",
+            "adres": "Юрловка, Молодёжная улица, 1а",
+            "cadastral_number": null
+        },
+        {
+            "id": "100",
+            "name": "Саратовский национальный исследовательский государственный университет им. Н.Г. Чернышевского",
+            "url": "https://2gis.ru/saratov/firm/6052695547086562",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052695547086562/tab/reviews",
+            "full_name": "ФГБОУ ВО Саратовский национальный исследовательский государственный университет им. Н.Г. Чернышевского",
+            "adres": "Саратов, Саратовский национальный исследовательский государственный университет им. Н.Г. Чернышевского",
+            "cadastral_number": null
+        },
+        {
+            "id": "110",
+            "name": "Средняя общеобразовательная школа №19",
+            "url": "https://2gis.ru/firm/70000001053984119",
+            "feedback_link": "https://2gis.ru/firm/70000001053984119/tab/reviews",
+            "full_name": "МБОУ Средняя общеобразовательная школа №19",
+            "adres": "Паницкая, Пионерская улица, 14",
+            "cadastral_number": "64:16:030317:126"
+        },
+        {
+            "id": "111",
+            "name": "Школа борьбы братьев Набиевых",
+            "url": "https://2gis.ru/saratov/firm/70000001097366931",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001097366931/tab/reviews",
+            "full_name": null,
+            "adres": "​3-й Дегтярный проезд, 2 к1",
+            "cadastral_number": null
+        },
+        {
+            "id": "113",
+            "name": "Солярис",
+            "url": "https://2gis.ru/saratov/firm/70000001027154065",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001027154065/tab/reviews",
+            "full_name": "МАОУ Лицей Солярис",
+            "adres": "Саратов, улица им. Лисина С.П., 7Б",
+            "cadastral_number": "64:48:030101:10873"
+        },
+        {
+            "id": "114",
+            "name": "Гимназия №1",
+            "url": "https://2gis.ru/saratov/firm/6052240280257227",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257227/tab/reviews",
+            "full_name": "ГАОУ Гимназия №1",
+            "adres": "Саратов, Мичурина улица, 88",
+            "cadastral_number": "64:48:050359:525"
+        },
+        {
+            "id": "115",
+            "name": "Лицей №4",
+            "url": "https://2gis.ru/saratov/firm/6052240280256669",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256669/tab/reviews",
+            "full_name": "МОУ Лицей №4",
+            "adres": "Саратов, Московская улица, 64 / им. Радищева А.Н. улица, 32",
+            "cadastral_number": null
+        },
+        {
+            "id": "116",
+            "name": "Средняя школа №7",
+            "url": "https://2gis.ru/saratov/firm/6052240280256840",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256840/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №7",
+            "adres": "Саратов, Аткарская улица, 1в",
+            "cadastral_number": "64:48:000000:6033"
+        },
+        {
+            "id": "117",
+            "name": "Авиатор",
+            "url": "https://2gis.ru/saratov/firm/70000001045221097",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001045221097/tab/reviews",
+            "full_name": "МОУ Гимназия Авиатор",
+            "adres": "Саратов, бульвар им. Денисова Николая, 4",
+            "cadastral_number": "64:48:020314:5563"
+        },
+        {
+            "id": "118",
+            "name": "Средняя школа №55",
+            "url": "https://2gis.ru/saratov/firm/6052240280256719",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256719/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №55",
+            "adres": "Саратов, улица им. Чехова А.П., 1а",
+            "cadastral_number": "64:48:000000:18451"
+        },
+        {
+            "id": "119",
+            "name": "Средняя школа №1",
+            "url": "https://2gis.ru/saratov/firm/6052240280256536",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256536/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №1",
+            "adres": "Саратов, улица им. Разина С.Т., 32",
+            "cadastral_number": "64:48:060201:102"
+        },
+        {
+            "id": "120",
+            "name": "Звезда",
+            "url": "https://2gis.ru/saratov/firm/70000001043610537",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001043610537/tab/reviews",
+            "full_name": "МАОУ Лицей Звезда",
+            "adres": "Саратов, Техническая улица, 3/1",
+            "cadastral_number": "64:48:030204:1360"
+        },
+        {
+            "id": "121",
+            "name": "Солярис",
+            "url": "https://2gis.ru/saratov/firm/70000001055487050",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001055487050/tab/reviews",
+            "full_name": "МАОУ Лицей Солярис",
+            "adres": "Саратов, проспект Героев Отечества, 11а",
+            "cadastral_number": "64:48:030101:18539"
+        },
+        {
+            "id": "122",
+            "name": "Лицей №62",
+            "url": "https://2gis.ru/saratov/firm/6052240280257291",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257291/tab/reviews",
+            "full_name": "МАОУ Лицей №62",
+            "adres": "Саратов, Ильинская площадь, 1",
+            "cadastral_number": null
+        },
+        {
+            "id": "123",
+            "name": "Средняя школа №77",
+            "url": "https://2gis.ru/saratov/firm/6052240280256857",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256857/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №77",
+            "adres": "Саратов, Шелковичная улица, 141",
+            "cadastral_number": "64:48:000000:1988"
+        },
+        {
+            "id": "124",
+            "name": "Инженерный лицей",
+            "url": "https://2gis.ru/saratov/firm/6052240280393652",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280393652/tab/reviews",
+            "full_name": "ГАОУ Инженерный лицей",
+            "adres": "Саратов, им. Клочкова В.Г. улица, 85",
+            "cadastral_number": null
+        },
+        {
+            "id": "125",
+            "name": "Средняя общеобразовательная школа №51",
+            "url": "https://2gis.ru/saratov/firm/6052240280256707",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256707/tab/reviews",
+            "full_name": "МАОУ Средняя общеобразовательная школа №51",
+            "adres": "Саратов, Артиллерийская улица, 27",
+            "cadastral_number": "64:48:030205:54"
+        },
+        {
+            "id": "126",
+            "name": "Средняя общеобразовательная школа №18 с углубленным изучением предметов им. О.П. Табакова",
+            "url": "https://2gis.ru/saratov/firm/6052240280256555",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256555/tab/reviews",
+            "full_name": "МАОУ Средняя общеобразовательная школа №18 с углубленным изучением предметов им. О.П. Табакова",
+            "adres": "Саратов, Рахова улица, 124",
+            "cadastral_number": "64:48:060205:107"
+        },
+        {
+            "id": "127",
+            "name": "Гимназия №3",
+            "url": "https://2gis.ru/saratov/firm/6052240280257233",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257233/tab/reviews",
+            "full_name": "МАОУ Гимназия №3",
+            "adres": "Саратов, улица Большая Казачья, 121",
+            "cadastral_number": "64:48:030351:193"
+        },
+        {
+            "id": "128",
+            "name": "Физико-технический лицей №1",
+            "url": "https://2gis.ru/saratov/firm/6052240280263306",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280263306/tab/reviews",
+            "full_name": "ГАОУ Физико-технический лицей №1",
+            "adres": "Саратов, Московская улица, 143",
+            "cadastral_number": null
+        },
+        {
+            "id": "129",
+            "name": "Гимназия №87",
+            "url": "https://2gis.ru/saratov/firm/6052240280257238",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257238/tab/reviews",
+            "full_name": "МАОУ Гимназия №87",
+            "adres": "Саратов, Перспективная улица, 9а",
+            "cadastral_number": "64:48:040408:305"
+        },
+        {
+            "id": "130",
+            "name": "Средняя школа №100",
+            "url": "https://2gis.ru/saratov/firm/6052240280256538",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256538/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №100",
+            "adres": "Саратов, 1-й проезд им. И.В. Панфилова, 3",
+            "cadastral_number": "64:48:040711:705"
+        },
+        {
+            "id": "131",
+            "name": "Гимназия №34",
+            "url": "https://2gis.ru/saratov/firm/6052240280256671",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256671/tab/reviews",
+            "full_name": "МОУ Гимназия №34 им. Героя Советского Союза Г.Д. Ермолаева",
+            "adres": "Саратов, Кавказская улица, 17",
+            "cadastral_number": "64:48:020322:384"
+        },
+        {
+            "id": "132",
+            "name": "Лицей №2",
+            "url": "https://2gis.ru/saratov/firm/6052240280289243",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280289243/tab/reviews",
+            "full_name": "МОУ Лицей №2",
+            "adres": "Саратов, 1-я линия, 9/4",
+            "cadastral_number": null
+        },
+        {
+            "id": "133",
+            "name": "Лицей №36",
+            "url": "https://2gis.ru/saratov/firm/6052240280256652",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256652/tab/reviews",
+            "full_name": "МАОУ Лицей №36",
+            "adres": "Саратов, Одесская улица, 7",
+            "cadastral_number": "64:48:040816:197"
+        },
+        {
+            "id": "134",
+            "name": "Лицей №53",
+            "url": "https://2gis.ru/saratov/firm/6052240280256715",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256715/tab/reviews",
+            "full_name": "МОУ Лицей №53",
+            "adres": "Саратов, 4-й проезд им. Н.Г. Чернышевского, 2",
+            "cadastral_number": "64:48:020305:1217"
+        },
+        {
+            "id": "135",
+            "name": "Иволгино",
+            "url": "https://2gis.ru/saratov/firm/70000001064247526",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001064247526/tab/reviews",
+            "full_name": "МАОУ Иволгино",
+            "adres": "Саратов, Малая Розовая улица, 2",
+            "cadastral_number": "64:48:010111:5120"
+        },
+        {
+            "id": "136",
+            "name": "Медико-биологический лицей",
+            "url": "https://2gis.ru/saratov/firm/6052240280266524",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280266524/tab/reviews",
+            "full_name": "МАОУ Медико-биологический лицей",
+            "adres": "Саратов, Блинова улица, 27",
+            "cadastral_number": null
+        },
+        {
+            "id": "137",
+            "name": "Гимназия №2",
+            "url": "https://2gis.ru/saratov/firm/6052240280257229",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257229/tab/reviews",
+            "full_name": "МАОУ Гимназия №2",
+            "adres": "Саратов, улица им. Чернышевского Н.Г., 138",
+            "cadastral_number": "64:48:000000:22688"
+        },
+        {
+            "id": "138",
+            "name": "Средняя общеобразовательная школа №5",
+            "url": "https://2gis.ru/saratov/firm/6052240280256689",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256689/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №5",
+            "adres": "Саратов, Огородная улица, 196",
+            "cadastral_number": "64:48:020225:414"
+        },
+        {
+            "id": "139",
+            "name": "Средняя школа №11",
+            "url": "https://2gis.ru/saratov/firm/6052240280256546",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256546/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №11",
+            "adres": "Саратов, 1-й Соколовогорский проезд, 1 к1",
+            "cadastral_number": null
+        },
+        {
+            "id": "140",
+            "name": "Средняя школа №103",
+            "url": "https://2gis.ru/saratov/firm/6052240280256541",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256541/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №103",
+            "adres": "Саратов, Производственная улица, 5",
+            "cadastral_number": "64:48:040416:771"
+        },
+        {
+            "id": "141",
+            "name": "Средняя школа №95",
+            "url": "https://2gis.ru/saratov/firm/6052240280256885",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256885/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №95 с углубленным изучением отдельных предметов",
+            "adres": "Саратов, 2-я Садовая улица, 23г",
+            "cadastral_number": null
+        },
+        {
+            "id": "142",
+            "name": "Средняя школа №44",
+            "url": "https://2gis.ru/saratov/firm/6052240280256680",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256680/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №44 им. Героя России Н.В. Исаева",
+            "adres": "Саратов, Перспективная улица, 9/10 ст1",
+            "cadastral_number": null
+        },
+        {
+            "id": "143",
+            "name": "Лицей №37",
+            "url": "https://2gis.ru/saratov/firm/6052240280257284",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257284/tab/reviews",
+            "full_name": "МАОУ Лицей №37",
+            "adres": "Саратов, Мирный переулок, 3",
+            "cadastral_number": "64:48:060207:270"
+        },
+        {
+            "id": "144",
+            "name": "Средняя школа №66",
+            "url": "https://2gis.ru/saratov/firm/6052240280393748",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280393748/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №66 им. Н. И. Вавилова",
+            "adres": "Саратов, Державинская улица, 1 ст1",
+            "cadastral_number": null
+        },
+        {
+            "id": "145",
+            "name": "Средняя школа №77",
+            "url": "https://2gis.ru/saratov/firm/70000001078805388",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001078805388/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №77",
+            "adres": "Саратов, Новоузенская улица, 143",
+            "cadastral_number": "64:48:050203:591"
+        },
+        {
+            "id": "146",
+            "name": "Гимназия №89",
+            "url": "https://2gis.ru/saratov/firm/6052240280256871",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256871/tab/reviews",
+            "full_name": "МОУ Гимназия №89",
+            "adres": "Саратов, Мало-Елшанская улица, 5",
+            "cadastral_number": "64:48:040302:263"
+        },
+        {
+            "id": "147",
+            "name": "Лицей математики и информатики",
+            "url": "https://2gis.ru/saratov/firm/6052240280257714",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257714/tab/reviews",
+            "full_name": "МАОУ Лицей математики и информатики",
+            "adres": "Саратов, им. Посадского И.Н. улица, 246",
+            "cadastral_number": "64:48:010243:218"
+        },
+        {
+            "id": "148",
+            "name": "Средняя школа №97",
+            "url": "https://2gis.ru/saratov/firm/6052240280256886",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256886/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №97 им. Героя Советского Союза В.Г. Клочкова",
+            "adres": "Саратов, им. Клочкова В.Г. улица, 77",
+            "cadastral_number": "64:48:050140:82"
+        },
+        {
+            "id": "149",
+            "name": "Гимназия №75 им. Д.М. Карбышева",
+            "url": "https://2gis.ru/saratov/firm/6052240280256852",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256852/tab/reviews",
+            "full_name": "МОУ Гимназия №75 им. Д.М. Карбышева",
+            "adres": "Саратов, Осенняя улица, 5",
+            "cadastral_number": "64:48:040342:406"
+        },
+        {
+            "id": "150",
+            "name": "Средняя школа №2",
+            "url": "https://2gis.ru/saratov/firm/6052240280256534",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256534/tab/reviews",
+            "full_name": "ГАОУ Средняя общеобразовательная школа №2 с углубленным изучением отдельных предметов им. В.П. Тихонова",
+            "adres": "Саратов, Мичурина улица, 16",
+            "cadastral_number": null
+        },
+        {
+            "id": "151",
+            "name": "Средняя школа №46",
+            "url": "https://2gis.ru/saratov/firm/6052240280289029",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280289029/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №46",
+            "adres": "Саратов, Ипподромная улица, 19а",
+            "cadastral_number": "64:48:000000:216188"
+        },
+        {
+            "id": "152",
+            "name": "Средняя школа №21",
+            "url": "https://2gis.ru/saratov/firm/6052240280256522",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256522/tab/reviews",
+            "full_name": "МАОУ Средняя общеобразовательная школа №21 им. П.А. Столыпина",
+            "adres": "Саратов, им. Посадского И.Н. улица, 193",
+            "cadastral_number": "64:48:010243:531"
+        },
+        {
+            "id": "153",
+            "name": "Гимназия №58",
+            "url": "https://2gis.ru/saratov/firm/6052240280257237",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257237/tab/reviews",
+            "full_name": "МОУ Гимназия №58",
+            "adres": "Саратов, им. Расковой М.М. улица, 12",
+            "cadastral_number": "64:48:020331:1207"
+        },
+        {
+            "id": "154",
+            "name": "Средняя общеобразовательная школа №52",
+            "url": "https://2gis.ru/saratov/firm/6052240280256712",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256712/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №52",
+            "adres": "Саратов, Широкая улица, 34 / Большой Поливановский проезд, 11",
+            "cadastral_number": null
+        },
+        {
+            "id": "155",
+            "name": "Гимназия №108",
+            "url": "https://2gis.ru/saratov/firm/6052240280256545",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256545/tab/reviews",
+            "full_name": "МАОУ Гимназия №108",
+            "adres": "Саратов, проспект им. 50 лет Октября, 107",
+            "cadastral_number": "64:48:040808:35"
+        },
+        {
+            "id": "156",
+            "name": "Лицей №50",
+            "url": "https://2gis.ru/saratov/firm/6052240280256702",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256702/tab/reviews",
+            "full_name": "МОУ Лицей №50 им. Загороднева В.И.",
+            "adres": "Саратов, им. Загороднева В.И. улица, 16",
+            "cadastral_number": "64:48:040332:31"
+        },
+        {
+            "id": "157",
+            "name": "Лицей №15",
+            "url": "https://2gis.ru/saratov/firm/6052240280266592",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280266592/tab/reviews",
+            "full_name": "МАОУ Лицей №15",
+            "adres": "Саратов, проспект Энтузиастов, 14",
+            "cadastral_number": "64:48:020322:372"
+        },
+        {
+            "id": "158",
+            "name": "Гуманитарно-экономический лицей",
+            "url": "https://2gis.ru/saratov/firm/6052240280256547",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256547/tab/reviews",
+            "full_name": "МОУ Гуманитарно-экономический лицей",
+            "adres": "Саратов, Большая Горная улица, 139/141",
+            "cadastral_number": null
+        },
+        {
+            "id": "159",
+            "name": "Средняя школа №73",
+            "url": "https://2gis.ru/saratov/firm/6052240280256848",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256848/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №73 им. К.Д. Шукшина",
+            "adres": "Саратов, 2-й Магнитный проезд, 44",
+            "cadastral_number": null
+        },
+        {
+            "id": "160",
+            "name": "Средняя школа №70",
+            "url": "https://2gis.ru/saratov/firm/6052240280256843",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256843/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №70",
+            "adres": "Саратов, Большая Садовая улица, 240",
+            "cadastral_number": null
+        },
+        {
+            "id": "161",
+            "name": "Лицей гуманитарных наук",
+            "url": "https://2gis.ru/saratov/firm/6052240280266608",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280266608/tab/reviews",
+            "full_name": "ГАОУ Лицей гуманитарных наук",
+            "adres": "Саратов, Большая Садовая улица, 224а",
+            "cadastral_number": "64:48:030333:105"
+        },
+        {
+            "id": "162",
+            "name": "Лицей №47",
+            "url": "https://2gis.ru/saratov/firm/6052240280256683",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256683/tab/reviews",
+            "full_name": "МОУ Лицей №47 им. К.В. Благодарова",
+            "adres": "Саратов, Степная 3-я улица, 6",
+            "cadastral_number": "64:48:040230:85"
+        },
+        {
+            "id": "163",
+            "name": "Средняя общеобразовательная школа №9",
+            "url": "https://2gis.ru/saratov/firm/6052240280256518",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256518/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №9",
+            "adres": "Саратов, Соляная улица, 17",
+            "cadastral_number": "64:48:010333:59"
+        },
+        {
+            "id": "164",
+            "name": "Средняя школа №102",
+            "url": "https://2gis.ru/saratov/firm/6052240280256540",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256540/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №102",
+            "adres": "Саратов, улица им. Шехурдина А.П., 56а",
+            "cadastral_number": null
+        },
+        {
+            "id": "165",
+            "name": "Средняя школа №41",
+            "url": "https://2gis.ru/saratov/firm/6052240280256673",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256673/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №41",
+            "adres": "Саратов, Тверская улица, 45",
+            "cadastral_number": "64:48:030318:343"
+        },
+        {
+            "id": "166",
+            "name": "Средняя школа №45",
+            "url": "https://2gis.ru/saratov/firm/6052240280256681",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256681/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №45",
+            "adres": "Саратов, Дегтярная улица, 12",
+            "cadastral_number": null
+        },
+        {
+            "id": "167",
+            "name": "Гимназия №31",
+            "url": "https://2gis.ru/saratov/firm/6052240280256624",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256624/tab/reviews",
+            "full_name": "МАОУ Гимназия №31",
+            "adres": "Саратов, Лесная улица, 1/9",
+            "cadastral_number": null
+        },
+        {
+            "id": "168",
+            "name": "Средняя школа №94",
+            "url": "https://2gis.ru/saratov/firm/6052240280256879",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256879/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №94",
+            "adres": "Саратов, проспект им. 50 лет Октября, 75",
+            "cadastral_number": "64:48:040824:863"
+        },
+        {
+            "id": "169",
+            "name": "Средняя школа №84",
+            "url": "https://2gis.ru/saratov/firm/6052240280256868",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256868/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №84",
+            "adres": "Саратов, улица Южно-Зелёная, 11а",
+            "cadastral_number": "64:48:020356:573"
+        },
+        {
+            "id": "170",
+            "name": "Лицей №56",
+            "url": "https://2gis.ru/saratov/firm/6052240280256530",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256530/tab/reviews",
+            "full_name": "МОУ Лицей №56",
+            "adres": "Саратов, Строителей 3-й проезд, 3",
+            "cadastral_number": null
+        },
+        {
+            "id": "171",
+            "name": "Средняя школа №43",
+            "url": "https://2gis.ru/saratov/firm/6052240280256679",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256679/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №43 им. В.Ф. Маргелова",
+            "adres": "Саратов, Пономарёва улица, 49",
+            "cadastral_number": "64:48:020324:859"
+        },
+        {
+            "id": "172",
+            "name": "Средняя школа №23",
+            "url": "https://2gis.ru/saratov/firm/6052240280256561",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256561/tab/reviews",
+            "full_name": "МАОУ Средняя общеобразовательная школа №23 им. С.В. Астраханцева",
+            "adres": "Саратов, 5-й Нагорный проезд, 3",
+            "cadastral_number": "64:48:020608:83"
+        },
+        {
+            "id": "173",
+            "name": "Средняя общеобразовательная школа №101",
+            "url": "https://2gis.ru/saratov/firm/6052240280256539",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256539/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №101",
+            "adres": "Саратов, улица им. Лебедева-Кумача В.И., 73а",
+            "cadastral_number": null
+        },
+        {
+            "id": "174",
+            "name": "Средняя школа №82",
+            "url": "https://2gis.ru/saratov/firm/6052240280256864",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256864/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №82",
+            "adres": "Саратов, 2-я Садовая улица, 106а к1",
+            "cadastral_number": null
+        },
+        {
+            "id": "175",
+            "name": "Средняя общеобразовательная школа №76 им. М.Г. Галицкого",
+            "url": "https://2gis.ru/saratov/firm/6052240280256855",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256855/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №76 им. М.Г. Галицкого",
+            "adres": "Саратов, Вишнёвая улица, 16",
+            "cadastral_number": "64:48:000000:5939"
+        },
+        {
+            "id": "176",
+            "name": "Лицей №107",
+            "url": "https://2gis.ru/saratov/firm/6052240280266504",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280266504/tab/reviews",
+            "full_name": "МОУ Лицей №107",
+            "adres": "Саратов, Державинская улица, 10",
+            "cadastral_number": "64:48:010115:8736"
+        },
+        {
+            "id": "177",
+            "name": "Средняя школа №49",
+            "url": "https://2gis.ru/saratov/firm/6052240280256686",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256686/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №49",
+            "adres": "Саратов, Перспективная улица, 10а",
+            "cadastral_number": "64:48:040408:351"
+        },
+        {
+            "id": "178",
+            "name": "Уникум",
+            "url": "https://2gis.ru/saratov/firm/6052240280266763",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280266763/tab/reviews",
+            "full_name": "ГБСУ СО Школа Уникум",
+            "adres": "Саратов, Железнодорожная улица, 29",
+            "cadastral_number": null
+        },
+        {
+            "id": "179",
+            "name": "Средняя школа №61",
+            "url": "https://2gis.ru/saratov/firm/6052240280256814",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256814/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №61 — образовательный комплекс",
+            "adres": "Саратов, им. Бардина И.П. улица, 3",
+            "cadastral_number": "64:48:040409:3093"
+        },
+        {
+            "id": "180",
+            "name": "Средняя школа №6",
+            "url": "https://2gis.ru/saratov/firm/6052240280266447",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280266447/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №6",
+            "adres": "Саратов, им. Симбирцева В.Н. улица, 34",
+            "cadastral_number": "64:48:000000:44666"
+        },
+        {
+            "id": "181",
+            "name": "Лицей прикладных наук им. Д.И. Трубецкова",
+            "url": "https://2gis.ru/saratov/firm/6052240280266628",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280266628/tab/reviews",
+            "full_name": "МОУ Лицей прикладных наук им. Д.И. Трубецкова",
+            "adres": "Саратов, Комсомольская улица, 39",
+            "cadastral_number": "64:48:010321:27"
+        },
+        {
+            "id": "182",
+            "name": "Средняя школа №60",
+            "url": "https://2gis.ru/saratov/firm/6052240280256811",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256811/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №60 им. героя Советского Союза П.Ф. Батавина",
+            "adres": "Саратов, улица им. Батавина П.Ф., 6а",
+            "cadastral_number": "64:48:040405:140"
+        },
+        {
+            "id": "183",
+            "name": "Средняя школа №106",
+            "url": "https://2gis.ru/saratov/firm/6052240280256544",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256544/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №106",
+            "adres": "Саратов, Огородная улица, 33",
+            "cadastral_number": "64:48:020633:8763"
+        },
+        {
+            "id": "184",
+            "name": "Средняя общеобразовательная школа №38",
+            "url": "https://2gis.ru/saratov/firm/6052240280256654",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256654/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №38",
+            "adres": "Саратов, Южная улица, 46",
+            "cadastral_number": "64:48:020238:271"
+        },
+        {
+            "id": "185",
+            "name": "Средняя школа №63",
+            "url": "https://2gis.ru/saratov/firm/6052240280256819",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256819/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №63 с углубленным изучением отдельных предметов",
+            "adres": "Саратов, им. Уфимцева К.Г. улица, 4а",
+            "cadastral_number": null
+        },
+        {
+            "id": "186",
+            "name": "Средняя школа №48",
+            "url": "https://2gis.ru/saratov/firm/6052240280256685",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256685/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №48",
+            "adres": "Саратов, им. Загороднева В.И. улица, 2",
+            "cadastral_number": "64:48:000000:18251"
+        },
+        {
+            "id": "187",
+            "name": "Гимназия №5",
+            "url": "https://2gis.ru/saratov/firm/6052240280257236",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257236/tab/reviews",
+            "full_name": "МОУ Гимназия №5",
+            "adres": "Саратов, 1-й Тульский проезд, 6а",
+            "cadastral_number": "64:48:010335:60"
+        },
+        {
+            "id": "188",
+            "name": "Лицей №24",
+            "url": "https://2gis.ru/saratov/firm/6052240280256878",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256878/tab/reviews",
+            "full_name": "МАОУ Лицей №24 им. М.М. Расковой",
+            "adres": "Саратов, им. Жуковского Н.Е. улица, 1",
+            "cadastral_number": "64:48:030212:3482"
+        },
+        {
+            "id": "189",
+            "name": "Средняя школа №57",
+            "url": "https://2gis.ru/saratov/firm/6052240280256723",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256723/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №57 им. С.Ф. Тархова",
+            "adres": "Саратов, Перспективная улица, 29",
+            "cadastral_number": "64:48:040408:367"
+        },
+        {
+            "id": "190",
+            "name": "Гимназия №7",
+            "url": "https://2gis.ru/saratov/firm/6052240280262278",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280262278/tab/reviews",
+            "full_name": "МОУ Гимназия №7 им. К. Д. Ушинского",
+            "adres": "Саратов, Фёдоровская улица, 3",
+            "cadastral_number": "64:48:010115:6360"
+        },
+        {
+            "id": "191",
+            "name": "Средняя общеобразовательная школа №54 им. И.А. Евтеева",
+            "url": "https://2gis.ru/saratov/firm/6052240280256717",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256717/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №54 им. И.А. Евтеева",
+            "adres": "Саратов, Тракторная улица, 33а",
+            "cadastral_number": "64:48:030324:59"
+        },
+        {
+            "id": "192",
+            "name": "Школа №6",
+            "url": "https://2gis.ru/saratov/firm/6052240280292317",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280292317/tab/reviews",
+            "full_name": "ГБОУ Школа для обучающихся по адаптированным образовательным программам №6 г. Саратова",
+            "adres": "Саратов, Пролетарская улица, 8",
+            "cadastral_number": null
+        },
+        {
+            "id": "193",
+            "name": "Средняя общеобразовательная школа №72",
+            "url": "https://2gis.ru/saratov/firm/6052240280256845",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256845/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №72",
+            "adres": "Саратов, Бережная улица, 1",
+            "cadastral_number": "64:48:040805:740"
+        },
+        {
+            "id": "194",
+            "name": "Средняя школа №46",
+            "url": "https://2gis.ru/saratov/firm/70000001092731870",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001092731870/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №46",
+            "adres": "Саратов, улица им. Евгения Долгина, 5",
+            "cadastral_number": "64:48:040442:3779"
+        },
+        {
+            "id": "195",
+            "name": "Физико-технический лицей №1",
+            "url": "https://2gis.ru/saratov/firm/6052240280257282",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257282/tab/reviews",
+            "full_name": "ГАОУ Физико-технический лицей №1",
+            "adres": "Саратов, Железнодорожная улица, 74",
+            "cadastral_number": "64:48:050255:228"
+        },
+        {
+            "id": "196",
+            "name": "Школа-интернат для обучающихся по адаптированным образовательным программам №4",
+            "url": "https://2gis.ru/saratov/firm/6052240280292297",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280292297/tab/reviews",
+            "full_name": "ГБОУ Школа-интернат для обучающихся по адаптированным образовательным программам №4",
+            "adres": "Саратов, улица им. Чернышевского Н.Г., 157",
+            "cadastral_number": "64:48:010304:663"
+        },
+        {
+            "id": "197",
+            "name": "Вечерняя школа №9",
+            "url": "https://2gis.ru/saratov/firm/70000001026170909",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001026170909/tab/reviews",
+            "full_name": "МКОУ Вечерняя (сменная) общеобразовательная школа №9",
+            "adres": "Саратов, Васильковская улица, 17",
+            "cadastral_number": "64:48:020354:518"
+        },
+        {
+            "id": "198",
+            "name": "Гимназия №34",
+            "url": "https://2gis.ru/saratov/firm/6052240280256532",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256532/tab/reviews",
+            "full_name": "МОУ Гимназия №34 им. Героя Советского Союза Г.Д. Ермолаева",
+            "adres": "Саратов, проспект Энтузиастов, 48",
+            "cadastral_number": "64:48:020321:1227"
+        },
+        {
+            "id": "199",
+            "name": "Школа №4",
+            "url": "https://2gis.ru/saratov/firm/6052240280256664",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256664/tab/reviews",
+            "full_name": "ГБОУ Школа для обучающихся по адаптированным образовательным программам №4 г. Саратова",
+            "adres": "Саратов, им. Загороднева В.И. улица, 19",
+            "cadastral_number": "64:48:040340:44"
+        },
+        {
+            "id": "200",
+            "name": "Средняя школа №71",
+            "url": "https://2gis.ru/saratov/firm/6052240280256844",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256844/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №71",
+            "adres": "Саратов, Танкистов улица, 126",
+            "cadastral_number": null
+        },
+        {
+            "id": "201",
+            "name": "Основная общеобразовательная школа №78",
+            "url": "https://2gis.ru/saratov/firm/6052240280256859",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256859/tab/reviews",
+            "full_name": "МОУ Основная общеобразовательная школа №78",
+            "adres": "Саратов, Огородная улица, 173",
+            "cadastral_number": "64:48:020633:8765"
+        },
+        {
+            "id": "202",
+            "name": "Средняя школа №64",
+            "url": "https://2gis.ru/saratov/firm/6052240280256822",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256822/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №64 им. Героя Советского Союза И.В. Панфилова",
+            "adres": "Саратов, Стахановская улица, 8",
+            "cadastral_number": "64:48:040229:38"
+        },
+        {
+            "id": "203",
+            "name": "Средняя общеобразовательная школа №8 Волжского района г. Саратова",
+            "url": "https://2gis.ru/saratov/firm/6052240280263676",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280263676/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №8 Волжского района г. Саратова",
+            "adres": "Саратов, Соборная улица, 33",
+            "cadastral_number": "64:48:000000:44530"
+        },
+        {
+            "id": "204",
+            "name": "Средняя школа №59",
+            "url": "https://2gis.ru/saratov/firm/6052240280256531",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256531/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №59 с углубленным изучением предметов",
+            "adres": "Саратов, улица им. Маркина Н.Г., 17/39",
+            "cadastral_number": "64:48:020339:211"
+        },
+        {
+            "id": "205",
+            "name": "Основная общеобразовательная школа №26 им. В.Д. Хомяковой",
+            "url": "https://2gis.ru/saratov/firm/6052240280256587",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256587/tab/reviews",
+            "full_name": "МОУ Основная общеобразовательная школа №26 им. В.Д. Хомяковой",
+            "adres": "Саратов, Ново-Крекингская улица, 47",
+            "cadastral_number": "64:48:020438:27"
+        },
+        {
+            "id": "206",
+            "name": "Школа-интернат №3",
+            "url": "https://2gis.ru/saratov/firm/6052240280292293",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280292293/tab/reviews",
+            "full_name": "ГБОУ Школа-интернат для обучающихся по адаптированным образовательным программам №3 г. Саратова",
+            "adres": "Саратов, Селекционный проезд, 3",
+            "cadastral_number": "64:48:040454:130"
+        },
+        {
+            "id": "207",
+            "name": "Школа-интернат №5",
+            "url": "https://2gis.ru/saratov/firm/6052240280266750",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280266750/tab/reviews",
+            "full_name": "ГБОУ Школа-интернат для обучающихся по адаптированным образовательным программам №5",
+            "adres": "Саратов, им. Рогожина В.А. улица, 22",
+            "cadastral_number": "64:48:000000:22831"
+        },
+        {
+            "id": "208",
+            "name": "Средняя школа №66",
+            "url": "https://2gis.ru/saratov/firm/6052240280599759",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280599759/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №66 им. Н. И. Вавилова",
+            "adres": "Саратов, Казанская улица, 29",
+            "cadastral_number": "64:48:010135:264"
+        }
+    ]
+}
