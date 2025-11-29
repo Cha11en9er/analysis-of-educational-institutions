@@ -4,10 +4,10 @@
 Парсер дополнительных данных о школах с Яндекс.Карт (ym).
 
 Назначение:
-- взять список школ из `data/ym_find_all_info/input/ym_schools_test.json`
+- взять список школ из `ym_data/ym_find_all_info/input/ym_schools_test.json`
 - для каждой школы открыть страницу `url` в браузере (Selenium)
 - извлечь из DOM адрес школы и количество отзывов
-- записать найденные данные в `data/ym_find_all_info/output/ym_full_schools_data.json`
+- записать найденные данные в `ym_data/ym_find_all_info/output/ym_full_schools_data.json`
 """
 
 import json
@@ -36,7 +36,7 @@ except ImportError:
 # Пути относительно текущего файла
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))  # .../school_parser/ym_find_all_info
 YM_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, "..", ".."))  # .../yandex_maps
-DATA_DIR = os.path.join(YM_ROOT, "data", "ym_find_all_info")
+DATA_DIR = os.path.join(YM_ROOT, "ym_data", "ym_find_all_info")
 INPUT_FILE = os.path.join(DATA_DIR, "input", "ym_schools_test.json")
 OUTPUT_DIR = os.path.join(DATA_DIR, "output")
 FULL_OUTPUT_FILE = os.path.join(OUTPUT_DIR, "ym_full_schools_data.json")

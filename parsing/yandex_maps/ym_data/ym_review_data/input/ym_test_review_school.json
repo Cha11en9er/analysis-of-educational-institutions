@@ -1,0 +1,24 @@
+{
+    "source": "yandex_maps",
+    "topic": "Школы Саратова",
+    "data": [
+        {
+            "id": "11",
+            "name": "Средняя общеобразовательная школа № 45",
+            "url": "https://yandex.com/maps/org/mei_secondary_school_45/1134269325/",
+            "feedback_link": "https://yandex.com/maps/org/mei_secondary_school_45/1134269325/reviews/",
+            "yandex_id": "1134269325",
+            "adres": "Дегтярная ул., 12, Саратов",
+            "reviews_count": 34
+        },
+        {
+            "id": "53",
+            "name": "Средняя общеобразовательная школа № 41",
+            "url": "https://yandex.com/maps/org/secondary_school_41/1078289826/",
+            "feedback_link": "https://yandex.com/maps/org/secondary_school_41/1078289826/reviews/",
+            "yandex_id": "1078289826",
+            "adres": "Тверская ул., 45, Ленинский район, Саратов",
+            "reviews_count": 57
+        }
+    ]
+}

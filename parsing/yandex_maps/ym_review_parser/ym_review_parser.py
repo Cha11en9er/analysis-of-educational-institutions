@@ -9,6 +9,7 @@ import json
 import os
 import re
 import time
+from datetime import datetime
 from typing import List, Dict, Any, Optional
 
 try:
@@ -25,11 +26,11 @@ except ImportError:
 # Пути относительно текущего файла
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))  # ym_review_parser
 YM_ROOT = os.path.dirname(CURRENT_DIR)  # yandex_maps
-DATA_DIR = os.path.normpath(os.path.join(YM_ROOT, "ym_data", "ym_reviews_data"))
+DATA_DIR = os.path.normpath(os.path.join(YM_ROOT, "ym_data", "ym_review_data"))
 DEBUG_HTML_DIR = os.path.join(DATA_DIR, "debug_html")
 INPUT_DIR = os.path.join(DATA_DIR, "input")
 OUTPUT_DIR = os.path.join(DATA_DIR, "output")
-INPUT_FILE = os.path.join(INPUT_DIR, "ym_test_review_school.json")
+INPUT_FILE = os.path.join(INPUT_DIR, "ym_gold_all_school_data.json")
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "ym_review_output.json")
 
 
@@ -69,6 +70,54 @@ class YandexMapsReviewsParser:
         if not SELENIUM_AVAILABLE:
             raise ImportError("Selenium не установлен. Установите: pip install selenium beautifulsoup4")
         self.driver = None
+    
+    @staticmethod
+    def _normalize_date(date_str: str) -> str:
+        """
+        Нормализует дату: если года нет, добавляет текущий год.
+        Формат результата: "12 июня 2024" (число месяц год)
+        
+        Args:
+            date_str: Строка с датой (например, "22 ноября" или "12 июня 2024")
+        
+        Returns:
+            Нормализованная дата с годом
+        """
+        if not date_str or not date_str.strip():
+            return date_str
+        
+        date_str = date_str.strip()
+        current_year = datetime.now().year
+        
+        # Проверяем, есть ли год в строке (4 цифры подряд)
+        year_pattern = r'\b(19|20)\d{2}\b'
+        if re.search(year_pattern, date_str):
+            # Год уже есть, возвращаем как есть
+            return date_str
+        
+        # Года нет, добавляем текущий год в конец
+        return f"{date_str} {current_year}"
+    
+    @staticmethod
+    def _format_current_date() -> str:
+        """
+        Форматирует текущую дату в формате "12 июня 2024" (число месяц год на русском)
+        
+        Returns:
+            Отформатированная дата на русском языке
+        """
+        months_ru = {
+            1: "января", 2: "февраля", 3: "марта", 4: "апреля",
+            5: "мая", 6: "июня", 7: "июля", 8: "августа",
+            9: "сентября", 10: "октября", 11: "ноября", 12: "декабря"
+        }
+        
+        now = datetime.now()
+        day = now.day
+        month = months_ru[now.month]
+        year = now.year
+        
+        return f"{day} {month} {year}"
     
     def setup_driver(self) -> webdriver.Chrome:
         """Настройка Chrome WebDriver"""
@@ -520,6 +569,9 @@ class YandexMapsReviewsParser:
                         else:
                             review_date = date_elem.text.strip()
                     
+                    # Нормализуем дату: добавляем год, если его нет
+                    review_date = self._normalize_date(review_date)
+                    
                     # Получаем лайки и дизлайки
                     likes = 0
                     dislikes = 0
@@ -733,6 +785,7 @@ class YandexMapsReviewsParser:
                 # Сохраняем результаты после каждой организации
                 results = {
                     "resource": "yandex_maps",
+                    "parse_date": self._format_current_date(),
                     "reviews": all_reviews
                 }
                 try:
@@ -751,6 +804,7 @@ class YandexMapsReviewsParser:
         # Финальное сохранение результатов
         results = {
             "resource": "yandex_maps",
+            "parse_date": self._format_current_date(),
             "reviews": all_reviews
         }
         try:

@@ -16,8 +16,8 @@ from typing import List, Dict, Any
 # Пути относительно текущего файла
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))  # .../school_parser/ym_find_all_info
 YM_ROOT = os.path.abspath(os.path.join(CURRENT_DIR, "..", ".."))  # .../yandex_maps
-INPUT_FILE = os.path.join(YM_ROOT, "data", "ym_find_all_info", "output", "ym_full_schools_data.json")
-OUTPUT_FILE = os.path.join(YM_ROOT, "data", "ym_reviews_data", "ym_reviews_schools_all_data.json")
+INPUT_FILE = os.path.join(YM_ROOT, "ym_data", "ym_find_all_info", "output", "ym_full_schools_data.json")
+OUTPUT_FILE = os.path.join(YM_ROOT, "ym_data", "ym_review_data", "ym_reviews_schools_all_data.json")
 
 
 def is_in_saratov(adres: str) -> bool:
