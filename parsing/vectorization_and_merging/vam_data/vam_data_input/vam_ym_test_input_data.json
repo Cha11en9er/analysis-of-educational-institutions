@@ -1,0 +1,51 @@
+{
+    "source": "yandex_maps",
+    "topic": "Школы Саратова",
+    "data": [
+        {
+            "id": "105",
+            "name": "Средняя общеобразовательная школа № 83",
+            "url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_83/1013287750/",
+            "feedback_link": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_83/1013287750/reviews/",
+            "yandex_id": "1013287750",
+            "adres": "Крымская ул., 2, Саратов",
+            "reviews_count": 42
+        },
+        {
+            "id": "69",
+            "name": "Средняя общеобразовательная школа № 38",
+            "url": "https://yandex.com/maps/org/mou_sosh_38/1113508152/",
+            "feedback_link": "https://yandex.com/maps/org/mou_sosh_38/1113508152/reviews/",
+            "yandex_id": "1113508152",
+            "adres": "Южная ул., 46, Саратов",
+            "reviews_count": 66
+        },
+        {
+            "id": "66",
+            "name": "Средняя общеобразовательная школа № 86",
+            "url": "https://yandex.com/maps/org/sarschool86/16042452222/",
+            "feedback_link": "https://yandex.com/maps/org/sarschool86/16042452222/reviews/",
+            "yandex_id": "16042452222",
+            "adres": "2-й Московский пр., 5, Саратов",
+            "reviews_count": 38
+        },
+        {
+            "id": "68",
+            "name": "Средняя общеобразовательная школа № 64",
+            "url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_64/120490931607/",
+            "feedback_link": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_64/120490931607/reviews/",
+            "yandex_id": "120490931607",
+            "adres": "Стахановская ул., 8, Саратов",
+            "reviews_count": 28
+        },
+        {
+            "id": "89",
+            "name": "Гимназия № 5",
+            "url": "https://yandex.com/maps/org/gimnaziya_5/27235900030/",
+            "feedback_link": "https://yandex.com/maps/org/gimnaziya_5/27235900030/reviews/",
+            "yandex_id": "27235900030",
+            "adres": "Азовская ул., 15, Саратов",
+            "reviews_count": 13
+        }
+    ]
+}

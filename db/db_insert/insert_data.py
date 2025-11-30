@@ -17,20 +17,19 @@ load_dotenv()
 
 # Параметры подключения к БД
 DB_CONFIG = {
-    'host': os.getenv('DB_HOST', 'localhost'),
-    'port': os.getenv('DB_PORT', '5432'),
-    'database': os.getenv('DB_NAME', 'education_db'),
-    'user': os.getenv('DB_USER', 'postgres'),
-    'password': os.getenv('DB_PASSWORD', 'postgres')
+    'host': os.getenv('DB_HOST'),
+    'port': os.getenv('DB_PORT'),
+    'database': os.getenv('DB_NAME'),
+    'user': os.getenv('DB_USER'),
+    'password': os.getenv('DB_PASSWORD')
 }
 
 # Названия схемы и таблицы
-DB_SCHEMA = os.getenv('DB_SCHEMA', 'education_schema')
-DB_TABLE = os.getenv('DB_TABLE', 'reviews_table')
-DB_ID = os.getenv('DB_ID', 'review_id')  # Название столбца ID
+DB_SCHEMA = 'ca'
+DB_TABLE = 'review'
 
 # Путь к JSON файлу с данными
-DATA_FILE = os.getenv('DATA_FILE', 'recognize_meaning/rm_data/rm_output/rm_output_data.json')
+DATA_FILE = os.getenv('DATA_FILE', 'db/db_data/input/db_input_test_data.json')
 
 
 def get_connection():
@@ -64,34 +63,26 @@ def load_json_data(file_path: str) -> Dict[str, Any]:
         raise
 
 
-def prepare_review_data(review: Dict[str, Any], resource: str, parse_date: str) -> tuple:
+def prepare_review_data(review: Dict[str, Any]) -> tuple:
     """
-    Подготавливает данные отзыва для вставки в БД
-    
-    Args:
-        review: Словарь с данными отзыва
-        resource: Источник данных (например, 'yandex_maps', '2gis')
-        parse_date: Дата парсинга
-    
-    Returns:
-        Кортеж с данными для вставки
+    Подготавливает данные отзыва для вставки в таблицу ca.review
     """
     return (
+        # school_id FK
         review.get('school_id', ''),
+        # date (строка вида "11 декабря 2020")
         review.get('date', ''),
+        # orig_text
         review.get('text', ''),
-        review.get('likes_count', 0) or 0,
-        review.get('dislikes_count', 0) or 0,
-        review.get('rating'),  # Может быть None
+        # rec_text
         review.get('main_idea', ''),
-        review.get('sentiment', ''),
-        resource,
-        parse_date
+        # tonality
+        review.get('sentiment', '')
     )
 
 
-def insert_reviews(conn, schema_name: str, table_name: str, reviews: List[Dict[str, Any]], 
-                   resource: str, parse_date: str, batch_size: int = 100):
+def insert_reviews(conn, schema_name: str, table_name: str, reviews: List[Dict[str, Any]],
+                   batch_size: int = 100):
     """
     Вставляет отзывы в таблицу базы данных
     
@@ -100,29 +91,26 @@ def insert_reviews(conn, schema_name: str, table_name: str, reviews: List[Dict[s
         schema_name: Название схемы
         table_name: Название таблицы
         reviews: Список отзывов для вставки
-        resource: Источник данных
-        parse_date: Дата парсинга
         batch_size: Размер батча для batch insert
     """
     try:
         with conn.cursor() as cursor:
-            # SQL запрос для вставки данных
+            # SQL запрос для вставки данных в таблицу ca.review
             insert_query = sql.SQL("""
                 INSERT INTO {}.{} (
-                    school_id, date, text, likes_count, dislikes_count, 
-                    rating, main_idea, sentiment, resource, parse_date
-                ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-                ON CONFLICT DO NOTHING
+                    school_id,
+                    date,
+                    orig_text,
+                    rec_text,
+                    tonality
+                ) VALUES (%s, %s, %s, %s, %s)
             """).format(
                 sql.Identifier(schema_name),
                 sql.Identifier(table_name)
             )
             
             # Подготавливаем данные для вставки
-            data_to_insert = [
-                prepare_review_data(review, resource, parse_date)
-                for review in reviews
-            ]
+            data_to_insert = [prepare_review_data(review) for review in reviews]
             
             # Выполняем batch insert
             execute_batch(cursor, insert_query, data_to_insert, page_size=batch_size)
@@ -130,70 +118,6 @@ def insert_reviews(conn, schema_name: str, table_name: str, reviews: List[Dict[s
             conn.commit()
             print(f"[OK] Вставлено отзывов: {len(reviews)}")
             
-    except psycopg2.Error as e:
-        conn.rollback()
-        print(f"[ERROR] Ошибка при вставке данных: {e}")
-        raise
-
-
-def insert_reviews_with_update(conn, schema_name: str, table_name: str, 
-                               reviews: List[Dict[str, Any]], resource: str, parse_date: str,
-                               batch_size: int = 100):
-    """
-    Вставляет отзывы с обновлением существующих по уникальному ключу (school_id + text начало)
-    Использует UPSERT (INSERT ... ON CONFLICT ... UPDATE)
-    
-    Args:
-        conn: Подключение к БД
-        schema_name: Название схемы
-        table_name: Название таблицы
-        reviews: Список отзывов для вставки
-        resource: Источник данных
-        parse_date: Дата парсинга
-        batch_size: Размер батча для batch insert
-    """
-    try:
-        with conn.cursor() as cursor:
-            # SQL запрос для вставки/обновления данных
-            # Используем первые 100 символов текста как часть уникального ключа
-            insert_query = sql.SQL("""
-                INSERT INTO {}.{} (
-                    school_id, date, text, likes_count, dislikes_count, 
-                    rating, main_idea, sentiment, resource, parse_date, updated_at
-                ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, CURRENT_TIMESTAMP)
-                ON CONFLICT (school_id, text) 
-                DO UPDATE SET
-                    date = EXCLUDED.date,
-                    likes_count = EXCLUDED.likes_count,
-                    dislikes_count = EXCLUDED.dislikes_count,
-                    rating = EXCLUDED.rating,
-                    main_idea = EXCLUDED.main_idea,
-                    sentiment = EXCLUDED.sentiment,
-                    resource = EXCLUDED.resource,
-                    parse_date = EXCLUDED.parse_date,
-                    updated_at = CURRENT_TIMESTAMP
-            """).format(
-                sql.Identifier(schema_name),
-                sql.Identifier(table_name)
-            )
-            
-            # Подготавливаем данные для вставки
-            data_to_insert = [
-                prepare_review_data(review, resource, parse_date)
-                for review in reviews
-            ]
-            
-            # Выполняем batch insert
-            execute_batch(cursor, insert_query, data_to_insert, page_size=batch_size)
-            
-            conn.commit()
-            print(f"[OK] Обработано отзывов: {len(reviews)} (вставлено/обновлено)")
-            
-    except psycopg2.IntegrityError as e:
-        # Если нет уникального индекса, используем простую вставку
-        print(f"[WARN] Конфликт при вставке (возможно, нет уникального индекса): {e}")
-        print("[INFO] Используем простую вставку без обновления")
-        insert_reviews(conn, schema_name, table_name, reviews, resource, parse_date, batch_size)
     except psycopg2.Error as e:
         conn.rollback()
         print(f"[ERROR] Ошибка при вставке данных: {e}")
@@ -217,13 +141,12 @@ def get_table_count(conn, schema_name: str, table_name: str) -> int:
         return 0
 
 
-def main(data_file: str = None, use_upsert: bool = False):
+def main(data_file: str = None):
     """
     Основная функция для вставки данных в БД
     
     Args:
         data_file: Путь к JSON файлу с данными (если None, используется DATA_FILE)
-        use_upsert: Если True, использует UPSERT (обновление существующих записей)
     """
     conn = None
     try:
@@ -261,10 +184,7 @@ def main(data_file: str = None, use_upsert: bool = False):
         print(f"[INFO] Записей в таблице до вставки: {count_before}")
         
         # Вставляем данные
-        if use_upsert:
-            insert_reviews_with_update(conn, DB_SCHEMA, DB_TABLE, reviews, resource, parse_date)
-        else:
-            insert_reviews(conn, DB_SCHEMA, DB_TABLE, reviews, resource, parse_date)
+        insert_reviews(conn, DB_SCHEMA, DB_TABLE, reviews)
         
         # Получаем новое количество записей
         count_after = get_table_count(conn, DB_SCHEMA, DB_TABLE)
@@ -288,12 +208,8 @@ if __name__ == "__main__":
     
     # Парсим аргументы командной строки
     data_file = None
-    use_upsert = False
-    
     if len(sys.argv) > 1:
         data_file = sys.argv[1]
-    if '--upsert' in sys.argv:
-        use_upsert = True
     
-    main(data_file=data_file, use_upsert=use_upsert)
+    main(data_file=data_file)
 

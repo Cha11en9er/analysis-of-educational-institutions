@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7db795b6b64c464556fac98a9710f736 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_7db795b6b64c464556fac98a9710f736" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7db795b6b64c464556fac98a9710f736 = L.map(
+                "map_7db795b6b64c464556fac98a9710f736",
+                {
+                    center: [51.489902, 45.928749],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_13ef7fbb39b86587168622019796dfd1 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_13ef7fbb39b86587168622019796dfd1.addTo(map_7db795b6b64c464556fac98a9710f736);
+        
+    
+            var marker_d68c2695dffb8cd667a1809ad510b396 = L.marker(
+                [51.489902, 45.928749],
+                {
+}
+            ).addTo(map_7db795b6b64c464556fac98a9710f736);
+        
+    
+        var popup_d1d5003ff65272faf5d1fbd90bb9bca4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b9d807845bbe2705185b2f7fffbc0a95 = $(`<div id="html_b9d807845bbe2705185b2f7fffbc0a95" style="width: 100.0%; height: 100.0%;"> <b>Средняя школа №83</b><br> Адрес: Целинстрой м-н, Заводской район, Саратов, 410039. Саратов, Крымская улица, 2<br> Рейтинг: 4.5<br> <a href="https://2gis.ru/saratov/firm/70000001037362342" target="_blank">Страница школы</a><br> <a href="https://2gis.ru/saratov/firm/70000001037362342/tab/reviews" target="_blank">Отзывы</a> </div>`)[0];
+                popup_d1d5003ff65272faf5d1fbd90bb9bca4.setContent(html_b9d807845bbe2705185b2f7fffbc0a95);
+            
+        
+
+        marker_d68c2695dffb8cd667a1809ad510b396.bindPopup(popup_d1d5003ff65272faf5d1fbd90bb9bca4)
+        ;
+
+        
+    
+    
+            marker_d68c2695dffb8cd667a1809ad510b396.bindTooltip(
+                `<div>
+                     Средняя школа №83
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

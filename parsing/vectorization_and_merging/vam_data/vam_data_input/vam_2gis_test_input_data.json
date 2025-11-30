@@ -1,0 +1,52 @@
+{
+    "source": "2GIS",
+    "topic": "Школы Саратова",
+    "total_elements": 178,
+    "data": [
+        {
+            "id": "1",
+            "name": "Средняя школа №83",
+            "url": "https://2gis.ru/saratov/firm/70000001037362342",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001037362342/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №83",
+            "adres": "Саратов, Крымская улица, 2",
+            "cadastral_number": "64:48:020331:1356"
+        },
+        {
+            "id": "5",
+            "name": "Средняя школа №86",
+            "url": "https://2gis.ru/saratov/firm/6052240280256869",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256869/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №86",
+            "adres": "Саратов, Московский 2-й проезд, 5",
+            "cadastral_number": "64:48:040234:109"
+        },
+        {
+            "id": "202",
+            "name": "Средняя школа №64",
+            "url": "https://2gis.ru/saratov/firm/6052240280256822",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256822/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №64 им. Героя Советского Союза И.В. Панфилова",
+            "adres": "Саратов, Стахановская улица, 8",
+            "cadastral_number": "64:48:040229:38"
+        },
+        {
+            "id": "184",
+            "name": "Средняя общеобразовательная школа №38",
+            "url": "https://2gis.ru/saratov/firm/6052240280256654",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256654/tab/reviews",
+            "full_name": "МОУ Средняя общеобразовательная школа №38",
+            "adres": "Саратов, Южная улица, 46",
+            "cadastral_number": "64:48:020238:271"
+        },
+        {
+            "id": "207",
+            "name": "Школа-интернат №5",
+            "url": "https://2gis.ru/saratov/firm/6052240280266750",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280266750/tab/reviews",
+            "full_name": "ГБОУ Школа-интернат для обучающихся по адаптированным образовательным программам №5",
+            "adres": "Саратов, им. Рогожина В.А. улица, 22",
+            "cadastral_number": "64:48:000000:22831"
+        }
+    ]
+}
