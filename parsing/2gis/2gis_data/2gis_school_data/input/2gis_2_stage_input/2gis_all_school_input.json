@@ -1,0 +1,1248 @@
+{
+    "source": "2GIS",
+    "topic": "Школы Саратова",
+    "data": [
+        {
+            "id": "1",
+            "name": "Средняя школа №83",
+            "url": "https://2gis.ru/saratov/firm/70000001037362342",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001037362342/tab/reviews"
+        },
+        {
+            "id": "3",
+            "name": "Maximum Education",
+            "url": "https://2gis.ru/saratov/firm/70000001063207425",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001063207425/tab/reviews"
+        },
+        {
+            "id": "4",
+            "name": "Частная школа начальных классов",
+            "url": "https://2gis.ru/saratov/firm/70000001079636032",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001079636032/tab/reviews"
+        },
+        {
+            "id": "5",
+            "name": "Средняя школа №86",
+            "url": "https://2gis.ru/saratov/firm/6052240280256869",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256869/tab/reviews"
+        },
+        {
+            "id": "6",
+            "name": "Медицинский предуниверсарий",
+            "url": "https://2gis.ru/saratov/firm/6052240280262677",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280262677/tab/reviews"
+        },
+        {
+            "id": "7",
+            "name": "Средняя общеобразовательная школа №67 им. О.И. Янковского",
+            "url": "https://2gis.ru/saratov/firm/6052240280256838",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256838/tab/reviews"
+        },
+        {
+            "id": "8",
+            "name": "Ласточкино",
+            "url": "https://2gis.ru/saratov/firm/70000001079218611",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001079218611/tab/reviews"
+        },
+        {
+            "id": "9",
+            "name": "Лицей №3",
+            "url": "https://2gis.ru/saratov/firm/6052240280257712",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257712/tab/reviews"
+        },
+        {
+            "id": "10",
+            "name": "Гимназия №7",
+            "url": "https://2gis.ru/saratov/firm/70000001030556823",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001030556823/tab/reviews"
+        },
+        {
+            "id": "11",
+            "name": "Гимназия №4 им. Героя Советского Союза В.М. Безбокова",
+            "url": "https://2gis.ru/saratov/firm/6052240280257235",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257235/tab/reviews"
+        },
+        {
+            "id": "12",
+            "name": "Аврора",
+            "url": "https://2gis.ru/saratov/firm/70000001035603313",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001035603313/tab/reviews"
+        },
+        {
+            "id": "13",
+            "name": "Основная школа №17",
+            "url": "https://2gis.ru/saratov/firm/6052240280256554",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256554/tab/reviews"
+        },
+        {
+            "id": "14",
+            "name": "Школа №2 г.",
+            "url": "https://2gis.ru/saratov/firm/6052240280256558",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256558/tab/reviews"
+        },
+        {
+            "id": "15",
+            "name": "Центр образования",
+            "url": "https://2gis.ru/saratov/firm/6052240280391694",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280391694/tab/reviews"
+        },
+        {
+            "id": "16",
+            "name": "Русская православная классическая гимназия",
+            "url": "https://2gis.ru/saratov/firm/6052240280257239",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257239/tab/reviews"
+        },
+        {
+            "id": "17",
+            "name": "Покровская православная классическая гимназия г. Саратова им. Святого благоверного князя А. Невского",
+            "url": "https://2gis.ru/saratov/firm/6052240280516554",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280516554/tab/reviews"
+        },
+        {
+            "id": "18",
+            "name": "Средняя школа №16",
+            "url": "https://2gis.ru/saratov/firm/6052240280256552",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256552/tab/reviews"
+        },
+        {
+            "id": "19",
+            "name": "Средняя школа №22",
+            "url": "https://2gis.ru/saratov/firm/6052240280256560",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256560/tab/reviews"
+        },
+        {
+            "id": "20",
+            "name": "Средняя школа №69",
+            "url": "https://2gis.ru/saratov/firm/6052240280465039",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280465039/tab/reviews"
+        },
+        {
+            "id": "21",
+            "name": "Средняя общеобразовательная школа №90",
+            "url": "https://2gis.ru/saratov/firm/6052240280256876",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256876/tab/reviews"
+        },
+        {
+            "id": "22",
+            "name": "Основная школа №14",
+            "url": "https://2gis.ru/saratov/firm/6052240280256549",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256549/tab/reviews"
+        },
+        {
+            "id": "23",
+            "name": "Татарская гимназия",
+            "url": "https://2gis.ru/saratov/firm/6052240280268203",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280268203/tab/reviews"
+        },
+        {
+            "id": "24",
+            "name": "Татарская гимназия",
+            "url": "https://2gis.ru/saratov/firm/6052240280266554",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280266554/tab/reviews"
+        },
+        {
+            "id": "25",
+            "name": "Гимназия гуманитарных наук",
+            "url": "https://2gis.ru/saratov/firm/6052240280257713",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257713/tab/reviews"
+        },
+        {
+            "id": "26",
+            "name": "Основная школа №81",
+            "url": "https://2gis.ru/saratov/firm/6052240280256862",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256862/tab/reviews"
+        },
+        {
+            "id": "27",
+            "name": "Гимназия №5",
+            "url": "https://2gis.ru/saratov/firm/6052240280256661",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256661/tab/reviews"
+        },
+        {
+            "id": "28",
+            "name": "Top IT",
+            "url": "https://2gis.ru/saratov/firm/70000001096260245",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001096260245/tab/reviews"
+        },
+        {
+            "id": "29",
+            "name": "Лицей №24",
+            "url": "https://2gis.ru/saratov/firm/6052240280256584",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256584/tab/reviews"
+        },
+        {
+            "id": "30",
+            "name": "Гуманитарно-экономический лицей",
+            "url": "https://2gis.ru/saratov/firm/6052240280257292",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257292/tab/reviews"
+        },
+        {
+            "id": "31",
+            "name": "Средняя общеобразовательная школа №8 Волжского района г. Саратова",
+            "url": "https://2gis.ru/saratov/firm/6052240280256613",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256613/tab/reviews"
+        },
+        {
+            "id": "32",
+            "name": "Школа-интернат №5",
+            "url": "https://2gis.ru/saratov/firm/6052240280257974",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257974/tab/reviews"
+        },
+        {
+            "id": "33",
+            "name": "Top IT",
+            "url": "https://2gis.ru/saratov/firm/70000001104111327",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001104111327/tab/reviews"
+        },
+        {
+            "id": "34",
+            "name": "Средняя школа №16",
+            "url": "https://2gis.ru/saratov/firm/6052240280256519",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256519/tab/reviews"
+        },
+        {
+            "id": "35",
+            "name": "Физико-технический лицей №1",
+            "url": "https://2gis.ru/saratov/firm/70000001035292813",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001035292813/tab/reviews"
+        },
+        {
+            "id": "36",
+            "name": "Средняя школа №105",
+            "url": "https://2gis.ru/saratov/firm/6052240280256543",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256543/tab/reviews"
+        },
+        {
+            "id": "37",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/6052240280303737",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280303737/tab/reviews"
+        },
+        {
+            "id": "38",
+            "name": "Начальная Общеобразовательная школа №232",
+            "url": "https://2gis.ru/saratov/firm/6052240280256568",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256568/tab/reviews"
+        },
+        {
+            "id": "39",
+            "name": "Основная общеобразовательная школа №91",
+            "url": "https://2gis.ru/saratov/firm/6052240280256877",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256877/tab/reviews"
+        },
+        {
+            "id": "40",
+            "name": "Русская православная классическая гимназия",
+            "url": "https://2gis.ru/saratov/firm/70000001025091889",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001025091889/tab/reviews"
+        },
+        {
+            "id": "41",
+            "name": "Гимназия гуманитарных наук",
+            "url": "https://2gis.ru/saratov/firm/70000001067895343",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001067895343/tab/reviews"
+        },
+        {
+            "id": "42",
+            "name": "Лучше чем школа",
+            "url": "https://2gis.ru/saratov/firm/70000001101784763",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001101784763/tab/reviews"
+        },
+        {
+            "id": "43",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/6052240280497529",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280497529/tab/reviews"
+        },
+        {
+            "id": "44",
+            "name": "Средняя школа №10",
+            "url": "https://2gis.ru/saratov/firm/6052240280289139",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280289139/tab/reviews"
+        },
+        {
+            "id": "45",
+            "name": "Средняя школа им. П.А. Мельникова",
+            "url": "https://2gis.ru/saratov/firm/6052240280497832",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280497832/tab/reviews"
+        },
+        {
+            "id": "46",
+            "name": "Основная общеобразовательная школа №91",
+            "url": "https://2gis.ru/saratov/firm/6052240280394901",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280394901/tab/reviews"
+        },
+        {
+            "id": "47",
+            "name": "Гимназия №34",
+            "url": "https://2gis.ru/saratov/firm/70000001100413612",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001100413612/tab/reviews"
+        },
+        {
+            "id": "48",
+            "name": "Школа",
+            "url": "https://2gis.ru/saratov/station/6052498017533984",
+            "feedback_link": "https://2gis.ru/saratov/station/6052498017533984/tab/reviews"
+        },
+        {
+            "id": "49",
+            "name": "Englishhall",
+            "url": "https://2gis.ru/saratov/firm/70000001091559215",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001091559215/tab/reviews"
+        },
+        {
+            "id": "50",
+            "name": "Аристотель",
+            "url": "https://2gis.ru/saratov/firm/70000001078554032",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001078554032/tab/reviews"
+        },
+        {
+            "id": "51",
+            "name": "Средняя общеобразовательная школа с этнокультурным еврейским компонентом образования",
+            "url": "https://2gis.ru/saratov/firm/6052240280257722",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257722/tab/reviews"
+        },
+        {
+            "id": "52",
+            "name": "Средняя общеобразовательная школа пос. Расково Муниципального образования Город Саратов",
+            "url": "https://2gis.ru/saratov/firm/6052240280303734",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280303734/tab/reviews"
+        },
+        {
+            "id": "53",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/6052240280303750",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280303750/tab/reviews"
+        },
+        {
+            "id": "54",
+            "name": "Эволюция",
+            "url": "https://2gis.ru/saratov/firm/70000001054433702",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001054433702/tab/reviews"
+        },
+        {
+            "id": "55",
+            "name": "Средняя общеобразовательная школа №5",
+            "url": "https://2gis.ru/saratov/firm/70000001074186219",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001074186219/tab/reviews"
+        },
+        {
+            "id": "56",
+            "name": "Шаг",
+            "url": "https://2gis.ru/saratov/firm/70000001095970669",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001095970669/tab/reviews"
+        },
+        {
+            "id": "57",
+            "name": "Vortex",
+            "url": "https://2gis.ru/saratov/firm/6052240280264052",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280264052/tab/reviews"
+        },
+        {
+            "id": "58",
+            "name": "Школа",
+            "url": "https://2gis.ru/saratov/station/70030076155254511",
+            "feedback_link": "https://2gis.ru/saratov/station/70030076155254511/tab/reviews"
+        },
+        {
+            "id": "59",
+            "name": "Школа №75",
+            "url": "https://2gis.ru/saratov/station/6052497978294359",
+            "feedback_link": "https://2gis.ru/saratov/station/6052497978294359/tab/reviews"
+        },
+        {
+            "id": "60",
+            "name": "Средняя школа №12",
+            "url": "https://2gis.ru/engels/firm/6052240280292193",
+            "feedback_link": "https://2gis.ru/engels/firm/6052240280292193/tab/reviews"
+        },
+        {
+            "id": "61",
+            "name": "Средняя школа №7",
+            "url": "https://2gis.ru/engels/firm/70000001033671066",
+            "feedback_link": "https://2gis.ru/engels/firm/70000001033671066/tab/reviews"
+        },
+        {
+            "id": "62",
+            "name": "Школа-интернат №3",
+            "url": "https://2gis.ru/engels/firm/6052240280292344",
+            "feedback_link": "https://2gis.ru/engels/firm/6052240280292344/tab/reviews"
+        },
+        {
+            "id": "63",
+            "name": "Спортивная школа олимпийского резерва №3 г. Саратова",
+            "url": "https://2gis.ru/saratov/firm/70000001036977585",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001036977585/tab/reviews"
+        },
+        {
+            "id": "64",
+            "name": "Средняя общеобразовательная школа пос. Дубки Муниципального образования Город Саратов",
+            "url": "https://2gis.ru/saratov/firm/6052240280303730",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280303730/tab/reviews"
+        },
+        {
+            "id": "65",
+            "name": "Школа №82",
+            "url": "https://2gis.ru/saratov/station/6052497978294695",
+            "feedback_link": "https://2gis.ru/saratov/station/6052497978294695/tab/reviews"
+        },
+        {
+            "id": "66",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/70000001030061741",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001030061741/tab/reviews"
+        },
+        {
+            "id": "67",
+            "name": "Школа №108",
+            "url": "https://2gis.ru/saratov/station/6052497978294424",
+            "feedback_link": "https://2gis.ru/saratov/station/6052497978294424/tab/reviews"
+        },
+        {
+            "id": "68",
+            "name": "Саратовский областной базовый медицинский колледж",
+            "url": "https://2gis.ru/saratov/firm/6052240280300695",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280300695/tab/reviews"
+        },
+        {
+            "id": "69",
+            "name": "Средняя школа П.Т. Пономарева",
+            "url": "https://2gis.ru/saratov/firm/6052241280342503",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052241280342503/tab/reviews"
+        },
+        {
+            "id": "70",
+            "name": "Средняя школа им. Героя Советского Союза Н.В. Котлова",
+            "url": "https://2gis.ru/saratov/firm/6052240280303759",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280303759/tab/reviews"
+        },
+        {
+            "id": "71",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/6052240280303744",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280303744/tab/reviews"
+        },
+        {
+            "id": "72",
+            "name": "Основная школа",
+            "url": "https://2gis.ru/saratov/firm/70000001057832088",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001057832088/tab/reviews"
+        },
+        {
+            "id": "73",
+            "name": "Средняя школа №3",
+            "url": "https://2gis.ru/saratov/firm/70000001030224707",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001030224707/tab/reviews"
+        },
+        {
+            "id": "74",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/70000001030227566",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001030227566/tab/reviews"
+        },
+        {
+            "id": "75",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/70000001029992407",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001029992407/tab/reviews"
+        },
+        {
+            "id": "76",
+            "name": "Школа №55",
+            "url": "https://2gis.ru/saratov/station/6052497978294333",
+            "feedback_link": "https://2gis.ru/saratov/station/6052497978294333/tab/reviews"
+        },
+        {
+            "id": "77",
+            "name": "Школа №52",
+            "url": "https://2gis.ru/saratov/station/6052497978295033",
+            "feedback_link": "https://2gis.ru/saratov/station/6052497978295033/tab/reviews"
+        },
+        {
+            "id": "78",
+            "name": "Школа №77",
+            "url": "https://2gis.ru/saratov/station/6052497978294958",
+            "feedback_link": "https://2gis.ru/saratov/station/6052497978294958/tab/reviews"
+        },
+        {
+            "id": "79",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/70000001053991773",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001053991773/tab/reviews"
+        },
+        {
+            "id": "80",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/6052240280303756",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280303756/tab/reviews"
+        },
+        {
+            "id": "81",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/6052240280303802",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280303802/tab/reviews"
+        },
+        {
+            "id": "82",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/70000001030225001",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001030225001/tab/reviews"
+        },
+        {
+            "id": "83",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/70000001030112946",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001030112946/tab/reviews"
+        },
+        {
+            "id": "84",
+            "name": "Средняя школа им. П.А. Мельникова",
+            "url": "https://2gis.ru/saratov/firm/70000001030392146",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001030392146/tab/reviews"
+        },
+        {
+            "id": "85",
+            "name": "Основная общеобразовательная школа",
+            "url": "https://2gis.ru/saratov/firm/70000001030113512",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001030113512/tab/reviews"
+        },
+        {
+            "id": "86",
+            "name": "Основная общеобразовательная школа",
+            "url": "https://2gis.ru/saratov/firm/70000001030145539",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001030145539/tab/reviews"
+        },
+        {
+            "id": "87",
+            "name": "Школа искусств",
+            "url": "https://2gis.ru/saratov/station/6052497978294563",
+            "feedback_link": "https://2gis.ru/saratov/station/6052497978294563/tab/reviews"
+        },
+        {
+            "id": "88",
+            "name": "Школа №36",
+            "url": "https://2gis.ru/saratov/station/6052497978294879",
+            "feedback_link": "https://2gis.ru/saratov/station/6052497978294879/tab/reviews"
+        },
+        {
+            "id": "89",
+            "name": "Средняя школа №2",
+            "url": "https://2gis.ru/saratov/firm/70000001030153366",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001030153366/tab/reviews"
+        },
+        {
+            "id": "90",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/70000001053983327",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001053983327/tab/reviews"
+        },
+        {
+            "id": "91",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/70000001057023519",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001057023519/tab/reviews"
+        },
+        {
+            "id": "92",
+            "name": "Школа №7",
+            "url": "https://2gis.ru/saratov/station/6052497978294578",
+            "feedback_link": "https://2gis.ru/saratov/station/6052497978294578/tab/reviews"
+        },
+        {
+            "id": "93",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/70000001030112734",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001030112734/tab/reviews"
+        },
+        {
+            "id": "94",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/70000001029926415",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001029926415/tab/reviews"
+        },
+        {
+            "id": "95",
+            "name": "Школа №26",
+            "url": "https://2gis.ru/saratov/station/6052498022379926",
+            "feedback_link": "https://2gis.ru/saratov/station/6052498022379926/tab/reviews"
+        },
+        {
+            "id": "96",
+            "name": "Средняя школа",
+            "url": "https://2gis.ru/saratov/firm/70000001057022691",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001057022691/tab/reviews"
+        },
+        {
+            "id": "97",
+            "name": "Школа №43",
+            "url": "https://2gis.ru/saratov/station/6052497978294982",
+            "feedback_link": "https://2gis.ru/saratov/station/6052497978294982/tab/reviews"
+        },
+        {
+            "id": "98",
+            "name": "Школа №46",
+            "url": "https://2gis.ru/saratov/station/6052498022223099",
+            "feedback_link": "https://2gis.ru/saratov/station/6052498022223099/tab/reviews"
+        },
+        {
+            "id": "99",
+            "name": "Школа №80",
+            "url": "https://2gis.ru/saratov/station/70030077006740241",
+            "feedback_link": "https://2gis.ru/saratov/station/70030077006740241/tab/reviews"
+        },
+        {
+            "id": "100",
+            "name": "Саратовский национальный исследовательский государственный университет им. Н.Г. Чернышевского",
+            "url": "https://2gis.ru/saratov/firm/6052695547086562",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052695547086562/tab/reviews"
+        },
+        {
+            "id": "101",
+            "name": "Школа №105",
+            "url": "https://2gis.ru/saratov/station/6052497978294828",
+            "feedback_link": "https://2gis.ru/saratov/station/6052497978294828/tab/reviews"
+        },
+        {
+            "id": "102",
+            "name": "Школа №59",
+            "url": "https://2gis.ru/saratov/station/70030076177557152",
+            "feedback_link": "https://2gis.ru/saratov/station/70030076177557152/tab/reviews"
+        },
+        {
+            "id": "103",
+            "name": "Школа №83",
+            "url": "https://2gis.ru/saratov/station/6052497978294550",
+            "feedback_link": "https://2gis.ru/saratov/station/6052497978294550/tab/reviews"
+        },
+        {
+            "id": "104",
+            "name": "Школа-интернат",
+            "url": "https://2gis.ru/saratov/station/6052497978294502",
+            "feedback_link": "https://2gis.ru/saratov/station/6052497978294502/tab/reviews"
+        },
+        {
+            "id": "105",
+            "name": "Школа №108",
+            "url": "https://2gis.ru/saratov/station/6052497978294938",
+            "feedback_link": "https://2gis.ru/saratov/station/6052497978294938/tab/reviews"
+        },
+        {
+            "id": "106",
+            "name": "Школа №91",
+            "url": "https://2gis.ru/saratov/station/6052497978294850",
+            "feedback_link": "https://2gis.ru/saratov/station/6052497978294850/tab/reviews"
+        },
+        {
+            "id": "107",
+            "name": "Школа №91",
+            "url": "https://2gis.ru/saratov/station/6052497978294864",
+            "feedback_link": "https://2gis.ru/saratov/station/6052497978294864/tab/reviews"
+        },
+        {
+            "id": "108",
+            "name": "Саратов",
+            "url": "https://2gis.ru/saratov/geo/6052334769537063",
+            "feedback_link": "https://2gis.ru/saratov/geo/6052334769537063/tab/reviews"
+        },
+        {
+            "id": "109",
+            "name": "Neyrons",
+            "url": "https://2gis.ru/saratov/firm/70000001038188147",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001038188147/tab/reviews"
+        },
+        {
+            "id": "110",
+            "name": "Средняя общеобразовательная школа №19",
+            "url": "https://2gis.ru/firm/70000001053984119",
+            "feedback_link": "https://2gis.ru/firm/70000001053984119/tab/reviews"
+        },
+        {
+            "id": "111",
+            "name": "Школа борьбы братьев Набиевых",
+            "url": "https://2gis.ru/saratov/firm/70000001097366931",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001097366931/tab/reviews"
+        },
+        {
+            "id": "112",
+            "name": "Детская школа искусств №1 им. П. А. Фролова",
+            "url": "https://2gis.ru/engels/firm/6052240280257384",
+            "feedback_link": "https://2gis.ru/engels/firm/6052240280257384/tab/reviews"
+        },
+        {
+            "id": "113",
+            "name": "Солярис",
+            "url": "https://2gis.ru/saratov/firm/70000001027154065",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001027154065/tab/reviews"
+        },
+        {
+            "id": "114",
+            "name": "Гимназия №1",
+            "url": "https://2gis.ru/saratov/firm/6052240280257227",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257227/tab/reviews"
+        },
+        {
+            "id": "115",
+            "name": "Лицей №4",
+            "url": "https://2gis.ru/saratov/firm/6052240280256669",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256669/tab/reviews"
+        },
+        {
+            "id": "116",
+            "name": "Средняя школа №7",
+            "url": "https://2gis.ru/saratov/firm/6052240280256840",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256840/tab/reviews"
+        },
+        {
+            "id": "117",
+            "name": "Авиатор",
+            "url": "https://2gis.ru/saratov/firm/70000001045221097",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001045221097/tab/reviews"
+        },
+        {
+            "id": "118",
+            "name": "Средняя школа №55",
+            "url": "https://2gis.ru/saratov/firm/6052240280256719",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256719/tab/reviews"
+        },
+        {
+            "id": "119",
+            "name": "Средняя школа №1",
+            "url": "https://2gis.ru/saratov/firm/6052240280256536",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256536/tab/reviews"
+        },
+        {
+            "id": "120",
+            "name": "Звезда",
+            "url": "https://2gis.ru/saratov/firm/70000001043610537",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001043610537/tab/reviews"
+        },
+        {
+            "id": "121",
+            "name": "Солярис",
+            "url": "https://2gis.ru/saratov/firm/70000001055487050",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001055487050/tab/reviews"
+        },
+        {
+            "id": "122",
+            "name": "Лицей №62",
+            "url": "https://2gis.ru/saratov/firm/6052240280257291",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257291/tab/reviews"
+        },
+        {
+            "id": "123",
+            "name": "Средняя школа №77",
+            "url": "https://2gis.ru/saratov/firm/6052240280256857",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256857/tab/reviews"
+        },
+        {
+            "id": "124",
+            "name": "Инженерный лицей",
+            "url": "https://2gis.ru/saratov/firm/6052240280393652",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280393652/tab/reviews"
+        },
+        {
+            "id": "125",
+            "name": "Средняя общеобразовательная школа №51",
+            "url": "https://2gis.ru/saratov/firm/6052240280256707",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256707/tab/reviews"
+        },
+        {
+            "id": "126",
+            "name": "Средняя общеобразовательная школа №18 с углубленным изучением предметов им. О.П. Табакова",
+            "url": "https://2gis.ru/saratov/firm/6052240280256555",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256555/tab/reviews"
+        },
+        {
+            "id": "127",
+            "name": "Гимназия №3",
+            "url": "https://2gis.ru/saratov/firm/6052240280257233",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257233/tab/reviews"
+        },
+        {
+            "id": "128",
+            "name": "Физико-технический лицей №1",
+            "url": "https://2gis.ru/saratov/firm/6052240280263306",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280263306/tab/reviews"
+        },
+        {
+            "id": "129",
+            "name": "Гимназия №87",
+            "url": "https://2gis.ru/saratov/firm/6052240280257238",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257238/tab/reviews"
+        },
+        {
+            "id": "130",
+            "name": "Средняя школа №100",
+            "url": "https://2gis.ru/saratov/firm/6052240280256538",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256538/tab/reviews"
+        },
+        {
+            "id": "131",
+            "name": "Гимназия №34",
+            "url": "https://2gis.ru/saratov/firm/6052240280256671",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256671/tab/reviews"
+        },
+        {
+            "id": "132",
+            "name": "Лицей №2",
+            "url": "https://2gis.ru/saratov/firm/6052240280289243",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280289243/tab/reviews"
+        },
+        {
+            "id": "133",
+            "name": "Лицей №36",
+            "url": "https://2gis.ru/saratov/firm/6052240280256652",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256652/tab/reviews"
+        },
+        {
+            "id": "134",
+            "name": "Лицей №53",
+            "url": "https://2gis.ru/saratov/firm/6052240280256715",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256715/tab/reviews"
+        },
+        {
+            "id": "135",
+            "name": "Иволгино",
+            "url": "https://2gis.ru/saratov/firm/70000001064247526",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001064247526/tab/reviews"
+        },
+        {
+            "id": "136",
+            "name": "Медико-биологический лицей",
+            "url": "https://2gis.ru/saratov/firm/6052240280266524",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280266524/tab/reviews"
+        },
+        {
+            "id": "137",
+            "name": "Гимназия №2",
+            "url": "https://2gis.ru/saratov/firm/6052240280257229",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257229/tab/reviews"
+        },
+        {
+            "id": "138",
+            "name": "Средняя общеобразовательная школа №5",
+            "url": "https://2gis.ru/saratov/firm/6052240280256689",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256689/tab/reviews"
+        },
+        {
+            "id": "139",
+            "name": "Средняя школа №11",
+            "url": "https://2gis.ru/saratov/firm/6052240280256546",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256546/tab/reviews"
+        },
+        {
+            "id": "140",
+            "name": "Средняя школа №103",
+            "url": "https://2gis.ru/saratov/firm/6052240280256541",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256541/tab/reviews"
+        },
+        {
+            "id": "141",
+            "name": "Средняя школа №95",
+            "url": "https://2gis.ru/saratov/firm/6052240280256885",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256885/tab/reviews"
+        },
+        {
+            "id": "142",
+            "name": "Средняя школа №44",
+            "url": "https://2gis.ru/saratov/firm/6052240280256680",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256680/tab/reviews"
+        },
+        {
+            "id": "143",
+            "name": "Лицей №37",
+            "url": "https://2gis.ru/saratov/firm/6052240280257284",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257284/tab/reviews"
+        },
+        {
+            "id": "144",
+            "name": "Средняя школа №66",
+            "url": "https://2gis.ru/saratov/firm/6052240280393748",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280393748/tab/reviews"
+        },
+        {
+            "id": "145",
+            "name": "Средняя школа №77",
+            "url": "https://2gis.ru/saratov/firm/70000001078805388",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001078805388/tab/reviews"
+        },
+        {
+            "id": "146",
+            "name": "Гимназия №89",
+            "url": "https://2gis.ru/saratov/firm/6052240280256871",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256871/tab/reviews"
+        },
+        {
+            "id": "147",
+            "name": "Лицей математики и информатики",
+            "url": "https://2gis.ru/saratov/firm/6052240280257714",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257714/tab/reviews"
+        },
+        {
+            "id": "148",
+            "name": "Средняя школа №97",
+            "url": "https://2gis.ru/saratov/firm/6052240280256886",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256886/tab/reviews"
+        },
+        {
+            "id": "149",
+            "name": "Гимназия №75 им. Д.М. Карбышева",
+            "url": "https://2gis.ru/saratov/firm/6052240280256852",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256852/tab/reviews"
+        },
+        {
+            "id": "150",
+            "name": "Средняя школа №2",
+            "url": "https://2gis.ru/saratov/firm/6052240280256534",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256534/tab/reviews"
+        },
+        {
+            "id": "151",
+            "name": "Средняя школа №46",
+            "url": "https://2gis.ru/saratov/firm/6052240280289029",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280289029/tab/reviews"
+        },
+        {
+            "id": "152",
+            "name": "Средняя школа №21",
+            "url": "https://2gis.ru/saratov/firm/6052240280256522",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256522/tab/reviews"
+        },
+        {
+            "id": "153",
+            "name": "Гимназия №58",
+            "url": "https://2gis.ru/saratov/firm/6052240280257237",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257237/tab/reviews"
+        },
+        {
+            "id": "154",
+            "name": "Средняя общеобразовательная школа №52",
+            "url": "https://2gis.ru/saratov/firm/6052240280256712",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256712/tab/reviews"
+        },
+        {
+            "id": "155",
+            "name": "Гимназия №108",
+            "url": "https://2gis.ru/saratov/firm/6052240280256545",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256545/tab/reviews"
+        },
+        {
+            "id": "156",
+            "name": "Лицей №50",
+            "url": "https://2gis.ru/saratov/firm/6052240280256702",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256702/tab/reviews"
+        },
+        {
+            "id": "157",
+            "name": "Лицей №15",
+            "url": "https://2gis.ru/saratov/firm/6052240280266592",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280266592/tab/reviews"
+        },
+        {
+            "id": "158",
+            "name": "Гуманитарно-экономический лицей",
+            "url": "https://2gis.ru/saratov/firm/6052240280256547",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256547/tab/reviews"
+        },
+        {
+            "id": "159",
+            "name": "Средняя школа №73",
+            "url": "https://2gis.ru/saratov/firm/6052240280256848",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256848/tab/reviews"
+        },
+        {
+            "id": "160",
+            "name": "Средняя школа №70",
+            "url": "https://2gis.ru/saratov/firm/6052240280256843",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256843/tab/reviews"
+        },
+        {
+            "id": "161",
+            "name": "Лицей гуманитарных наук",
+            "url": "https://2gis.ru/saratov/firm/6052240280266608",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280266608/tab/reviews"
+        },
+        {
+            "id": "162",
+            "name": "Лицей №47",
+            "url": "https://2gis.ru/saratov/firm/6052240280256683",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256683/tab/reviews"
+        },
+        {
+            "id": "163",
+            "name": "Средняя общеобразовательная школа №9",
+            "url": "https://2gis.ru/saratov/firm/6052240280256518",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256518/tab/reviews"
+        },
+        {
+            "id": "164",
+            "name": "Средняя школа №102",
+            "url": "https://2gis.ru/saratov/firm/6052240280256540",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256540/tab/reviews"
+        },
+        {
+            "id": "165",
+            "name": "Средняя школа №41",
+            "url": "https://2gis.ru/saratov/firm/6052240280256673",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256673/tab/reviews"
+        },
+        {
+            "id": "166",
+            "name": "Средняя школа №45",
+            "url": "https://2gis.ru/saratov/firm/6052240280256681",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256681/tab/reviews"
+        },
+        {
+            "id": "167",
+            "name": "Гимназия №31",
+            "url": "https://2gis.ru/saratov/firm/6052240280256624",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256624/tab/reviews"
+        },
+        {
+            "id": "168",
+            "name": "Средняя школа №94",
+            "url": "https://2gis.ru/saratov/firm/6052240280256879",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256879/tab/reviews"
+        },
+        {
+            "id": "169",
+            "name": "Средняя школа №84",
+            "url": "https://2gis.ru/saratov/firm/6052240280256868",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256868/tab/reviews"
+        },
+        {
+            "id": "170",
+            "name": "Лицей №56",
+            "url": "https://2gis.ru/saratov/firm/6052240280256530",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256530/tab/reviews"
+        },
+        {
+            "id": "171",
+            "name": "Средняя школа №43",
+            "url": "https://2gis.ru/saratov/firm/6052240280256679",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256679/tab/reviews"
+        },
+        {
+            "id": "172",
+            "name": "Средняя школа №23",
+            "url": "https://2gis.ru/saratov/firm/6052240280256561",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256561/tab/reviews"
+        },
+        {
+            "id": "173",
+            "name": "Средняя общеобразовательная школа №101",
+            "url": "https://2gis.ru/saratov/firm/6052240280256539",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256539/tab/reviews"
+        },
+        {
+            "id": "174",
+            "name": "Средняя школа №82",
+            "url": "https://2gis.ru/saratov/firm/6052240280256864",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256864/tab/reviews"
+        },
+        {
+            "id": "175",
+            "name": "Средняя общеобразовательная школа №76 им. М.Г. Галицкого",
+            "url": "https://2gis.ru/saratov/firm/6052240280256855",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256855/tab/reviews"
+        },
+        {
+            "id": "176",
+            "name": "Лицей №107",
+            "url": "https://2gis.ru/saratov/firm/6052240280266504",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280266504/tab/reviews"
+        },
+        {
+            "id": "177",
+            "name": "Средняя школа №49",
+            "url": "https://2gis.ru/saratov/firm/6052240280256686",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256686/tab/reviews"
+        },
+        {
+            "id": "178",
+            "name": "Уникум",
+            "url": "https://2gis.ru/saratov/firm/6052240280266763",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280266763/tab/reviews"
+        },
+        {
+            "id": "179",
+            "name": "Средняя школа №61",
+            "url": "https://2gis.ru/saratov/firm/6052240280256814",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256814/tab/reviews"
+        },
+        {
+            "id": "180",
+            "name": "Средняя школа №6",
+            "url": "https://2gis.ru/saratov/firm/6052240280266447",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280266447/tab/reviews"
+        },
+        {
+            "id": "181",
+            "name": "Лицей прикладных наук им. Д.И. Трубецкова",
+            "url": "https://2gis.ru/saratov/firm/6052240280266628",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280266628/tab/reviews"
+        },
+        {
+            "id": "182",
+            "name": "Средняя школа №60",
+            "url": "https://2gis.ru/saratov/firm/6052240280256811",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256811/tab/reviews"
+        },
+        {
+            "id": "183",
+            "name": "Средняя школа №106",
+            "url": "https://2gis.ru/saratov/firm/6052240280256544",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256544/tab/reviews"
+        },
+        {
+            "id": "184",
+            "name": "Средняя общеобразовательная школа №38",
+            "url": "https://2gis.ru/saratov/firm/6052240280256654",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256654/tab/reviews"
+        },
+        {
+            "id": "185",
+            "name": "Средняя школа №63",
+            "url": "https://2gis.ru/saratov/firm/6052240280256819",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256819/tab/reviews"
+        },
+        {
+            "id": "186",
+            "name": "Средняя школа №48",
+            "url": "https://2gis.ru/saratov/firm/6052240280256685",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256685/tab/reviews"
+        },
+        {
+            "id": "187",
+            "name": "Гимназия №5",
+            "url": "https://2gis.ru/saratov/firm/6052240280257236",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257236/tab/reviews"
+        },
+        {
+            "id": "188",
+            "name": "Лицей №24",
+            "url": "https://2gis.ru/saratov/firm/6052240280256878",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256878/tab/reviews"
+        },
+        {
+            "id": "189",
+            "name": "Средняя школа №57",
+            "url": "https://2gis.ru/saratov/firm/6052240280256723",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256723/tab/reviews"
+        },
+        {
+            "id": "190",
+            "name": "Гимназия №7",
+            "url": "https://2gis.ru/saratov/firm/6052240280262278",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280262278/tab/reviews"
+        },
+        {
+            "id": "191",
+            "name": "Средняя общеобразовательная школа №54 им. И.А. Евтеева",
+            "url": "https://2gis.ru/saratov/firm/6052240280256717",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256717/tab/reviews"
+        },
+        {
+            "id": "192",
+            "name": "Школа №6",
+            "url": "https://2gis.ru/saratov/firm/6052240280292317",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280292317/tab/reviews"
+        },
+        {
+            "id": "193",
+            "name": "Средняя общеобразовательная школа №72",
+            "url": "https://2gis.ru/saratov/firm/6052240280256845",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256845/tab/reviews"
+        },
+        {
+            "id": "194",
+            "name": "Средняя школа №46",
+            "url": "https://2gis.ru/saratov/firm/70000001092731870",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001092731870/tab/reviews"
+        },
+        {
+            "id": "195",
+            "name": "Физико-технический лицей №1",
+            "url": "https://2gis.ru/saratov/firm/6052240280257282",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280257282/tab/reviews"
+        },
+        {
+            "id": "196",
+            "name": "Школа-интернат для обучающихся по адаптированным образовательным программам №4",
+            "url": "https://2gis.ru/saratov/firm/6052240280292297",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280292297/tab/reviews"
+        },
+        {
+            "id": "197",
+            "name": "Вечерняя школа №9",
+            "url": "https://2gis.ru/saratov/firm/70000001026170909",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001026170909/tab/reviews"
+        },
+        {
+            "id": "198",
+            "name": "Гимназия №34",
+            "url": "https://2gis.ru/saratov/firm/6052240280256532",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256532/tab/reviews"
+        },
+        {
+            "id": "199",
+            "name": "Школа №4",
+            "url": "https://2gis.ru/saratov/firm/6052240280256664",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256664/tab/reviews"
+        },
+        {
+            "id": "200",
+            "name": "Средняя школа №71",
+            "url": "https://2gis.ru/saratov/firm/6052240280256844",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256844/tab/reviews"
+        },
+        {
+            "id": "201",
+            "name": "Основная общеобразовательная школа №78",
+            "url": "https://2gis.ru/saratov/firm/6052240280256859",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256859/tab/reviews"
+        },
+        {
+            "id": "202",
+            "name": "Средняя школа №64",
+            "url": "https://2gis.ru/saratov/firm/6052240280256822",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256822/tab/reviews"
+        },
+        {
+            "id": "203",
+            "name": "Средняя общеобразовательная школа №8 Волжского района г. Саратова",
+            "url": "https://2gis.ru/saratov/firm/6052240280263676",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280263676/tab/reviews"
+        },
+        {
+            "id": "204",
+            "name": "Средняя школа №59",
+            "url": "https://2gis.ru/saratov/firm/6052240280256531",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256531/tab/reviews"
+        },
+        {
+            "id": "205",
+            "name": "Основная общеобразовательная школа №26 им. В.Д. Хомяковой",
+            "url": "https://2gis.ru/saratov/firm/6052240280256587",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256587/tab/reviews"
+        },
+        {
+            "id": "206",
+            "name": "Школа-интернат №3",
+            "url": "https://2gis.ru/saratov/firm/6052240280292293",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280292293/tab/reviews"
+        },
+        {
+            "id": "207",
+            "name": "Школа-интернат №5",
+            "url": "https://2gis.ru/saratov/firm/6052240280266750",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280266750/tab/reviews"
+        },
+        {
+            "id": "208",
+            "name": "Средняя школа №66",
+            "url": "https://2gis.ru/saratov/firm/6052240280599759",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280599759/tab/reviews"
+        }
+    ]
+}

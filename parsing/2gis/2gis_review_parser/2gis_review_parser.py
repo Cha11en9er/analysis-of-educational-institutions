@@ -13,6 +13,7 @@ import json
 import os
 import re
 import time
+from datetime import datetime
 from typing import Dict, Any, List
 
 import pyautogui
@@ -27,8 +28,7 @@ from selenium.webdriver import ActionChains
 
 # Пути относительно текущего файла
 REVIEWS_DATA_DIR = os.path.normpath(os.path.join(os.path.dirname(__file__), "..", "2gis_data", "2gis_review_data"))
-REVIEWS_OUTPUT_FILE = os.path.join(REVIEWS_DATA_DIR, "output", "2gis_scools_reviews.json")
-DEBUG_HTML_DIR = os.path.join(REVIEWS_DATA_DIR, "debug_html")
+REVIEWS_OUTPUT_FILE = os.path.join(REVIEWS_DATA_DIR, "output", "2gis_school_reviews.json")
 
 
 def setup_driver() -> webdriver.Chrome:
@@ -49,6 +49,55 @@ def setup_driver() -> webdriver.Chrome:
     driver = webdriver.Chrome(options=chrome_options)
     driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
     return driver
+
+
+def convert_date_to_postgresql_format(date_str: str) -> str:
+    """
+    Преобразует дату из русского формата в формат YYYY-MM-DD для PostgreSQL.
+    
+    Примеры входных форматов:
+    - "26 ноября 2015"
+    - "1 сентября 2018"
+    - "11 июня 2025, отредактирован"
+    - "16 февраля 2024, отредактирован"
+    - "" (пустая строка)
+    
+    Returns:
+        Строка в формате YYYY-MM-DD или пустая строка, если дата не распознана
+    """
+    if not date_str or not date_str.strip():
+        return ""
+    
+    # Убираем "отредактирован" и лишние пробелы
+    date_str = date_str.strip()
+    if ", отредактирован" in date_str:
+        date_str = date_str.replace(", отредактирован", "").strip()
+    
+    # Словарь месяцев
+    months = {
+        'января': 1, 'февраля': 2, 'марта': 3, 'апреля': 4,
+        'мая': 5, 'июня': 6, 'июля': 7, 'августа': 8,
+        'сентября': 9, 'октября': 10, 'ноября': 11, 'декабря': 12
+    }
+    
+    try:
+        # Парсим формат "день месяц год"
+        # Пример: "26 ноября 2015"
+        parts = date_str.split()
+        if len(parts) >= 3:
+            day = int(parts[0])
+            month_name = parts[1].lower()
+            year = int(parts[2])
+            
+            if month_name in months:
+                month = months[month_name]
+                # Формируем дату в формате YYYY-MM-DD
+                return f"{year:04d}-{month:02d}-{day:02d}"
+    except (ValueError, IndexError):
+        pass
+    
+    # Если не удалось распарсить, возвращаем пустую строку
+    return ""
 
 
 def wait_text_or_empty(driver: webdriver.Chrome, by: By, locator: str, timeout: int = 10) -> str:
@@ -216,7 +265,7 @@ def extract_reviews_from_json(html: str) -> List[Dict[str, Any]]:
             
             text_pos = text_match.start()
             
-            # Ищем likes_count в окрестности (в пределах 1500 символов)
+            # Ищем likes_count и rating в окрестности (в пределах 1500 символов)
             context_start = max(0, text_pos - 500)
             context_end = min(len(html), text_end_pos + 1500)
             context = html[context_start:context_end]
@@ -226,6 +275,12 @@ def extract_reviews_from_json(html: str) -> List[Dict[str, Any]]:
                 continue
             
             likes_count = int(likes_match.group(1))
+            
+            # Ищем rating (количество звёзд) в том же контексте
+            rating = None
+            rating_match = re.search(r'"rating"\s*:\s*(\d+)', context)
+            if rating_match:
+                rating = int(rating_match.group(1))
             
             # Ищем дату в разных форматах (расширяем контекст для поиска даты)
             date = ''
@@ -265,7 +320,8 @@ def extract_reviews_from_json(html: str) -> List[Dict[str, Any]]:
             reviews_data.append({
                 'text': text,
                 'likes_count': likes_count,
-                'date': date
+                'date': date,
+                'rating': rating
             })
     
     return reviews_data
@@ -292,7 +348,8 @@ def _find_reviews_in_json(data: Any, path: str = '') -> List[Dict[str, Any]]:
                 review = {
                     'text': data.get('text', ''),
                     'likes_count': int(data.get('likes_count', 0)),
-                    'date': data.get('date', data.get('created_at', data.get('published_at', '')))
+                    'date': data.get('date', data.get('created_at', data.get('published_at', ''))),
+                    'rating': data.get('rating')  # Количество звёзд
                 }
                 reviews.append(review)
         
@@ -362,18 +419,6 @@ def parse_reviews(driver: webdriver.Chrome, review_url: str, school_id: str) -> 
         print(f"[error] Не удалось получить HTML для школы {school_id}: {e}")
         return []
     
-    # Сохраняем HTML для отладки
-    try:
-        os.makedirs(DEBUG_HTML_DIR, exist_ok=True)
-        html_file = os.path.join(DEBUG_HTML_DIR, f"{school_id}_reviews.html")
-        with open(html_file, "w", encoding="utf-8") as f:
-            f.write(f"<!-- URL: {review_url} -->\n")
-            f.write(f"<!-- School ID: {school_id} -->\n")
-            f.write(html_content)
-        print(f"[debug] Сохранён HTML: {school_id}_reviews.html")
-    except Exception as e:
-        print(f"[warn] Не удалось сохранить HTML: {e}")
-    
     # Сначала пытаемся извлечь отзывы из JSON данных в HTML
     try:
         json_reviews = extract_reviews_from_json(html_content)
@@ -386,6 +431,7 @@ def parse_reviews(driver: webdriver.Chrome, review_url: str, school_id: str) -> 
     if json_reviews:
         try:
             # Извлекаем все тексты отзывов из DOM для сопоставления с датами
+            # Сначала ищем все элементы с текстом отзывов
             text_elements_long = driver.find_elements(By.CLASS_NAME, '_1wlx08h')
             text_elements_short = driver.find_elements(By.CLASS_NAME, '_1msln3t')
             dom_texts = []
@@ -397,21 +443,45 @@ def parse_reviews(driver: webdriver.Chrome, review_url: str, school_id: str) -> 
                     if not text:
                         continue
                     
-                    # Ищем дату для этого текста - ищем ближайший элемент _a5f6uz в родительских элементах
+                    # Ищем дату для этого текста - ищем ближайший элемент _a5f6uz
+                    # Сначала ищем в родительских элементах
                     date = ''
                     try:
                         par = text_elem
-                        for _ in range(10):  # Ищем в родительских элементах
-                            par = par.find_element(By.XPATH, '..')
+                        for _ in range(15):  # Увеличиваем глубину поиска
                             try:
-                                date_elem = par.find_element(By.CLASS_NAME, '_a5f6uz')
-                                date = date_elem.text.strip()
-                                if date:
-                                    break
+                                par = par.find_element(By.XPATH, '..')
+                                try:
+                                    date_elem = par.find_element(By.CLASS_NAME, '_a5f6uz')
+                                    date = date_elem.text.strip()
+                                    if date:
+                                        break
+                                except:
+                                    continue
                             except:
-                                continue
+                                break
                     except:
                         pass
+                    
+                    # Если не нашли в родителях, ищем в соседних элементах того же контейнера
+                    if not date:
+                        try:
+                            # Ищем общий родительский контейнер
+                            container = text_elem
+                            for _ in range(10):
+                                try:
+                                    container = container.find_element(By.XPATH, '..')
+                                    # Ищем все элементы _a5f6uz в этом контейнере
+                                    date_elems = container.find_elements(By.CLASS_NAME, '_a5f6uz')
+                                    if date_elems:
+                                        # Берем первый найденный элемент даты
+                                        date = date_elems[0].text.strip()
+                                        if date:
+                                            break
+                                except:
+                                    break
+                        except:
+                            pass
                     
                     if text and text not in [t['text'] for t in dom_texts]:
                         dom_texts.append({'text': text, 'date': date})
@@ -476,15 +546,90 @@ def parse_reviews(driver: webdriver.Chrome, review_url: str, school_id: str) -> 
                                     processed_dom_texts.add(dom_item['text'])
                                     break
                     
+                    # Преобразуем дату в формат YYYY-MM-DD
+                    date_formatted = convert_date_to_postgresql_format(date)
+                    
                     reviews.append({
                         'school_id': school_id,
-                        'date': date,
+                        'date': date_formatted,
                         'text': text,
-                        'likes_count': review_data.get('likes_count', 0)
+                        'likes_count': review_data.get('likes_count', 0),
+                        'review_star': review_data.get('rating')  # Количество звёзд из JSON
                     })
                 except Exception as e:
                     print(f"[warn] Ошибка при обработке отзыва: {e}")
                     continue
+            
+            # Добавляем отзывы из DOM, которые не были найдены в JSON
+            # Это важно, так как некоторые отзывы могут быть только в DOM
+            for dom_item in dom_texts:
+                dom_text = dom_item['text']
+                # Проверяем, не был ли этот текст уже обработан
+                if dom_text not in processed_dom_texts:
+                    # Нормализуем текст для поиска в JSON
+                    def normalize_text(t):
+                        return ' '.join(t.split())
+                    
+                    dom_text_normalized = normalize_text(dom_text)
+                    
+                    # Проверяем, нет ли этого текста в JSON отзывах (может быть с небольшими отличиями)
+                    found_in_json = False
+                    for review_data in json_reviews:
+                        json_text = review_data.get('text', '')
+                        json_text_normalized = normalize_text(json_text)
+                        
+                        # Сравниваем первые 50 символов
+                        dom_start = dom_text_normalized[:50] if len(dom_text_normalized) > 50 else dom_text_normalized
+                        json_start = json_text_normalized[:50] if len(json_text_normalized) > 50 else json_text_normalized
+                        
+                        if dom_start and json_start and (
+                            dom_start == json_start or
+                            (len(dom_start) > 30 and dom_start in json_text_normalized) or
+                            (len(json_start) > 30 and json_start in dom_text_normalized)
+                        ):
+                            found_in_json = True
+                            break
+                    
+                    # Если не нашли в JSON, добавляем отзыв из DOM
+                    if not found_in_json:
+                        # Пытаемся извлечь likes_count и rating из HTML для этого отзыва
+                        likes_count = 0
+                        review_star = None
+                        try:
+                            text_search = dom_text[:30] if len(dom_text) > 30 else dom_text
+                            text_search_escaped = re.escape(text_search)
+                            
+                            text_positions = []
+                            for match_obj in re.finditer(text_search_escaped, html_content):
+                                text_positions.append(match_obj.start())
+                            
+                            for text_pos in text_positions:
+                                search_start = max(0, text_pos - 1000)
+                                search_end = min(len(html_content), text_pos + 3000)
+                                search_context = html_content[search_start:search_end]
+                                
+                                likes_match = re.search(r'"likes_count"\s*:\s*(\d+)', search_context)
+                                if likes_match:
+                                    likes_count = int(likes_match.group(1))
+                                    
+                                    rating_match = re.search(r'"rating"\s*:\s*(\d+)', search_context)
+                                    if rating_match:
+                                        review_star = int(rating_match.group(1))
+                                    break
+                        except Exception as e:
+                            print(f"[debug] Не удалось извлечь likes_count/rating для DOM отзыва: {e}")
+                        
+                        # Преобразуем дату в формат YYYY-MM-DD
+                        date_formatted = convert_date_to_postgresql_format(dom_item['date'])
+                        
+                        reviews.append({
+                            'school_id': school_id,
+                            'date': date_formatted,
+                            'text': dom_text,
+                            'likes_count': likes_count,
+                            'review_star': review_star
+                        })
+                        print(f"[debug] Добавлен отзыв из DOM, не найденный в JSON: {dom_text[:50]}...")
             
             print(f"[debug] Обработано отзывов из JSON с датами из DOM: {len(reviews)}")
             return reviews
@@ -493,11 +638,16 @@ def parse_reviews(driver: webdriver.Chrome, review_url: str, school_id: str) -> 
             # Возвращаем отзывы без дат, если не удалось извлечь даты
             reviews = []
             for review_data in json_reviews:
+                # Преобразуем дату в формат YYYY-MM-DD
+                date_str = review_data.get('date', '')
+                date_formatted = convert_date_to_postgresql_format(date_str)
+                
                 reviews.append({
                     'school_id': school_id,
-                    'date': review_data.get('date', ''),
+                    'date': date_formatted,
                     'text': review_data.get('text', ''),
-                    'likes_count': review_data.get('likes_count', 0)
+                    'likes_count': review_data.get('likes_count', 0),
+                    'review_star': review_data.get('rating')  # Количество звёзд из JSON
                 })
             return reviews
     
@@ -559,8 +709,9 @@ def parse_reviews(driver: webdriver.Chrome, review_url: str, school_id: str) -> 
                 except:
                     pass
                 
-                # Извлекаем likes_count из JSON в HTML
+                # Извлекаем likes_count и rating из JSON в HTML
                 likes_count = 0
+                review_star = None
                 try:
                     # Ищем JSON данные для этого отзыва в HTML
                     # Используем более надежный метод: ищем начало текста в JSON и извлекаем до закрывающей кавычки
@@ -575,7 +726,7 @@ def parse_reviews(driver: webdriver.Chrome, review_url: str, school_id: str) -> 
                     for match_obj in re.finditer(text_search_escaped, html_content):
                         text_positions.append(match_obj.start())
                     
-                    # Для каждой позиции ищем ближайший likes_count в JSON
+                    # Для каждой позиции ищем ближайший likes_count и rating в JSON
                     for text_pos in text_positions:
                         # Ищем в окрестности (в пределах 3000 символов)
                         search_start = max(0, text_pos - 1000)
@@ -586,18 +737,27 @@ def parse_reviews(driver: webdriver.Chrome, review_url: str, school_id: str) -> 
                         likes_match = re.search(r'"likes_count"\s*:\s*(\d+)', search_context)
                         if likes_match:
                             likes_count = int(likes_match.group(1))
+                            
+                            # Ищем "rating" в том же контексте
+                            rating_match = re.search(r'"rating"\s*:\s*(\d+)', search_context)
+                            if rating_match:
+                                review_star = int(rating_match.group(1))
                             break
                 except Exception as e:
-                    print(f"[debug] Не удалось извлечь likes_count для отзыва {idx}: {e}")
+                    print(f"[debug] Не удалось извлечь likes_count/rating для отзыва {idx}: {e}")
+                
+                # Преобразуем дату в формат YYYY-MM-DD
+                date_formatted = convert_date_to_postgresql_format(date)
                 
                 reviews.append({
                     'school_id': school_id,
-                    'date': date,
+                    'date': date_formatted,
                     'text': text,
-                    'likes_count': likes_count
+                    'likes_count': likes_count,
+                    'review_star': review_star  # Количество звёзд из JSON
                 })
                 
-                print(f"[debug] Обработан отзыв {idx}: текст (длина: {len(text)}), дата: {date}, likes_count: {likes_count}")
+                print(f"[debug] Обработан отзыв {idx}: текст (длина: {len(text)}), дата: {date}, likes_count: {likes_count}, rating: {review_star}")
                 
             except Exception as e:
                 print(f"[debug] Ошибка при обработке контейнера {idx}: {e}")
@@ -683,7 +843,7 @@ def load_existing_reviews() -> list:
 
 
 def save_reviews_for_school(school_id: str, reviews: list) -> None:
-    """Сохраняет отзывы для одной школы, удаляя старые отзывы этой школы"""
+    """Сохраняет отзывы для одной школы, удаляя старые отзывы этой школы и перенумеровывая все отзывы"""
     os.makedirs(REVIEWS_DATA_DIR, exist_ok=True)
     
     # Загружаем существующие отзывы
@@ -695,10 +855,30 @@ def save_reviews_for_school(school_id: str, reviews: list) -> None:
     # Добавляем новые отзывы
     all_reviews = existing_reviews + reviews
     
+    # Перенумеровываем все отзывы сплошной нумерацией и делаем review_id первым полем
+    formatted_reviews = []
+    for idx, review in enumerate(all_reviews, start=1):
+        # Преобразуем дату, если она еще не преобразована
+        date_str = review.get('date', '')
+        if date_str and not re.match(r'^\d{4}-\d{2}-\d{2}$', date_str):
+            date_str = convert_date_to_postgresql_format(date_str)
+            review['date'] = date_str
+        
+        # Создаем новый словарь с review_id первым полем
+        formatted_review = {
+            'review_id': str(idx),
+            'school_id': review.get('school_id', ''),
+            'date': review.get('date', ''),
+            'text': review.get('text', ''),
+            'likes_count': review.get('likes_count', 0),
+            'review_star': review.get('review_star')
+        }
+        formatted_reviews.append(formatted_review)
+    
     # Сохраняем все отзывы
     payload = {
         "resource": "2gis",
-        "reviews": all_reviews,
+        "reviews": formatted_reviews,
     }
     with open(REVIEWS_OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
@@ -714,10 +894,30 @@ def save_all_reviews(reviews: list) -> None:
     # Объединяем старые и новые отзывы
     all_reviews = existing_reviews + reviews
     
+    # Перенумеровываем все отзывы сплошной нумерацией и делаем review_id первым полем
+    formatted_reviews = []
+    for idx, review in enumerate(all_reviews, start=1):
+        # Преобразуем дату, если она еще не преобразована
+        date_str = review.get('date', '')
+        if date_str and not re.match(r'^\d{4}-\d{2}-\d{2}$', date_str):
+            date_str = convert_date_to_postgresql_format(date_str)
+            review['date'] = date_str
+        
+        # Создаем новый словарь с review_id первым полем
+        formatted_review = {
+            'review_id': str(idx),
+            'school_id': review.get('school_id', ''),
+            'date': review.get('date', ''),
+            'text': review.get('text', ''),
+            'likes_count': review.get('likes_count', 0),
+            'review_star': review.get('review_star')
+        }
+        formatted_reviews.append(formatted_review)
+    
     # Сохраняем все отзывы
     payload = {
         "resource": "2gis",
-        "reviews": all_reviews,
+        "reviews": formatted_reviews,
     }
     with open(REVIEWS_OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
@@ -728,13 +928,14 @@ def main(input_file: str = None) -> None:
     Основная функция парсинга отзывов
     
     Args:
-        input_file: Путь к JSON файлу со списком школ (должен содержать поля 'feedback_link')
+        input_file: Путь к JSON файлу со списком школ (должен содержать поля '2gis_review_url')
                    Если не указан, ищет файл в текущей директории
     """
     # Ищем входной файл
     if input_file is None:
         # Ищем в разных местах
         possible_paths = [
+            os.path.join(REVIEWS_DATA_DIR, "input", "2gis_review_school.json"),
             os.path.join(REVIEWS_DATA_DIR, "input", "2gis_test_review_school.json"),
             os.path.join(REVIEWS_DATA_DIR, "input", "2gis_schools_with_info.json"),
             os.path.join(os.path.dirname(__file__), "2gis_reviews_data", "2gis_schools_with_info.json"),
@@ -748,7 +949,7 @@ def main(input_file: str = None) -> None:
         
         if input_file is None:
             print("Ошибка: не найден входной файл со списком школ")
-            print("Укажите путь к файлу с полем 'feedback_link' для каждой школы")
+            print("Укажите путь к файлу с полем '2gis_review_url' для каждой школы")
             return
     
     schools_data = load_input_links(input_file)
@@ -762,16 +963,17 @@ def main(input_file: str = None) -> None:
     try:
         for item in schools_data:
             school_id = item.get("id", "").strip()
-            feedback_link = item.get("feedback_link", "").strip()
+            review_url = item.get("2gis_review_url", "").strip()
             
             if not school_id:
-                print(f"Пропущена запись без id: {item.get('name', 'неизвестно')}")
+                print(f"Пропущена запись без id: {item.get('name', item.get('yandex_name', 'неизвестно'))}")
                 continue
 
             # Парсинг отзывов
-            if feedback_link:
-                print(f"Парсинг отзывов для школы {school_id}: {item.get('name', 'неизвестно')}")
-                reviews = parse_reviews(driver, feedback_link, school_id)
+            if review_url:
+                school_name = item.get("name", item.get("yandex_name", "неизвестно"))
+                print(f"Парсинг отзывов для школы {school_id}: {school_name}")
+                reviews = parse_reviews(driver, review_url, school_id)
                 all_reviews.extend(reviews)
                 print(f"  Найдено отзывов: {len(reviews)}")
                 
@@ -779,7 +981,7 @@ def main(input_file: str = None) -> None:
                 save_reviews_for_school(school_id, reviews)
                 print(f"  Сохранено отзывов для школы {school_id}")
             else:
-                print(f"Пропущена школа {school_id}: нет feedback_link")
+                print(f"Пропущена школа {school_id}: нет 2gis_review_url")
             
             time.sleep(0.5)
 

@@ -30,7 +30,7 @@ DATA_DIR = os.path.normpath(os.path.join(YM_ROOT, "ym_data", "ym_review_data"))
 DEBUG_HTML_DIR = os.path.join(DATA_DIR, "debug_html")
 INPUT_DIR = os.path.join(DATA_DIR, "input")
 OUTPUT_DIR = os.path.join(DATA_DIR, "output")
-INPUT_FILE = os.path.join(INPUT_DIR, "ym_gold_all_school_data.json")
+INPUT_FILE = os.path.join(INPUT_DIR, "ym_test_review_school.json")
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "ym_review_output.json")
 
 
@@ -48,9 +48,8 @@ class Review:
         return f'rate: {self.rating}, text: {self.text[:50]}..., date: {self.date}, likes: {self.likes}, dislikes: {self.dislikes}'
     
     def to_dict(self, school_id: str = None) -> Dict[str, Any]:
-        """Преобразует отзыв в словарь для сохранения в JSON"""
+        """Преобразует отзыв в словарь для сохранения в JSON (без review_id, он добавляется при сохранении)"""
         result = {}
-        # Добавляем school_id первым, если указан
         if school_id is not None:
             result["school_id"] = school_id
         result["date"] = self.date
@@ -97,6 +96,59 @@ class YandexMapsReviewsParser:
         
         # Года нет, добавляем текущий год в конец
         return f"{date_str} {current_year}"
+    
+    @staticmethod
+    def convert_date_to_postgresql_format(date_str: str) -> str:
+        """
+        Преобразует дату из русского формата в формат YYYY-MM-DD для PostgreSQL.
+        
+        Примеры входных форматов:
+        - "26 ноября 2015"
+        - "1 сентября 2018"
+        - "12 июня 2024"
+        - ISO формат: "2024-04-26T20:56:24.304Z"
+        - "" (пустая строка)
+        
+        Returns:
+            Строка в формате YYYY-MM-DD или пустая строка, если дата не распознана
+        """
+        if not date_str or not date_str.strip():
+            return ""
+        
+        date_str = date_str.strip()
+        
+        # Если дата уже в формате YYYY-MM-DD
+        if re.match(r'^\d{4}-\d{2}-\d{2}$', date_str):
+            return date_str
+        
+        # Если дата в ISO формате (например, "2024-04-26T20:56:24.304Z")
+        if 'T' in date_str:
+            date_part = date_str.split('T')[0]
+            if re.match(r'^\d{4}-\d{2}-\d{2}$', date_part):
+                return date_part
+        
+        # Парсим русский формат "день месяц год"
+        months = {
+            'января': 1, 'февраля': 2, 'марта': 3, 'апреля': 4,
+            'мая': 5, 'июня': 6, 'июля': 7, 'августа': 8,
+            'сентября': 9, 'октября': 10, 'ноября': 11, 'декабря': 12
+        }
+        
+        try:
+            parts = date_str.split()
+            if len(parts) >= 3:
+                day = int(parts[0])
+                month_name = parts[1].lower()
+                year = int(parts[2])
+                
+                if month_name in months:
+                    month = months[month_name]
+                    return f"{year:04d}-{month:02d}-{day:02d}"
+        except (ValueError, IndexError):
+            pass
+        
+        # Если не удалось распарсить, возвращаем пустую строку
+        return ""
     
     @staticmethod
     def _format_current_date() -> str:
@@ -615,6 +667,7 @@ class YandexMapsReviewsParser:
                         json_rating = rate
                         json_likes = likes
                         json_dislikes = dislikes
+                        json_date = review_date
                         
                         for json_review in json_reviews_data:
                             json_review_text = json_review.get('text', '')
@@ -627,26 +680,48 @@ class YandexMapsReviewsParser:
                             dom_start = dom_text_normalized[:50] if len(dom_text_normalized) > 50 else dom_text_normalized
                             json_start = json_review_text_normalized[:50] if len(json_review_text_normalized) > 50 else json_review_text_normalized
                             
-                            # Если начало совпадает и JSON текст длиннее - используем его
+                            # Если начало совпадает - используем данные из JSON
                             if dom_start and json_start and (
                                 dom_start == json_start or 
                                 (len(dom_start) > 30 and dom_start in json_review_text_normalized) or
                                 (len(json_start) > 30 and json_start in dom_text_normalized)
                             ):
+                                # Используем полный текст из JSON, если он длиннее
                                 if len(json_review_text) > len(review_text):
                                     json_text = json_review_text
-                                    # Обновляем данные из JSON, если они есть
-                                    if 'rating' in json_review:
-                                        json_rating = json_review.get('rating', rate)
-                                    if 'reactions' in json_review:
-                                        reactions = json_review.get('reactions', {})
-                                        json_likes = reactions.get('likes', likes)
-                                        json_dislikes = reactions.get('dislikes', dislikes)
-                                    print(f"[DEBUG] Использован полный текст из JSON (было {len(review_text)} символов, стало {len(json_text)} символов)")
+                                
+                                # Извлекаем rating напрямую из JSON
+                                if 'rating' in json_review:
+                                    json_rating = json_review.get('rating', 0)
+                                
+                                # Извлекаем likes и dislikes из JSON
+                                # Сначала проверяем поле "reactions" (если есть)
+                                if 'reactions' in json_review:
+                                    reactions = json_review.get('reactions', {})
+                                    if isinstance(reactions, dict):
+                                        json_likes = reactions.get('likes', json_likes)
+                                        json_dislikes = reactions.get('dislikes', json_dislikes)
+                                
+                                # Затем проверяем прямые поля "likes" и "dislikes" (приоритет выше)
+                                if 'likes' in json_review:
+                                    json_likes = json_review.get('likes', json_likes)
+                                if 'dislikes' in json_review:
+                                    json_dislikes = json_review.get('dislikes', json_dislikes)
+                                
+                                # Извлекаем дату из JSON, если есть (может быть в updatedTime)
+                                if 'updatedTime' in json_review:
+                                    updated_time = json_review.get('updatedTime', '')
+                                    if updated_time:
+                                        json_date = updated_time
+                                
+                                print(f"[DEBUG] Использованы данные из JSON: рейтинг={json_rating}, лайки={json_likes}, дизлайки={json_dislikes}, текст (было {len(review_text)} символов, стало {len(json_text)} символов)")
                                 break
                         
-                        res.append(Review(json_rating, json_text, review_date, json_likes, json_dislikes))
-                        print(f"[DEBUG] Найден отзыв: рейтинг={json_rating}, дата={review_date}, лайки={json_likes}, дизлайки={json_dislikes}, текст (первые 50 символов)='{json_text[:50]}...'")
+                        # Конвертируем дату в формат PostgreSQL
+                        date_formatted = self.convert_date_to_postgresql_format(json_date)
+                        
+                        res.append(Review(json_rating, json_text, date_formatted, json_likes, json_dislikes))
+                        print(f"[DEBUG] Найден отзыв: рейтинг={json_rating}, дата={date_formatted}, лайки={json_likes}, дизлайки={json_dislikes}, текст (первые 50 символов)='{json_text[:50]}...'")
                 except Exception as e:
                     print(f"[WARN] Ошибка при парсинге отдельного отзыва: {e}")
                     import traceback
@@ -741,8 +816,8 @@ class YandexMapsReviewsParser:
             
             for org in organizations:
                 org_id = org.get('id')
-                org_name = org.get('name', 'Неизвестно')
-                feedback_link = org.get('feedback_link')
+                org_name = org.get('name') or org.get('yandex_name', 'Неизвестно')
+                feedback_link = org.get('feedback_link') or org.get('ym_review_url')
                 
                 if not feedback_link:
                     print(f"[WARN] Пропущена организация {org_name}: нет ссылки на отзывы")
@@ -782,11 +857,32 @@ class YandexMapsReviewsParser:
                 
                 print(f"[OK] Получено отзывов: {len(reviews)}")
                 
+                # Перенумеровываем все отзывы сплошной нумерацией и делаем review_id первым полем
+                formatted_reviews = []
+                for idx, review in enumerate(all_reviews, start=1):
+                    # Преобразуем дату, если она еще не преобразована
+                    date_str = review.get('date', '')
+                    if date_str and date_str != None and not re.match(r'^\d{4}-\d{2}-\d{2}$', str(date_str)):
+                        date_str = self.convert_date_to_postgresql_format(str(date_str))
+                        review['date'] = date_str
+                    
+                    # Создаем новый словарь с review_id первым полем
+                    formatted_review = {
+                        'review_id': str(idx),
+                        'school_id': review.get('school_id'),
+                        'date': review.get('date'),
+                        'text': review.get('text'),
+                        'likes_count': review.get('likes_count'),
+                        'dislikes_count': review.get('dislikes_count'),
+                        'rating': review.get('rating')
+                    }
+                    formatted_reviews.append(formatted_review)
+                
                 # Сохраняем результаты после каждой организации
                 results = {
                     "resource": "yandex_maps",
                     "parse_date": self._format_current_date(),
-                    "reviews": all_reviews
+                    "reviews": formatted_reviews
                 }
                 try:
                     with open(output_file, 'w', encoding='utf-8') as f:
@@ -801,17 +897,37 @@ class YandexMapsReviewsParser:
         finally:
             self.close_driver()
         
-        # Финальное сохранение результатов
+        # Финальное сохранение результатов с перенумерацией
+        formatted_reviews = []
+        for idx, review in enumerate(all_reviews, start=1):
+            # Преобразуем дату, если она еще не преобразована
+            date_str = review.get('date', '')
+            if date_str and date_str != None and not re.match(r'^\d{4}-\d{2}-\d{2}$', str(date_str)):
+                date_str = self.convert_date_to_postgresql_format(str(date_str))
+                review['date'] = date_str
+            
+            # Создаем новый словарь с review_id первым полем
+            formatted_review = {
+                'review_id': str(idx),
+                'school_id': review.get('school_id'),
+                'date': review.get('date'),
+                'text': review.get('text'),
+                'likes_count': review.get('likes_count'),
+                'dislikes_count': review.get('dislikes_count'),
+                'rating': review.get('rating')
+            }
+            formatted_reviews.append(formatted_review)
+        
         results = {
             "resource": "yandex_maps",
             "parse_date": self._format_current_date(),
-            "reviews": all_reviews
+            "reviews": formatted_reviews
         }
         try:
             with open(output_file, 'w', encoding='utf-8') as f:
                 json.dump(results, f, ensure_ascii=False, indent=2)
             print(f"\n[OK] Результаты сохранены в: {output_file}")
-            print(f"[OK] Всего отзывов: {len(all_reviews)}")
+            print(f"[OK] Всего отзывов: {len(formatted_reviews)}")
         except Exception as e:
             print(f"[ERROR] Ошибка при сохранении результатов: {e}")
         

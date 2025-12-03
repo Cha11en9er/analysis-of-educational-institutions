@@ -1,0 +1,24 @@
+{
+    "source": "2GIS",
+    "topic": "Школы Саратова",
+    "data": [
+        {
+            "id": "1",
+            "name": "Средняя школа №83",
+            "url": "https://2gis.ru/saratov/firm/70000001037362342",
+            "feedback_link": "https://2gis.ru/saratov/firm/70000001037362342/tab/reviews"
+        },
+        {
+            "id": "201",
+            "name": "Основная общеобразовательная школа №78",
+            "url": "https://2gis.ru/saratov/firm/6052240280256859",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256859/tab/reviews"
+        },
+        {
+            "id": "202",
+            "name": "Средняя школа №64",
+            "url": "https://2gis.ru/saratov/firm/6052240280256822",
+            "feedback_link": "https://2gis.ru/saratov/firm/6052240280256822/tab/reviews"
+        }
+    ]
+}

@@ -1,0 +1,1203 @@
+{
+    "source": "yandex_maps",
+    "topic": "Школы Саратова",
+    "data": [
+        {
+            "id": "1",
+            "name": "Прогимназия Идеал",
+            "url": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+            "feedback_link": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+            "adres": "ул. имени Н.Г. Чернышевского, 16А, Саратов",
+            "reviews_count": 36,
+            "rating": 4.7
+        },
+        {
+            "id": "2",
+            "name": "Средняя общеобразовательная школа № 77",
+            "url": "https://yandex.com/maps/org/secondary_school_77/1028265778/",
+            "feedback_link": "https://yandex.com/maps/org/secondary_school_77/1028265778/reviews/",
+            "adres": "Саратов, Шелковичная улица",
+            "reviews_count": 62,
+            "rating": 3.8
+        },
+        {
+            "id": "3",
+            "name": "МОУ Средняя общеобразовательная школа № 6",
+            "url": "https://yandex.com/maps/org/secondary_school_6/90738861676/",
+            "feedback_link": "https://yandex.com/maps/org/secondary_school_6/90738861676/reviews/",
+            "adres": "ул. имени В.Н. Симбирцева, 34, Саратов",
+            "reviews_count": 74,
+            "rating": 4.1
+        },
+        {
+            "id": "4",
+            "name": "Средняя общеобразовательная школа № 95",
+            "url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_95_mou/1133121667/",
+            "feedback_link": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_95_mou/1133121667/reviews/",
+            "adres": "2-я Садовая ул., 23, Саратов",
+            "reviews_count": 68,
+            "rating": 4.1
+        },
+        {
+            "id": "5",
+            "name": "Средняя общеобразовательная школа № 18 имени О.П. Табакова",
+            "url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_18_s_uglublennym_izucheniyem_predmetov_frunzenskogo_rayona_goroda_saratova/92543720504/",
+            "feedback_link": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_18_s_uglublennym_izucheniyem_predmetov_frunzenskogo_rayona_goroda_saratova/92543720504/reviews/",
+            "adres": "ул. имени В.Г. Рахова, 124, Саратов",
+            "reviews_count": 54,
+            "rating": 3.8
+        },
+        {
+            "id": "6",
+            "name": "Средняя общеобразовательная школа № 70",
+            "url": "https://yandex.com/maps/org/secondary_school_70/107243058092/",
+            "feedback_link": "https://yandex.com/maps/org/secondary_school_70/107243058092/reviews/",
+            "adres": "Большая Садовая ул., 240, Саратов",
+            "reviews_count": 37,
+            "rating": 2.7
+        },
+        {
+            "id": "10",
+            "name": "Средняя общеобразовательная школа № 73",
+            "url": "https://yandex.com/maps/org/secondary_school_73/1032739814/",
+            "feedback_link": "https://yandex.com/maps/org/secondary_school_73/1032739814/reviews/",
+            "adres": "2-й Магнитный пр., 44, Саратов",
+            "reviews_count": 39,
+            "rating": 3.8
+        },
+        {
+            "id": "11",
+            "name": "Средняя общеобразовательная школа № 45",
+            "url": "https://yandex.com/maps/org/mei_secondary_school_45/1134269325/",
+            "feedback_link": "https://yandex.com/maps/org/mei_secondary_school_45/1134269325/reviews/",
+            "adres": "Дегтярная ул., 12, Саратов",
+            "reviews_count": 34,
+            "rating": 3.9
+        },
+        {
+            "id": "12",
+            "name": "Школа № 67 имени О.И. Янковского",
+            "url": "https://yandex.com/maps/org/shkola_67_imeni_o_i_yankovskogo/1115737362/",
+            "feedback_link": "https://yandex.com/maps/org/shkola_67_imeni_o_i_yankovskogo/1115737362/reviews/",
+            "adres": "ул. имени Е.И. Пугачёва, 123, Саратов",
+            "reviews_count": 68,
+            "rating": 4.0
+        },
+        {
+            "id": "13",
+            "name": "Средняя школа № 2 имени В.П. Тихонова",
+            "url": "https://yandex.com/maps/org/shkola_2_s_uglublennym_izucheniyem_otdelnykh_predmetov_im_v_p_tikhonova/83182503409/",
+            "feedback_link": "https://yandex.com/maps/org/shkola_2_s_uglublennym_izucheniyem_otdelnykh_predmetov_im_v_p_tikhonova/83182503409/reviews/",
+            "adres": "ул. имени И.В. Мичурина, 16, Саратов",
+            "reviews_count": 40,
+            "rating": 3.9
+        },
+        {
+            "id": "14",
+            "name": "Средняя общеобразовательная школа № 9",
+            "url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_9_volzhskogo_rayona_g_saratova/1096289996/",
+            "feedback_link": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_9_volzhskogo_rayona_g_saratova/1096289996/reviews/",
+            "adres": "Соляная ул., 17, Саратов",
+            "reviews_count": 25,
+            "rating": 4.1
+        },
+        {
+            "id": "15",
+            "name": "Гимназия № 2",
+            "url": "https://yandex.com/maps/org/mou_gymnasium_2_of_the_city_of_saratov/1044083499/",
+            "feedback_link": "https://yandex.com/maps/org/mou_gymnasium_2_of_the_city_of_saratov/1044083499/reviews/",
+            "adres": "ул. имени Н.Г. Чернышевского, 138, Саратов",
+            "reviews_count": 47,
+            "rating": 4.1
+        },
+        {
+            "id": "16",
+            "name": "Основная общеобразовательная школа школа № 14",
+            "url": "https://yandex.com/maps/org/school_14/1068794906/",
+            "feedback_link": "https://yandex.com/maps/org/school_14/1068794906/reviews/",
+            "adres": "1-я Садовая ул., 35, Саратов",
+            "reviews_count": 26,
+            "rating": 3.9
+        },
+        {
+            "id": "17",
+            "name": "Средняя общеобразовательная школа № 94",
+            "url": "https://yandex.com/maps/org/mou_sosh_94/1017609783/",
+            "feedback_link": "https://yandex.com/maps/org/mou_sosh_94/1017609783/reviews/",
+            "adres": "просп. имени 50 лет Октября, 75, Саратов",
+            "reviews_count": 51,
+            "rating": 4.1
+        },
+        {
+            "id": "18",
+            "name": "Школа № 97 Октябрьского района города Саратова",
+            "url": "https://yandex.com/maps/org/mou_97/85769787611/",
+            "feedback_link": "https://yandex.com/maps/org/mou_97/85769787611/reviews/",
+            "adres": "ул. имени В.Г. Клочкова, 77, Саратов",
+            "reviews_count": 69,
+            "rating": 4.1
+        },
+        {
+            "id": "19",
+            "name": "Средняя общеобразовательная школа № 10",
+            "url": "https://yandex.com/maps/org/munitsipalnoye_obshcheobrazovatelnoye_ucherezhdeniyesrednyaya_obshcheobrazovatelnaya_shkola_10_volzhskogo_rayona_g_saratov/177322688958/",
+            "feedback_link": "https://yandex.com/maps/org/munitsipalnoye_obshcheobrazovatelnoye_ucherezhdeniyesrednyaya_obshcheobrazovatelnaya_shkola_10_volzhskogo_rayona_g_saratov/177322688958/reviews/",
+            "adres": "ул. имени В.А. Рогожина, 24/32, Саратов",
+            "reviews_count": 47,
+            "rating": 4.1
+        },
+        {
+            "id": "20",
+            "name": "Средняя общеобразовательная школа № 23 им. С. В. Астраханцева",
+            "url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_23/189525180132/",
+            "feedback_link": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_23/189525180132/reviews/",
+            "adres": "5-й Нагорный пр., 3, Саратов",
+            "reviews_count": 64,
+            "rating": 3.9
+        },
+        {
+            "id": "21",
+            "name": "Средняя школа № 76",
+            "url": "https://yandex.com/maps/org/mou_srednyaya_obshcheobrazovatelnaya_shkola_76/1211441882/",
+            "feedback_link": "https://yandex.com/maps/org/mou_srednyaya_obshcheobrazovatelnaya_shkola_76/1211441882/reviews/",
+            "adres": "Вишнёвая ул., 16, Саратов",
+            "reviews_count": 44,
+            "rating": 4.2
+        },
+        {
+            "id": "22",
+            "name": "Средняя общеобразовательная школа № 1",
+            "url": "https://yandex.com/maps/org/mou_sosh_1_frunzenskogo_rayona_goroda_saratova/199355486831/",
+            "feedback_link": "https://yandex.com/maps/org/mou_sosh_1_frunzenskogo_rayona_goroda_saratova/199355486831/reviews/",
+            "adres": "ул. имени С.Т. Разина, 32, Саратов",
+            "reviews_count": 53,
+            "rating": 4.2
+        },
+        {
+            "id": "23",
+            "name": "Средняя школа № 51",
+            "url": "https://yandex.com/maps/org/munitsipalnoye_obshcheobrazovatelnoye_uchrezhdeniye_srednyaya_obshcheobrazovatelnaya_shkola_51/1041347543/",
+            "feedback_link": "https://yandex.com/maps/org/munitsipalnoye_obshcheobrazovatelnoye_uchrezhdeniye_srednyaya_obshcheobrazovatelnaya_shkola_51/1041347543/reviews/",
+            "adres": "Артиллерийская ул., 27, Саратов",
+            "reviews_count": 59,
+            "rating": 4.1
+        },
+        {
+            "id": "24",
+            "name": "Средняя общеобразовательная школа № 8",
+            "url": "https://yandex.com/maps/org/mou_sosh_8/1100719618/",
+            "feedback_link": "https://yandex.com/maps/org/mou_sosh_8/1100719618/reviews/",
+            "adres": "Соборная ул., 33, Саратов подъезд 1",
+            "reviews_count": 34,
+            "rating": 3.8
+        },
+        {
+            "id": "25",
+            "name": "Лицей-интернат естественных наук",
+            "url": "https://yandex.com/maps/org/litsey_internat_yestestvennykh_nauk/1046815252/",
+            "feedback_link": "https://yandex.com/maps/org/litsey_internat_yestestvennykh_nauk/1046815252/reviews/",
+            "adres": "Советская ул., 60, Саратов",
+            "reviews_count": 45,
+            "rating": 4.1
+        },
+        {
+            "id": "27",
+            "name": "Средняя общеобразовательная школа № 21 имени П.А. Столыпина",
+            "url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_21_im_p_a_stolypina/1029954455/",
+            "feedback_link": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_21_im_p_a_stolypina/1029954455/reviews/",
+            "adres": "ул. имени И.Н. Посадского, 193, Саратов",
+            "reviews_count": 43,
+            "rating": 4.1
+        },
+        {
+            "id": "28",
+            "name": "Средняя общеобразовательная школа № 59",
+            "url": "https://yandex.com/maps/org/munitsipalnoye_obrazovatelnoye_uchrezhdeniye_srednyaya_obshcheobrazovatelnaya_shkola_59_s_uglublennym_izucheniyem_predmetov/86852847691/",
+            "feedback_link": "https://yandex.com/maps/org/munitsipalnoye_obrazovatelnoye_uchrezhdeniye_srednyaya_obshcheobrazovatelnaya_shkola_59_s_uglublennym_izucheniyem_predmetov/86852847691/reviews/",
+            "adres": "ул. имени Н.Г. Маркина, 17/39, Саратов",
+            "reviews_count": 102,
+            "rating": 4.2
+        },
+        {
+            "id": "29",
+            "name": "Средняя общеобразовательная школа № 55",
+            "url": "https://yandex.com/maps/org/secondary_school_55/1061907716/",
+            "feedback_link": "https://yandex.com/maps/org/secondary_school_55/1061907716/reviews/",
+            "adres": "ул. имени А.П. Чехова, 1А, Саратов",
+            "reviews_count": 64,
+            "rating": 4.3
+        },
+        {
+            "id": "31",
+            "name": "Лицей № 24 имени М.М. Расковой",
+            "url": "https://yandex.com/maps/org/shkola_24/1026210237/",
+            "feedback_link": "https://yandex.com/maps/org/shkola_24/1026210237/reviews/",
+            "adres": "ул. имени Н.Е. Жуковского, 24, Саратов",
+            "reviews_count": 50,
+            "rating": 2.1
+        },
+        {
+            "id": "32",
+            "name": "Средняя общеобразовательная школа № 84",
+            "url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_84/245199771434/",
+            "feedback_link": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_84/245199771434/reviews/",
+            "adres": "Южно-Зелёная ул., 11А, Саратов",
+            "reviews_count": 64,
+            "rating": 4.3
+        },
+        {
+            "id": "33",
+            "name": "Средняя школа № 46",
+            "url": "https://yandex.com/maps/org/mou_sosh_46/1076928061/",
+            "feedback_link": "https://yandex.com/maps/org/mou_sosh_46/1076928061/reviews/",
+            "adres": "Овражная ул., 2Б, Саратов Главный корпус: Ипподромная, зд 19А Корпус Городские просторы: ул Долгина, д.5",
+            "reviews_count": 38,
+            "rating": 3.7
+        },
+        {
+            "id": "34",
+            "name": "Школа № 100",
+            "url": "https://yandex.com/maps/org/shkola_100/1057602578/",
+            "feedback_link": "https://yandex.com/maps/org/shkola_100/1057602578/reviews/",
+            "adres": "1-й пр. имени И.В. Панфилова, 3, Саратов",
+            "reviews_count": 85,
+            "rating": 4.2
+        },
+        {
+            "id": "35",
+            "name": "Средняя общеобразовательная школа № 106",
+            "url": "https://yandex.com/maps/org/secondary_school_106/210122755916/",
+            "feedback_link": "https://yandex.com/maps/org/secondary_school_106/210122755916/reviews/",
+            "adres": "Огородная ул., 33, Саратов",
+            "reviews_count": 32,
+            "rating": 3.8
+        },
+        {
+            "id": "36",
+            "name": "Средняя общеобразовательная школа № 72",
+            "url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_72/83700291925/",
+            "feedback_link": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_72/83700291925/reviews/",
+            "adres": "Бережная ул., 1, Саратов",
+            "reviews_count": 63,
+            "rating": 3.7
+        },
+        {
+            "id": "37",
+            "name": "Средняя общеобразовательная школа № 22 имени Героя Советского Союза П.Т. Пономарёва",
+            "url": "https://yandex.com/maps/org/secondary_school_no_22_named_after_hero_of_the_soviet_union_p_t_ponomarev/75061546307/",
+            "feedback_link": "https://yandex.com/maps/org/secondary_school_no_22_named_after_hero_of_the_soviet_union_p_t_ponomarev/75061546307/reviews/",
+            "adres": "Ростовская ул., 29, Саратов",
+            "reviews_count": 41,
+            "rating": 4.0
+        },
+        {
+            "id": "38",
+            "name": "Средняя общеобразовательная школа № 43 имени В.Ф. Маргелова",
+            "url": "https://yandex.com/maps/org/secondary_school_no_43_named_after_v_f_margelov/106386579987/",
+            "feedback_link": "https://yandex.com/maps/org/secondary_school_no_43_named_after_v_f_margelov/106386579987/reviews/",
+            "adres": "ул. имени П.Т. Пономарёва, 49, Саратов",
+            "reviews_count": 63,
+            "rating": 4.0
+        },
+        {
+            "id": "39",
+            "name": "Основная общеобразовательная школа № 17",
+            "url": "https://yandex.com/maps/org/basic_secondary_school_17/1131316636/",
+            "feedback_link": "https://yandex.com/maps/org/basic_secondary_school_17/1131316636/reviews/",
+            "adres": "Наумовская ул., 11, Саратов",
+            "reviews_count": 24,
+            "rating": 3.7
+        },
+        {
+            "id": "40",
+            "name": "Гимназия № 1",
+            "url": "https://yandex.com/maps/org/gymnasium_1/1074329395/",
+            "feedback_link": "https://yandex.com/maps/org/gymnasium_1/1074329395/reviews/",
+            "adres": "ул. имени И.В. Мичурина, 88, Саратов",
+            "reviews_count": 82,
+            "rating": 4.3
+        },
+        {
+            "id": "41",
+            "name": "Школа № 102",
+            "url": "https://yandex.com/maps/org/shkola_102/134553044381/",
+            "feedback_link": "https://yandex.com/maps/org/shkola_102/134553044381/reviews/",
+            "adres": "Саратов, 3-й Студёный проезд",
+            "reviews_count": 37,
+            "rating": 3.9
+        },
+        {
+            "id": "42",
+            "name": "Средняя общеобразовательная школа Аврора",
+            "url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_avrora/132394050649/",
+            "feedback_link": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_avrora/132394050649/reviews/",
+            "adres": "ул. имени П.Ф. Батавина, 23, Саратов",
+            "reviews_count": 79,
+            "rating": 4.2
+        },
+        {
+            "id": "43",
+            "name": "Гимназия № 4",
+            "url": "https://yandex.com/maps/org/gymnasium_4/1110657902/",
+            "feedback_link": "https://yandex.com/maps/org/gymnasium_4/1110657902/reviews/",
+            "adres": "Вознесенская ул., 5, Саратов",
+            "reviews_count": 91,
+            "rating": 4.1
+        },
+        {
+            "id": "44",
+            "name": "Средняя общеобразовательная школа № 8",
+            "url": "https://yandex.com/maps/org/school_8/1082134116/",
+            "feedback_link": "https://yandex.com/maps/org/school_8/1082134116/reviews/",
+            "adres": "ул. имени А.Н. Радищева, 18/1, Саратов",
+            "reviews_count": 7,
+            "rating": 3.9
+        },
+        {
+            "id": "45",
+            "name": "Средняя общеобразовательная школа № 71",
+            "url": "https://yandex.com/maps/org/secondary_school_71/1006274417/",
+            "feedback_link": "https://yandex.com/maps/org/secondary_school_71/1006274417/reviews/",
+            "adres": "ул. Танкистов, 126, Саратов",
+            "reviews_count": 26,
+            "rating": 3.9
+        },
+        {
+            "id": "46",
+            "name": "Средняя школа № 66 имени Н. И. Вавилова",
+            "url": "https://yandex.com/maps/org/secondary_school_no_66_named_after_n_i_vavilov/1133728010/",
+            "feedback_link": "https://yandex.com/maps/org/secondary_school_no_66_named_after_n_i_vavilov/1133728010/reviews/",
+            "adres": "Державинская ул., 1, посёлок Юбилейный, Саратов",
+            "reviews_count": 52,
+            "rating": 4.1
+        },
+        {
+            "id": "47",
+            "name": "Средняя общеобразовательная школа Иволгино",
+            "url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_ivolgino/113743269350/",
+            "feedback_link": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_ivolgino/113743269350/reviews/",
+            "adres": "Малая Розовая ул., 2, Саратов",
+            "reviews_count": 10,
+            "rating": 4.0
+        },
+        {
+            "id": "48",
+            "name": "Гимназия № 3",
+            "url": "https://yandex.com/maps/org/gymnasium_3/1041553719/",
+            "feedback_link": "https://yandex.com/maps/org/gymnasium_3/1041553719/reviews/",
+            "adres": "Большая Казачья ул., 121, Саратов",
+            "reviews_count": 77,
+            "rating": 4.1
+        },
+        {
+            "id": "49",
+            "name": "Гимназия № 31",
+            "url": "https://yandex.com/maps/org/gimnaziya_31/1053734696/",
+            "feedback_link": "https://yandex.com/maps/org/gimnaziya_31/1053734696/reviews/",
+            "adres": "Лесная ул., 1/9, Кировский район, Саратов",
+            "reviews_count": 53,
+            "rating": 4.0
+        },
+        {
+            "id": "50",
+            "name": "Средняя общеобразовательная школа № 54 имени И.А. Евтеева",
+            "url": "https://yandex.com/maps/org/shkola_54/1797953720/",
+            "feedback_link": "https://yandex.com/maps/org/shkola_54/1797953720/reviews/",
+            "adres": "Тракторная ул., 33, Саратов",
+            "reviews_count": 38,
+            "rating": 3.6
+        },
+        {
+            "id": "51",
+            "name": "Лицей № 2",
+            "url": "https://yandex.com/maps/org/litsey_2/1129908336/",
+            "feedback_link": "https://yandex.com/maps/org/litsey_2/1129908336/reviews/",
+            "adres": "1-я линия, 9/4, микрорайон Октябрьский, Саратов",
+            "reviews_count": 80,
+            "rating": 4.0
+        },
+        {
+            "id": "52",
+            "name": "Гимназия № 34 имени Г.Д. Ермолаева",
+            "url": "https://yandex.com/maps/org/shkola_40/42110567774/",
+            "feedback_link": "https://yandex.com/maps/org/shkola_40/42110567774/reviews/",
+            "adres": "Кавказская ул., 17, Саратов",
+            "reviews_count": 66,
+            "rating": 4.3
+        },
+        {
+            "id": "53",
+            "name": "Средняя общеобразовательная школа № 41",
+            "url": "https://yandex.com/maps/org/secondary_school_41/1078289826/",
+            "feedback_link": "https://yandex.com/maps/org/secondary_school_41/1078289826/reviews/",
+            "adres": "Тверская ул., 45, Ленинский район, Саратов",
+            "reviews_count": 57,
+            "rating": 4.1
+        },
+        {
+            "id": "54",
+            "name": "Школа № 101",
+            "url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_101/1049005491/",
+            "feedback_link": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_101/1049005491/reviews/",
+            "adres": "ул. имени В.И. Лебедева-Кумача, 73А, Саратов",
+            "reviews_count": 47,
+            "rating": 3.2
+        },
+        {
+            "id": "56",
+            "name": "Гимназия гуманитарных наук",
+            "url": "https://yandex.com/maps/org/gymnasium_of_humanities/1116621737/",
+            "feedback_link": "https://yandex.com/maps/org/gymnasium_of_humanities/1116621737/reviews/",
+            "adres": "ул. имени Н.И. Вавилова, 36, Саратов",
+            "reviews_count": 41,
+            "rating": 4.8
+        },
+        {
+            "id": "57",
+            "name": "Лицей № 47",
+            "url": "https://yandex.com/maps/org/lyceum_47/1043541140/",
+            "feedback_link": "https://yandex.com/maps/org/lyceum_47/1043541140/reviews/",
+            "adres": "3-я Степная ул., 6, Саратов",
+            "reviews_count": 70,
+            "rating": 4.3
+        },
+        {
+            "id": "58",
+            "name": "Средняя общеобразовательная школа № 44 имени Героя России Н.В. Исаева",
+            "url": "https://yandex.com/maps/org/shkola_44/106290889117/",
+            "feedback_link": "https://yandex.com/maps/org/shkola_44/106290889117/reviews/",
+            "adres": "Перспективная ул., 9/10, Саратов",
+            "reviews_count": 73,
+            "rating": 3.9
+        },
+        {
+            "id": "59",
+            "name": "Лицей-интернат 64",
+            "url": "https://yandex.com/maps/org/litsey_internat_64/98803499793/",
+            "feedback_link": "https://yandex.com/maps/org/litsey_internat_64/98803499793/reviews/",
+            "adres": "ул. имени С.Т. Разина, 73, Саратов",
+            "reviews_count": 34,
+            "rating": 4.9
+        },
+        {
+            "id": "60",
+            "name": "Средняя общеобразовательная школа № 48",
+            "url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_48/38102825946/",
+            "feedback_link": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_48/38102825946/reviews/",
+            "adres": "ул. имени В.И. Загороднева, 2, Саратов",
+            "reviews_count": 46,
+            "rating": 4.1
+        },
+        {
+            "id": "61",
+            "name": "Средняя общеобразовательная школа № 103",
+            "url": "https://yandex.com/maps/org/secondary_school_103/1010150388/",
+            "feedback_link": "https://yandex.com/maps/org/secondary_school_103/1010150388/reviews/",
+            "adres": "Производственная ул., 5, Саратов",
+            "reviews_count": 51,
+            "rating": 4.1
+        },
+        {
+            "id": "62",
+            "name": "Средняя общеобразовательная школа № 60 имени Героя Советского Союза П.Ф. Батавина",
+            "url": "https://yandex.com/maps/org/mou_sosh_60/1052700989/",
+            "feedback_link": "https://yandex.com/maps/org/mou_sosh_60/1052700989/reviews/",
+            "adres": "ул. имени П.Ф. Батавина, 6А, Саратов",
+            "reviews_count": 55,
+            "rating": 4.2
+        },
+        {
+            "id": "63",
+            "name": "Средняя образовательная школа № 61",
+            "url": "https://yandex.com/maps/org/shkola_61/88383529263/",
+            "feedback_link": "https://yandex.com/maps/org/shkola_61/88383529263/reviews/",
+            "adres": "ул. имени И.П. Бардина, 3, Саратов",
+            "reviews_count": 75,
+            "rating": 4.1
+        },
+        {
+            "id": "64",
+            "name": "Лицей Звезда",
+            "url": "https://yandex.com/maps/org/zvezda/192903085019/",
+            "feedback_link": "https://yandex.com/maps/org/zvezda/192903085019/reviews/",
+            "adres": "Техническая ул., 3/1, Саратов",
+            "reviews_count": 19,
+            "rating": 4.2
+        },
+        {
+            "id": "65",
+            "name": "Средняя школа № 57",
+            "url": "https://yandex.com/maps/org/munitsipalnoye_obshcheobrazovatelnoye_uchrezhdeniye_srednyaya_obshcheobrazovatelnaya_shkola_57/65307562578/",
+            "feedback_link": "https://yandex.com/maps/org/munitsipalnoye_obshcheobrazovatelnoye_uchrezhdeniye_srednyaya_obshcheobrazovatelnaya_shkola_57/65307562578/reviews/",
+            "adres": "Перспективная ул., 29, Саратов",
+            "reviews_count": 35,
+            "rating": 3.3
+        },
+        {
+            "id": "66",
+            "name": "Средняя общеобразовательная школа № 86",
+            "url": "https://yandex.com/maps/org/sarschool86/16042452222/",
+            "feedback_link": "https://yandex.com/maps/org/sarschool86/16042452222/reviews/",
+            "adres": "2-й Московский пр., 5, Саратов",
+            "reviews_count": 38,
+            "rating": 3.5
+        },
+        {
+            "id": "67",
+            "name": "Школа Уникум",
+            "url": "https://yandex.com/maps/org/shkola_unikum/1031121342/",
+            "feedback_link": "https://yandex.com/maps/org/shkola_unikum/1031121342/reviews/",
+            "adres": "Железнодорожная ул., 29, Саратов",
+            "reviews_count": 35,
+            "rating": 4.6
+        },
+        {
+            "id": "68",
+            "name": "Средняя общеобразовательная школа № 64",
+            "url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_64/120490931607/",
+            "feedback_link": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_64/120490931607/reviews/",
+            "adres": "Стахановская ул., 8, Саратов",
+            "reviews_count": 28,
+            "rating": 4.3
+        },
+        {
+            "id": "69",
+            "name": "Средняя общеобразовательная школа № 38",
+            "url": "https://yandex.com/maps/org/mou_sosh_38/1113508152/",
+            "feedback_link": "https://yandex.com/maps/org/mou_sosh_38/1113508152/reviews/",
+            "adres": "Южная ул., 46, Саратов",
+            "reviews_count": 66,
+            "rating": 3.2
+        },
+        {
+            "id": "70",
+            "name": "Специальная коррекционная общеобразовательная школа № 1 VIII вида",
+            "url": "https://yandex.com/maps/org/sbei_saratov_region_school_for_students_of_po_adapted_educational_programs_1_of_the_city_of_saratov/1006472275/",
+            "feedback_link": "https://yandex.com/maps/org/sbei_saratov_region_school_for_students_of_po_adapted_educational_programs_1_of_the_city_of_saratov/1006472275/reviews/",
+            "adres": "Вольская ул., 30, Саратов",
+            "reviews_count": 5,
+            "rating": 4.2
+        },
+        {
+            "id": "71",
+            "name": "Лицей № 53",
+            "url": "https://yandex.com/maps/org/lyceum_53_saratov/1062463037/",
+            "feedback_link": "https://yandex.com/maps/org/lyceum_53_saratov/1062463037/reviews/",
+            "adres": "4-й пр. имени Н.Г. Чернышевского, 2, Саратов",
+            "reviews_count": 57,
+            "rating": 4.0
+        },
+        {
+            "id": "72",
+            "name": "Лицей № 62",
+            "url": "https://yandex.com/maps/org/maou_lyceum_62/1132108231/",
+            "feedback_link": "https://yandex.com/maps/org/maou_lyceum_62/1132108231/reviews/",
+            "adres": "Ильинская площадь, 1, Саратов",
+            "reviews_count": 79,
+            "rating": 4.2
+        },
+        {
+            "id": "73",
+            "name": "Гимназия № 108",
+            "url": "https://yandex.com/maps/org/gimnaziya_108/1067532669/",
+            "feedback_link": "https://yandex.com/maps/org/gimnaziya_108/1067532669/reviews/",
+            "adres": "просп. имени 50 лет Октября, 107, Саратов",
+            "reviews_count": 60,
+            "rating": 3.4
+        },
+        {
+            "id": "74",
+            "name": "Лицей № 15",
+            "url": "https://yandex.com/maps/org/lyceum_15/1388328792/",
+            "feedback_link": "https://yandex.com/maps/org/lyceum_15/1388328792/reviews/",
+            "adres": "просп. Энтузиастов, 14, Саратов",
+            "reviews_count": 94,
+            "rating": 4.2
+        },
+        {
+            "id": "75",
+            "name": "Лицей № 24 имени М.М. Расковой, корпус № 2",
+            "url": "https://yandex.com/maps/org/munitsipalnoye_obrazovatelnoye_uchrezhdeniye_srednyaya_obshcheobrazovatelnaya_shkola_93/227625211666/",
+            "feedback_link": "https://yandex.com/maps/org/munitsipalnoye_obrazovatelnoye_uchrezhdeniye_srednyaya_obshcheobrazovatelnaya_shkola_93/227625211666/reviews/",
+            "adres": "Саратов, улица имени Героя Советского Союза Р.Е. Ароновой",
+            "reviews_count": 35,
+            "rating": 4.1
+        },
+        {
+            "id": "76",
+            "name": "Гуманитарно-экономический лицей",
+            "url": "https://yandex.com/maps/org/mou_gumanitarno_ekonomichesky_litsey/1092967532/",
+            "feedback_link": "https://yandex.com/maps/org/mou_gumanitarno_ekonomichesky_litsey/1092967532/reviews/",
+            "adres": "Большая Горная ул., 141, Саратов",
+            "reviews_count": 32,
+            "rating": 4.2
+        },
+        {
+            "id": "77",
+            "name": "Гимназия № 7",
+            "url": "https://yandex.com/maps/org/gymnasium_7/1032138559/",
+            "feedback_link": "https://yandex.com/maps/org/gymnasium_7/1032138559/reviews/",
+            "adres": "Федоровская ул., 3, посёлок Юбилейный, Саратов",
+            "reviews_count": 50,
+            "rating": 4.4
+        },
+        {
+            "id": "78",
+            "name": "Средняя общеобразовательная школа № 49",
+            "url": "https://yandex.com/maps/org/mou_sosh_49_leninskogo_rayona_goroda_saratova/2392968816/",
+            "feedback_link": "https://yandex.com/maps/org/mou_sosh_49_leninskogo_rayona_goroda_saratova/2392968816/reviews/",
+            "adres": "Перспективная ул., 10А, Саратов",
+            "reviews_count": 33,
+            "rating": 3.3
+        },
+        {
+            "id": "79",
+            "name": "Средняя общеобразовательная школа № 90",
+            "url": "https://yandex.com/maps/org/secondary_school_90/106467648031/",
+            "feedback_link": "https://yandex.com/maps/org/secondary_school_90/106467648031/reviews/",
+            "adres": "Заречная ул., 2А, Саратов",
+            "reviews_count": 28,
+            "rating": 4.1
+        },
+        {
+            "id": "80",
+            "name": "Лицей № 4",
+            "url": "https://yandex.com/maps/org/munitsipalnoye_obshcheobrazovatelnoye_uchrezhdeniye_litsey_4/1010589817/",
+            "feedback_link": "https://yandex.com/maps/org/munitsipalnoye_obshcheobrazovatelnoye_uchrezhdeniye_litsey_4/1010589817/reviews/",
+            "adres": "Московская ул., 64, Саратов",
+            "reviews_count": 53,
+            "rating": 4.0
+        },
+        {
+            "id": "81",
+            "name": "Лицей прикладных наук имени Д.И. Трубецкова",
+            "url": "https://yandex.com/maps/org/litsey_prikladnykh_nauk/1061363313/",
+            "feedback_link": "https://yandex.com/maps/org/litsey_prikladnykh_nauk/1061363313/reviews/",
+            "adres": "Комсомольская ул., 39, Саратов",
+            "reviews_count": 33,
+            "rating": 4.5
+        },
+        {
+            "id": "82",
+            "name": "Школа № 26",
+            "url": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola_26_mou/244703926854/",
+            "feedback_link": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola_26_mou/244703926854/reviews/",
+            "adres": "Ново-Крекингская ул., 47, Саратов",
+            "reviews_count": 21,
+            "rating": 3.7
+        },
+        {
+            "id": "83",
+            "name": "Покровская православная классическая гимназия имени святого Александра Невского",
+            "url": "https://yandex.com/maps/org/pokrovskaya_pravoslavnaya_klassicheskaya_gimnaziya_imeni_svyatogo_aleksandra_nevskogo/1225212315/",
+            "feedback_link": "https://yandex.com/maps/org/pokrovskaya_pravoslavnaya_klassicheskaya_gimnaziya_imeni_svyatogo_aleksandra_nevskogo/1225212315/reviews/",
+            "adres": "ул. имени А.М. Горького, 83, Саратов",
+            "reviews_count": 38,
+            "rating": 4.3
+        },
+        {
+            "id": "84",
+            "name": "Гимназия № 7",
+            "url": "https://yandex.com/maps/org/gimnaziya_7/161310028795/",
+            "feedback_link": "https://yandex.com/maps/org/gimnaziya_7/161310028795/reviews/",
+            "adres": "ул. имени А.П. Муленкова, 10А, Саратов",
+            "reviews_count": 38,
+            "rating": 4.2
+        },
+        {
+            "id": "85",
+            "name": "Лицей Солярис",
+            "url": "https://yandex.com/maps/org/solaris/34634068768/",
+            "feedback_link": "https://yandex.com/maps/org/solaris/34634068768/reviews/",
+            "adres": "ул. имени С.П. Лисина, 7Б, Саратов",
+            "reviews_count": 194,
+            "rating": 4.5
+        },
+        {
+            "id": "86",
+            "name": "Школа-интернат № 3",
+            "url": "https://yandex.com/maps/org/gbou_so_shkola_internat_aop_3_g_saratova/228497961048/",
+            "feedback_link": "https://yandex.com/maps/org/gbou_so_shkola_internat_aop_3_g_saratova/228497961048/reviews/",
+            "adres": "Селекционный пр., 3, Саратов",
+            "reviews_count": 36,
+            "rating": 4.9
+        },
+        {
+            "id": "87",
+            "name": "Прогимназия № 237 Семицветик",
+            "url": "https://yandex.com/maps/org/progymnasium_237_semitsvetik/1098995346/",
+            "feedback_link": "https://yandex.com/maps/org/progymnasium_237_semitsvetik/1098995346/reviews/",
+            "adres": "ул. имени И.Н. Посадского, 308А, Саратов",
+            "reviews_count": 49,
+            "rating": 4.8
+        },
+        {
+            "id": "88",
+            "name": "Основная общеобразовательная школа № 78",
+            "url": "https://yandex.com/maps/org/mou_osnovnaya_obshcheobrazovatelnaya_shkola_78/181981552893/",
+            "feedback_link": "https://yandex.com/maps/org/mou_osnovnaya_obshcheobrazovatelnaya_shkola_78/181981552893/reviews/",
+            "adres": "Огородная ул., 173, Саратов",
+            "reviews_count": 40,
+            "rating": 3.6
+        },
+        {
+            "id": "89",
+            "name": "Гимназия № 5",
+            "url": "https://yandex.com/maps/org/gimnaziya_5/27235900030/",
+            "feedback_link": "https://yandex.com/maps/org/gimnaziya_5/27235900030/reviews/",
+            "adres": "Азовская ул., 15, Саратов",
+            "reviews_count": 13,
+            "rating": 3.3
+        },
+        {
+            "id": "90",
+            "name": "Основная общеобразовательная школа № 91",
+            "url": "https://yandex.com/maps/org/munitsipalnoye_obshcheobrazovatelnoye_uchrezhdeniye_osnovnaya_obshcheobrazovatelnaya_shkola_91/1074530766/",
+            "feedback_link": "https://yandex.com/maps/org/munitsipalnoye_obshcheobrazovatelnoye_uchrezhdeniye_osnovnaya_obshcheobrazovatelnaya_shkola_91/1074530766/reviews/",
+            "adres": "Саратов, микрорайон Новый Увек",
+            "reviews_count": 8,
+            "rating": 3.7
+        },
+        {
+            "id": "91",
+            "name": "Инженерный лицей",
+            "url": "https://yandex.com/maps/org/litsey_internat_6/1052539347/",
+            "feedback_link": "https://yandex.com/maps/org/litsey_internat_6/1052539347/reviews/",
+            "adres": "ул. имени В.Г. Клочкова, 85, Саратов",
+            "reviews_count": 26,
+            "rating": 4.2
+        },
+        {
+            "id": "92",
+            "name": "Лицей № 50",
+            "url": "https://yandex.com/maps/org/lyceum_50/158041622369/",
+            "feedback_link": "https://yandex.com/maps/org/lyceum_50/158041622369/reviews/",
+            "adres": "ул. имени В.И. Загороднева, 16, Саратов",
+            "reviews_count": 40,
+            "rating": 4.3
+        },
+        {
+            "id": "93",
+            "name": "Гимназия № 75 имени Д.М. Карбышева",
+            "url": "https://yandex.com/maps/org/mou_sosh_75/197267336586/",
+            "feedback_link": "https://yandex.com/maps/org/mou_sosh_75/197267336586/reviews/",
+            "adres": "Осенняя ул., 5, Саратов",
+            "reviews_count": 41,
+            "rating": 4.0
+        },
+        {
+            "id": "94",
+            "name": "Средняя общеобразовательная школа № 105",
+            "url": "https://yandex.com/maps/org/mou_sosh_105/233289274520/",
+            "feedback_link": "https://yandex.com/maps/org/mou_sosh_105/233289274520/reviews/",
+            "adres": "ул. Строителей, 14А, Саратов",
+            "reviews_count": 22,
+            "rating": 4.0
+        },
+        {
+            "id": "95",
+            "name": "Лицей гуманитарных наук",
+            "url": "https://yandex.com/maps/org/lyceum_of_humanities/1008160365/",
+            "feedback_link": "https://yandex.com/maps/org/lyceum_of_humanities/1008160365/reviews/",
+            "adres": "Большая Садовая ул., 224А, Саратов",
+            "reviews_count": 54,
+            "rating": 4.2
+        },
+        {
+            "id": "96",
+            "name": "Лицей № 37",
+            "url": "https://yandex.com/maps/org/litsey_37/1022515372/",
+            "feedback_link": "https://yandex.com/maps/org/litsey_37/1022515372/reviews/",
+            "adres": "Мирный пер., 3, Саратов",
+            "reviews_count": 63,
+            "rating": 4.1
+        },
+        {
+            "id": "97",
+            "name": "Физико-технический лицей № 1",
+            "url": "https://yandex.com/maps/org/maou_physicotechnical_lyceum_1/1053419817/",
+            "feedback_link": "https://yandex.com/maps/org/maou_physicotechnical_lyceum_1/1053419817/reviews/",
+            "adres": "Московская ул., 143, Саратов",
+            "reviews_count": 72,
+            "rating": 4.4
+        },
+        {
+            "id": "98",
+            "name": "Гимназия № 34 имени Г.Д. Ермолаева",
+            "url": "https://yandex.com/maps/org/gimnaziya_34_imeni_g_d_yermolayeva/37872328167/",
+            "feedback_link": "https://yandex.com/maps/org/gimnaziya_34_imeni_g_d_yermolayeva/37872328167/reviews/",
+            "adres": "просп. Энтузиастов, 48, Саратов",
+            "reviews_count": 99,
+            "rating": 4.2
+        },
+        {
+            "id": "99",
+            "name": "Лицей математики и информатики",
+            "url": "https://yandex.com/maps/org/lyceum_of_mathematics_and_informatics/1083755421/",
+            "feedback_link": "https://yandex.com/maps/org/lyceum_of_mathematics_and_informatics/1083755421/reviews/",
+            "adres": "ул. имени И.Н. Посадского, 246, Саратов",
+            "reviews_count": 55,
+            "rating": 4.2
+        },
+        {
+            "id": "100",
+            "name": "Гимназия № 34, филиал Авиатор",
+            "url": "https://yandex.com/maps/org/gymnasium_34_aviator_branch/85144212428/",
+            "feedback_link": "https://yandex.com/maps/org/gymnasium_34_aviator_branch/85144212428/reviews/",
+            "adres": "Саратов, бульвар имени Николая Денисова",
+            "reviews_count": 38,
+            "rating": 4.0
+        },
+        {
+            "id": "101",
+            "name": "Лицей № 3 имени А. С. Пушкина",
+            "url": "https://yandex.com/maps/org/litsey_3_im_a_s_pushkina/1021305516/",
+            "feedback_link": "https://yandex.com/maps/org/litsey_3_im_a_s_pushkina/1021305516/reviews/",
+            "adres": "Советская ул., 46, Саратов",
+            "reviews_count": 56,
+            "rating": 4.1
+        },
+        {
+            "id": "102",
+            "name": "Национальная татарская гимназия",
+            "url": "https://yandex.com/maps/org/national_tatar_gymnasium/223623648005/",
+            "feedback_link": "https://yandex.com/maps/org/national_tatar_gymnasium/223623648005/reviews/",
+            "adres": "ул. имени А.Н. Радищева, 32, Саратов",
+            "reviews_count": 16,
+            "rating": 4.1
+        },
+        {
+            "id": "103",
+            "name": "Основная общеобразовательная школа № 81",
+            "url": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola_81/1045200569/",
+            "feedback_link": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola_81/1045200569/reviews/",
+            "adres": "Васильковская ул., 17, Саратов",
+            "reviews_count": 19,
+            "rating": 3.7
+        },
+        {
+            "id": "104",
+            "name": "Прогимназия Олимпионик имени С. П. Лисина",
+            "url": "https://yandex.com/maps/org/progimnaziya_olimpionik_imeni_s_p_lisina/79179913211/",
+            "feedback_link": "https://yandex.com/maps/org/progimnaziya_olimpionik_imeni_s_p_lisina/79179913211/reviews/",
+            "adres": "ул. имени С.П. Лисина, 14, Саратов",
+            "reviews_count": 65,
+            "rating": 4.9
+        },
+        {
+            "id": "105",
+            "name": "Средняя общеобразовательная школа № 83",
+            "url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_83/1013287750/",
+            "feedback_link": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_83/1013287750/reviews/",
+            "adres": "Крымская ул., 2, Саратов",
+            "reviews_count": 42,
+            "rating": 4.0
+        },
+        {
+            "id": "106",
+            "name": "Школа-интернат для обучающихся по адаптированным общеобразовательным программам № 4",
+            "url": "https://yandex.com/maps/org/boarding_school_4/18629834848/",
+            "feedback_link": "https://yandex.com/maps/org/boarding_school_4/18629834848/reviews/",
+            "adres": "ул. имени Н.Г. Чернышевского, 157, Саратов",
+            "reviews_count": 21,
+            "rating": 4.5
+        },
+        {
+            "id": "108",
+            "name": "Специальная коррекционная общеобразовательная школа № 4 VIII вида",
+            "url": "https://yandex.com/maps/org/special_correctional_general_education_school_4_of_the_viii_type/15410306125/",
+            "feedback_link": "https://yandex.com/maps/org/special_correctional_general_education_school_4_of_the_viii_type/15410306125/reviews/",
+            "adres": "ул. имени В.И. Загороднева, 19, Саратов",
+            "reviews_count": 19,
+            "rating": 3.9
+        },
+        {
+            "id": "109",
+            "name": "Средняя общеобразовательная школа № 16",
+            "url": "https://yandex.com/maps/org/kadetskaya_shkola_16/1781697901/",
+            "feedback_link": "https://yandex.com/maps/org/kadetskaya_shkola_16/1781697901/reviews/",
+            "adres": "Брянская ул., 3, Саратов",
+            "reviews_count": 14,
+            "rating": 3.9
+        },
+        {
+            "id": "110",
+            "name": "ГБОУ Со школа-интернат для обучающихся по адаптированным образовательным программам № 5 г. Саратова",
+            "url": "https://yandex.com/maps/org/gosudarstvennoye_byudzhetnoye_obshcheobrazovatelnoye_uchrezhdeniye_so_shkola_internat_dlya_obuchayushchikhsya_po_adaptirovannym_obrazovatelnym_programmam_5_g_saratova/1010417963/",
+            "feedback_link": "https://yandex.com/maps/org/gosudarstvennoye_byudzhetnoye_obshcheobrazovatelnoye_uchrezhdeniye_so_shkola_internat_dlya_obuchayushchikhsya_po_adaptirovannym_obrazovatelnym_programmam_5_g_saratova/1010417963/reviews/",
+            "adres": "ул. имени В.А. Рогожина, 22, Саратов",
+            "reviews_count": 18,
+            "rating": 4.2
+        },
+        {
+            "id": "112",
+            "name": "Гимназия № 89",
+            "url": "https://yandex.com/maps/org/gimnaziya_89/70848925534/",
+            "feedback_link": "https://yandex.com/maps/org/gimnaziya_89/70848925534/reviews/",
+            "adres": "Мало-Елшанская ул., 5, стр. 3, Саратов",
+            "reviews_count": 61,
+            "rating": 4.4
+        },
+        {
+            "id": "115",
+            "name": "Школа для обучающихся по адаптированным образовательным программам № 2",
+            "url": "https://yandex.com/maps/org/gosudarstvennoye_byudzhetnoye_obshcheobrazovatelnoye_uchrezhdeniye_saratovskoy_oblasti_shkola_dlya_obuchayushchikhsya_po_adaptivnym_obrazovatelnym_programmam_2_goroda_saratov/72111282236/",
+            "feedback_link": "https://yandex.com/maps/org/gosudarstvennoye_byudzhetnoye_obshcheobrazovatelnoye_uchrezhdeniye_saratovskoy_oblasti_shkola_dlya_obuchayushchikhsya_po_adaptivnym_obrazovatelnym_programmam_2_goroda_saratov/72111282236/reviews/",
+            "adres": "Симбирская ул., 9, Саратов",
+            "reviews_count": "отзывов нету",
+            "rating": 4.1
+        },
+        {
+            "id": "118",
+            "name": "Средняя общеобразовательная школа № 69",
+            "url": "https://yandex.com/maps/org/secondary_school_69/1007151057/",
+            "feedback_link": "https://yandex.com/maps/org/secondary_school_69/1007151057/reviews/",
+            "adres": "ул. Мелиораторов, 1А, Саратов",
+            "reviews_count": 18,
+            "rating": 4.3
+        },
+        {
+            "id": "121",
+            "name": "МАОУ Лицей № 36",
+            "url": "https://yandex.com/maps/org/maou_litsey_36/1122418848/",
+            "feedback_link": "https://yandex.com/maps/org/maou_litsey_36/1122418848/reviews/",
+            "adres": "Одесская ул., 7, Саратов",
+            "reviews_count": 87,
+            "rating": 4.1
+        },
+        {
+            "id": "122",
+            "name": "Медико-биологический лицей",
+            "url": "https://yandex.com/maps/org/maou_mediko_biologichesky_litsey_goroda_saratova/1174614164/",
+            "feedback_link": "https://yandex.com/maps/org/maou_mediko_biologichesky_litsey_goroda_saratova/1174614164/reviews/",
+            "adres": "ул. имени Ф.А. Блинова, 27, Саратов",
+            "reviews_count": 127,
+            "rating": 4.3
+        },
+        {
+            "id": "123",
+            "name": "Лицей № 107",
+            "url": "https://yandex.com/maps/org/lyceum_107/1021761978/",
+            "feedback_link": "https://yandex.com/maps/org/lyceum_107/1021761978/reviews/",
+            "adres": "Державинская ул., 10, посёлок Юбилейный, Саратов",
+            "reviews_count": 44,
+            "rating": 4.2
+        },
+        {
+            "id": "124",
+            "name": "Школа № 6",
+            "url": "https://yandex.com/maps/org/school_6/1075874246/",
+            "feedback_link": "https://yandex.com/maps/org/school_6/1075874246/reviews/",
+            "adres": "Пролетарская ул., 8, Саратов",
+            "reviews_count": 8,
+            "rating": 3.4
+        },
+        {
+            "id": "125",
+            "name": "Средняя школа с этнокультурным еврейским компонентом",
+            "url": "https://yandex.com/maps/org/secondary_school_with_an_ethnocultural_jewish_component/1160168382/",
+            "feedback_link": "https://yandex.com/maps/org/secondary_school_with_an_ethnocultural_jewish_component/1160168382/reviews/",
+            "adres": "Селекционный пр., 5, Саратов",
+            "reviews_count": 9,
+            "rating": 4.3
+        },
+        {
+            "id": "127",
+            "name": "Гимназия № 5",
+            "url": "https://yandex.com/maps/org/gimnaziya_5/1056412780/",
+            "feedback_link": "https://yandex.com/maps/org/gimnaziya_5/1056412780/reviews/",
+            "adres": "1-й Тульский пр., 6А, Саратов",
+            "reviews_count": 63,
+            "rating": 4.3
+        },
+        {
+            "id": "129",
+            "name": "Гимназия Д.А.Р",
+            "url": "https://yandex.com/maps/org/gymnasium_d_a_r/1065478073/",
+            "feedback_link": "https://yandex.com/maps/org/gymnasium_d_a_r/1065478073/reviews/",
+            "adres": "Гвардейская ул., 15Е, Саратов",
+            "reviews_count": 46,
+            "rating": 4.6
+        },
+        {
+            "id": "133",
+            "name": "Национальная татарская гимназия, начальная школа",
+            "url": "https://yandex.com/maps/org/national_tatar_gymnasium_primary_school/1731589729/",
+            "feedback_link": "https://yandex.com/maps/org/national_tatar_gymnasium_primary_school/1731589729/reviews/",
+            "adres": "Мясницкая ул., 4, Саратов",
+            "reviews_count": 7,
+            "rating": 4.3
+        },
+        {
+            "id": "146",
+            "name": "Гимназия № 87",
+            "url": "https://yandex.com/maps/org/gimnaziya_87/1044478710/",
+            "feedback_link": "https://yandex.com/maps/org/gimnaziya_87/1044478710/reviews/",
+            "adres": "Перспективная ул., 9А, Саратов",
+            "reviews_count": 85,
+            "rating": 4.4
+        },
+        {
+            "id": "147",
+            "name": "Гимназия № 58",
+            "url": "https://yandex.com/maps/org/gimnaziya_58/44228629428/",
+            "feedback_link": "https://yandex.com/maps/org/gimnaziya_58/44228629428/reviews/",
+            "adres": "ул. имени М.М. Расковой, 12, Саратов",
+            "reviews_count": 53,
+            "rating": 4.1
+        },
+        {
+            "id": "148",
+            "name": "Средняя общеобразовательная школа № 80 Ласточкино",
+            "url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_80_lastochkino/10978663729/",
+            "feedback_link": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_80_lastochkino/10978663729/reviews/",
+            "adres": "ул. Романтиков, 85, Саратов",
+            "reviews_count": 17,
+            "rating": 3.9
+        },
+        {
+            "id": "153",
+            "name": "Школа № 91",
+            "url": "https://yandex.com/maps/org/school_91/1125641939/",
+            "feedback_link": "https://yandex.com/maps/org/school_91/1125641939/reviews/",
+            "adres": "1-й Нефтяной пр., 1Д, посёлок Нефтяной, Саратов",
+            "reviews_count": 7,
+            "rating": 4.1
+        },
+        {
+            "id": "162",
+            "name": "Средняя общеобразовательная школа № 66 имени Н.И. Вавилова",
+            "url": "https://yandex.com/maps/org/secondary_school_66_named_after_n_i_vavilov_building_eureka/1060813617/",
+            "feedback_link": "https://yandex.com/maps/org/secondary_school_66_named_after_n_i_vavilov_building_eureka/1060813617/reviews/",
+            "adres": "Казанская ул., 29, Саратов",
+            "reviews_count": 21,
+            "rating": 4.2
+        },
+        {
+            "id": "164",
+            "name": "Начальная школа-детский сад № 88",
+            "url": "https://yandex.com/maps/org/nachalnaya_shkola_detskiy_sad_88/59711643737/",
+            "feedback_link": "https://yandex.com/maps/org/nachalnaya_shkola_detskiy_sad_88/59711643737/reviews/",
+            "adres": "Саратов, посёлок Латухино",
+            "reviews_count": 5,
+            "rating": 4.0
+        },
+        {
+            "id": "171",
+            "name": "Лицей № 56",
+            "url": "https://yandex.com/maps/org/lyceum_56/143737145201/",
+            "feedback_link": "https://yandex.com/maps/org/lyceum_56/143737145201/reviews/",
+            "adres": "3-й пр. Строителей, 3, Саратов",
+            "reviews_count": 81,
+            "rating": 4.2
+        },
+        {
+            "id": "172",
+            "name": "Средняя школа № 46, корпус № 2 Городские просторы",
+            "url": "https://yandex.com/maps/org/srednyaya_shkola_46_korpus_2_gorodskiye_prostory/39057501147/",
+            "feedback_link": "https://yandex.com/maps/org/srednyaya_shkola_46_korpus_2_gorodskiye_prostory/39057501147/reviews/",
+            "adres": "ул. имени Евгения Долгина, 5, Саратов",
+            "reviews_count": 1,
+            "rating": 3.8
+        },
+        {
+            "id": "184",
+            "name": "Гуманитарно-экономический лицей",
+            "url": "https://yandex.com/maps/org/gumanitarno_ekonomicheskiy_litsey/162780296026/",
+            "feedback_link": "https://yandex.com/maps/org/gumanitarno_ekonomicheskiy_litsey/162780296026/reviews/",
+            "adres": "1-я Садовая ул., 2, Саратов",
+            "reviews_count": 1,
+            "rating": 4.2
+        },
+        {
+            "id": "185",
+            "name": "Средняя общеообразовательная школа",
+            "url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_st_tarkhany_mou/1048217957/",
+            "feedback_link": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_st_tarkhany_mou/1048217957/reviews/",
+            "adres": "Саратовская область, Саратовский район, станция Тарханы",
+            "reviews_count": 6,
+            "rating": 4.3
+        },
+        {
+            "id": "186",
+            "name": "Физико-технический лицей № 1, корпус № 2",
+            "url": "https://yandex.com/maps/org/physico_tehnical_lyceum_1_korpus_2/1034685609/",
+            "feedback_link": "https://yandex.com/maps/org/physico_tehnical_lyceum_1_korpus_2/1034685609/reviews/",
+            "adres": "Железнодорожная ул., 74, Саратов",
+            "reviews_count": 16,
+            "rating": 4.3
+        },
+        {
+            "id": "188",
+            "name": "Средняя общеобразовательная школа № 16",
+            "url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_16/36621252093/",
+            "feedback_link": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_16/36621252093/reviews/",
+            "adres": "Лесопильная ул., 17, посёлок Лесопильный, Саратов",
+            "reviews_count": "отзывов нету",
+            "rating": null
+        },
+        {
+            "id": "196",
+            "name": "Гимназия гуманитарных наук",
+            "url": "https://yandex.com/maps/org/gimnaziya_gumanitarnykh_nauk/70576329582/",
+            "feedback_link": "https://yandex.com/maps/org/gimnaziya_gumanitarnykh_nauk/70576329582/reviews/",
+            "adres": "Большая Казачья ул., 58, Саратов",
+            "reviews_count": "отзывов нету",
+            "rating": null
+        },
+        {
+            "id": "201",
+            "name": "Школа-студия балета Татьяны Картушиной",
+            "url": "https://yandex.com/maps/org/kartushinaballetstudio/219592175469/",
+            "feedback_link": "https://yandex.com/maps/org/kartushinaballetstudio/219592175469/reviews/",
+            "adres": "Соборная ул., 9, Саратов этаж 3",
+            "reviews_count": 3,
+            "rating": 4.3
+        },
+        {
+            "id": "209",
+            "name": "Школа № 71",
+            "url": "https://yandex.com/maps/org/mou_sosh_71/38485495120/",
+            "feedback_link": "https://yandex.com/maps/org/mou_sosh_71/38485495120/reviews/",
+            "adres": "Городская ул., 74, Саратов",
+            "reviews_count": 2,
+            "rating": 2.8
+        },
+        {
+            "id": "224",
+            "name": "Школа-интернат для обучающихся по адаптированным образовательным программам № 5 г. Саратова, центр психолого-педагогического и медико-социального сопровождения",
+            "url": "https://yandex.com/maps/org/shkola_internat_dlya_obuchayushchikhsya_po_adaptirovannym_obrazovatelnym_programmam_5_g_saratova_tsentr_psikhologo_pedagogicheskogo_i_mediko_sotsialnogo_soprovozhdeniya/35813893759/",
+            "feedback_link": "https://yandex.com/maps/org/shkola_internat_dlya_obuchayushchikhsya_po_adaptirovannym_obrazovatelnym_programmam_5_g_saratova_tsentr_psikhologo_pedagogicheskogo_i_mediko_sotsialnogo_soprovozhdeniya/35813893759/reviews/",
+            "adres": "Северная ул., 3, Саратов",
+            "reviews_count": "отзывов нету",
+            "rating": null
+        },
+        {
+            "id": "272",
+            "name": "Начальная общеобразовательная школа № 232, детский сад",
+            "url": "https://yandex.com/maps/org/primary_secondary_school_232/1005673156/",
+            "feedback_link": "https://yandex.com/maps/org/primary_secondary_school_232/1005673156/reviews/",
+            "adres": "Перспективная ул., 8В, Саратов",
+            "reviews_count": 30,
+            "rating": 5.0
+        },
+        {
+            "id": "341",
+            "name": "Школа танцев",
+            "url": "https://yandex.com/maps/org/shkola_tantsev/208751243933/",
+            "feedback_link": "https://yandex.com/maps/org/shkola_tantsev/208751243933/reviews/",
+            "adres": "Астраханская ул., 47, Саратов",
+            "reviews_count": "отзывов нету",
+            "rating": 4.9
+        },
+        {
+            "id": "344",
+            "name": "Прогимназия № 237 Семицветик",
+            "url": "https://yandex.com/maps/org/progymnasium_237_semitsvetik/20478037455/",
+            "feedback_link": "https://yandex.com/maps/org/progymnasium_237_semitsvetik/20478037455/reviews/",
+            "adres": "ул. имени И.Н. Посадского, 308, Саратов",
+            "reviews_count": "отзывов нету",
+            "rating": null
+        }
+    ]
+}
