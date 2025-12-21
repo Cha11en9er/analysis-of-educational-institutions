@@ -171,6 +171,66 @@ class YandexMapsReviewsParser:
         
         return f"{day} {month} {year}"
     
+    @staticmethod
+    def _extract_rating_from_aria_label(elem) -> int:
+        """
+        Извлекает рейтинг из aria-label элемента.
+        Ищет паттерн "Оценка X Из 5" или "Оценка X.Y Из 5" и возвращает округленное значение.
+        
+        Args:
+            elem: BeautifulSoup элемент для поиска
+        
+        Returns:
+            Рейтинг от 1 до 5, или 0 если не найден
+        """
+        if not elem:
+            return 0
+        
+        # Сначала проверяем сам переданный элемент на наличие aria-label
+        if hasattr(elem, 'get'):
+            aria_label = elem.get('aria-label', '')
+            if aria_label:
+                match = re.search(r'Оценка\s+([\d.]+)\s+Из\s+5', aria_label, re.IGNORECASE)
+                if match:
+                    try:
+                        rating_value = float(match.group(1))
+                        rating = round(rating_value)
+                        if 1 <= rating <= 5:
+                            return rating
+                    except (ValueError, AttributeError):
+                        pass
+        
+        # Ищем элемент с aria-label внутри переданного элемента
+        rating_elem = elem.find(attrs={'aria-label': re.compile(r'Оценка\s+[\d.]+', re.IGNORECASE)})
+        
+        if rating_elem:
+            aria_label = rating_elem.get('aria-label', '')
+            # Ищем паттерн "Оценка X Из 5" или "Оценка X.Y Из 5"
+            match = re.search(r'Оценка\s+([\d.]+)\s+Из\s+5', aria_label, re.IGNORECASE)
+            if match:
+                try:
+                    rating_value = float(match.group(1))
+                    # Округляем до ближайшего целого (1-5)
+                    rating = round(rating_value)
+                    if 1 <= rating <= 5:
+                        return rating
+                except (ValueError, AttributeError):
+                    pass
+        
+        # Также пробуем найти meta itemprop="ratingValue"
+        meta_rating = elem.find('meta', attrs={'itemprop': 'ratingValue'})
+        if meta_rating:
+            content = meta_rating.get('content', '')
+            try:
+                rating_value = float(content)
+                rating = round(rating_value)
+                if 1 <= rating <= 5:
+                    return rating
+            except (ValueError, AttributeError):
+                pass
+        
+        return 0
+    
     def setup_driver(self) -> webdriver.Chrome:
         """Настройка Chrome WebDriver"""
         chrome_options = Options()
@@ -575,26 +635,48 @@ class YandexMapsReviewsParser:
                         print(f"[DEBUG] Не удалось найти текст отзыва в элементе")
                         continue
                     
-                    # Получаем рейтинг - пробуем разные селекторы
+                    # Получаем рейтинг - ищем внутри контейнера отзыва (business-review-view__rating)
+                    # Это важно, чтобы не взять рейтинг школы, а именно отзыва
                     rate = 0
-                    rate_info = None
                     
-                    for rating_selector in ['business-rating-badge-view__stars', 'rating', 'review-rating']:
-                        rate_info = elem.find('div', class_=rating_selector)
-                        if rate_info:
-                            # Ищем заполненные звезды
-                            full_stars = rate_info.find_all('span', 
-                                class_='inline-image _loaded icon business-rating-badge-view__star _full _size_m')
-                            if full_stars:
-                                rate = len(full_stars)
-                                break
-                            # Пробуем другие варианты классов звезд
-                            all_stars = rate_info.find_all(['span', 'div'], class_=lambda x: x and 'star' in ' '.join(x).lower())
-                            if all_stars:
-                                # Считаем заполненные звезды по другим признакам
-                                rate = len([s for s in all_stars if 'full' in str(s.get('class', [])).lower() or '_full' in str(s.get('class', []))])
+                    # Сначала ищем контейнер рейтинга отзыва
+                    rating_container = elem.find('div', class_='business-review-view__rating')
+                    if rating_container:
+                        # Извлекаем рейтинг из aria-label
+                        rate = self._extract_rating_from_aria_label(rating_container)
+                    
+                    # Если не нашли через aria-label, пробуем другие методы
+                    if rate == 0:
+                        # Ищем элементы с классом business-rating-badge-view__stars внутри отзыва
+                        for rating_selector in ['business-rating-badge-view__stars', 'rating', 'review-rating']:
+                            rate_info = elem.find('div', class_=rating_selector)
+                            if rate_info:
+                                # Извлекаем из aria-label
+                                rate = self._extract_rating_from_aria_label(rate_info)
                                 if rate > 0:
                                     break
+                                
+                                # Ищем заполненные звезды
+                                full_stars = rate_info.find_all('span', 
+                                    class_='inline-image _loaded icon business-rating-badge-view__star _full _size_m')
+                                if full_stars:
+                                    rate = len(full_stars)
+                                    break
+                                
+                                # Пробуем без _size_m
+                                full_stars = rate_info.find_all('span', 
+                                    class_=lambda x: x and 'business-rating-badge-view__star' in ' '.join(x) and '_full' in ' '.join(x))
+                                if full_stars:
+                                    rate = len(full_stars)
+                                    break
+                                
+                                # Пробуем другие варианты классов звезд
+                                all_stars = rate_info.find_all(['span', 'div'], class_=lambda x: x and 'star' in ' '.join(x).lower())
+                                if all_stars:
+                                    # Считаем заполненные звезды по другим признакам
+                                    rate = len([s for s in all_stars if 'full' in str(s.get('class', [])).lower() or '_full' in str(s.get('class', []))])
+                                    if rate > 0:
+                                        break
                     
                     # Если не нашли рейтинг, пробуем найти по атрибутам data-rating или другим
                     if rate == 0:
@@ -664,7 +746,7 @@ class YandexMapsReviewsParser:
                         
                         # Ищем соответствующий отзыв в JSON по началу текста
                         json_text = review_text
-                        json_rating = rate
+                        json_rating = rate  # Начинаем с рейтинга из DOM
                         json_likes = likes
                         json_dislikes = dislikes
                         json_date = review_date
@@ -690,9 +772,24 @@ class YandexMapsReviewsParser:
                                 if len(json_review_text) > len(review_text):
                                     json_text = json_review_text
                                 
-                                # Извлекаем rating напрямую из JSON
-                                if 'rating' in json_review:
-                                    json_rating = json_review.get('rating', 0)
+                                # Извлекаем rating из JSON, но только если он есть и валиден
+                                # Если в JSON нет рейтинга или он 0/null, используем рейтинг из DOM
+                                json_review_rating = json_review.get('rating')
+                                if json_review_rating is not None and json_review_rating != 0:
+                                    try:
+                                        json_rating = int(json_review_rating)
+                                        if 1 <= json_rating <= 5:
+                                            # Используем рейтинг из JSON, если он валиден
+                                            pass
+                                        else:
+                                            # Если рейтинг невалиден, используем из DOM
+                                            json_rating = rate
+                                    except (ValueError, TypeError):
+                                        # Если не удалось преобразовать, используем из DOM
+                                        json_rating = rate
+                                else:
+                                    # Если рейтинга нет в JSON, используем из DOM
+                                    json_rating = rate
                                 
                                 # Извлекаем likes и dislikes из JSON
                                 # Сначала проверяем поле "reactions" (если есть)
@@ -714,7 +811,7 @@ class YandexMapsReviewsParser:
                                     if updated_time:
                                         json_date = updated_time
                                 
-                                print(f"[DEBUG] Использованы данные из JSON: рейтинг={json_rating}, лайки={json_likes}, дизлайки={json_dislikes}, текст (было {len(review_text)} символов, стало {len(json_text)} символов)")
+                                print(f"[DEBUG] Использованы данные из JSON: рейтинг={json_rating} (из {'JSON' if json_review_rating is not None and json_review_rating != 0 else 'DOM'}), лайки={json_likes}, дизлайки={json_dislikes}, текст (было {len(review_text)} символов, стало {len(json_text)} символов)")
                                 break
                         
                         # Конвертируем дату в формат PostgreSQL
