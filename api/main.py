@@ -60,18 +60,18 @@ async def get_schools():
         conn = get_db_connection()
         cursor = conn.cursor()
         
-        # Вызываем функцию из БД
-        cursor.execute("SELECT * FROM ca.get_schools()")
+        # Прямой запрос к таблице ca.school
+        cursor.execute("SELECT school_id, school_name, school_adres FROM ca.school ORDER BY school_id")
         rows = cursor.fetchall()
-        
-        # Получаем названия колонок
-        columns = [desc[0] for desc in cursor.description]
         
         # Формируем результат
         schools = []
         for row in rows:
-            school = dict(zip(columns, row))
-            schools.append(school)
+            schools.append({
+                "school_id": row[0],
+                "school_name": row[1],
+                "school_adres": row[2]
+            })
         
         cursor.close()
         return {"schools": schools}
@@ -90,34 +90,153 @@ async def get_school_reviews(
     date_end: Optional[date] = Query(None, description="Конечная дата (YYYY-MM-DD)")
 ):
     """Получить отзывы по школе с фильтрацией по датам"""
+    import json as json_lib
+    
     conn = None
     try:
         conn = get_db_connection()
         cursor = conn.cursor()
         
-        # Если даты не указаны, используем значения по умолчанию
-        if date_start is None:
-            date_start = date(2000, 1, 1)  # Очень старая дата
-        if date_end is None:
-            date_end = date(2100, 12, 31)  # Очень будущая дата
+        # Строим SQL запрос с фильтрацией
+        query = """
+            SELECT 
+                review_id,
+                school_id,
+                review_date,
+                review_text,
+                review_topics,
+                review_overall,
+                review_likes,
+                review_dislikes,
+                review_rating
+            FROM ca.review
+            WHERE school_id = %s
+        """
+        params = [school_id]
         
-        # Вызываем функцию из БД
-        cursor.execute(
-            "SELECT ca.get_school_reviews_json(%s, %s, %s)",
-            (school_id, date_start, date_end)
-        )
-        result = cursor.fetchone()[0]
+        # Добавляем фильтрацию по датам, если указаны
+        if date_start is not None:
+            query += " AND (review_date >= %s OR review_date IS NULL)"
+            params.append(date_start)
+        
+        if date_end is not None:
+            query += " AND (review_date <= %s OR review_date IS NULL)"
+            params.append(date_end)
+        
+        # Сортируем: сначала записи с датами (по убыванию), потом без дат
+        query += " ORDER BY review_date DESC NULLS LAST, review_id"
+        
+        cursor.execute(query, params)
+        rows = cursor.fetchall()
+        
+        # Отладочная информация
+        print(f"[DEBUG] Загружено отзывов: {len(rows)}")
+        if rows:
+            print(f"[DEBUG] Пример первой записи: review_id={rows[0][0]}, rating={rows[0][8]}, rating_type={type(rows[0][8])}")
+            # Проверяем несколько записей
+            for i in range(min(5, len(rows))):
+                print(f"[DEBUG] Review {i+1}: id={rows[i][0]}, rating={rows[i][8]}, rating_type={type(rows[i][8])}")
+        
+        # Формируем результат
+        reviews = []
+        for row in rows:
+            try:
+                # Парсим review_topics из JSON строки
+                topics = None
+                if row[4] is not None:  # review_topics
+                    try:
+                        if isinstance(row[4], str):
+                            # Если это строка, пытаемся распарсить JSON
+                            if row[4].strip():  # Не пустая строка
+                                topics = json_lib.loads(row[4])
+                            else:
+                                topics = {}
+                        else:
+                            topics = row[4]
+                    except (json_lib.JSONDecodeError, TypeError) as e:
+                        # Если не удалось распарсить, оставляем None
+                        topics = None
+                elif row[4] is None:
+                    # Если поле null, topics остается None
+                    topics = None
+                
+                # Форматируем дату
+                review_date_str = None
+                if row[2] is not None:  # review_date
+                    if hasattr(row[2], 'isoformat'):
+                        review_date_str = row[2].isoformat()
+                    else:
+                        review_date_str = str(row[2])
+                
+                # Обрабатываем числовые поля
+                review_likes = None
+                if row[6] is not None:
+                    try:
+                        review_likes = int(row[6])
+                    except (ValueError, TypeError):
+                        review_likes = None
+                
+                review_dislikes = None
+                if row[7] is not None:
+                    try:
+                        review_dislikes = int(row[7])
+                    except (ValueError, TypeError):
+                        review_dislikes = None
+                
+                review_rating = None
+                if row[8] is not None and row[8] != '':
+                    try:
+                        review_rating = int(row[8])
+                    except (ValueError, TypeError):
+                        review_rating = None
+                
+                review = {
+                    "review_id": row[0],
+                    "school_id": str(row[1]) if row[1] is not None else None,
+                    "date": review_date_str,  # Для совместимости с фронтендом
+                    "review_date": review_date_str,
+                    "text": row[3] if row[3] is not None else None,  # Для совместимости с фронтендом
+                    "review_text": row[3] if row[3] is not None else None,
+                    "topics": topics,  # Для совместимости с фронтендом
+                    "review_topic": topics,
+                    "overall": row[5] if row[5] is not None else None,  # Для совместимости с фронтендом
+                    "review_overall": row[5] if row[5] is not None else None,
+                    "review_likes": review_likes,
+                    "review_dislikes": review_dislikes,
+                    "review_rating": review_rating
+                }
+                # Отладочная информация для первых нескольких отзывов
+                if len(reviews) < 3:
+                    print(f"[DEBUG] Review {review['review_id']}: rating={review['review_rating']}, type={type(review['review_rating'])}, likes={review['review_likes']}, dislikes={review['review_dislikes']}")
+                    print(f"[DEBUG] Review {review['review_id']} full object keys: {list(review.keys())}")
+                reviews.append(review)
+            except Exception as e:
+                # Логируем ошибку, но продолжаем обработку остальных записей
+                print(f"[WARN] Ошибка обработки записи review_id={row[0]}: {e}")
+                continue
         
         cursor.close()
         
-        # Если результат None (нет отзывов), возвращаем пустой массив
-        if result is None:
-            return {"reviews": []}
+        # Отладочная информация о финальном ответе
+        if reviews:
+            print(f"[DEBUG] Final response - first review keys: {list(reviews[0].keys())}")
+            print(f"[DEBUG] Final response - first review has rating: {'review_rating' in reviews[0]}")
+            print(f"[DEBUG] Final response - first review rating value: {reviews[0].get('review_rating')}")
         
-        return {"reviews": result}
+        return {"reviews": reviews}
         
     except psycopg2.Error as e:
-        raise HTTPException(status_code=500, detail=f"Ошибка БД: {str(e)}")
+        import traceback
+        error_detail = f"Ошибка БД: {str(e)}"
+        print(f"[ERROR] {error_detail}")
+        print(traceback.format_exc())
+        raise HTTPException(status_code=500, detail=error_detail)
+    except Exception as e:
+        import traceback
+        error_detail = f"Неожиданная ошибка: {str(e)}"
+        print(f"[ERROR] {error_detail}")
+        print(traceback.format_exc())
+        raise HTTPException(status_code=500, detail=error_detail)
     finally:
         if conn:
             conn.close()

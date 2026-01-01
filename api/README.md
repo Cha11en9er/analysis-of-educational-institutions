@@ -68,12 +68,16 @@ GET http://localhost:8000/schools/1/reviews?date_start=2024-01-01&date_end=2024-
 {
   "reviews": [
     {
-      "school_id": "1",
       "review_id": 1,
-      "review_text": "Отличная школа!",
+      "school_id": "1",
+      "date": "2024-05-15",
       "review_date": "2024-05-15",
-      "review_topic": "учителя",
-      "review_overall": "positive"
+      "text": "Отличная школа!",
+      "review_text": "Отличная школа!",
+      "topics": {"учителя": "pos"},
+      "review_topic": {"учителя": "pos"},
+      "overall": "pos",
+      "review_overall": "pos"
     }
   ]
 }

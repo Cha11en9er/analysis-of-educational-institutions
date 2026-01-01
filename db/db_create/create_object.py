@@ -66,11 +66,15 @@ def create_table(conn, schema_name: str, table_name: str):
             create_table_query = sql.SQL("""
                 CREATE TABLE IF NOT EXISTS {}.{} (
                     review_id SERIAL PRIMARY KEY,
-                    school_id VARCHAR(50),
-                    date VARCHAR(100),
-                    orig_text TEXT NOT NULL,
-                    rec_text TEXT,
-                    tonality TEXT
+                    school_id INTEGER,
+                    review_date DATE,
+                    review_text TEXT,
+                    review_topics TEXT,
+                    review_overall TEXT,
+                    review_likes INTEGER,
+                    review_dislikes INTEGER,
+                    review_rating INTEGER,
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                 )
             """).format(
                 sql.Identifier(schema_name),
@@ -101,6 +105,42 @@ def drop_table_if_exists(conn, schema_name: str, table_name: str):
         raise
 
 
+def alter_table_allow_nulls(conn, schema_name: str, table_name: str):
+    """Убирает ограничения NOT NULL с полей, которые могут быть null"""
+    try:
+        with conn.cursor() as cursor:
+            # Убираем NOT NULL со всех полей, которые могут быть null в JSON
+            # Список всех полей, которые должны допускать NULL
+            columns_to_alter = [
+                'school_id',
+                'review_date',
+                'review_text',
+                'review_topics',
+                'review_overall',
+                'review_likes',
+                'review_dislikes',
+                'review_rating'
+            ]
+            
+            for column in columns_to_alter:
+                try:
+                    query = sql.SQL("ALTER TABLE {}.{} ALTER COLUMN {} DROP NOT NULL").format(
+                        sql.Identifier(schema_name),
+                        sql.Identifier(table_name),
+                        sql.Identifier(column)
+                    )
+                    cursor.execute(query)
+                    print(f"[OK] Убрано ограничение NOT NULL с колонки {column}")
+                except psycopg2.Error as e:
+                    # Игнорируем ошибки, если ограничение уже отсутствует
+                    error_msg = str(e).lower()
+                    if "does not exist" not in error_msg and "column" not in error_msg:
+                        print(f"[WARN] Не удалось убрать ограничение с {column}: {e}")
+    except psycopg2.Error as e:
+        print(f"[ERROR] Ошибка при изменении таблицы: {e}")
+        # Не поднимаем исключение, так как это не критично
+
+
 def main(drop_existing: bool = False):
     """
     Основная функция для создания объектов БД
@@ -127,6 +167,9 @@ def main(drop_existing: bool = False):
         
         # Создаём таблицу
         create_table(conn, DB_SCHEMA, DB_TABLE)
+        
+        # Убираем NOT NULL ограничения, если таблица уже существовала
+        alter_table_allow_nulls(conn, DB_SCHEMA, DB_TABLE)
         
         print()
         print("[OK] Все объекты базы данных успешно созданы!")

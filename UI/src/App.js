@@ -3,6 +3,8 @@ import axios from 'axios';
 import './App.css';
 import Filters from './components/Filters';
 import Chart from './components/Chart';
+import RatingChart from './components/RatingChart';
+import SchoolSelector from './components/SchoolSelector';
 
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
 
@@ -19,12 +21,20 @@ const TOPICS = [
 ];
 
 function App() {
+  const [viewMode, setViewMode] = useState('topics'); // 'topics' или 'rating'
+  
+  // Состояния для режима "График по топикам"
   const [schools, setSchools] = useState([]);
   const [selectedSchools, setSelectedSchools] = useState([]); // Массив выбранных школ (макс. 2)
   const [selectedTopic, setSelectedTopic] = useState('');
   const [dateStart, setDateStart] = useState('');
   const [dateEnd, setDateEnd] = useState('');
   const [reviewsBySchool, setReviewsBySchool] = useState({}); // { schoolId: [reviews] }
+  
+  // Состояния для режима "Общая информация по школе"
+  const [selectedSchoolForRating, setSelectedSchoolForRating] = useState('');
+  const [ratingReviews, setRatingReviews] = useState([]);
+  
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -175,35 +185,111 @@ function App() {
     }
   };
 
+  // Обработчик загрузки данных для режима "Общая информация по школе"
+  const handleRatingSubmit = async (e) => {
+    e.preventDefault();
+    
+    if (!selectedSchoolForRating) {
+      setError('Выберите школу');
+      return;
+    }
+
+    setLoading(true);
+    setError('');
+
+    try {
+      const response = await axios.get(
+        `${API_URL}/schools/${selectedSchoolForRating}/reviews`
+      );
+
+      const reviewsData = response.data.reviews || [];
+      console.log('Loaded reviews for rating chart:', reviewsData.length);
+      console.log('Sample review:', reviewsData[0]);
+      setRatingReviews(reviewsData);
+    } catch (err) {
+      setError('Ошибка загрузки отзывов: ' + err.message);
+      setRatingReviews([]);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const chartData = processReviewsData();
+  
+  // Получаем название выбранной школы для режима рейтингов
+  const selectedSchoolName = selectedSchoolForRating 
+    ? (schools.find(s => String(s.school_id) === String(selectedSchoolForRating))?.school_name || `Школа ${selectedSchoolForRating}`)
+    : '';
 
   return (
     <div className="App">
       <h1>Визуализация школ и отзывов</h1>
       
-      <Filters
-        schools={schools}
-        topics={TOPICS}
-        selectedSchools={selectedSchools}
-        selectedTopic={selectedTopic}
-        dateStart={dateStart}
-        dateEnd={dateEnd}
-        onSchoolToggle={handleSchoolToggle}
-        onTopicChange={setSelectedTopic}
-        onDateStartChange={setDateStart}
-        onDateEndChange={setDateEnd}
-        onSubmit={handleSubmit}
-        loading={loading}
-      />
+      {/* Кнопки переключения режимов */}
+      <div className="mode-switcher">
+        <button
+          className={`mode-btn ${viewMode === 'topics' ? 'active' : ''}`}
+          onClick={() => setViewMode('topics')}
+        >
+          График по топикам
+        </button>
+        <button
+          className={`mode-btn ${viewMode === 'rating' ? 'active' : ''}`}
+          onClick={() => setViewMode('rating')}
+        >
+          Общая информация по школе
+        </button>
+      </div>
 
       {error && <div className="error">{error}</div>}
 
-      {chartData.length > 0 && (
-        <Chart data={chartData} selectedSchools={selectedSchools} schools={schools} />
+      {/* Режим "График по топикам" */}
+      {viewMode === 'topics' && (
+        <>
+          <Filters
+            schools={schools}
+            topics={TOPICS}
+            selectedSchools={selectedSchools}
+            selectedTopic={selectedTopic}
+            dateStart={dateStart}
+            dateEnd={dateEnd}
+            onSchoolToggle={handleSchoolToggle}
+            onTopicChange={setSelectedTopic}
+            onDateStartChange={setDateStart}
+            onDateEndChange={setDateEnd}
+            onSubmit={handleSubmit}
+            loading={loading}
+          />
+
+          {chartData.length > 0 && (
+            <Chart data={chartData} selectedSchools={selectedSchools} schools={schools} />
+          )}
+
+          {!loading && chartData.length === 0 && selectedSchools.length > 0 && selectedTopic && (
+            <div className="no-data">Нет данных для отображения</div>
+          )}
+        </>
       )}
 
-      {!loading && chartData.length === 0 && selectedSchools.length > 0 && selectedTopic && (
-        <div className="no-data">Нет данных для отображения</div>
+      {/* Режим "Общая информация по школе" */}
+      {viewMode === 'rating' && (
+        <>
+          <SchoolSelector
+            schools={schools}
+            selectedSchool={selectedSchoolForRating}
+            onSchoolChange={setSelectedSchoolForRating}
+            onSubmit={handleRatingSubmit}
+            loading={loading}
+          />
+
+          {ratingReviews.length > 0 && (
+            <RatingChart reviews={ratingReviews} schoolName={selectedSchoolName} />
+          )}
+
+          {!loading && ratingReviews.length === 0 && selectedSchoolForRating && (
+            <div className="no-data">Нет данных для отображения</div>
+          )}
+        </>
       )}
     </div>
   );

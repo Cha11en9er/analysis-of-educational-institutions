@@ -26,3 +26,30 @@ h1 {
   font-size: 18px;
 }
 
+.mode-switcher {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.mode-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: 2px solid #4a90e2;
+  background-color: white;
+  color: #4a90e2;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.mode-btn:hover {
+  background-color: #f0f7ff;
+}
+
+.mode-btn.active {
+  background-color: #4a90e2;
+  color: white;
+}
+
