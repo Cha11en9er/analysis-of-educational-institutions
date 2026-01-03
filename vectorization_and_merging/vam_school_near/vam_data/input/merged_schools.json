@@ -1,0 +1,2401 @@
+[
+  {
+    "id": 1,
+    "school_id": 1,
+    "school_name": "НОУ Прогимназия Идеал",
+    "school_adres": "ул Чернышевского, зд 16",
+    "school_near_id": null,
+    "school_near_name": null,
+    "district_near_name": null
+  },
+  {
+    "id": 2,
+    "school_id": 2,
+    "school_name": "МОУ Средняя общеобразовательная школа №77",
+    "school_adres": "ул Шелковичная, зд 14",
+    "school_near_id": 68,
+    "school_near_name": "МОУ «СОШ №84»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8450453877449036
+  },
+  {
+    "id": 3,
+    "school_id": 3,
+    "school_name": "МОУ Средняя общеобразовательная школа №6",
+    "school_adres": "ул Симбирцева, д 34",
+    "school_near_id": 151,
+    "school_near_name": "МОУ «СОШ №97»",
+    "district_near_name": "Октябрьский",
+    "match_score": 0.8223471641540527
+  },
+  {
+    "id": 4,
+    "school_id": 4,
+    "school_name": "МАОУ Средняя общеобразовательная школа №18 с углубленным изучением предметов им. О.П. Табакова",
+    "school_adres": "ул Рахова, зд 124",
+    "school_near_id": 156,
+    "school_near_name": "МАОУ «СОШ №18 УИП им. О.П. Табакова» (1 классы)",
+    "district_near_name": "Фрунзенский",
+    "match_score": 0.853091835975647
+  },
+  {
+    "id": 5,
+    "school_id": 5,
+    "school_name": "МОУ Средняя общеобразовательная школа №70",
+    "school_adres": "ул Большая Садовая, д 240",
+    "school_near_id": 133,
+    "school_near_name": "МОУ «СОШ № 105» ДОС 75080",
+    "district_near_name": "Ленинский",
+    "match_score": 0.8267722129821777
+  },
+  {
+    "id": 6,
+    "school_id": 6,
+    "school_name": "МОУ Средняя общеобразовательная школа №73 им. К.Д. Шукшина",
+    "school_adres": "пр-д 2-й Магнитный, д 44",
+    "school_near_id": 151,
+    "school_near_name": "МОУ «СОШ №97»",
+    "district_near_name": "Октябрьский",
+    "match_score": 0.8334711790084839
+  },
+  {
+    "id": 7,
+    "school_id": 7,
+    "school_name": "МОУ Средняя общеобразовательная школа №45",
+    "school_adres": "ул Дегтярная, зд 12",
+    "school_near_id": 41,
+    "school_near_name": "МОУ «ГИМНАЗИЯ №5»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8358793258666992
+  },
+  {
+    "id": 8,
+    "school_id": 8,
+    "school_name": "ГАОУ Средняя общеобразовательная школа №2 с углубленным изучением отдельных предметов им. В.П. Тихонова",
+    "school_adres": "ул Мичурина, д 16",
+    "school_near_id": 64,
+    "school_near_name": "МОУ «СОШ № 59 с углубленным изучением предметов»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8336536288261414
+  },
+  {
+    "id": 9,
+    "school_id": 9,
+    "school_name": "МОУ Средняя общеобразовательная школа №9",
+    "school_adres": "ул Соляная, д 17",
+    "school_near_id": 51,
+    "school_near_name": "МОУ «СОШ № 22» Нагорная 9",
+    "district_near_name": "Заводской",
+    "match_score": 0.8345277309417725
+  },
+  {
+    "id": 10,
+    "school_id": 10,
+    "school_name": "МАОУ Гимназия №2",
+    "school_adres": "ул Чернышевского, д 138",
+    "school_near_id": 136,
+    "school_near_name": "МАОУ «Гимназия № 87»",
+    "district_near_name": "Ленинский",
+    "match_score": 0.830847978591919
+  },
+  {
+    "id": 11,
+    "school_id": 11,
+    "school_name": "МОУ Основная общеобразовательная школа №14",
+    "school_adres": "ул 1-я Садовая, д 35",
+    "school_near_id": 60,
+    "school_near_name": "МОУ «СОШ № 38»",
+    "district_near_name": "Заводской",
+    "match_score": 0.818833589553833
+  },
+  {
+    "id": 12,
+    "school_id": 12,
+    "school_name": "МОУ Средняя общеобразовательная школа №94",
+    "school_adres": "пр-кт 50 лет Октября, зд 75",
+    "school_near_id": 133,
+    "school_near_name": "МОУ «СОШ № 105» ДОС 75080",
+    "district_near_name": "Ленинский",
+    "match_score": 0.8009111881256104
+  },
+  {
+    "id": 13,
+    "school_id": 13,
+    "school_name": "МОУ Средняя общеобразовательная школа №97 им. Героя Советского Союза В.Г. Клочкова",
+    "school_adres": "ул Клочкова, д 77",
+    "school_near_id": 151,
+    "school_near_name": "МОУ «СОШ №97»",
+    "district_near_name": "Октябрьский",
+    "match_score": 0.8191472291946411
+  },
+  {
+    "id": 14,
+    "school_id": 14,
+    "school_name": "МОУ Русская православная классическая гимназия им. преподобного Сергия Радонежского",
+    "school_adres": "ул Челюскинцев, д 12",
+    "school_near_id": null,
+    "school_near_name": null,
+    "district_near_name": null
+  },
+  {
+    "id": 15,
+    "school_id": 15,
+    "school_name": "МАОУ Средняя общеобразовательная школа №23 им. С.В. Астраханцева",
+    "school_adres": "пр-д 5-й Нагорный, зд 3 стр 1",
+    "school_near_id": 53,
+    "school_near_name": "МАОУ «СОШ №23 имени С.В. Астраханцева» Нагорная 7",
+    "district_near_name": "Заводской",
+    "match_score": 0.8474279046058655
+  },
+  {
+    "id": 16,
+    "school_id": 16,
+    "school_name": "МОУ Средняя общеобразовательная школа №76 им. М.Г. Галицкого",
+    "school_adres": "ул Вишневая, зд 16",
+    "school_near_id": 68,
+    "school_near_name": "МОУ «СОШ №84»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8406131863594055
+  },
+  {
+    "id": 17,
+    "school_id": 17,
+    "school_name": "МОУ Средняя общеобразовательная школа №1",
+    "school_adres": "ул Разина, д 32",
+    "school_near_id": 68,
+    "school_near_name": "МОУ «СОШ №84»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8124592900276184
+  },
+  {
+    "id": 18,
+    "school_id": 18,
+    "school_name": "МАОУ Средняя общеобразовательная школа №51",
+    "school_adres": "ул Артиллерийская, д 27",
+    "school_near_id": 55,
+    "school_near_name": "МАОУ «СОШ №23 имени С.В. Астраханцева» Пионерская 1",
+    "district_near_name": "Заводской",
+    "match_score": 0.8421533107757568
+  },
+  {
+    "id": 19,
+    "school_id": 19,
+    "school_name": "ЧАО Лицей-интернет естесственных наук",
+    "school_adres": "ул Советская, д 60",
+    "school_near_id": 125,
+    "school_near_name": "МОУ «СОШ № 80 «Ласточкино»",
+    "district_near_name": "Ленинский",
+    "match_score": 0.846002995967865
+  },
+  {
+    "id": 20,
+    "school_id": 20,
+    "school_name": "МАОУ Средняя общеобразовательная школа №21 им. П.А. Столыпина",
+    "school_adres": "ул Посадского, д 193",
+    "school_near_id": 134,
+    "school_near_name": "МОУ «СОШ № 105» СМП 210",
+    "district_near_name": "Ленинский",
+    "match_score": 0.8225015997886658
+  },
+  {
+    "id": 21,
+    "school_id": 21,
+    "school_name": "МОУ Средняя общеобразовательная школа №59 с углубленным изучением предметов",
+    "school_adres": "ул Маркина, зд 17/39",
+    "school_near_id": 64,
+    "school_near_name": "МОУ «СОШ № 59 с углубленным изучением предметов»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8379055261611938
+  },
+  {
+    "id": 22,
+    "school_id": 22,
+    "school_name": "МОУ Средняя общеобразовательная школа №55",
+    "school_adres": "ул Чехова, зд 1А",
+    "school_near_id": 40,
+    "school_near_name": "МОУ « СОШ №5»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8508447408676147
+  },
+  {
+    "id": 23,
+    "school_id": 23,
+    "school_name": "МАОУ Лицей №24 им. М.М. Расковой",
+    "school_adres": "ул Жуковского, д 24",
+    "school_near_id": 83,
+    "school_near_name": "МАОУ «Лицей № 24 имени М.М. Расковой»",
+    "district_near_name": "Кировский",
+    "match_score": 0.8634383082389832
+  },
+  {
+    "id": 24,
+    "school_id": 24,
+    "school_name": "МОУ Средняя общеобразовательная школа №84",
+    "school_adres": "ул Южно-Зеленая, зд 11А",
+    "school_near_id": 68,
+    "school_near_name": "МОУ «СОШ №84»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8413461446762085
+  },
+  {
+    "id": 25,
+    "school_id": 25,
+    "school_name": "МОУ Средняя общеобразовательная школа №46",
+    "school_adres": "ул Овражная, зд 2Б",
+    "school_near_id": 68,
+    "school_near_name": "МОУ «СОШ №84»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8352032899856567
+  },
+  {
+    "id": 26,
+    "school_id": 26,
+    "school_name": "МОУ Средняя общеобразовательная школа №100",
+    "school_adres": "пр-д 1-й Панфилова, зд 3",
+    "school_near_id": 64,
+    "school_near_name": "МОУ «СОШ № 59 с углубленным изучением предметов»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8172422647476196
+  },
+  {
+    "id": 27,
+    "school_id": 27,
+    "school_name": "МОУ Средняя общеобразовательная школа №106",
+    "school_adres": "ул Огородная, зд 33",
+    "school_near_id": 64,
+    "school_near_name": "МОУ «СОШ № 59 с углубленным изучением предметов»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8414809703826904
+  },
+  {
+    "id": 28,
+    "school_id": 28,
+    "school_name": "МОУ Средняя общеобразовательная школа №72",
+    "school_adres": "ул Бережная, зд 1",
+    "school_near_id": 68,
+    "school_near_name": "МОУ «СОШ №84»",
+    "district_near_name": "Заводской",
+    "match_score": 0.835885763168335
+  },
+  {
+    "id": 29,
+    "school_id": 29,
+    "school_name": "МОУ Средняя общеобразовательная школа №22 им. Героя Советского Союза П.Т. Пономарёва",
+    "school_adres": "ул Ростовская, зд 29",
+    "school_near_id": 51,
+    "school_near_name": "МОУ «СОШ № 22» Нагорная 9",
+    "district_near_name": "Заводской",
+    "match_score": 0.8180443644523621
+  },
+  {
+    "id": 30,
+    "school_id": 30,
+    "school_name": "МОУ Средняя общеобразовательная школа №43 им. В.Ф. Маргелова",
+    "school_adres": "ул Пономарева, зд 49",
+    "school_near_id": 61,
+    "school_near_name": "МОУ «СОШ № 43 имени В.Ф.Маргелова»",
+    "district_near_name": "Заводской",
+    "match_score": 0.834566056728363
+  },
+  {
+    "id": 31,
+    "school_id": 31,
+    "school_name": "МОУ Основная общеобразовательная школа №17",
+    "school_adres": "ул Наумовская, зд 11",
+    "school_near_id": 46,
+    "school_near_name": "МОУ «СОШ № 22» Нагорная 11",
+    "district_near_name": "Заводской",
+    "match_score": 0.8438898921012878
+  },
+  {
+    "id": 32,
+    "school_id": 32,
+    "school_name": "ГАОУ Гимназия №1",
+    "school_adres": "ул Мичурина, д 88",
+    "school_near_id": 136,
+    "school_near_name": "МАОУ «Гимназия № 87»",
+    "district_near_name": "Ленинский",
+    "match_score": 0.8775948286056519
+  },
+  {
+    "id": 33,
+    "school_id": 33,
+    "school_name": "МОУ Средняя общеобразовательная школа №102",
+    "school_adres": "ул Шехурдина, д 56А",
+    "school_near_id": 75,
+    "school_near_name": "МОУ «СОШ № 106» Пионерская 1",
+    "district_near_name": "Заводской",
+    "match_score": 0.8360989689826965
+  },
+  {
+    "id": 34,
+    "school_id": 34,
+    "school_name": "МАОУ Гимназия №4 им. Героя Советского Союза В.М. Безбокова",
+    "school_adres": "ул Вознесенская, зд 5",
+    "school_near_id": 41,
+    "school_near_name": "МОУ «ГИМНАЗИЯ №5»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8835992217063904
+  },
+  {
+    "id": 35,
+    "school_id": 35,
+    "school_name": "МОУ Средняя общеобразовательная школа №8 Волжского района г. Саратова",
+    "school_adres": "ул Радищева, зд 18Б",
+    "school_near_id": 68,
+    "school_near_name": "МОУ «СОШ №84»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8154375553131104
+  },
+  {
+    "id": 36,
+    "school_id": 36,
+    "school_name": "МОУ Средняя общеобразовательная школа №71",
+    "school_adres": "ул Танкистов, д 126",
+    "school_near_id": 151,
+    "school_near_name": "МОУ «СОШ №97»",
+    "district_near_name": "Октябрьский",
+    "match_score": 0.8407355546951294
+  },
+  {
+    "id": 37,
+    "school_id": 37,
+    "school_name": "МОУ Средняя общеобразовательная школа №66 им. Н. И. Вавилова",
+    "school_adres": "ул Державинская, д 1",
+    "school_near_id": 9,
+    "school_near_name": "МОУ «СОШ № 66 им. Н.И.Вавилова» Державинская, 1",
+    "district_near_name": "Волжский",
+    "match_score": 0.840438187122345
+  },
+  {
+    "id": 38,
+    "school_id": 38,
+    "school_name": "МАОУ Иволгино",
+    "school_adres": "ул Малая Розовая, зд 2",
+    "school_near_id": null,
+    "school_near_name": null,
+    "district_near_name": null
+  },
+  {
+    "id": 39,
+    "school_id": 39,
+    "school_name": "МАОУ Гимназия №3",
+    "school_adres": "ул Большая Казачья, д 121",
+    "school_near_id": 84,
+    "school_near_name": "МАОУ «Гимназия №31»",
+    "district_near_name": "Кировский",
+    "match_score": 0.8386978507041931
+  },
+  {
+    "id": 40,
+    "school_id": 40,
+    "school_name": "МАОУ Гимназия №31",
+    "school_adres": "ул Лесная, зд 1/9",
+    "school_near_id": 138,
+    "school_near_name": "МАОУ «Гимназия №108»",
+    "district_near_name": "Ленинский",
+    "match_score": 0.8329582214355469
+  },
+  {
+    "id": 41,
+    "school_id": 41,
+    "school_name": "МОУ Средняя общеобразовательная школа №54 им. И.А. Евтеева",
+    "school_adres": "ул Тракторная, зд 33А",
+    "school_near_id": 60,
+    "school_near_name": "МОУ «СОШ № 38»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8372212052345276
+  },
+  {
+    "id": 42,
+    "school_id": 42,
+    "school_name": "МОУ Лицей №2",
+    "school_adres": "пос Октябрьский, 1-я Линия, зд 9/4",
+    "school_near_id": 3,
+    "school_near_name": "МОУ «Лицей № 4»",
+    "district_near_name": "Волжский",
+    "match_score": 0.8636548519134521
+  },
+  {
+    "id": 43,
+    "school_id": 43,
+    "school_name": "МОУ Школа №40",
+    "school_adres": "ул Кавказская, зд 17",
+    "school_near_id": 60,
+    "school_near_name": "МОУ «СОШ № 38»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8517290353775024
+  },
+  {
+    "id": 44,
+    "school_id": 44,
+    "school_name": "МОУ Средняя общеобразовательная школа №41",
+    "school_adres": "ул Тверская, зд 45",
+    "school_near_id": 60,
+    "school_near_name": "МОУ «СОШ № 38»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8427021503448486
+  },
+  {
+    "id": 45,
+    "school_id": 45,
+    "school_name": "МОУ Средняя общеобразовательная школа №101",
+    "school_adres": "ул Лебедева-Кумача, д 73А",
+    "school_near_id": 66,
+    "school_near_name": "МОУ «ООШ № 81»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8153449296951294
+  },
+  {
+    "id": 46,
+    "school_id": 46,
+    "school_name": "АНОО Гимназия гуманитарных наук",
+    "school_adres": "ул Вавилова, зд 36",
+    "school_near_id": 58,
+    "school_near_name": "МОУ «Гимназия № 34 им. Г.Д. Ермолаева»",
+    "district_near_name": "Заводской",
+    "match_score": 0.827128529548645
+  },
+  {
+    "id": 47,
+    "school_id": 47,
+    "school_name": "МОУ Лицей №47 им. К.В. Благодарова",
+    "school_adres": "ул 3 Степная, зд 6",
+    "school_near_id": 62,
+    "school_near_name": "МОУ «Лицей № 53»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8078697919845581
+  },
+  {
+    "id": 48,
+    "school_id": 48,
+    "school_name": "МОУ Средняя общеобразовательная школа №44 им. Героя России Н.В. Исаева",
+    "school_adres": "ул Перспективная, зд 9/10",
+    "school_near_id": null,
+    "school_near_name": null,
+    "district_near_name": null
+  },
+  {
+    "id": 49,
+    "school_id": 49,
+    "school_name": "NaN",
+    "school_adres": "ул Разина, зд 73",
+    "school_near_id": null,
+    "school_near_name": null,
+    "district_near_name": null
+  },
+  {
+    "id": 50,
+    "school_id": 50,
+    "school_name": "МОУ Средняя общеобразовательная школа №48",
+    "school_adres": "ул Загороднева, зд 2",
+    "school_near_id": 64,
+    "school_near_name": "МОУ «СОШ № 59 с углубленным изучением предметов»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8458073735237122
+  },
+  {
+    "id": 51,
+    "school_id": 51,
+    "school_name": "МОУ Средняя общеобразовательная школа №103",
+    "school_adres": "ул Производственная, зд 5 ",
+    "school_near_id": 41,
+    "school_near_name": "МОУ «ГИМНАЗИЯ №5»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8444293141365051
+  },
+  {
+    "id": 52,
+    "school_id": 52,
+    "school_name": "МОУ Средняя общеобразовательная школа №60 им. героя Советского Союза П.Ф. Батавина",
+    "school_adres": "ул Батавина, зд 6А",
+    "school_near_id": 118,
+    "school_near_name": "МОУ «СОШ № 60 имени Героя Советского Союза П.Ф. Батавина»",
+    "district_near_name": "Ленинский",
+    "match_score": 0.8534536361694336
+  },
+  {
+    "id": 53,
+    "school_id": 53,
+    "school_name": "МОУ Средняя общеобразовательная школа №61 — образовательный комплекс",
+    "school_adres": "ул Бардина, зд 3",
+    "school_near_id": 64,
+    "school_near_name": "МОУ «СОШ № 59 с углубленным изучением предметов»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8024477958679199
+  },
+  {
+    "id": 54,
+    "school_id": 54,
+    "school_name": "МАОУ Лицей Звезда",
+    "school_adres": "ул Техническая, зд 3/1",
+    "school_near_id": null,
+    "school_near_name": null,
+    "district_near_name": null
+  },
+  {
+    "id": 55,
+    "school_id": 55,
+    "school_name": "МОУ Средняя общеобразовательная школа №57 им. С.Ф. Тархова",
+    "school_adres": "ул Перспективная, зд 29",
+    "school_near_id": 53,
+    "school_near_name": "МАОУ «СОШ №23 имени С.В. Астраханцева» Нагорная 7",
+    "district_near_name": "Заводской",
+    "match_score": 0.8368127942085266
+  },
+  {
+    "id": 56,
+    "school_id": 56,
+    "school_name": "МОУ Средняя общеобразовательная школа №86",
+    "school_adres": "пр-д 2-й Московский, зд 5",
+    "school_near_id": 41,
+    "school_near_name": "МОУ «ГИМНАЗИЯ №5»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8237847089767456
+  },
+  {
+    "id": 57,
+    "school_id": 57,
+    "school_name": "ГБСУ СО Школа Уникум",
+    "school_adres": "ул Железнодорожная, зд 29",
+    "school_near_id": null,
+    "school_near_name": null,
+    "district_near_name": null
+  },
+  {
+    "id": 58,
+    "school_id": 58,
+    "school_name": "МОУ Средняя общеобразовательная школа №64 им. Героя Советского Союза И.В. Панфилова",
+    "school_adres": "ул Стахановская, зд. 8",
+    "school_near_id": 121,
+    "school_near_name": "МОУ «СОШ № 64 имени Героя Советского Союза И.В. Панфилова»",
+    "district_near_name": "Ленинский",
+    "match_score": 0.8247002363204956
+  },
+  {
+    "id": 59,
+    "school_id": 59,
+    "school_name": "МОУ Средняя общеобразовательная школа №38",
+    "school_adres": "ул Южная, зд 46",
+    "school_near_id": 60,
+    "school_near_name": "МОУ «СОШ № 38»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8339952230453491
+  },
+  {
+    "id": 60,
+    "school_id": 60,
+    "school_name": "МОУ Лицей №53",
+    "school_adres": "пр-д 4-й Чернышевского, зд 2",
+    "school_near_id": 62,
+    "school_near_name": "МОУ «Лицей № 53»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8449648022651672
+  },
+  {
+    "id": 61,
+    "school_id": 61,
+    "school_name": "МАОУ Лицей №62",
+    "school_adres": "пл Ильинская, зд 1А",
+    "school_near_id": 42,
+    "school_near_name": "МАОУ «Лицей № 15»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8658798933029175
+  },
+  {
+    "id": 62,
+    "school_id": 62,
+    "school_name": "МАОУ Гимназия №108",
+    "school_adres": "пр-кт 50 лет Октября, зд 107",
+    "school_near_id": 63,
+    "school_near_name": "МОУ «Гимназия № 58»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8586969375610352
+  },
+  {
+    "id": 63,
+    "school_id": 63,
+    "school_name": "МАОУ Лицей №15",
+    "school_adres": "пр-кт Энтузиастов, зд 14 стр 1",
+    "school_near_id": 42,
+    "school_near_name": "МАОУ «Лицей № 15»",
+    "district_near_name": "Заводской",
+    "match_score": 0.866730272769928
+  },
+  {
+    "id": 64,
+    "school_id": 64,
+    "school_name": "МОУ Гимназия №7 им. К. Д. Ушинского",
+    "school_adres": "ул Федоровская, д 3",
+    "school_near_id": 155,
+    "school_near_name": "МАОУ «Гимназия № 3» (2-11 классы);",
+    "district_near_name": "Фрунзенский",
+    "match_score": 0.8172268271446228
+  },
+  {
+    "id": 65,
+    "school_id": 65,
+    "school_name": "МОУ Средняя общеобразовательная школа №49",
+    "school_adres": "ул Перспективная, зд 10А",
+    "school_near_id": 45,
+    "school_near_name": "МОУ «СОШ № 22» Нагорная 10",
+    "district_near_name": "Заводской",
+    "match_score": 0.8187520503997803
+  },
+  {
+    "id": 66,
+    "school_id": 66,
+    "school_name": "МОУ Национальная (татарская) гимназия им. героя Советского Союза Г.Г. Рамаева",
+    "school_adres": "ул Радищева, д 64/32",
+    "school_near_id": null,
+    "school_near_name": null,
+    "district_near_name": null
+  },
+  {
+    "id": 67,
+    "school_id": 67,
+    "school_name": "МОУ Лицей прикладных наук им. Д.И. Трубецкова",
+    "school_adres": "ул Комсомольская, зд 39",
+    "school_near_id": 148,
+    "school_near_name": "МАОУ «Лицей № 62»",
+    "district_near_name": "Октябрьский",
+    "match_score": 0.783271074295044
+  },
+  {
+    "id": 68,
+    "school_id": 68,
+    "school_name": "МОУ Основная общеобразовательная школа №26 им. В.Д. Хомяковой",
+    "school_adres": "ул Ново- Крекингская, зд 47 стр 1",
+    "school_near_id": 55,
+    "school_near_name": "МАОУ «СОШ №23 имени С.В. Астраханцева» Пионерская 1",
+    "district_near_name": "Заводской",
+    "match_score": 0.829551100730896
+  },
+  {
+    "id": 69,
+    "school_id": 69,
+    "school_name": "ЧОУ Покровская православная классическая гимназия г. Саратова им. Святого благоверного князя А. Невского",
+    "school_adres": "ул Горького, д 83",
+    "school_near_id": null,
+    "school_near_name": null,
+    "district_near_name": null
+  },
+  {
+    "id": 70,
+    "school_id": 70,
+    "school_name": "МОУ Гимназия №7 им. К. Д. Ушинского",
+    "school_adres": "ул Муленкова, зд 10А",
+    "school_near_id": 41,
+    "school_near_name": "МОУ «ГИМНАЗИЯ №5»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8466173410415649
+  },
+  {
+    "id": 71,
+    "school_id": 71,
+    "school_name": "ГБОУ Школа-интернат для обучающихся по адаптированным образовательным программам №3 г. Саратова",
+    "school_adres": "пр-д Селекционный, зд 3",
+    "school_near_id": null,
+    "school_near_name": null,
+    "district_near_name": null
+  },
+  {
+    "id": 72,
+    "school_id": 72,
+    "school_name": "МАОУ Прогимназия № 237 Семицветик г. Саратова",
+    "school_adres": "ул Посадского, зд 308А",
+    "school_near_id": 84,
+    "school_near_name": "МАОУ «Гимназия №31»",
+    "district_near_name": "Кировский",
+    "match_score": 0.8235001564025879
+  },
+  {
+    "id": 73,
+    "school_id": 73,
+    "school_name": "МОУ Основная общеобразовательная школа №78",
+    "school_adres": "ул Огородная, зд 173",
+    "school_near_id": 68,
+    "school_near_name": "МОУ «СОШ №84»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8340247273445129
+  },
+  {
+    "id": 74,
+    "school_id": 74,
+    "school_name": "МОУ Гимназия №5",
+    "school_adres": "ул Азовская, зд. 15",
+    "school_near_id": 41,
+    "school_near_name": "МОУ «ГИМНАЗИЯ №5»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8983447551727295
+  },
+  {
+    "id": 75,
+    "school_id": 75,
+    "school_name": "ГАОУ Инженерный лицей",
+    "school_adres": "ул Клочкова, д 85",
+    "school_near_id": 137,
+    "school_near_name": "МОУ «Гимназия № 89»",
+    "district_near_name": "Ленинский",
+    "match_score": 0.8413384556770325
+  },
+  {
+    "id": 76,
+    "school_id": 76,
+    "school_name": "МОУ Лицей №50 им. Загороднева В.И.",
+    "school_adres": "ул Загороднева, зд 16",
+    "school_near_id": 41,
+    "school_near_name": "МОУ «ГИМНАЗИЯ №5»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8322391510009766
+  },
+  {
+    "id": 77,
+    "school_id": 77,
+    "school_name": "МОУ Гимназия №75 им. Д.М. Карбышева",
+    "school_adres": "ул Осенняя, зд 5",
+    "school_near_id": 41,
+    "school_near_name": "МОУ «ГИМНАЗИЯ №5»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8927900791168213
+  },
+  {
+    "id": 78,
+    "school_id": 78,
+    "school_name": "ГАОУ Лицей гуманитарных наук",
+    "school_adres": "ул Большая Садовая, зд 224А",
+    "school_near_id": null,
+    "school_near_name": null,
+    "district_near_name": null
+  },
+  {
+    "id": 79,
+    "school_id": 79,
+    "school_name": "МАОУ Лицей №37",
+    "school_adres": "пер Мирный, д 3",
+    "school_near_id": 140,
+    "school_near_name": "МОУ «Лицей № 47»",
+    "district_near_name": "Ленинский",
+    "match_score": 0.8598654866218567
+  },
+  {
+    "id": 80,
+    "school_id": 80,
+    "school_name": "ГАОУ Физико-технический лицей №1",
+    "school_adres": "ул Московская, зд 143А",
+    "school_near_id": 157,
+    "school_near_name": "МАОУ «Лицей № 37» Фрунзенского района г. Саратова",
+    "district_near_name": "Фрунзенский",
+    "match_score": 0.8874415159225464
+  },
+  {
+    "id": 81,
+    "school_id": 81,
+    "school_name": "МОУ Гимназия №34",
+    "school_adres": "пр-кт Энтузиастов, зд 48",
+    "school_near_id": 63,
+    "school_near_name": "МОУ «Гимназия № 58»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8698087930679321
+  },
+  {
+    "id": 82,
+    "school_id": 82,
+    "school_name": "МАОУ Лицей математики и информатики",
+    "school_adres": "ул Посадского, д 24Б",
+    "school_near_id": 83,
+    "school_near_name": "МАОУ «Лицей № 24 имени М.М. Расковой»",
+    "district_near_name": "Кировский",
+    "match_score": 0.7990728616714478
+  },
+  {
+    "id": 83,
+    "school_id": 83,
+    "school_name": "Лицей №3",
+    "school_adres": "ул Советская, д 46",
+    "school_near_id": 140,
+    "school_near_name": "МОУ «Лицей № 47»",
+    "district_near_name": "Ленинский",
+    "match_score": 0.8758173584938049
+  },
+  {
+    "id": 84,
+    "school_id": 84,
+    "school_name": "МОУ Лицей №4",
+    "school_adres": "ул Радищева, д 64/32",
+    "school_near_id": 3,
+    "school_near_name": "МОУ «Лицей № 4»",
+    "district_near_name": "Волжский",
+    "match_score": 0.8115503787994385
+  },
+  {
+    "id": 85,
+    "school_id": 85,
+    "school_name": "МОУ Основная общеобразовательная школа №81",
+    "school_adres": "ул Васильковская, д 17",
+    "school_near_id": 68,
+    "school_near_name": "МОУ «СОШ №84»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8264402151107788
+  },
+  {
+    "id": 86,
+    "school_id": 87,
+    "school_name": "МОУ Средняя общеобразовательная школа №83",
+    "school_adres": "ул Крымская, зд 2",
+    "school_near_id": 68,
+    "school_near_name": "МОУ «СОШ №84»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8524404764175415
+  },
+  {
+    "id": 87,
+    "school_id": 88,
+    "school_name": "ГБОУ Школа-интернат для обучающихся по адаптированным образовательным программам №4",
+    "school_adres": "ул Чернышевского, зд 157",
+    "school_near_id": null,
+    "school_near_name": null,
+    "district_near_name": null
+  },
+  {
+    "id": 88,
+    "school_id": 89,
+    "school_name": "ГБОУ Школа для обучающихся по адаптированным образовательным программам №4 г. Саратова",
+    "school_adres": "ул Загороднева, зд 19",
+    "school_near_id": 152,
+    "school_near_name": "ГАОУ «Гимназия № 1»",
+    "district_near_name": "Октябрьский",
+    "match_score": 0.804923951625824
+  },
+  {
+    "id": 89,
+    "school_id": 90,
+    "school_name": "МАОУ Средняя общеобразовательная школа №16",
+    "school_adres": "ул Брянская, д 3",
+    "school_near_id": 151,
+    "school_near_name": "МОУ «СОШ №97»",
+    "district_near_name": "Октябрьский",
+    "match_score": 0.8165052533149719
+  },
+  {
+    "id": 90,
+    "school_id": 91,
+    "school_name": "ГБОУ Школа-интернат для обучающихся по адаптированным образовательным программам №5",
+    "school_adres": "ул Рогожина, зд 22",
+    "school_near_id": 84,
+    "school_near_name": "МАОУ «Гимназия №31»",
+    "district_near_name": "Кировский",
+    "match_score": 0.7804202437400818
+  },
+  {
+    "id": 91,
+    "school_id": 92,
+    "school_name": "МОУ Гимназия №89",
+    "school_adres": "ул Мало-Елшанская, зд 5",
+    "school_near_id": 41,
+    "school_near_name": "МОУ «ГИМНАЗИЯ №5»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8973026871681213
+  },
+  {
+    "id": 92,
+    "school_id": 93,
+    "school_name": "ГБОУ Школа для обучающихся по адаптированным образовательным программам №2 г. Саратова",
+    "school_adres": "ул Гоголя, зд 42",
+    "school_near_id": 152,
+    "school_near_name": "ГАОУ «Гимназия № 1»",
+    "district_near_name": "Октябрьский",
+    "match_score": 0.8203530311584473
+  },
+  {
+    "id": 93,
+    "school_id": 94,
+    "school_name": "МАОУ Лицей №36",
+    "school_adres": "ул Одесская, зд 7",
+    "school_near_id": 62,
+    "school_near_name": "МОУ «Лицей № 53»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8742220401763916
+  },
+  {
+    "id": 94,
+    "school_id": 95,
+    "school_name": "МАОУ Медико-биологический лицей",
+    "school_adres": "ул Блинова, зд 27",
+    "school_near_id": 139,
+    "school_near_name": "МАОУ «Лицей № 36»",
+    "district_near_name": "Ленинский",
+    "match_score": 0.8276194930076599
+  },
+  {
+    "id": 95,
+    "school_id": 96,
+    "school_name": "МОУ Лицей №107",
+    "school_adres": "ул Державинская, д 10",
+    "school_near_id": 138,
+    "school_near_name": "МАОУ «Гимназия №108»",
+    "district_near_name": "Ленинский",
+    "match_score": 0.8082602620124817
+  },
+  {
+    "id": 96,
+    "school_id": 97,
+    "school_name": "ГБОУ Школа для обучающихся по адаптированным образовательным программам №6 г. Саратова",
+    "school_adres": "ул Пролетарская, зд 8",
+    "school_near_id": 52,
+    "school_near_name": "МАОУ «СОШ №23 имени С.В. Астраханцева» Нагорная 6",
+    "district_near_name": "Заводской",
+    "match_score": 0.7982621192932129
+  },
+  {
+    "id": 97,
+    "school_id": 98,
+    "school_name": "ЧОУ Средняя общеобразовательная школа с этнокультурным еврейским компонентом образования",
+    "school_adres": "пр-д Селекционный, зд 5",
+    "school_near_id": null,
+    "school_near_name": null,
+    "district_near_name": null
+  },
+  {
+    "id": 98,
+    "school_id": 100,
+    "school_name": "ЧОУ Гимназия ДАР",
+    "school_adres": "ул Гвардейская, зд 13Д стр 1",
+    "school_near_id": null,
+    "school_near_name": null,
+    "district_near_name": null
+  },
+  {
+    "id": 99,
+    "school_id": 101,
+    "school_name": "МОУ Национальная (татарская) гимназия им. героя Советского Союза Г.Г. Рамаева",
+    "school_adres": "ул Мясницкая, д 4",
+    "school_near_id": null,
+    "school_near_name": null,
+    "district_near_name": null
+  },
+  {
+    "id": 100,
+    "school_id": 102,
+    "school_name": "МАОУ Гимназия №87",
+    "school_adres": "ул Перспективная, д 9а",
+    "school_near_id": 138,
+    "school_near_name": "МАОУ «Гимназия №108»",
+    "district_near_name": "Ленинский",
+    "match_score": 0.8055822849273682
+  },
+  {
+    "id": 101,
+    "school_id": 103,
+    "school_name": "МОУ Гимназия №58",
+    "school_adres": "ул Расковой, зд 12",
+    "school_near_id": 63,
+    "school_near_name": "МОУ «Гимназия № 58»",
+    "district_near_name": "Заводской",
+    "match_score": 0.9014041423797607
+  },
+  {
+    "id": 102,
+    "school_id": 104,
+    "school_name": "МОУ Средняя общеобразовательная школа №80 Ласточкино",
+    "school_adres": "ул Романтиков, зд 85",
+    "school_near_id": 66,
+    "school_near_name": "МОУ «ООШ № 81»",
+    "district_near_name": "Заводской",
+    "match_score": 0.835432767868042
+  },
+  {
+    "id": 103,
+    "school_id": 105,
+    "school_name": "МОУ Средняя общеобразовательная школа №66 им. Н. И. Вавилова",
+    "school_adres": "пос Новосоколовогорский, ул Казанская, зд 29",
+    "school_near_id": 151,
+    "school_near_name": "МОУ «СОШ №97»",
+    "district_near_name": "Октябрьский",
+    "match_score": 0.8325650691986084
+  },
+  {
+    "id": 104,
+    "school_id": 106,
+    "school_name": "МОУ Лицей №56",
+    "school_adres": "пр-д 3-й Строителей, зд 3",
+    "school_near_id": 62,
+    "school_near_name": "МОУ «Лицей № 53»",
+    "district_near_name": "Заводской",
+    "match_score": 0.7957133650779724
+  },
+  {
+    "id": 105,
+    "school_id": 107,
+    "school_name": "МОУ Средняя общеобразовательная школа №46 Городские Просторы",
+    "school_adres": "ул Евгения Долгина, зд 5",
+    "school_near_id": 41,
+    "school_near_name": "МОУ «ГИМНАЗИЯ №5»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8580074906349182
+  },
+  {
+    "id": 106,
+    "school_id": 108,
+    "school_name": "МОУ Гуманитарно-экономический лицей",
+    "school_adres": "ул 1-я Садовая, д 2",
+    "school_near_id": null,
+    "school_near_name": null,
+    "district_near_name": null
+  },
+  {
+    "id": 107,
+    "school_id": 109,
+    "school_name": "ГАОУ Физико-технический лицей №1",
+    "school_adres": "ул Железнодорожная, зд 74",
+    "school_near_id": 157,
+    "school_near_name": "МАОУ «Лицей № 37» Фрунзенского района г. Саратова",
+    "district_near_name": "Фрунзенский",
+    "match_score": 0.8593192100524902
+  },
+  {
+    "id": 108,
+    "school_id": 110,
+    "school_name": "МАОУ Средняя общеобразовательная школа №16",
+    "school_adres": "ул Лесопильная, д 17",
+    "school_near_id": 46,
+    "school_near_name": "МОУ «СОШ № 22» Нагорная 11",
+    "district_near_name": "Заводской",
+    "match_score": 0.8110318183898926
+  },
+  {
+    "id": 109,
+    "school_id": 111,
+    "school_name": "АНОО Гимназия гуманитарных наук",
+    "school_adres": "ул Большая Казачья, д 58",
+    "school_near_id": 63,
+    "school_near_name": "МОУ «Гимназия № 58»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8183019161224365
+  },
+  {
+    "id": 110,
+    "school_id": 115,
+    "school_name": "ГАОУ Физико-технический лицей №1",
+    "school_adres": "ул Московская, зд 143А",
+    "school_near_id": 157,
+    "school_near_name": "МАОУ «Лицей № 37» Фрунзенского района г. Саратова",
+    "district_near_name": "Фрунзенский",
+    "match_score": 0.8874415159225464
+  },
+  {
+    "id": 111,
+    "school_id": 117,
+    "school_name": "МОУ Средняя общеобразовательная школа №10",
+    "school_adres": "ул Рогожина, зд 24/32",
+    "school_near_id": 45,
+    "school_near_name": "МОУ «СОШ № 22» Нагорная 10",
+    "district_near_name": "Заводской",
+    "match_score": 0.827358603477478
+  },
+  {
+    "id": 112,
+    "school_id": 122,
+    "school_name": "МОУ Средняя общеобразовательная школа пос. Расково Муниципального образования Город Саратов",
+    "school_adres": "п Расково, ул Полевая, зд 7Д",
+    "school_near_id": null,
+    "school_near_name": null,
+    "district_near_name": null
+  },
+  {
+    "id": 113,
+    "school_id": 124,
+    "school_name": "МОУ Средняя общеобразовательная школа №5",
+    "school_adres": "ул Огородная, зд 196",
+    "school_near_id": 40,
+    "school_near_name": "МОУ « СОШ №5»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8457867503166199
+  },
+  {
+    "id": 114,
+    "school_id": 130,
+    "school_name": "МАОУ Средняя общеобразовательная школа с. Клещевка муниципального образования Город Саратов",
+    "school_adres": "с Клещевка, ул Советская, д 46",
+    "school_near_id": null,
+    "school_near_name": null,
+    "district_near_name": null
+  },
+  {
+    "id": 115,
+    "school_id": 153,
+    "school_name": "МОУ Средняя общеобразовательная школа №7",
+    "school_adres": "ул Аткарская, зд 1В",
+    "school_near_id": 55,
+    "school_near_name": "МАОУ «СОШ №23 имени С.В. Астраханцева» Пионерская 1",
+    "district_near_name": "Заводской",
+    "match_score": 0.8482233285903931
+  },
+  {
+    "id": 116,
+    "school_id": 154,
+    "school_name": "МАОУ Лицей Солярис",
+    "school_adres": "пр-кт Героев Отечества, зд 11А",
+    "school_near_id": 95,
+    "school_near_name": "МАОУ «Лицей «Солярис» (5-11-е классы)",
+    "district_near_name": "Кировский",
+    "match_score": 0.8107849359512329
+  },
+  {
+    "id": 117,
+    "school_id": 155,
+    "school_name": "МОУ Средняя общеобразовательная школа №5",
+    "school_adres": "ул Огородная, зд 196",
+    "school_near_id": 40,
+    "school_near_name": "МОУ « СОШ №5»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8457867503166199
+  },
+  {
+    "id": 118,
+    "school_id": 156,
+    "school_name": "МОУ Средняя общеобразовательная школа №11",
+    "school_adres": "пр-д 1-й Соколовогорский, зд 2А",
+    "school_near_id": 64,
+    "school_near_name": "МОУ «СОШ № 59 с углубленным изучением предметов»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8235460519790649
+  },
+  {
+    "id": 119,
+    "school_id": 157,
+    "school_name": "МОУ Средняя общеобразовательная школа №77",
+    "school_adres": "ул Новоузенская, д 143",
+    "school_near_id": 151,
+    "school_near_name": "МОУ «СОШ №97»",
+    "district_near_name": "Октябрьский",
+    "match_score": 0.8503800630569458
+  },
+  {
+    "id": 120,
+    "school_id": 158,
+    "school_name": "МОУ Средняя общеобразовательная школа №52",
+    "school_adres": "ул Широкая, зд 34",
+    "school_near_id": 60,
+    "school_near_name": "МОУ «СОШ № 38»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8446570634841919
+  },
+  {
+    "id": 121,
+    "school_id": 159,
+    "school_name": "МОУ Средняя общеобразовательная школа №102",
+    "school_adres": "ул Шехурдина, д 56А",
+    "school_near_id": 75,
+    "school_near_name": "МОУ «СОШ № 106» Пионерская 1",
+    "district_near_name": "Заводской",
+    "match_score": 0.8360989689826965
+  },
+  {
+    "id": 122,
+    "school_id": 160,
+    "school_name": "МОУ Средняя общеобразовательная школа №82",
+    "school_adres": "ул 2 Садоаая, зд 106А",
+    "school_near_id": 68,
+    "school_near_name": "МОУ «СОШ №84»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8569824695587158
+  },
+  {
+    "id": 123,
+    "school_id": 161,
+    "school_name": "МОУ Средняя общеобразовательная школа №63 с углубленным изучением отдельных предметов",
+    "school_adres": "ул Уфимцева, зд 4А",
+    "school_near_id": 64,
+    "school_near_name": "МОУ «СОШ № 59 с углубленным изучением предметов»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8238532543182373
+  },
+  {
+    "id": 124,
+    "school_id": 162,
+    "school_name": "МОУ Средняя общеобразовательная школа №95 с углубленным изучением отдельных предметов",
+    "school_adres": "ул 2-я Садовая, д 23",
+    "school_near_id": 64,
+    "school_near_name": "МОУ «СОШ № 59 с углубленным изучением предметов»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8286136388778687
+  },
+  {
+    "id": 125,
+    "school_id": 163,
+    "school_name": "МОУ Средняя общеобразовательная школа №67 им. О.И. Янковского",
+    "school_adres": "ул Пугачева, д 123",
+    "school_near_id": 151,
+    "school_near_name": "МОУ «СОШ №97»",
+    "district_near_name": "Октябрьский",
+    "match_score": 0.8235357999801636
+  },
+  {
+    "id": 126,
+    "school_id": 164,
+    "school_name": "МОУ Средняя общеобразовательная школа №8 Волжского района г. Саратова",
+    "school_adres": "ул Соборная, зд 33",
+    "school_near_id": 68,
+    "school_near_name": "МОУ «СОШ №84»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8090792894363403
+  },
+  {
+    "id": 127,
+    "school_id": 165,
+    "school_name": "МАОУ Аврора средняя общеобразовательная школа",
+    "school_adres": "ул Батавина, зд 23",
+    "school_near_id": null,
+    "school_near_name": null,
+    "district_near_name": null
+  },
+  {
+    "id": 128,
+    "school_id": 167,
+    "school_name": "МАОУ Лицей №24 им. М.М. Расковой",
+    "school_adres": "ул Жуковского, д 24",
+    "school_near_id": 83,
+    "school_near_name": "МАОУ «Лицей № 24 имени М.М. Расковой»",
+    "district_near_name": "Кировский",
+    "match_score": 0.8634383082389832
+  },
+  {
+    "id": 129,
+    "school_id": 168,
+    "school_name": "МОУ Гуманитарно-экономический лицей",
+    "school_adres": "ул Большая Горная, д 141",
+    "school_near_id": 137,
+    "school_near_name": "МОУ «Гимназия № 89»",
+    "district_near_name": "Ленинский",
+    "match_score": 0.8334746360778809
+  },
+  {
+    "id": 130,
+    "school_id": 169,
+    "school_name": "МАОУ Средняя общеобразовательная школа №90",
+    "school_adres": "ул Заречная, зд 2",
+    "school_near_id": 66,
+    "school_near_name": "МОУ «ООШ № 81»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8462508916854858
+  },
+  {
+    "id": 131,
+    "school_id": 170,
+    "school_name": "МАОУ Лицей Солярис",
+    "school_adres": "ул Лисина, зд 7Б",
+    "school_near_id": 140,
+    "school_near_name": "МОУ «Лицей № 47»",
+    "district_near_name": "Ленинский",
+    "match_score": 0.8186135292053223
+  },
+  {
+    "id": 132,
+    "school_id": 171,
+    "school_name": "МБОУ Основная общеобразовательная школа №91 ",
+    "school_adres": "пр-д 1-й Нефтяной, д 1",
+    "school_near_id": null,
+    "school_near_name": null,
+    "district_near_name": null
+  },
+  {
+    "id": 133,
+    "school_id": 173,
+    "school_name": "МОУ Гимназия Авиатор",
+    "school_adres": "бульв Денисова Николая, зд 4",
+    "school_near_id": 58,
+    "school_near_name": "МОУ «Гимназия № 34 им. Г.Д. Ермолаева»",
+    "district_near_name": "Заводской",
+    "match_score": 0.8258641958236694
+  },
+  {
+    "id": 134,
+    "school_id": 175,
+    "school_name": "МБОУ Основная общеобразовательная школа №91",
+    "school_adres": "пр-д 1-й Нефтяной, д 1",
+    "school_near_id": null,
+    "school_near_name": null,
+    "district_near_name": null
+  },
+  {
+    "id": 135,
+    "school_id": null,
+    "school_name": "МАОУ «Гимназия № 2»",
+    "school_adres": null,
+    "school_near_id": 1,
+    "school_near_name": "МАОУ «Гимназия № 2»",
+    "district_near_name": "Волжский"
+  },
+  {
+    "id": 136,
+    "school_id": null,
+    "school_name": "МАОУ «Гимназия № 4»",
+    "school_adres": null,
+    "school_near_id": 2,
+    "school_near_name": "МАОУ «Гимназия № 4»",
+    "district_near_name": "Волжский"
+  },
+  {
+    "id": 137,
+    "school_id": null,
+    "school_name": "МОУ «Гимназия № 7»",
+    "school_adres": null,
+    "school_near_id": 4,
+    "school_near_name": "МОУ «Гимназия № 7»",
+    "district_near_name": "Волжский"
+  },
+  {
+    "id": 138,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 8»",
+    "school_adres": null,
+    "school_near_id": 5,
+    "school_near_name": "МОУ «СОШ № 8»",
+    "district_near_name": "Волжский"
+  },
+  {
+    "id": 139,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 9»",
+    "school_adres": null,
+    "school_near_id": 6,
+    "school_near_name": "МОУ «СОШ № 9»",
+    "district_near_name": "Волжский"
+  },
+  {
+    "id": 140,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 10»",
+    "school_adres": null,
+    "school_near_id": 7,
+    "school_near_name": "МОУ «СОШ № 10»",
+    "district_near_name": "Волжский"
+  },
+  {
+    "id": 141,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 11»",
+    "school_adres": null,
+    "school_near_id": 8,
+    "school_near_name": "МОУ «СОШ № 11»",
+    "district_near_name": "Волжский"
+  },
+  {
+    "id": 142,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 66 им. Н.И.Вавилова»",
+    "school_adres": null,
+    "school_near_id": 10,
+    "school_near_name": "МОУ «СОШ № 66 им. Н.И.Вавилова»",
+    "district_near_name": "Волжский"
+  },
+  {
+    "id": 143,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 66 им. Н.И.Вавилова» Казанская, 29",
+    "school_adres": null,
+    "school_near_id": 11,
+    "school_near_name": "МОУ «СОШ № 66 им. Н.И.Вавилова» Казанская, 29",
+    "district_near_name": "Волжский"
+  },
+  {
+    "id": 144,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ «Иволгино»",
+    "school_adres": null,
+    "school_near_id": 12,
+    "school_near_name": "МАОУ «СОШ «Иволгино»",
+    "district_near_name": "Волжский"
+  },
+  {
+    "id": 145,
+    "school_id": null,
+    "school_name": "МОУ «Лицей № 107»",
+    "school_adres": null,
+    "school_near_id": 13,
+    "school_near_name": "МОУ «Лицей № 107»",
+    "district_near_name": "Волжский"
+  },
+  {
+    "id": 146,
+    "school_id": null,
+    "school_name": "МОУ «ГЭЛ»",
+    "school_adres": null,
+    "school_near_id": 14,
+    "school_near_name": "МОУ «ГЭЛ»",
+    "district_near_name": "Волжский"
+  },
+  {
+    "id": 147,
+    "school_id": null,
+    "school_name": "МОУ «РПКГ»",
+    "school_adres": null,
+    "school_near_id": 15,
+    "school_near_name": "МОУ «РПКГ»",
+    "district_near_name": "Волжский"
+  },
+  {
+    "id": 148,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ с. Александровка»",
+    "school_adres": null,
+    "school_near_id": 16,
+    "school_near_name": "МАОУ «СОШ с. Александровка»",
+    "district_near_name": "Гагаринский"
+  },
+  {
+    "id": 149,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ с.Березина Речка»",
+    "school_adres": null,
+    "school_near_id": 17,
+    "school_near_name": "МАОУ «СОШ с.Березина Речка»",
+    "district_near_name": "Гагаринский"
+  },
+  {
+    "id": 150,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ с. Синенькие»",
+    "school_adres": null,
+    "school_near_id": 18,
+    "school_near_name": "МАОУ «СОШ с. Синенькие»",
+    "district_near_name": "Гагаринский"
+  },
+  {
+    "id": 151,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ р.п. Красный Октябрь»",
+    "school_adres": null,
+    "school_near_id": 19,
+    "school_near_name": "МАОУ «СОШ р.п. Красный Октябрь»",
+    "district_near_name": "Гагаринский"
+  },
+  {
+    "id": 152,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ с. Багаевка им. Н.В. Котлова»",
+    "school_adres": null,
+    "school_near_id": 20,
+    "school_near_name": "МАОУ «СОШ с. Багаевка им. Н.В. Котлова»",
+    "district_near_name": "Гагаринский"
+  },
+  {
+    "id": 153,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ села Поповка»",
+    "school_adres": null,
+    "school_near_id": 21,
+    "school_near_name": "МАОУ «СОШ села Поповка»",
+    "district_near_name": "Гагаринский"
+  },
+  {
+    "id": 154,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ с. Поповка»",
+    "school_adres": null,
+    "school_near_id": 22,
+    "school_near_name": "МАОУ «СОШ с. Поповка»",
+    "district_near_name": "Гагаринский"
+  },
+  {
+    "id": 155,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ р.п. Соколовый»",
+    "school_adres": null,
+    "school_near_id": 23,
+    "school_near_name": "МАОУ «СОШ р.п. Соколовый»",
+    "district_near_name": "Гагаринский"
+  },
+  {
+    "id": 156,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ п. Красный Текстильщик»",
+    "school_adres": null,
+    "school_near_id": 24,
+    "school_near_name": "МАОУ «СОШ п. Красный Текстильщик»",
+    "district_near_name": "Гагаринский"
+  },
+  {
+    "id": 157,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ п. Тепличный»",
+    "school_adres": null,
+    "school_near_id": 25,
+    "school_near_name": "МАОУ «СОШ п. Тепличный»",
+    "district_near_name": "Гагаринский"
+  },
+  {
+    "id": 158,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ п. Дубки»",
+    "school_adres": null,
+    "school_near_id": 26,
+    "school_near_name": "МАОУ «СОШ п. Дубки»",
+    "district_near_name": "Гагаринский"
+  },
+  {
+    "id": 159,
+    "school_id": null,
+    "school_name": "МАОУ «ООШ п.ц.у. совхоза «15 лет Октября»",
+    "school_adres": null,
+    "school_near_id": 27,
+    "school_near_name": "МАОУ «ООШ п.ц.у. совхоза «15 лет Октября»",
+    "district_near_name": "Гагаринский"
+  },
+  {
+    "id": 160,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ п. Сергиевский»",
+    "school_adres": null,
+    "school_near_id": 28,
+    "school_near_name": "МАОУ «СОШ п. Сергиевский»",
+    "district_near_name": "Гагаринский"
+  },
+  {
+    "id": 161,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ д. Юрловка»",
+    "school_adres": null,
+    "school_near_id": 29,
+    "school_near_name": "МАОУ «СОШ д. Юрловка»",
+    "district_near_name": "Гагаринский"
+  },
+  {
+    "id": 162,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ с.Сосновка»",
+    "school_adres": null,
+    "school_near_id": 30,
+    "school_near_name": "МАОУ «СОШ с.Сосновка»",
+    "district_near_name": "Гагаринский"
+  },
+  {
+    "id": 163,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ п. Расково»",
+    "school_adres": null,
+    "school_near_id": 31,
+    "school_near_name": "МАОУ «СОШ п. Расково»",
+    "district_near_name": "Гагаринский"
+  },
+  {
+    "id": 164,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ с. Михайловка»",
+    "school_adres": null,
+    "school_near_id": 32,
+    "school_near_name": "МАОУ «СОШ с. Михайловка»",
+    "district_near_name": "Гагаринский"
+  },
+  {
+    "id": 165,
+    "school_id": null,
+    "school_name": "МОУ «СОШ ст.Тарханы»",
+    "school_adres": null,
+    "school_near_id": 33,
+    "school_near_name": "МОУ «СОШ ст.Тарханы»",
+    "district_near_name": "Гагаринский"
+  },
+  {
+    "id": 166,
+    "school_id": null,
+    "school_name": "МАОУ «ООШ п. Ивановский»",
+    "school_adres": null,
+    "school_near_id": 34,
+    "school_near_name": "МАОУ «ООШ п. Ивановский»",
+    "district_near_name": "Гагаринский"
+  },
+  {
+    "id": 167,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ с.Клещевка»",
+    "school_adres": null,
+    "school_near_id": 35,
+    "school_near_name": "МАОУ «СОШ с.Клещевка»",
+    "district_near_name": "Гагаринский"
+  },
+  {
+    "id": 168,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ села Рыбушка»",
+    "school_adres": null,
+    "school_near_id": 36,
+    "school_near_name": "МАОУ «СОШ села Рыбушка»",
+    "district_near_name": "Гагаринский"
+  },
+  {
+    "id": 169,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ с. Усть-Курдюм»",
+    "school_adres": null,
+    "school_near_id": 37,
+    "school_near_name": "МАОУ «СОШ с. Усть-Курдюм»",
+    "district_near_name": "Гагаринский"
+  },
+  {
+    "id": 170,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ ст.Курдюм»",
+    "school_adres": null,
+    "school_near_id": 38,
+    "school_near_name": "МАОУ «СОШ ст.Курдюм»",
+    "district_near_name": "Гагаринский"
+  },
+  {
+    "id": 171,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ с.Сторожевка»",
+    "school_adres": null,
+    "school_near_id": 39,
+    "school_near_name": "МАОУ «СОШ с.Сторожевка»",
+    "district_near_name": "Гагаринский"
+  },
+  {
+    "id": 172,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ № 16»",
+    "school_adres": null,
+    "school_near_id": 43,
+    "school_near_name": "МАОУ «СОШ № 16»",
+    "district_near_name": "Заводской"
+  },
+  {
+    "id": 173,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 22»",
+    "school_adres": null,
+    "school_near_id": 44,
+    "school_near_name": "МОУ «СОШ № 22»",
+    "district_near_name": "Заводской"
+  },
+  {
+    "id": 174,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 22» Нагорная 5",
+    "school_adres": null,
+    "school_near_id": 47,
+    "school_near_name": "МОУ «СОШ № 22» Нагорная 5",
+    "district_near_name": "Заводской"
+  },
+  {
+    "id": 175,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 22» Нагорная 6",
+    "school_adres": null,
+    "school_near_id": 48,
+    "school_near_name": "МОУ «СОШ № 22» Нагорная 6",
+    "district_near_name": "Заводской"
+  },
+  {
+    "id": 176,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 22» Нагорная 7",
+    "school_adres": null,
+    "school_near_id": 49,
+    "school_near_name": "МОУ «СОШ № 22» Нагорная 7",
+    "district_near_name": "Заводской"
+  },
+  {
+    "id": 177,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 22» Нагорная 8",
+    "school_adres": null,
+    "school_near_id": 50,
+    "school_near_name": "МОУ «СОШ № 22» Нагорная 8",
+    "district_near_name": "Заводской"
+  },
+  {
+    "id": 178,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ №23 имени С.В. Астраханцева»",
+    "school_adres": null,
+    "school_near_id": 54,
+    "school_near_name": "МАОУ «СОШ №23 имени С.В. Астраханцева»",
+    "district_near_name": "Заводской"
+  },
+  {
+    "id": 179,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ №23 имени С.В. Астраханцева» Пионерская 2",
+    "school_adres": null,
+    "school_near_id": 56,
+    "school_near_name": "МАОУ «СОШ №23 имени С.В. Астраханцева» Пионерская 2",
+    "district_near_name": "Заводской"
+  },
+  {
+    "id": 180,
+    "school_id": null,
+    "school_name": "МОУ «ООШ № 26»",
+    "school_adres": null,
+    "school_near_id": 57,
+    "school_near_name": "МОУ «ООШ № 26»",
+    "district_near_name": "Заводской"
+  },
+  {
+    "id": 181,
+    "school_id": null,
+    "school_name": "МОУ «Гимназия «Авиатор»",
+    "school_adres": null,
+    "school_near_id": 59,
+    "school_near_name": "МОУ «Гимназия «Авиатор»",
+    "district_near_name": "Заводской"
+  },
+  {
+    "id": 182,
+    "school_id": null,
+    "school_name": "МОУ «ООШ № 78»",
+    "school_adres": null,
+    "school_near_id": 65,
+    "school_near_name": "МОУ «ООШ № 78»",
+    "district_near_name": "Заводской"
+  },
+  {
+    "id": 183,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 83»",
+    "school_adres": null,
+    "school_near_id": 67,
+    "school_near_name": "МОУ «СОШ № 83»",
+    "district_near_name": "Заводской"
+  },
+  {
+    "id": 184,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ № 90»",
+    "school_adres": null,
+    "school_near_id": 69,
+    "school_near_name": "МАОУ «СОШ № 90»",
+    "district_near_name": "Заводской"
+  },
+  {
+    "id": 185,
+    "school_id": null,
+    "school_name": "МАОУ «ООШ № 91»",
+    "school_adres": null,
+    "school_near_id": 70,
+    "school_near_name": "МАОУ «ООШ № 91»",
+    "district_near_name": "Заводской"
+  },
+  {
+    "id": 186,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 106»",
+    "school_adres": null,
+    "school_near_id": 71,
+    "school_near_name": "МОУ «СОШ № 106»",
+    "district_near_name": "Заводской"
+  },
+  {
+    "id": 187,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 106» Нагорная 1",
+    "school_adres": null,
+    "school_near_id": 72,
+    "school_near_name": "МОУ «СОШ № 106» Нагорная 1",
+    "district_near_name": "Заводской"
+  },
+  {
+    "id": 188,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 106» Нагорная 2",
+    "school_adres": null,
+    "school_near_id": 73,
+    "school_near_name": "МОУ «СОШ № 106» Нагорная 2",
+    "district_near_name": "Заводской"
+  },
+  {
+    "id": 189,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 106» Нагорная 3",
+    "school_adres": null,
+    "school_near_id": 74,
+    "school_near_name": "МОУ «СОШ № 106» Нагорная 3",
+    "district_near_name": "Заводской"
+  },
+  {
+    "id": 190,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 106» Пионерская 2",
+    "school_adres": null,
+    "school_near_id": 76,
+    "school_near_name": "МОУ «СОШ № 106» Пионерская 2",
+    "district_near_name": "Заводской"
+  },
+  {
+    "id": 191,
+    "school_id": null,
+    "school_name": "МОУ «ООШ № 14» (1-9-е классы)",
+    "school_adres": null,
+    "school_near_id": 77,
+    "school_near_name": "МОУ «ООШ № 14» (1-9-е классы)",
+    "district_near_name": "Кировский"
+  },
+  {
+    "id": 192,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 70» (10-11-е классы)",
+    "school_adres": null,
+    "school_near_id": 78,
+    "school_near_name": "МОУ «СОШ № 70» (10-11-е классы)",
+    "district_near_name": "Кировский"
+  },
+  {
+    "id": 193,
+    "school_id": null,
+    "school_name": "МОУ «ООШ № 17» (1-9-е классы)",
+    "school_adres": null,
+    "school_near_id": 79,
+    "school_near_name": "МОУ «ООШ № 17» (1-9-е классы)",
+    "district_near_name": "Кировский"
+  },
+  {
+    "id": 194,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 54 имени И.А. Евтеева» (10-11-е классы)",
+    "school_adres": null,
+    "school_near_id": 80,
+    "school_near_name": "МОУ «СОШ № 54 имени И.А. Евтеева» (10-11-е классы)",
+    "district_near_name": "Кировский"
+  },
+  {
+    "id": 195,
+    "school_id": null,
+    "school_name": "МОУ «ООШ № 17» (1- 9-е классы)",
+    "school_adres": null,
+    "school_near_id": 81,
+    "school_near_name": "МОУ «ООШ № 17» (1- 9-е классы)",
+    "district_near_name": "Кировский"
+  },
+  {
+    "id": 196,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ № 21 им П.А. Столыпина»",
+    "school_adres": null,
+    "school_near_id": 82,
+    "school_near_name": "МАОУ «СОШ № 21 им П.А. Столыпина»",
+    "district_near_name": "Кировский"
+  },
+  {
+    "id": 197,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ № 51»",
+    "school_adres": null,
+    "school_near_id": 85,
+    "school_near_name": "МАОУ «СОШ № 51»",
+    "district_near_name": "Кировский"
+  },
+  {
+    "id": 198,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 54 имени И.А. Евтеева»",
+    "school_adres": null,
+    "school_near_id": 86,
+    "school_near_name": "МОУ «СОШ № 54 имени И.А. Евтеева»",
+    "district_near_name": "Кировский"
+  },
+  {
+    "id": 199,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 67 им. О.И.Янковского»",
+    "school_adres": null,
+    "school_near_id": 87,
+    "school_near_name": "МОУ «СОШ № 67 им. О.И.Янковского»",
+    "district_near_name": "Кировский"
+  },
+  {
+    "id": 200,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 70»",
+    "school_adres": null,
+    "school_near_id": 88,
+    "school_near_name": "МОУ «СОШ № 70»",
+    "district_near_name": "Кировский"
+  },
+  {
+    "id": 201,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 71»",
+    "school_adres": null,
+    "school_near_id": 89,
+    "school_near_name": "МОУ «СОШ № 71»",
+    "district_near_name": "Кировский"
+  },
+  {
+    "id": 202,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 73»",
+    "school_adres": null,
+    "school_near_id": 90,
+    "school_near_name": "МОУ «СОШ № 73»",
+    "district_near_name": "Кировский"
+  },
+  {
+    "id": 203,
+    "school_id": null,
+    "school_name": "МАОУ «Лицей «Солярис»",
+    "school_adres": null,
+    "school_near_id": 91,
+    "school_near_name": "МАОУ «Лицей «Солярис»",
+    "district_near_name": "Кировский"
+  },
+  {
+    "id": 204,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ «Аврора»",
+    "school_adres": null,
+    "school_near_id": 92,
+    "school_near_name": "МАОУ «СОШ «Аврора»",
+    "district_near_name": "Кировский"
+  },
+  {
+    "id": 205,
+    "school_id": null,
+    "school_name": "МАОУ «Лицей»",
+    "school_adres": null,
+    "school_near_id": 93,
+    "school_near_name": "МАОУ «Лицей»",
+    "district_near_name": "Кировский"
+  },
+  {
+    "id": 206,
+    "school_id": null,
+    "school_name": "МАОУ «Прогимназия Олимпионик» (1-4-е классы)",
+    "school_adres": null,
+    "school_near_id": 94,
+    "school_near_name": "МАОУ «Прогимназия Олимпионик» (1-4-е классы)",
+    "district_near_name": "Кировский"
+  },
+  {
+    "id": 207,
+    "school_id": null,
+    "school_name": "МАОУ «Прогимназия Кристаллик» (1-4-е классы)",
+    "school_adres": null,
+    "school_near_id": 96,
+    "school_near_name": "МАОУ «Прогимназия Кристаллик» (1-4-е классы)",
+    "district_near_name": "Кировский"
+  },
+  {
+    "id": 208,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 54 имени И.А. Евтеева» (5-11-е классы)",
+    "school_adres": null,
+    "school_near_id": 97,
+    "school_near_name": "МОУ «СОШ № 54 имени И.А. Евтеева» (5-11-е классы)",
+    "district_near_name": "Кировский"
+  },
+  {
+    "id": 209,
+    "school_id": null,
+    "school_name": "МАОУ «Прогимназия № 237 «Семицветик» г. Саратова (1-4-е классы)",
+    "school_adres": null,
+    "school_near_id": 98,
+    "school_near_name": "МАОУ «Прогимназия № 237 «Семицветик» г. Саратова (1-4-е классы)",
+    "district_near_name": "Кировский"
+  },
+  {
+    "id": 210,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 70» (5-11-е классы)",
+    "school_adres": null,
+    "school_near_id": 99,
+    "school_near_name": "МОУ «СОШ № 70» (5-11-е классы)",
+    "district_near_name": "Кировский"
+  },
+  {
+    "id": 211,
+    "school_id": null,
+    "school_name": "ГАОУ «ФТЛ № 1» (5-11-е классы) (по согласованию)",
+    "school_adres": null,
+    "school_near_id": 100,
+    "school_near_name": "ГАОУ «ФТЛ № 1» (5-11-е классы) (по согласованию)",
+    "district_near_name": "Кировский"
+  },
+  {
+    "id": 212,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 67 им. О.И.Янковского» (1-4-е классы)",
+    "school_adres": null,
+    "school_near_id": 101,
+    "school_near_name": "МОУ «СОШ № 67 им. О.И.Янковского» (1-4-е классы)",
+    "district_near_name": "Кировский"
+  },
+  {
+    "id": 213,
+    "school_id": null,
+    "school_name": "ГАОУ «Лицей гуманитарных наук»",
+    "school_adres": null,
+    "school_near_id": 102,
+    "school_near_name": "ГАОУ «Лицей гуманитарных наук»",
+    "district_near_name": "Кировский"
+  },
+  {
+    "id": 214,
+    "school_id": null,
+    "school_name": "МАОУ «Прогимназия Кристаллик» (1-4 классы)",
+    "school_adres": null,
+    "school_near_id": 103,
+    "school_near_name": "МАОУ «Прогимназия Кристаллик» (1-4 классы)",
+    "district_near_name": "Кировский"
+  },
+  {
+    "id": 215,
+    "school_id": null,
+    "school_name": "МОУ «ООШ № 17» (5-9-е классы)",
+    "school_adres": null,
+    "school_near_id": 104,
+    "school_near_name": "МОУ «ООШ № 17» (5-9-е классы)",
+    "district_near_name": "Кировский"
+  },
+  {
+    "id": 216,
+    "school_id": null,
+    "school_name": "МОУ «НОШ № 88»",
+    "school_adres": null,
+    "school_near_id": 105,
+    "school_near_name": "МОУ «НОШ № 88»",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 217,
+    "school_id": null,
+    "school_name": "МОУ «НОШ № 232» (1-4 классы)",
+    "school_adres": null,
+    "school_near_id": 106,
+    "school_near_name": "МОУ «НОШ № 232» (1-4 классы)",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 218,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 49» (5-9 классы)",
+    "school_adres": null,
+    "school_near_id": 107,
+    "school_near_name": "МОУ «СОШ № 49» (5-9 классы)",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 219,
+    "school_id": null,
+    "school_name": "МОУ «НОШ № 238» (1-4 классы)",
+    "school_adres": null,
+    "school_near_id": 108,
+    "school_near_name": "МОУ «НОШ № 238» (1-4 классы)",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 220,
+    "school_id": null,
+    "school_name": "МОУ «Гимназия № 108» (5-9 классы)",
+    "school_adres": null,
+    "school_near_id": 109,
+    "school_near_name": "МОУ «Гимназия № 108» (5-9 классы)",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 221,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 41»",
+    "school_adres": null,
+    "school_near_id": 110,
+    "school_near_name": "МОУ «СОШ № 41»",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 222,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 44»",
+    "school_adres": null,
+    "school_near_id": 111,
+    "school_near_name": "МОУ «СОШ № 44»",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 223,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 46»",
+    "school_adres": null,
+    "school_near_id": 112,
+    "school_near_name": "МОУ «СОШ № 46»",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 224,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 48»",
+    "school_adres": null,
+    "school_near_id": 113,
+    "school_near_name": "МОУ «СОШ № 48»",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 225,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 49»",
+    "school_adres": null,
+    "school_near_id": 114,
+    "school_near_name": "МОУ «СОШ № 49»",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 226,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 52»",
+    "school_adres": null,
+    "school_near_id": 115,
+    "school_near_name": "МОУ «СОШ № 52»",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 227,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 55»",
+    "school_adres": null,
+    "school_near_id": 116,
+    "school_near_name": "МОУ «СОШ № 55»",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 228,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 57»",
+    "school_adres": null,
+    "school_near_id": 117,
+    "school_near_name": "МОУ «СОШ № 57»",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 229,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 61»",
+    "school_adres": null,
+    "school_near_id": 119,
+    "school_near_name": "МОУ «СОШ № 61»",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 230,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 63 с УИП»",
+    "school_adres": null,
+    "school_near_id": 120,
+    "school_near_name": "МОУ «СОШ № 63 с УИП»",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 231,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 69 имени дважды Героя Советского Союза Скоморохова Н.М.»",
+    "school_adres": null,
+    "school_near_id": 122,
+    "school_near_name": "МОУ «СОШ № 69 имени дважды Героя Советского Союза Скоморохова Н.М.»",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 232,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 72»",
+    "school_adres": null,
+    "school_near_id": 123,
+    "school_near_name": "МОУ «СОШ № 72»",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 233,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 76 имени М.Г. Галицкого»",
+    "school_adres": null,
+    "school_near_id": 124,
+    "school_near_name": "МОУ «СОШ № 76 имени М.Г. Галицкого»",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 234,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 86»",
+    "school_adres": null,
+    "school_near_id": 126,
+    "school_near_name": "МОУ «СОШ № 86»",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 235,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 94»",
+    "school_adres": null,
+    "school_near_id": 127,
+    "school_near_name": "МОУ «СОШ № 94»",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 236,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 100»",
+    "school_adres": null,
+    "school_near_id": 128,
+    "school_near_name": "МОУ «СОШ № 100»",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 237,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 101»",
+    "school_adres": null,
+    "school_near_id": 129,
+    "school_near_name": "МОУ «СОШ № 101»",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 238,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 102»",
+    "school_adres": null,
+    "school_near_id": 130,
+    "school_near_name": "МОУ «СОШ № 102»",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 239,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 103»",
+    "school_adres": null,
+    "school_near_id": 131,
+    "school_near_name": "МОУ «СОШ № 103»",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 240,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 105»",
+    "school_adres": null,
+    "school_near_id": 132,
+    "school_near_name": "МОУ «СОШ № 105»",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 241,
+    "school_id": null,
+    "school_name": "МОУ «Гимназия № 75 им. Д.М. Карбышева»",
+    "school_adres": null,
+    "school_near_id": 135,
+    "school_near_name": "МОУ «Гимназия № 75 им. Д.М. Карбышева»",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 242,
+    "school_id": null,
+    "school_name": "МОУ «Лицей № 50»",
+    "school_adres": null,
+    "school_near_id": 141,
+    "school_near_name": "МОУ «Лицей № 50»",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 243,
+    "school_id": null,
+    "school_name": "МОУ «Лицей № 56»",
+    "school_adres": null,
+    "school_near_id": 142,
+    "school_near_name": "МОУ «Лицей № 56»",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 244,
+    "school_id": null,
+    "school_name": "МАОУ «МБЛ»",
+    "school_adres": null,
+    "school_near_id": 143,
+    "school_near_name": "МАОУ «МБЛ»",
+    "district_near_name": "Ленинский"
+  },
+  {
+    "id": 245,
+    "school_id": null,
+    "school_name": "МАОУ «Лицей № 3 им. А.С. Пушкина»",
+    "school_adres": null,
+    "school_near_id": 144,
+    "school_near_name": "МАОУ «Лицей № 3 им. А.С. Пушкина»",
+    "district_near_name": "Октябрьский"
+  },
+  {
+    "id": 246,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 6»",
+    "school_adres": null,
+    "school_near_id": 145,
+    "school_near_name": "МОУ «СОШ № 6»",
+    "district_near_name": "Октябрьский"
+  },
+  {
+    "id": 247,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 7»",
+    "school_adres": null,
+    "school_near_id": 146,
+    "school_near_name": "МОУ «СОШ № 7»",
+    "district_near_name": "Октябрьский"
+  },
+  {
+    "id": 248,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 45»",
+    "school_adres": null,
+    "school_near_id": 147,
+    "school_near_name": "МОУ «СОШ № 45»",
+    "district_near_name": "Октябрьский"
+  },
+  {
+    "id": 249,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 82»",
+    "school_adres": null,
+    "school_near_id": 149,
+    "school_near_name": "МОУ «СОШ № 82»",
+    "district_near_name": "Октябрьский"
+  },
+  {
+    "id": 250,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 95 с УИОП»",
+    "school_adres": null,
+    "school_near_id": 150,
+    "school_near_name": "МОУ «СОШ № 95 с УИОП»",
+    "district_near_name": "Октябрьский"
+  },
+  {
+    "id": 251,
+    "school_id": null,
+    "school_name": "ГАОУ «Инженерный лицей»",
+    "school_adres": null,
+    "school_near_id": 153,
+    "school_near_name": "ГАОУ «Инженерный лицей»",
+    "district_near_name": "Октябрьский"
+  },
+  {
+    "id": 252,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 1» Фрунзенского района г. Саратова",
+    "school_adres": null,
+    "school_near_id": 154,
+    "school_near_name": "МОУ «СОШ № 1» Фрунзенского района г. Саратова",
+    "district_near_name": "Фрунзенский"
+  },
+  {
+    "id": 253,
+    "school_id": null,
+    "school_name": "МАОУ «СОШ №18 УИП им. О.П. Табакова»",
+    "school_adres": null,
+    "school_near_id": 158,
+    "school_near_name": "МАОУ «СОШ №18 УИП им. О.П. Табакова»",
+    "district_near_name": "Фрунзенский"
+  },
+  {
+    "id": 254,
+    "school_id": null,
+    "school_name": "МОУ «СОШ № 77» Фрунзенского района г. Саратова",
+    "school_adres": null,
+    "school_near_id": 159,
+    "school_near_name": "МОУ «СОШ № 77» Фрунзенского района г. Саратова",
+    "district_near_name": "Фрунзенский"
+  }
+]

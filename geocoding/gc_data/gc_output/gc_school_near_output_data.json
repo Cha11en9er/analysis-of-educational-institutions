@@ -1,0 +1,164 @@
+[
+  {
+    "school_near_id": 1,
+    "school_near_name": "МАОУ «Гимназия № 2»",
+    "district_near_name": "Волжский",
+    "coordinates": "(51.558543, 46.076468)"
+  },
+  {
+    "school_near_id": 2,
+    "school_near_name": "МАОУ «Гимназия № 4»",
+    "district_near_name": "Волжский",
+    "coordinates": "(51.558543, 46.076468)"
+  },
+  {
+    "school_near_id": 3,
+    "school_near_name": "МОУ «Лицей № 4»",
+    "district_near_name": "Волжский",
+    "coordinates": "(51.558543, 46.076468)"
+  },
+  {
+    "school_near_id": 4,
+    "school_near_name": "МОУ «Гимназия № 7»",
+    "district_near_name": "Волжский",
+    "coordinates": "(51.558543, 46.076468)"
+  },
+  {
+    "school_near_id": 5,
+    "school_near_name": "МОУ «СОШ № 8»",
+    "district_near_name": "Волжский",
+    "coordinates": "(51.558543, 46.076468)"
+  },
+  {
+    "school_near_id": 6,
+    "school_near_name": "МОУ «СОШ № 9»",
+    "district_near_name": "Волжский",
+    "coordinates": "(51.558543, 46.076468)"
+  },
+  {
+    "school_near_id": 7,
+    "school_near_name": "МОУ «СОШ № 10»",
+    "district_near_name": "Волжский",
+    "coordinates": "(51.558543, 46.076468)"
+  },
+  {
+    "school_near_id": 8,
+    "school_near_name": "МОУ «СОШ № 11»",
+    "district_near_name": "Волжский",
+    "coordinates": "(51.558543, 46.076468)"
+  },
+  {
+    "school_near_id": 9,
+    "school_near_name": "МОУ «СОШ № 66 им. Н.И.Вавилова» Державинская, 1",
+    "district_near_name": "Волжский",
+    "coordinates": "(51.536072, 46.004558)"
+  },
+  {
+    "school_near_id": 10,
+    "school_near_name": "МОУ «СОШ № 66 им. Н.И.Вавилова»",
+    "district_near_name": "Волжский",
+    "coordinates": "(51.536072, 46.004558)"
+  },
+  {
+    "school_near_id": 11,
+    "school_near_name": "МОУ «СОШ № 66 им. Н.И.Вавилова» Казанская, 29",
+    "district_near_name": "Волжский",
+    "coordinates": "(51.536072, 46.004558)"
+  },
+  {
+    "school_near_id": 12,
+    "school_near_name": "МАОУ «СОШ «Иволгино»",
+    "district_near_name": "Волжский",
+    "coordinates": "(51.558543, 46.076468)"
+  },
+  {
+    "school_near_id": 13,
+    "school_near_name": "МОУ «Лицей № 107»",
+    "district_near_name": "Волжский",
+    "coordinates": "(51.558543, 46.076468)"
+  },
+  {
+    "school_near_id": 14,
+    "school_near_name": "МОУ «ГЭЛ»",
+    "district_near_name": "Волжский",
+    "coordinates": "(51.558543, 46.076468)"
+  },
+  {
+    "school_near_id": 15,
+    "school_near_name": "МОУ «РПКГ»",
+    "district_near_name": "Волжский",
+    "coordinates": "(51.558543, 46.076468)"
+  },
+  {
+    "school_near_id": 16,
+    "school_near_name": "МАОУ «СОШ с. Александровка»",
+    "district_near_name": "Гагаринский",
+    "coordinates": "(51.446734, 45.838325)"
+  },
+  {
+    "school_near_id": 17,
+    "school_near_name": "МАОУ «СОШ с.Березина Речка»",
+    "district_near_name": "Гагаринский",
+    "coordinates": "(51.461641, 45.87998)"
+  },
+  {
+    "school_near_id": 18,
+    "school_near_name": "МАОУ «СОШ с. Синенькие»",
+    "district_near_name": "Гагаринский",
+    "coordinates": "(51.236682, 45.768301)"
+  },
+  {
+    "school_near_id": 19,
+    "school_near_name": "МАОУ «СОШ р.п. Красный Октябрь»",
+    "district_near_name": "Гагаринский",
+    "coordinates": "(51.539993, 45.700748)"
+  },
+  {
+    "school_near_id": 20,
+    "school_near_name": "МАОУ «СОШ с. Багаевка им. Н.В. Котлова»",
+    "district_near_name": "Гагаринский",
+    "coordinates": "(51.537747, 46.024025)"
+  },
+  {
+    "school_near_id": 21,
+    "school_near_name": "МАОУ «СОШ села Поповка»",
+    "district_near_name": "Гагаринский",
+    "coordinates": "(51.517373, 45.69119)"
+  },
+  {
+    "school_near_id": 22,
+    "school_near_name": "МАОУ «СОШ с. Поповка»",
+    "district_near_name": "Гагаринский",
+    "coordinates": "(51.423719, 45.585099)"
+  },
+  {
+    "school_near_id": 23,
+    "school_near_name": "МАОУ «СОШ р.п. Соколовый»",
+    "district_near_name": "Гагаринский",
+    "coordinates": "(51.569505, 45.83501)"
+  },
+  {
+    "school_near_id": 24,
+    "school_near_name": "МАОУ «СОШ п. Красный Текстильщик»",
+    "district_near_name": "Гагаринский",
+    "coordinates": "(51.453481, 45.8654)"
+  },
+  {
+    "school_near_id": 25,
+    "school_near_name": "МАОУ «СОШ п. Тепличный»",
+    "district_near_name": "Гагаринский",
+    "coordinates": "(51.517373, 45.69119)"
+  },
+  {
+    "school_near_id": 26,
+    "school_near_name": "МАОУ «СОШ п. Дубки»",
+    "district_near_name": "Гагаринский",
+    "coordinates": "(51.517373, 45.69119)"
+  },
+  {
+    "school_near_id": 27,
+    "school_near_name": "МАОУ «ООШ п.ц.у. совхоза «15 лет Октября»",
+    "district_near_name": "Гагаринский",
+    "coordinates": "(51.305671, 45.387865)"
+  }
+]
