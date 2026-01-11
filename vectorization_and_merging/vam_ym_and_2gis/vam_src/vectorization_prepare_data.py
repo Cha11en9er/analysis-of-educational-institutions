@@ -3,8 +3,8 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
 
-SOURCE_FILE = BASE_DIR.parent / "2gis" / "data" / "2gis_all_school_with_info.json"
-CADASTRAL_FILE = BASE_DIR.parent / "find_cadastral_number" / "find_cadastral_number_data_output.json"
+SOURCE_FILE = BASE_DIR.parent / "2gis" / "2gis_data" / "tgis_output" / "2gis_all_school_with_info.json"
+CADASTRAL_FILE = BASE_DIR.parent / "find_cadastral_number" / "fcn_data" / "fcn_output" / "find_cadastral_number_data_output.json"
 TARGET_FILE = BASE_DIR / "vam_data" / "vam_data_input" / "vam_2gis_input_data.json"
 
 

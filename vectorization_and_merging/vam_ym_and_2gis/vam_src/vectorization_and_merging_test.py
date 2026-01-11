@@ -4,14 +4,17 @@ from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 import os
 
-# Определяем корень проекта (на 3 уровня выше текущего файла)
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(BASE_DIR)))
+# Определяем пути относительно текущего файла
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+VAM_ROOT = os.path.dirname(CURRENT_DIR)
+DATA_DIR = os.path.join(VAM_ROOT, "vam_data")
+INPUT_DIR = os.path.join(DATA_DIR, "vam_data_input")
+OUTPUT_DIR = os.path.join(DATA_DIR, "vam_data_output")
 
 # Пути к входным и выходным файлам
-TWO_GIS_DATA_PATH = os.path.join(PROJECT_ROOT, "parsing", "vectorization_and_merging", "vam_data", "vam_data_input", "vam_2gis_input_data.json")
-YANDEX_MAPS_DATA_PATH = os.path.join(PROJECT_ROOT, "parsing", "vectorization_and_merging", "vam_data", "vam_data_input", "vam_ym_input_data.json")
-OUTPUT_DATA_PATH = os.path.join(PROJECT_ROOT, "parsing", "vectorization_and_merging", "vam_data", "vam_data_output", "gold_vam_output_data.json")
+TWO_GIS_DATA_PATH = os.path.join(INPUT_DIR, "vam_2gis_input_data.json")
+YANDEX_MAPS_DATA_PATH = os.path.join(INPUT_DIR, "vam_ym_input_data.json")
+OUTPUT_DATA_PATH = os.path.join(OUTPUT_DIR, "gold_vam_output_data.json")
 
 # Загружаем JSON
 with open(TWO_GIS_DATA_PATH, "r", encoding="utf-8") as f:
