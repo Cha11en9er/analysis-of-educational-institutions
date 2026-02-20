@@ -1,12 +1,11 @@
-import React, { useRef, useEffect } from 'react';
-import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
+import React, { useEffect, useRef } from 'react';
+import { MapContainer, TileLayer, Marker, Tooltip, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
 const SARATOV_CENTER = [51.532, 46.0];
 const DEFAULT_ZOOM = 12;
 
-// Иконка маркера по умолчанию (Leaflet теряет путь в бандле)
 const defaultIcon = L.icon({
   iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
   iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
@@ -33,7 +32,17 @@ function FitBounds({ schools, maxCount = 80 }) {
   return null;
 }
 
-export default function MapView({ schools }) {
+function FitSchool({ school }) {
+  const map = useMap();
+  useEffect(() => {
+    if (!school?.location?.coordinates || school.location.coordinates.length !== 2) return;
+    const [lon, lat] = school.location.coordinates;
+    map.setView([lat, lon], 16);
+  }, [map, school]);
+  return null;
+}
+
+export default function MapView({ schools, selectedSchool, onSchoolClick }) {
   const validSchools =
     schools &&
     schools.filter(
@@ -52,53 +61,67 @@ export default function MapView({ schools }) {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <ZoomControls />
+        <ZoomControl />
         {validSchools &&
           validSchools.map((s) => (
             <Marker
               key={s.school_id}
               position={[s.location.coordinates[1], s.location.coordinates[0]]}
               icon={defaultIcon}
+              eventHandlers={{
+                click: () => onSchoolClick && onSchoolClick(s),
+              }}
             >
-              <Popup>
+              <Tooltip permanent={false} direction="top" offset={[0, -41]}>
                 <strong>{s.name_2gis || s.name_ym || `Школа ${s.school_id}`}</strong>
                 <br />
                 {s.school_address}
-                {s.rating_yandex != null && (
-                  <>
-                    <br />
-                    Рейтинг: {s.rating_yandex}
-                  </>
-                )}
-              </Popup>
+              </Tooltip>
             </Marker>
           ))}
-        {validSchools && validSchools.length > 0 && <FitBounds schools={validSchools} />}
+        {validSchools && validSchools.length > 0 && !selectedSchool && (
+          <FitBounds schools={validSchools} />
+        )}
+        {selectedSchool?.location?.coordinates?.length === 2 && (
+          <FitSchool school={selectedSchool} />
+        )}
       </MapContainer>
     </div>
   );
 }
 
-function ZoomControls() {
+function ZoomControl() {
   const map = useMap();
-  return (
-    <div className="leaflet-bottom leaflet-right zoom-controls-custom">
-      <button
-        type="button"
-        className="zoom-btn"
-        onClick={() => map.zoomIn()}
-        aria-label="Увеличить"
-      >
-        +
-      </button>
-      <button
-        type="button"
-        className="zoom-btn"
-        onClick={() => map.zoomOut()}
-        aria-label="Уменьшить"
-      >
-        −
-      </button>
-    </div>
-  );
+  const ref = useRef(null);
+
+  useEffect(() => {
+    if (!map || !ref.current) return;
+    const Control = L.Control.extend({
+      onAdd: function () {
+        const div = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
+        const zoomIn = L.DomUtil.create('a', 'zoom-in', div);
+        zoomIn.innerHTML = '+';
+        zoomIn.href = '#';
+        zoomIn.title = 'Увеличить';
+        const zoomOut = L.DomUtil.create('a', 'zoom-out', div);
+        zoomOut.innerHTML = '−';
+        zoomOut.href = '#';
+        zoomOut.title = 'Уменьшить';
+        L.DomEvent.on(zoomIn, 'click', L.DomEvent.stopPropagation)
+          .on(zoomIn, 'click', L.DomEvent.preventDefault)
+          .on(zoomIn, 'click', () => map.zoomIn());
+        L.DomEvent.on(zoomOut, 'click', L.DomEvent.stopPropagation)
+          .on(zoomOut, 'click', L.DomEvent.preventDefault)
+          .on(zoomOut, 'click', () => map.zoomOut());
+        return div;
+      },
+    });
+    const control = new Control({ position: 'bottomright' });
+    control.addTo(map);
+    return () => {
+      control.remove();
+    };
+  }, [map]);
+
+  return <div ref={ref} />;
 }

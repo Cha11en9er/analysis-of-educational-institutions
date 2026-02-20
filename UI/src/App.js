@@ -3,6 +3,8 @@ import axios from 'axios';
 import './App.css';
 import MapView from './components/MapView';
 import SidePanel from './components/SidePanel';
+import SchoolDetailPanel from './components/SchoolDetailPanel';
+import AnalyticsView, { AnalyticsChart } from './components/AnalyticsView';
 import Toast from './components/Toast';
 
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
@@ -67,6 +69,15 @@ function App() {
   const [filtersApplied, setFiltersApplied] = useState(false);
   const [toast, setToast] = useState(null);
 
+  const [selectedSchoolId, setSelectedSchoolId] = useState(null);
+  const [schoolDetail, setSchoolDetail] = useState(null);
+  const [schoolDetailLoading, setSchoolDetailLoading] = useState(false);
+  const [showAnalytics, setShowAnalytics] = useState(false);
+  const [analyticsReviews, setAnalyticsReviews] = useState([]);
+  const [analyticsLoading, setAnalyticsLoading] = useState(false);
+  const [analyticsAppliedTopics, setAnalyticsAppliedTopics] = useState([]);
+  const [analyticsInterval, setAnalyticsInterval] = useState('month');
+
   const fetchSchools = useCallback(async (params = {}) => {
     setLoading(true);
     try {
@@ -86,6 +97,55 @@ function App() {
   useEffect(() => {
     fetchSchools();
   }, [fetchSchools]);
+
+  const handleSchoolClick = useCallback(
+    async (school) => {
+      setSelectedSchoolId(school.school_id);
+      setSchoolDetailLoading(true);
+      setSchoolDetail(null);
+      try {
+        const { data } = await axios.get(`${API_URL}/api/schools/${school.school_id}`);
+        setSchoolDetail(data);
+      } catch (err) {
+        const msg = err.response?.data?.detail || err.message || 'Ошибка загрузки';
+        setToast({ message: msg, type: 'error' });
+        setSelectedSchoolId(null);
+      } finally {
+        setSchoolDetailLoading(false);
+      }
+    },
+    []
+  );
+
+  const handleBackToSchools = useCallback(() => {
+    setSelectedSchoolId(null);
+    setSchoolDetail(null);
+    setShowAnalytics(false);
+  }, []);
+
+  const handleStatistics = useCallback(() => {
+    if (!selectedSchoolId) return;
+    setShowAnalytics(true);
+    setAnalyticsAppliedTopics([]);
+  }, [selectedSchoolId]);
+
+  useEffect(() => {
+    if (!showAnalytics || !selectedSchoolId) return;
+    setAnalyticsLoading(true);
+    axios
+      .get(`${API_URL}/api/schools/${selectedSchoolId}/reviews/topics`)
+      .then(({ data }) => setAnalyticsReviews(data.reviews || []))
+      .catch(() => setAnalyticsReviews([]))
+      .finally(() => setAnalyticsLoading(false));
+  }, [showAnalytics, selectedSchoolId]);
+
+  const handleBackFromAnalytics = useCallback(() => {
+    setShowAnalytics(false);
+    setSelectedSchoolId(null);
+    setSchoolDetail(null);
+    setAnalyticsReviews([]);
+    setAnalyticsAppliedTopics([]);
+  }, []);
 
   const handleSearchSubmit = useCallback(() => {
     setSearchSubmitted(searchQuery);
@@ -114,21 +174,62 @@ function App() {
     });
   }, [fetchSchools]);
 
+  const showSchoolDetail = selectedSchoolId != null && !showAnalytics;
+
   return (
     <div className="app">
-      <SidePanel
-        searchQuery={searchQuery}
-        onSearchChange={setSearchQuery}
-        onSearchSubmit={handleSearchSubmit}
-        filterState={filterState}
-        onFilterChange={setFilterState}
-        onApply={handleApply}
-        onReset={handleReset}
-        filtersApplied={filtersApplied}
-        loading={loading}
-      />
+      {showAnalytics ? (
+        <AnalyticsView
+          school={schoolDetail}
+          onBack={handleBackFromAnalytics}
+          reviews={analyticsReviews}
+          loading={analyticsLoading}
+          appliedTopics={analyticsAppliedTopics}
+          onApplyTopics={setAnalyticsAppliedTopics}
+          interval={analyticsInterval}
+          onIntervalChange={setAnalyticsInterval}
+        />
+      ) : showSchoolDetail ? (
+        <SchoolDetailPanel
+          school={schoolDetail}
+          onBack={handleBackToSchools}
+          onStatistics={handleStatistics}
+        />
+      ) : (
+        <SidePanel
+          searchQuery={searchQuery}
+          onSearchChange={setSearchQuery}
+          onSearchSubmit={handleSearchSubmit}
+          filterState={filterState}
+          onFilterChange={setFilterState}
+          onApply={handleApply}
+          onReset={handleReset}
+          filtersApplied={filtersApplied}
+          loading={loading}
+        />
+      )}
       <main className="map-area">
-        <MapView schools={schools} />
+        {showAnalytics ? (
+          <AnalyticsChart
+            reviews={analyticsReviews}
+            appliedTopics={analyticsAppliedTopics}
+            interval={analyticsInterval}
+            loading={analyticsLoading}
+          />
+        ) : (
+          <>
+            {schoolDetailLoading && (
+              <div className="map-loading-overlay">
+                <span>Загрузка…</span>
+              </div>
+            )}
+            <MapView
+              schools={schools}
+              selectedSchool={schoolDetail}
+              onSchoolClick={handleSchoolClick}
+            />
+          </>
+        )}
       </main>
       {toast && (
         <Toast

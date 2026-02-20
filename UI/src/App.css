@@ -226,27 +226,370 @@
   z-index: 0;
 }
 
-.zoom-controls-custom {
-  margin: 1rem !important;
+/* Кнопки зума карты (Leaflet control) */
+.map-wrap .leaflet-control-container .leaflet-bar {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+.map-wrap .leaflet-control-container .leaflet-bar a {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  font-size: 1.25rem;
+  background: #fff;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+}
+.map-wrap .leaflet-control-container .leaflet-bar a:hover {
+  background: #f0f0f0;
+}
+.map-wrap .leaflet-control-container .leaflet-bar a.zoom-out {
+  border-top: 1px solid #ccc;
+}
+
+/* Оверлей загрузки при выборе школы */
+.map-loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Панель детальной информации о школе */
+.side-panel-school .school-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #212529;
+}
+
+.side-panel-school .detail-block {
+  margin-bottom: 1rem;
+}
+
+.side-panel-school .detail-block-sports {
+  margin-bottom: 1.25rem;
+}
+
+.side-panel-school .detail-row {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
 }
 
-.zoom-btn {
-  width: 36px;
-  height: 36px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  background: #fff;
-  font-size: 1.25rem;
-  line-height: 1;
-  cursor: pointer;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+.side-panel-school .detail-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #495057;
 }
 
-.zoom-btn:hover {
-  background: #f0f0f0;
+.side-panel-school .detail-value {
+  font-size: 0.9375rem;
+  color: #212529;
+}
+
+.side-panel-school .detail-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.35rem;
+}
+
+.side-panel-school .detail-link {
+  font-size: 0.9375rem;
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.side-panel-school .detail-link:hover {
+  text-decoration: underline;
+}
+
+.side-panel-school .sports-list {
+  margin: 0.35rem 0 0;
+  padding-left: 1.25rem;
+  font-size: 0.9375rem;
+  color: #212529;
+}
+
+.side-panel-school .btn-statistics {
+  display: block;
+  width: 100%;
+  padding: 0.65rem 1rem;
+  margin-bottom: 1rem;
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.side-panel-school .btn-statistics:hover {
+  background: #c82333;
+}
+
+.side-panel-school .btn-back {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background: #6c757d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  cursor: pointer;
+}
+
+.side-panel-school .btn-back:hover {
+  background: #5c636a;
+}
+
+/* Панель аналитики по комментариям */
+.side-panel-analytics .school-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #212529;
+}
+
+.side-panel-analytics .analytics-block {
+  margin-bottom: 1rem;
+}
+
+.side-panel-analytics .detail-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+.side-panel-analytics .topics-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.side-panel-analytics .topic-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.6rem;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 0.875rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+.side-panel-analytics .topic-chip:hover {
+  background: #e9ecef;
+}
+
+.side-panel-analytics .topic-chip.selected {
+  border-color: #0d6efd;
+  background: #e7f1ff;
+}
+
+.side-panel-analytics .topic-bullet {
+  color: #6c757d;
+  font-size: 0.75rem;
+}
+
+.side-panel-analytics .topic-chip.selected .topic-bullet {
+  color: #0d6efd;
+}
+
+.side-panel-analytics .link-help {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-bottom: 1rem;
+  font-size: 0.8125rem;
+  color: #0d6efd;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.side-panel-analytics .link-help:hover {
+  color: #0b5ed7;
+}
+
+.side-panel-analytics .analytics-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.side-panel-analytics .analytics-buttons .btn-apply {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  background: #0d6efd;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.side-panel-analytics .analytics-buttons .btn-back {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  background: #6c757d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.side-panel-analytics .interval-selector {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.side-panel-analytics .interval-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.side-panel-analytics .chart-wrap {
+  min-height: 320px;
+  margin-top: 0.5rem;
+}
+
+.side-panel-analytics .chart-placeholder {
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9375rem;
+  color: #6c757d;
+  text-align: center;
+  padding: 1rem;
+}
+
+.side-panel-analytics .chart-caption {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #495057;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* График в правой области (основной контент) */
+.chart-full-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  min-height: 0;
+}
+
+.chart-full-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 0.5rem;
+}
+
+.chart-full-wrap .recharts-responsive-container {
+  flex: 1;
+  min-height: 280px;
+}
+
+.chart-full-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #6c757d;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Модальное окно справки */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 8px;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-title {
+  padding: 1rem 1.25rem 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.modal-body {
+  padding: 1rem 1.25rem;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: #212529;
+  white-space: pre-line;
+  overflow-y: auto;
+}
+
+.btn-close-modal {
+  margin: 0 1.25rem 1rem;
+  padding: 0.5rem 1rem;
+  background: #6c757d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.btn-close-modal:hover {
+  background: #5c636a;
 }
 
 /* Toast */

@@ -205,6 +205,118 @@ async def get_schools_for_map(
             conn.close()
 
 
+@app.get("/api/schools/{school_id}")
+async def get_school_by_id(school_id: int):
+    """
+    Одна школа по id для детальной панели: sa.school + sa.link (только ссылки на школу).
+    """
+    conn = None
+    try:
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        cursor.execute(
+            """
+            SELECT
+                s.school_id,
+                s.name_2gis,
+                s.name_ym,
+                s.school_address,
+                s.building_type,
+                s.floors,
+                s.year_built,
+                s.reconstruction_year,
+                s.has_sports_complex,
+                s.has_pool,
+                s.has_stadium,
+                s.has_sports_ground,
+                ST_X(s.location::geometry) AS lon,
+                ST_Y(s.location::geometry) AS lat,
+                l.link_2gis,
+                l.link_yandex
+            FROM sa.school s
+            LEFT JOIN sa.link l ON l.school_id = s.school_id
+            WHERE s.school_id = %s
+            """,
+            (school_id,),
+        )
+        row = cursor.fetchone()
+        cursor.close()
+        if not row:
+            raise HTTPException(status_code=404, detail="Школа не найдена")
+        lon, lat = row[12], row[13]
+        return {
+            "school_id": row[0],
+            "name_2gis": row[1],
+            "name_ym": row[2],
+            "school_address": row[3],
+            "building_type": row[4],
+            "floors": row[5],
+            "year_built": row[6],
+            "reconstruction_year": row[7],
+            "has_sports_complex": row[8],
+            "has_pool": row[9],
+            "has_stadium": row[10],
+            "has_sports_ground": row[11],
+            "location": {
+                "type": "Point",
+                "coordinates": [float(lon), float(lat)] if lon is not None and lat is not None else None,
+            },
+            "link_2gis": row[14],
+            "link_yandex": row[15],
+        }
+    except psycopg2.Error as e:
+        raise HTTPException(status_code=500, detail=f"Ошибка БД: {str(e)}")
+    finally:
+        if conn:
+            conn.close()
+
+
+@app.get("/api/schools/{school_id}/reviews/topics")
+async def get_school_reviews_topics(school_id: int):
+    """
+    Отзывы школы только с датой и темами (topics) для графика тональности.
+    topics — JSON-объект вида {"учителя": "pos", "ремонт": "neg", ...}.
+    """
+    import json as json_lib
+
+    conn = None
+    try:
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        cursor.execute(
+            """
+            SELECT review_date, topics
+            FROM sa.review
+            WHERE school_id = %s AND review_date IS NOT NULL
+            ORDER BY review_date
+            """,
+            (school_id,),
+        )
+        rows = cursor.fetchall()
+        reviews = []
+        for row in rows:
+            topics = None
+            if row[1] is not None:
+                if isinstance(row[1], str) and row[1].strip():
+                    try:
+                        topics = json_lib.loads(row[1])
+                    except (json_lib.JSONDecodeError, TypeError):
+                        topics = {}
+                else:
+                    topics = row[1] if isinstance(row[1], dict) else {}
+            reviews.append({
+                "review_date": row[0].isoformat() if hasattr(row[0], "isoformat") else str(row[0]),
+                "topics": topics or {},
+            })
+        cursor.close()
+        return {"reviews": reviews}
+    except psycopg2.Error as e:
+        raise HTTPException(status_code=500, detail=f"Ошибка БД: {str(e)}")
+    finally:
+        if conn:
+            conn.close()
+
+
 @app.get("/schools/{school_id}/reviews")
 async def get_school_reviews(
     school_id: int,
