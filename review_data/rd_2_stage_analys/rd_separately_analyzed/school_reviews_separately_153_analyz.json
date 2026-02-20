@@ -1,0 +1,32 @@
+[
+    {
+        "review_id": "5302",
+        "topics": {},
+        "overall": "neutral"
+    },
+    {
+        "review_id": "6809",
+        "topics": {
+            "учителя": "neg",
+            "ремонт": "neg"
+        },
+        "overall": "neg"
+    },
+    {
+        "review_id": "6810",
+        "topics": {
+            "ремонт": "neg"
+        },
+        "overall": "neg"
+    },
+    {
+        "review_id": "6811",
+        "topics": {},
+        "overall": "pos"
+    },
+    {
+        "review_id": "6812",
+        "topics": {},
+        "overall": "pos"
+    }
+]

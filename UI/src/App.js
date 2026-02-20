@@ -1,299 +1,144 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
-import Filters from './components/Filters';
-import Chart from './components/Chart';
-import RatingChart from './components/RatingChart';
-import SchoolSelector from './components/SchoolSelector';
+import MapView from './components/MapView';
+import SidePanel from './components/SidePanel';
+import Toast from './components/Toast';
 
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
 
-// Топики из rm_main.py
-const TOPICS = [
-  'ремонт',
-  'учителя',
-  'еда',
-  'администрация',
-  'буллинг',
-  'инфраструктура',
-  'охрана',
-  'уборка'
-];
+const defaultFilterState = {
+  yearMin: null,
+  yearMax: null,
+  ratingMin: null,
+  ratingMax: null,
+  sports: null,
+};
+
+function buildParams(search, filterState, filtersApplied) {
+  const params = {};
+  if (search && search.trim()) params.search = search.trim();
+  if (!filtersApplied) return params;
+  const f = filterState;
+  if (f.yearMin != null && f.yearMin !== '') params.year_min = Number(f.yearMin);
+  if (f.yearMax != null && f.yearMax !== '') params.year_max = Number(f.yearMax);
+  if (f.ratingMin != null && f.ratingMin !== '') params.rating_min = Number(f.ratingMin);
+  if (f.ratingMax != null && f.ratingMax !== '') params.rating_max = Number(f.ratingMax);
+  if (f.sports) {
+    if (f.sports.has_pool) params.has_pool = true;
+    if (f.sports.has_stadium) params.has_stadium = true;
+    if (f.sports.has_sports_ground) params.has_sports_ground = true;
+    if (f.sports.has_sports_complex) params.has_sports_complex = true;
+  }
+  return params;
+}
+
+function validateFilters(filterState, setToast) {
+  const f = filterState;
+  const yMin = f.yearMin != null && f.yearMin !== '' ? Number(f.yearMin) : null;
+  const yMax = f.yearMax != null && f.yearMax !== '' ? Number(f.yearMax) : null;
+  if (yMin != null && yMax != null && yMin > yMax) {
+    setToast({ message: 'Год постройки: начальное значение не может быть больше конечного', type: 'error' });
+    return false;
+  }
+  const rMin = f.ratingMin != null && f.ratingMin !== '' ? Number(f.ratingMin) : null;
+  const rMax = f.ratingMax != null && f.ratingMax !== '' ? Number(f.ratingMax) : null;
+  if (rMin != null && rMax != null && rMin > rMax) {
+    setToast({ message: 'Рейтинг: минимальное значение не может быть больше максимального', type: 'error' });
+    return false;
+  }
+  if (rMin != null && (rMin < 1 || rMin > 5)) {
+    setToast({ message: 'Рейтинг должен быть от 1 до 5', type: 'error' });
+    return false;
+  }
+  if (rMax != null && (rMax < 1 || rMax > 5)) {
+    setToast({ message: 'Рейтинг должен быть от 1 до 5', type: 'error' });
+    return false;
+  }
+  return true;
+}
 
 function App() {
-  const [viewMode, setViewMode] = useState('topics'); // 'topics' или 'rating'
-  
-  // Состояния для режима "График по топикам"
   const [schools, setSchools] = useState([]);
-  const [selectedSchools, setSelectedSchools] = useState([]); // Массив выбранных школ (макс. 2)
-  const [selectedTopic, setSelectedTopic] = useState('');
-  const [dateStart, setDateStart] = useState('');
-  const [dateEnd, setDateEnd] = useState('');
-  const [reviewsBySchool, setReviewsBySchool] = useState({}); // { schoolId: [reviews] }
-  
-  // Состояния для режима "Общая информация по школе"
-  const [selectedSchoolForRating, setSelectedSchoolForRating] = useState('');
-  const [ratingReviews, setRatingReviews] = useState([]);
-  
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(true);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchSubmitted, setSearchSubmitted] = useState('');
+  const [filterState, setFilterState] = useState(defaultFilterState);
+  const [filtersApplied, setFiltersApplied] = useState(false);
+  const [toast, setToast] = useState(null);
 
-  // Загружаем список школ при монтировании
-  useEffect(() => {
-    const fetchSchools = async () => {
-      try {
-        const response = await axios.get(`${API_URL}/schools`);
-        setSchools(response.data.schools || []);
-      } catch (err) {
-        setError('Ошибка загрузки школ: ' + err.message);
-      }
-    };
-    fetchSchools();
+  const fetchSchools = useCallback(async (params = {}) => {
+    setLoading(true);
+    try {
+      const { data } = await axios.get(`${API_URL}/api/schools/map`, { params });
+      setSchools(data.schools || []);
+      return data.count ?? (data.schools || []).length;
+    } catch (err) {
+      const msg = err.response?.data?.detail || err.message || 'Ошибка загрузки данных';
+      setToast({ message: `Ошибка при использовании фильтра: ${msg}`, type: 'error' });
+      setSchools([]);
+      return 0;
+    } finally {
+      setLoading(false);
+    }
   }, []);
 
-  // Функция для обработки данных отзывов и построения графика
-  // Теперь группируем по школам, а не по топикам
-  const processReviewsData = () => {
-    if (!selectedTopic || selectedSchools.length === 0) {
-      return [];
-    }
+  useEffect(() => {
+    fetchSchools();
+  }, [fetchSchools]);
 
-    // Собираем все даты из всех отзывов
-    const allDates = new Set();
-    selectedSchools.forEach(schoolId => {
-      const reviews = reviewsBySchool[schoolId] || [];
-      reviews.forEach(review => {
-        const date = review.review_date ? review.review_date.split('T')[0] : review.date;
-        if (date) allDates.add(date);
-      });
+  const handleSearchSubmit = useCallback(() => {
+    setSearchSubmitted(searchQuery);
+    const params = buildParams(searchQuery, filterState, filtersApplied);
+    fetchSchools(params).then((count) => {
+      setToast({ message: `Найдено школ: ${count} после использования фильтра`, type: 'info' });
     });
+  }, [searchQuery, filterState, filtersApplied, fetchSchools]);
 
-    if (allDates.size === 0) {
-      return [];
-    }
-
-    // Создаем структуру данных для графика: { date: '2024-01-01', 'Школа 1': 5, 'Школа 2': 3 }
-    const dataByDate = {};
-    const sortedDates = Array.from(allDates).sort();
-
-    // Инициализируем все даты
-    sortedDates.forEach(date => {
-      dataByDate[date] = { date };
-      selectedSchools.forEach(schoolId => {
-        const school = schools.find(s => String(s.school_id) === String(schoolId));
-        const schoolName = school ? (school.school_name || `Школа ${schoolId}`) : `Школа ${schoolId}`;
-        dataByDate[date][schoolName] = 0;
-      });
+  const handleApply = useCallback(() => {
+    if (!validateFilters(filterState, setToast)) return;
+    setFiltersApplied(true);
+    const params = buildParams(searchSubmitted || searchQuery, filterState, true);
+    fetchSchools(params).then((count) => {
+      setToast({ message: `Найдено школ: ${count} после использования фильтра`, type: 'info' });
     });
+  }, [filterState, searchSubmitted, searchQuery, fetchSchools]);
 
-    // Подсчитываем позитивные упоминания выбранного топика для каждой школы
-    selectedSchools.forEach(schoolId => {
-      const reviews = reviewsBySchool[schoolId] || [];
-      const school = schools.find(s => String(s.school_id) === String(schoolId));
-      const schoolName = school ? (school.school_name || `Школа ${schoolId}`) : `Школа ${schoolId}`;
-
-      reviews.forEach(review => {
-        const date = review.review_date ? review.review_date.split('T')[0] : review.date;
-        if (!date) return;
-
-        // Парсим topics из JSON строки или объекта
-        let topics = {};
-        try {
-          if (typeof review.review_topic === 'string') {
-            topics = JSON.parse(review.review_topic);
-          } else if (typeof review.review_topic === 'object') {
-            topics = review.review_topic;
-          } else if (review.topics) {
-            topics = typeof review.topics === 'string' ? JSON.parse(review.topics) : review.topics;
-          }
-        } catch (e) {
-          return;
-        }
-
-        // Проверяем наличие выбранного топика и его тональность
-        if (topics[selectedTopic] === 'pos') {
-          if (dataByDate[date] && dataByDate[date][schoolName] !== undefined) {
-            dataByDate[date][schoolName] = (dataByDate[date][schoolName] || 0) + 1;
-          }
-        }
-      });
+  const handleReset = useCallback(() => {
+    setFilterState(defaultFilterState);
+    setFiltersApplied(false);
+    setSearchQuery('');
+    setSearchSubmitted('');
+    fetchSchools().then((count) => {
+      setToast({ message: `Найдено школ: ${count} после использования фильтра`, type: 'info' });
     });
-
-    // Преобразуем в массив
-    const chartData = sortedDates.map(date => dataByDate[date]);
-
-    return chartData;
-  };
-
-  // Обработчик переключения школы
-  const handleSchoolToggle = (schoolId) => {
-    setSelectedSchools(prev => {
-      if (prev.includes(schoolId)) {
-        // Убираем школу из списка
-        return prev.filter(id => id !== schoolId);
-      } else {
-        // Добавляем школу, но максимум 2
-        if (prev.length < 2) {
-          return [...prev, schoolId];
-        }
-        return prev;
-      }
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-    if (selectedSchools.length === 0) {
-      setError('Выберите хотя бы одну школу');
-      return;
-    }
-
-    if (!selectedTopic) {
-      setError('Выберите топик');
-      return;
-    }
-
-    setLoading(true);
-    setError('');
-
-    try {
-      const params = {};
-      if (dateStart) params.date_start = dateStart;
-      if (dateEnd) params.date_end = dateEnd;
-
-      // Загружаем отзывы для всех выбранных школ
-      const reviewsPromises = selectedSchools.map(schoolId =>
-        axios.get(`${API_URL}/schools/${schoolId}/reviews`, { params })
-          .then(response => ({ schoolId, reviews: response.data.reviews || [] }))
-      );
-
-      const results = await Promise.all(reviewsPromises);
-      
-      // Сохраняем отзывы по школам
-      const newReviewsBySchool = {};
-      results.forEach(({ schoolId, reviews }) => {
-        newReviewsBySchool[schoolId] = reviews;
-      });
-
-      setReviewsBySchool(newReviewsBySchool);
-    } catch (err) {
-      setError('Ошибка загрузки отзывов: ' + err.message);
-      setReviewsBySchool({});
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  // Обработчик загрузки данных для режима "Общая информация по школе"
-  const handleRatingSubmit = async (e) => {
-    e.preventDefault();
-    
-    if (!selectedSchoolForRating) {
-      setError('Выберите школу');
-      return;
-    }
-
-    setLoading(true);
-    setError('');
-
-    try {
-      const response = await axios.get(
-        `${API_URL}/schools/${selectedSchoolForRating}/reviews`
-      );
-
-      const reviewsData = response.data.reviews || [];
-      console.log('Loaded reviews for rating chart:', reviewsData.length);
-      console.log('Sample review:', reviewsData[0]);
-      setRatingReviews(reviewsData);
-    } catch (err) {
-      setError('Ошибка загрузки отзывов: ' + err.message);
-      setRatingReviews([]);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const chartData = processReviewsData();
-  
-  // Получаем название выбранной школы для режима рейтингов
-  const selectedSchoolName = selectedSchoolForRating 
-    ? (schools.find(s => String(s.school_id) === String(selectedSchoolForRating))?.school_name || `Школа ${selectedSchoolForRating}`)
-    : '';
+  }, [fetchSchools]);
 
   return (
-    <div className="App">
-      <h1>Визуализация школ и отзывов</h1>
-      
-      {/* Кнопки переключения режимов */}
-      <div className="mode-switcher">
-        <button
-          className={`mode-btn ${viewMode === 'topics' ? 'active' : ''}`}
-          onClick={() => setViewMode('topics')}
-        >
-          График по топикам
-        </button>
-        <button
-          className={`mode-btn ${viewMode === 'rating' ? 'active' : ''}`}
-          onClick={() => setViewMode('rating')}
-        >
-          Общая информация по школе
-        </button>
-      </div>
-
-      {error && <div className="error">{error}</div>}
-
-      {/* Режим "График по топикам" */}
-      {viewMode === 'topics' && (
-        <>
-          <Filters
-            schools={schools}
-            topics={TOPICS}
-            selectedSchools={selectedSchools}
-            selectedTopic={selectedTopic}
-            dateStart={dateStart}
-            dateEnd={dateEnd}
-            onSchoolToggle={handleSchoolToggle}
-            onTopicChange={setSelectedTopic}
-            onDateStartChange={setDateStart}
-            onDateEndChange={setDateEnd}
-            onSubmit={handleSubmit}
-            loading={loading}
-          />
-
-          {chartData.length > 0 && (
-            <Chart data={chartData} selectedSchools={selectedSchools} schools={schools} />
-          )}
-
-          {!loading && chartData.length === 0 && selectedSchools.length > 0 && selectedTopic && (
-            <div className="no-data">Нет данных для отображения</div>
-          )}
-        </>
-      )}
-
-      {/* Режим "Общая информация по школе" */}
-      {viewMode === 'rating' && (
-        <>
-          <SchoolSelector
-            schools={schools}
-            selectedSchool={selectedSchoolForRating}
-            onSchoolChange={setSelectedSchoolForRating}
-            onSubmit={handleRatingSubmit}
-            loading={loading}
-          />
-
-          {ratingReviews.length > 0 && (
-            <RatingChart reviews={ratingReviews} schoolName={selectedSchoolName} />
-          )}
-
-          {!loading && ratingReviews.length === 0 && selectedSchoolForRating && (
-            <div className="no-data">Нет данных для отображения</div>
-          )}
-        </>
+    <div className="app">
+      <SidePanel
+        searchQuery={searchQuery}
+        onSearchChange={setSearchQuery}
+        onSearchSubmit={handleSearchSubmit}
+        filterState={filterState}
+        onFilterChange={setFilterState}
+        onApply={handleApply}
+        onReset={handleReset}
+        filtersApplied={filtersApplied}
+        loading={loading}
+      />
+      <main className="map-area">
+        <MapView schools={schools} />
+      </main>
+      {toast && (
+        <Toast
+          message={toast.message}
+          type={toast.type}
+          onClose={() => setToast(null)}
+        />
       )}
     </div>
   );
 }
 
 export default App;
-
