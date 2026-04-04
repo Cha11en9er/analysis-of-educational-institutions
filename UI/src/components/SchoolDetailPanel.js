@@ -1,4 +1,7 @@
 import React from 'react';
+import { isGeocodeTestSchool } from '../utils/geocodeTestSchool';
+import geocodedAddresses from '../data/geocoded_addresses_sosh6.json';
+import streetPolygons from '../data/street_polygons_sosh6.json';
 
 const SPORTS_LABELS = [
   { key: 'has_sports_complex', label: 'Спорткомплекс' },
@@ -13,6 +16,9 @@ export default function SchoolDetailPanel({ school, onBack, onStatistics }) {
   const name = school.name_2gis || school.name_ym || `Школа ${school.school_id}`;
   const sportsPresent = SPORTS_LABELS.filter(({ key }) => school[key] === true);
   const sportsNone = sportsPresent.length === 0;
+  const geocodeTest = isGeocodeTestSchool(school);
+  const nHouses = geocodedAddresses?.length ?? 0;
+  const nStreets = streetPolygons?.length ?? 0;
 
   return (
     <aside className="side-panel side-panel-school">
@@ -26,6 +32,18 @@ export default function SchoolDetailPanel({ school, onBack, onStatistics }) {
           <span className="detail-value">{school.school_address || '—'}</span>
         </div>
       </section>
+
+      {geocodeTest && (
+        <section className="detail-block detail-block-geocode-test">
+          <div className="detail-label">Тест: привязанные адреса (геокод)</div>
+          <p className="detail-geocode-hint">
+            На карте показаны <strong>{nHouses}</strong> домов (точки) и <strong>{nStreets}</strong>{' '}
+            полигонов улиц из <code>geocode_test</code>. Данные в{' '}
+            <code>UI/src/data/geocoded_addresses_sosh6.json</code> и{' '}
+            <code>street_polygons_sosh6.json</code> (копия из <code>geocoding/geocode_test/</code>).
+          </p>
+        </section>
+      )}
 
       <section className="detail-block">
         <div className="detail-row">

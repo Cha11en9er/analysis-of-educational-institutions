@@ -284,6 +284,25 @@
   margin-bottom: 1.25rem;
 }
 
+.side-panel-school .detail-block-geocode-test {
+  padding: 0.75rem 0.85rem;
+  background: #f0f7ff;
+  border: 1px solid #b6d4fe;
+  border-radius: 8px;
+}
+
+.side-panel-school .detail-geocode-hint {
+  margin: 0.35rem 0 0;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: #334155;
+}
+
+.side-panel-school .detail-geocode-hint code {
+  font-size: 0.75rem;
+  word-break: break-all;
+}
+
 .side-panel-school .detail-row {
   display: flex;
   flex-direction: column;

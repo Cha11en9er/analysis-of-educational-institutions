@@ -1,7 +1,18 @@
-import React, { useEffect, useRef } from 'react';
-import { MapContainer, TileLayer, Marker, Tooltip, useMap } from 'react-leaflet';
+import React, { useEffect, useMemo, useRef } from 'react';
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Tooltip,
+  Polygon,
+  CircleMarker,
+  useMap,
+} from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import geocodedAddresses from '../data/geocoded_addresses_sosh6.json';
+import streetPolygons from '../data/street_polygons_sosh6.json';
+import { isGeocodeTestSchool } from '../utils/geocodeTestSchool';
 
 const SARATOV_CENTER = [51.532, 46.0];
 const DEFAULT_ZOOM = 12;
@@ -36,9 +47,35 @@ function FitSchool({ school }) {
   const map = useMap();
   useEffect(() => {
     if (!school?.location?.coordinates || school.location.coordinates.length !== 2) return;
+    if (isGeocodeTestSchool(school)) return; // зум задаёт FitGeocodeTestBounds
     const [lon, lat] = school.location.coordinates;
     map.setView([lat, lon], 16);
   }, [map, school]);
+  return null;
+}
+
+/** Подгонка карты под школу + дома + полигоны улиц (тест СОШ № 6) */
+function FitGeocodeTestBounds({ school, addresses, polygonsLonLat }) {
+  const map = useMap();
+  useEffect(() => {
+    if (!school || !isGeocodeTestSchool(school)) return;
+    const latLngs = [];
+
+    if (school.location?.coordinates?.length === 2) {
+      const [lon, lat] = school.location.coordinates;
+      latLngs.push([lat, lon]);
+    }
+    (addresses || []).forEach((a) => {
+      if (a.lat != null && a.lon != null) latLngs.push([a.lat, a.lon]);
+    });
+    (polygonsLonLat || []).forEach((ring) => {
+      ring.forEach(([lon, lat]) => latLngs.push([lat, lon]));
+    });
+
+    if (latLngs.length === 0) return;
+    const bounds = L.latLngBounds(latLngs);
+    map.fitBounds(bounds, { padding: [48, 48], maxZoom: 17 });
+  }, [map, school, addresses, polygonsLonLat]);
   return null;
 }
 
@@ -49,6 +86,15 @@ export default function MapView({ schools, selectedSchool, onSchoolClick }) {
       (s) => s.location?.coordinates && s.location.coordinates.length === 2
     );
 
+  const showGeocodeTest = selectedSchool && isGeocodeTestSchool(selectedSchool);
+  const polygonPositions = useMemo(
+    () =>
+      (streetPolygons || []).map((item) =>
+        (item.polygon || []).map(([lon, lat]) => [lat, lon])
+      ),
+    []
+  );
+
   return (
     <div className="map-wrap">
       <MapContainer
@@ -56,9 +102,9 @@ export default function MapView({ schools, selectedSchool, onSchoolClick }) {
         zoom={DEFAULT_ZOOM}
         className="map-container"
         zoomControl={false}
+        attributionControl={false}
       >
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <ZoomControl />
@@ -84,6 +130,54 @@ export default function MapView({ schools, selectedSchool, onSchoolClick }) {
         )}
         {selectedSchool?.location?.coordinates?.length === 2 && (
           <FitSchool school={selectedSchool} />
+        )}
+        {showGeocodeTest && (
+          <>
+            <FitGeocodeTestBounds
+              school={selectedSchool}
+              addresses={geocodedAddresses}
+              polygonsLonLat={(streetPolygons || []).map((s) => s.polygon || [])}
+            />
+            {(streetPolygons || []).map((item, idx) => {
+              const pos = polygonPositions[idx] || [];
+              if (pos.length < 3) return null;
+              return (
+                <Polygon
+                  key={`test-street-${idx}-${item.street || ''}`}
+                  positions={pos}
+                  pathOptions={{
+                    color: '#2563eb',
+                    weight: 2,
+                    fillColor: '#3b82f6',
+                    fillOpacity: 0.12,
+                  }}
+                >
+                  <Tooltip sticky direction="top">
+                    {item.street || 'Улица'}
+                  </Tooltip>
+                </Polygon>
+              );
+            })}
+            {(geocodedAddresses || []).map((row, idx) => (
+              <CircleMarker
+                key={`test-addr-${idx}-${row.address || idx}`}
+                center={[row.lat, row.lon]}
+                radius={6}
+                pathOptions={{
+                  color: '#c2410c',
+                  weight: 2,
+                  fillColor: '#fb923c',
+                  fillOpacity: 0.85,
+                }}
+              >
+                <Tooltip direction="top" offset={[0, -4]}>
+                  <span style={{ whiteSpace: 'pre-wrap', maxWidth: 220, display: 'block' }}>
+                    {row.address || `${row.lat}, ${row.lon}`}
+                  </span>
+                </Tooltip>
+              </CircleMarker>
+            ))}
+          </>
         )}
       </MapContainer>
     </div>
