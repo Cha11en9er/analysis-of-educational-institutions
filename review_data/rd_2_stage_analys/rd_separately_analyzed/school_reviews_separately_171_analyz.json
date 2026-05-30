@@ -1,0 +1,19 @@
+[
+  {"review_id": "5854", "sentiment": "pos", "topics": {"учителя": "pos", "ремонт": "neg"}},
+  {"review_id": "5855", "sentiment": "neg", "topics": {"учителя": "neg", "ремонт": "neg"}},
+  {"review_id": "5856", "sentiment": "pos", "topics": {"учителя": "pos", "ремонт": "neg"}},
+  {"review_id": "5857", "sentiment": "neutral", "topics": {}},
+  {"review_id": "5858", "sentiment": "neg", "topics": {"учителя": "neg"}},
+  {"review_id": "5859", "sentiment": "pos", "topics": {"учителя": "pos"}},
+  {"review_id": "5860", "sentiment": "pos", "topics": {}},
+  {"review_id": "5861", "sentiment": "pos", "topics": {}},
+  {"review_id": "5955", "sentiment": "pos", "topics": {"учителя": "pos"}},
+  {"review_id": "5956", "sentiment": "pos", "topics": {"учителя": "pos"}},
+  {"review_id": "5957", "sentiment": "pos", "topics": {"учителя": "pos"}},
+  {"review_id": "5958", "sentiment": "pos", "topics": {"учителя": "pos"}},
+  {"review_id": "5959", "sentiment": "pos", "topics": {"учителя": "pos"}},
+  {"review_id": "5960", "sentiment": "pos", "topics": {}},
+  {"review_id": "5961", "sentiment": "pos", "topics": {"ремонт": "pos"}},
+  {"review_id": "6965", "sentiment": "pos", "topics": {}},
+  {"review_id": "6985", "sentiment": "pos", "topics": {"учителя": "pos"}}
+]

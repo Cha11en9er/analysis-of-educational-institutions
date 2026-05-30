@@ -1,0 +1,20 @@
+[
+  {
+    "review_id": "4562",
+    "school_id": "93",
+    "date": null,
+    "text": "Будьте первым!Оцените это место. Ваш отзыв поможет другим пользователям принять решение",
+    "rating": null,
+    "sentiment": "neutral",
+    "topics": {}
+  },
+  {
+    "review_id": "6575",
+    "school_id": "93",
+    "date": null,
+    "text": null,
+    "rating": null,
+    "sentiment": "neutral",
+    "topics": {}
+  }
+]

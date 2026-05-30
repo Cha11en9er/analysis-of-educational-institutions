@@ -1,0 +1,499 @@
+[
+  {
+    "review_id": "1906",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos",
+      "ремонт": "neutral",
+      "инфраструктура": "neg"
+    }
+  },
+  {
+    "review_id": "1907",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "ремонт": "neg",
+      "учителя": "pos",
+      "инфраструктура": "pos",
+      "буллинг": "neg"
+    }
+  },
+  {
+    "review_id": "1908",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "ремонт": "neg",
+      "учителя": "pos",
+      "инфраструктура": "pos"
+    }
+  },
+  {
+    "review_id": "1909",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "администрация": "pos",
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "1910",
+    "school_id": "37",
+    "sentiment": "neg",
+    "topics": {
+      "учителя": "neg"
+    }
+  },
+  {
+    "review_id": "1911",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "ремонт": "pos",
+      "учителя": "neutral"
+    }
+  },
+  {
+    "review_id": "1912",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos",
+      "инфраструктура": "pos",
+      "администрация": "pos"
+    }
+  },
+  {
+    "review_id": "1913",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos",
+      "администрация": "pos"
+    }
+  },
+  {
+    "review_id": "1914",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "1915",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "1916",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "1917",
+    "school_id": "37",
+    "sentiment": "neutral",
+    "topics": {
+      "учителя": "pos",
+      "администрация": "neg"
+    }
+  },
+  {
+    "review_id": "1918",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "инфраструктура": "pos",
+      "учителя": "neutral"
+    }
+  },
+  {
+    "review_id": "1919",
+    "school_id": "37",
+    "sentiment": "neg",
+    "topics": {
+      "охрана": "neg"
+    }
+  },
+  {
+    "review_id": "1920",
+    "school_id": "37",
+    "sentiment": "neg",
+    "topics": {
+      "ремонт": "neg",
+      "уборка": "neg"
+    }
+  },
+  {
+    "review_id": "1921",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "1922",
+    "school_id": "37",
+    "sentiment": "neg",
+    "topics": {
+      "администрация": "neg"
+    }
+  },
+  {
+    "review_id": "1923",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "1924",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "1925",
+    "school_id": "37",
+    "sentiment": "neg",
+    "topics": {
+      "администрация": "neg"
+    }
+  },
+  {
+    "review_id": "1926",
+    "school_id": "37",
+    "sentiment": "neg",
+    "topics": {
+      "еда": "neg",
+      "уборка": "neg",
+      "ремонт": "neg"
+    }
+  },
+  {
+    "review_id": "1927",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "1928",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "1929",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "1930",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "инфраструктура": "neg"
+    }
+  },
+  {
+    "review_id": "1931",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "1932",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "уборка": "pos",
+      "инфраструктура": "pos"
+    }
+  },
+  {
+    "review_id": "1933",
+    "school_id": "37",
+    "sentiment": "neg",
+    "topics": {
+      "учителя": "neg"
+    }
+  },
+  {
+    "review_id": "1934",
+    "school_id": "37",
+    "sentiment": "neutral",
+    "topics": {
+      "инфраструктура": "neg"
+    }
+  },
+  {
+    "review_id": "1935",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos",
+      "буллинг": "neg"
+    }
+  },
+  {
+    "review_id": "1936",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "1937",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "инфраструктура": "pos"
+    }
+  },
+  {
+    "review_id": "1938",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "1939",
+    "school_id": "37",
+    "sentiment": "neg",
+    "topics": {}
+  },
+  {
+    "review_id": "1940",
+    "school_id": "37",
+    "sentiment": "neg",
+    "topics": {
+      "инфраструктура": "neg"
+    }
+  },
+  {
+    "review_id": "1941",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "1942",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "1943",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "1944",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "1945",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "1946",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "1947",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "администрация": "pos"
+    }
+  },
+  {
+    "review_id": "1948",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "1949",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "1950",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "1951",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "1952",
+    "school_id": "37",
+    "sentiment": "neutral",
+    "topics": {}
+  },
+  {
+    "review_id": "1953",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "1954",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "1955",
+    "school_id": "37",
+    "sentiment": "neg",
+    "topics": {}
+  },
+  {
+    "review_id": "1956",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "1957",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "6243",
+    "school_id": "37",
+    "sentiment": "neg",
+    "topics": {
+      "учителя": "neg",
+      "буллинг": "neg"
+    }
+  },
+  {
+    "review_id": "6244",
+    "school_id": "37",
+    "sentiment": "neg",
+    "topics": {}
+  },
+  {
+    "review_id": "6245",
+    "school_id": "37",
+    "sentiment": "neg",
+    "topics": {
+      "администрация": "neg",
+      "учителя": "neg"
+    }
+  },
+  {
+    "review_id": "6246",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos",
+      "еда": "neg"
+    }
+  },
+  {
+    "review_id": "6247",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "6248",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "6249",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos",
+      "администрация": "pos"
+    }
+  },
+  {
+    "review_id": "6250",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "6251",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "6252",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "6253",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "инфраструктура": "pos"
+    }
+  },
+  {
+    "review_id": "6254",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {
+      "администрация": "pos"
+    }
+  },
+  {
+    "review_id": "6255",
+    "school_id": "37",
+    "sentiment": "pos",
+    "topics": {}
+  }
+]

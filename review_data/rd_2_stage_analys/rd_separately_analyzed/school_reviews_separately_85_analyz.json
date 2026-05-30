@@ -1,0 +1,204 @@
+[
+  {
+    "review_id": "4303",
+    "school_id": "85",
+    "date": "2025-04-30",
+    "sentiment": "neg",
+    "topics": {
+      "учителя": "neg",
+      "еда": "neg"
+    }
+  },
+  {
+    "review_id": "4304",
+    "school_id": "85",
+    "date": "2019-09-20",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos",
+      "администрация": "pos"
+    }
+  },
+  {
+    "review_id": "4305",
+    "school_id": "85",
+    "date": "2019-08-20",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos",
+      "администрация": "pos",
+      "буллинг": "pos"
+    }
+  },
+  {
+    "review_id": "4306",
+    "school_id": "85",
+    "date": "2022-06-29",
+    "sentiment": "neg",
+    "topics": {
+      "ремонт": "neg",
+      "учителя": "neg"
+    }
+  },
+  {
+    "review_id": "4307",
+    "school_id": "85",
+    "date": "2019-09-19",
+    "sentiment": "neg",
+    "topics": {
+      "инфраструктура": "neg",
+      "ремонт": "neg"
+    }
+  },
+  {
+    "review_id": "4308",
+    "school_id": "85",
+    "date": "2020-03-29",
+    "sentiment": "neg",
+    "topics": {
+      "учителя": "neg",
+      "уборка": "neg"
+    }
+  },
+  {
+    "review_id": "4309",
+    "school_id": "85",
+    "date": "2020-04-03",
+    "sentiment": "neutral",
+    "topics": {
+      "ремонт": "neutral",
+      "учителя": "neg"
+    }
+  },
+  {
+    "review_id": "4310",
+    "school_id": "85",
+    "date": "2020-04-04",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "4311",
+    "school_id": "85",
+    "date": "2019-12-13",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "4312",
+    "school_id": "85",
+    "date": "2024-07-01",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "4313",
+    "school_id": "85",
+    "date": "2018-03-26",
+    "sentiment": "neg",
+    "topics": {
+      "учителя": "neg"
+    }
+  },
+  {
+    "review_id": "4314",
+    "school_id": "85",
+    "date": "2019-11-23",
+    "sentiment": "neg",
+    "topics": {
+      "ремонт": "neg"
+    }
+  },
+  {
+    "review_id": "4315",
+    "school_id": "85",
+    "date": "2020-10-08",
+    "sentiment": "pos",
+    "topics": {
+      "ремонт": "neg"
+    }
+  },
+  {
+    "review_id": "4316",
+    "school_id": "85",
+    "date": "2018-10-14",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "4317",
+    "school_id": "85",
+    "date": "2020-02-21",
+    "sentiment": "neg",
+    "topics": {
+      "учителя": "pos",
+      "ремонт": "neg"
+    }
+  },
+  {
+    "review_id": "4318",
+    "school_id": "85",
+    "date": "2019-09-26",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "4319",
+    "school_id": "85",
+    "date": "2019-06-27",
+    "sentiment": "neutral",
+    "topics": {
+      "инфраструктура": "neg"
+    }
+  },
+  {
+    "review_id": "4320",
+    "school_id": "85",
+    "date": "2020-03-09",
+    "sentiment": "neg",
+    "topics": {}
+  },
+  {
+    "review_id": "4321",
+    "school_id": "85",
+    "date": "2018-12-18",
+    "sentiment": "neg",
+    "topics": {}
+  },
+  {
+    "review_id": "6554",
+    "school_id": "85",
+    "date": "",
+    "sentiment": "neutral",
+    "topics": {
+      "ремонт": "neg",
+      "учителя": "neutral"
+    }
+  },
+  {
+    "review_id": "6555",
+    "school_id": "85",
+    "date": "2024-05-05",
+    "sentiment": "neg",
+    "topics": {
+      "еда": "neg",
+      "учителя": "neg",
+      "администрация": "neg",
+      "ремонт": "neg"
+    }
+  },
+  {
+    "review_id": "6556",
+    "school_id": "85",
+    "date": "2022-05-11",
+    "sentiment": "neutral",
+    "topics": {
+      "ремонт": "neg",
+      "учителя": "neutral"
+    }
+  }
+]

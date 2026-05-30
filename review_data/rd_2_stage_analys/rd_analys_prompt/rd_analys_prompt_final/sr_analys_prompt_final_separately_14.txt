@@ -438,3 +438,5 @@
 ]---отзывы---
 
 проанализируй каждый отзыв через заданный промпт. ответ выдай в виде единого json файла 
+
+полученный json файл сохрани в C:\repos\analysis-of-educational-institutions\review_data\rd_2_stage_analys\rd_separately_analyzed под названием school_reviews_separately_14_analyz.json

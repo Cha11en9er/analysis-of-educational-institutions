@@ -23,6 +23,8 @@ export default function SidePanel({
   onReset,
   filtersApplied,
   loading,
+  preferencesActive,
+  onOpenPreferences,
 }) {
   const [openFilter, setOpenFilter] = useState(null);
 
@@ -57,6 +59,17 @@ export default function SidePanel({
   return (
     <aside className="side-panel">
       <h1 className="panel-title">Анализ школ Саратова</h1>
+      <div className="preference-panel-row">
+        <button
+          type="button"
+          className="btn-preferences"
+          onClick={onOpenPreferences}
+          disabled={loading}
+        >
+          Что вам важно в школе?
+        </button>
+        {preferencesActive && <span className="preference-badge">подбор вкл.</span>}
+      </div>
 
       <section className="search-section">
         <label className="label">Поиск</label>

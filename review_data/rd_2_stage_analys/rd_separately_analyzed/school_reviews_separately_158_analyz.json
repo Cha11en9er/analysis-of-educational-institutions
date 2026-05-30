@@ -1,0 +1,43 @@
+{
+  "reviews": [
+    {
+      "review_id": "5307",
+      "school_id": "158",
+      "sentiment": "neutral",
+      "topics": {}
+    },
+    {
+      "review_id": "6843",
+      "school_id": "158",
+      "sentiment": "pos",
+      "topics": {
+        "уборка": "pos"
+      }
+    },
+    {
+      "review_id": "6844",
+      "school_id": "158",
+      "sentiment": "pos",
+      "topics": {}
+    },
+    {
+      "review_id": "6845",
+      "school_id": "158",
+      "sentiment": "pos",
+      "topics": {
+        "учителя": "pos",
+        "инфраструктура": "pos",
+        "ремонт": "pos"
+      }
+    },
+    {
+      "review_id": "6846",
+      "school_id": "158",
+      "sentiment": "pos",
+      "topics": {
+        "учителя": "pos",
+        "администрация": "pos"
+      }
+    }
+  ]
+}

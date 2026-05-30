@@ -635,3 +635,182 @@
   color: #721c24;
   border: 1px solid #f5c6cb;
 }
+
+/* Подбор по приоритетам */
+.preference-panel-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.btn-preferences {
+  flex: 1;
+  min-width: 0;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #0d6efd;
+  border-radius: 6px;
+  background: #e7f1ff;
+  color: #0a58ca;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-preferences:hover:not(:disabled) {
+  background: #cfe2ff;
+}
+
+.btn-preferences:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.preference-badge {
+  font-size: 0.75rem;
+  color: #198754;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.preference-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(33, 37, 41, 0.45);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.preference-modal {
+  background: #fff;
+  border-radius: 10px;
+  max-width: 440px;
+  width: 100%;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  padding: 1.25rem 1.5rem;
+}
+
+.preference-modal-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 0.5rem;
+}
+
+.preference-modal-hint {
+  font-size: 0.8125rem;
+  color: #6c757d;
+  line-height: 1.45;
+  margin-bottom: 1rem;
+}
+
+.preference-modal-list {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.preference-modal-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.35rem 0;
+  font-size: 0.9375rem;
+  cursor: pointer;
+}
+
+.preference-modal-row input {
+  margin-top: 0.2rem;
+}
+
+.preference-modal-geo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.btn-geo {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.btn-geo:hover:not(:disabled) {
+  background: #f8f9fa;
+}
+
+.preference-modal-geo-ok {
+  font-size: 0.8125rem;
+  color: #198754;
+}
+
+.preference-modal-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.btn-pref-skip {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.btn-pref-skip:hover:not(:disabled) {
+  background: #f8f9fa;
+}
+
+.btn-pref-apply {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #0d6efd;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-pref-apply:hover:not(:disabled) {
+  background: #0b5ed7;
+}
+
+.btn-pref-apply:disabled,
+.btn-pref-skip:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Круглые маркеры школ на карте (Leaflet divIcon) */
+.school-marker-leaflet {
+  background: transparent !important;
+  border: none !important;
+}
+
+.school-marker-dot-outer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.school-marker-dot-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.38);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

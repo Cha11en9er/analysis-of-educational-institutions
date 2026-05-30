@@ -39,12 +39,9 @@ REACT_APP_API_URL=http://your-api-url:8000
 - `src/components/Filters.js` - компонент фильтров
 - `src/components/Chart.js` - компонент графика
 
-## Тест: геокод для МОУ «СОШ № 6»
+## Прикреплённые дома на карте
 
-При выборе школы **№6** по названию в 2ГИС или Яндексе — например **МОУ «СОШ № 6»** или **МОУ Средняя общеобразовательная школа №6** (не путать с №66 и т.п.) — на карте дополнительно показываются:
+Для школ, по которым есть записи в `src/data/geocoded_addresses_by_school.json`, на общей карте маркер **зелёный** (остальные — стандартный синий пин). При открытии карточки школы — оранжевые точки домов и синий полигон (см. `src/utils/buildAddressCoverageGeoJSON.js`).
 
-- оранжевые круги — координаты домов из `src/data/geocoded_addresses_sosh6.json`;
-- синие полупрозрачные полигоны — улицы из `src/data/street_polygons_sosh6.json`.
-
-Исходные файлы лежат в `geocoding/geocode_test/`. После обновления геокода скопируйте их в `UI/src/data/` (имена с суффиксом `_sosh6`) и пересоберите приложение.
+Пополнение и пересчёт геокода из CSV: `python geocoding/scripts/geocode_ans_stage1_bundle.py` (нужен `YANDEX_API_KEY` в `.env` в корне репозитория). Скрипт дописывает ключи `lyceum62`, `gymnasium1`, `sosh95`, `sosh45` и подмешивает готовый `sosh6` из `geocoded_addresses_sosh6.json`.
 

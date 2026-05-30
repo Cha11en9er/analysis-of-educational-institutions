@@ -1,32 +1,39 @@
-[
+{
+  "reviews": [
     {
-        "review_id": "5302",
-        "topics": {},
-        "overall": "neutral"
+      "review_id": "5302",
+      "school_id": "153",
+      "sentiment": "neutral",
+      "topics": {}
     },
     {
-        "review_id": "6809",
-        "topics": {
-            "учителя": "neg",
-            "ремонт": "neg"
-        },
-        "overall": "neg"
+      "review_id": "6809",
+      "school_id": "153",
+      "sentiment": "neutral",
+      "topics": {
+        "учителя": "neg",
+        "ремонт": "neg"
+      }
     },
     {
-        "review_id": "6810",
-        "topics": {
-            "ремонт": "neg"
-        },
-        "overall": "neg"
+      "review_id": "6810",
+      "school_id": "153",
+      "sentiment": "neg",
+      "topics": {
+        "ремонт": "neg"
+      }
     },
     {
-        "review_id": "6811",
-        "topics": {},
-        "overall": "pos"
+      "review_id": "6811",
+      "school_id": "153",
+      "sentiment": "pos",
+      "topics": {}
     },
     {
-        "review_id": "6812",
-        "topics": {},
-        "overall": "pos"
+      "review_id": "6812",
+      "school_id": "153",
+      "sentiment": "pos",
+      "topics": {}
     }
-]
+  ]
+}

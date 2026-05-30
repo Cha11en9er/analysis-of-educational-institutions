@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback, useEffect, useRef } from 'react';
 import axios from 'axios';
 import './App.css';
 import MapView from './components/MapView';
@@ -6,8 +6,12 @@ import SidePanel from './components/SidePanel';
 import SchoolDetailPanel from './components/SchoolDetailPanel';
 import AnalyticsView, { AnalyticsChart } from './components/AnalyticsView';
 import Toast from './components/Toast';
+import PreferenceModal from './components/PreferenceModal';
 
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+
+const LS_PREFS = 'schoolMapPreferences';
+const LS_MODAL_DISMISSED = 'schoolPreferencesModalDismissed';
 
 const defaultFilterState = {
   yearMin: null,
@@ -17,10 +21,78 @@ const defaultFilterState = {
   sports: null,
 };
 
-function buildParams(search, filterState, filtersApplied) {
+const defaultPreferenceState = {
+  olympiads: false,
+  bullying: false,
+  staff: false,
+  building: false,
+  exam: false,
+  location: false,
+  userLat: null,
+  userLon: null,
+};
+
+function loadStoredPreferences() {
+  try {
+    const raw = localStorage.getItem(LS_PREFS);
+    if (!raw) return { ...defaultPreferenceState, active: false };
+    const o = JSON.parse(raw);
+    return {
+      ...defaultPreferenceState,
+      olympiads: !!o.olympiads,
+      bullying: !!o.bullying,
+      staff: !!o.staff,
+      building: !!o.building,
+      exam: !!o.exam,
+      location: !!o.location,
+      userLat: o.userLat != null ? Number(o.userLat) : null,
+      userLon: o.userLon != null ? Number(o.userLon) : null,
+      active: !!o.active,
+    };
+  } catch {
+    return { ...defaultPreferenceState, active: false };
+  }
+}
+
+function persistPreferences(prefs, active) {
+  const payload = {
+    olympiads: prefs.olympiads,
+    bullying: prefs.bullying,
+    staff: prefs.staff,
+    building: prefs.building,
+    exam: prefs.exam,
+    location: prefs.location,
+    userLat: prefs.userLat,
+    userLon: prefs.userLon,
+    active,
+  };
+  localStorage.setItem(LS_PREFS, JSON.stringify(payload));
+}
+
+function mergePreferenceParams(params, preferenceState, preferencesActive) {
+  if (!preferencesActive) return params;
+  const p = { ...params };
+  if (preferenceState.olympiads) p.pref_olympiads = true;
+  if (preferenceState.bullying) p.pref_bullying = true;
+  if (preferenceState.staff) p.pref_staff = true;
+  if (preferenceState.building) p.pref_building = true;
+  if (preferenceState.exam) p.pref_exam = true;
+  if (preferenceState.location) {
+    p.pref_location = true;
+    if (preferenceState.userLat != null && preferenceState.userLon != null) {
+      p.user_lat = preferenceState.userLat;
+      p.user_lon = preferenceState.userLon;
+    }
+  }
+  return p;
+}
+
+function buildParams(search, filterState, filtersApplied, preferenceState, preferencesActive) {
   const params = {};
   if (search && search.trim()) params.search = search.trim();
-  if (!filtersApplied) return params;
+  if (!filtersApplied) {
+    return mergePreferenceParams(params, preferenceState, preferencesActive);
+  }
   const f = filterState;
   if (f.yearMin != null && f.yearMin !== '') params.year_min = Number(f.yearMin);
   if (f.yearMax != null && f.yearMax !== '') params.year_max = Number(f.yearMax);
@@ -32,7 +104,7 @@ function buildParams(search, filterState, filtersApplied) {
     if (f.sports.has_sports_ground) params.has_sports_ground = true;
     if (f.sports.has_sports_complex) params.has_sports_complex = true;
   }
-  return params;
+  return mergePreferenceParams(params, preferenceState, preferencesActive);
 }
 
 function validateFilters(filterState, setToast) {
@@ -61,13 +133,22 @@ function validateFilters(filterState, setToast) {
 }
 
 function App() {
+  const initPrefs = loadStoredPreferences();
+  const { active: initPrefsActive, ...initPreferenceState } = initPrefs;
+
   const [schools, setSchools] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [searchSubmitted, setSearchSubmitted] = useState('');
   const [filterState, setFilterState] = useState(defaultFilterState);
   const [filtersApplied, setFiltersApplied] = useState(false);
+  const [preferenceState, setPreferenceState] = useState(initPreferenceState);
+  const [preferencesActive, setPreferencesActive] = useState(initPrefsActive);
+  const [showPreferenceModal, setShowPreferenceModal] = useState(
+    () => localStorage.getItem(LS_MODAL_DISMISSED) !== '1'
+  );
   const [toast, setToast] = useState(null);
+  const mapFetchOnce = useRef(false);
 
   const [selectedSchoolId, setSelectedSchoolId] = useState(null);
   const [schoolDetail, setSchoolDetail] = useState(null);
@@ -95,7 +176,12 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetchSchools();
+    if (mapFetchOnce.current) return;
+    mapFetchOnce.current = true;
+    const s = loadStoredPreferences();
+    const { active, ...rest } = s;
+    const p = buildParams('', defaultFilterState, false, rest, active);
+    fetchSchools(p);
   }, [fetchSchools]);
 
   const handleSchoolClick = useCallback(
@@ -149,30 +235,76 @@ function App() {
 
   const handleSearchSubmit = useCallback(() => {
     setSearchSubmitted(searchQuery);
-    const params = buildParams(searchQuery, filterState, filtersApplied);
+    const params = buildParams(searchQuery, filterState, filtersApplied, preferenceState, preferencesActive);
     fetchSchools(params).then((count) => {
       setToast({ message: `Найдено школ: ${count} после использования фильтра`, type: 'info' });
     });
-  }, [searchQuery, filterState, filtersApplied, fetchSchools]);
+  }, [searchQuery, filterState, filtersApplied, preferenceState, preferencesActive, fetchSchools]);
 
   const handleApply = useCallback(() => {
     if (!validateFilters(filterState, setToast)) return;
     setFiltersApplied(true);
-    const params = buildParams(searchSubmitted || searchQuery, filterState, true);
+    const params = buildParams(searchSubmitted || searchQuery, filterState, true, preferenceState, preferencesActive);
     fetchSchools(params).then((count) => {
       setToast({ message: `Найдено школ: ${count} после использования фильтра`, type: 'info' });
     });
-  }, [filterState, searchSubmitted, searchQuery, fetchSchools]);
+  }, [filterState, searchSubmitted, searchQuery, preferenceState, preferencesActive, fetchSchools]);
 
   const handleReset = useCallback(() => {
     setFilterState(defaultFilterState);
     setFiltersApplied(false);
     setSearchQuery('');
     setSearchSubmitted('');
-    fetchSchools().then((count) => {
+    const params = buildParams('', defaultFilterState, false, preferenceState, preferencesActive);
+    fetchSchools(params).then((count) => {
       setToast({ message: `Найдено школ: ${count} после использования фильтра`, type: 'info' });
     });
-  }, [fetchSchools]);
+  }, [fetchSchools, preferenceState, preferencesActive]);
+
+  const handlePreferenceBackdropClose = useCallback(() => {
+    localStorage.setItem(LS_MODAL_DISMISSED, '1');
+    setShowPreferenceModal(false);
+  }, []);
+
+  const handlePreferenceSkipNoPrefs = useCallback(() => {
+    localStorage.setItem(LS_MODAL_DISMISSED, '1');
+    setShowPreferenceModal(false);
+    setPreferencesActive(false);
+    persistPreferences(preferenceState, false);
+    const params = buildParams(searchSubmitted || searchQuery, filterState, filtersApplied, preferenceState, false);
+    fetchSchools(params).then((count) => {
+      setToast({ message: `Подбор отключён. Найдено школ: ${count}`, type: 'info' });
+    });
+  }, [searchSubmitted, searchQuery, filterState, filtersApplied, preferenceState, fetchSchools]);
+
+  const handlePreferenceApply = useCallback(
+    (form) => {
+      const next = {
+        olympiads: form.olympiads,
+        bullying: form.bullying,
+        staff: form.staff,
+        building: form.building,
+        exam: form.exam,
+        location: form.location,
+        userLat: form.userLat,
+        userLon: form.userLon,
+      };
+      setPreferenceState(next);
+      setPreferencesActive(true);
+      persistPreferences(next, true);
+      localStorage.setItem(LS_MODAL_DISMISSED, '1');
+      setShowPreferenceModal(false);
+      const params = buildParams(searchSubmitted || searchQuery, filterState, filtersApplied, next, true);
+      fetchSchools(params).then((count) => {
+        setToast({ message: `Подбор применён. Найдено школ: ${count}`, type: 'info' });
+      });
+    },
+    [searchSubmitted, searchQuery, filterState, filtersApplied, fetchSchools]
+  );
+
+  const handleOpenPreferenceModal = useCallback(() => {
+    setShowPreferenceModal(true);
+  }, []);
 
   const showSchoolDetail = selectedSchoolId != null && !showAnalytics;
 
@@ -206,6 +338,8 @@ function App() {
           onReset={handleReset}
           filtersApplied={filtersApplied}
           loading={loading}
+          preferencesActive={preferencesActive}
+          onOpenPreferences={handleOpenPreferenceModal}
         />
       )}
       <main className="map-area">
@@ -227,10 +361,22 @@ function App() {
               schools={schools}
               selectedSchool={schoolDetail}
               onSchoolClick={handleSchoolClick}
+              preferencesActive={preferencesActive}
             />
           </>
         )}
       </main>
+      {!showAnalytics && !showSchoolDetail && (
+        <PreferenceModal
+          open={showPreferenceModal}
+          onBackdropClose={handlePreferenceBackdropClose}
+          onSkipWithoutPrefs={handlePreferenceSkipNoPrefs}
+          onApply={handlePreferenceApply}
+          initialForm={preferenceState}
+          loading={loading}
+          onToast={setToast}
+        />
+      )}
       {toast && (
         <Toast
           message={toast.message}

@@ -1,0 +1,241 @@
+[
+  {
+    "review_id": "2918",
+    "school_id": "58",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "2919",
+    "school_id": "58",
+    "sentiment": "pos",
+    "topics": {
+      "инфраструктура": "pos"
+    }
+  },
+  {
+    "review_id": "2920",
+    "school_id": "58",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "2921",
+    "school_id": "58",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "2922",
+    "school_id": "58",
+    "sentiment": "neg",
+    "topics": {
+      "учителя": "neg",
+      "еда": "neg"
+    }
+  },
+  {
+    "review_id": "2923",
+    "school_id": "58",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos",
+      "ремонт": "pos",
+      "инфраструктура": "pos"
+    }
+  },
+  {
+    "review_id": "2924",
+    "school_id": "58",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos",
+      "буллинг": "pos"
+    }
+  },
+  {
+    "review_id": "2925",
+    "school_id": "58",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "2926",
+    "school_id": "58",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "2927",
+    "school_id": "58",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos",
+      "уборка": "pos"
+    }
+  },
+  {
+    "review_id": "2928",
+    "school_id": "58",
+    "sentiment": "neg",
+    "topics": {}
+  },
+  {
+    "review_id": "2929",
+    "school_id": "58",
+    "sentiment": "neg",
+    "topics": {
+      "учителя": "pos",
+      "ремонт": "neg"
+    }
+  },
+  {
+    "review_id": "2930",
+    "school_id": "58",
+    "sentiment": "neg",
+    "topics": {
+      "учителя": "neg",
+      "ремонт": "neg"
+    }
+  },
+  {
+    "review_id": "2931",
+    "school_id": "58",
+    "sentiment": "pos",
+    "topics": {
+      "ремонт": "neg"
+    }
+  },
+  {
+    "review_id": "2932",
+    "school_id": "58",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "2933",
+    "school_id": "58",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "2934",
+    "school_id": "58",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "2935",
+    "school_id": "58",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "2936",
+    "school_id": "58",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "2937",
+    "school_id": "58",
+    "sentiment": "neg",
+    "topics": {
+      "учителя": "neg",
+      "еда": "neg",
+      "уборка": "neg"
+    }
+  },
+  {
+    "review_id": "2938",
+    "school_id": "58",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "2939",
+    "school_id": "58",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "2940",
+    "school_id": "58",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "2941",
+    "school_id": "58",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "2942",
+    "school_id": "58",
+    "sentiment": "neg",
+    "topics": {}
+  },
+  {
+    "review_id": "2943",
+    "school_id": "58",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "2944",
+    "school_id": "58",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "2945",
+    "school_id": "58",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "6380",
+    "school_id": "58",
+    "sentiment": "neg",
+    "topics": {
+      "администрация": "neg"
+    }
+  },
+  {
+    "review_id": "6381",
+    "school_id": "58",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "6382",
+    "school_id": "58",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "6383",
+    "school_id": "58",
+    "sentiment": "pos",
+    "topics": {}
+  }
+]

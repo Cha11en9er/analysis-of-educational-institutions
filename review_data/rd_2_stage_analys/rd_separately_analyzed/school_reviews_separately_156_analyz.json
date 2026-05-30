@@ -1,0 +1,38 @@
+{
+  "reviews": [
+    {
+      "review_id": "5305",
+      "school_id": "156",
+      "sentiment": "neutral",
+      "topics": {}
+    },
+    {
+      "review_id": "6834",
+      "school_id": "156",
+      "sentiment": "neg",
+      "topics": {
+        "учителя": "neg"
+      }
+    },
+    {
+      "review_id": "6835",
+      "school_id": "156",
+      "sentiment": "pos",
+      "topics": {}
+    },
+    {
+      "review_id": "6836",
+      "school_id": "156",
+      "sentiment": "neutral",
+      "topics": {}
+    },
+    {
+      "review_id": "6837",
+      "school_id": "156",
+      "sentiment": "neg",
+      "topics": {
+        "учителя": "neg"
+      }
+    }
+  ]
+}

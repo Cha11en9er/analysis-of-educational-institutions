@@ -11,7 +11,14 @@ from typing import Optional, List, Dict, Any
 from datetime import date
 import psycopg2
 import os
+import sys
+from pathlib import Path
 from dotenv import load_dotenv
+
+_api_dir = str(Path(__file__).resolve().parent)
+if _api_dir not in sys.path:
+    sys.path.insert(0, _api_dir)
+from preference_scoring import load_preference_bundle, score_school_row
 
 # Загрузка переменных окружения
 load_dotenv()
@@ -94,6 +101,14 @@ async def get_schools_for_map(
     has_stadium: Optional[bool] = Query(None, description="Наличие стадиона/футбольного поля"),
     has_sports_ground: Optional[bool] = Query(None, description="Наличие спорт площадки"),
     has_sports_complex: Optional[bool] = Query(None, description="Наличие спорткомплекса"),
+    pref_olympiads: bool = Query(False, description="Приоритет: олимпиадная активность"),
+    pref_bullying: bool = Query(False, description="Приоритет: климат / буллинг (по отзывам)"),
+    pref_staff: bool = Query(False, description="Приоритет: учителя и администрация (по отзывам)"),
+    pref_building: bool = Query(False, description="Приоритет: здание и ремонт (Госуслуги + отзывы)"),
+    pref_exam: bool = Query(False, description="Приоритет: ЕГЭ и поступление в ВУЗы"),
+    pref_location: bool = Query(False, description="Приоритет: близость (нужны user_lat, user_lon)"),
+    user_lat: Optional[float] = Query(None, ge=-90, le=90, description="Широта пользователя для близости"),
+    user_lon: Optional[float] = Query(None, ge=-180, le=180, description="Долгота пользователя для близости"),
 ):
     """
     Список школ для карты из sa.school с опциональной фильтрацией.
@@ -197,6 +212,49 @@ async def get_schools_for_map(
             })
 
         cursor.close()
+
+        try:
+            bundle = load_preference_bundle()
+        except Exception as e:
+            raise HTTPException(
+                status_code=500,
+                detail=f"Не удалось загрузить данные для карты (подбор / метки): {str(e)}",
+            )
+        final_ids = bundle.get("final_review_school_ids") or frozenset()
+        for sch in schools:
+            sch["has_review_analysis"] = sch["school_id"] in final_ids
+
+        prefs = {
+            "olympiads": pref_olympiads,
+            "bullying": pref_bullying,
+            "staff": pref_staff,
+            "building": pref_building,
+            "exam": pref_exam,
+            "location": pref_location,
+        }
+        if any(prefs.values()):
+            if pref_location and (user_lat is None or user_lon is None):
+                raise HTTPException(
+                    status_code=400,
+                    detail="Для приоритета «близость» укажите user_lat и user_lon",
+                )
+            for sch in schools:
+                sid = sch["school_id"]
+                coords = sch.get("location") and sch["location"].get("coordinates")
+                lat = lon = None
+                if coords and len(coords) == 2:
+                    lon, lat = float(coords[0]), float(coords[1])
+                total, breakdown = score_school_row(
+                    sid, lat, lon, prefs, user_lat, user_lon, bundle
+                )
+                sch["preference_score"] = round(total * 100.0, 1)
+                sch["preference_breakdown"] = {k: round(v * 100.0, 1) for k, v in breakdown.items()}
+            schools.sort(key=lambda x: x["preference_score"], reverse=True)
+        else:
+            for sch in schools:
+                sch["preference_score"] = None
+                sch["preference_breakdown"] = None
+
         return {"schools": schools, "count": len(schools)}
     except psycopg2.Error as e:
         raise HTTPException(status_code=500, detail=f"Ошибка БД: {str(e)}")

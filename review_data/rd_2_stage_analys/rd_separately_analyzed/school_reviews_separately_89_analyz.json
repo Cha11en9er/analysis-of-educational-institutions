@@ -1,0 +1,184 @@
+[
+  {
+    "review_id": "4450",
+    "school_id": "89",
+    "date": "2025-06-17",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos",
+      "еда": "pos",
+      "уборка": "pos",
+      "охрана": "pos"
+    }
+  },
+  {
+    "review_id": "4451",
+    "school_id": "89",
+    "date": "2024-12-13",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos",
+      "ремонт": "neg",
+      "инфраструктура": "neg"
+    }
+  },
+  {
+    "review_id": "4452",
+    "school_id": "89",
+    "date": "2023-01-27",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos",
+      "еда": "pos"
+    }
+  },
+  {
+    "review_id": "4453",
+    "school_id": "89",
+    "date": "2021-06-09",
+    "sentiment": "pos",
+    "topics": {
+      "администрация": "pos",
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "4454",
+    "school_id": "89",
+    "date": "2019-12-27",
+    "sentiment": "neg",
+    "topics": {
+      "ремонт": "neg",
+      "инфраструктура": "neg",
+      "учителя": "neutral"
+    }
+  },
+  {
+    "review_id": "4455",
+    "school_id": "89",
+    "date": "2019-12-05",
+    "sentiment": "neutral",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "4456",
+    "school_id": "89",
+    "date": "2020-03-30",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "4457",
+    "school_id": "89",
+    "date": "2024-08-14",
+    "sentiment": "pos",
+    "topics": {
+      "буллинг": "neg"
+    }
+  },
+  {
+    "review_id": "4458",
+    "school_id": "89",
+    "date": "2020-06-13",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos",
+      "администрация": "pos"
+    }
+  },
+  {
+    "review_id": "4459",
+    "school_id": "89",
+    "date": "2020-03-09",
+    "sentiment": "neg",
+    "topics": {
+      "ремонт": "neg",
+      "администрация": "neg"
+    }
+  },
+  {
+    "review_id": "4460",
+    "school_id": "89",
+    "date": "2022-03-04",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos",
+      "администрация": "pos"
+    }
+  },
+  {
+    "review_id": "4461",
+    "school_id": "89",
+    "date": "2021-12-16",
+    "sentiment": "pos",
+    "topics": {
+      "администрация": "pos",
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "4462",
+    "school_id": "89",
+    "date": "2021-12-27",
+    "sentiment": "pos",
+    "topics": {
+      "администрация": "pos",
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "4463",
+    "school_id": "89",
+    "date": "2023-05-24",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "4464",
+    "school_id": "89",
+    "date": "2019-09-02",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "4465",
+    "school_id": "89",
+    "date": "2019-10-07",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "4466",
+    "school_id": "89",
+    "date": "2019-08-28",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "4467",
+    "school_id": "89",
+    "date": "2020-03-17",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "4468",
+    "school_id": "89",
+    "date": "2019-05-27",
+    "sentiment": "neutral",
+    "topics": {}
+  },
+  {
+    "review_id": "6563",
+    "school_id": "89",
+    "date": "2024-02-22",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  }
+]
