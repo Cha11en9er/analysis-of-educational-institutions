@@ -1,0 +1,117 @@
+[
+  {
+    "review_id": "1958",
+    "school_id": "38",
+    "sentiment": "pos",
+    "topics": {
+      "инфраструктура": "pos",
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "1959",
+    "school_id": "38",
+    "sentiment": "pos",
+    "topics": {
+      "инфраструктура": "pos",
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "1960",
+    "school_id": "38",
+    "sentiment": "pos",
+    "topics": {
+      "еда": "pos",
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "1961",
+    "school_id": "38",
+    "sentiment": "pos",
+    "topics": {
+      "инфраструктура": "pos",
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "1962",
+    "school_id": "38",
+    "sentiment": "neg",
+    "topics": {
+      "буллинг": "neg",
+      "администрация": "neg"
+    }
+  },
+  {
+    "review_id": "1963",
+    "school_id": "38",
+    "sentiment": "neg",
+    "topics": {
+      "администрация": "neg"
+    }
+  },
+  {
+    "review_id": "1964",
+    "school_id": "38",
+    "sentiment": "pos",
+    "topics": {
+      "инфраструктура": "neg"
+    }
+  },
+  {
+    "review_id": "1965",
+    "school_id": "38",
+    "sentiment": "pos",
+    "topics": {
+      "инфраструктура": "pos"
+    }
+  },
+  {
+    "review_id": "1966",
+    "school_id": "38",
+    "sentiment": "neg",
+    "topics": {
+      "еда": "neg"
+    }
+  },
+  {
+    "review_id": "1967",
+    "school_id": "38",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "6256",
+    "school_id": "38",
+    "sentiment": "pos",
+    "topics": {
+      "ремонт": "neg",
+      "буллинг": "neg"
+    }
+  },
+  {
+    "review_id": "6257",
+    "school_id": "38",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "6258",
+    "school_id": "38",
+    "sentiment": "pos",
+    "topics": {
+      "инфраструктура": "pos"
+    }
+  },
+  {
+    "review_id": "6259",
+    "school_id": "38",
+    "sentiment": "neutral",
+    "topics": {
+      "ремонт": "neg",
+      "буллинг": "neg"
+    }
+  }
+]

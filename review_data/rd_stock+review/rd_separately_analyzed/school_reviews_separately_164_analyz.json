@@ -1,0 +1,276 @@
+[
+  {
+    "review_id": "5447",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos",
+      "ремонт": "neg",
+      "инфраструктура": "pos",
+      "буллинг": "pos"
+    }
+  },
+  {
+    "review_id": "5448",
+    "sentiment": "neg",
+    "topics": {
+      "учителя": "neg"
+    }
+  },
+  {
+    "review_id": "5449",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "5450",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "5451",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos",
+      "ремонт": "pos"
+    }
+  },
+  {
+    "review_id": "5452",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos",
+      "ремонт": "pos"
+    }
+  },
+  {
+    "review_id": "5453",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "5454",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "5455",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "5456",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "5457",
+    "sentiment": "neg",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "5458",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "5459",
+    "sentiment": "neutral",
+    "topics": {
+      "учителя": "neg",
+      "буллинг": "neg"
+    }
+  },
+  {
+    "review_id": "5460",
+    "sentiment": "neg",
+    "topics": {
+      "учителя": "neg",
+      "администрация": "neg"
+    }
+  },
+  {
+    "review_id": "5461",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos",
+      "администрация": "pos",
+      "ремонт": "pos"
+    }
+  },
+  {
+    "review_id": "5462",
+    "sentiment": "neutral",
+    "topics": {
+      "учителя": "neg"
+    }
+  },
+  {
+    "review_id": "5463",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "5464",
+    "sentiment": "neg",
+    "topics": {
+      "учителя": "neg",
+      "администрация": "neg",
+      "буллинг": "neg"
+    }
+  },
+  {
+    "review_id": "5465",
+    "sentiment": "neg",
+    "topics": {
+      "учителя": "neg",
+      "администрация": "neg"
+    }
+  },
+  {
+    "review_id": "5466",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos",
+      "ремонт": "pos"
+    }
+  },
+  {
+    "review_id": "5467",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "5468",
+    "sentiment": "pos",
+    "topics": {
+      "ремонт": "neg"
+    }
+  },
+  {
+    "review_id": "5469",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "5470",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "5471",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "5472",
+    "sentiment": "neg",
+    "topics": {}
+  },
+  {
+    "review_id": "5473",
+    "sentiment": "neg",
+    "topics": {}
+  },
+  {
+    "review_id": "5474",
+    "sentiment": "pos",
+    "topics": {
+      "ремонт": "pos"
+    }
+  },
+  {
+    "review_id": "5475",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "5476",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "5477",
+    "sentiment": "neg",
+    "topics": {}
+  },
+  {
+    "review_id": "5478",
+    "sentiment": "neg",
+    "topics": {
+      "учителя": "neg"
+    }
+  },
+  {
+    "review_id": "5479",
+    "sentiment": "neg",
+    "topics": {}
+  },
+  {
+    "review_id": "5480",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "6904",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "6905",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "6906",
+    "sentiment": "neutral",
+    "topics": {
+      "учителя": "neg"
+    }
+  },
+  {
+    "review_id": "6907",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "6908",
+    "sentiment": "neg",
+    "topics": {}
+  },
+  {
+    "review_id": "6909",
+    "sentiment": "neg",
+    "topics": {
+      "буллинг": "neg",
+      "администрация": "neg",
+      "учителя": "neg",
+      "еда": "neg"
+    }
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "reviews": [
+    {
+      "review_id": "5279",
+      "school_id": "130",
+      "sentiment": "neutral",
+      "topics": {}
+    },
+    {
+      "review_id": "6753",
+      "school_id": "130",
+      "sentiment": "neutral",
+      "topics": {}
+    }
+  ]
+}

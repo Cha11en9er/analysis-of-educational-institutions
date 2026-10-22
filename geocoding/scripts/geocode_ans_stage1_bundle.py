@@ -31,6 +31,8 @@ CACHE_PATH = REPO_ROOT / "geocoding" / "scripts" / "_geocode_bundle_cache.json"
 SARATOV_CENTER = "51.53, 46.00"
 SEARCH_RADIUS = "1.5, 1.5"
 BASE_URL = "https://geocode-maps.yandex.ru/1.x/"
+REGION = "Саратовская область"
+CITY = "Саратов"
 
 # Вставка пути к gc_near_school_find_house_number (все дома)
 _GC_SRC = REPO_ROOT / "geocoding" / "gc_find_adreses_near_school" / "gc_near_school_src"
@@ -97,6 +99,11 @@ def iter_house_tokens(houses_raw: str):
                 yield ex
 
 
+def normalize_street_cell(street: str) -> str:
+    """Убираем хвостовые «:» и лишние пробелы из названия улицы в CSV."""
+    return street.strip().rstrip(":").strip()
+
+
 def geocode_address(api_key: str, full_address: str) -> dict | None:
     params = {
         "format": "json",
@@ -106,6 +113,8 @@ def geocode_address(api_key: str, full_address: str) -> dict | None:
         "ll": SARATOV_CENTER,
         "spn": SEARCH_RADIUS,
     }
+    if re.search(r"(\bд\.\s*\d|,?\s*\d+[а-яА-Яa-zA-Z/]*\s*)$", full_address, re.I):
+        params["kind"] = "house"
     try:
         r = requests.get(BASE_URL, params=params, timeout=15)
         r.raise_for_status()
@@ -116,8 +125,16 @@ def geocode_address(api_key: str, full_address: str) -> dict | None:
             return None
         geo = coll["featureMember"][0]["GeoObject"]
         lon, lat = map(float, geo["Point"]["pos"].split())
+        meta = geo.get("metaDataProperty", {}).get("GeocoderMetaData", {})
         env = geo.get("boundedBy", {}).get("Envelope", {})
-        out = {"lat": lat, "lon": lon, "address": full_address}
+        out = {
+            "lat": lat,
+            "lon": lon,
+            "address": full_address,
+            "region": REGION,
+            "city": CITY,
+            "resolved": meta.get("text"),
+        }
         if env:
             lc = env.get("lowerCorner")
             uc = env.get("upperCorner")
@@ -128,13 +145,93 @@ def geocode_address(api_key: str, full_address: str) -> dict | None:
         return None
 
 
-def try_geocode_house(district: str, street: str, house: str, api_key: str) -> dict | None:
-    variants = [
-        f"Саратов, {district} район, ул. {street}, д. {house}",
-        f"Саратов, {district} район, {street}, д. {house}",
-        f"Саратов, ул. {street}, д. {house}",
+_SETTLEMENT_STREET_RE = re.compile(
+    r"^(д|с|п|ст)\.?\s+(.+?)\s+ул\.\s+(.+)$",
+    re.IGNORECASE,
+)
+_SETTLEMENT_LABEL = {
+    "д": "деревня",
+    "с": "село",
+    "п": "посёлок",
+    "ст": "станция",
+}
+
+
+def parse_settlement_street(street_cell: str) -> tuple[str, str, str] | None:
+    """
+    «д Расловка ул. Песчанная» → (деревня, Расловка, Песчанная).
+    Для посёлков/сёл/деревьев вне черты Саратова.
+    """
+    m = _SETTLEMENT_STREET_RE.match(street_cell.strip())
+    if not m:
+        return None
+    kind, place, street_name = m.group(1).lower(), m.group(2).strip(), m.group(3).strip()
+    return _SETTLEMENT_LABEL.get(kind, kind), place, street_name
+
+
+def _street_in_query(street: str) -> str:
+    """Не добавляем «ул.» для взвозов, проездов и т.п."""
+    low = street.lower()
+    if any(
+        m in low
+        for m in (
+            "взвоз",
+            "проезд",
+            "переулок",
+            "тупик",
+            "набережная",
+            "площадь",
+            "шоссе",
+            "бульвар",
+            "аллея",
+            "тракт",
+        )
+    ):
+        return street
+    return f"ул. {street}"
+
+
+def city_address_variants(district: str, street: str, house: str) -> list[str]:
+    """Варианты запроса для адресов в черте г. Саратова (всегда с областью и городом)."""
+    street = normalize_street_cell(street)
+    street_q = _street_in_query(street)
+    d = district.strip()
+    h = house.strip()
+    return [
+        f"Россия, {REGION}, {CITY}, {d} район, {street_q}, д. {h}",
+        f"{REGION}, {CITY}, {d} район, {street_q}, д. {h}",
+        f"{REGION}, {CITY}, {d} район, {street}, д. {h}",
+        f"{REGION}, г. {CITY}, {d} район, {street_q}, д. {h}",
+        f"{CITY}, {d} район, {street_q}, д. {h}",
     ]
+
+
+def settlement_address_variants(
+    district: str, stype: str, place: str, street_name: str, house: str
+) -> list[str]:
+    h = house.strip()
+    d = district.strip()
+    return [
+        f"Россия, {REGION}, {d} район, {stype} {place}, ул. {street_name}, {h}",
+        f"{REGION}, {d} район, {stype} {place}, ул. {street_name}, {h}",
+        f"{REGION}, {stype} {place}, ул. {street_name}, {h}",
+        f"{stype} {place}, ул. {street_name}, {h}, {REGION}",
+    ]
+
+
+def try_geocode_house(district: str, street: str, house: str, api_key: str) -> dict | None:
+    street = normalize_street_cell(street)
+    variants: list[str] = []
+    settlement = parse_settlement_street(street)
+    if settlement:
+        stype, place, street_name = settlement
+        variants.extend(settlement_address_variants(district, stype, place, street_name, house))
+    variants.extend(city_address_variants(district, street, house))
+    seen: set[str] = set()
     for addr in variants:
+        if addr in seen:
+            continue
+        seen.add(addr)
         res = geocode_address(api_key, addr)
         if res:
             return res
@@ -184,7 +281,7 @@ def process_csv_rows(api_key: str, cache: dict) -> dict[str, list[dict]]:
 
             if not street and houses_raw:
                 # Попытка: вся строка номеров как хвост адреса (один запрос на сегмент)
-                addr = f"Саратов, {district} район, {houses_raw[:120]}"
+                addr = f"{REGION}, {CITY}, {district} район, {houses_raw[:120]}"
                 ck = cache.get("addr", {}).get(addr)
                 if ck is not None:
                     res = ck
@@ -201,7 +298,7 @@ def process_csv_rows(api_key: str, cache: dict) -> dict[str, list[dict]]:
                 continue
 
             for house in iter_house_tokens(houses_raw):
-                addr_try = f"Саратов, {district} район, ул. {street}, д. {house}"
+                addr_try = f"{REGION}, {CITY}, {district} район, ул. {street}, д. {house}"
                 ck = cache.get("addr", {}).get(addr_try)
                 if ck is not None:
                     res = ck

@@ -7,6 +7,15 @@ load_dotenv()
 
 API_KEY = os.getenv("YANDEX_API_KEY")
 BASE_URL = "https://geocode-maps.yandex.ru/1.x/"
+REGION = "Саратовская область"
+SARATOV_CENTER = "51.53, 46.00"
+SEARCH_RADIUS = "1.5, 1.5"
+
+
+def _geocode_query(city: str, district: str | None, street: str) -> str:
+    if district:
+        return f"{REGION}, {city}, {district} район, {street}"
+    return f"{REGION}, {city}, {street}"
 
 
 def extract_house_number_from_address(address: str) -> str | None:
@@ -64,16 +73,15 @@ def get_houses_for_street(street: str, district: str | None = None, city: str = 
     if not API_KEY:
         raise RuntimeError("YANDEX_API_KEY не найден в окружении (.env)")
 
-    if district:
-        query = f"{city}, {district} район, {street}"
-    else:
-        query = f"{street}, {city}"
+    query = _geocode_query(city, district, street)
 
     params = {
         "apikey": API_KEY,
         "geocode": query,
         "format": "json",
         "results": max_results,
+        "ll": SARATOV_CENTER,
+        "spn": SEARCH_RADIUS,
     }
 
     response = requests.get(BASE_URL, params=params)
@@ -121,6 +129,8 @@ def get_points_for_street(street: str, district: str | None = None, city: str = 
             "geocode": query,
             "format": "json",
             "results": max_results,
+            "ll": SARATOV_CENTER,
+            "spn": SEARCH_RADIUS,
         }
         response = requests.get(BASE_URL, params=params)
         response.raise_for_status()
@@ -130,13 +140,11 @@ def get_points_for_street(street: str, district: str | None = None, city: str = 
     # 1) Пробуем с районом
     members: list[dict] = []
     if district:
-        query = f"{city}, {district} район, {street}"
-        members = _request(query)
+        members = _request(_geocode_query(city, district, street))
 
     # 2) Если ничего не нашли или район не задан — пробуем без района
     if not members:
-        query = f"{street}, {city}"
-        members = _request(query)
+        members = _request(_geocode_query(city, None, street))
 
     points: list[dict] = []
     for item in members:

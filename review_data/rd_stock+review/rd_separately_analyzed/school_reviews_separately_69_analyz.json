@@ -1,0 +1,302 @@
+[
+  {
+    "review_id": "3494",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos",
+      "еда": "pos"
+    }
+  },
+  {
+    "review_id": "3495",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {
+      "администрация": "pos",
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "3496",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {
+      "еда": "pos",
+      "администрация": "pos",
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "3497",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos",
+      "буллинг": "pos",
+      "администрация": "pos"
+    }
+  },
+  {
+    "review_id": "3498",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {
+      "ремонт": "pos"
+    }
+  },
+  {
+    "review_id": "3499",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos",
+      "еда": "pos"
+    }
+  },
+  {
+    "review_id": "3500",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {
+      "еда": "pos",
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "3501",
+    "school_id": "69",
+    "sentiment": "neg",
+    "topics": {
+      "учителя": "pos",
+      "администрация": "neg",
+      "еда": "neg",
+      "ремонт": "neg"
+    }
+  },
+  {
+    "review_id": "3502",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {
+      "еда": "pos",
+      "инфраструктура": "pos"
+    }
+  },
+  {
+    "review_id": "3503",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "3504",
+    "school_id": "69",
+    "sentiment": "neg",
+    "topics": {
+      "администрация": "neg"
+    }
+  },
+  {
+    "review_id": "3505",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "3506",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "3507",
+    "school_id": "69",
+    "sentiment": "neg",
+    "topics": {
+      "учителя": "neg",
+      "администрация": "neg"
+    }
+  },
+  {
+    "review_id": "3508",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "3509",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "3510",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {
+      "ремонт": "pos",
+      "инфраструктура": "pos"
+    }
+  },
+  {
+    "review_id": "3511",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "3512",
+    "school_id": "69",
+    "sentiment": "neg",
+    "topics": {
+      "администрация": "neg"
+    }
+  },
+  {
+    "review_id": "3513",
+    "school_id": "69",
+    "sentiment": "neg",
+    "topics": {}
+  },
+  {
+    "review_id": "3514",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "3515",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "3516",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {
+      "уборка": "pos"
+    }
+  },
+  {
+    "review_id": "3517",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "3518",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "3519",
+    "school_id": "69",
+    "sentiment": "neutral",
+    "topics": {}
+  },
+  {
+    "review_id": "3520",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "3521",
+    "school_id": "69",
+    "sentiment": "neg",
+    "topics": {
+      "учителя": "neg"
+    }
+  },
+  {
+    "review_id": "3522",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "3523",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "3524",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "3525",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "3526",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "3527",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "3528",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "3529",
+    "school_id": "69",
+    "sentiment": "neutral",
+    "topics": {}
+  },
+  {
+    "review_id": "3530",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "3531",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "6447",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "6448",
+    "school_id": "69",
+    "sentiment": "pos",
+    "topics": {}
+  }
+]

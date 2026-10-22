@@ -32,7 +32,14 @@
         51.509919
       ]
     },
-    "link_gosuslugi": null
+    "link_gosuslugi": null,
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:01:55.437037+00:00"
   },
   {
     "id": 10,
@@ -73,12 +80,51 @@
       "Социально-экономическое",
       "Технологическое"
     ],
-    "EGE": "71 - Средний балл на ЕГЭ в 2025 году",
+    "EGE": "69 - Средний балл на ЕГЭ в 2026 году",
     "VUZ": "100% - Выпускников поступивших в ВУЗы в 2025 году",
     "Olympiads": [
-      "15 - Призеров заключительного этапа Всероссийской олимпиады за 3 года"
+      "3 - Призеров заключительного этапа Всероссийской олимпиады за 3 года",
+      "175 - Победителей и призеров муниципального этапа Всероссийской олимпиады школьников за 3 года"
     ],
-    "infrastructure": "https://gim2-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://gim2-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "10 - выпускников 2026 года награждены медалями \"За особые успехи в учении\" 1 и 2 степени"
+    ],
+    "results_kpi_raw": [
+      "3 - Призеров заключительного этапа Всероссийской олимпиады за 3 года",
+      "10 - выпускников 2026 года награждены медалями \"За особые успехи в учении\" 1 и 2 степени",
+      "69 - Средний балл на ЕГЭ в 2026 году",
+      "100% - Выпускников поступивших в ВУЗы в 2025 году",
+      "175 - Победителей и призеров муниципального этапа Всероссийской олимпиады школьников за 3 года"
+    ],
+    "EGE_prev": "71 - Средний балл на ЕГЭ в 2025 году",
+    "EGE_history": [
+      "71 - Средний балл на ЕГЭ в 2025 году"
+    ],
+    "Olympiads_prev": [
+      "3 - Призеров заключительного этапа Всероссийской олимпиады за 3 года"
+    ],
+    "Olympiads_history": [
+      [
+        "15 - Призеров заключительного этапа Всероссийской олимпиады за 3 года"
+      ],
+      [
+        "3 - Призеров заключительного этапа Всероссийской олимпиады за 3 года"
+      ]
+    ],
+    "results_parsed_at": "2026-10-18T14:02:33.322106+00:00",
+    "other_results": [],
+    "EGE_2026": "69 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "3 - Призеров заключительного этапа Всероссийской олимпиады за 3 года",
+      "175 - Победителей и призеров муниципального этапа Всероссийской олимпиады школьников за 3 года"
+    ],
+    "Medals_2026": [
+      "10 - выпускников 2026 года награждены медалями \"За особые успехи в учении\" 1 и 2 степени"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026
   },
   {
     "id": 100,
@@ -113,7 +159,14 @@
         51.586386
       ]
     },
-    "link_gosuslugi": null
+    "link_gosuslugi": null,
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:02:33.339828+00:00"
   },
   {
     "id": 101,
@@ -153,9 +206,46 @@
     "VUZ": "83% - Выпускников поступивших в ВУЗы в 2025 году",
     "Olympiads": [
       "11 - Победителей школьного этапа Всероссийской олимпиады",
+      "5 - Победителей Межрегиональной олимпиады по татарскому языку и литературе",
+      "8 - Победителей Областной олимпиады по татарскому языку и литературе",
+      "10 - Призеров Областной олимпиады по татарскому языку и литературе",
+      "5 - Участников Международной олимпиады по татарскому языку литературе"
+    ],
+    "infrastructure": "https://ntg-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [
+      "11 - Победителей школьного этапа Всероссийской олимпиады",
+      "60,1 - Средний балл на ЕГЭ в 2025",
+      "83% - Выпускников поступивших в ВУЗы в 2025 году",
+      "5 - Победителей Межрегиональной олимпиады по татарскому языку и литературе",
+      "8 - Победителей Областной олимпиады по татарскому языку и литературе",
+      "10 - Призеров Областной олимпиады по татарскому языку и литературе",
+      "5 - Участников Международной олимпиады по татарскому языку литературе"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "11 - Победителей школьного этапа Всероссийской олимпиады",
+      "5 - Победителей Межрегиональной олимпиады по татарскому языку и литературе",
+      "8 - Победителей Областной олимпиады по татарскому языку и литературе",
+      "10 - Призеров Областной олимпиады по татарскому языку и литературе",
+      "5 - Участников Международной олимпиады по татарскому языку литературе"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "Olympiads_prev": [
+      "11 - Победителей школьного этапа Всероссийской олимпиады",
       "5 - Победителей Межрегиональной олимпиады по татарскому языку и литературе"
     ],
-    "infrastructure": "https://ntg-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "Olympiads_history": [
+      [
+        "11 - Победителей школьного этапа Всероссийской олимпиады",
+        "5 - Победителей Межрегиональной олимпиады по татарскому языку и литературе"
+      ]
+    ],
+    "results_parsed_at": "2026-10-18T14:03:12.456518+00:00"
   },
   {
     "id": 102,
@@ -192,7 +282,24 @@
     },
     "link_gosuslugi": "https://gim87-sar.gosuslugi.ru/",
     "EGE": "69,73 - Средний балл на ЕГЭ в 2025 году",
-    "VUZ": "98,4 % - Выпускников поступивших в ВУЗы в 2025 году"
+    "VUZ": "98,4 % - Выпускников поступивших в ВУЗы в 2025 году",
+    "Olympiads": [],
+    "Medals": [
+      "16 - Выпускников с золотой и серебряной медалью за 2025 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "16 - Выпускников с золотой и серебряной медалью за 2025 год",
+      "69,73 - Средний балл на ЕГЭ в 2025 году",
+      "98,4 % - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:04:16.175039+00:00"
   },
   {
     "id": 103,
@@ -234,12 +341,50 @@
       "Обществознание",
       "Информатика"
     ],
-    "EGE": "67 - Средний балл на ЕГЭ в 2025 году",
-    "VUZ": "100% - Выпускников поступивших в ВУЗы в 2025 году",
+    "EGE": "71 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "89% - Выпускников поступивших в ВУЗы в 2026 году",
     "Olympiads": [
+      "20 - Призеров муниципального и регионального этапов Всероссийской олимпиады за 2025 года"
+    ],
+    "infrastructure": "https://gim58-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "4 - Выпускников с золотой медалью за 2026 год",
+      "1 - Выпускников с серебряной медалью за 2026 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "20 - Призеров муниципального и регионального этапов Всероссийской олимпиады за 2025 года",
+      "4 - Выпускников с золотой медалью за 2026 год",
+      "1 - Выпускников с серебряной медалью за 2026 год",
+      "71 - Средний балл на ЕГЭ в 2026 году",
+      "89% - Выпускников поступивших в ВУЗы в 2026 году"
+    ],
+    "EGE_2026": "71 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "89% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": null,
+    "Medals_2026": [
+      "4 - Выпускников с золотой медалью за 2026 год",
+      "1 - Выпускников с серебряной медалью за 2026 год"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "EGE_prev": "67 - Средний балл на ЕГЭ в 2025 году",
+    "EGE_history": [
+      "67 - Средний балл на ЕГЭ в 2025 году"
+    ],
+    "VUZ_prev": "100% - Выпускников поступивших в ВУЗы в 2025 году",
+    "VUZ_history": [
+      "100% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "Olympiads_prev": [
       "7 - Призеров муниципального и регионального этапов Всероссийской олимпиады за 2025 года"
     ],
-    "infrastructure": "https://gim58-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "Olympiads_history": [
+      [
+        "7 - Призеров муниципального и регионального этапов Всероссийской олимпиады за 2025 года"
+      ]
+    ],
+    "results_parsed_at": "2026-10-18T14:06:23.290245+00:00"
   },
   {
     "id": 104,
@@ -275,7 +420,38 @@
       ]
     },
     "link_gosuslugi": "https://sh-80-lastochkino-saratov-r64.gosweb.gosuslugi.ru/",
-    "infrastructure": "https://sh-80-lastochkino-saratov-r64.gosweb.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://sh-80-lastochkino-saratov-r64.gosweb.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "В 2025 наши выпускники поступили в: - ФГБОУ ВО \"СНИГУ им.Н.Г. Чернышевского\", ФГБОУ ВО \"СГТУ им.Ю.А. Гагарина\", ФГБОУ ВО \"Вавиловский университет\"; ФГБОУ ВО \"СГЮА\"; ПИУ \"РАНХиГС им. П.А. Столыпина\"; Университет ФСИН России г.Санкт-Петербург; ВУНЦ ВВС \"ВВА\" филиал в г.Сызрани",
+      "Телефон - 88452738230",
+      "8 - учителей высшей категорией",
+      "9 - учителей первой категории",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_kpi_raw": [
+      "В 2025 наши выпускники поступили в: - ФГБОУ ВО \"СНИГУ им.Н.Г. Чернышевского\", ФГБОУ ВО \"СГТУ им.Ю.А. Гагарина\", ФГБОУ ВО \"Вавиловский университет\"; ФГБОУ ВО \"СГЮА\"; ПИУ \"РАНХиГС им. П.А. Столыпина\"; Университет ФСИН России г.Санкт-Петербург; ВУНЦ ВВС \"ВВА\" филиал в г.Сызрани",
+      "Телефон - 88452738230",
+      "8 - учителей высшей категорией",
+      "9 - учителей первой категории",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "Телефон - 88452738230",
+      "8 - учителей высшей категорией",
+      "9 - учителей первой категории",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:07:04.400221+00:00"
   },
   {
     "id": 105,
@@ -320,7 +496,26 @@
     "Olympiads": [
       "641 - Победителей и призеров Всероссийской олимпиады за 3 года (школьный этап)"
     ],
-    "infrastructure": "https://school66vavilov.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://school66vavilov.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "5 - Выпускников с золотой медалью за 2021 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "641 - Победителей и призеров Всероссийской олимпиады за 3 года (школьный этап)",
+      "5 - Выпускников с золотой медалью за 2021 год",
+      "41 - Средний балл на ЕГЭ в 2021 году",
+      "50,6% - Выпускников поступивших в ВУЗы в 2021 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "641 - Победителей и призеров Всероссийской олимпиады за 3 года (школьный этап)"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:07:28.854323+00:00"
   },
   {
     "id": 106,
@@ -357,11 +552,35 @@
     },
     "link_gosuslugi": "https://lic56-sar.gosuslugi.ru/",
     "EGE": "74 - Средний балл на ЕГЭ в 2024 - 2025 учебном году",
-    "VUZ": "100% - Выпускников поступивших в ВУЗы в 2025 году",
+    "VUZ": "100% - Выпускников поступивших в ВУЗы в 2026 году",
     "Olympiads": [
       "11 - Призеров регионального этапа Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://lic56-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://lic56-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "6 - Выпускников с золотой медалью в 2026 году"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "11 - Призеров регионального этапа Всероссийской олимпиады за 3 года",
+      "6 - Выпускников с золотой медалью в 2026 году",
+      "100% - Выпускников поступивших в ВУЗы в 2026 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": "100% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "11 - Призеров регионального этапа Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": [
+      "6 - Выпускников с золотой медалью в 2026 году"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "VUZ_prev": "100% - Выпускников поступивших в ВУЗы в 2025 году",
+    "VUZ_history": [
+      "100% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "results_parsed_at": "2026-10-18T14:08:01.271641+00:00"
   },
   {
     "id": 107,
@@ -398,14 +617,45 @@
     },
     "link_gosuslugi": "https://sch46-saratov.gosuslugi.ru/",
     "specialization": [
-      "Универсальный профиль"
+      "Универсальный",
+      "Социально-экономический",
+      "Технологический"
     ],
-    "EGE": "60,4 - Средний балл на ЕГЭ в 2024 году",
-    "VUZ": "72% - Выпускников поступивших на бюджет в ВУЗы в 2024 году",
+    "EGE": "60,4 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "72% - Выпускников поступивших на бюджет в ВУЗы в 2026 году",
     "Olympiads": [
       "13 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://sch46-saratov.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://sch46-saratov.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "2 - Выпускников с золотой медалью за 2026 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "13 - Призеров Всероссийской олимпиады за 3 года",
+      "2 - Выпускников с золотой медалью за 2026 год",
+      "60,4 - Средний балл на ЕГЭ в 2026 году",
+      "72% - Выпускников поступивших на бюджет в ВУЗы в 2026 году"
+    ],
+    "EGE_2026": "60,4 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "72% - Выпускников поступивших на бюджет в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "13 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": [
+      "2 - Выпускников с золотой медалью за 2026 год"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "EGE_prev": "60,4 - Средний балл на ЕГЭ в 2024 году",
+    "EGE_history": [
+      "60,4 - Средний балл на ЕГЭ в 2024 году"
+    ],
+    "VUZ_prev": "72% - Выпускников поступивших на бюджет в ВУЗы в 2024 году",
+    "VUZ_history": [
+      "72% - Выпускников поступивших на бюджет в ВУЗы в 2024 году"
+    ],
+    "results_parsed_at": "2026-10-18T14:09:05.550874+00:00"
   },
   {
     "id": 108,
@@ -447,11 +697,38 @@
       "Социально-экономический профиль",
       "Психолого-педагогический профиль"
     ],
-    "VUZ": "97, 4% - Выпускников поступивших в ВУЗы в 2025 году",
+    "VUZ": "99% - Выпускников поступивших в ВУЗы в 2026 году",
     "Olympiads": [
       "1 - Призер заключительного этапа Всероссийской олимпиады в 2025 году"
     ],
-    "infrastructure": "https://gel-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://gel-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "11 - Выпускников с золотой медалью за 2026 год"
+    ],
+    "other_results": [
+      "1 - Кандидат наук"
+    ],
+    "results_kpi_raw": [
+      "1 - Призер заключительного этапа Всероссийской олимпиады в 2025 году",
+      "11 - Выпускников с золотой медалью за 2026 год",
+      "99% - Выпускников поступивших в ВУЗы в 2026 году",
+      "1 - Кандидат наук"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": "99% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": null,
+    "Medals_2026": [
+      "11 - Выпускников с золотой медалью за 2026 год"
+    ],
+    "other_results_2026": [
+      "1 - Кандидат наук"
+    ],
+    "results_target_year": 2026,
+    "VUZ_prev": "97, 4% - Выпускников поступивших в ВУЗы в 2025 году",
+    "VUZ_history": [
+      "97, 4% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "results_parsed_at": "2026-10-18T14:09:31.555397+00:00"
   },
   {
     "id": 109,
@@ -491,11 +768,53 @@
       "Технологический профиль",
       "Естественно-научный профиль"
     ],
-    "VUZ": "100% - Выпускников поступивших в ВУЗы в 2025 году",
+    "VUZ": "100% - Выпускников поступивших в ВУЗы в 2026 году",
     "Olympiads": [
+      "9 - Победителей и призеров в заключительного этапа Всероссийской олимпиады за 3 года"
+    ],
+    "infrastructure": "https://ftl-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE": "86 - Средний балл на ЕГЭ по химии в 2026 году",
+    "Medals": [
+      "17 - Выпускников с медалью за 2026 год"
+    ],
+    "other_results": [
+      "8 - Количество стобалльников в 2026"
+    ],
+    "results_kpi_raw": [
+      "9 - Победителей и призеров в заключительного этапа Всероссийской олимпиады за 3 года",
+      "17 - Выпускников с медалью за 2026 год",
+      "8 - Количество стобалльников в 2026",
+      "100% - Выпускников поступивших в ВУЗы в 2026 году",
+      "83 - Средний балл на ЕГЭ по информатике в 2026 году",
+      "85 - Средний балл на ЕГЭ по профильной математике в 2026 году",
+      "77 - Средний балл на ЕГЭ по физике в 2026 году",
+      "86 - Средний балл на ЕГЭ по химии в 2026 году"
+    ],
+    "EGE_2026": "86 - Средний балл на ЕГЭ по химии в 2026 году",
+    "VUZ_2026": "100% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "9 - Победителей и призеров в заключительного этапа Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": [
+      "17 - Выпускников с медалью за 2026 год"
+    ],
+    "other_results_2026": [
+      "8 - Количество стобалльников в 2026"
+    ],
+    "results_target_year": 2026,
+    "VUZ_prev": "100% - Выпускников поступивших в ВУЗы в 2025 году",
+    "VUZ_history": [
+      "100% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "Olympiads_prev": [
       "5 - Призеров заключительного этапа Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://ftl-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "Olympiads_history": [
+      [
+        "5 - Призеров заключительного этапа Всероссийской олимпиады за 3 года"
+      ]
+    ],
+    "results_parsed_at": "2026-10-18T14:10:02.484262+00:00"
   },
   {
     "id": 11,
@@ -531,7 +850,18 @@
       ]
     },
     "link_gosuslugi": "https://shk14-sar.gosuslugi.ru/",
-    "infrastructure": "https://shk14-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk14-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:10:28.542712+00:00"
   },
   {
     "id": 110,
@@ -575,7 +905,23 @@
     "Olympiads": [
       "115 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://shk16-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk16-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [
+      "115 - Призеров Всероссийской олимпиады за 3 года",
+      "47,8 - Средний балл на ЕГЭ в 2021 году",
+      "63% - Выпускников поступивших в ВУЗы в 2021-2022 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "115 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:10:59.759632+00:00"
   },
   {
     "id": 111,
@@ -613,12 +959,50 @@
     "link_gosuslugi": "https://lgn-sar.gosuslugi.ru/",
     "specialization": [
       "Гуманитарный профиль",
-      "Естественно-научный профиль"
+      "Естественно-научный профиль",
+      "Технологический профиль"
     ],
-    "EGE": "83 % - Средний балл ЕГЭ английский язык - 2023/2024",
+    "EGE": "85 - Средний балл ЕГЭ информатика - 2025/2026",
     "Olympiads": [
+      "25 - Призеров Всероссийской олимпиады - 2025-2026"
+    ],
+    "Medals": [
+      "9 - МЕДАЛИСТОВ - 2025/2026"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "25 - Призеров Всероссийской олимпиады - 2025-2026",
+      "9 - МЕДАЛИСТОВ - 2025/2026",
+      "90 - Средний балл ЕГЭ русский язык - 2025/2026",
+      "90 - Средний балл ЕГЭ английский язык - 2025/2026",
+      "90 - Средний балл ЕГЭ история - 2025/2026",
+      "90 - Средний балл ЕГЭ химия - 2025/2026",
+      "85 - Средний балл ЕГЭ профильная математика - 2025/2026",
+      "85 - Средний балл ЕГЭ информатика - 2025/2026"
+    ],
+    "EGE_2026": "85 - Средний балл ЕГЭ информатика - 2025/2026",
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "25 - Призеров Всероссийской олимпиады - 2025-2026"
+    ],
+    "Medals_2026": [
+      "9 - МЕДАЛИСТОВ - 2025/2026"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "EGE_prev": "83 % - Средний балл ЕГЭ английский язык - 2023/2024",
+    "EGE_history": [
+      "83 % - Средний балл ЕГЭ английский язык - 2023/2024"
+    ],
+    "Olympiads_prev": [
       "25 - Призеров Всероссийской олимпиады - 2023-2024"
-    ]
+    ],
+    "Olympiads_history": [
+      [
+        "25 - Призеров Всероссийской олимпиады - 2023-2024"
+      ]
+    ],
+    "results_parsed_at": "2026-10-18T14:11:44.896868+00:00"
   },
   {
     "id": 115,
@@ -658,11 +1042,53 @@
       "Технологический профиль",
       "Естественно-научный профиль"
     ],
-    "VUZ": "100% - Выпускников поступивших в ВУЗы в 2025 году",
+    "VUZ": "100% - Выпускников поступивших в ВУЗы в 2026 году",
     "Olympiads": [
+      "9 - Победителей и призеров в заключительного этапа Всероссийской олимпиады за 3 года"
+    ],
+    "infrastructure": "https://ftl-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE": "86 - Средний балл на ЕГЭ по химии в 2026 году",
+    "Medals": [
+      "17 - Выпускников с медалью за 2026 год"
+    ],
+    "other_results": [
+      "8 - Количество стобалльников в 2026"
+    ],
+    "results_kpi_raw": [
+      "9 - Победителей и призеров в заключительного этапа Всероссийской олимпиады за 3 года",
+      "17 - Выпускников с медалью за 2026 год",
+      "8 - Количество стобалльников в 2026",
+      "100% - Выпускников поступивших в ВУЗы в 2026 году",
+      "83 - Средний балл на ЕГЭ по информатике в 2026 году",
+      "85 - Средний балл на ЕГЭ по профильной математике в 2026 году",
+      "77 - Средний балл на ЕГЭ по физике в 2026 году",
+      "86 - Средний балл на ЕГЭ по химии в 2026 году"
+    ],
+    "EGE_2026": "86 - Средний балл на ЕГЭ по химии в 2026 году",
+    "VUZ_2026": "100% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "9 - Победителей и призеров в заключительного этапа Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": [
+      "17 - Выпускников с медалью за 2026 год"
+    ],
+    "other_results_2026": [
+      "8 - Количество стобалльников в 2026"
+    ],
+    "results_target_year": 2026,
+    "VUZ_prev": "100% - Выпускников поступивших в ВУЗы в 2025 году",
+    "VUZ_history": [
+      "100% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "Olympiads_prev": [
       "5 - Призеров заключительного этапа Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://ftl-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "Olympiads_history": [
+      [
+        "5 - Призеров заключительного этапа Всероссийской олимпиады за 3 года"
+      ]
+    ],
+    "results_parsed_at": "2026-10-18T14:11:57.174149+00:00"
   },
   {
     "id": 117,
@@ -697,7 +1123,18 @@
         51.535893
       ]
     },
-    "link_gosuslugi": "https://shk10-sar.gosuslugi.ru/"
+    "link_gosuslugi": "https://shk10-sar.gosuslugi.ru/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:12:44.205838+00:00"
   },
   {
     "id": 12,
@@ -737,7 +1174,27 @@
     "Olympiads": [
       "1 - Призеров Регионального этапа Всероссийской олимпиады школьников за 3 года"
     ],
-    "infrastructure": "https://shk94-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk94-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "1 - Выпускник с золотой медалью за 2024 год",
+      "2 - Выпускника с серебряной медалью за 2024 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "1 - Призеров Регионального этапа Всероссийской олимпиады школьников за 3 года",
+      "1 - Выпускник с золотой медалью за 2024 год",
+      "96% - Выпускников поступивших в ВУЗы в 2024 году",
+      "2 - Выпускника с серебряной медалью за 2024 год"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "1 - Призеров Регионального этапа Всероссийской олимпиады школьников за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:13:30.036567+00:00"
   },
   {
     "id": 122,
@@ -773,12 +1230,49 @@
       ]
     },
     "link_gosuslugi": "https://raskovo.gosuslugi.ru/",
-    "EGE": "67,8 - Средний балл на ЕГЭ в 2021 году",
-    "VUZ": "70% - Выпускников поступивших в ВУЗы в 2021 году",
+    "EGE": "67,8 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "100% - Выпускников поступивших в ВУЗы в 2026 году",
     "Olympiads": [
+      "3 - Призера Муниципального этапа Всероссийской олимпиады за 3 года"
+    ],
+    "infrastructure": "https://raskovo.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "28,5 % - Выпускников с золотой медалью за 2026 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "3 - Призера Муниципального этапа Всероссийской олимпиады за 3 года",
+      "28,5 % - Выпускников с золотой медалью за 2026 год",
+      "67,8 - Средний балл на ЕГЭ в 2026 году",
+      "100% - Выпускников поступивших в ВУЗы в 2026 году"
+    ],
+    "EGE_2026": "67,8 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "100% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "3 - Призера Муниципального этапа Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": [
+      "28,5 % - Выпускников с золотой медалью за 2026 год"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "EGE_prev": "67,8 - Средний балл на ЕГЭ в 2021 году",
+    "EGE_history": [
+      "67,8 - Средний балл на ЕГЭ в 2021 году"
+    ],
+    "VUZ_prev": "70% - Выпускников поступивших в ВУЗы в 2021 году",
+    "VUZ_history": [
+      "70% - Выпускников поступивших в ВУЗы в 2021 году"
+    ],
+    "Olympiads_prev": [
       "10 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://raskovo.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "Olympiads_history": [
+      [
+        "10 - Призеров Всероссийской олимпиады за 3 года"
+      ]
+    ],
+    "results_parsed_at": "2026-10-18T14:13:59.568927+00:00"
   },
   {
     "id": 124,
@@ -814,9 +1308,36 @@
       ]
     },
     "link_gosuslugi": "https://shk5-sar.gosuslugi.ru/",
-    "EGE": "60 - Средний балл на ЕГЭ в 2025 году",
-    "VUZ": "96% - Выпускников поступивших в ВУЗы в 2025 году",
-    "infrastructure": "https://shk5-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "EGE": "60 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "97% - Выпускников поступивших в ВУЗы в 2026 году",
+    "infrastructure": "https://shk5-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [
+      "16 - Выпускников с медалью I и II степенью за 2026 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "16 - Выпускников с медалью I и II степенью за 2026 год",
+      "60 - Средний балл на ЕГЭ в 2026 году",
+      "97% - Выпускников поступивших в ВУЗы в 2026 году"
+    ],
+    "EGE_2026": "60 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "97% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": null,
+    "Medals_2026": [
+      "16 - Выпускников с медалью I и II степенью за 2026 год"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "EGE_prev": "60 - Средний балл на ЕГЭ в 2025 году",
+    "EGE_history": [
+      "60 - Средний балл на ЕГЭ в 2025 году"
+    ],
+    "VUZ_prev": "96% - Выпускников поступивших в ВУЗы в 2025 году",
+    "VUZ_history": [
+      "96% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "results_parsed_at": "2026-10-18T14:14:45.584717+00:00"
   },
   {
     "id": 13,
@@ -857,7 +1378,26 @@
     "Olympiads": [
       "12 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://shk97-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk97-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "8 - Выпускников с золотой и серебряной медалями за 2024 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "12 - Призеров Всероссийской олимпиады за 3 года",
+      "8 - Выпускников с золотой и серебряной медалями за 2024 год",
+      "86 - максимальное количество баллов по ЕГЭ в 2024 году",
+      "79% - Выпускников поступивших в ВУЗы в 2024 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "12 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:15:26.024642+00:00"
   },
   {
     "id": 130,
@@ -896,7 +1436,27 @@
     "specialization": [
       "Универсальный профиль"
     ],
-    "infrastructure": "https://kleshevka.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://kleshevka.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [
+      "3 - Выпускников с серебряной медалью",
+      "5 - Выпускников с золотой медалью"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "3 - Выпускников с серебряной медалью",
+      "5 - Выпускников с золотой медалью"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": [
+      "3 - Выпускников с серебряной медалью",
+      "5 - Выпускников с золотой медалью"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:15:52.395311+00:00"
   },
   {
     "id": 14,
@@ -936,8 +1496,38 @@
       "Естественно-научное",
       "Социально-экономическое"
     ],
-    "EGE": "63,2 - Средний балл на ЕГЭ в 2025 году",
-    "infrastructure": "https://mourpkg.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "EGE": "63,2 - Средний балл на ЕГЭ в 2026 году",
+    "infrastructure": "https://mourpkg.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [
+      "7 - Выпускников с медалью \"За особые успехи в учении\" I и II степени в 2025/2026 году"
+    ],
+    "other_results": [
+      "15 - Призеров и победителей муниципального и регионального этапа ВсОШ в 2025-2026 году",
+      "100% - выпускников в 2026 г. поступили в выбранные ими высшие и средние специальные учебные заведения"
+    ],
+    "results_kpi_raw": [
+      "15 - Призеров и победителей муниципального и регионального этапа ВсОШ в 2025-2026 году",
+      "7 - Выпускников с медалью \"За особые успехи в учении\" I и II степени в 2025/2026 году",
+      "63,2 - Средний балл на ЕГЭ в 2026 году",
+      "100% - выпускников в 2026 г. поступили в выбранные ими высшие и средние специальные учебные заведения"
+    ],
+    "EGE_2026": "63,2 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": [
+      "7 - Выпускников с медалью \"За особые успехи в учении\" I и II степени в 2025/2026 году"
+    ],
+    "other_results_2026": [
+      "15 - Призеров и победителей муниципального и регионального этапа ВсОШ в 2025-2026 году",
+      "100% - выпускников в 2026 г. поступили в выбранные ими высшие и средние специальные учебные заведения"
+    ],
+    "results_target_year": 2026,
+    "EGE_prev": "63,2 - Средний балл на ЕГЭ в 2025 году",
+    "EGE_history": [
+      "63,2 - Средний балл на ЕГЭ в 2025 году"
+    ],
+    "results_parsed_at": "2026-10-18T14:16:16.684283+00:00"
   },
   {
     "id": 15,
@@ -977,7 +1567,29 @@
     "Olympiads": [
       "10 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://school23saratov.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://school23saratov.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "specialization": [
+      "Социально-экономический профиль",
+      "Технологический профиль"
+    ],
+    "Medals": [
+      "6 - Выпускников с золотой (серебряной) медалью за 2025 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "10 - Призеров Всероссийской олимпиады за 3 года",
+      "6 - Выпускников с золотой (серебряной) медалью за 2025 год",
+      "87,5 % - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "10 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:17:11.252307+00:00"
   },
   {
     "id": 153,
@@ -1021,7 +1633,26 @@
     "Olympiads": [
       "12 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://shk7-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk7-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "2 - Выпускников с золотой медалью за 2021 -2022 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "12 - Призеров Всероссийской олимпиады за 3 года",
+      "2 - Выпускников с золотой медалью за 2021 -2022 год",
+      "43 - Средний балл на ЕГЭ в 2021 году",
+      "68% - Выпускников поступивших в ВУЗы в 2022 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "12 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:17:53.673438+00:00"
   },
   {
     "id": 154,
@@ -1056,7 +1687,33 @@
         51.604497
       ]
     },
-    "link_gosuslugi": "https://solaris.gosuslugi.ru/"
+    "link_gosuslugi": "https://solaris.gosuslugi.ru/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "4 391 - обучающийся",
+      "187 - учителей",
+      "2 - учебных корпуса",
+      "140 - учебных кабинетов"
+    ],
+    "results_kpi_raw": [
+      "4 391 - обучающийся",
+      "187 - учителей",
+      "2 - учебных корпуса",
+      "140 - учебных кабинетов"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "4 391 - обучающийся",
+      "187 - учителей",
+      "2 - учебных корпуса",
+      "140 - учебных кабинетов"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:18:29.439990+00:00"
   },
   {
     "id": 155,
@@ -1092,9 +1749,36 @@
       ]
     },
     "link_gosuslugi": "https://shk5-sar.gosuslugi.ru/",
-    "EGE": "60 - Средний балл на ЕГЭ в 2025 году",
-    "VUZ": "96% - Выпускников поступивших в ВУЗы в 2025 году",
-    "infrastructure": "https://shk5-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "EGE": "60 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "97% - Выпускников поступивших в ВУЗы в 2026 году",
+    "infrastructure": "https://shk5-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [
+      "16 - Выпускников с медалью I и II степенью за 2026 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "16 - Выпускников с медалью I и II степенью за 2026 год",
+      "60 - Средний балл на ЕГЭ в 2026 году",
+      "97% - Выпускников поступивших в ВУЗы в 2026 году"
+    ],
+    "EGE_2026": "60 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "97% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": null,
+    "Medals_2026": [
+      "16 - Выпускников с медалью I и II степенью за 2026 год"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "EGE_prev": "60 - Средний балл на ЕГЭ в 2025 году",
+    "EGE_history": [
+      "60 - Средний балл на ЕГЭ в 2025 году"
+    ],
+    "VUZ_prev": "96% - Выпускников поступивших в ВУЗы в 2025 году",
+    "VUZ_history": [
+      "96% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "results_parsed_at": "2026-10-18T14:18:39.727611+00:00"
   },
   {
     "id": 156,
@@ -1137,7 +1821,22 @@
     "Olympiads": [
       "27 - Призеров муниципального этапа Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://shk11-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk11-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [
+      "53,7 - Средний балл на ЕГЭ в 2025 году",
+      "27 - Призеров муниципального этапа Всероссийской олимпиады за 3 года"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "27 - Призеров муниципального этапа Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:19:13.004371+00:00"
   },
   {
     "id": 157,
@@ -1173,7 +1872,15 @@
       ]
     },
     "link_gosuslugi": "https://shk77-sar.gosuslugi.ru/",
-    "infrastructure": "https://shk77-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk77-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "parse_error": "TimeoutException: Message: timeout: Timed out receiving message from renderer: 56.965\n  (Session info: chrome=154.0.8037.98)\nStacktrace:\n\tchromedriver!GetHandleVerifier [0x7ff61aee9d55+5a55]\n\tchromedriver!(No symbol) [0x7ff61ae0f540]\n\tchromedriver!(No symbol) [0x7ff61ac345fd]\n\tchromedriver!(No symbol) [0x7ff61ac21639]\n\tchromedriver!(No symbol) [0x7ff61ac21321]\n\tchromedriver!(No symbol) [0x7ff61ac1eff0]\n\tchromedriver!(No symbol) [0x7ff61ac1f93f]\n\tchromedriver!(No symbol) [0x7ff61ac2ee3a]\n\tchromedriver!(No symbol) [0x7ff61ac456eb]\n\tchromedriver!(No symbol) [0x7ff61ac4d66a]\n\tchromedriver!(No symbol) [0x7ff61ac20101]\n\tchromedriver!(No symbol) [0x7ff61ac4531e]\n\tchromedriver!(No symbol) [0x7ff61ace004f]\n\tchromedriver!(No symbol) [0x7ff61ac81a12]\n\tchromedriver!(No symbol) [0x7ff61ac82823]\n\tchromedriver!GetHandleVerifier [0x7ff61b3004b1+41c1b1]\n\tchromedriver!GetHandleVerifier [0x7ff61b32e26b+449f6b]\n\tchromedriver!GetHandleVerifier [0x7ff61b32274e+43e44e]\n\tchromedriver!GetHandleVerifier [0x7ff61afe32fe+feffe]\n\tchromedriver!(No symbol) [0x7ff61ae1cb55]\n\tchromedriver!(No symbol) [0x7ff61ae17f64]\n\tchromedriver!(No symbol) [0x7ff61ae180f4]\n\tchromedriver!(No symbol) [0x7ff61ae02e4c]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd7d847374+14]\n\tntdll!RtlUserThreadStart [0x7ffd7e3fcc91+21]\n",
+    "results_parsed_at": "2026-10-18T16:01:19.843875+00:00"
   },
   {
     "id": 158,
@@ -1213,8 +1920,38 @@
       "Математика",
       "ОБЩЕСТВОЗНАНИЕ"
     ],
-    "EGE": "68,9 - Средний балл на ЕГЭ в 2023 году",
-    "VUZ": "90 % - Поступили в ВУЗы в 2024 году"
+    "EGE": "68,9 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "90 % - Поступили в ВУЗы в 2026 году",
+    "Olympiads": [],
+    "Medals": [
+      "19 - Выпускников с золотой медалью с 2017 по 2026 год"
+    ],
+    "other_results": [
+      "2023г. - Школа занесена на районную \"Галерею Почёта\" 2023г."
+    ],
+    "results_kpi_raw": [
+      "19 - Выпускников с золотой медалью с 2017 по 2026 год",
+      "68,9 - Средний балл на ЕГЭ в 2026 году",
+      "90 % - Поступили в ВУЗы в 2026 году",
+      "2023г. - Школа занесена на районную \"Галерею Почёта\" 2023г."
+    ],
+    "EGE_2026": "68,9 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "90 % - Поступили в ВУЗы в 2026 году",
+    "Olympiads_2026": null,
+    "Medals_2026": [
+      "19 - Выпускников с золотой медалью с 2017 по 2026 год"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "EGE_prev": "68,9 - Средний балл на ЕГЭ в 2023 году",
+    "EGE_history": [
+      "68,9 - Средний балл на ЕГЭ в 2023 году"
+    ],
+    "VUZ_prev": "90 % - Поступили в ВУЗы в 2024 году",
+    "VUZ_history": [
+      "90 % - Поступили в ВУЗы в 2024 году"
+    ],
+    "results_parsed_at": "2026-10-18T14:24:23.109468+00:00"
   },
   {
     "id": 159,
@@ -1252,7 +1989,21 @@
     "link_gosuslugi": "https://shk102-sar.gosuslugi.ru/",
     "EGE": "56,81 - Средний балл на ЕГЭ в 2025 году",
     "VUZ": "55% - Выпускников поступивших в ВУЗы в 2025 году",
-    "infrastructure": "https://shk102-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk102-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [
+      "56,81 - Средний балл на ЕГЭ в 2025 году",
+      "55% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:24:49.517357+00:00"
   },
   {
     "id": 16,
@@ -1289,14 +2040,44 @@
     },
     "link_gosuslugi": "https://shk76-sar.gosuslugi.ru/",
     "specialization": [
-      "Социально-экономический профиль"
+      "Технологический профиль",
+      "Универсальный профиль"
     ],
-    "EGE": "67,8 - Средний балл на ЕГЭ в 2025 году",
-    "VUZ": "96% - Выпускников поступивших в ВУЗы в 2025 году",
+    "EGE": "67,8 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "96% - Выпускников поступивших в ВУЗы в 2026 году",
     "Olympiads": [
       "14 - Призеров муниципального этапа Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://shk76-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk76-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "8 - Выпускников, награжденных медалями \"За особые успехи в учении\" I и II степеней за последние 3 года"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "14 - Призеров муниципального этапа Всероссийской олимпиады за 3 года",
+      "8 - Выпускников, награжденных медалями \"За особые успехи в учении\" I и II степеней за последние 3 года",
+      "67,8 - Средний балл на ЕГЭ в 2026 году",
+      "96% - Выпускников поступивших в ВУЗы в 2026 году"
+    ],
+    "EGE_2026": "67,8 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "96% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "14 - Призеров муниципального этапа Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": [
+      "8 - Выпускников, награжденных медалями \"За особые успехи в учении\" I и II степеней за последние 3 года"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "EGE_prev": "67,8 - Средний балл на ЕГЭ в 2025 году",
+    "EGE_history": [
+      "67,8 - Средний балл на ЕГЭ в 2025 году"
+    ],
+    "VUZ_prev": "96% - Выпускников поступивших в ВУЗы в 2025 году",
+    "VUZ_history": [
+      "96% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "results_parsed_at": "2026-10-18T14:25:43.103992+00:00"
   },
   {
     "id": 160,
@@ -1337,7 +2118,26 @@
     "Olympiads": [
       "3 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://shk82-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk82-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "1 - Выпускник с золотой медалью за 2025 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "3 - Призеров Всероссийской олимпиады за 3 года",
+      "1 - Выпускник с золотой медалью за 2025 год",
+      "61 - Средний балл на ЕГЭ в 2025 году",
+      "73% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "3 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:26:10.352390+00:00"
   },
   {
     "id": 161,
@@ -1378,12 +2178,41 @@
       "Социально-экономическое",
       "Естественно-научное"
     ],
-    "EGE": "65.4 - Средний балл на ЕГЭ в 2025 году",
-    "VUZ": "87% - Выпускников поступивших в ВУЗы в 2025 году",
+    "EGE": "65.4 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "87% - Выпускников поступивших в ВУЗы в 2026 году",
     "Olympiads": [
       "51 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://school63-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://school63-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "7 - Выпускников с золотой и серебряной медалями за 2026 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "51 - Призеров Всероссийской олимпиады за 3 года",
+      "7 - Выпускников с золотой и серебряной медалями за 2026 год",
+      "65.4 - Средний балл на ЕГЭ в 2026 году",
+      "87% - Выпускников поступивших в ВУЗы в 2026 году"
+    ],
+    "EGE_2026": "65.4 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "87% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "51 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": [
+      "7 - Выпускников с золотой и серебряной медалями за 2026 год"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "EGE_prev": "65.4 - Средний балл на ЕГЭ в 2025 году",
+    "EGE_history": [
+      "65.4 - Средний балл на ЕГЭ в 2025 году"
+    ],
+    "VUZ_prev": "87% - Выпускников поступивших в ВУЗы в 2025 году",
+    "VUZ_history": [
+      "87% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "results_parsed_at": "2026-10-18T14:26:52.922702+00:00"
   },
   {
     "id": 162,
@@ -1424,7 +2253,28 @@
     "Olympiads": [
       "13 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://shk95-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk95-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "5 - Выпускников с золотой медалью за 3 года"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "13 - Призеров Всероссийской олимпиады за 3 года",
+      "5 - Выпускников с золотой медалью за 3 года",
+      "73,4 - Средний балл на ЕГЭ за 3 года",
+      "100% - Выпускников поступивших в ВУЗы за 3 года"
+    ],
+    "EGE_2026": "73,4 - Средний балл на ЕГЭ за 3 года",
+    "VUZ_2026": "100% - Выпускников поступивших в ВУЗы за 3 года",
+    "Olympiads_2026": [
+      "13 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": [
+      "5 - Выпускников с золотой медалью за 3 года"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:30:12.916274+00:00"
   },
   {
     "id": 163,
@@ -1462,7 +2312,24 @@
     "link_gosuslugi": "https://shk67-sar.gosuslugi.ru/",
     "EGE": "54,8 - Средний балл на ЕГЭ в 2025году",
     "VUZ": "77,87% - Выпускников поступивших в ВУЗы в 2025 году",
-    "infrastructure": "https://shk67-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk67-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [
+      "2 - Выпускников с золотой медалью за 2025 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "2 - Выпускников с золотой медалью за 2025 год",
+      "54,8 - Средний балл на ЕГЭ в 2025году",
+      "77,87% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:31:07.654125+00:00"
   },
   {
     "id": 164,
@@ -1503,7 +2370,29 @@
     ],
     "EGE": "57,2 - Средний балл на ЕГЭ в 2025 году",
     "VUZ": "92% - Выпускников, поступивших в ВУЗы в 2025 году",
-    "infrastructure": "https://shk8-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk8-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [
+      "6 - Выпускников, получивших аттестаты с отличием и медали \"За особые успехи в учении\" 1 степени",
+      "2 - Выпускников, получивших аттестаты с отличием и медали \"За особые успехи в учении\" 2 степени"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "57,2 - Средний балл на ЕГЭ в 2025 году",
+      "6 - Выпускников, получивших аттестаты с отличием и медали \"За особые успехи в учении\" 1 степени",
+      "2 - Выпускников, получивших аттестаты с отличием и медали \"За особые успехи в учении\" 2 степени",
+      "92% - Выпускников, поступивших в ВУЗы в 2025 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": [
+      "6 - Выпускников, получивших аттестаты с отличием и медали \"За особые успехи в учении\" 1 степени",
+      "2 - Выпускников, получивших аттестаты с отличием и медали \"За особые успехи в учении\" 2 степени"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:31:54.489781+00:00"
   },
   {
     "id": 165,
@@ -1544,7 +2433,29 @@
     ],
     "EGE": "57,2 - Средний балл на ЕГЭ в 2025 году",
     "VUZ": "92% - Выпускников, поступивших в ВУЗы в 2025 году",
-    "infrastructure": "https://shk8-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk8-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [
+      "6 - Выпускников, получивших аттестаты с отличием и медали \"За особые успехи в учении\" 1 степени",
+      "2 - Выпускников, получивших аттестаты с отличием и медали \"За особые успехи в учении\" 2 степени"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "57,2 - Средний балл на ЕГЭ в 2025 году",
+      "6 - Выпускников, получивших аттестаты с отличием и медали \"За особые успехи в учении\" 1 степени",
+      "2 - Выпускников, получивших аттестаты с отличием и медали \"За особые успехи в учении\" 2 степени",
+      "92% - Выпускников, поступивших в ВУЗы в 2025 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": [
+      "6 - Выпускников, получивших аттестаты с отличием и медали \"За особые успехи в учении\" 1 степени",
+      "2 - Выпускников, получивших аттестаты с отличием и медали \"За особые успехи в учении\" 2 степени"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:32:04.864061+00:00"
   },
   {
     "id": 167,
@@ -1586,7 +2497,30 @@
       "Кадетское направление"
     ],
     "EGE": "60 - Средний балл по русскому языку ЕГЭ в 2025 году",
-    "infrastructure": "https://lic24-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://lic24-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [
+      "3 - Выпускника с серебряной медалью в 2025 году"
+    ],
+    "other_results": [
+      "13 - Призеры ВСОШ за 2024-2025 учебный год",
+      "9 - Выпускников получили аттестат об основном общем образовании с отличием"
+    ],
+    "results_kpi_raw": [
+      "13 - Призеры ВСОШ за 2024-2025 учебный год",
+      "3 - Выпускника с серебряной медалью в 2025 году",
+      "60 - Средний балл по русскому языку ЕГЭ в 2025 году",
+      "9 - Выпускников получили аттестат об основном общем образовании с отличием"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "9 - Выпускников получили аттестат об основном общем образовании с отличием"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:32:35.109813+00:00"
   },
   {
     "id": 168,
@@ -1628,11 +2562,38 @@
       "Социально-экономический профиль",
       "Психолого-педагогический профиль"
     ],
-    "VUZ": "97, 4% - Выпускников поступивших в ВУЗы в 2025 году",
+    "VUZ": "99% - Выпускников поступивших в ВУЗы в 2026 году",
     "Olympiads": [
       "1 - Призер заключительного этапа Всероссийской олимпиады в 2025 году"
     ],
-    "infrastructure": "https://gel-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://gel-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "11 - Выпускников с золотой медалью за 2026 год"
+    ],
+    "other_results": [
+      "1 - Кандидат наук"
+    ],
+    "results_kpi_raw": [
+      "1 - Призер заключительного этапа Всероссийской олимпиады в 2025 году",
+      "11 - Выпускников с золотой медалью за 2026 год",
+      "99% - Выпускников поступивших в ВУЗы в 2026 году",
+      "1 - Кандидат наук"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": "99% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": null,
+    "Medals_2026": [
+      "11 - Выпускников с золотой медалью за 2026 год"
+    ],
+    "other_results_2026": [
+      "1 - Кандидат наук"
+    ],
+    "results_target_year": 2026,
+    "VUZ_prev": "97, 4% - Выпускников поступивших в ВУЗы в 2025 году",
+    "VUZ_history": [
+      "97, 4% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "results_parsed_at": "2026-10-18T14:33:04.256431+00:00"
   },
   {
     "id": 169,
@@ -1671,7 +2632,18 @@
     "specialization": [
       "универсальный профиль"
     ],
-    "infrastructure": "https://shk90-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk90-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:33:37.998775+00:00"
   },
   {
     "id": 17,
@@ -1709,7 +2681,25 @@
     "link_gosuslugi": "https://shk1-sar.gosuslugi.ru/",
     "EGE": "55,75 - Средний балл на ЕГЭ в 2025 году",
     "VUZ": "93% - Выпускников поступивших в ВУЗы в 2025 году",
-    "infrastructure": "https://shk1-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk1-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [
+      "2 - Выпускники с медалью \"За особые успехи в учении\" 1 и 2 степени в 2025 году"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "2 - Выпускники с медалью \"За особые успехи в учении\" 1 и 2 степени в 2025 году",
+      "91 - Максимальный балл ЕГЭ в 2025 году",
+      "55,75 - Средний балл на ЕГЭ в 2025 году",
+      "93% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:34:10.151719+00:00"
   },
   {
     "id": 170,
@@ -1744,7 +2734,33 @@
         51.604766
       ]
     },
-    "link_gosuslugi": "https://solaris.gosuslugi.ru/"
+    "link_gosuslugi": "https://solaris.gosuslugi.ru/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "4 391 - обучающийся",
+      "187 - учителей",
+      "2 - учебных корпуса",
+      "140 - учебных кабинетов"
+    ],
+    "results_kpi_raw": [
+      "4 391 - обучающийся",
+      "187 - учителей",
+      "2 - учебных корпуса",
+      "140 - учебных кабинетов"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "4 391 - обучающийся",
+      "187 - учителей",
+      "2 - учебных корпуса",
+      "140 - учебных кабинетов"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:34:40.574918+00:00"
   },
   {
     "id": 171,
@@ -1780,7 +2796,22 @@
       ]
     },
     "link_gosuslugi": "https://shk91-sar.gosuslugi.ru/",
-    "infrastructure": "https://shk91-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk91-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "100 % - Выпускников, поступивших в СУЗы в 2025 году"
+    ],
+    "results_kpi_raw": [
+      "100 % - Выпускников, поступивших в СУЗы в 2025 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:35:18.988835+00:00"
   },
   {
     "id": 173,
@@ -1816,7 +2847,33 @@
       ]
     },
     "link_gosuslugi": "https://aviator-sar.gosuslugi.ru/",
-    "infrastructure": "https://aviator-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://aviator-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "1822 - обучающихся",
+      "107 - педагогов",
+      "74 - учебных кабинета",
+      "12 - Спортивных объединений"
+    ],
+    "results_kpi_raw": [
+      "1822 - обучающихся",
+      "107 - педагогов",
+      "74 - учебных кабинета",
+      "12 - Спортивных объединений"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "1822 - обучающихся",
+      "107 - педагогов",
+      "74 - учебных кабинета",
+      "12 - Спортивных объединений"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:35:39.110379+00:00"
   },
   {
     "id": 175,
@@ -1852,7 +2909,22 @@
       ]
     },
     "link_gosuslugi": "https://shk91-sar.gosuslugi.ru/",
-    "infrastructure": "https://shk91-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk91-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "100 % - Выпускников, поступивших в СУЗы в 2025 году"
+    ],
+    "results_kpi_raw": [
+      "100 % - Выпускников, поступивших в СУЗы в 2025 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:35:48.736417+00:00"
   },
   {
     "id": 18,
@@ -1898,7 +2970,26 @@
     "Olympiads": [
       "615 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://shk51-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk51-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "9 - Выпускников с золотой медалью за 2025 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "615 - Призеров Всероссийской олимпиады за 3 года",
+      "9 - Выпускников с золотой медалью за 2025 год",
+      "69,1 - Средний балл на ЕГЭ по русскому языку в 2025 году",
+      "95,7% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "615 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:36:21.739806+00:00"
   },
   {
     "id": 19,
@@ -1933,7 +3024,14 @@
         51.530608
       ]
     },
-    "link_gosuslugi": null
+    "link_gosuslugi": null,
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:36:24.746984+00:00"
   },
   {
     "id": 2,
@@ -1969,7 +3067,18 @@
       ]
     },
     "link_gosuslugi": "https://shk77-sar.gosuslugi.ru/",
-    "infrastructure": "https://shk77-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk77-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:38:37.028964+00:00"
   },
   {
     "id": 20,
@@ -2015,7 +3124,15 @@
     "Olympiads": [
       "12 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://shk21-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk21-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "parse_error": "TimeoutException: Message: timeout: Timed out receiving message from renderer: 57.116\n  (Session info: chrome=154.0.8037.98)\nStacktrace:\n\tchromedriver!GetHandleVerifier [0x7ff61aee9d55+5a55]\n\tchromedriver!(No symbol) [0x7ff61ae0f540]\n\tchromedriver!(No symbol) [0x7ff61ac345fd]\n\tchromedriver!(No symbol) [0x7ff61ac21639]\n\tchromedriver!(No symbol) [0x7ff61ac21321]\n\tchromedriver!(No symbol) [0x7ff61ac1eff0]\n\tchromedriver!(No symbol) [0x7ff61ac1f93f]\n\tchromedriver!(No symbol) [0x7ff61ac2ee3a]\n\tchromedriver!(No symbol) [0x7ff61ac456eb]\n\tchromedriver!(No symbol) [0x7ff61ac4d66a]\n\tchromedriver!(No symbol) [0x7ff61ac20101]\n\tchromedriver!(No symbol) [0x7ff61ac4531e]\n\tchromedriver!(No symbol) [0x7ff61ace004f]\n\tchromedriver!(No symbol) [0x7ff61ac81a12]\n\tchromedriver!(No symbol) [0x7ff61ac82823]\n\tchromedriver!GetHandleVerifier [0x7ff61b3004b1+41c1b1]\n\tchromedriver!GetHandleVerifier [0x7ff61b32e26b+449f6b]\n\tchromedriver!GetHandleVerifier [0x7ff61b32274e+43e44e]\n\tchromedriver!GetHandleVerifier [0x7ff61afe32fe+feffe]\n\tchromedriver!(No symbol) [0x7ff61ae1cb55]\n\tchromedriver!(No symbol) [0x7ff61ae17f64]\n\tchromedriver!(No symbol) [0x7ff61ae180f4]\n\tchromedriver!(No symbol) [0x7ff61ae02e4c]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd7d847374+14]\n\tntdll!RtlUserThreadStart [0x7ffd7e3fcc91+21]\n",
+    "results_parsed_at": "2026-10-18T16:07:02.286927+00:00"
   },
   {
     "id": 21,
@@ -2057,8 +3174,41 @@
       "Социально - экономический"
     ],
     "EGE": "1 - высший балл /100 баллов/ ЕГЭ по литературе 2024-2025 уч.г.",
-    "VUZ": "81 % - Выпускников поступивших в ВУЗы в 2025 году",
-    "infrastructure": "https://shk59-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "VUZ": "85 % - Выпускников поступивших в ВУЗы в 2026 году",
+    "infrastructure": "https://shk59-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [
+      "6 - участники регионального этапа Всероссийской олимпиады школьников 2025-2026 уч.г.",
+      "22 - призёры Всероссийской олимпиады школьников 2025-2026 уч.г."
+    ],
+    "Medals": [
+      "5 - Выпускников с медалью \"За успехи в учении I степени\" по итогам 2025-2026 уч.г.",
+      "3 - выпускников с медалью \"За успехи в учении II степени\" по итогам 2025-2026уч.г."
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "5 - Выпускников с медалью \"За успехи в учении I степени\" по итогам 2025-2026 уч.г.",
+      "3 - выпускников с медалью \"За успехи в учении II степени\" по итогам 2025-2026уч.г.",
+      "85 % - Выпускников поступивших в ВУЗы в 2026 году",
+      "6 - участники регионального этапа Всероссийской олимпиады школьников 2025-2026 уч.г.",
+      "22 - призёры Всероссийской олимпиады школьников 2025-2026 уч.г."
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": "85 % - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "6 - участники регионального этапа Всероссийской олимпиады школьников 2025-2026 уч.г.",
+      "22 - призёры Всероссийской олимпиады школьников 2025-2026 уч.г."
+    ],
+    "Medals_2026": [
+      "5 - Выпускников с медалью \"За успехи в учении I степени\" по итогам 2025-2026 уч.г.",
+      "3 - выпускников с медалью \"За успехи в учении II степени\" по итогам 2025-2026уч.г."
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "VUZ_prev": "81 % - Выпускников поступивших в ВУЗы в 2025 году",
+    "VUZ_history": [
+      "81 % - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "results_parsed_at": "2026-10-18T14:43:45.793204+00:00"
   },
   {
     "id": 22,
@@ -2096,11 +3246,29 @@
     "link_gosuslugi": "https://school55sar.gosuslugi.ru/",
     "specialization": [
       "Технологический профиль",
-      "Социально-экономический профиль"
+      "Социально-экономический профиль",
+      "Естественно-научный профиль"
     ],
     "EGE": "56,4 - Средний балл на ЕГЭ в 2025 году",
     "VUZ": "90,1% - Выпускников поступивших в ВУЗы в 2025 году",
-    "infrastructure": "https://school55sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://school55sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "6 - Выпускников 9-х классов получили аттестат особого образца в 2025 году"
+    ],
+    "results_kpi_raw": [
+      "6 - Выпускников 9-х классов получили аттестат особого образца в 2025 году",
+      "56,4 - Средний балл на ЕГЭ в 2025 году",
+      "90,1% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:44:36.131047+00:00"
   },
   {
     "id": 23,
@@ -2142,7 +3310,30 @@
       "Кадетское направление"
     ],
     "EGE": "60 - Средний балл по русскому языку ЕГЭ в 2025 году",
-    "infrastructure": "https://lic24-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://lic24-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [
+      "3 - Выпускника с серебряной медалью в 2025 году"
+    ],
+    "other_results": [
+      "13 - Призеры ВСОШ за 2024-2025 учебный год",
+      "9 - Выпускников получили аттестат об основном общем образовании с отличием"
+    ],
+    "results_kpi_raw": [
+      "13 - Призеры ВСОШ за 2024-2025 учебный год",
+      "3 - Выпускника с серебряной медалью в 2025 году",
+      "60 - Средний балл по русскому языку ЕГЭ в 2025 году",
+      "9 - Выпускников получили аттестат об основном общем образовании с отличием"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "9 - Выпускников получили аттестат об основном общем образовании с отличием"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:45:19.961787+00:00"
   },
   {
     "id": 24,
@@ -2183,7 +3374,24 @@
     ],
     "EGE": "67,0 - Средний балл на ЕГЭ в 2025 году",
     "VUZ": "97% - Выпускников поступивших в ВУЗы в 2025 году",
-    "infrastructure": "https://shk84-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk84-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [
+      "8 - Выпускников-медалистов в 2025 году"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "8 - Выпускников-медалистов в 2025 году",
+      "67,0 - Средний балл на ЕГЭ в 2025 году",
+      "97% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:47:28.694154+00:00"
   },
   {
     "id": 25,
@@ -2220,14 +3428,45 @@
     },
     "link_gosuslugi": "https://sch46-saratov.gosuslugi.ru/",
     "specialization": [
-      "Универсальный профиль"
+      "Универсальный",
+      "Социально-экономический",
+      "Технологический"
     ],
-    "EGE": "60,4 - Средний балл на ЕГЭ в 2024 году",
-    "VUZ": "72% - Выпускников поступивших на бюджет в ВУЗы в 2024 году",
+    "EGE": "60,4 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "72% - Выпускников поступивших на бюджет в ВУЗы в 2026 году",
     "Olympiads": [
       "13 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://sch46-saratov.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://sch46-saratov.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "2 - Выпускников с золотой медалью за 2026 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "13 - Призеров Всероссийской олимпиады за 3 года",
+      "2 - Выпускников с золотой медалью за 2026 год",
+      "60,4 - Средний балл на ЕГЭ в 2026 году",
+      "72% - Выпускников поступивших на бюджет в ВУЗы в 2026 году"
+    ],
+    "EGE_2026": "60,4 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "72% - Выпускников поступивших на бюджет в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "13 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": [
+      "2 - Выпускников с золотой медалью за 2026 год"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "EGE_prev": "60,4 - Средний балл на ЕГЭ в 2024 году",
+    "EGE_history": [
+      "60,4 - Средний балл на ЕГЭ в 2024 году"
+    ],
+    "VUZ_prev": "72% - Выпускников поступивших на бюджет в ВУЗы в 2024 году",
+    "VUZ_history": [
+      "72% - Выпускников поступивших на бюджет в ВУЗы в 2024 году"
+    ],
+    "results_parsed_at": "2026-10-18T14:48:14.488361+00:00"
   },
   {
     "id": 26,
@@ -2262,7 +3501,18 @@
         51.591126
       ]
     },
-    "link_gosuslugi": "https://school100sar.gosuslugi.ru/"
+    "link_gosuslugi": "https://school100sar.gosuslugi.ru/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:48:55.802434+00:00"
   },
   {
     "id": 27,
@@ -2301,12 +3551,41 @@
     "specialization": [
       "Социально-экономический профиль"
     ],
-    "EGE": "65,5 - Средний балл на ЕГЭ в 2025 году",
-    "VUZ": "92 % - Выпускников поступивших в ВУЗы в 2025 году",
+    "EGE": "68 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "96 % - Выпускников поступивших в ВУЗы в 2026 году",
     "Olympiads": [
       "12 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://shkola106-saratov64.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shkola106-saratov64.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "2 - В 2026 году выпускников с медалью \"За особые успехи в обучении\" 1 и 2 степени"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "12 - Призеров Всероссийской олимпиады за 3 года",
+      "2 - В 2026 году выпускников с медалью \"За особые успехи в обучении\" 1 и 2 степени",
+      "68 - Средний балл на ЕГЭ в 2026 году",
+      "96 % - Выпускников поступивших в ВУЗы в 2026 году"
+    ],
+    "EGE_2026": "68 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "96 % - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "12 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": [
+      "2 - В 2026 году выпускников с медалью \"За особые успехи в обучении\" 1 и 2 степени"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "EGE_prev": "65,5 - Средний балл на ЕГЭ в 2025 году",
+    "EGE_history": [
+      "65,5 - Средний балл на ЕГЭ в 2025 году"
+    ],
+    "VUZ_prev": "92 % - Выпускников поступивших в ВУЗы в 2025 году",
+    "VUZ_history": [
+      "92 % - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "results_parsed_at": "2026-10-18T14:49:21.672138+00:00"
   },
   {
     "id": 28,
@@ -2351,7 +3630,35 @@
       "Химия",
       "Биология"
     ],
-    "infrastructure": "https://shkola-72-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shkola-72-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [
+      "18 - Выпускники с медалью «За особые успехи в учении» за три года"
+    ],
+    "other_results": [
+      "25 - Победители и призеры МЭ и РЭ ВсОШ за три года",
+      "7 - Выпускники, получившие 100 баллов за три года",
+      "11 - Выпускники, получившие аттестат с отличием в 9 классе за три года"
+    ],
+    "results_kpi_raw": [
+      "25 - Победители и призеры МЭ и РЭ ВсОШ за три года",
+      "18 - Выпускники с медалью «За особые успехи в учении» за три года",
+      "7 - Выпускники, получившие 100 баллов за три года",
+      "11 - Выпускники, получившие аттестат с отличием в 9 классе за три года"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": [
+      "18 - Выпускники с медалью «За особые успехи в учении» за три года"
+    ],
+    "other_results_2026": [
+      "25 - Победители и призеры МЭ и РЭ ВсОШ за три года",
+      "7 - Выпускники, получившие 100 баллов за три года",
+      "11 - Выпускники, получившие аттестат с отличием в 9 классе за три года"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:49:54.646478+00:00"
   },
   {
     "id": 29,
@@ -2387,7 +3694,18 @@
       ]
     },
     "link_gosuslugi": "https://shk22-sar.gosuslugi.ru/",
-    "infrastructure": "https://shk22-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk22-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:50:22.167833+00:00"
   },
   {
     "id": 3,
@@ -2432,7 +3750,31 @@
     "VUZ": "100% - Выпускников поступивших в ВУЗы в 2025 году",
     "Olympiads": [
       "1 - Призер Всероссийской олимпиады (региональный этап)"
-    ]
+    ],
+    "Medals": [
+      "3 - Выпускника 11 классов с золотой медалью за 2025 год",
+      "1 - Выпускник 11 классов с серебряной медалью за 2025 год"
+    ],
+    "other_results": [
+      "8 - Выпускников 9 классов с аттестатом с отличием в 2025 году"
+    ],
+    "results_kpi_raw": [
+      "1 - Призер Всероссийской олимпиады (региональный этап)",
+      "3 - Выпускника 11 классов с золотой медалью за 2025 год",
+      "61,5 - Средний балл на ЕГЭ в 2025 году",
+      "100% - Выпускников поступивших в ВУЗы в 2025 году",
+      "8 - Выпускников 9 классов с аттестатом с отличием в 2025 году",
+      "1 - Выпускник 11 классов с серебряной медалью за 2025 год"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "1 - Призер Всероссийской олимпиады (региональный этап)"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:50:44.425106+00:00"
   },
   {
     "id": 30,
@@ -2473,7 +3815,29 @@
     ],
     "VUZ": "81% - Выпускников поступивших в ВУЗы в 2023 году",
     "EGE": "1 - Выпускник набрал 200 баллов по результатам ЕГЭ (профильная математика, физика)",
-    "infrastructure": "https://shk43-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk43-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [
+      "6 - Выпускников награждены золотой медалью «За особые успехи в учении» в 2023 году"
+    ],
+    "other_results": [
+      "4 - Выпускника награждены почетным знаком губернатора Саратовской области «За отличие в учебе»"
+    ],
+    "results_kpi_raw": [
+      "6 - Выпускников награждены золотой медалью «За особые успехи в учении» в 2023 году",
+      "81% - Выпускников поступивших в ВУЗы в 2023 году",
+      "4 - Выпускника награждены почетным знаком губернатора Саратовской области «За отличие в учебе»",
+      "1 - Выпускник набрал 200 баллов по результатам ЕГЭ (профильная математика, физика)"
+    ],
+    "EGE_2026": "1 - Выпускник набрал 200 баллов по результатам ЕГЭ (профильная математика, физика)",
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "4 - Выпускника награждены почетным знаком губернатора Саратовской области «За отличие в учебе»"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:51:12.826552+00:00"
   },
   {
     "id": 31,
@@ -2512,7 +3876,26 @@
     "Olympiads": [
       "7 - Победителей и призеров Всероссийской олимпиады (муниципальный этап) 2022-2023 уч.год"
     ],
-    "infrastructure": "https://shk17-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk17-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [],
+    "other_results": [
+      "23,6 - Средний балл на ОГЭ (русский язык) в 2023 году",
+      "12,8 - Средний балл на ОГЭ (математика) в 2023 году",
+      "99% - Выпускников поступивших в организации СПО в 2023 году"
+    ],
+    "results_kpi_raw": [
+      "7 - Победителей и призеров Всероссийской олимпиады (муниципальный этап) 2022-2023 уч.год",
+      "23,6 - Средний балл на ОГЭ (русский язык) в 2023 году",
+      "12,8 - Средний балл на ОГЭ (математика) в 2023 году",
+      "99% - Выпускников поступивших в организации СПО в 2023 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:51:45.561036+00:00"
   },
   {
     "id": 32,
@@ -2557,7 +3940,49 @@
     "Olympiads": [
       "7 - Победителей регионального этапа Всероссийской олимпиады за 3 года",
       "29 - Призёров регионального этапа Всероссийской олимпиады за 3 года"
-    ]
+    ],
+    "EGE": "71,7 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "98% - Выпускников, поступивших в ВУЗы в 2026 году",
+    "Medals": [
+      "9 - Медаль \"За особые успехи в учении I степени\" в 2026 году",
+      "1 - Медаль \"За особые успехи в учении II степени\" в 2026 году"
+    ],
+    "other_results": [
+      "1 - Выпускник, получивший 100 баллов по биологии в 2026 году",
+      "1 - Выпускник, получивший 100 баллов по русскому языку в 2026 году",
+      "1 - Выпускник, получивший 100 баллов по географии в 2026 году",
+      "25 - выпускников получили 90 и более баллов по русскому языку, профильной математике, английскому языку, биологии, физике, химии, информатике, литературе в 2026 году"
+    ],
+    "results_kpi_raw": [
+      "7 - Победителей регионального этапа Всероссийской олимпиады за 3 года",
+      "29 - Призёров регионального этапа Всероссийской олимпиады за 3 года",
+      "9 - Медаль \"За особые успехи в учении I степени\" в 2026 году",
+      "1 - Медаль \"За особые успехи в учении II степени\" в 2026 году",
+      "71,7 - Средний балл на ЕГЭ в 2026 году",
+      "98% - Выпускников, поступивших в ВУЗы в 2026 году",
+      "1 - Выпускник, получивший 100 баллов по биологии в 2026 году",
+      "1 - Выпускник, получивший 100 баллов по русскому языку в 2026 году",
+      "1 - Выпускник, получивший 100 баллов по географии в 2026 году",
+      "25 - выпускников получили 90 и более баллов по русскому языку, профильной математике, английскому языку, биологии, физике, химии, информатике, литературе в 2026 году"
+    ],
+    "EGE_2026": "71,7 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "98% - Выпускников, поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "7 - Победителей регионального этапа Всероссийской олимпиады за 3 года",
+      "29 - Призёров регионального этапа Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": [
+      "9 - Медаль \"За особые успехи в учении I степени\" в 2026 году",
+      "1 - Медаль \"За особые успехи в учении II степени\" в 2026 году"
+    ],
+    "other_results_2026": [
+      "1 - Выпускник, получивший 100 баллов по биологии в 2026 году",
+      "1 - Выпускник, получивший 100 баллов по русскому языку в 2026 году",
+      "1 - Выпускник, получивший 100 баллов по географии в 2026 году",
+      "25 - выпускников получили 90 и более баллов по русскому языку, профильной математике, английскому языку, биологии, физике, химии, информатике, литературе в 2026 году"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:52:39.726898+00:00"
   },
   {
     "id": 33,
@@ -2595,7 +4020,21 @@
     "link_gosuslugi": "https://shk102-sar.gosuslugi.ru/",
     "EGE": "56,81 - Средний балл на ЕГЭ в 2025 году",
     "VUZ": "55% - Выпускников поступивших в ВУЗы в 2025 году",
-    "infrastructure": "https://shk102-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk102-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [
+      "56,81 - Средний балл на ЕГЭ в 2025 году",
+      "55% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:53:06.294051+00:00"
   },
   {
     "id": 34,
@@ -2633,7 +4072,21 @@
     "link_gosuslugi": "https://shk102-sar.gosuslugi.ru/",
     "EGE": "56,81 - Средний балл на ЕГЭ в 2025 году",
     "VUZ": "55% - Выпускников поступивших в ВУЗы в 2025 году",
-    "infrastructure": "https://shk102-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk102-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [
+      "56,81 - Средний балл на ЕГЭ в 2025 году",
+      "55% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:53:17.637767+00:00"
   },
   {
     "id": 35,
@@ -2674,7 +4127,29 @@
     ],
     "EGE": "57,2 - Средний балл на ЕГЭ в 2025 году",
     "VUZ": "92% - Выпускников, поступивших в ВУЗы в 2025 году",
-    "infrastructure": "https://shk8-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk8-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [
+      "6 - Выпускников, получивших аттестаты с отличием и медали \"За особые успехи в учении\" 1 степени",
+      "2 - Выпускников, получивших аттестаты с отличием и медали \"За особые успехи в учении\" 2 степени"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "57,2 - Средний балл на ЕГЭ в 2025 году",
+      "6 - Выпускников, получивших аттестаты с отличием и медали \"За особые успехи в учении\" 1 степени",
+      "2 - Выпускников, получивших аттестаты с отличием и медали \"За особые успехи в учении\" 2 степени",
+      "92% - Выпускников, поступивших в ВУЗы в 2025 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": [
+      "6 - Выпускников, получивших аттестаты с отличием и медали \"За особые успехи в учении\" 1 степени",
+      "2 - Выпускников, получивших аттестаты с отличием и медали \"За особые успехи в учении\" 2 степени"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:54:02.434235+00:00"
   },
   {
     "id": 36,
@@ -2710,7 +4185,18 @@
       ]
     },
     "link_gosuslugi": "https://shk71-sar.gosuslugi.ru/",
-    "infrastructure": "https://shk71-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk71-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:55:04.168108+00:00"
   },
   {
     "id": 37,
@@ -2755,7 +4241,26 @@
     "Olympiads": [
       "641 - Победителей и призеров Всероссийской олимпиады за 3 года (школьный этап)"
     ],
-    "infrastructure": "https://school66vavilov.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://school66vavilov.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "5 - Выпускников с золотой медалью за 2021 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "641 - Победителей и призеров Всероссийской олимпиады за 3 года (школьный этап)",
+      "5 - Выпускников с золотой медалью за 2021 год",
+      "41 - Средний балл на ЕГЭ в 2021 году",
+      "50,6% - Выпускников поступивших в ВУЗы в 2021 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "641 - Победителей и призеров Всероссийской олимпиады за 3 года (школьный этап)"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:55:27.429090+00:00"
   },
   {
     "id": 38,
@@ -2791,7 +4296,27 @@
       ]
     },
     "link_gosuslugi": "https://ivolgino.gosuslugi.ru/",
-    "infrastructure": "https://ivolgino.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://ivolgino.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "Телефон - +7 (8452) 24-10-27 доб. 203",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_kpi_raw": [
+      "Телефон - +7 (8452) 24-10-27 доб. 203",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "Телефон - +7 (8452) 24-10-27 доб. 203",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:56:03.675274+00:00"
   },
   {
     "id": 39,
@@ -2832,11 +4357,48 @@
       "Гуманитарный профиль",
       "Медицинский класс"
     ],
-    "EGE": "8 - ЕГЭ по 8 предметам в 2024 году выпускники сдали на 100 баллов",
+    "EGE": "22 - выпускников сдали на 90+ баллов ЕГЭ в 2026 году",
     "Olympiads": [
+      "44 - победителя и призера муниципального и регионального этапов Всероссийской олимпиады 2025-2026 г"
+    ],
+    "infrastructure": "https://gymn3sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "23 - медалиста в 2026 году"
+    ],
+    "other_results": [
+      "15 - девятиклассников получили в 2026 году аттестат с отличием"
+    ],
+    "results_kpi_raw": [
+      "44 - победителя и призера муниципального и регионального этапов Всероссийской олимпиады 2025-2026 г",
+      "23 - медалиста в 2026 году",
+      "22 - выпускников сдали на 90+ баллов ЕГЭ в 2026 году",
+      "15 - девятиклассников получили в 2026 году аттестат с отличием"
+    ],
+    "EGE_2026": "22 - выпускников сдали на 90+ баллов ЕГЭ в 2026 году",
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "44 - победителя и призера муниципального и регионального этапов Всероссийской олимпиады 2025-2026 г"
+    ],
+    "Medals_2026": [
+      "23 - медалиста в 2026 году"
+    ],
+    "other_results_2026": [
+      "15 - девятиклассников получили в 2026 году аттестат с отличием"
+    ],
+    "results_target_year": 2026,
+    "EGE_prev": "8 - ЕГЭ по 8 предметам в 2024 году выпускники сдали на 100 баллов",
+    "EGE_history": [
+      "8 - ЕГЭ по 8 предметам в 2024 году выпускники сдали на 100 баллов"
+    ],
+    "Olympiads_prev": [
       "44 - победителя и призера муниципального и регионального этапов Всероссийской олимпиады 2023-2024 г"
     ],
-    "infrastructure": "https://gymn3sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "Olympiads_history": [
+      [
+        "44 - победителя и призера муниципального и регионального этапов Всероссийской олимпиады 2023-2024 г"
+      ]
+    ],
+    "results_parsed_at": "2026-10-18T14:56:32.244046+00:00"
   },
   {
     "id": 4,
@@ -2877,7 +4439,23 @@
     "Olympiads": [
       "62 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://shk18-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk18-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [
+      "62 - Призеров Всероссийской олимпиады за 3 года",
+      "63 - Средний балл на ЕГЭ в 2021 году",
+      "58% - Выпускников поступивших в ВУЗы в 2022 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "62 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T14:57:10.836313+00:00"
   },
   {
     "id": 40,
@@ -2918,11 +4496,40 @@
       "Технологический профиль",
       "Естественно-научный профиль"
     ],
-    "EGE": "62,7 - Средний балл на ЕГЭ в 2024 году",
-    "VUZ": "90% - Выпускников поступивших в ВУЗы в 2024 году",
+    "EGE": "62,7 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "90% - Выпускников поступивших в ВУЗы в 2026 году",
     "Olympiads": [
       "64 - Призеров Всероссийской олимпиады за 3 года"
-    ]
+    ],
+    "Medals": [
+      "8 - Выпускников с медалью за 2026 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "64 - Призеров Всероссийской олимпиады за 3 года",
+      "8 - Выпускников с медалью за 2026 год",
+      "62,7 - Средний балл на ЕГЭ в 2026 году",
+      "90% - Выпускников поступивших в ВУЗы в 2026 году"
+    ],
+    "EGE_2026": "62,7 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "90% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "64 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": [
+      "8 - Выпускников с медалью за 2026 год"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "EGE_prev": "62,7 - Средний балл на ЕГЭ в 2024 году",
+    "EGE_history": [
+      "62,7 - Средний балл на ЕГЭ в 2024 году"
+    ],
+    "VUZ_prev": "90% - Выпускников поступивших в ВУЗы в 2024 году",
+    "VUZ_history": [
+      "90% - Выпускников поступивших в ВУЗы в 2024 году"
+    ],
+    "results_parsed_at": "2026-10-18T14:57:55.140490+00:00"
   },
   {
     "id": 41,
@@ -2961,12 +4568,46 @@
     "specialization": [
       "Универсальный"
     ],
-    "EGE": "62,5 - Средний балл на ЕГЭ в 2025 году",
-    "VUZ": "83% - Выпускников поступивших в ВУЗы в 2025 году",
+    "EGE": "67,5 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "83% - Выпускников поступивших в ВУЗы в 2026 году",
     "Olympiads": [
       "135 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://shk54-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk54-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "3 - Выпускника с медалью за 2026 год"
+    ],
+    "other_results": [
+      "1 - Выпускник награжден Почетным знаком Губернатора Саратовской области \"За отличие в учебе\""
+    ],
+    "results_kpi_raw": [
+      "135 - Призеров Всероссийской олимпиады за 3 года",
+      "3 - Выпускника с медалью за 2026 год",
+      "67,5 - Средний балл на ЕГЭ в 2026 году",
+      "83% - Выпускников поступивших в ВУЗы в 2026 году",
+      "1 - Выпускник награжден Почетным знаком Губернатора Саратовской области \"За отличие в учебе\""
+    ],
+    "EGE_2026": "67,5 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "83% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "135 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": [
+      "3 - Выпускника с медалью за 2026 год"
+    ],
+    "other_results_2026": [
+      "1 - Выпускник награжден Почетным знаком Губернатора Саратовской области \"За отличие в учебе\""
+    ],
+    "results_target_year": 2026,
+    "EGE_prev": "62,5 - Средний балл на ЕГЭ в 2025 году",
+    "EGE_history": [
+      "62,5 - Средний балл на ЕГЭ в 2025 году"
+    ],
+    "VUZ_prev": "83% - Выпускников поступивших в ВУЗы в 2025 году",
+    "VUZ_history": [
+      "83% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "results_parsed_at": "2026-10-18T14:58:25.950770+00:00"
   },
   {
     "id": 42,
@@ -3006,12 +4647,49 @@
       "Технологический профиль",
       "Социально-экономический профиль"
     ],
-    "EGE": "63,8 - Средний балл на ЕГЭ в 2025 году",
-    "VUZ": "98% - Выпускников поступивших в ВУЗы в 2025 году",
+    "EGE": "63,8 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "98% - Выпускников поступивших в ВУЗы в 2026 году",
     "Olympiads": [
+      "117 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "infrastructure": "https://lic2-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "38 - Выпускников с золотой медалью за 5 лет"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "117 - Призеров Всероссийской олимпиады за 3 года",
+      "38 - Выпускников с золотой медалью за 5 лет",
+      "63,8 - Средний балл на ЕГЭ в 2026 году",
+      "98% - Выпускников поступивших в ВУЗы в 2026 году"
+    ],
+    "EGE_2026": "63,8 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "98% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "117 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": [
+      "38 - Выпускников с золотой медалью за 5 лет"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "EGE_prev": "63,8 - Средний балл на ЕГЭ в 2025 году",
+    "EGE_history": [
+      "63,8 - Средний балл на ЕГЭ в 2025 году"
+    ],
+    "VUZ_prev": "98% - Выпускников поступивших в ВУЗы в 2025 году",
+    "VUZ_history": [
+      "98% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "Olympiads_prev": [
       "12 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://lic2-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "Olympiads_history": [
+      [
+        "12 - Призеров Всероссийской олимпиады за 3 года"
+      ]
+    ],
+    "results_parsed_at": "2026-10-18T14:58:50.987604+00:00"
   },
   {
     "id": 43,
@@ -3047,9 +4725,59 @@
       ]
     },
     "link_gosuslugi": "https://sc40sar.gosuslugi.ru/",
-    "EGE": "51 - Средний балл на ЕГЭ в 2024 году",
-    "VUZ": "99% - Выпускников поступивших в ВУЗы в 2024 году",
-    "infrastructure": "https://sc40sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "EGE": "57 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "98% - Выпускников поступивших в ВУЗы в 2026 году",
+    "infrastructure": "https://sc40sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [
+      "11 - Выпускников с золотой медалью за 2026 год",
+      "3 - Выпускника с серебряной медалью за 2026 год"
+    ],
+    "other_results": [
+      "Телефон - (8-8342) 55-79-98",
+      "2 - заслуженных учителя",
+      "1 - кандидат педагогических наук",
+      "34 - учителя высшей категории",
+      "Записать ребенка в школу онлайн - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_kpi_raw": [
+      "11 - Выпускников с золотой медалью за 2026 год",
+      "57 - Средний балл на ЕГЭ в 2026 году",
+      "98% - Выпускников поступивших в ВУЗы в 2026 году",
+      "3 - Выпускника с серебряной медалью за 2026 год",
+      "Телефон - (8-8342) 55-79-98",
+      "2 - заслуженных учителя",
+      "1 - кандидат педагогических наук",
+      "34 - учителя высшей категории",
+      "Записать ребенка в школу онлайн - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "EGE_2026": "57 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "98% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": null,
+    "Medals_2026": [
+      "11 - Выпускников с золотой медалью за 2026 год",
+      "3 - Выпускника с серебряной медалью за 2026 год"
+    ],
+    "other_results_2026": [
+      "Телефон - (8-8342) 55-79-98",
+      "2 - заслуженных учителя",
+      "1 - кандидат педагогических наук",
+      "34 - учителя высшей категории",
+      "Записать ребенка в школу онлайн - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_target_year": 2026,
+    "EGE_prev": "51 - Средний балл на ЕГЭ в 2024 году",
+    "EGE_history": [
+      "51 - Средний балл на ЕГЭ в 2024 году"
+    ],
+    "VUZ_prev": "99% - Выпускников поступивших в ВУЗы в 2024 году",
+    "VUZ_history": [
+      "99% - Выпускников поступивших в ВУЗы в 2024 году"
+    ],
+    "results_parsed_at": "2026-10-18T14:59:27.315783+00:00"
   },
   {
     "id": 44,
@@ -3088,12 +4816,41 @@
     "specialization": [
       "Социально-экономический профиль"
     ],
-    "EGE": "71,0 - Средний балл по русскому языку на ЕГЭ в 2023 году",
-    "VUZ": "92,3% - Выпускников поступивших в ВУЗы в 2024 году",
+    "EGE": "71,0 - Средний балл по русскому языку на ЕГЭ в 2026 году",
+    "VUZ": "95,7% - Выпускников поступивших в ВУЗы в 2026 году",
     "Olympiads": [
       "334 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://shk41-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk41-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "5 - Выпускников с медалью I степени за 2026 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "334 - Призеров Всероссийской олимпиады за 3 года",
+      "5 - Выпускников с медалью I степени за 2026 год",
+      "71,0 - Средний балл по русскому языку на ЕГЭ в 2026 году",
+      "95,7% - Выпускников поступивших в ВУЗы в 2026 году"
+    ],
+    "EGE_2026": "71,0 - Средний балл по русскому языку на ЕГЭ в 2026 году",
+    "VUZ_2026": "95,7% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "334 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": [
+      "5 - Выпускников с медалью I степени за 2026 год"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "EGE_prev": "71,0 - Средний балл по русскому языку на ЕГЭ в 2023 году",
+    "EGE_history": [
+      "71,0 - Средний балл по русскому языку на ЕГЭ в 2023 году"
+    ],
+    "VUZ_prev": "92,3% - Выпускников поступивших в ВУЗы в 2024 году",
+    "VUZ_history": [
+      "92,3% - Выпускников поступивших в ВУЗы в 2024 году"
+    ],
+    "results_parsed_at": "2026-10-18T14:59:50.956128+00:00"
   },
   {
     "id": 45,
@@ -3129,9 +4886,41 @@
       ]
     },
     "link_gosuslugi": "https://shk101-sar.gosuslugi.ru/",
-    "EGE": "51,0 - Средний балл на ЕГЭ в 2025 году",
-    "VUZ": "73% - Выпускников поступивших в ВУЗы в 2025 году",
-    "infrastructure": "https://shk101-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "EGE": "58,0 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "78% - Выпускников поступивших в ВУЗы в 2026 году",
+    "infrastructure": "https://shk101-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [
+      "2 - Выпускники с медалью за особые успехи в обучении II степени за 2026 год"
+    ],
+    "other_results": [
+      "2 - Призеров и победителей муниципального этапа ВсОШ"
+    ],
+    "results_kpi_raw": [
+      "2 - Призеров и победителей муниципального этапа ВсОШ",
+      "2 - Выпускники с медалью за особые успехи в обучении II степени за 2026 год",
+      "58,0 - Средний балл на ЕГЭ в 2026 году",
+      "78% - Выпускников поступивших в ВУЗы в 2026 году"
+    ],
+    "EGE_2026": "58,0 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "78% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": null,
+    "Medals_2026": [
+      "2 - Выпускники с медалью за особые успехи в обучении II степени за 2026 год"
+    ],
+    "other_results_2026": [
+      "2 - Призеров и победителей муниципального этапа ВсОШ"
+    ],
+    "results_target_year": 2026,
+    "EGE_prev": "51,0 - Средний балл на ЕГЭ в 2025 году",
+    "EGE_history": [
+      "51,0 - Средний балл на ЕГЭ в 2025 году"
+    ],
+    "VUZ_prev": "73% - Выпускников поступивших в ВУЗы в 2025 году",
+    "VUZ_history": [
+      "73% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "results_parsed_at": "2026-10-18T15:00:18.001324+00:00"
   },
   {
     "id": 46,
@@ -3169,12 +4958,50 @@
     "link_gosuslugi": "https://lgn-sar.gosuslugi.ru/",
     "specialization": [
       "Гуманитарный профиль",
-      "Естественно-научный профиль"
+      "Естественно-научный профиль",
+      "Технологический профиль"
     ],
-    "EGE": "83 % - Средний балл ЕГЭ английский язык - 2023/2024",
+    "EGE": "85 - Средний балл ЕГЭ информатика - 2025/2026",
     "Olympiads": [
+      "25 - Призеров Всероссийской олимпиады - 2025-2026"
+    ],
+    "Medals": [
+      "9 - МЕДАЛИСТОВ - 2025/2026"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "25 - Призеров Всероссийской олимпиады - 2025-2026",
+      "9 - МЕДАЛИСТОВ - 2025/2026",
+      "90 - Средний балл ЕГЭ русский язык - 2025/2026",
+      "90 - Средний балл ЕГЭ английский язык - 2025/2026",
+      "90 - Средний балл ЕГЭ история - 2025/2026",
+      "90 - Средний балл ЕГЭ химия - 2025/2026",
+      "85 - Средний балл ЕГЭ профильная математика - 2025/2026",
+      "85 - Средний балл ЕГЭ информатика - 2025/2026"
+    ],
+    "EGE_2026": "85 - Средний балл ЕГЭ информатика - 2025/2026",
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "25 - Призеров Всероссийской олимпиады - 2025-2026"
+    ],
+    "Medals_2026": [
+      "9 - МЕДАЛИСТОВ - 2025/2026"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "EGE_prev": "83 % - Средний балл ЕГЭ английский язык - 2023/2024",
+    "EGE_history": [
+      "83 % - Средний балл ЕГЭ английский язык - 2023/2024"
+    ],
+    "Olympiads_prev": [
       "25 - Призеров Всероссийской олимпиады - 2023-2024"
-    ]
+    ],
+    "Olympiads_history": [
+      [
+        "25 - Призеров Всероссийской олимпиады - 2023-2024"
+      ]
+    ],
+    "results_parsed_at": "2026-10-18T15:01:03.196226+00:00"
   },
   {
     "id": 47,
@@ -3219,7 +5046,27 @@
     "VUZ": "88 % - Выпускников поступивших в ВУЗы в 2024 году",
     "Olympiads": [
       "40 - Призеров муниципального этапа Всероссийской олимпиады за 3 года"
-    ]
+    ],
+    "Medals": [
+      "22 - Выпускника с медалью за 2022-2024 гг: (золотая - 18, серебряная - 4)"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "40 - Призеров муниципального этапа Всероссийской олимпиады за 3 года",
+      "22 - Выпускника с медалью за 2022-2024 гг: (золотая - 18, серебряная - 4)",
+      "62 - Средний балл на ЕГЭ в 2024 году",
+      "100 - Максимальный балл на ЕГЭ в 2024 году",
+      "88 % - Выпускников поступивших в ВУЗы в 2024 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "40 - Призеров муниципального этапа Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:01:36.553430+00:00"
   },
   {
     "id": 48,
@@ -3264,7 +5111,24 @@
     "Olympiads": [
       "242 - Призеров Всероссийской олимпиады за 2022/2023 учебный год"
     ],
-    "infrastructure": "https://shk44-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk44-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "2 - Выпускников с золотой медалью за 2023 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "242 - Призеров Всероссийской олимпиады за 2022/2023 учебный год",
+      "2 - Выпускников с золотой медалью за 2023 год",
+      "91 - Высший балл на ЕГЭ в 2023 году",
+      "80% - Выпускников поступивших в ВУЗы в 2023 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:02:28.765991+00:00"
   },
   {
     "id": 49,
@@ -3299,7 +5163,14 @@
         51.540363
       ]
     },
-    "link_gosuslugi": "нету в excel"
+    "link_gosuslugi": "нету в excel",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:02:31.823212+00:00"
   },
   {
     "id": 5,
@@ -3335,9 +5206,31 @@
       ]
     },
     "link_gosuslugi": "https://school70-sar.gosuslugi.ru/",
-    "EGE": "46 - Средний балл на ЕГЭ в 2025 году",
-    "VUZ": "8 - Выпускников поступивших в ВУЗы в 2025 году",
-    "infrastructure": "https://school70-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "EGE": "46 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "8 - Выпускников поступивших в ВУЗы в 2026 году",
+    "infrastructure": "https://school70-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [
+      "46 - Средний балл на ЕГЭ в 2026 году",
+      "8 - Выпускников поступивших в ВУЗы в 2026 году"
+    ],
+    "EGE_2026": "46 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "8 - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "EGE_prev": "46 - Средний балл на ЕГЭ в 2025 году",
+    "EGE_history": [
+      "46 - Средний балл на ЕГЭ в 2025 году"
+    ],
+    "VUZ_prev": "8 - Выпускников поступивших в ВУЗы в 2025 году",
+    "VUZ_history": [
+      "8 - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "results_parsed_at": "2026-10-18T15:03:06.124791+00:00"
   },
   {
     "id": 50,
@@ -3375,12 +5268,49 @@
     "link_gosuslugi": "https://shk48-sar.gosuslugi.ru/",
     "specialization": [
       "Математика",
-      "Обществознание"
+      "Биология"
     ],
     "Olympiads": [
+      "243 - призеров Всероссийской олимпиады за 2023 - 2026 годы"
+    ],
+    "infrastructure": "https://shk48-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "VUZ": "86% - выпускников поступили в ВУЗы в 2025 году",
+    "Medals": [
+      "5 - выпускников окончили школу с медалью «За особые успехи в учении» I степени за 2022 - 2026 годы",
+      "2 - выпускник окончил школу с медалью «За особые успехи в учении» II степени за 2025 - 2026 годы"
+    ],
+    "other_results": [
+      "3 - выпускника награждены Почётным знаком Губернатора Саратовской области \"За отличие в учебе\" за 2022 - 2026 годы"
+    ],
+    "results_kpi_raw": [
+      "243 - призеров Всероссийской олимпиады за 2023 - 2026 годы",
+      "5 - выпускников окончили школу с медалью «За особые успехи в учении» I степени за 2022 - 2026 годы",
+      "2 - выпускник окончил школу с медалью «За особые успехи в учении» II степени за 2025 - 2026 годы",
+      "3 - выпускника награждены Почётным знаком Губернатора Саратовской области \"За отличие в учебе\" за 2022 - 2026 годы",
+      "86% - выпускников поступили в ВУЗы в 2025 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "243 - призеров Всероссийской олимпиады за 2023 - 2026 годы"
+    ],
+    "Medals_2026": [
+      "5 - выпускников окончили школу с медалью «За особые успехи в учении» I степени за 2022 - 2026 годы",
+      "2 - выпускник окончил школу с медалью «За особые успехи в учении» II степени за 2025 - 2026 годы"
+    ],
+    "other_results_2026": [
+      "3 - выпускника награждены Почётным знаком Губернатора Саратовской области \"За отличие в учебе\" за 2022 - 2026 годы"
+    ],
+    "results_target_year": 2026,
+    "Olympiads_prev": [
       "280 - призеров Всероссийской олимпиады за 2023 - 2025 годы"
     ],
-    "infrastructure": "https://shk48-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "Olympiads_history": [
+      [
+        "280 - призеров Всероссийской олимпиады за 2023 - 2025 годы"
+      ]
+    ],
+    "results_parsed_at": "2026-10-18T15:03:29.442990+00:00"
   },
   {
     "id": 51,
@@ -3424,7 +5354,26 @@
     "Olympiads": [
       "82 - Призеров Всероссийской олимпиады школьников муниципального и регионального этапов за 3 года"
     ],
-    "infrastructure": "https://shk103-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk103-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "3 - Выпускников с золотой медалью за 2021 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "82 - Призеров Всероссийской олимпиады школьников муниципального и регионального этапов за 3 года",
+      "3 - Выпускников с золотой медалью за 2021 год",
+      "60,8 - Средний балл на ЕГЭ в 2021 году",
+      "89% - Выпускников поступивших в ВУЗы в 2021 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "82 - Призеров Всероссийской олимпиады школьников муниципального и регионального этапов за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:04:07.620711+00:00"
   },
   {
     "id": 52,
@@ -3465,7 +5414,26 @@
     "Olympiads": [
       "27 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://shk60-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk60-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "1 - Выпускников с золотой медалью за 2023 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "27 - Призеров Всероссийской олимпиады за 3 года",
+      "1 - Выпускников с золотой медалью за 2023 год",
+      "52,1 - Средний балл на ЕГЭ в 2023 году",
+      "70% - Выпускников поступивших в ВУЗы в 2023 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "27 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:04:27.787314+00:00"
   },
   {
     "id": 53,
@@ -3506,7 +5474,26 @@
     "Olympiads": [
       "250 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://shk61-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk61-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "5 - Выпускника с золотой медалью за 2023 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "250 - Призеров Всероссийской олимпиады за 3 года",
+      "5 - Выпускника с золотой медалью за 2023 год",
+      "54,08 - Средний балл на ЕГЭ в 2023 году",
+      "80% - Выпускников поступивших в ВУЗы в 2023 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "250 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:05:27.566257+00:00"
   },
   {
     "id": 54,
@@ -3542,7 +5529,18 @@
       ]
     },
     "link_gosuslugi": "https://zvezda-sar.gosuslugi.ru/",
-    "infrastructure": "https://zvezda-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://zvezda-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:05:57.591678+00:00"
   },
   {
     "id": 55,
@@ -3579,7 +5577,24 @@
     },
     "link_gosuslugi": "https://shk57-sar.gosuslugi.ru/",
     "EGE": "67.5 - Средний балл на ЕГЭ в 2024 году",
-    "VUZ": "70% - Выпускников поступивших в ВУЗы в 2024 году"
+    "VUZ": "70% - Выпускников поступивших в ВУЗы в 2024 году",
+    "Olympiads": [],
+    "Medals": [
+      "02 и 02 - Выпускников с золотыми и серебряными медалями за 2024г."
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "02 и 02 - Выпускников с золотыми и серебряными медалями за 2024г.",
+      "67.5 - Средний балл на ЕГЭ в 2024 году",
+      "70% - Выпускников поступивших в ВУЗы в 2024 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:06:28.867490+00:00"
   },
   {
     "id": 56,
@@ -3616,7 +5631,23 @@
     },
     "link_gosuslugi": "https://shk86-sar.gosuslugi.ru/",
     "VUZ": "92% - Выпускников поступивших в ВУЗы в 2021 году",
-    "infrastructure": "https://shk86-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk86-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [
+      "2 - Выпускника с золотой медалью за 2021 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "2 - Выпускника с золотой медалью за 2021 год",
+      "92% - Выпускников поступивших в ВУЗы в 2021 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:07:09.005739+00:00"
   },
   {
     "id": 57,
@@ -3652,7 +5683,33 @@
       ]
     },
     "link_gosuslugi": "https://unikum64.gosuslugi.ru/",
-    "infrastructure": "https://unikum64.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://unikum64.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "Выпускники - Наши выпускники поступают в техникумы и колледжи г. Саратова",
+      "Телефон - +7 (8452) 26-31-43",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_kpi_raw": [
+      "Выпускники - Наши выпускники поступают в техникумы и колледжи г. Саратова",
+      "Телефон - +7 (8452) 26-31-43",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "Выпускники - Наши выпускники поступают в техникумы и колледжи г. Саратова",
+      "Телефон - +7 (8452) 26-31-43",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:08:01.268790+00:00"
   },
   {
     "id": 58,
@@ -3687,7 +5744,18 @@
         51.602897
       ]
     },
-    "link_gosuslugi": "https://shk64-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/osnovnye-svedeniya/"
+    "link_gosuslugi": "https://shk64-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/osnovnye-svedeniya/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:19:44.253331+00:00"
   },
   {
     "id": 59,
@@ -3735,7 +5803,26 @@
     "Olympiads": [
       "251 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://shk38-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk38-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "251 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T16:08:40.397135+00:00",
+    "Medals": [
+      "03 - Выпускников с золотой медалью за 2025 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "251 - Призеров Всероссийской олимпиады за 3 года",
+      "03 - Выпускников с золотой медалью за 2025 год",
+      "54,5 - Средний балл на ЕГЭ в 2025 году",
+      "43% - Выпускников поступивших в ВУЗы в 2025 году"
+    ]
   },
   {
     "id": 6,
@@ -3779,7 +5866,24 @@
     ],
     "EGE": "63,2 - Средний балл на ЕГЭ в 2023 году",
     "VUZ": "84% - Выпускников поступивших в ВУЗы в 2023 году",
-    "infrastructure": "https://shk73-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk73-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [
+      "4 - Выпускников с золотой медалью за 2023 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "4 - Выпускников с золотой медалью за 2023 год",
+      "63,2 - Средний балл на ЕГЭ в 2023 году",
+      "84% - Выпускников поступивших в ВУЗы в 2023 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:24:32.863417+00:00"
   },
   {
     "id": 60,
@@ -3819,11 +5923,35 @@
       "Социально-экономический профиль",
       "Технологический профиль",
       "Гуманитарный профиль",
-      "Естественно-научный профиль",
-      "Инженерный профиль",
-      "Информационно-технологический профиль"
+      "Естественно-научный профиль"
     ],
-    "infrastructure": "https://lic53-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://lic53-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "1 - Место Городского смотра-конкурса школьных музеев ОУ МО «Город Саратов»",
+      "1 - Место Городского конкурса детских экологических театров и агитбригад",
+      "1 - Место Городского конкурса «Лучший музей о ВОВ»",
+      "1 - Место Международного детского фестиваля - конкурса «Наследники традиций»"
+    ],
+    "results_kpi_raw": [
+      "1 - Место Городского смотра-конкурса школьных музеев ОУ МО «Город Саратов»",
+      "1 - Место Городского конкурса детских экологических театров и агитбригад",
+      "1 - Место Городского конкурса «Лучший музей о ВОВ»",
+      "1 - Место Международного детского фестиваля - конкурса «Наследники традиций»"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "1 - Место Городского смотра-конкурса школьных музеев ОУ МО «Город Саратов»",
+      "1 - Место Городского конкурса детских экологических театров и агитбригад",
+      "1 - Место Городского конкурса «Лучший музей о ВОВ»",
+      "1 - Место Международного детского фестиваля - конкурса «Наследники традиций»"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:25:25.768382+00:00"
   },
   {
     "id": 61,
@@ -3859,12 +5987,41 @@
       ]
     },
     "link_gosuslugi": "https://lyceum62.gosuslugi.ru/",
-    "EGE": "74 - Средний балл на ЕГЭ в 2025 году",
-    "VUZ": "99% - Выпускников поступивших в ВУЗы в 2025 году",
+    "EGE": "75 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "100% - Выпускников поступивших в ВУЗы в 2026 году",
     "Olympiads": [
       "129 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://lyceum62.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://lyceum62.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "51 - Выпускников с золотой медалью за 5 лет"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "129 - Призеров Всероссийской олимпиады за 3 года",
+      "51 - Выпускников с золотой медалью за 5 лет",
+      "75 - Средний балл на ЕГЭ в 2026 году",
+      "100% - Выпускников поступивших в ВУЗы в 2026 году"
+    ],
+    "EGE_2026": "75 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "100% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "129 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": [
+      "51 - Выпускников с золотой медалью за 5 лет"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "EGE_prev": "74 - Средний балл на ЕГЭ в 2025 году",
+    "EGE_history": [
+      "74 - Средний балл на ЕГЭ в 2025 году"
+    ],
+    "VUZ_prev": "99% - Выпускников поступивших в ВУЗы в 2025 году",
+    "VUZ_history": [
+      "99% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "results_parsed_at": "2026-10-18T15:25:53.211196+00:00"
   },
   {
     "id": 62,
@@ -3908,7 +6065,26 @@
     "Olympiads": [
       "58 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://gim108-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://gim108-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "4 - Выпускников с золотой медалью за 2025 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "58 - Призеров Всероссийской олимпиады за 3 года",
+      "4 - Выпускников с золотой медалью за 2025 год",
+      "60,3 - Средний балл на ЕГЭ в 2025 году",
+      "88% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "58 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:26:17.103473+00:00"
   },
   {
     "id": 63,
@@ -3949,7 +6125,26 @@
     "Olympiads": [
       "315 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://lic15-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://lic15-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "15 - Выпускников награждены медалью \"За особые успехи в учении\" за 2025 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "315 - Призеров Всероссийской олимпиады за 3 года",
+      "15 - Выпускников награждены медалью \"За особые успехи в учении\" за 2025 год",
+      "74,14 - Средний балл на ЕГЭ в 2025 году",
+      "100% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "315 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:26:43.720663+00:00"
   },
   {
     "id": 64,
@@ -3994,7 +6189,29 @@
     "Olympiads": [
       "46 - призеров муниципального этапа Всероссийской олимпиады школьников за 3 года"
     ],
-    "infrastructure": "https://gim7-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://gim7-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "VUZ": "100% - выпускников поступивших в ВУЗы в 2024 году",
+    "Medals": [
+      "10 - выпускников награждены медалью \"За особые успехи в учении I степени\" в 2025 году",
+      "9 - выпускников награждены медалью \"За особые успехи в учении II степени\" в 2025 году"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "46 - призеров муниципального этапа Всероссийской олимпиады школьников за 3 года",
+      "10 - выпускников награждены медалью \"За особые успехи в учении I степени\" в 2025 году",
+      "9 - выпускников награждены медалью \"За особые успехи в учении II степени\" в 2025 году",
+      "64,61 - средний балл на ЕГЭ в 2025 году",
+      "100% - выпускников поступивших в ВУЗы в 2024 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "46 - призеров муниципального этапа Всероссийской олимпиады школьников за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:27:14.548049+00:00"
   },
   {
     "id": 65,
@@ -4032,7 +6249,28 @@
     "link_gosuslugi": "https://shk49-sar.gosuslugi.ru/",
     "EGE": "53,9 - Средний балл на ЕГЭ в 2025 году",
     "VUZ": "75 % - Выпускников поступивших в ВУЗы в 2025 году",
-    "infrastructure": "https://shk49-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk49-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [
+      "1 - Выпускник с золотой медалью за 2025 год",
+      "1 - Выпускник с золотой медалью за 2023 год",
+      "1 - выпускник с серебряной медалью в 2024 году"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "1 - Выпускник с золотой медалью за 2025 год",
+      "53,9 - Средний балл на ЕГЭ в 2025 году",
+      "75 % - Выпускников поступивших в ВУЗы в 2025 году",
+      "1 - Выпускник с золотой медалью за 2023 год",
+      "1 - выпускник с серебряной медалью в 2024 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:28:08.972176+00:00"
   },
   {
     "id": 66,
@@ -4067,7 +6305,14 @@
         51.532111
       ]
     },
-    "link_gosuslugi": "нету в excel"
+    "link_gosuslugi": "нету в excel",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:28:12.595016+00:00"
   },
   {
     "id": 67,
@@ -4111,7 +6356,23 @@
     "Olympiads": [
       "60 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://moulpn.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://moulpn.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "60 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T16:09:47.037654+00:00",
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [
+      "60 - Призеров Всероссийской олимпиады за 3 года",
+      "100% - Выпускников поступивших в ВУЗы в 2025 году",
+      "71.3 - Средний балл на ЕГЭ в 2025 году"
+    ]
   },
   {
     "id": 68,
@@ -4147,7 +6408,32 @@
       ]
     },
     "link_gosuslugi": "https://shk26-sar.gosuslugi.ru/",
-    "infrastructure": "https://shk26-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk26-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "100% - учеников, получивших аттестат об общем образовании",
+      "98% - Выпускников, поступивших в СУЗы в 2022 году",
+      "25% - обучающихся, получивших значки ГТО",
+      "100% - обучающихся, охваченных программами дополнительного образования"
+    ],
+    "results_kpi_raw": [
+      "100% - учеников, получивших аттестат об общем образовании",
+      "98% - Выпускников, поступивших в СУЗы в 2022 году",
+      "25% - обучающихся, получивших значки ГТО",
+      "100% - обучающихся, охваченных программами дополнительного образования"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "100% - учеников, получивших аттестат об общем образовании",
+      "25% - обучающихся, получивших значки ГТО",
+      "100% - обучающихся, охваченных программами дополнительного образования"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:33:16.200034+00:00"
   },
   {
     "id": 69,
@@ -4182,7 +6468,14 @@
         51.539865
       ]
     },
-    "link_gosuslugi": null
+    "link_gosuslugi": null,
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:33:19.945183+00:00"
   },
   {
     "id": 7,
@@ -4223,8 +6516,51 @@
       "Технологическое",
       "Социально-экономическое"
     ],
-    "EGE": "57,6 - Общий средний балл ЕГЭ 2025 года",
-    "infrastructure": "https://shk45-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "EGE": "56,4 - Общий средний балл ЕГЭ 2026 года",
+    "infrastructure": "https://shk45-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "VUZ": "81,5 % - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads": [
+      "17 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals": [
+      "2 - В 2026г. 2 выпускника 11А награждены медалью \"За особые успехи в учении\" 1 степени"
+    ],
+    "other_results": [
+      "ЕГЭ-2026 - Самые высокие баллы: Русский язык-91, Литература-89, Математика-82, Обществознание-88",
+      "1 - Выпускница 11 класса награждена Почетным знаком Губернатора Саратовской области \"За отличие в учебе\" в 2026 г.",
+      "1 - Выпускница награждена нагрудным знаком главы МО \"Город Саратов\" \"За особые успехи в учении\" за 2026 год",
+      "2026г - В 2026г. выпускники 11 класса поступили в НИУ МГСУ, СГУ, СГЮА, СГМУ"
+    ],
+    "results_kpi_raw": [
+      "ЕГЭ-2026 - Самые высокие баллы: Русский язык-91, Литература-89, Математика-82, Обществознание-88",
+      "2 - В 2026г. 2 выпускника 11А награждены медалью \"За особые успехи в учении\" 1 степени",
+      "56,4 - Общий средний балл ЕГЭ 2026 года",
+      "81,5 % - Выпускников поступивших в ВУЗы в 2026 году",
+      "1 - Выпускница 11 класса награждена Почетным знаком Губернатора Саратовской области \"За отличие в учебе\" в 2026 г.",
+      "1 - Выпускница награждена нагрудным знаком главы МО \"Город Саратов\" \"За особые успехи в учении\" за 2026 год",
+      "2026г - В 2026г. выпускники 11 класса поступили в НИУ МГСУ, СГУ, СГЮА, СГМУ",
+      "17 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "EGE_2026": "56,4 - Общий средний балл ЕГЭ 2026 года",
+    "VUZ_2026": "81,5 % - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "17 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": [
+      "2 - В 2026г. 2 выпускника 11А награждены медалью \"За особые успехи в учении\" 1 степени"
+    ],
+    "other_results_2026": [
+      "ЕГЭ-2026 - Самые высокие баллы: Русский язык-91, Литература-89, Математика-82, Обществознание-88",
+      "1 - Выпускница 11 класса награждена Почетным знаком Губернатора Саратовской области \"За отличие в учебе\" в 2026 г.",
+      "1 - Выпускница награждена нагрудным знаком главы МО \"Город Саратов\" \"За особые успехи в учении\" за 2026 год",
+      "2026г - В 2026г. выпускники 11 класса поступили в НИУ МГСУ, СГУ, СГЮА, СГМУ"
+    ],
+    "results_target_year": 2026,
+    "EGE_prev": "57,6 - Общий средний балл ЕГЭ 2025 года",
+    "EGE_history": [
+      "57,6 - Общий средний балл ЕГЭ 2025 года"
+    ],
+    "results_parsed_at": "2026-10-18T15:33:45.917889+00:00"
   },
   {
     "id": 70,
@@ -4269,7 +6605,29 @@
     "Olympiads": [
       "46 - призеров муниципального этапа Всероссийской олимпиады школьников за 3 года"
     ],
-    "infrastructure": "https://gim7-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://gim7-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "VUZ": "100% - выпускников поступивших в ВУЗы в 2024 году",
+    "Medals": [
+      "10 - выпускников награждены медалью \"За особые успехи в учении I степени\" в 2025 году",
+      "9 - выпускников награждены медалью \"За особые успехи в учении II степени\" в 2025 году"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "46 - призеров муниципального этапа Всероссийской олимпиады школьников за 3 года",
+      "10 - выпускников награждены медалью \"За особые успехи в учении I степени\" в 2025 году",
+      "9 - выпускников награждены медалью \"За особые успехи в учении II степени\" в 2025 году",
+      "64,61 - средний балл на ЕГЭ в 2025 году",
+      "100% - выпускников поступивших в ВУЗы в 2024 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "46 - призеров муниципального этапа Всероссийской олимпиады школьников за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:34:08.590752+00:00"
   },
   {
     "id": 71,
@@ -4305,7 +6663,51 @@
       ]
     },
     "link_gosuslugi": "https://sh-int3-saratov-r64.gosweb.gosuslugi.ru/",
-    "infrastructure": "https://sh-int3-saratov-r64.gosweb.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://sh-int3-saratov-r64.gosweb.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "Телефон - +7 (8452) 64-69-22",
+      "2 - кандидата наук",
+      "29 - учителей высшей категории",
+      "22 - учителя первой категории",
+      "6 - Почетных работников общего образования РФ - почетное звание",
+      "2 - Отличника народного просвещения - нагрудный знак",
+      "2 - Почетных работника воспитания и просвещения РФ - нагрудный знак",
+      "4 - Почетных работника общего образования РФ - нагрудный знак",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_kpi_raw": [
+      "Телефон - +7 (8452) 64-69-22",
+      "2 - кандидата наук",
+      "29 - учителей высшей категории",
+      "22 - учителя первой категории",
+      "6 - Почетных работников общего образования РФ - почетное звание",
+      "2 - Отличника народного просвещения - нагрудный знак",
+      "2 - Почетных работника воспитания и просвещения РФ - нагрудный знак",
+      "4 - Почетных работника общего образования РФ - нагрудный знак",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "Телефон - +7 (8452) 64-69-22",
+      "2 - кандидата наук",
+      "29 - учителей высшей категории",
+      "22 - учителя первой категории",
+      "6 - Почетных работников общего образования РФ - почетное звание",
+      "2 - Отличника народного просвещения - нагрудный знак",
+      "2 - Почетных работника воспитания и просвещения РФ - нагрудный знак",
+      "4 - Почетных работника общего образования РФ - нагрудный знак",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:34:51.183907+00:00"
   },
   {
     "id": 72,
@@ -4341,7 +6743,33 @@
       ]
     },
     "link_gosuslugi": "https://shk237-sar.gosuslugi.ru/",
-    "infrastructure": "https://shk237-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk237-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "31 - Педагогов",
+      "178 - Обучающихся",
+      "130 - Воспитанников",
+      "8/5 - Классов/групп"
+    ],
+    "results_kpi_raw": [
+      "31 - Педагогов",
+      "178 - Обучающихся",
+      "130 - Воспитанников",
+      "8/5 - Классов/групп"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "31 - Педагогов",
+      "178 - Обучающихся",
+      "130 - Воспитанников",
+      "8/5 - Классов/групп"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:35:32.462869+00:00"
   },
   {
     "id": 73,
@@ -4377,7 +6805,18 @@
       ]
     },
     "link_gosuslugi": "https://shk78-sar.gosuslugi.ru/",
-    "infrastructure": "https://shk78-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk78-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:36:17.419190+00:00"
   },
   {
     "id": 74,
@@ -4420,7 +6859,15 @@
       "Универсальный профиль"
     ],
     "VUZ": "80% - Выпускников поступивших в ВУЗы в 2022 году",
-    "infrastructure": "https://gim5-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://gim5-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "parse_error": "TimeoutException: Message: timeout: Timed out receiving message from renderer: 56.461\n  (Session info: chrome=154.0.8037.98)\nStacktrace:\n\tchromedriver!GetHandleVerifier [0x7ff61aee9d55+5a55]\n\tchromedriver!(No symbol) [0x7ff61ae0f540]\n\tchromedriver!(No symbol) [0x7ff61ac345fd]\n\tchromedriver!(No symbol) [0x7ff61ac21639]\n\tchromedriver!(No symbol) [0x7ff61ac21321]\n\tchromedriver!(No symbol) [0x7ff61ac1eff0]\n\tchromedriver!(No symbol) [0x7ff61ac1f93f]\n\tchromedriver!(No symbol) [0x7ff61ac2ee3a]\n\tchromedriver!(No symbol) [0x7ff61ac456eb]\n\tchromedriver!(No symbol) [0x7ff61ac4d66a]\n\tchromedriver!(No symbol) [0x7ff61ac20101]\n\tchromedriver!(No symbol) [0x7ff61ac4531e]\n\tchromedriver!(No symbol) [0x7ff61ace004f]\n\tchromedriver!(No symbol) [0x7ff61ac81a12]\n\tchromedriver!(No symbol) [0x7ff61ac82823]\n\tchromedriver!GetHandleVerifier [0x7ff61b3004b1+41c1b1]\n\tchromedriver!GetHandleVerifier [0x7ff61b32e26b+449f6b]\n\tchromedriver!GetHandleVerifier [0x7ff61b32274e+43e44e]\n\tchromedriver!GetHandleVerifier [0x7ff61afe32fe+feffe]\n\tchromedriver!(No symbol) [0x7ff61ae1cb55]\n\tchromedriver!(No symbol) [0x7ff61ae17f64]\n\tchromedriver!(No symbol) [0x7ff61ae180f4]\n\tchromedriver!(No symbol) [0x7ff61ae02e4c]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd7d847374+14]\n\tntdll!RtlUserThreadStart [0x7ffd7e3fcc91+21]\n",
+    "results_parsed_at": "2026-10-18T16:14:55.220304+00:00"
   },
   {
     "id": 75,
@@ -4459,9 +6906,39 @@
     "specialization": [
       "Технологический"
     ],
-    "EGE": "55,84 - Средний балл на ЕГЭ в 2025 году",
-    "VUZ": "100% - Выпускников поступивших в ВУЗы в 2025 году",
-    "infrastructure": "https://inlic-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "EGE": "63 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "95% - Выпускников поступивших в ВУЗы в 2026 году",
+    "infrastructure": "https://inlic-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [
+      "05 - Выпускников, получивших медаль \"За особые успехи в учении\" I степени за 2026 год",
+      "01 - Выпускников, получивших медаль \"За особые успехи в учении\" II степени за 2026 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "05 - Выпускников, получивших медаль \"За особые успехи в учении\" I степени за 2026 год",
+      "63 - Средний балл на ЕГЭ в 2026 году",
+      "95% - Выпускников поступивших в ВУЗы в 2026 году",
+      "01 - Выпускников, получивших медаль \"За особые успехи в учении\" II степени за 2026 год"
+    ],
+    "EGE_2026": "63 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "95% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": null,
+    "Medals_2026": [
+      "05 - Выпускников, получивших медаль \"За особые успехи в учении\" I степени за 2026 год",
+      "01 - Выпускников, получивших медаль \"За особые успехи в учении\" II степени за 2026 год"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "EGE_prev": "55,84 - Средний балл на ЕГЭ в 2025 году",
+    "EGE_history": [
+      "55,84 - Средний балл на ЕГЭ в 2025 году"
+    ],
+    "VUZ_prev": "100% - Выпускников поступивших в ВУЗы в 2025 году",
+    "VUZ_history": [
+      "100% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "results_parsed_at": "2026-10-18T15:41:19.322957+00:00"
   },
   {
     "id": 76,
@@ -4500,9 +6977,36 @@
     "specialization": [
       "Математический профиль"
     ],
-    "EGE": "69 - Средний балл на ЕГЭ в 2024 году",
-    "VUZ": "27 - Выпускников поступивших в ВУЗы в 2024 году",
-    "infrastructure": "https://lic50-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "EGE": "62 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "49 - Выпускников поступивших в ВУЗы в 2026 году",
+    "infrastructure": "https://lic50-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [
+      "8 - Выпусков награждены медалями \"За особые успехи в учении\" в 2026 году"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "8 - Выпусков награждены медалями \"За особые успехи в учении\" в 2026 году",
+      "62 - Средний балл на ЕГЭ в 2026 году",
+      "49 - Выпускников поступивших в ВУЗы в 2026 году"
+    ],
+    "EGE_2026": "62 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "49 - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": null,
+    "Medals_2026": [
+      "8 - Выпусков награждены медалями \"За особые успехи в учении\" в 2026 году"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "EGE_prev": "69 - Средний балл на ЕГЭ в 2024 году",
+    "EGE_history": [
+      "69 - Средний балл на ЕГЭ в 2024 году"
+    ],
+    "VUZ_prev": "27 - Выпускников поступивших в ВУЗы в 2024 году",
+    "VUZ_history": [
+      "27 - Выпускников поступивших в ВУЗы в 2024 году"
+    ],
+    "results_parsed_at": "2026-10-18T15:41:42.070928+00:00"
   },
   {
     "id": 77,
@@ -4545,12 +7049,41 @@
       "Биология",
       "Химия"
     ],
-    "EGE": "62 - Средний балл на ЕГЭ в 2025 году",
-    "VUZ": "86% - Выпускников поступивших в ВУЗы в 2025 году",
+    "EGE": "65 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "96% - Выпускников поступивших в ВУЗы в 2026 году",
     "Olympiads": [
       "210 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://gim75-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://gim75-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "9 - Выпускники с золотой (6) и серебряной (3) медалями за 2026 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "210 - Призеров Всероссийской олимпиады за 3 года",
+      "9 - Выпускники с золотой (6) и серебряной (3) медалями за 2026 год",
+      "65 - Средний балл на ЕГЭ в 2026 году",
+      "96% - Выпускников поступивших в ВУЗы в 2026 году"
+    ],
+    "EGE_2026": "65 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "96% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "210 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": [
+      "9 - Выпускники с золотой (6) и серебряной (3) медалями за 2026 год"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "EGE_prev": "62 - Средний балл на ЕГЭ в 2025 году",
+    "EGE_history": [
+      "62 - Средний балл на ЕГЭ в 2025 году"
+    ],
+    "VUZ_prev": "86% - Выпускников поступивших в ВУЗы в 2025 году",
+    "VUZ_history": [
+      "86% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "results_parsed_at": "2026-10-18T15:42:17.684757+00:00"
   },
   {
     "id": 78,
@@ -4588,12 +7121,50 @@
     "link_gosuslugi": "https://lgn-sar.gosuslugi.ru/",
     "specialization": [
       "Гуманитарный профиль",
-      "Естественно-научный профиль"
+      "Естественно-научный профиль",
+      "Технологический профиль"
     ],
-    "EGE": "83 % - Средний балл ЕГЭ английский язык - 2023/2024",
+    "EGE": "85 - Средний балл ЕГЭ информатика - 2025/2026",
     "Olympiads": [
+      "25 - Призеров Всероссийской олимпиады - 2025-2026"
+    ],
+    "Medals": [
+      "9 - МЕДАЛИСТОВ - 2025/2026"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "25 - Призеров Всероссийской олимпиады - 2025-2026",
+      "9 - МЕДАЛИСТОВ - 2025/2026",
+      "90 - Средний балл ЕГЭ русский язык - 2025/2026",
+      "90 - Средний балл ЕГЭ английский язык - 2025/2026",
+      "90 - Средний балл ЕГЭ история - 2025/2026",
+      "90 - Средний балл ЕГЭ химия - 2025/2026",
+      "85 - Средний балл ЕГЭ профильная математика - 2025/2026",
+      "85 - Средний балл ЕГЭ информатика - 2025/2026"
+    ],
+    "EGE_2026": "85 - Средний балл ЕГЭ информатика - 2025/2026",
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "25 - Призеров Всероссийской олимпиады - 2025-2026"
+    ],
+    "Medals_2026": [
+      "9 - МЕДАЛИСТОВ - 2025/2026"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "EGE_prev": "83 % - Средний балл ЕГЭ английский язык - 2023/2024",
+    "EGE_history": [
+      "83 % - Средний балл ЕГЭ английский язык - 2023/2024"
+    ],
+    "Olympiads_prev": [
       "25 - Призеров Всероссийской олимпиады - 2023-2024"
-    ]
+    ],
+    "Olympiads_history": [
+      [
+        "25 - Призеров Всероссийской олимпиады - 2023-2024"
+      ]
+    ],
+    "results_parsed_at": "2026-10-18T15:43:07.729419+00:00"
   },
   {
     "id": 79,
@@ -4634,12 +7205,52 @@
       "Гуманитарное",
       "Технологическое"
     ],
-    "VUZ": "100% - Выпускников поступили в ВУЗы в 2025 году",
-    "EGE": "79 - Средний балл на ЕГЭ в 2025 году",
+    "VUZ": "100% - Выпускников поступили в ВУЗы в 2026 году",
+    "EGE": "79 - Средний балл на ЕГЭ в 2026 году",
     "Olympiads": [
+      "181 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "infrastructure": "https://lic37-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "6 - Выпускников с золотой медалью в 2026 году",
+      "2 - Выпускников с серебряной медалью за 2026 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "181 - Призеров Всероссийской олимпиады за 3 года",
+      "6 - Выпускников с золотой медалью в 2026 году",
+      "2 - Выпускников с серебряной медалью за 2026 год",
+      "100% - Выпускников поступили в ВУЗы в 2026 году",
+      "79 - Средний балл на ЕГЭ в 2026 году"
+    ],
+    "EGE_2026": "79 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "100% - Выпускников поступили в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "181 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": [
+      "6 - Выпускников с золотой медалью в 2026 году",
+      "2 - Выпускников с серебряной медалью за 2026 год"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "EGE_prev": "79 - Средний балл на ЕГЭ в 2025 году",
+    "EGE_history": [
+      "79 - Средний балл на ЕГЭ в 2025 году"
+    ],
+    "VUZ_prev": "100% - Выпускников поступили в ВУЗы в 2025 году",
+    "VUZ_history": [
+      "100% - Выпускников поступили в ВУЗы в 2025 году"
+    ],
+    "Olympiads_prev": [
       "179 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://lic37-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "Olympiads_history": [
+      [
+        "179 - Призеров Всероссийской олимпиады за 3 года"
+      ]
+    ],
+    "results_parsed_at": "2026-10-18T15:43:38.787233+00:00"
   },
   {
     "id": 8,
@@ -4680,9 +7291,31 @@
       "Естественно-научный профиль",
       "Технологический профиль"
     ],
-    "EGE": "68 - Средний балл по русскому языку на ЕГЭ в 2025 году",
-    "VUZ": "93% - Выпускников поступили в ВУЗы в 2024 году",
-    "infrastructure": "https://shk2-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "EGE": "62 - Средний балл по русскому языку на ЕГЭ в 2026 году",
+    "VUZ": "84% - Выпускников поступили в ВУЗы в 2026 году",
+    "infrastructure": "https://shk2-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [
+      "62 - Средний балл по русскому языку на ЕГЭ в 2026 году",
+      "84% - Выпускников поступили в ВУЗы в 2026 году"
+    ],
+    "EGE_2026": "62 - Средний балл по русскому языку на ЕГЭ в 2026 году",
+    "VUZ_2026": "84% - Выпускников поступили в ВУЗы в 2026 году",
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "EGE_prev": "68 - Средний балл по русскому языку на ЕГЭ в 2025 году",
+    "EGE_history": [
+      "68 - Средний балл по русскому языку на ЕГЭ в 2025 году"
+    ],
+    "VUZ_prev": "93% - Выпускников поступили в ВУЗы в 2024 году",
+    "VUZ_history": [
+      "93% - Выпускников поступили в ВУЗы в 2024 году"
+    ],
+    "results_parsed_at": "2026-10-18T15:44:09.175490+00:00"
   },
   {
     "id": 80,
@@ -4722,11 +7355,53 @@
       "Технологический профиль",
       "Естественно-научный профиль"
     ],
-    "VUZ": "100% - Выпускников поступивших в ВУЗы в 2025 году",
+    "VUZ": "100% - Выпускников поступивших в ВУЗы в 2026 году",
     "Olympiads": [
+      "9 - Победителей и призеров в заключительного этапа Всероссийской олимпиады за 3 года"
+    ],
+    "infrastructure": "https://ftl-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE": "86 - Средний балл на ЕГЭ по химии в 2026 году",
+    "Medals": [
+      "17 - Выпускников с медалью за 2026 год"
+    ],
+    "other_results": [
+      "8 - Количество стобалльников в 2026"
+    ],
+    "results_kpi_raw": [
+      "9 - Победителей и призеров в заключительного этапа Всероссийской олимпиады за 3 года",
+      "17 - Выпускников с медалью за 2026 год",
+      "8 - Количество стобалльников в 2026",
+      "100% - Выпускников поступивших в ВУЗы в 2026 году",
+      "83 - Средний балл на ЕГЭ по информатике в 2026 году",
+      "85 - Средний балл на ЕГЭ по профильной математике в 2026 году",
+      "77 - Средний балл на ЕГЭ по физике в 2026 году",
+      "86 - Средний балл на ЕГЭ по химии в 2026 году"
+    ],
+    "EGE_2026": "86 - Средний балл на ЕГЭ по химии в 2026 году",
+    "VUZ_2026": "100% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "9 - Победителей и призеров в заключительного этапа Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": [
+      "17 - Выпускников с медалью за 2026 год"
+    ],
+    "other_results_2026": [
+      "8 - Количество стобалльников в 2026"
+    ],
+    "results_target_year": 2026,
+    "VUZ_prev": "100% - Выпускников поступивших в ВУЗы в 2025 году",
+    "VUZ_history": [
+      "100% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "Olympiads_prev": [
       "5 - Призеров заключительного этапа Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://ftl-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "Olympiads_history": [
+      [
+        "5 - Призеров заключительного этапа Всероссийской олимпиады за 3 года"
+      ]
+    ],
+    "results_parsed_at": "2026-10-18T15:44:54.599232+00:00"
   },
   {
     "id": 81,
@@ -4762,11 +7437,46 @@
       ]
     },
     "link_gosuslugi": "https://gim34-sar.gosuslugi.ru/",
-    "VUZ": "74% - Выпускников поступивших в ВУЗы в 2024 году",
+    "VUZ": "81% - Выпускников поступивших в ВУЗы в 2026 году",
     "Olympiads": [
+      "3 - Призер регионального этапа Всероссийской олимпиады школьников"
+    ],
+    "infrastructure": "https://gim34-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "6 - Выпускников с золотой медалью \"За успехи в учении\" I степени за 2026 год",
+      "7 - Выпускников с серебряной медалью \"За успехи в учении\" II степени за 2026 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "3 - Призер регионального этапа Всероссийской олимпиады школьников",
+      "6 - Выпускников с золотой медалью \"За успехи в учении\" I степени за 2026 год",
+      "7 - Выпускников с серебряной медалью \"За успехи в учении\" II степени за 2026 год",
+      "81% - Выпускников поступивших в ВУЗы в 2026 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": "81% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "3 - Призер регионального этапа Всероссийской олимпиады школьников"
+    ],
+    "Medals_2026": [
+      "6 - Выпускников с золотой медалью \"За успехи в учении\" I степени за 2026 год",
+      "7 - Выпускников с серебряной медалью \"За успехи в учении\" II степени за 2026 год"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "VUZ_prev": "74% - Выпускников поступивших в ВУЗы в 2024 году",
+    "VUZ_history": [
+      "74% - Выпускников поступивших в ВУЗы в 2024 году"
+    ],
+    "Olympiads_prev": [
       "1 - Призер заключительного этапа Всероссийской олимпиады школьников по литературе за 3 года"
     ],
-    "infrastructure": "https://gim34-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "Olympiads_history": [
+      [
+        "1 - Призер заключительного этапа Всероссийской олимпиады школьников по литературе за 3 года"
+      ]
+    ],
+    "results_parsed_at": "2026-10-18T15:45:15.459357+00:00"
   },
   {
     "id": 82,
@@ -4801,7 +7511,18 @@
         51.543562
       ]
     },
-    "link_gosuslugi": "https://lmi-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/osnovnye-svedeniya/"
+    "link_gosuslugi": "https://lmi-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/osnovnye-svedeniya/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:45:36.164259+00:00"
   },
   {
     "id": 83,
@@ -4847,7 +7568,27 @@
     "Olympiads": [
       "12 - Призеров регионального этапа Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://lic3-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://lic3-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [],
+    "other_results": [
+      "9 - Выпускников с аттестатом особого образца I и II степени в 2024 году",
+      "65 - Средний балл по математике профильного уровня в 2024 году"
+    ],
+    "results_kpi_raw": [
+      "12 - Призеров регионального этапа Всероссийской олимпиады за 3 года",
+      "9 - Выпускников с аттестатом особого образца I и II степени в 2024 году",
+      "65 - Средний балл по математике профильного уровня в 2024 году",
+      "92% - Выпускников поступивших в ВУЗы в 2024 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "12 - Призеров регионального этапа Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:46:16.760908+00:00"
   },
   {
     "id": 84,
@@ -4892,7 +7633,31 @@
     "Olympiads": [
       "159 - призеров муниципального этапа всероссийской олимпиады школьников за 3 года",
       "11 - призеров регионального этапа всероссийской олимпиады школьников за 3 года"
-    ]
+    ],
+    "EGE": "64,4 - средний балл ЕГЭ в 2025 году",
+    "Medals": [
+      "7 - выпускников награждены медалью \"За особые успехи в учении I степени\" в 2025 году",
+      "4 - выпускника награждены медалью \"За особые успехи в учении II степени\" в 2025 году"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "7 - выпускников награждены медалью \"За особые успехи в учении I степени\" в 2025 году",
+      "100% - выпускников, поступивших в ВУЗы в 2025 году",
+      "159 - призеров муниципального этапа всероссийской олимпиады школьников за 3 года",
+      "11 - призеров регионального этапа всероссийской олимпиады школьников за 3 года",
+      "64,4 - средний балл ЕГЭ в 2025 году",
+      "4 - выпускника награждены медалью \"За особые успехи в учении II степени\" в 2025 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "159 - призеров муниципального этапа всероссийской олимпиады школьников за 3 года",
+      "11 - призеров регионального этапа всероссийской олимпиады школьников за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:47:06.646679+00:00"
   },
   {
     "id": 85,
@@ -4928,7 +7693,18 @@
       ]
     },
     "link_gosuslugi": "https://shk81-sar.gosuslugi.ru/",
-    "infrastructure": "https://shk81-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk81-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:47:42.740504+00:00"
   },
   {
     "id": 87,
@@ -4964,7 +7740,30 @@
       ]
     },
     "link_gosuslugi": "https://shk83-sar.gosuslugi.ru/",
-    "infrastructure": "https://shk83-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk83-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "VUZ": "100% - выпускников, поступивших в ВУЗы в 2025г",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "81 - Балл по русскому языку в 2025г",
+      "18 - Балла по математике (база) в 2025г",
+      "70 - Баллов по биологии в 2025 г",
+      "70 - Баллов по истории в 2025г"
+    ],
+    "results_kpi_raw": [
+      "81 - Балл по русскому языку в 2025г",
+      "18 - Балла по математике (база) в 2025г",
+      "70 - Баллов по биологии в 2025 г",
+      "70 - Баллов по истории в 2025г",
+      "100% - выпускников, поступивших в ВУЗы в 2025г"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:48:10.679125+00:00"
   },
   {
     "id": 88,
@@ -5000,7 +7799,39 @@
       ]
     },
     "link_gosuslugi": "https://shkola-internat4.gosuslugi.ru/",
-    "infrastructure": "https://shkola-internat4.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shkola-internat4.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "Телефон - 8 (8452) 28 -69-17",
+      "4 - Почетных работника общего образования",
+      "2 - Отличника народного просвещения",
+      "19 - учителей высшей категории",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_kpi_raw": [
+      "Телефон - 8 (8452) 28 -69-17",
+      "4 - Почетных работника общего образования",
+      "2 - Отличника народного просвещения",
+      "19 - учителей высшей категории",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "Телефон - 8 (8452) 28 -69-17",
+      "4 - Почетных работника общего образования",
+      "2 - Отличника народного просвещения",
+      "19 - учителей высшей категории",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:48:45.540701+00:00"
   },
   {
     "id": 89,
@@ -5036,7 +7867,39 @@
       ]
     },
     "link_gosuslugi": "https://shkola-internat4.gosuslugi.ru/",
-    "infrastructure": "https://shkola-internat4.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shkola-internat4.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "Телефон - 8 (8452) 28 -69-17",
+      "4 - Почетных работника общего образования",
+      "2 - Отличника народного просвещения",
+      "19 - учителей высшей категории",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_kpi_raw": [
+      "Телефон - 8 (8452) 28 -69-17",
+      "4 - Почетных работника общего образования",
+      "2 - Отличника народного просвещения",
+      "19 - учителей высшей категории",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "Телефон - 8 (8452) 28 -69-17",
+      "4 - Почетных работника общего образования",
+      "2 - Отличника народного просвещения",
+      "19 - учителей высшей категории",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:48:57.068923+00:00"
   },
   {
     "id": 9,
@@ -5076,7 +7939,22 @@
     "Olympiads": [
       "110 - Призеров школьного этата Всероссийской олимпиады школьников"
     ],
-    "infrastructure": "https://school9saratov.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://school9saratov.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [
+      "57 - Средний балл ЕГЭ в 2024 году",
+      "110 - Призеров школьного этата Всероссийской олимпиады школьников"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "110 - Призеров школьного этата Всероссийской олимпиады школьников"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:49:33.956826+00:00"
   },
   {
     "id": 90,
@@ -5120,7 +7998,23 @@
     "Olympiads": [
       "115 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://shk16-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://shk16-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [
+      "115 - Призеров Всероссийской олимпиады за 3 года",
+      "47,8 - Средний балл на ЕГЭ в 2021 году",
+      "63% - Выпускников поступивших в ВУЗы в 2021-2022 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "115 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:50:27.248487+00:00"
   },
   {
     "id": 91,
@@ -5156,7 +8050,60 @@
       ]
     },
     "link_gosuslugi": "https://sh-int5-saratov-r64.gosweb.gosuslugi.ru/",
-    "infrastructure": "https://sh-int5-saratov-r64.gosweb.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://sh-int5-saratov-r64.gosweb.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "В 2026 году наши выпускники поступили в - ГАПОУ СО \"Саратовский колледж водного транспорта, строительства и сервиса\"; ГАПОУ СО «Саратовский комплекс-интернат профессионального обучения для инвалидов и лиц с ОВЗ»; ГАПОУ СО «Саратовский политехнический колледж»",
+      "100% - Обучающихся было охвачено внеурочной деятельностью",
+      "100% - Успеваемость по трудовому обучению составляет",
+      "100% - Продолжили обучение в организациях СПО и НПО",
+      "100% - Качество знаний по трудовому обучению",
+      "Телефон - +7 (8452) 28-72-90",
+      "5 - Почетных работников общего образования",
+      "1 - кандидат психологических наук",
+      "31 - учитель высшей и первой категории",
+      "1 - Почетный наставник РФ",
+      "1 - Заслуженный учитель РФ",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_kpi_raw": [
+      "В 2026 году наши выпускники поступили в - ГАПОУ СО \"Саратовский колледж водного транспорта, строительства и сервиса\"; ГАПОУ СО «Саратовский комплекс-интернат профессионального обучения для инвалидов и лиц с ОВЗ»; ГАПОУ СО «Саратовский политехнический колледж»",
+      "100% - Обучающихся было охвачено внеурочной деятельностью",
+      "100% - Успеваемость по трудовому обучению составляет",
+      "100% - Продолжили обучение в организациях СПО и НПО",
+      "100% - Качество знаний по трудовому обучению",
+      "Телефон - +7 (8452) 28-72-90",
+      "5 - Почетных работников общего образования",
+      "1 - кандидат психологических наук",
+      "31 - учитель высшей и первой категории",
+      "1 - Почетный наставник РФ",
+      "1 - Заслуженный учитель РФ",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "В 2026 году наши выпускники поступили в - ГАПОУ СО \"Саратовский колледж водного транспорта, строительства и сервиса\"; ГАПОУ СО «Саратовский комплекс-интернат профессионального обучения для инвалидов и лиц с ОВЗ»; ГАПОУ СО «Саратовский политехнический колледж»",
+      "100% - Обучающихся было охвачено внеурочной деятельностью",
+      "100% - Успеваемость по трудовому обучению составляет",
+      "100% - Продолжили обучение в организациях СПО и НПО",
+      "100% - Качество знаний по трудовому обучению",
+      "Телефон - +7 (8452) 28-72-90",
+      "5 - Почетных работников общего образования",
+      "1 - кандидат психологических наук",
+      "31 - учитель высшей и первой категории",
+      "1 - Почетный наставник РФ",
+      "1 - Заслуженный учитель РФ",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:51:05.293221+00:00"
   },
   {
     "id": 92,
@@ -5195,7 +8142,35 @@
     "VUZ": "86% - Выпускников поступивших в ВУЗы в 2025 году",
     "Olympiads": [
       "11 - Победителей и призеров муниципального и регионального этапов Всероссийской олимпиады школьников"
-    ]
+    ],
+    "EGE": "60% - Средний балл на ЕГЭ в 2025 году",
+    "Medals": [
+      "1 - Выпускников с золотой медалью за 2025 год"
+    ],
+    "other_results": [
+      "97 - Победителей и призеров в спортивных соревнованиях",
+      "256 - победителей и призеров муниципального и регионального этапов конкурсов"
+    ],
+    "results_kpi_raw": [
+      "11 - Победителей и призеров муниципального и регионального этапов Всероссийской олимпиады школьников",
+      "97 - Победителей и призеров в спортивных соревнованиях",
+      "256 - победителей и призеров муниципального и регионального этапов конкурсов",
+      "86% - Выпускников поступивших в ВУЗы в 2025 году",
+      "1 - Выпускников с золотой медалью за 2025 год",
+      "60% - Средний балл на ЕГЭ в 2025 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "11 - Победителей и призеров муниципального и регионального этапов Всероссийской олимпиады школьников"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": [
+      "97 - Победителей и призеров в спортивных соревнованиях",
+      "256 - победителей и призеров муниципального и регионального этапов конкурсов"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:51:49.298784+00:00"
   },
   {
     "id": 93,
@@ -5231,7 +8206,27 @@
       ]
     },
     "link_gosuslugi": "https://korschool2.gosuslugi.ru/",
-    "infrastructure": "https://korschool2.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://korschool2.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "Телефон - 8(8452)-73-40-34",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_kpi_raw": [
+      "Телефон - 8(8452)-73-40-34",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "Телефон - 8(8452)-73-40-34",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:52:32.458517+00:00"
   },
   {
     "id": 94,
@@ -5276,7 +8271,26 @@
     "Olympiads": [
       "420 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://lic36-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://lic36-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [],
+    "other_results": [
+      "16 - Выпускников с аттестатом с отличием за 2025 год"
+    ],
+    "results_kpi_raw": [
+      "420 - Призеров Всероссийской олимпиады за 3 года",
+      "16 - Выпускников с аттестатом с отличием за 2025 год",
+      "62 - Средний балл на ЕГЭ в 2025 году",
+      "90% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "420 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:53:11.558332+00:00"
   },
   {
     "id": 95,
@@ -5312,12 +8326,41 @@
       ]
     },
     "link_gosuslugi": "https://mbl-sar.gosuslugi.ru/",
-    "EGE": "82/75,15 - Средний балл на ЕГЭ в 2022 году по русскому языку/общий",
-    "VUZ": "100% - Выпускников, поступивших в ВУЗы в 2022 году",
+    "EGE": "75/77,86 - Средний балл на ЕГЭ в 2026 году по русскому языку/по профильной математике",
+    "VUZ": "100% - Выпускников, поступивших в ВУЗы в 2026 году",
     "Olympiads": [
       "11/109 - Победителей и призеров Всероссийской олимпиады за 3 года (муниципальный и региональный уровни)"
     ],
-    "infrastructure": "https://mbl-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://mbl-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "8 - Выпускников с медалью за 2026 год ( 6 - золотая медаль, 2 - серебряная медаль)"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "11/109 - Победителей и призеров Всероссийской олимпиады за 3 года (муниципальный и региональный уровни)",
+      "8 - Выпускников с медалью за 2026 год ( 6 - золотая медаль, 2 - серебряная медаль)",
+      "75/77,86 - Средний балл на ЕГЭ в 2026 году по русскому языку/по профильной математике",
+      "100% - Выпускников, поступивших в ВУЗы в 2026 году"
+    ],
+    "EGE_2026": "75/77,86 - Средний балл на ЕГЭ в 2026 году по русскому языку/по профильной математике",
+    "VUZ_2026": "100% - Выпускников, поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "11/109 - Победителей и призеров Всероссийской олимпиады за 3 года (муниципальный и региональный уровни)"
+    ],
+    "Medals_2026": [
+      "8 - Выпускников с медалью за 2026 год ( 6 - золотая медаль, 2 - серебряная медаль)"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "EGE_prev": "82/75,15 - Средний балл на ЕГЭ в 2022 году по русскому языку/общий",
+    "EGE_history": [
+      "82/75,15 - Средний балл на ЕГЭ в 2022 году по русскому языку/общий"
+    ],
+    "VUZ_prev": "100% - Выпускников, поступивших в ВУЗы в 2022 году",
+    "VUZ_history": [
+      "100% - Выпускников, поступивших в ВУЗы в 2022 году"
+    ],
+    "results_parsed_at": "2026-10-18T15:53:35.322159+00:00"
   },
   {
     "id": 96,
@@ -5362,7 +8405,26 @@
     "Olympiads": [
       "60 - Призеров Всероссийской олимпиады за 3 года"
     ],
-    "infrastructure": "https://lic107-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://lic107-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Medals": [
+      "4 - Выпускников с золотой медалью за 2022 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "60 - Призеров Всероссийской олимпиады за 3 года",
+      "4 - Выпускников с золотой медалью за 2022 год",
+      "60 - Средний балл на ЕГЭ в 2022 году",
+      "93% - Выпускников поступивших в ВУЗы в 2022 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "60 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:54:01.881568+00:00"
   },
   {
     "id": 97,
@@ -5398,7 +8460,45 @@
       ]
     },
     "link_gosuslugi": "https://sh6-saratov-r64.gosweb.gosuslugi.ru/",
-    "infrastructure": "https://sh6-saratov-r64.gosweb.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/"
+    "infrastructure": "https://sh6-saratov-r64.gosweb.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "32 - Выпускника 9 классов 2026 г.",
+      "5 - Отличников",
+      "15 - Выпускников поступили в НПО",
+      "Телефон - +78452960148",
+      "13 - учителей высшей категории",
+      "6 - учителей первой категории",
+      "4 - Отличник народного просвещения - нагрудный зна",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_kpi_raw": [
+      "32 - Выпускника 9 классов 2026 г.",
+      "5 - Отличников",
+      "15 - Выпускников поступили в НПО",
+      "Телефон - +78452960148",
+      "13 - учителей высшей категории",
+      "6 - учителей первой категории",
+      "4 - Отличник народного просвещения - нагрудный зна",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "32 - Выпускника 9 классов 2026 г.",
+      "5 - Отличников",
+      "15 - Выпускников поступили в НПО",
+      "Телефон - +78452960148",
+      "13 - учителей высшей категории",
+      "6 - учителей первой категории",
+      "4 - Отличник народного просвещения - нагрудный зна",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:54:25.485193+00:00"
   },
   {
     "id": 98,
@@ -5433,6 +8533,13 @@
         51.569992
       ]
     },
-    "link_gosuslugi": null
+    "link_gosuslugi": null,
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-18T15:54:29.144832+00:00"
   }
 ]

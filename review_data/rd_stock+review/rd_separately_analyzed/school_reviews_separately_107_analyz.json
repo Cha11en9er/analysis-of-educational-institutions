@@ -1,0 +1,44 @@
+[
+  {
+    "review_id": "5212",
+    "school_id": "107",
+    "date": "2025-09-06",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos",
+      "ремонт": "pos",
+      "еда": "pos"
+    }
+  },
+  {
+    "review_id": "6648",
+    "school_id": "107",
+    "date": "2024-02-28",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "6649",
+    "school_id": "107",
+    "date": "2024-07-16",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "6650",
+    "school_id": "107",
+    "date": "2024-11-26",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "6651",
+    "school_id": "107",
+    "date": "2025-06-20",
+    "sentiment": "neutral",
+    "topics": {
+      "учителя": "neg",
+      "буллинг": "pos"
+    }
+  }
+]

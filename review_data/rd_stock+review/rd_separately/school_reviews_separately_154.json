@@ -1,0 +1,83 @@
+[
+    {
+        "review_id": "5303",
+        "school_id": "154",
+        "date": null,
+        "text": null,
+        "likes_count": null,
+        "dislikes_count": null,
+        "rating": null
+    },
+    {
+        "review_id": "6813",
+        "school_id": "154",
+        "date": "2023-04-10",
+        "text": "Отличный лицей!",
+        "likes_count": 0,
+        "rating": 5
+    },
+    {
+        "review_id": "6814",
+        "school_id": "154",
+        "date": "2024-04-06",
+        "text": "Слишком ложный квест",
+        "likes_count": 0,
+        "rating": 4
+    },
+    {
+        "review_id": "6815",
+        "school_id": "154",
+        "date": "2024-04-30",
+        "text": "Зачем строить такую площадку , если никто кроме учащихся не сможет туда попасть ? Даже просто элементарно позаниматься спортом , про футбольное поле молчу вообще",
+        "likes_count": 0,
+        "rating": 2
+    },
+    {
+        "review_id": "6816",
+        "school_id": "154",
+        "date": "2024-05-29",
+        "text": "Отличный лицей",
+        "likes_count": 0,
+        "rating": 5
+    },
+    {
+        "review_id": "6817",
+        "school_id": "154",
+        "date": "",
+        "text": "Спасибо! Для нас это очень важно!",
+        "likes_count": 0,
+        "rating": 5
+    },
+    {
+        "review_id": "6818",
+        "school_id": "154",
+        "date": "2024-08-11",
+        "text": "Хороший лицей! Ребенку нравится)",
+        "likes_count": 0,
+        "rating": 5
+    },
+    {
+        "review_id": "6819",
+        "school_id": "154",
+        "date": "",
+        "text": "Спасибо) Нам это очень важно!",
+        "likes_count": 0,
+        "rating": 5
+    },
+    {
+        "review_id": "6820",
+        "school_id": "154",
+        "date": "2024-09-09",
+        "text": "я тут учусь и мне нравится ",
+        "likes_count": 0,
+        "rating": 5
+    },
+    {
+        "review_id": "6821",
+        "school_id": "154",
+        "date": "2025-08-21",
+        "text": "Очень красивая и очень хорошая школа",
+        "likes_count": 0,
+        "rating": 5
+    }
+]

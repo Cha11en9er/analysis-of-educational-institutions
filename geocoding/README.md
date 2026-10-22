@@ -1,33 +1,43 @@
 # Геокодирование (Geocoding)
 
-Модуль для геокодирования адресов школ (преобразование адресов в координаты).
+## Данные (`gc_data/`)
 
-## Структура
+| Файл | Назначение |
+|------|------------|
+| `gc_input/addresses.json` | Прикреплённые адреса совпавших школ (вход) |
+| `gc_output/geocoded.json` | Школы + улицы + координаты (выход) |
+| `gc_output/_cache.json` | Кэш API (для продолжения прогона) |
 
-- `gc_data/` - папка с данными
-  - `gc_input/` - входные данные (JSON файлы с адресами)
-  - `gc_output/` - выходные данные (JSON файлы с координатами)
-- `gc_src/` - папка с исходным кодом
-  - `gc_main.py` - основной скрипт геокодирования
-  - `gc_merge_school.py` - объединение данных о школах
-
-## Функционал
-
-Модуль выполняет геокодирование адресов школ из разных источников (2ГИС, Яндекс.Карты) и объединяет результаты.
-
-## Использование
+## Команды
 
 ```bash
-python geocoding/gc_src/gc_main.py
-python geocoding/gc_src/gc_merge_school.py
+# 1. Собрать addresses.json из CSV + final_school_data
+python geocoding/scripts/build_gc_matched_input.py
+
+# 2. Геокодировать (пишет _cache.json и geocoded.json)
+python geocoding/scripts/geocode_gc_ans_matched.py
+
+# Только пересобрать geocoded.json из кэша
+python geocoding/scripts/build_geocoded.py
 ```
 
-Входные файлы:
-- `gc_data/gc_input/gc_2gis_input_data.json` - данные из 2ГИС
-- `gc_data/gc_input/gc_ym_input_data.json` - данные из Яндекс.Карт
+## Формат `geocoded.json`
 
-Выходные файлы:
-- `gc_data/gc_output/gc_2gis_output_data.json` - геокодированные данные 2ГИС
-- `gc_data/gc_output/gc_ym_output_data.json` - геокодированные данные Яндекс.Карт
-- `gc_data/gc_output/gc_merge_data.json` - объединенные данные
+```json
+[
+  {
+    "id": 10,
+    "label": "Гимназия №2",
+    "district": "Волжский",
+    "streets": [
+      { "name": "им. Лермонтова М.Ю.", "points": [[51.525533, 46.045432], [51.52583, 46.048028]] }
+    ]
+  }
+]
+```
 
+До **8 точек** на улицу (равномерная выборка из списка домов).
+
+## Legacy
+
+Старые скрипты `gc_src/gc_main.py`, `gc_merge_school.py` — отдельный пайплайн по зданиям школ из 2ГИС/Яндекс.

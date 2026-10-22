@@ -1,0 +1,35 @@
+[
+  {
+    "review_id": "5213",
+    "school_id": "108",
+    "date": "2024-11-10",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "6652",
+    "school_id": "108",
+    "date": "2016-02-26",
+    "sentiment": "neutral",
+    "topics": {
+      "администрация": "neg"
+    }
+  },
+  {
+    "review_id": "6653",
+    "school_id": "108",
+    "date": "2018-09-01",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos",
+      "буллинг": "pos"
+    }
+  },
+  {
+    "review_id": "6654",
+    "school_id": "108",
+    "date": "2019-09-17",
+    "sentiment": "pos",
+    "topics": {}
+  }
+]

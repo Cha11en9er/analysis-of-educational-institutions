@@ -1,17 +1,33 @@
 import requests
 import json
 import os
+from pathlib import Path
+
 from dotenv import load_dotenv
 
-load_dotenv()
+GC_ROOT = Path(__file__).resolve().parent.parent
+REPO_ROOT = GC_ROOT.parent
 
-CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-RM_ROOT = os.path.dirname(CURRENT_DIR)
-DATA_DIR = os.path.join(RM_ROOT, 'gc_data')
-INPUT_DIR = os.path.join(DATA_DIR, 'gc_input')
-OUTPUT_DIR = os.path.join(DATA_DIR, 'gc_output')
-INPUT_DATA_FILE = os.path.join(INPUT_DIR, 'gc_2gis_input_data.json')
-OUTPUT_DATA_FILE = os.path.join(OUTPUT_DIR, 'gc_2gis_output_data.json')
+for env_path in (REPO_ROOT / ".env", GC_ROOT / ".env"):
+    if env_path.is_file():
+        load_dotenv(env_path)
+
+SARATOV_CENTER = "51.53, 46.00"
+SEARCH_RADIUS = "1.5, 1.5"
+BASE_URL = "https://geocode-maps.yandex.ru/1.x/"
+REGION = "Саратовская область"
+CITY = "Саратов"
+
+
+def with_saratov_context(address: str) -> str:
+    low = address.lower()
+    if "саратов" in low:
+        return address
+    return f"{REGION}, г. {CITY}, {address}"
+
+DATA_DIR = GC_ROOT / "gc_data"
+INPUT_DATA_FILE = DATA_DIR / "gc_input" / "gc_2gis_input_data.json"
+OUTPUT_DATA_FILE = DATA_DIR / "gc_output" / "gc_2gis_output_data.json"
 
 # Загружаем список объектов из JSON-файла
 with open(INPUT_DATA_FILE, 'r', encoding='utf-8') as file:
@@ -25,26 +41,33 @@ API_KEY = os.getenv("YANDEX_API_KEY")
 
 def geocode_address(address):
     """
-    Функция для геокодирования адреса с использованием Яндекс.Карт.
-    Возвращает координаты в формате широта/долгота.
+    Геокодирование адреса через Яндекс.Геокодер.
+    Возвращает широту и долготу или None, если объект не найден.
     """
-    base_url = f'https://geocode-maps.yandex.ru/1.x/'
+    if not API_KEY:
+        raise RuntimeError("YANDEX_API_KEY не найден в .env (корень репозитория или geocoding/)")
+
     params = {
-        'apikey': API_KEY,
-        'format': 'json',
-        'geocode': address
+        "apikey": API_KEY,
+        "format": "json",
+        "geocode": with_saratov_context(address),
+        "results": 1,
+        "ll": SARATOV_CENTER,
+        "spn": SEARCH_RADIUS,
     }
-    
-    response = requests.get(base_url, params=params)
-    data = response.json()
-    
-    if not data['response']['GeoObjectCollection']['featureMember']:
+
+    response = requests.get(BASE_URL, params=params, timeout=15)
+    response.raise_for_status()
+    payload = response.json()
+
+    collection = payload["response"]["GeoObjectCollection"]
+    found = int(collection["metaDataProperty"]["GeocoderResponseMetaData"]["found"])
+    if found < 1 or not collection["featureMember"]:
         return None
-        
-    geo_object = data['response']['GeoObjectCollection']['featureMember'][0]['GeoObject']
-    coordinates = geo_object['Point']['pos'].split()  # долгота, широта
-    latitude, longitude = float(coordinates[1]), float(coordinates[0])
-    return {'latitude': latitude, 'longitude': longitude}
+
+    geo_object = collection["featureMember"][0]["GeoObject"]
+    lon_str, lat_str = geo_object["Point"]["pos"].split()
+    return {"latitude": float(lat_str), "longitude": float(lon_str)}
 
 # Обрабатываем каждую школу и добавляем координаты
 for school in schools:

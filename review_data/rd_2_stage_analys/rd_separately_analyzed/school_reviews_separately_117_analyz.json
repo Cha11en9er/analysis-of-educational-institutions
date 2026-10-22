@@ -7,22 +7,16 @@
   {
     "review_id": "6673",
     "sentiment": "neg",
-    "topics": [
-      {
-        "topic": "ремонт",
-        "sentiment": "neg"
-      }
-    ]
+    "topics": {
+      "ремонт": "neg"
+    }
   },
   {
     "review_id": "6674",
     "sentiment": "pos",
-    "topics": [
-      {
-        "topic": "ремонт",
-        "sentiment": "pos"
-      }
-    ]
+    "topics": {
+      "ремонт": "pos"
+    }
   },
   {
     "review_id": "6675",
@@ -32,12 +26,9 @@
   {
     "review_id": "6676",
     "sentiment": "pos",
-    "topics": [
-      {
-        "topic": "учителя",
-        "sentiment": "pos"
-      }
-    ]
+    "topics": {
+      "учителя": "pos"
+    }
   },
   {
     "review_id": "6677",
@@ -47,21 +38,15 @@
   {
     "review_id": "6678",
     "sentiment": "neg",
-    "topics": [
-      {
-        "topic": "администрация",
-        "sentiment": "neg"
-      }
-    ]
+    "topics": {
+      "администрация": "neg"
+    }
   },
   {
     "review_id": "6679",
     "sentiment": "neutral",
-    "topics": [
-      {
-        "topic": "ремонт",
-        "sentiment": "pos"
-      }
-    ]
+    "topics": {
+      "ремонт": "pos"
+    }
   }
 ]

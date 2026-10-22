@@ -1,0 +1,114 @@
+[
+  {
+    "review_id": "3695",
+    "school_id": "74",
+    "date": "2021-09-21",
+    "sentiment": "neg",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "3696",
+    "school_id": "74",
+    "date": "2022-03-31",
+    "sentiment": "pos",
+    "topics": {
+      "администрация": "pos"
+    }
+  },
+  {
+    "review_id": "3697",
+    "school_id": "74",
+    "date": "2019-04-14",
+    "sentiment": "pos",
+    "topics": {
+      "ремонт": "neg"
+    }
+  },
+  {
+    "review_id": "3698",
+    "school_id": "74",
+    "date": "2020-02-27",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "3699",
+    "school_id": "74",
+    "date": "2020-02-19",
+    "sentiment": "pos",
+    "topics": {
+      "учителя": "pos"
+    }
+  },
+  {
+    "review_id": "3700",
+    "school_id": "74",
+    "date": "2021-12-21",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "3701",
+    "school_id": "74",
+    "date": "2020-11-10",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "3702",
+    "school_id": "74",
+    "date": "2019-03-19",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "3703",
+    "school_id": "74",
+    "date": "2020-02-21",
+    "sentiment": "neutral",
+    "topics": {}
+  },
+  {
+    "review_id": "3704",
+    "school_id": "74",
+    "date": "2019-01-06",
+    "sentiment": "neg",
+    "topics": {
+      "ремонт": "neg"
+    }
+  },
+  {
+    "review_id": "3705",
+    "school_id": "74",
+    "date": "2020-02-09",
+    "sentiment": "neg",
+    "topics": {
+      "администрация": "neg"
+    }
+  },
+  {
+    "review_id": "3706",
+    "school_id": "74",
+    "date": "2019-05-06",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "3707",
+    "school_id": "74",
+    "date": "2019-12-13",
+    "sentiment": "pos",
+    "topics": {}
+  },
+  {
+    "review_id": "6470",
+    "school_id": "74",
+    "date": "2023-12-04",
+    "sentiment": "pos",
+    "topics": {}
+  }
+]
