@@ -14,7 +14,9 @@ alwaysApply: true
 cd /opt/uchgrad
 git pull
 
-# корень репо: .env с DB_* и YANDEX_API_KEY (не в git)
+# корень репо: .env (не в git). Пока сайт без БД:
+#   DATA_SOURCE=json
+# (школы из school_data/final_school_data.json, отзывы из review_data/...)
 # UI: ключ карт на этапе сборки
 cat > UI/.env.production << 'EOF'
 REACT_APP_API_URL=

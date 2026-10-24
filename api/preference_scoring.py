@@ -267,6 +267,12 @@ def load_preference_bundle() -> Dict[str, Any]:
         sid = _school_id_from_rd3_final_filename(path)
         if sid is not None:
             final_review_school_ids.add(sid)
+    # Пока нет rd_3_stage — считаем «есть разбор» по analyz-файлам
+    if not final_review_school_ids:
+        for path in glob(REVIEWS_PATTERN):
+            sid = _school_id_from_review_filename(path)
+            if sid is not None:
+                final_review_school_ids.add(sid)
 
     return {
         "metrics_by_school": metrics,
