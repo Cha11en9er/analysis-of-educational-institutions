@@ -1,0 +1,34 @@
+---
+description: Как считается итоговый рейтинг школ (rating_total)
+alwaysApply: true
+---
+
+# Формула рейтинга школ
+
+Единственный источник истины: `school_data/prepare_final_data.py` → `rating_total`.
+Документация: `school_data/RATING_TOTAL.md`.
+
+## Входит в `rating_total` (простая сумма)
+
+| Составляющая | Поле | Формула |
+|---|---|---|
+| ЕГЭ | `rating_ege` | средний балл как есть (60.1 → 60.1) |
+| Поступление в ВУЗ | `rating_university_admission` | `% / 10` (83% → 8.3; 100% → 10) |
+| Карты | `rating_maps` | среднее `rating_2gis` и `rating_yandex` (если одно — оно одно) |
+| Профили | `rating_profiles` | +1 за каждый кластер: физ-мат, соц-эконом, хим-био, физический |
+| Олимпиады | `rating_olympiads` | `olympiad_winners_count / capacity_students * 10` |
+| Вторая смена | `has_second_shift` | если `true` → **−10** (пока данных нет → `null`, штраф не применяется) |
+| Спорт | `rating_sports_infrastructure` | +1 за каждый из: бассейн, ФОК, спортплощадка (макс. 3) |
+
+Пустое (`null`) в сумму не входит (не штраф), кроме явного `has_second_shift == true`.
+
+## Не входит в рейтинг (только карточка школы)
+
+- Разбор отзывов: `rating_teachers`, `rating_mto`, `rating_psychological_climate`, `top_tags`
+- `year_built`, `reconstruction_year`
+- `stadium` — флаг для карточки, в спорт-рейтинг не входит
+
+## Профильные кластеры
+
+Только четыре: `profile_phys_math`, `profile_soc_econ`, `profile_chem_bio`, `profile_physical`.
+Не складывать сырые предметы подряд — только уникальные кластеры.

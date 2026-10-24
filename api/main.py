@@ -20,15 +20,22 @@ if _api_dir not in sys.path:
     sys.path.insert(0, _api_dir)
 from preference_scoring import load_preference_bundle, score_school_row
 
-# Загрузка переменных окружения
+# .env из корня репозитория (/opt/uchgrad/.env) или cwd
+_repo_root = Path(__file__).resolve().parent.parent
+load_dotenv(_repo_root / ".env")
 load_dotenv()
 
 app = FastAPI(title="Schools API", version="1.0.0")
 
-# Настройка CORS для работы с React приложением
+# CORS: локальная разработка + прод (на проде обычно same-origin через nginx /api)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origins=[
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+        "https://uchgrad.ru",
+        "https://www.uchgrad.ru",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

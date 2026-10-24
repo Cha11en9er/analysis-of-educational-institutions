@@ -32,25 +32,26 @@ EXPORT_COLUMNS: list[tuple[str, str]] = [
     ("Итоговый рейтинг", "rating_total"),
     ("Рейтинг 2ГИС", "rating_2gis"),
     ("Рейтинг Яндекс", "rating_yandex"),
+    ("Рейтинг карт (среднее)", "rating_maps"),
     ("Топ-5 ключевых тэгов", "top_tags"),
     ("Рейтинг ЕГЭ", "rating_ege"),
     ("Рейтинг олимпиад", "rating_olympiads"),
-    ("Рейтинг поступлений в ВУЗы", "rating_vuz"),
-    ("Рейтинг учителей", "rating_teachers"),
-    ("Рейтинг МТО и удобства доступа", "rating_mto"),
+    ("Рейтинг поступлений в ВУЗы", "rating_university_admission"),
+    ("Рейтинг профилей", "rating_profiles"),
+    ("Рейтинг учителей (карточка)", "rating_teachers"),
+    ("Рейтинг МТО и удобства доступа (карточка)", "rating_mto"),
     ("Рейтинг спортинфраструктуры", "rating_sports_infrastructure"),
-    ("Рейтинг Психологического климата", "rating_psychological_climate"),
+    ("Рейтинг Психологического климата (карточка)", "rating_psychological_climate"),
     ("ЕГЭ, средний балл", "ege_average_score"),
-    ("Год ЕГЭ (для приведенного ср. балла)", "ege_year"),
+    ("Год ЕГЭ", "ege_year"),
     ("% поступивших в ВУЗ", "university_admission_percent"),
-    ("Год ВУЗ (для приведенного % поступивших)", "university_admission_year"),
+    ("Год ВУЗ", "university_admission_year"),
     ("Количество победителей олимпиад, человек", "olympiad_winners_count"),
-    ("Количество лет для приведенного числа олимпиадников", "olympiad_years_span"),
+    ("Вторая смена", "has_second_shift"),
     ("Физико-математический", "profile_phys_math"),
-    ("Медико-биологический профиль", "profile_med_bio"),
+    ("Хим-био профиль", "profile_chem_bio"),
     ("Социально-экономический профиль", "profile_soc_econ"),
-    ("Гуманитарный профиль", "profile_humanitarian"),
-    ("Религиозный профиль", "profile_religious"),
+    ("Физический (спортивный) профиль", "profile_physical"),
     ("ФОК", "fok"),
     ("Бассейн", "pool"),
     ("Стадион (доступность до 15 м.п.)", "stadium"),
@@ -77,14 +78,14 @@ EXPORT_COLUMNS: list[tuple[str, str]] = [
 
 FLAG_KEYS = {
     "profile_phys_math",
-    "profile_med_bio",
+    "profile_chem_bio",
     "profile_soc_econ",
-    "profile_humanitarian",
-    "profile_religious",
+    "profile_physical",
     "fok",
     "pool",
     "stadium",
     "sports_ground",
+    "has_second_shift",
 }
 
 
@@ -105,24 +106,11 @@ def _to_float(value: Any) -> float | None:
         return None
 
 
-def _rating_vuz_from_percent(raw: Any) -> float | None:
-    """Рейтинг поступлений в ВУЗ (0-100) из приведённого процента."""
-    val = _to_float(raw)
-    if val is None:
-        return None
-    return round(max(0.0, min(100.0, val)), 1)
-
-
-def _scale_100_to_10(value: Any) -> float | None:
-    val = _to_float(value)
-    if val is None:
-        return None
-    return round(val / 10.0, 1)
-
-
 def _flag_value(value: Any) -> int | None:
-    if value == 1:
+    if value is True or value == 1:
         return 1
+    if value is False or value == 0:
+        return 0
     return None
 
 
@@ -136,13 +124,6 @@ def _tags_text(value: Any) -> str | None:
 
 
 def export_value(school: dict[str, Any], key: str) -> Any:
-    if key == "rating_vuz":
-        raw = school.get("rating_university_admission")
-        if raw is not None:
-            val = _to_float(raw)
-        else:
-            val = _rating_vuz_from_percent(school.get("university_admission_percent"))
-        return round(val, 2) if val is not None else None
     if key in FLAG_KEYS:
         return _flag_value(school.get(key))
     if key == "top_tags":
@@ -159,22 +140,16 @@ def export_value(school: dict[str, Any], key: str) -> Any:
         "rating_total",
         "rating_ege",
         "rating_olympiads",
+        "rating_maps",
+        "rating_university_admission",
         "ege_average_score",
     ):
         val = _to_float(school.get(key))
         return round(val, 2) if val is not None else None
     if key == "university_admission_percent":
-        val = school.get(key)
-        if val is None:
-            return None
-        if isinstance(val, str):
-            inner = re.search(r"\((\d+(?:[.,]\d+)?)\)\s*$", val.strip())
-            if inner:
-                return float(inner.group(1).replace(",", "."))
-            parsed = _to_float(val)
-            return round(parsed, 1) if parsed is not None else val
-        return round(float(val), 1)
-    if key == "rating_sports_infrastructure":
+        val = _to_float(school.get(key))
+        return round(val, 1) if val is not None else None
+    if key in ("rating_sports_infrastructure", "rating_profiles"):
         val = school.get(key)
         if val is None:
             return None

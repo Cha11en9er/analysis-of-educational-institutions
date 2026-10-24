@@ -1,15 +1,4 @@
-import React, { useEffect, useMemo, useRef } from 'react';
-import {
-  MapContainer,
-  TileLayer,
-  Marker,
-  Tooltip,
-  GeoJSON,
-  CircleMarker,
-  useMap,
-} from 'react-leaflet';
-import L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
   ADDRESS_CLUSTER_LINK_METERS,
   buildAddressCoverageFeature,
@@ -20,75 +9,68 @@ import {
   getSchoolAttachmentKey,
   schoolHasAttachedHouseData,
 } from '../utils/schoolAttachment';
-import { createSchoolMapIcon, tooltipOffsetForMarker } from '../utils/schoolMapMarkerIcon';
+import { getSchoolMarkerStyle, schoolMarkerTitle } from '../utils/schoolMapMarkerIcon';
+import { getYandexMapsApiKey, loadYmaps3 } from '../utils/loadYmaps3';
 
-const SARATOV_CENTER = [51.532, 46.0];
+/** Яндекс: [lon, lat] */
+const SARATOV_CENTER = [46.0, 51.532];
 const DEFAULT_ZOOM = 12;
 
-function FitBounds({ schools, maxCount = 80 }) {
-  const map = useMap();
-  useEffect(() => {
-    if (!schools || schools.length === 0 || schools.length > maxCount) return;
-    const valid = schools.filter(
-      (s) => s.location?.coordinates && s.location.coordinates.length === 2
-    );
-    if (valid.length === 0) return;
-    const bounds = L.latLngBounds(
-      valid.map((s) => [s.location.coordinates[1], s.location.coordinates[0]])
-    );
-    map.fitBounds(bounds, { padding: [40, 40], maxZoom: 15 });
-  }, [map, schools, maxCount]);
-  return null;
+function lonLatOfSchool(school) {
+  const c = school?.location?.coordinates;
+  if (!c || c.length !== 2) return null;
+  return [c[0], c[1]];
 }
 
-function FitSchool({ school }) {
-  const map = useMap();
-  useEffect(() => {
-    if (!school?.location?.coordinates || school.location.coordinates.length !== 2) return;
-    const [lon, lat] = school.location.coordinates;
-    map.setView([lat, lon], 16);
-  }, [map, school]);
-  return null;
-}
-
-/** Подгонка: школа + точки домов + полигон */
-function FitAttachedAddressesBounds({ school, addresses, coverageFeature }) {
-  const map = useMap();
-  useEffect(() => {
-    if (!school || !schoolHasAttachedHouseData(school)) return;
-    const latLngs = [];
-
-    if (school.location?.coordinates?.length === 2) {
-      const [lon, lat] = school.location.coordinates;
-      latLngs.push([lat, lon]);
-    }
-    (addresses || []).forEach((a) => {
-      if (a.lat != null && a.lon != null) latLngs.push([a.lat, a.lon]);
-    });
-    const bb = featureBoundsLatLng(coverageFeature);
-    if (bb) {
-      latLngs.push(bb[0], bb[1]);
-    }
-
-    if (latLngs.length === 0) return;
-    const bounds = L.latLngBounds(latLngs);
-    map.fitBounds(bounds, { padding: [48, 48], maxZoom: 17 });
-  }, [map, school, addresses, coverageFeature]);
-  return null;
+function boundsFromLonLats(points) {
+  if (!points.length) return null;
+  let minLon = Infinity;
+  let minLat = Infinity;
+  let maxLon = -Infinity;
+  let maxLat = -Infinity;
+  for (const [lon, lat] of points) {
+    minLon = Math.min(minLon, lon);
+    maxLon = Math.max(maxLon, lon);
+    minLat = Math.min(minLat, lat);
+    maxLat = Math.max(maxLat, lat);
+  }
+  if (!Number.isFinite(minLon)) return null;
+  return [
+    [minLon, minLat],
+    [maxLon, maxLat],
+  ];
 }
 
 export default function MapView({ schools, selectedSchool, onSchoolClick, preferencesActive }) {
-  const validSchools =
-    schools &&
-    schools.filter(
-      (s) => s.location?.coordinates && s.location.coordinates.length === 2
-    );
+  const containerRef = useRef(null);
+  const mapRef = useRef(null);
+  const layersRef = useRef({ markers: [], features: [], houses: [] });
+  const viewRef = useRef({ center: SARATOV_CENTER, zoom: DEFAULT_ZOOM });
+  const onSchoolClickRef = useRef(onSchoolClick);
+  const [mapError, setMapError] = useState(null);
+  const [mapReady, setMapReady] = useState(false);
+
+  useEffect(() => {
+    onSchoolClickRef.current = onSchoolClick;
+  }, [onSchoolClick]);
+
+  const validSchools = useMemo(
+    () =>
+      (schools || []).filter(
+        (s) => s.location?.coordinates && s.location.coordinates.length === 2
+      ),
+    [schools]
+  );
 
   const markerScale = useMemo(() => {
     const active = Boolean(preferencesActive);
-    if (!active || !validSchools?.length) return { prefsActive: false, scoreMin: null, scoreMax: null };
+    if (!active || !validSchools.length) {
+      return { prefsActive: false, scoreMin: null, scoreMax: null };
+    }
     const scores = validSchools.map((s) => s.preference_score).filter((x) => x != null);
-    if (scores.length === 0) return { prefsActive: false, scoreMin: null, scoreMax: null };
+    if (scores.length === 0) {
+      return { prefsActive: false, scoreMin: null, scoreMax: null };
+    }
     return {
       prefsActive: true,
       scoreMin: Math.min(...scores),
@@ -111,147 +93,201 @@ export default function MapView({ schools, selectedSchool, onSchoolClick, prefer
     [addressesForSelected]
   );
 
+  // Инициализация карты
+  useEffect(() => {
+    let cancelled = false;
+    const el = containerRef.current;
+    if (!el) return undefined;
+
+    (async () => {
+      try {
+        const ymaps3 = await loadYmaps3(getYandexMapsApiKey());
+        if (cancelled || !containerRef.current) return;
+
+        const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer } = ymaps3;
+
+        const map = new YMap(containerRef.current, {
+          location: { center: SARATOV_CENTER, zoom: DEFAULT_ZOOM },
+          showScaleInCopyrights: true,
+        });
+        map.addChild(new YMapDefaultSchemeLayer({ theme: 'light' }));
+        map.addChild(new YMapDefaultFeaturesLayer());
+
+        mapRef.current = map;
+        setMapReady(true);
+        setMapError(null);
+      } catch (err) {
+        if (!cancelled) {
+          setMapError(err.message || 'Ошибка загрузки Яндекс.Карт');
+        }
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+      const map = mapRef.current;
+      mapRef.current = null;
+      setMapReady(false);
+      if (map) {
+        try {
+          map.destroy();
+        } catch {
+          /* ignore */
+        }
+      }
+    };
+  }, []);
+
+  // Маркеры школ + полигон домов + fit
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !mapReady || !window.ymaps3) return;
+
+    const { YMapMarker, YMapFeature } = window.ymaps3;
+    const layers = layersRef.current;
+
+    const clearLayer = (list) => {
+      list.forEach((child) => {
+        try {
+          map.removeChild(child);
+        } catch {
+          /* ignore */
+        }
+      });
+      list.length = 0;
+    };
+
+    clearLayer(layers.markers);
+    clearLayer(layers.features);
+    clearLayer(layers.houses);
+
+    validSchools.forEach((school) => {
+      const coords = lonLatOfSchool(school);
+      if (!coords) return;
+      const { diameter, html } = getSchoolMarkerStyle(school, markerScale);
+      const wrap = document.createElement('div');
+      wrap.className = 'school-marker-yandex';
+      wrap.style.width = `${diameter}px`;
+      wrap.style.height = `${diameter}px`;
+      wrap.style.cursor = 'pointer';
+      wrap.title = schoolMarkerTitle(school);
+      wrap.innerHTML = html;
+      wrap.addEventListener('click', (e) => {
+        e.stopPropagation();
+        onSchoolClickRef.current?.(school);
+      });
+
+      const marker = new YMapMarker(
+        {
+          coordinates: coords,
+          zIndex: selectedSchool?.school_id === school.school_id ? 20 : 10,
+        },
+        wrap
+      );
+      map.addChild(marker);
+      layers.markers.push(marker);
+    });
+
+    if (showAttachedLayer && addressCoverageFeature?.geometry) {
+      const geom = addressCoverageFeature.geometry;
+      if (geom.type === 'Polygon' || geom.type === 'MultiPolygon') {
+        const feature = new YMapFeature({
+          geometry: {
+            type: geom.type,
+            coordinates: geom.coordinates,
+          },
+          style: {
+            stroke: [{ width: 2, color: '#2563eb' }],
+            fill: 'rgba(59, 130, 246, 0.18)',
+          },
+          properties: {
+            hint: `Полигон: кластеры ≤ ${ADDRESS_CLUSTER_LINK_METERS} м`,
+          },
+        });
+        map.addChild(feature);
+        layers.features.push(feature);
+      }
+
+      (addressesForSelected || []).forEach((row) => {
+        if (row.lat == null || row.lon == null) return;
+        const dot = document.createElement('div');
+        dot.className = 'house-marker-yandex';
+        dot.title = row.address || `${row.lat}, ${row.lon}`;
+        const house = new YMapMarker({ coordinates: [row.lon, row.lat], zIndex: 15 }, dot);
+        map.addChild(house);
+        layers.houses.push(house);
+      });
+    }
+
+    // Подгонка вида
+    if (showAttachedLayer) {
+      const pts = [];
+      const sc = lonLatOfSchool(selectedSchool);
+      if (sc) pts.push(sc);
+      (addressesForSelected || []).forEach((a) => {
+        if (a.lat != null && a.lon != null) pts.push([a.lon, a.lat]);
+      });
+      const bb = featureBoundsLatLng(addressCoverageFeature);
+      if (bb) {
+        // featureBoundsLatLng → [[lat,lon],[lat,lon]]
+        pts.push([bb[0][1], bb[0][0]], [bb[1][1], bb[1][0]]);
+      }
+      const bounds = boundsFromLonLats(pts);
+      if (bounds) {
+        map.setLocation({ bounds, duration: 300 });
+        viewRef.current = { ...viewRef.current, zoom: 16 };
+      }
+    } else if (selectedSchool) {
+      const coords = lonLatOfSchool(selectedSchool);
+      if (coords) {
+        viewRef.current = { center: coords, zoom: 16 };
+        map.setLocation({ center: coords, zoom: 16, duration: 300 });
+      }
+    } else if (validSchools.length > 0 && validSchools.length <= 80) {
+      const bounds = boundsFromLonLats(validSchools.map(lonLatOfSchool).filter(Boolean));
+      if (bounds) {
+        map.setLocation({ bounds, duration: 300 });
+      }
+    }
+  }, [
+    mapReady,
+    validSchools,
+    markerScale,
+    selectedSchool,
+    showAttachedLayer,
+    addressesForSelected,
+    addressCoverageFeature,
+  ]);
+
+  const zoomBy = (delta) => {
+    const map = mapRef.current;
+    if (!map) return;
+    const nextZoom = Math.max(1, Math.min(21, (viewRef.current.zoom ?? DEFAULT_ZOOM) + delta));
+    viewRef.current = { ...viewRef.current, zoom: nextZoom };
+    map.setLocation({
+      center: viewRef.current.center || SARATOV_CENTER,
+      zoom: nextZoom,
+      duration: 150,
+    });
+  };
+
   return (
     <div className="map-wrap">
-      <MapContainer
-        center={SARATOV_CENTER}
-        zoom={DEFAULT_ZOOM}
-        className="map-container"
-        zoomControl={false}
-        attributionControl={false}
-      >
-        <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <ZoomControl />
-        {validSchools &&
-          validSchools.map((s) => {
-            const icon = createSchoolMapIcon(s, markerScale);
-            const tipOff = tooltipOffsetForMarker(s, markerScale);
-            return (
-              <Marker
-                key={s.school_id}
-                position={[s.location.coordinates[1], s.location.coordinates[0]]}
-                icon={icon}
-                eventHandlers={{
-                  click: () => onSchoolClick && onSchoolClick(s),
-                }}
-              >
-                <Tooltip permanent={false} direction="top" offset={tipOff}>
-                  <strong>{s.name_2gis || s.name_ym || `Школа ${s.school_id}`}</strong>
-                  <br />
-                  {s.school_address}
-                  {s.preference_score != null && (
-                    <>
-                      <br />
-                      <span style={{ color: '#0d6efd' }}>Совпадение: {s.preference_score}%</span>
-                    </>
-                  )}
-                  <br />
-                  <span style={{ fontSize: '0.85em', color: '#6c757d' }}>
-                    {s.has_review_analysis
-                      ? 'Малиновая точка: есть финальные отзывы (rd_3_stage), как в графиках. '
-                      : 'Синяя точка: нет файла school_review_separately_*_final.json в rd_3_stage. '}
-                    {schoolHasAttachedHouseData(s)
-                      ? 'Полоски внутри — прикреплённые адреса домов.'
-                      : ''}
-                  </span>
-                </Tooltip>
-              </Marker>
-            );
-          })}
-        {validSchools && validSchools.length > 0 && !selectedSchool && (
-          <FitBounds schools={validSchools} />
-        )}
-        {selectedSchool?.location?.coordinates?.length === 2 && (
-          <FitSchool school={selectedSchool} />
-        )}
-        {showAttachedLayer && (
-          <>
-            <FitAttachedAddressesBounds
-              school={selectedSchool}
-              addresses={addressesForSelected}
-              coverageFeature={addressCoverageFeature}
-            />
-            {addressCoverageFeature && (
-              <GeoJSON
-                key={`address-coverage-${attachmentKey}`}
-                data={addressCoverageFeature}
-                style={{
-                  color: '#2563eb',
-                  weight: 2,
-                  fillColor: '#3b82f6',
-                  fillOpacity: 0.18,
-                }}
-                onEachFeature={(_feature, layer) => {
-                  layer.bindTooltip(
-                    `Полигон: кластеры ≤ ${ADDRESS_CLUSTER_LINK_METERS} м, затем вогнутая или выпуклая оболочка ` +
-                      '(острые углы; внутренние точки не являются вершинами).',
-                    { sticky: true, direction: 'top' }
-                  );
-                }}
-              />
-            )}
-            {(addressesForSelected || []).map((row, idx) =>
-              row.lat != null && row.lon != null ? (
-                <CircleMarker
-                  key={`debug-addr-${attachmentKey}-${idx}-${row.address || idx}`}
-                  center={[row.lat, row.lon]}
-                  radius={5}
-                  pathOptions={{
-                    color: '#9a3412',
-                    weight: 2,
-                    fillColor: '#f97316',
-                    fillOpacity: 0.9,
-                  }}
-                >
-                  <Tooltip direction="top" offset={[0, -4]}>
-                    <span style={{ whiteSpace: 'pre-wrap', maxWidth: 240, display: 'block' }}>
-                      [отладка] {row.address || `${row.lat}, ${row.lon}`}
-                    </span>
-                  </Tooltip>
-                </CircleMarker>
-              ) : null
-            )}
-          </>
-        )}
-      </MapContainer>
+      {mapError && (
+        <div className="map-error-banner">
+          Карта: {mapError}. Проверьте REACT_APP_YANDEX_MAPS_API_KEY и ограничения ключа (HTTP
+          Referrer: uchgrad.ru).
+        </div>
+      )}
+      <div className="ymap-zoom">
+        <button type="button" className="ymap-zoom-btn" onClick={() => zoomBy(1)} title="Увеличить">
+          +
+        </button>
+        <button type="button" className="ymap-zoom-btn" onClick={() => zoomBy(-1)} title="Уменьшить">
+          −
+        </button>
+      </div>
+      <div ref={containerRef} className="map-container" />
     </div>
   );
-}
-
-function ZoomControl() {
-  const map = useMap();
-  const ref = useRef(null);
-
-  useEffect(() => {
-    if (!map || !ref.current) return;
-    const Control = L.Control.extend({
-      onAdd: function () {
-        const div = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
-        const zoomIn = L.DomUtil.create('a', 'zoom-in', div);
-        zoomIn.innerHTML = '+';
-        zoomIn.href = '#';
-        zoomIn.title = 'Увеличить';
-        const zoomOut = L.DomUtil.create('a', 'zoom-out', div);
-        zoomOut.innerHTML = '−';
-        zoomOut.href = '#';
-        zoomOut.title = 'Уменьшить';
-        L.DomEvent.on(zoomIn, 'click', L.DomEvent.stopPropagation)
-          .on(zoomIn, 'click', L.DomEvent.preventDefault)
-          .on(zoomIn, 'click', () => map.zoomIn());
-        L.DomEvent.on(zoomOut, 'click', L.DomEvent.stopPropagation)
-          .on(zoomOut, 'click', L.DomEvent.preventDefault)
-          .on(zoomOut, 'click', () => map.zoomOut());
-        return div;
-      },
-    });
-    const control = new Control({ position: 'bottomright' });
-    control.addTo(map);
-    return () => {
-      control.remove();
-    };
-  }, [map]);
-
-  return <div ref={ref} />;
 }

@@ -226,30 +226,52 @@
   z-index: 0;
 }
 
-/* Кнопки зума карты (Leaflet control) */
-.map-wrap .leaflet-control-container .leaflet-bar {
+.map-error-banner {
+  position: absolute;
+  z-index: 5;
+  left: 12px;
+  right: 12px;
+  top: 12px;
+  padding: 10px 14px;
+  background: #fff3cd;
+  border: 1px solid #ffecb5;
+  border-radius: 8px;
+  color: #664d03;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.ymap-zoom {
+  position: absolute;
+  z-index: 4;
+  right: 12px;
+  bottom: 24px;
+  display: flex;
+  flex-direction: column;
   border: 1px solid #ccc;
   border-radius: 6px;
   overflow: hidden;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  background: #fff;
 }
-.map-wrap .leaflet-control-container .leaflet-bar a {
+
+.ymap-zoom-btn {
   width: 36px;
   height: 36px;
-  line-height: 36px;
-  text-align: center;
-  font-size: 1.25rem;
+  border: none;
   background: #fff;
   color: #333;
-  text-decoration: none;
+  font-size: 1.25rem;
+  line-height: 1;
   cursor: pointer;
-  display: block;
 }
-.map-wrap .leaflet-control-container .leaflet-bar a:hover {
-  background: #f0f0f0;
-}
-.map-wrap .leaflet-control-container .leaflet-bar a.zoom-out {
+
+.ymap-zoom-btn + .ymap-zoom-btn {
   border-top: 1px solid #ccc;
+}
+
+.ymap-zoom-btn:hover {
+  background: #f0f0f0;
 }
 
 /* Оверлей загрузки при выборе школы */
@@ -792,10 +814,19 @@
   cursor: not-allowed;
 }
 
-/* Круглые маркеры школ на карте (Leaflet divIcon) */
-.school-marker-leaflet {
-  background: transparent !important;
-  border: none !important;
+/* Круглые маркеры школ (Yandex Maps YMapMarker) */
+.school-marker-yandex {
+  transform: translate(-50%, -50%);
+}
+
+.house-marker-yandex {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f97316;
+  border: 2px solid #9a3412;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+  transform: translate(-50%, -50%);
 }
 
 .school-marker-dot-outer {

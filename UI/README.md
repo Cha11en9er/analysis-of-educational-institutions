@@ -16,15 +16,20 @@ npm start
 
 Приложение откроется на http://localhost:3000
 
-## Настройка API
+## Настройка API и карты
 
-По умолчанию приложение подключается к API на http://localhost:8000
+По умолчанию (локально без `.env`) API: `http://localhost:8000`.
 
-Чтобы изменить URL API, создайте файл `.env` в корне проекта `UI`:
+Файл `UI/.env` или `UI/.env.production`:
 
 ```
-REACT_APP_API_URL=http://your-api-url:8000
+REACT_APP_API_URL=
+REACT_APP_YANDEX_MAPS_API_KEY=ваш_ключ_javascript_api
 ```
+
+Пустой `REACT_APP_API_URL` — запросы на тот же origin (`/api/...`), как на https://uchgrad.ru.
+
+Карта: **Yandex Maps JS API v3** (Leaflet удалён).
 
 ## Функционал
 

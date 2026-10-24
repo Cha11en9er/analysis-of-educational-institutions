@@ -1,15 +1,12 @@
-import L from 'leaflet';
 import { schoolHasAttachedHouseData } from './schoolAttachment';
 
 const BLUE = '#2563eb';
 const RASPBERRY = '#be185d';
 
 /**
- * Круглый маркер: синий по умолчанию, малиновый если есть нейро-разбор отзывов;
- * внутри — «дорожки» при наличии прикреплённых адресов.
- * При активном подборе: выше совпадение — крупнее и плотнее по цвету, ниже — мельче и прозрачнее.
+ * Параметры круглого HTML-маркера школы (без Leaflet).
  */
-export function createSchoolMapIcon(school, { prefsActive, scoreMin, scoreMax } = {}) {
+export function getSchoolMarkerStyle(school, { prefsActive, scoreMin, scoreMax } = {}) {
   const hasRa = school.has_review_analysis === true;
   const attached = schoolHasAttachedHouseData(school);
 
@@ -31,23 +28,14 @@ export function createSchoolMapIcon(school, { prefsActive, scoreMin, scoreMax } 
 
   const html = `<div class="school-marker-dot-outer" style="width:${diameter}px;height:${diameter}px;opacity:${opacity}"><div class="school-marker-dot-inner" style="background:${fill}">${roadsSvg}</div></div>`;
 
-  return L.divIcon({
-    className: 'school-marker-leaflet',
-    html,
-    iconSize: [diameter, diameter],
-    iconAnchor: [diameter / 2, diameter / 2],
-    popupAnchor: [0, -Math.ceil(diameter / 2)],
-  });
+  return { diameter, html, fill };
 }
 
-export function tooltipOffsetForMarker(school, { prefsActive, scoreMin, scoreMax } = {}) {
-  let diameter = 20;
-  if (prefsActive && school.preference_score != null && scoreMin != null && scoreMax != null) {
-    const lo = scoreMin;
-    const hi = scoreMax;
-    const t = hi > lo ? (school.preference_score - lo) / (hi - lo) : 0.5;
-    const clamped = Math.max(0, Math.min(1, t));
-    diameter = Math.round(12 + clamped * 14);
+export function schoolMarkerTitle(school) {
+  const name = school.name_2gis || school.name_ym || `Школа ${school.school_id}`;
+  const parts = [name, school.school_address || ''];
+  if (school.preference_score != null) {
+    parts.push(`Совпадение: ${school.preference_score}%`);
   }
-  return [0, -(Math.ceil(diameter / 2) + 6)];
+  return parts.filter(Boolean).join('\n');
 }

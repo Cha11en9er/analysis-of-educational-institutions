@@ -1,0 +1,56 @@
+---
+description: Деплой uchgrad.ru на Timeweb (/opt/uchgrad) — важные команды
+alwaysApply: true
+---
+
+# Деплой uchgrad.ru
+
+Сервер: `root@201.34.143.208`, код: `/opt/uchgrad`, домен: `https://uchgrad.ru`.
+Фронт: статика `UI/build`. API: uvicorn `127.0.0.1:8000`, nginx проксирует `/api/`.
+
+## После git push — на сервере
+
+```bash
+cd /opt/uchgrad
+git pull
+
+# корень репо: .env с DB_* и YANDEX_API_KEY (не в git)
+# UI: ключ карт на этапе сборки
+cat > UI/.env.production << 'EOF'
+REACT_APP_API_URL=
+REACT_APP_YANDEX_MAPS_API_KEY=ВАШ_КЛЮЧ_ЯНДЕКС_КАРТ
+EOF
+
+cd UI && npm ci && npm run build && cd ..
+
+sudo systemctl restart uchgrad-api
+sudo nginx -t && sudo systemctl reload nginx
+```
+
+## Первый запуск API (один раз)
+
+```bash
+cd /opt/uchgrad
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
+sudo cp deploy/uchgrad-api.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable --now uchgrad-api
+```
+
+В nginx для `uchgrad.ru` должен быть `location /api/` → `http://127.0.0.1:8000/api/` (см. `deploy/nginx-uchgrad.ru.conf`).
+
+## Проверки
+
+```bash
+curl -s http://127.0.0.1:8000/api/schools/map | head -c 200
+curl -sI https://uchgrad.ru/api/schools/map
+systemctl status uchgrad-api --no-pager
+journalctl -u uchgrad-api -n 50 --no-pager
+```
+
+## Важно
+
+- `.env` и `UI/.env.production` **не коммитить** (секреты).
+- Leaflet удалён; карта только через Yandex Maps JS API v3.
+- Network Error на фильтрах = API не запущен или нет proxy `/api/`.

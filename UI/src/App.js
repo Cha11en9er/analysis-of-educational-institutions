@@ -8,7 +8,12 @@ import AnalyticsView, { AnalyticsChart } from './components/AnalyticsView';
 import Toast from './components/Toast';
 import PreferenceModal from './components/PreferenceModal';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+// Пустая строка = тот же origin (nginx проксирует /api → uvicorn).
+// Локально без .env — http://localhost:8000.
+const API_URL =
+  process.env.REACT_APP_API_URL !== undefined
+    ? process.env.REACT_APP_API_URL
+    : 'http://localhost:8000';
 
 const LS_PREFS = 'schoolMapPreferences';
 const LS_MODAL_DISMISSED = 'schoolPreferencesModalDismissed';

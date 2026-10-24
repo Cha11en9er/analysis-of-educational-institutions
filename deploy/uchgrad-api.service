@@ -1,0 +1,15 @@
+[Unit]
+Description=uchgrad Schools API (FastAPI/uvicorn)
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/uchgrad
+EnvironmentFile=/opt/uchgrad/.env
+ExecStart=/opt/uchgrad/.venv/bin/uvicorn api.main:app --host 127.0.0.1 --port 8000
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
