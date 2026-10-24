@@ -142,6 +142,19 @@ async def root():
     }
 
 
+@app.get("/api/config")
+async def public_config():
+    """
+    Публичные настройки для фронта.
+    YANDEX_API_KEY для JS Maps и так светится в браузере — ограничение ключа: HTTP Referrer.
+    """
+    key = (os.getenv("YANDEX_API_KEY") or os.getenv("REACT_APP_YANDEX_API_KEY") or "").strip()
+    return {
+        "yandex_api_key": key or None,
+        "data_source": "json" if use_json() else "db",
+    }
+
+
 @app.get("/schools")
 async def get_schools():
     if use_json():

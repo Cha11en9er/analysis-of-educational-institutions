@@ -274,8 +274,8 @@ export default function MapView({ schools, selectedSchool, onSchoolClick, prefer
     <div className="map-wrap">
       {mapError && (
         <div className="map-error-banner">
-          Карта: {mapError}. Проверьте REACT_APP_YANDEX_MAPS_API_KEY и ограничения ключа (HTTP
-          Referrer: uchgrad.ru).
+          Карта: {mapError}. Нужен YANDEX_API_KEY в /opt/uchgrad/.env и Referrer
+          https://uchgrad.ru/* в кабинете Яндекса.
         </div>
       )}
       <div className="ymap-zoom">

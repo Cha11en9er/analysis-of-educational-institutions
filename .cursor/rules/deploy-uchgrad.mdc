@@ -14,13 +14,14 @@ alwaysApply: true
 cd /opt/uchgrad
 git pull
 
-# корень репо: .env (не в git). Пока сайт без БД:
+# корень /opt/uchgrad/.env (не в git), минимум:
 #   DATA_SOURCE=json
-# (школы из school_data/final_school_data.json, отзывы из review_data/...)
-# UI: ключ карт на этапе сборки
+#   YANDEX_API_KEY=...   # тот же ключ, что в локальном .env; Referrer: https://uchgrad.ru/*
+#
+# Школы: school_data/final_school_data.json. Карта берёт ключ через GET /api/config.
+
 cat > UI/.env.production << 'EOF'
 REACT_APP_API_URL=
-REACT_APP_YANDEX_MAPS_API_KEY=ВАШ_КЛЮЧ_ЯНДЕКС_КАРТ
 EOF
 
 cd UI && npm ci && npm run build && cd ..
