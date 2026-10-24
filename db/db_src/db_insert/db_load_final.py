@@ -42,6 +42,18 @@ REVIEWS_ANALYZ_DIR = (
 SEP_PATTERN = re.compile(r"school_reviews_separately_(\d+)\.json$")
 ANALYZ_PATTERN = re.compile(r"school_reviews_separately_(\d+)_analyz\.json$")
 
+# Дубликаты зданий (см. school_data/prepare_final_data.py, REVIEW_ALIAS_IDS):
+# отзывы id-дубликата относятся к основной школе. school_id отзывов ремапится,
+# иначе FK sa.review -> sa.school нарушается (в final_school_data.json их нет).
+REVIEW_ALIAS_IDS: dict[int, int] = {
+    70: 64,
+    23: 167,
+    175: 171,
+    159: 33,
+    124: 155,
+    115: 80,
+}
+
 
 def truthy(value: Any) -> bool | None:
     if value is None:
@@ -120,6 +132,9 @@ def load_school_rows() -> tuple[list[tuple], list[tuple], list[tuple]]:
 
 def load_review_rows() -> list[tuple]:
     """Мержит сырые отзывы с темами анализа по (school_id, review_id)."""
+    schools_all = {
+        int(s["id"]) for s in json.loads(FINAL_SCHOOLS_JSON.read_text(encoding="utf-8"))
+    }
     rows: list[tuple] = []
     analyz_ids = {
         int(m.group(1))
@@ -156,6 +171,12 @@ def load_review_rows() -> list[tuple]:
             date = (r.get("date") or "").strip() or None
             if not text and not date:  # CHECK-констрейнт БД
                 continue
+            if school_id in REVIEW_ALIAS_IDS:
+                school_id_mapped = REVIEW_ALIAS_IDS[school_id]
+            elif school_id not in schools_all:
+                continue  # школы нет в final_school_data.json — отзыв некуда крепить
+            else:
+                school_id_mapped = school_id
             rating = r.get("rating")
             rating = str(rating).strip() if rating is not None else ""
             likes = r.get("likes_count")
@@ -163,7 +184,7 @@ def load_review_rows() -> list[tuple]:
             rows.append(
                 (
                     int(rid),
-                    school_id,
+                    school_id_mapped,
                     date,
                     text,
                     int(likes) if likes is not None and str(likes).strip().isdigit() else 0,
