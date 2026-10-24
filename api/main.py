@@ -387,9 +387,11 @@ async def get_school_by_id(school_id: int):
                 s.floors, s.year_built, s.reconstruction_year,
                 s.has_sports_complex, s.has_pool, s.has_stadium, s.has_sports_ground,
                 ST_X(s.location::geometry) AS lon, ST_Y(s.location::geometry) AS lat,
-                l.link_2gis, l.link_yandex
+                l.link_2gis, l.link_yandex, l.link_gosuslugi,
+                r.rating_yandex, r.rating_2gis
             FROM sa.school s
             LEFT JOIN sa.link l ON l.school_id = s.school_id
+            LEFT JOIN sa.rating r ON r.school_id = s.school_id
             WHERE s.school_id = %s
             """,
             (school_id,),
@@ -420,6 +422,10 @@ async def get_school_by_id(school_id: int):
             },
             "link_2gis": row[14],
             "link_yandex": row[15],
+            "link_gosuslugi": row[16],
+            "rating_yandex": float(row[17]) if row[17] is not None else None,
+            "rating_2gis": float(row[18]) if row[18] is not None else None,
+            "has_review_analysis": school_id in review_analysis_school_ids(),
         }
     except psycopg2.Error as e:
         raise HTTPException(status_code=500, detail=f"Ошибка БД: {str(e)}") from e
