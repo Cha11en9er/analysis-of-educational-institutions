@@ -45,6 +45,16 @@ systemctl daemon-reload
 systemctl enable --now uchgrad-api
 ```
 
+`.env` **не** подключать через systemd `EnvironmentFile` (ломается на `'` и `)` в паролях). Только `load_dotenv` в Python.
+
+Диагностика API:
+```bash
+systemctl status uchgrad-api --no-pager
+journalctl -u uchgrad-api -n 40 --no-pager
+curl -s http://127.0.0.1:8000/
+curl -s http://127.0.0.1:8000/api/config
+```
+
 Если на сервере Python 3.14 и `psycopg2-binary` не собирается — поставь 3.12:
 `apt install -y python3.12 python3.12-venv && python3.12 -m venv .venv`
 

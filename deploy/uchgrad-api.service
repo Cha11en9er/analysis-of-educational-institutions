@@ -1,12 +1,13 @@
 [Unit]
 Description=uchgrad Schools API (FastAPI/uvicorn)
-After=network.target postgresql.service
+After=network.target
 
 [Service]
 Type=simple
 User=root
 WorkingDirectory=/opt/uchgrad
-EnvironmentFile=-/opt/uchgrad/.env
+# .env читает python-dotenv в api/main.py (не systemd EnvironmentFile —
+# там ломаются кавычки и спецсимволы вроде ) в пароле).
 Environment=DATA_SOURCE=json
 ExecStart=/opt/uchgrad/.venv/bin/uvicorn api.main:app --host 127.0.0.1 --port 8000
 Restart=always
