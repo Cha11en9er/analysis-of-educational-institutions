@@ -64,6 +64,7 @@ def school_to_map_item(raw: dict[str, Any]) -> dict[str, Any]:
         "rating_yandex": raw.get("rating_yandex"),
         "rating_2gis": raw.get("rating_2gis"),
         "rating_total": raw.get("rating_total"),
+        "ege_average_score": raw.get("ege_average_score"),
         "has_review_analysis": sid in review_analysis_school_ids(),
     }
 
@@ -79,15 +80,21 @@ def school_to_detail(raw: dict[str, Any]) -> dict[str, Any]:
             "link_yandex": raw.get("link_yandex"),
             "link_gosuslugi": raw.get("link_gosuslugi"),
             "short_name": raw.get("short_name"),
+            "city": raw.get("city") or "Саратов",
             "top_tags": raw.get("top_tags") or [],
             "ege_average_score": raw.get("ege_average_score"),
+            "ege_year": raw.get("ege_year"),
             "university_admission_percent": raw.get("university_admission_percent"),
+            "university_admission_year": raw.get("university_admission_year"),
+            "olympiad_winners_count": raw.get("olympiad_winners_count"),
+            "administrative_district": raw.get("administrative_district"),
             "rating_ege": raw.get("rating_ege"),
             "rating_olympiads": raw.get("rating_olympiads"),
             "rating_teachers": raw.get("rating_teachers"),
             "rating_mto": raw.get("rating_mto"),
             "rating_psychological_climate": raw.get("rating_psychological_climate"),
             "rating_sports_infrastructure": raw.get("rating_sports_infrastructure"),
+            "rating_profiles": raw.get("rating_profiles"),
             "year_built": raw.get("year_built"),
         }
     )

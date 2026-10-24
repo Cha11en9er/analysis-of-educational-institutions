@@ -24,6 +24,24 @@ CREATE TABLE sa.school (
     has_pool BOOLEAN,
     has_stadium BOOLEAN,
     has_sports_ground BOOLEAN,
+    -- Города: проект растёт на всю Россию, Саратов — первый город
+    city TEXT NOT NULL DEFAULT 'Саратов',
+    -- Итоговый рейтинг и образовательные метрики (из final_school_data.json)
+    rating_total NUMERIC(6,1),
+    ege_average_score NUMERIC(4,1),
+    ege_year INTEGER,
+    university_admission_percent NUMERIC(5,1),
+    university_admission_year INTEGER,
+    olympiad_winners_count INTEGER,
+    top_tags JSONB,
+    administrative_district TEXT,
+    rating_ege NUMERIC,
+    rating_olympiads NUMERIC,
+    rating_teachers NUMERIC,
+    rating_mto NUMERIC,
+    rating_psychological_climate NUMERIC,
+    rating_sports_infrastructure NUMERIC,
+    rating_profiles NUMERIC,
     LOCATION GEOGRAPHY(Point, 4326) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -84,3 +102,23 @@ sa.review(school_id);
 CREATE INDEX idx_review_topics ON
 sa.review
     USING GIN(topics);
+-- ============================================================
+-- Миграция существующих баз (можно выполнять повторно).
+-- Новые поля UI v2: города, итоговый рейтинг, ЕГЭ, олимпиады и др.
+-- ============================================================
+ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS city TEXT NOT NULL DEFAULT 'Саратов';
+ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS rating_total NUMERIC(6,1);
+ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS ege_average_score NUMERIC(4,1);
+ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS ege_year INTEGER;
+ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS university_admission_percent NUMERIC(5,1);
+ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS university_admission_year INTEGER;
+ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS olympiad_winners_count INTEGER;
+ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS top_tags JSONB;
+ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS administrative_district TEXT;
+ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS rating_ege NUMERIC;
+ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS rating_olympiads NUMERIC;
+ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS rating_teachers NUMERIC;
+ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS rating_mto NUMERIC;
+ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS rating_psychological_climate NUMERIC;
+ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS rating_sports_infrastructure NUMERIC;
+ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS rating_profiles NUMERIC;

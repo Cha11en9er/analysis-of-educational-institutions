@@ -274,7 +274,7 @@ async def get_schools_for_map(
                 s.school_id, s.name_2gis, s.name_ym, s.school_address, s.year_built,
                 s.has_sports_complex, s.has_pool, s.has_stadium, s.has_sports_ground,
                 ST_X(s.location::geometry) AS lon, ST_Y(s.location::geometry) AS lat,
-                r.rating_yandex
+                r.rating_yandex, s.rating_total, s.ege_average_score
             FROM sa.school s
             LEFT JOIN sa.rating r ON r.school_id = s.school_id
             WHERE 1=1
@@ -335,6 +335,8 @@ async def get_schools_for_map(
                         ),
                     },
                     "rating_yandex": float(rating) if rating is not None else None,
+                    "rating_total": float(row[12]) if row[12] is not None else None,
+                    "ege_average_score": float(row[13]) if row[13] is not None else None,
                 }
             )
         cursor.close()
@@ -388,7 +390,13 @@ async def get_school_by_id(school_id: int):
                 s.has_sports_complex, s.has_pool, s.has_stadium, s.has_sports_ground,
                 ST_X(s.location::geometry) AS lon, ST_Y(s.location::geometry) AS lat,
                 l.link_2gis, l.link_yandex, l.link_gosuslugi,
-                r.rating_yandex, r.rating_2gis
+                r.rating_yandex, r.rating_2gis,
+                s.city, s.rating_total, s.ege_average_score, s.ege_year,
+                s.university_admission_percent, s.university_admission_year,
+                s.olympiad_winners_count, s.top_tags, s.administrative_district,
+                s.rating_ege, s.rating_olympiads, s.rating_teachers, s.rating_mto,
+                s.rating_psychological_climate, s.rating_sports_infrastructure,
+                s.rating_profiles
             FROM sa.school s
             LEFT JOIN sa.link l ON l.school_id = s.school_id
             LEFT JOIN sa.rating r ON r.school_id = s.school_id
@@ -401,6 +409,18 @@ async def get_school_by_id(school_id: int):
         if not row:
             raise HTTPException(status_code=404, detail="Школа не найдена")
         lon, lat = row[12], row[13]
+        top_tags = row[26]
+        if isinstance(top_tags, str) and top_tags.strip():
+            try:
+                top_tags = json_lib.loads(top_tags)
+            except (json_lib.JSONDecodeError, TypeError):
+                top_tags = []
+        if not isinstance(top_tags, list):
+            top_tags = []
+
+        def _num(v):
+            return float(v) if v is not None else None
+
         return {
             "school_id": row[0],
             "name_2gis": row[1],
@@ -423,9 +443,25 @@ async def get_school_by_id(school_id: int):
             "link_2gis": row[14],
             "link_yandex": row[15],
             "link_gosuslugi": row[16],
-            "rating_yandex": float(row[17]) if row[17] is not None else None,
-            "rating_2gis": float(row[18]) if row[18] is not None else None,
+            "rating_yandex": _num(row[17]),
+            "rating_2gis": _num(row[18]),
             "has_review_analysis": school_id in review_analysis_school_ids(),
+            "city": row[19],
+            "rating_total": _num(row[20]),
+            "ege_average_score": _num(row[21]),
+            "ege_year": row[22],
+            "university_admission_percent": _num(row[23]),
+            "university_admission_year": row[24],
+            "olympiad_winners_count": row[25],
+            "top_tags": top_tags,
+            "administrative_district": row[27],
+            "rating_ege": _num(row[28]),
+            "rating_olympiads": _num(row[29]),
+            "rating_teachers": _num(row[30]),
+            "rating_mto": _num(row[31]),
+            "rating_psychological_climate": _num(row[32]),
+            "rating_sports_infrastructure": _num(row[33]),
+            "rating_profiles": _num(row[34]),
         }
     except psycopg2.Error as e:
         raise HTTPException(status_code=500, detail=f"Ошибка БД: {str(e)}") from e
