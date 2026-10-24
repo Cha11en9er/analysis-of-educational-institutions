@@ -7,7 +7,6 @@ import {
 import {
   getAttachedAddressesForKey,
   getSchoolAttachmentKey,
-  schoolHasAttachedHouseData,
 } from '../utils/schoolAttachment';
 import { getSchoolMarkerStyle, schoolMarkerTitle } from '../utils/schoolMapMarkerIcon';
 import { getYandexMapsApiKey, loadYmaps3 } from '../utils/loadYmaps3';

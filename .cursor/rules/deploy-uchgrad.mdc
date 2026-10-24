@@ -29,14 +29,21 @@ sudo nginx -t && sudo systemctl reload nginx
 
 ## Первый запуск API (один раз)
 
+Не ставить полный `requirements.txt` (там playwright). Только API:
+
 ```bash
 cd /opt/uchgrad
+apt install -y libpq-dev python3-dev build-essential
 python3 -m venv .venv
-.venv/bin/pip install -r requirements.txt
-sudo cp deploy/uchgrad-api.service /etc/systemd/system/
-sudo systemctl daemon-reload
-sudo systemctl enable --now uchgrad-api
+.venv/bin/pip install -U pip
+.venv/bin/pip install -r requirements-api.txt
+cp deploy/uchgrad-api.service /etc/systemd/system/
+systemctl daemon-reload
+systemctl enable --now uchgrad-api
 ```
+
+Если на сервере Python 3.14 и `psycopg2-binary` не собирается — поставь 3.12:
+`apt install -y python3.12 python3.12-venv && python3.12 -m venv .venv`
 
 В nginx для `uchgrad.ru` должен быть `location /api/` → `http://127.0.0.1:8000/api/` (см. `deploy/nginx-uchgrad.ru.conf`).
 
