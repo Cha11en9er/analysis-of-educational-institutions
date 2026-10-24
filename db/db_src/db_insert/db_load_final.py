@@ -189,7 +189,8 @@ def main() -> None:
                     cur.execute("TRUNCATE sa.review, sa.rating, sa.link, sa.school CASCADE")
                     print("Таблицы очищены (TRUNCATE)")
 
-                cur.execute(
+                execute_batch(
+                    cur,
                     """
                     INSERT INTO sa.school (
                         school_id, name_2gis, name_ym, school_address, building_type,
@@ -211,7 +212,8 @@ def main() -> None:
                     """,
                     schools,
                 )
-                cur.execute(
+                execute_batch(
+                    cur,
                     """
                     INSERT INTO sa.rating (school_id, rating_2gis, rating_yandex)
                     VALUES (%s,%s,%s)
@@ -221,7 +223,8 @@ def main() -> None:
                     """,
                     ratings,
                 )
-                cur.execute(
+                execute_batch(
+                    cur,
                     """
                     INSERT INTO sa.link (
                         school_id, link_yandex, review_link_ym, link_2gis,
