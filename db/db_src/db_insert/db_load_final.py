@@ -152,19 +152,23 @@ def load_review_rows() -> list[tuple]:
         sep = json.loads(sep_path.read_text(encoding="utf-8-sig"))
         for r in sep:
             rid = str(r.get("review_id"))
-            text, date = r.get("text"), r.get("date")
+            text = (r.get("text") or "").strip() or None
+            date = (r.get("date") or "").strip() or None
             if not text and not date:  # CHECK-констрейнт БД
                 continue
             rating = r.get("rating")
+            rating = str(rating).strip() if rating is not None else ""
+            likes = r.get("likes_count")
+            dislikes = r.get("dislikes_count")
             rows.append(
                 (
                     int(rid),
                     school_id,
                     date,
                     text,
-                    r.get("likes_count") or 0,
-                    r.get("dislikes_count") or 0,
-                    int(rating) if rating is not None and str(rating).isdigit() and 1 <= int(rating) <= 5 else None,
+                    int(likes) if likes is not None and str(likes).strip().isdigit() else 0,
+                    int(dislikes) if dislikes is not None and str(dislikes).strip().isdigit() else 0,
+                    int(rating) if rating.isdigit() and 1 <= int(rating) <= 5 else None,
                     Json(topics_by_rid.get(rid, {})),
                     overall_by_rid.get(rid) or None,
                 )
