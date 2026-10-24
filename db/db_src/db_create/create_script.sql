@@ -52,6 +52,7 @@ CREATE TABLE sa.link (
     review_link_ym TEXT,
     link_2gis TEXT,
     review_link_2gis TEXT,
+    link_gosuslugi TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

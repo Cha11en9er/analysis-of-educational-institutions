@@ -3113,7 +3113,7 @@
         51.54164
       ]
     },
-    "link_gosuslugi": "https://shk21-sar.gosuslugi.ru/",
+    "link_gosuslugi": "https://shkola21saratov-r64.gosweb.gosuslugi.ru/",
     "specialization": [
       "Социально-гуманитарный профиль",
       "Технологический профиль",
@@ -3127,12 +3127,22 @@
     "infrastructure": "https://shk21-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
     "EGE_2026": null,
     "VUZ_2026": null,
-    "Olympiads_2026": null,
+    "Olympiads_2026": [
+      "12 - Призеров Всероссийской олимпиады за 3 года"
+    ],
     "Medals_2026": null,
     "other_results_2026": null,
     "results_target_year": 2026,
-    "parse_error": "TimeoutException: Message: timeout: Timed out receiving message from renderer: 57.116\n  (Session info: chrome=154.0.8037.98)\nStacktrace:\n\tchromedriver!GetHandleVerifier [0x7ff61aee9d55+5a55]\n\tchromedriver!(No symbol) [0x7ff61ae0f540]\n\tchromedriver!(No symbol) [0x7ff61ac345fd]\n\tchromedriver!(No symbol) [0x7ff61ac21639]\n\tchromedriver!(No symbol) [0x7ff61ac21321]\n\tchromedriver!(No symbol) [0x7ff61ac1eff0]\n\tchromedriver!(No symbol) [0x7ff61ac1f93f]\n\tchromedriver!(No symbol) [0x7ff61ac2ee3a]\n\tchromedriver!(No symbol) [0x7ff61ac456eb]\n\tchromedriver!(No symbol) [0x7ff61ac4d66a]\n\tchromedriver!(No symbol) [0x7ff61ac20101]\n\tchromedriver!(No symbol) [0x7ff61ac4531e]\n\tchromedriver!(No symbol) [0x7ff61ace004f]\n\tchromedriver!(No symbol) [0x7ff61ac81a12]\n\tchromedriver!(No symbol) [0x7ff61ac82823]\n\tchromedriver!GetHandleVerifier [0x7ff61b3004b1+41c1b1]\n\tchromedriver!GetHandleVerifier [0x7ff61b32e26b+449f6b]\n\tchromedriver!GetHandleVerifier [0x7ff61b32274e+43e44e]\n\tchromedriver!GetHandleVerifier [0x7ff61afe32fe+feffe]\n\tchromedriver!(No symbol) [0x7ff61ae1cb55]\n\tchromedriver!(No symbol) [0x7ff61ae17f64]\n\tchromedriver!(No symbol) [0x7ff61ae180f4]\n\tchromedriver!(No symbol) [0x7ff61ae02e4c]\n\tKERNEL32!BaseThreadInitThunk [0x7ffd7d847374+14]\n\tntdll!RtlUserThreadStart [0x7ffd7e3fcc91+21]\n",
-    "results_parsed_at": "2026-10-18T16:07:02.286927+00:00"
+    "results_parsed_at": "2026-10-24T04:08:13.741527+00:00",
+    "Medals": [
+      "2 - Выпускников с золотой медалью за 2022 год"
+    ],
+    "results_kpi_raw": [
+      "12 - Призеров Всероссийской олимпиады за 3 года",
+      "2 - Выпускников с золотой медалью за 2022 год",
+      "87 - Средний балл на ЕГЭ в 2022 году",
+      "97% - Выпускников поступивших в ВУЗы в 2022 году"
+    ]
   },
   {
     "id": 21,

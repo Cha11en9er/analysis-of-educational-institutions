@@ -27,6 +27,7 @@ from json_data import (  # noqa: E402
     get_school_raw,
     load_reviews_topics,
     load_schools_raw,
+    review_analysis_school_ids,
     school_to_detail,
     school_to_map_item,
 )
@@ -339,9 +340,12 @@ async def get_schools_for_map(
         cursor.close()
 
         bundle = load_preference_bundle()
-        final_ids = bundle.get("final_review_school_ids") or frozenset()
+        # Наличие анализа отзывов определяем по analyz-файлам (тот же критерий,
+        # что и в json-режиме), а не по bundle.final_review_school_ids — папка
+        # rd_3_stage, на которую ссылается preference_scoring, не используется.
+        analyz_ids = review_analysis_school_ids()
         for sch in schools:
-            sch["has_review_analysis"] = sch["school_id"] in final_ids
+            sch["has_review_analysis"] = sch["school_id"] in analyz_ids
 
         schools = apply_preference_scores(
             schools,
