@@ -10,11 +10,17 @@ import Toast from './components/Toast';
 import PreferenceModal from './components/PreferenceModal';
 
 // Пустая строка = тот же origin (nginx проксирует /api → uvicorn).
-// Локально без .env — http://localhost:8000.
-const API_URL =
-  process.env.REACT_APP_API_URL !== undefined
-    ? process.env.REACT_APP_API_URL
-    : 'http://localhost:8000';
+// На проде без .env — тот же origin; локальная разработка (localhost/127.0.0.1) — :8000.
+function resolveApiUrl() {
+  const fromEnv = process.env.REACT_APP_API_URL;
+  if (fromEnv !== undefined) return fromEnv;
+  if (typeof window !== 'undefined' &&
+      /^(localhost|127\.0\.0\.1)$/.test(window.location.hostname)) {
+    return 'http://localhost:8000';
+  }
+  return '';
+}
+const API_URL = resolveApiUrl();
 
 const LS_PREFS = 'schoolMapPreferences';
 const LS_MODAL_DISMISSED = 'schoolPreferencesModalDismissed';

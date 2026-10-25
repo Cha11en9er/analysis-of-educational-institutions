@@ -9,7 +9,10 @@ import { TOPICS } from './AnalyticsView';
 const API_URL =
   process.env.REACT_APP_API_URL !== undefined
     ? process.env.REACT_APP_API_URL
-    : 'http://localhost:8000';
+    : (typeof window !== 'undefined' &&
+      /^(localhost|127\.0\.0\.1)$/.test(window.location.hostname)
+        ? 'http://localhost:8000'
+        : '');
 
 const SPORTS_LABELS = [
   { key: 'has_sports_complex', label: 'ФОК' },
