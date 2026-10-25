@@ -96,6 +96,9 @@ def school_to_detail(raw: dict[str, Any]) -> dict[str, Any]:
             "rating_sports_infrastructure": raw.get("rating_sports_infrastructure"),
             "rating_profiles": raw.get("rating_profiles"),
             "year_built": raw.get("year_built"),
+            "capacity": raw.get("capacity_students"),
+            "area_sqm": raw.get("area_sqm"),
+            "wall_material": raw.get("wall_material"),
         }
     )
     return item

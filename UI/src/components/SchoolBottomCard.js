@@ -16,8 +16,31 @@ const RATING_COMPONENTS = [
   { key: 'rating_psychological_climate', label: 'Атмосфера', pct: (v) => Math.round(v * 100) },
 ];
 
+export function StarRating({ value, size = 14 }) {
+  if (value == null || !Number.isFinite(Number(value))) return null;
+  return (
+    <span className="star-rating" title={`Средняя оценка отзывов: ${Number(value).toFixed(1)}`}>
+      <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"
+          fill="#f59e0b"
+        />
+      </svg>
+      <b>{Number(value).toFixed(1)}</b>
+    </span>
+  );
+}
+
+export function avgReviewRating(school) {
+  const vals = [school.rating_2gis, school.rating_yandex]
+    .map((v) => Number(v))
+    .filter((v) => Number.isFinite(v) && v > 0);
+  if (!vals.length) return null;
+  return vals.reduce((a, b) => a + b, 0) / vals.length;
+}
+
 /**
- * Нижняя карточка выбранной школы поверх карты (в стиле Replit-версии).
+ * Нижняя карточка выбранной школы поверх карты (белая, как на Replit-версии).
  * Тексты отзывов не показываются нигде — только агрегаты.
  */
 export default function SchoolBottomCard({ school, rank, total, onClose, onOpenDetails }) {
@@ -31,6 +54,7 @@ export default function SchoolBottomCard({ school, rank, total, onClose, onOpenD
       return { label, pct: Math.max(0, Math.min(100, pct(v))) };
     })
     .filter(Boolean);
+  const star = avgReviewRating(school);
 
   return (
     <div className="school-bottom-card">
@@ -42,7 +66,10 @@ export default function SchoolBottomCard({ school, rank, total, onClose, onOpenD
             <span className="bottom-card-rank-total">из {total}</span>
           </div>
           <div className="bottom-card-title">
-            <div className="bottom-card-name">{name}</div>
+            <div className="bottom-card-name">
+              {name}
+              <StarRating value={star} />
+            </div>
             <div className="bottom-card-address">{school.school_address}</div>
           </div>
           <div className="bottom-card-score">

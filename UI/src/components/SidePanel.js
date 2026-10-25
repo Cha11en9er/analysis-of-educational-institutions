@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useMemo } from 'react';
 import logo from '../logo.svg';
+import { StarRating, avgReviewRating } from './SchoolBottomCard';
 
 const FILTER_KEYS = {
   year: 'Год постройки',
@@ -267,6 +268,7 @@ export default function SidePanel({
                   )}
                 </span>
               </span>
+              <StarRating value={avgReviewRating(s)} size={12} />
             </button>
           ))}
         </div>

@@ -396,7 +396,8 @@ async def get_school_by_id(school_id: int):
                 s.olympiad_winners_count, s.top_tags, s.administrative_district,
                 s.rating_ege, s.rating_olympiads, s.rating_teachers, s.rating_mto,
                 s.rating_psychological_climate, s.rating_sports_infrastructure,
-                s.rating_profiles
+                s.rating_profiles,
+                s.capacity, s.building_info->>'area_sqm' AS area_sqm, s.material
             FROM sa.school s
             LEFT JOIN sa.link l ON l.school_id = s.school_id
             LEFT JOIN sa.rating r ON r.school_id = s.school_id
@@ -462,6 +463,9 @@ async def get_school_by_id(school_id: int):
             "rating_psychological_climate": _num(row[32]),
             "rating_sports_infrastructure": _num(row[33]),
             "rating_profiles": _num(row[34]),
+            "capacity": row[35],
+            "area_sqm": _num(row[36]),
+            "wall_material": row[37],
         }
     except psycopg2.Error as e:
         raise HTTPException(status_code=500, detail=f"Ошибка БД: {str(e)}") from e
