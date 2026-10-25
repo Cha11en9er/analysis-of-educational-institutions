@@ -274,7 +274,8 @@ async def get_schools_for_map(
                 s.school_id, s.name_2gis, s.name_ym, s.school_address, s.year_built,
                 s.has_sports_complex, s.has_pool, s.has_stadium, s.has_sports_ground,
                 ST_X(s.location::geometry) AS lon, ST_Y(s.location::geometry) AS lat,
-                r.rating_yandex, s.rating_total, s.ege_average_score
+                r.rating_yandex, s.rating_total, s.ege_average_score,
+                s.olympiad_winners_count
             FROM sa.school s
             LEFT JOIN sa.rating r ON r.school_id = s.school_id
             WHERE 1=1
@@ -337,6 +338,7 @@ async def get_schools_for_map(
                     "rating_yandex": float(rating) if rating is not None else None,
                     "rating_total": float(row[12]) if row[12] is not None else None,
                     "ege_average_score": float(row[13]) if row[13] is not None else None,
+                    "olympiad_winners_count": row[14],
                 }
             )
         cursor.close()

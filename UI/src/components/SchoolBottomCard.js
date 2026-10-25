@@ -7,14 +7,46 @@ const SPORTS_LABELS = [
   { key: 'has_sports_ground', label: 'Спортплощадка' },
 ];
 
-// rating_ege — сам средний балл ЕГЭ (0–100), остальные — доли 0..1
-const RATING_COMPONENTS = [
-  { key: 'rating_ege', label: 'ЕГЭ', pct: (v) => Math.min(100, Math.round(v)) },
-  { key: 'rating_olympiads', label: 'Олимпиады', pct: (v) => Math.round(v * 100) },
-  { key: 'rating_teachers', label: 'Учителя', pct: (v) => Math.round(v * 100) },
-  { key: 'rating_mto', label: 'Оснащённость', pct: (v) => Math.round(v * 100) },
-  { key: 'rating_psychological_climate', label: 'Атмосфера', pct: (v) => Math.round(v * 100) },
+// Компоненты рейтинга — показываем натуральные значения, не проценты:
+// ЕГЭ — средний балл; Олимпиады — число победителей/призёров;
+// Учителя/Оснащённость/Атмосфера — индекс по отзывам, шкала 0–10.
+export const RATING_COMPONENTS = [
+  { key: 'rating_ege', label: 'ЕГЭ', kind: 'ege' },
+  { key: 'olympiad_winners_count', label: 'Олимпиады', kind: 'olympiads' },
+  { key: 'rating_teachers', label: 'Учителя', kind: 'score10' },
+  { key: 'rating_mto', label: 'Оснащённость', kind: 'score10' },
+  { key: 'rating_psychological_climate', label: 'Атмосфера', kind: 'score10' },
 ];
+
+export function formatWinners(n) {
+  const abs = Math.abs(n) % 100;
+  const last = abs % 10;
+  if (n === 0) return 'нет победителей';
+  if (abs > 10 && abs < 20) return `${n} победителей`;
+  if (last > 1 && last < 5) return `${n} победителя`;
+  if (last === 1) return `${n} победитель`;
+  return `${n} победителей`;
+}
+
+/**
+ * Число для отображения и ширина полоски (0–100) для компонента рейтинга.
+ * maxima — максимумы по текущей выборке школ (для относительного масштаба).
+ */
+export function componentValue(school, comp, maxima) {
+  const v = school?.[comp.key];
+  if (typeof v !== 'number' || !Number.isFinite(v)) return null;
+  switch (comp.kind) {
+    case 'ege':
+      return { text: v.toFixed(1), width: Math.max(0, Math.min(100, v)) };
+    case 'olympiads': {
+      const max = maxima?.olympiads || 0;
+      const width = max > 0 ? Math.round((v / max) * 100) : v > 0 ? 100 : 0;
+      return { text: formatWinners(v), width: Math.min(100, width) };
+    }
+    default:
+      return { text: `${(v * 10).toFixed(1)}/10`, width: Math.round(Math.min(1, v) * 100) };
+  }
+}
 
 export function StarRating({ value, size = 14 }) {
   if (value == null || !Number.isFinite(Number(value))) return null;
@@ -43,17 +75,13 @@ export function avgReviewRating(school) {
  * Нижняя карточка выбранной школы поверх карты (белая, как на Replit-версии).
  * Тексты отзывов не показываются нигде — только агрегаты.
  */
-export default function SchoolBottomCard({ school, rank, total, onClose, onOpenDetails }) {
+export default function SchoolBottomCard({ school, rank, total, maxima, onClose, onOpenDetails }) {
   if (!school) return null;
   const name = school.name_ym || school.name_2gis || `Школа ${school.school_id}`;
   const sports = SPORTS_LABELS.filter(({ key }) => school[key] === true);
   const components = RATING_COMPONENTS
-    .map(({ key, label, pct }) => {
-      const v = school[key];
-      if (typeof v !== 'number' || !Number.isFinite(v)) return null;
-      return { label, pct: Math.max(0, Math.min(100, pct(v))) };
-    })
-    .filter(Boolean);
+    .map((comp) => ({ label: comp.label, ...componentValue(school, comp, maxima) }))
+    .filter((c) => c.text != null);
   const star = avgReviewRating(school);
 
   return (
@@ -96,13 +124,13 @@ export default function SchoolBottomCard({ school, rank, total, onClose, onOpenD
         {components.length > 0 && (
           <div className="bottom-card-components">
             <div className="components-title">Компоненты рейтинга</div>
-            {components.map(({ label, pct }) => (
+            {components.map(({ label, text, width }) => (
               <div className="component-row" key={label}>
                 <span className="component-label">{label}</span>
                 <div className="component-track">
-                  <div className="component-bar" style={{ width: `${pct}%` }} />
+                  <div className="component-bar" style={{ width: `${width}%` }} />
                 </div>
-                <span className="component-pct">{pct}%</span>
+                <span className="component-val">{text}</span>
               </div>
             ))}
           </div>

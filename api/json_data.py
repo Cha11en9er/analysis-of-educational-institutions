@@ -65,6 +65,7 @@ def school_to_map_item(raw: dict[str, Any]) -> dict[str, Any]:
         "rating_2gis": raw.get("rating_2gis"),
         "rating_total": raw.get("rating_total"),
         "ege_average_score": raw.get("ege_average_score"),
+        "olympiad_winners_count": raw.get("olympiad_winners_count"),
         "has_review_analysis": sid in review_analysis_school_ids(),
     }
 

@@ -2,10 +2,10 @@ import React, { useEffect, useMemo, useState } from 'react';
 import axios from 'axios';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
-  PieChart, Pie, Cell, Legend,
+  PieChart, Pie, Cell,
 } from 'recharts';
 import { TOPICS } from './AnalyticsView';
-import { StarRating, avgReviewRating } from './SchoolBottomCard';
+import { StarRating, avgReviewRating, RATING_COMPONENTS, componentValue, formatWinners } from './SchoolBottomCard';
 
 const API_URL =
   process.env.REACT_APP_API_URL !== undefined
@@ -23,16 +23,6 @@ const SPORTS_LABELS = [
 ];
 
 const SENTIMENT_COLORS = { 'Позитивные': '#22c55e', 'Нейтральные': '#94a3b8', 'Негативные': '#ef4444' };
-
-// rating_ege — сам средний балл ЕГЭ (0–100), остальные — доли 0..1
-const RATING_COMPONENTS = [
-  { key: 'rating_ege', label: 'ЕГЭ', pct: (v) => Math.min(100, Math.round(v)) },
-  { key: 'rating_olympiads', label: 'Олимпиады', pct: (v) => Math.round(v * 100) },
-  { key: 'rating_teachers', label: 'Учителя', pct: (v) => Math.round(v * 100) },
-  { key: 'rating_mto', label: 'Оснащённость', pct: (v) => Math.round(v * 100) },
-  { key: 'rating_psychological_climate', label: 'Атмосфера', pct: (v) => Math.round(v * 100) },
-  { key: 'rating_sports_infrastructure', label: 'Спорт', pct: (v) => Math.round(v * 100) },
-];
 
 /**
  * Полная страница анализа школы в стиле Replit-версии: светлый фон, белые
@@ -78,12 +68,8 @@ export default function SchoolAnalysisPage({ school, rank, total, onBack, onShow
   }).filter((d) => d.Позитивно + d.Нейтрально + d.Негативно > 0), [reviews]);
 
   const ratingBars = useMemo(() => RATING_COMPONENTS
-    .map(({ key, label, pct }) => {
-      const v = school?.[key];
-      if (typeof v !== 'number' || !Number.isFinite(v)) return null;
-      return { label, pct: Math.max(0, Math.min(100, pct(v))) };
-    })
-    .filter(Boolean), [school]);
+    .map((comp) => ({ label: comp.label, ...componentValue(school, comp) }))
+    .filter((c) => c.text != null), [school]);
 
   if (!school) return null;
   const name = school.name_ym || school.name_2gis || `Школа ${school.school_id}`;
@@ -139,7 +125,9 @@ export default function SchoolAnalysisPage({ school, rank, total, onBack, onShow
         <div className="ap-card ap-metric">
           <span className="ap-metric-label">Олимпиады</span>
           <span className="ap-metric-value">{school.olympiad_winners_count || '—'}</span>
-          {school.olympiad_winners_count > 0 && <span className="ap-metric-sub">победителей и призёров</span>}
+          {school.olympiad_winners_count > 0 && (
+            <span className="ap-metric-sub">{formatWinners(school.olympiad_winners_count)} олимпиад</span>
+          )}
         </div>
         <div className="ap-card ap-metric">
           <span className="ap-metric-label">Поступление в вузы{school.university_admission_year ? ` ${school.university_admission_year}` : ''}</span>
@@ -180,11 +168,11 @@ export default function SchoolAnalysisPage({ school, rank, total, onBack, onShow
           <h3>Структура рейтинга</h3>
           <p className="ap-muted ap-section-hint">Относительные показатели школы по ключевым метрикам</p>
           <div className="ap-bars">
-            {ratingBars.map(({ label, pct }) => (
+            {ratingBars.map(({ label, text, width }) => (
               <div className="ap-bar-row" key={label}>
                 <span className="ap-bar-label">{label}</span>
-                <div className="ap-bar-track"><div className="ap-bar-fill" style={{ width: `${pct}%` }} /></div>
-                <span className="ap-bar-val">{pct}%</span>
+                <div className="ap-bar-track"><div className="ap-bar-fill" style={{ width: `${width}%` }} /></div>
+                <span className="ap-bar-val">{text}</span>
               </div>
             ))}
           </div>

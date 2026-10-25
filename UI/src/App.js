@@ -243,6 +243,11 @@ function App() {
     [rankedIds]
   );
 
+  // Максимумы по выборке — для относительного масштаба полосок компонентов
+  const maxima = useMemo(() => ({
+    olympiads: Math.max(0, ...schools.map((s) => s.olympiad_winners_count || 0)),
+  }), [schools]);
+
   const handleOpenAnalysisPage = useCallback(() => setShowAnalysisPage(true), []);
 
   const handleCloseBottomCard = useCallback(() => {
@@ -432,6 +437,7 @@ function App() {
                 school={schoolDetail}
                 rank={rankOf(schoolDetail.school_id)}
                 total={rankedIds.length}
+                maxima={maxima}
                 onClose={handleCloseBottomCard}
                 onOpenDetails={handleOpenAnalysisPage}
               />

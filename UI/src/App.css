@@ -936,7 +936,7 @@
 .component-label { font-size: 0.78rem; color: #475569; }
 .component-track { height: 6px; border-radius: 999px; background: #f1f5f9; overflow: hidden; }
 .component-bar { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #fdba74, #f97316); }
-.component-pct { font-size: 0.72rem; color: #64748b; text-align: right; font-variant-numeric: tabular-nums; }
+.component-val { font-size: 0.78rem; color: #0f172a; text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
 .bottom-card-chips { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
 .bottom-card-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
 .bottom-link {
