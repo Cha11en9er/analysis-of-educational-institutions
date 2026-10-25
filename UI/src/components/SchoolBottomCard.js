@@ -26,7 +26,6 @@ export default function SchoolBottomCard({ school, rank, total, onClose, onOpenD
   const components = RATING_COMPONENTS
     .map(({ key, label }) => ({ label, value: school[key] }))
     .filter((c) => typeof c.value === 'number' && Number.isFinite(c.value));
-  const compMax = components.length ? Math.max(...components.map((c) => c.value)) : 1;
 
   return (
     <div className="school-bottom-card">
@@ -65,15 +64,18 @@ export default function SchoolBottomCard({ school, rank, total, onClose, onOpenD
         {components.length > 0 && (
           <div className="bottom-card-components">
             <div className="components-title">Компоненты рейтинга</div>
-            {components.map(({ label, value }) => (
-              <div className="component-row" key={label}>
-                <span className="component-label">{label}</span>
-                <div className="component-track">
-                  <div className="component-bar" style={{ width: `${Math.round((value / compMax) * 100)}%` }} />
+            {components.map(({ label, value }) => {
+              const pct = Math.round(value * 100);
+              return (
+                <div className="component-row" key={label}>
+                  <span className="component-label">{label}</span>
+                  <div className="component-track">
+                    <div className="component-bar" style={{ width: `${pct}%` }} />
+                  </div>
+                  <span className="component-pct">{pct}%</span>
                 </div>
-                <span className="component-pct">{Math.round((value / compMax) * 100)}%</span>
-              </div>
-            ))}
+              );
+            })}
           </div>
         )}
 

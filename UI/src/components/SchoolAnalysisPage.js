@@ -92,7 +92,8 @@ export default function SchoolAnalysisPage({ school, rank, total, onBack, onShow
 
   const ratingBars = useMemo(() => RATING_COMPONENTS
     .map(({ key, label }) => ({ name: label, value: school?.[key] }))
-    .filter((d) => typeof d.value === 'number' && Number.isFinite(d.value)), [school]);
+    .filter((d) => typeof d.value === 'number' && Number.isFinite(d.value))
+    .map((d) => ({ ...d, value: Math.round(d.value * 100) })), [school]);
 
   if (!school) return null;
   const name = school.name_ym || school.name_2gis || `Школа ${school.school_id}`;
