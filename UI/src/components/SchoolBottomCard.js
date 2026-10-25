@@ -7,12 +7,13 @@ const SPORTS_LABELS = [
   { key: 'has_sports_ground', label: 'Спортплощадка' },
 ];
 
+// rating_ege — сам средний балл ЕГЭ (0–100), остальные — доли 0..1
 const RATING_COMPONENTS = [
-  { key: 'rating_ege', label: 'ЕГЭ' },
-  { key: 'rating_olympiads', label: 'Олимпиады' },
-  { key: 'rating_teachers', label: 'Учителя' },
-  { key: 'rating_mto', label: 'Оснащённость' },
-  { key: 'rating_psychological_climate', label: 'Атмосфера' },
+  { key: 'rating_ege', label: 'ЕГЭ', pct: (v) => Math.min(100, Math.round(v)) },
+  { key: 'rating_olympiads', label: 'Олимпиады', pct: (v) => Math.round(v * 100) },
+  { key: 'rating_teachers', label: 'Учителя', pct: (v) => Math.round(v * 100) },
+  { key: 'rating_mto', label: 'Оснащённость', pct: (v) => Math.round(v * 100) },
+  { key: 'rating_psychological_climate', label: 'Атмосфера', pct: (v) => Math.round(v * 100) },
 ];
 
 /**
@@ -24,8 +25,12 @@ export default function SchoolBottomCard({ school, rank, total, onClose, onOpenD
   const name = school.name_ym || school.name_2gis || `Школа ${school.school_id}`;
   const sports = SPORTS_LABELS.filter(({ key }) => school[key] === true);
   const components = RATING_COMPONENTS
-    .map(({ key, label }) => ({ label, value: school[key] }))
-    .filter((c) => typeof c.value === 'number' && Number.isFinite(c.value));
+    .map(({ key, label, pct }) => {
+      const v = school[key];
+      if (typeof v !== 'number' || !Number.isFinite(v)) return null;
+      return { label, pct: Math.max(0, Math.min(100, pct(v))) };
+    })
+    .filter(Boolean);
 
   return (
     <div className="school-bottom-card">
@@ -64,18 +69,15 @@ export default function SchoolBottomCard({ school, rank, total, onClose, onOpenD
         {components.length > 0 && (
           <div className="bottom-card-components">
             <div className="components-title">Компоненты рейтинга</div>
-            {components.map(({ label, value }) => {
-              const pct = Math.round(value * 100);
-              return (
-                <div className="component-row" key={label}>
-                  <span className="component-label">{label}</span>
-                  <div className="component-track">
-                    <div className="component-bar" style={{ width: `${pct}%` }} />
-                  </div>
-                  <span className="component-pct">{pct}%</span>
+            {components.map(({ label, pct }) => (
+              <div className="component-row" key={label}>
+                <span className="component-label">{label}</span>
+                <div className="component-track">
+                  <div className="component-bar" style={{ width: `${pct}%` }} />
                 </div>
-              );
-            })}
+                <span className="component-pct">{pct}%</span>
+              </div>
+            ))}
           </div>
         )}
 

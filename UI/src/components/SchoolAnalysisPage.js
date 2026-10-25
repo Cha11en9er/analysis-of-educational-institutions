@@ -23,13 +23,14 @@ const SPORTS_LABELS = [
 
 const SENTIMENT_COLORS = { pos: '#22c55e', neutral: '#94a3b8', neg: '#ef4444' };
 
+// rating_ege — сам средний балл ЕГЭ (0–100), остальные — доли 0..1
 const RATING_COMPONENTS = [
-  { key: 'rating_ege', label: 'ЕГЭ' },
-  { key: 'rating_olympiads', label: 'Олимпиады' },
-  { key: 'rating_teachers', label: 'Учителя' },
-  { key: 'rating_mto', label: 'Оснащённость' },
-  { key: 'rating_psychological_climate', label: 'Атмосфера' },
-  { key: 'rating_sports_infrastructure', label: 'Спорт' },
+  { key: 'rating_ege', label: 'ЕГЭ', pct: (v) => Math.min(100, Math.round(v)) },
+  { key: 'rating_olympiads', label: 'Олимпиады', pct: (v) => Math.round(v * 100) },
+  { key: 'rating_teachers', label: 'Учителя', pct: (v) => Math.round(v * 100) },
+  { key: 'rating_mto', label: 'Оснащённость', pct: (v) => Math.round(v * 100) },
+  { key: 'rating_psychological_climate', label: 'Атмосфера', pct: (v) => Math.round(v * 100) },
+  { key: 'rating_sports_infrastructure', label: 'Спорт', pct: (v) => Math.round(v * 100) },
 ];
 
 function Section({ title, children }) {
@@ -91,9 +92,12 @@ export default function SchoolAnalysisPage({ school, rank, total, onBack, onShow
   }).filter((d) => d.Позитивно + d.Нейтрально + d.Негативно > 0), [reviews]);
 
   const ratingBars = useMemo(() => RATING_COMPONENTS
-    .map(({ key, label }) => ({ name: label, value: school?.[key] }))
-    .filter((d) => typeof d.value === 'number' && Number.isFinite(d.value))
-    .map((d) => ({ ...d, value: Math.round(d.value * 100) })), [school]);
+    .map(({ key, label, pct }) => {
+      const v = school?.[key];
+      if (typeof v !== 'number' || !Number.isFinite(v)) return null;
+      return { name: label, value: Math.max(0, Math.min(100, pct(v))) };
+    })
+    .filter(Boolean), [school]);
 
   if (!school) return null;
   const name = school.name_ym || school.name_2gis || `Школа ${school.school_id}`;
