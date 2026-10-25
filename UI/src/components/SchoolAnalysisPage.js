@@ -126,7 +126,7 @@ export default function SchoolAnalysisPage({ school, rank, total, onBack, onShow
           <span className="ap-metric-label">Олимпиады</span>
           <span className="ap-metric-value">{school.olympiad_winners_count || '—'}</span>
           {school.olympiad_winners_count > 0 && (
-            <span className="ap-metric-sub">{formatWinners(school.olympiad_winners_count)} олимпиад</span>
+            <span className="ap-metric-sub">победителей и призёров</span>
           )}
         </div>
         <div className="ap-card ap-metric">
