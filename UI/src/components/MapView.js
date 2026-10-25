@@ -240,7 +240,7 @@ export default function MapView({ schools, selectedSchool, onSchoolClick, prefer
       const coords = lonLatOfSchool(selectedSchool);
       if (coords) {
         viewRef.current = { center: coords, zoom: 16 };
-        map.setLocation({ center: coords, zoom: 16, duration: 300 });
+        map.setLocation({ center: coords, zoom: 16, duration: 800, easing: 'ease-in-out-cubic' });
       }
     } else if (validSchools.length > 0 && validSchools.length <= 80) {
       const bounds = boundsFromLonLats(validSchools.map(lonLatOfSchool).filter(Boolean));

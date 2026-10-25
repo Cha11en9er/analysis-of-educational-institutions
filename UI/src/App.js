@@ -1,9 +1,10 @@
-import React, { useState, useCallback, useEffect, useRef } from 'react';
+import React, { useState, useCallback, useEffect, useMemo, useRef } from 'react';
 import axios from 'axios';
 import './App.css';
 import MapView from './components/MapView';
 import SidePanel from './components/SidePanel';
-import SchoolDetailPanel from './components/SchoolDetailPanel';
+import SchoolBottomCard from './components/SchoolBottomCard';
+import SchoolAnalysisPage from './components/SchoolAnalysisPage';
 import AnalyticsView, { AnalyticsChart } from './components/AnalyticsView';
 import Toast from './components/Toast';
 import PreferenceModal from './components/PreferenceModal';
@@ -142,6 +143,7 @@ function App() {
   const { active: initPrefsActive, ...initPreferenceState } = initPrefs;
 
   const [schools, setSchools] = useState([]);
+  const [totalCount, setTotalCount] = useState(null);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [searchSubmitted, setSearchSubmitted] = useState('');
@@ -158,6 +160,8 @@ function App() {
   const [selectedSchoolId, setSelectedSchoolId] = useState(null);
   const [schoolDetail, setSchoolDetail] = useState(null);
   const [schoolDetailLoading, setSchoolDetailLoading] = useState(false);
+  const [sortBy, setSortBy] = useState('rating_total');
+  const [showAnalysisPage, setShowAnalysisPage] = useState(false);
   const [showAnalytics, setShowAnalytics] = useState(false);
   const [analyticsReviews, setAnalyticsReviews] = useState([]);
   const [analyticsLoading, setAnalyticsLoading] = useState(false);
@@ -169,11 +173,14 @@ function App() {
     try {
       const { data } = await axios.get(`${API_URL}/api/schools/map`, { params });
       setSchools(data.schools || []);
-      return data.count ?? (data.schools || []).length;
+      const count = data.count ?? (data.schools || []).length;
+      setTotalCount(count);
+      return count;
     } catch (err) {
       const msg = err.response?.data?.detail || err.message || 'Ошибка загрузки данных';
       setToast({ message: `Ошибка при использовании фильтра: ${msg}`, type: 'error' });
       setSchools([]);
+      setTotalCount(0);
       return 0;
     } finally {
       setLoading(false);
@@ -191,6 +198,7 @@ function App() {
 
   const handleSchoolClick = useCallback(
     async (school) => {
+      setShowAnalysisPage(false);
       setSelectedSchoolId(school.school_id);
       setSchoolDetailLoading(true);
       setSchoolDetail(null);
@@ -208,10 +216,32 @@ function App() {
     []
   );
 
-  const handleBackToSchools = useCallback(() => {
+  // Ранг школы по итоговому рейтингу в текущей выборке
+  const rankedIds = useMemo(() => {
+    const val = (s) => (typeof s.rating_total === 'number' && Number.isFinite(s.rating_total) ? s.rating_total : null);
+    return [...schools]
+      .sort((a, b) => {
+        const va = val(a);
+        const vb = val(b);
+        if (va == null) return 1;
+        if (vb == null) return -1;
+        return vb - va;
+      })
+      .map((s) => s.school_id);
+  }, [schools]);
+  const rankOf = useCallback(
+    (id) => {
+      const i = rankedIds.indexOf(id);
+      return i === -1 ? null : i + 1;
+    },
+    [rankedIds]
+  );
+
+  const handleOpenAnalysisPage = useCallback(() => setShowAnalysisPage(true), []);
+
+  const handleCloseBottomCard = useCallback(() => {
     setSelectedSchoolId(null);
     setSchoolDetail(null);
-    setShowAnalytics(false);
   }, []);
 
   const handleStatistics = useCallback(() => {
@@ -232,10 +262,12 @@ function App() {
 
   const handleBackFromAnalytics = useCallback(() => {
     setShowAnalytics(false);
-    setSelectedSchoolId(null);
-    setSchoolDetail(null);
     setAnalyticsReviews([]);
     setAnalyticsAppliedTopics([]);
+  }, []);
+
+  const handleBackFromAnalysisPage = useCallback(() => {
+    setShowAnalysisPage(false);
   }, []);
 
   const handleSearchSubmit = useCallback(() => {
@@ -313,6 +345,27 @@ function App() {
 
   const showSchoolDetail = selectedSchoolId != null && !showAnalytics;
 
+  if (showAnalysisPage && schoolDetail) {
+    return (
+      <div className="app app-analysis-page">
+        <SchoolAnalysisPage
+          school={schoolDetail}
+          rank={rankOf(schoolDetail.school_id)}
+          total={rankedIds.length}
+          onBack={handleBackFromAnalysisPage}
+          onShowDynamics={handleStatistics}
+        />
+        {toast && (
+          <Toast
+            message={toast.message}
+            type={toast.type}
+            onClose={() => setToast(null)}
+          />
+        )}
+      </div>
+    );
+  }
+
   return (
     <div className="app">
       {showAnalytics ? (
@@ -326,14 +379,14 @@ function App() {
           interval={analyticsInterval}
           onIntervalChange={setAnalyticsInterval}
         />
-      ) : showSchoolDetail ? (
-        <SchoolDetailPanel
-          school={schoolDetail}
-          onBack={handleBackToSchools}
-          onStatistics={handleStatistics}
-        />
       ) : (
         <SidePanel
+          schools={schools}
+          totalCount={totalCount}
+          selectedSchoolId={selectedSchoolId}
+          onSelectSchool={handleSchoolClick}
+          sortBy={sortBy}
+          onSortChange={setSortBy}
           searchQuery={searchQuery}
           onSearchChange={setSearchQuery}
           onSearchSubmit={handleSearchSubmit}
@@ -368,6 +421,15 @@ function App() {
               onSchoolClick={handleSchoolClick}
               preferencesActive={preferencesActive}
             />
+            {showSchoolDetail && schoolDetail && (
+              <SchoolBottomCard
+                school={schoolDetail}
+                rank={rankOf(schoolDetail.school_id)}
+                total={rankedIds.length}
+                onClose={handleCloseBottomCard}
+                onOpenDetails={handleOpenAnalysisPage}
+              />
+            )}
           </>
         )}
       </main>
