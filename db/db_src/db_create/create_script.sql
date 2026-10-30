@@ -122,3 +122,56 @@ ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS rating_mto NUMERIC;
 ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS rating_psychological_climate NUMERIC;
 ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS rating_sports_infrastructure NUMERIC;
 ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS rating_profiles NUMERIC;
+
+-- ============================================================
+-- Миграция 30.10.26: слои учреждений (Задача B) и зоны прикрепления (Задача C)
+-- ============================================================
+
+-- Учреждения вне школьного рейтинга: спорт/творческие ДО, садики, вузы, СПО, интернаты
+CREATE TABLE IF NOT EXISTS sa.institution (
+    institution_id SERIAL PRIMARY KEY,
+    code_oo INTEGER UNIQUE,                -- код ОО из реестра РЦОКО (если есть)
+    kind TEXT NOT NULL,                    -- sport_do | arts_do | preschool | internat_cadet | spo | vuz | other
+    name TEXT NOT NULL,
+    name_full TEXT,
+    address TEXT,
+    phone TEXT,
+    site TEXT,
+    city TEXT NOT NULL DEFAULT 'Саратов',
+    latitude DOUBLE PRECISION,
+    longitude DOUBLE PRECISION,
+    geocode_status TEXT DEFAULT 'pending', -- pending | ok | fail | ambiguous
+    geocoded_at TIMESTAMP,
+    source TEXT NOT NULL DEFAULT 'rcoko_catalog',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+CREATE INDEX IF NOT EXISTS idx_institution_kind ON sa.institution(kind);
+CREATE INDEX IF NOT EXISTS idx_institution_city ON sa.institution(city);
+
+-- Нормализованный адрес дома (задел на все города)
+CREATE TABLE IF NOT EXISTS sa.address (
+    address_id SERIAL PRIMARY KEY,
+    city TEXT NOT NULL DEFAULT 'Саратов',
+    district TEXT,
+    street_norm TEXT NOT NULL,
+    house_norm TEXT NOT NULL,
+    address_key TEXT NOT NULL UNIQUE,      -- district|street|house (hash-free, читаемый)
+    resolved TEXT,
+    latitude DOUBLE PRECISION,
+    longitude DOUBLE PRECISION,
+    geocode_status TEXT NOT NULL DEFAULT 'pending',
+    geocoded_at TIMESTAMP,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+CREATE INDEX IF NOT EXISTS idx_address_status ON sa.address(geocode_status);
+
+-- M:N школа <-> адрес прикрепления (пересечения = несколько связей на адрес)
+CREATE TABLE IF NOT EXISTS sa.school_address (
+    school_id INTEGER NOT NULL REFERENCES sa.school(school_id),
+    address_id INTEGER NOT NULL REFERENCES sa.address(address_id),
+    source_year INTEGER,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (school_id, address_id)
+);
+CREATE INDEX IF NOT EXISTS idx_school_address_school ON sa.school_address(school_id);

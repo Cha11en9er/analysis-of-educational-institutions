@@ -1040,3 +1040,50 @@
   .component-row { grid-template-columns: 92px 1fr 36px; }
   .ap-bar-row { grid-template-columns: 96px 1fr 40px; }
 }
+
+/* ===== UI v3: слои учреждений + карточка учреждения ===== */
+.map-layers-panel {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  padding: 6px 12px;
+  z-index: 25;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.12);
+}
+.layers-title { font-size: 0.72rem; color: #64748b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; margin-right: 2px; }
+.layer-chip {
+  font-size: 0.74rem; font-weight: 600; color: #475569;
+  background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 999px;
+  padding: 4px 11px; cursor: pointer; transition: all 0.12s;
+}
+.layer-chip:hover { border-color: #fb923c; color: #c2410c; }
+.layer-chip.on { background: #fff7ed; border-color: #fb923c; color: #c2410c; }
+
+.institution-marker-yandex {
+  width: 14px; height: 14px; border-radius: 4px;
+  border: 2px solid #fff; box-shadow: 0 1px 5px rgba(15, 23, 42, 0.4);
+  cursor: pointer; transform: translate(-50%, -50%);
+}
+.institution-card {
+  position: absolute;
+  right: 16px; top: 14px;
+  width: min(320px, calc(100% - 32px));
+  background: #fff; color: #0f172a;
+  border: 1px solid #e2e8f0; border-radius: 16px;
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.25);
+  padding: 14px 16px; z-index: 30;
+}
+.institution-card .bottom-card-close { position: absolute; top: 8px; right: 8px; }
+.inst-name { font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-top: 4px; padding-right: 18px; }
+.inst-address { font-size: 0.8rem; color: #64748b; margin-top: 4px; }
+.inst-links { display: flex; flex-direction: column; gap: 4px; margin-top: 8px; font-size: 0.82rem; }
+.inst-links a { color: #1d4ed8; text-decoration: none; }
+.inst-item { color: #475569; }

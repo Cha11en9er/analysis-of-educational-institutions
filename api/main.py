@@ -546,6 +546,103 @@ async def get_school_reviews(
     )
 
 
+@app.get("/api/institutions")
+async def get_institutions(
+    kind: Optional[str] = Query(None),
+    city: str = Query("Саратов"),
+):
+    """Слои учреждений вне школьного рейтинга (спорт/творческие/садики/вузы/СПО/интернаты)."""
+    if use_json():
+        raise HTTPException(status_code=501, detail="Слои учреждений доступны только в db-режиме")
+    import psycopg2
+
+    conn = None
+    try:
+        conn = get_db_connection()
+        cur = conn.cursor()
+        sql = """
+            SELECT institution_id, code_oo, kind, name, address, phone, site,
+                   latitude, longitude, geocode_status
+            FROM sa.institution
+            WHERE city = %s AND latitude IS NOT NULL
+        """
+        params: list[Any] = [city]
+        if kind:
+            sql += " AND kind = %s"
+            params.append(kind)
+        cur.execute(sql + " ORDER BY kind, name", params)
+        rows = cur.fetchall()
+        items = [
+            {
+                "institution_id": r[0],
+                "code_oo": r[1],
+                "kind": r[2],
+                "name": r[3],
+                "address": r[4],
+                "phone": r[5],
+                "site": r[6],
+                "location": {
+                    "type": "Point",
+                    "coordinates": [float(r[8]), float(r[7])]
+                    if r[7] is not None and r[8] is not None
+                    else None,
+                },
+            }
+            for r in rows
+        ]
+        cur.close()
+        return {"institutions": items, "count": len(items)}
+    except psycopg2.Error as e:
+        raise HTTPException(status_code=500, detail=f"Ошибка БД: {str(e)}") from e
+    finally:
+        if conn:
+            conn.close()
+
+
+@app.get("/api/schools/{school_id}/catchment")
+async def get_school_catchment(school_id: int):
+    """Прикреплённые адреса школы (дома с координатами) для отрисовки зоны на карте."""
+    if use_json():
+        raise HTTPException(status_code=501, detail="Catchment доступен только в db-режиме")
+    import psycopg2
+
+    conn = None
+    try:
+        conn = get_db_connection()
+        cur = conn.cursor()
+        cur.execute(
+            """
+            SELECT a.address_id, a.district, a.street_norm, a.house_norm,
+                   a.resolved, a.latitude, a.longitude
+            FROM sa.school_address sa
+            JOIN sa.address a ON a.address_id = sa.address_id
+            WHERE sa.school_id = %s AND a.geocode_status = 'ok'
+            ORDER BY a.street_norm, a.house_norm
+            """,
+            (school_id,),
+        )
+        rows = cur.fetchall()
+        cur.close()
+        points = [
+            {
+                "address_id": r[0],
+                "district": r[1],
+                "street": r[2],
+                "house": r[3],
+                "address": r[4] or f"{r[2]}, {r[3]}",
+                "lat": float(r[5]),
+                "lon": float(r[6]),
+            }
+            for r in rows
+        ]
+        return {"school_id": school_id, "points": points, "count": len(points)}
+    except psycopg2.Error as e:
+        raise HTTPException(status_code=500, detail=f"Ошибка БД: {str(e)}") from e
+    finally:
+        if conn:
+            conn.close()
+
+
 if __name__ == "__main__":
     import uvicorn
 

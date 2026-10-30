@@ -40,10 +40,10 @@ function boundsFromLonLats(points) {
   ];
 }
 
-export default function MapView({ schools, selectedSchool, onSchoolClick, preferencesActive }) {
+export default function MapView({ schools, selectedSchool, onSchoolClick, preferencesActive, activeLayers }) {
   const containerRef = useRef(null);
   const mapRef = useRef(null);
-  const layersRef = useRef({ markers: [], features: [], houses: [] });
+  const layersRef = useRef({ markers: [], features: [], houses: [], institutions: {} });
   const viewRef = useRef({ center: SARATOV_CENTER, zoom: DEFAULT_ZOOM });
   const onSchoolClickRef = useRef(onSchoolClick);
   const [mapError, setMapError] = useState(null);
@@ -78,9 +78,16 @@ export default function MapView({ schools, selectedSchool, onSchoolClick, prefer
   }, [validSchools, preferencesActive]);
 
   const attachmentKey = selectedSchool ? getSchoolAttachmentKey(selectedSchool) : null;
+  // Приоритет: catchment из API (school_id) → фоллбек на локальный файл (пилот)
+  const catchmentPoints = selectedSchool?.catchment;
   const addressesForSelected = useMemo(
-    () => (attachmentKey ? getAttachedAddressesForKey(attachmentKey) : []),
-    [attachmentKey]
+    () =>
+      catchmentPoints && catchmentPoints.length > 0
+        ? catchmentPoints.map((p) => ({ lat: p.lat, lon: p.lon, address: p.address }))
+        : attachmentKey
+          ? getAttachedAddressesForKey(attachmentKey)
+          : [],
+    [catchmentPoints, attachmentKey]
   );
 
   const showAttachedLayer = Boolean(
@@ -159,6 +166,9 @@ export default function MapView({ schools, selectedSchool, onSchoolClick, prefer
     clearLayer(layers.markers);
     clearLayer(layers.features);
     clearLayer(layers.houses);
+    // слои учреждений — чистим все активные
+    Object.values(layersRef.current.institutions).forEach((list) => clearLayer(list));
+    layersRef.current.institutions = {};
 
     validSchools.forEach((school) => {
       const coords = lonLatOfSchool(school);
@@ -218,6 +228,39 @@ export default function MapView({ schools, selectedSchool, onSchoolClick, prefer
       });
     }
 
+    // Слои учреждений (не-школы): маркеры других цветов
+    if (Array.isArray(activeLayers) && activeLayers.length > 0 && window.__uchgradInstitutions) {
+      const LAYER_COLORS = {
+        sport_do: '#16a34a',
+        arts_do: '#a855f7',
+        preschool: '#0ea5e9',
+        internat_cadet: '#f59e0b',
+        spo: '#64748b',
+        vuz: '#dc2626',
+      };
+      activeLayers.forEach((kind) => {
+        const items = (window.__uchgradInstitutions[kind] || []).filter(
+          (it) => it.location?.coordinates
+        );
+        const list = [];
+        items.forEach((it) => {
+          const [lon, lat] = it.location.coordinates;
+          const el = document.createElement('div');
+          el.className = 'institution-marker-yandex';
+          el.style.background = LAYER_COLORS[kind] || '#64748b';
+          el.title = `${it.name}\n${it.address || ''}`;
+          el.addEventListener('click', (e) => {
+            e.stopPropagation();
+            window.__uchgradInstitutionClick?.(it);
+          });
+          const marker = new YMapMarker({ coordinates: [lon, lat], zIndex: 8 }, el);
+          map.addChild(marker);
+          list.push(marker);
+        });
+        layersRef.current.institutions[kind] = list;
+      });
+    }
+
     // Подгонка вида
     if (showAttachedLayer) {
       const pts = [];
@@ -256,6 +299,7 @@ export default function MapView({ schools, selectedSchool, onSchoolClick, prefer
     showAttachedLayer,
     addressesForSelected,
     addressCoverageFeature,
+    activeLayers,
   ]);
 
   const zoomBy = (delta) => {

@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="csrf-token" content="f7129aaa450d3ceb20f76df375a966c69ffedc18b0424e2750b93eb3d72fb3c1">
+<script>
+(function () {
+    var meta = document.querySelector('meta[name="csrf-token"]');
+    var token = meta ? meta.getAttribute('content') : '';
+    if (!token) return;
+    var unsafe = /^(POST|PUT|PATCH|DELETE)$/i;
+    function sameOrigin(url) {
+        try { return new URL(url, location.href).origin === location.origin; } catch (e) { return true; }
+    }
+    // XMLHttpRequest (через него работает и $.ajax)
+    var xo = XMLHttpRequest.prototype.open, xs = XMLHttpRequest.prototype.send,
+        xh = XMLHttpRequest.prototype.setRequestHeader;
+    XMLHttpRequest.prototype.open = function (method, url) {
+        this.__csrf = unsafe.test(method || '') && sameOrigin(url);
+        return xo.apply(this, arguments);
+    };
+    XMLHttpRequest.prototype.send = function () {
+        if (this.__csrf) { try { xh.call(this, 'X-CSRF-Token', token); } catch (e) {} }
+        return xs.apply(this, arguments);
+    };
+    // fetch
+    if (window.fetch) {
+        var of = window.fetch;
+        window.fetch = function (input, init) {
+            init = init || {};
+            var isReq = (typeof Request !== 'undefined') && (input instanceof Request);
+            var method = (init.method || (isReq ? input.method : 'GET') || 'GET');
+            var url = isReq ? input.url : String(input);
+            if (unsafe.test(method) && sameOrigin(url)) {
+                var h = new Headers(init.headers || (isReq ? input.headers : undefined));
+                if (!h.has('X-CSRF-Token')) h.set('X-CSRF-Token', token);
+                init = Object.assign({}, init, { headers: h });
+            }
+            return of.call(this, input, init);
+        };
+    }
+    // обычные POST-формы
+    document.addEventListener('submit', function (e) {
+        var f = e.target;
+        if (!f || !f.getAttribute || (f.getAttribute('method') || '').toLowerCase() !== 'post') return;
+        if (!sameOrigin(f.getAttribute('action') || location.href)) return;
+        if (!f.querySelector('input[name="csrf_token"]')) {
+            var i = document.createElement('input');
+            i.type = 'hidden'; i.name = 'csrf_token'; i.value = token;
+            f.appendChild(i);
+        }
+    }, true);
+})();
+</script>    <link rel="icon" type="image/png" sizes="16x16" href="/dist/img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ГАУ СО РЦОКО - Государственное Автономное Учреждение Саратовской области «Региональный центр оценки качества образования»</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Merriweather&family=Montserrat:wght@300;600;700&family=Open+Sans&family=PT+Serif&family=Source+Sans+3:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
+        <link rel="stylesheet" href="/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+        <link rel="stylesheet" href="/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="/dist/css/my_changes.css">
+    <link rel="stylesheet" href="/dist/css/main_card.css">
+    <link rel="stylesheet" href="/dist/css/news_card.css">
+
+            <link rel="stylesheet" href="/plugins/ekko-lightbox/ekko-lightbox.css" />
+        <link rel="stylesheet" href="/plugins/toastr/toastr.min.css">
+
+        <link rel="stylesheet" href="/vendor/twbs/bootstrap/dist/css/bootstrap.min.css" >
+        <link rel="stylesheet" href="/plugins/ion-rangeslider/css/ion.rangeSlider.min.css">
+
+    <link rel = "stylesheet" href = "/plugins/flatpickr/flatpickr.min.css" ><script src = "/plugins/flatpickr/flatpickr.js" ></script ><script src = "/plugins/flatpickr/ru.js" ></script ><script src = "/plugins/SortableJS/Sortable.js" ></script >
+    <script src="/plugins/jquery/jquery-3.7.1.min.js"></script>
+    <script src="/plugins/jquery-ui/code.jquery.com_ui_1.12.1_jquery-ui.min.js"></script>
+
+    <div class="modal fade" id="SearchModal" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="d-flex justify-content-end">
+                    <i class="fas fa-times" data-bs-dismiss="modal" aria-label="Закрыть"></i>
+                </div>
+                <div class="row w-100 d-flex justify-content-center">
+                    <div class="wrapper_search">
+                        <form class="form_search">
+                            <div id="SearchSpinner">
+                                <div class="spinner-border ml-auto mr-5" role="status" aria-hidden="true"></div>
+                                <strong class="ml-2">Синхронизация с базой...</strong>
+                            </div>
+                            <h5 class="text-center font-weight-bold w-100 h-25">Поиск по сайту SarRCOKO</h5>
+                            <input
+                                    type="text"
+                                    class="form-control search w-100 h-25"
+                                    id="SearchInput"
+                                    placeholder="Начните писать поисковый запрос здесь..."
+                                    style="visibility: hidden;"
+                            >
+                            <ul class="options" id="MainSearchOptions"></ul>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+</head>
+<body class="hold-transition  sidebar-collapse  layout-fixed layout-navbar-fixed">
+
+<div class="wrapper">
+<!-- Navbar -->
+<nav class="main-header navbar navbar-expand  navbar-white navbar-light fixed">
+<!--<nav class="main-header navbar navbar-expand-md navbar-primary navbar-dark">-->
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link btn btn-danger text-white" data-widget="pushmenu" href="#" role="button">МЕНЮ</a>
+        </li>
+
+<!--        <li class="nav-item d-none d-sm-inline-block">-->
+<!--            <a class="nav-link" data-widget="fullscreen" href="#" role="button">-->
+<!--                <i class="fas fa-expand-arrows-alt"></i>-->
+<!--            </a>-->
+<!--        </li>-->
+
+        
+        <li class="nav-item d-none d-sm-inline-block text-bold">
+            <a href="/public/contacts.php" class="nav-link">Контакты</a>
+        </li>
+        <li class="nav-item d-block d-sm-none d-sm-inline-block" title="Контакты">
+            <a href="/public/contacts.php" class="nav-link">
+                <i class="fas fa-contact-book fa-2x"></i>
+            </a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+           <div id="nav_panel_right"></div>
+        </li>
+
+<!--        <li class="nav-item d-none d-sm-inline-block">-->
+<!--            <a href="../" class="nav-link">--><!--</a>-->
+<!--        </li>-->
+    </ul>
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+        <!-- Navbar for form -->
+        <li class="nav-item pr-2" id="navbar_for_form">
+
+        </li>
+
+        
+            
+                <style>
+            #botDropdown.dropdown-toggle::after {
+                display: none;
+            }
+        </style>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="botDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-graduation-cap fa-2x text-warning"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="botDropdown">
+                <li><a class="dropdown-item" href="https://t.me/sarrcoko_bot/Tester" target="_blank">Telegram</a></li>
+                <li><a class="dropdown-item" href="https://max.ru/sarrcoko_bot?startapp" target="_blank">MAX</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item d-none d-sm-inline-block text-bold">
+            <a href="/" class="nav-link d-sm-inline-block">
+                <i class="fas fa-home fa-2x"></i>
+            </a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block text-bold">
+            <a href="/" class="nav-link" >
+                <span>ГАУ СО РЦОКО </span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a href="/" class="">
+                <img src="/dist/img/logo_64.png" title="Главная ГАУ СО РЦОКО " class="nav-link" style="opacity: .8;">
+            </a>
+        </li>
+
+        <li class="nav-item d-none d-sm-inline-block">
+            <div class="card-body"></div>
+        </li>
+        <!-- Navbar Search -->
+        <li class="nav-item">
+            <a class="nav-link" data-widget="navbar-search" href="#" role="button" data-bs-toggle="modal" data-bs-target="#SearchModal">
+<!--                <h1 style="margin-top: -0.5vh;"><i class="fas fa-search fa-beat"></i></h1>-->
+                    <h3 style="margin-top: -0.5vh;"><i class="fas fa-search"></i></h3>
+            </a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <div class="card-body"></div>
+        </li>
+                <li class="nav-item"> <a class="nav-link btn btn-danger text-white" href="/auth/login.php" role="button">Вход</a></li>
+
+
+    </ul>
+</nav>
+<!-- /.navbar -->    <aside class="main-sidebar sidebar-light primary elevation-4 text-bold" style="position: fixed;top: 0px;margin-top:-4vh;">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- SidebarSearch Form -->
+        <div class="form-inline">
+            <div class="input-group" data-widget="sidebar-search">
+                <input class="form-control form-control-sidebar" type="search" placeholder="Поиск по меню" aria-label="Поиск по меню">
+                <div class="input-group-append">
+                    <button class="btn btn-sidebar">
+                        <i class="fas fa-search fa-fw"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <ul class="mx-0 p-0 nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                                <li class=" m-0 nav-item">
+                    <a href="/" class="nav-link">
+                        <i class="nav-icon fas fa-newspaper"></i>
+                        <p>Главная</p>
+                    </a>
+                </li>
+                
+                
+                    <li class="nav-item" id="sm_niff_1">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-home"></i>
+                            <p style="">
+                                ГИА-11                                <span class="float-right"><i class="right fas fa-angle-left"></i></span>
+                            </p>
+                        </a>
+                                                                <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=6" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Федеральные нормативные документы</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=8" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Региональные нормативные документы</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=10" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Апробация</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=12" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Итоговое сочинение (изложение)</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=15" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Участникам ЕГЭ</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=52" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Руководителям ППЭ</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=79" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>КЕГЭ-2026</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=80" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Общественным наблюдателям</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=81" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Устная часть иностранных языков</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=83" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Апелляция ГИА-11</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=92" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Членам ГЭК ГИА-11</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=145" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Организаторам ЕГЭ</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                </li>
+
+            
+                    <li class="nav-item" id="sm_niff_2">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-home"></i>
+                            <p style="">
+                                ГИА-9                                <span class="float-right"><i class="right fas fa-angle-left"></i></span>
+                            </p>
+                        </a>
+                                                                <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=69" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Федеральные нормативно-правовые акты</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=70" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Региональные нормативно-правовые акты</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=62" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Муниципальным координаторам</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=66" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Руководителям ППЭ ГИА-9</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=68" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Членам ГЭК ГИА-9</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=67" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Участникам ГИА-9</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=65" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Общественным наблюдателям</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=60" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Итоговое собеседование по русскому языку</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=61" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Материалы по подготовке и проведению экзамена по информатике и ИКТ ГИА-9</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=63" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Материалы по подготовке и проведению экзамена по иностранному языку в устной форме ГИА-9</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=94" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Апробация ОГЭ 2.1</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=99" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Апелляция ГИА-9</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=136" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Эксперты ОГЭ</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=146" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Организаторам ОГЭ</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                </li>
+
+            
+                    <li class="nav-item" id="sm_niff_9">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-home"></i>
+                            <p style="">
+                                Услуги                                <span class="float-right"><i class="right fas fa-angle-left"></i></span>
+                            </p>
+                        </a>
+                                                                <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=36" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Готов на 100! </p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=38" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Индивидуальный отбор </p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                </li>
+
+            
+                    <li class="nav-item" id="sm_niff_8">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-home"></i>
+                            <p style="">
+                                Деятельность ГАУ СО &quot;РЦОКО&quot;                                <span class="float-right"><i class="right fas fa-angle-left"></i></span>
+                            </p>
+                        </a>
+                                                                <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=33" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Кодификатор образовательных организаций Саратовской области</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=34" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>О нашей деятельности </p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=35" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Историческая справка здания РЦОКО</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                </li>
+
+            
+                    <li class="nav-item" id="sm_niff_3">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-home"></i>
+                            <p style="">
+                                Мониторинг                                <span class="float-right"><i class="right fas fa-angle-left"></i></span>
+                            </p>
+                        </a>
+                                                                <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=4" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Федеральные нормативные документы</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=5" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Региональные нормативные документы</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=59" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Региональные статистические и аналитические материалы </p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=110" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Методические рекомендации по ВПР и ВПР СПО</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                </li>
+
+            
+                    <li class="nav-item" id="sm_niff_4">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-home"></i>
+                            <p style="">
+                                Аттестация педагогических работников                                <span class="float-right"><i class="right fas fa-angle-left"></i></span>
+                            </p>
+                        </a>
+                                                                <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=53" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Федеральные нормативные документы</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=54" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Региональные нормативные документы</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=55" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>В помощь аттестующемуся</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=56" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Информация</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=57" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Отчеты</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                </li>
+
+            
+                    <li class="nav-item" id="sm_niff_6">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-home"></i>
+                            <p style="">
+                                ГАУ СО &quot;РЦОКО&quot;                                <span class="float-right"><i class="right fas fa-angle-left"></i></span>
+                            </p>
+                        </a>
+                                                                <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=39" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Устав ГАУ СО РЦОКО</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=40" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Свидетельство ИНН</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=41" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Свидетельство ЕГРЮЛ</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=42" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Сведения об учете в САРАТОВСТАТ</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=43" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Распоряжение о создании центра</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=44" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Приказ об утверждении устава</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=45" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Приказ о назначении директора</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=46" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Лист записи ЕГРЮЛ от 14.03.2022</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=47" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Изменения в устав</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=72" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>﻿Аттестат соответствия требованиям безопасности информации в ИСПДн РИС "ГИА"</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=73" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Аттестат соответствия требованиям безопасности информации в ИСПДн "Сеть регионального обмена"</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=74" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Аттестат соответствия требованиям безопасности информации в ИСПДн "Бухгалтерский и кадровый учет"</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=75" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Политика в отношении обработки персональных данных</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                </li>
+
+            
+                    <li class="nav-item" id="sm_niff_5">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-home"></i>
+                            <p style="">
+                                Бухгалтерия                                <span class="float-right"><i class="right fas fa-angle-left"></i></span>
+                            </p>
+                        </a>
+                                                                <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=48" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Приказ 2255 от 28.12.2022 утверждение Гос. задания</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=97" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Отчет о результатах деятельности за 2023 год</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=50" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>ПФХД на 2024 год</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=51" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Соглашение 70а от 27.12.2023</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=49" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Соглашение 70 от 27.12.2023</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=98" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Приказ 2314 от 27.12.2023 об утверждении Гос. задания на 2024 год и плановый период 2025 и 2026 годов</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=71" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Информация об осуществлении госзакупок</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=139" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Приказ о наблюдательном совете</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=140" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Учётная политика</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=141" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Приказ № 1850 об утверждении государственного задания</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=142" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Соглашение 70а от 30.12.2025</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=143" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Соглашение 70 от 30.12.2025</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                </li>
+
+            
+                    <li class="nav-item" id="sm_niff_12">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-home"></i>
+                            <p style="">
+                                Видеоконсультации экспертов предметной комиссии ЕГЭ                                <span class="float-right"><i class="right fas fa-angle-left"></i></span>
+                            </p>
+                        </a>
+                                                                <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=84" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Русский язык </p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=91" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Физика</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=150" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Математика</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                </li>
+
+            
+                    <li class="nav-item" id="sm_niff_14">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-home"></i>
+                            <p style="">
+                                Видеоконсультации экспертов предметной комиссии ОГЭ                                <span class="float-right"><i class="right fas fa-angle-left"></i></span>
+                            </p>
+                        </a>
+                                                                <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=132" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Алгебра</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=131" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Геометрия</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=133" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Русский язык</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                </li>
+
+            
+                    <li class="nav-item" id="sm_niff_13">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-passport"></i>
+                            <p style="">
+                                Сведения об образовательной организации                                <span class="float-right"><i class="right fas fa-angle-left"></i></span>
+                            </p>
+                        </a>
+                                                                <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=116" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Основные сведения</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=117" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Структура и органы управления образовательной организацией</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=118" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Документы</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=119" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Образование</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=120" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Руководство</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=121" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Педагогический состав</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=122" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Материально-техническое обеспечение и оснащенность образовательного процесса. Доступная среда</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=123" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Платные образовательные услуги</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=124" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Финансово-хозяйственная деятельность</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=125" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Вакантные места для приема (перевода) обучающихся</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=126" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Стипендии и меры поддержки обучающихся</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=127" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Международное сотрудничество</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                                    <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                            <a href="/public/pages.php?id=128" class="nav-link  ">                                                    <i class="fas fa-book nav-icon"></i>
+                                                    <p>Организация питания в образовательной организации</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                                </li>
+
+                            
+                        <li class="nav-item">
+                            <a href="/catalog/?type=1" class="nav-link">
+                                <i class="nav-icon fas fa-address-book"></i>
+                                <p>Каталог ОО</p>
+                            </a>
+                        </li>
+                                </ul>
+        </nav>
+        
+          <div class="card-footer py-5">
+              <img
+                      class='bf-96__logo'
+                      src='/dist/img/2026/GENR_2026.svg'
+                      alt='Год Народного Единства'
+              />
+          </div>
+        <!-- /.sidebar-menu -->
+    </div>
+    <div>
+
+    </div>
+    <!-- /.sidebar -->
+</aside>
+
+    <div class="content-wrapper " >
+                <section class="content-header">
+            <div class="container-fluid">
+                            </div>
+        </section>
+                        <section class="content">
+            <div class="container-fluid">
+
+    <style>
+        #chartjs-tooltip {
+            opacity: 0;
+            position: absolute;
+            background: rgba(0, 0, 0, .7);
+            color: white;
+            padding: 3px;
+            border-radius: 3px;
+            -webkit-transition: all .1s ease;
+            transition: all .1s ease;
+            pointer-events: none;
+            -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+        }
+    </style>
+    <!-- STACKED BAR CHART -->
+    <div class="card card-primary">
+        <div class="card-header sticky-top">
+            <h3 class="card-title h3">Индекс оценки качества образования</h3>
+
+            <div class="card-tools" style="margin-bottom: -0.7vh;">
+
+                
+                 
+                        <a type="button" class="btn btn-primary btn-app" href="/reports_rgi/?year=2024&oo=243055&type_data_visible=table">
+                            <i class="fas fa-table"></i>Таблица
+                        </a>
+                        
+                        <a type="button" class="btn btn-primary btn-app" href="/reports_rgi/?year=2024&ate=ate&type=ate">
+                            <i class="fas fa-users-gear"></i>ATE
+                        </a>
+                        
+                        <a type="button" class="btn btn-primary btn-app" onclick="filter_diagrams_click();">
+                            <i class="fas fa-filter"></i>Пересчитать
+                        </a>
+                    
+                <a type="button" class="btn btn-primary btn-app dropdown-toggle " data-toggle="dropdown">
+                    <i class="fas fa-fas fa-circle-info"></i> Легенда
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item text-dark text-sm"style="font-weight:bold;background:rgba(255,78,97, 0.2) " >1_1_1 - Доля выпускников 11 кл., не набравших мин. кол-во баллов ЕГЭ по обязательным учебным предметам среднего общего образования, к общей численности выпускников 11 кл..</a><a class="dropdown-item text-dark text-sm"style="font-weight:bold;background:rgba(150,167,228, 0.2) " >1_1_2 - Доля выпускников 11 кл., набравших мин. кол-во баллов ЕГЭ по профильной математике, необходимое для поступления в ВУЗы, к общей численности выпускников 11 кл., прошедших ГИА по профильной математике.</a><a class="dropdown-item text-dark text-sm"style="font-weight:bold;background:rgba(239,234,173, 0.2) " >1_1_3 - Доля выпускников 11 кл., набравших мин. кол-во баллов ЕГЭ по физике, необходимое для поступления в организации высшего образования, к общей численности выпускников 11 кл., прошедших ГИА по физике.</a><a class="dropdown-item text-dark text-sm"style="font-weight:bold;background:rgba(74,175,3, 0.2) " >1_1_4 - Доля выпускников 11 кл., набравших мин. кол-во баллов ЕГЭ по химии, необходимое для поступления в организации высшего образования, к общей численности выпускников 11 кл., прошедших ГИА по химии.</a><a class="dropdown-item text-dark text-sm"style="font-weight:bold;background:rgba(104,87,104, 0.2) " >1_1_5 - Доля выпускников 11 кл., набравших мин. кол-во баллов ЕГЭ по биологии, необходимое для поступления в организации высшего образования, к общей численности выпускников 11 кл., прошедших ГИА по биологии.</a><a class="dropdown-item text-dark text-sm"style="font-weight:bold;background:rgba(63,243,144, 0.2) " >1_1_6 - Первичный балл ЕГЭ по русскому языку, являющийся нижней границей 25 % наиболее высоких результатов</a><a class="dropdown-item text-dark text-sm"style="font-weight:bold;background:rgba(114,72,27, 0.2) " >1_1_7 - Первичный балл ЕГЭ по профильной математике, являющийся нижней границей 25 % наиболее высоких результатов</a><a class="dropdown-item text-dark text-sm"style="font-weight:bold;background:rgba(3,56,210, 0.2) " >1_1_8 - Доля выпускников 9 кл., не набравших мин. кол-во баллов по обязательным учебным предметам, к общей численности выпускников 9 кл., прошедших ОГЭ по обязательным учебным предметам</a><a class="dropdown-item text-dark text-sm"style="font-weight:bold;background:rgba(47,140,212, 0.2) " >1_1_9 - Доля выпускников 9 кл., не набравших мин. кол-во баллов по физике в форме ОГЭ, к общей численности выпускников 9 кл., прошедших ОГЭ по физике.</a><a class="dropdown-item text-dark text-sm"style="font-weight:bold;background:rgba(36,3,11, 0.2) " >1_1_10 - Доля выпускников 9 кл., не набравших мин. кол-во баллов по химии в форме ОГЭ, к общей численности выпускников 9 кл., прошедших ОГЭ по химии.</a><a class="dropdown-item text-dark text-sm"style="font-weight:bold;background:rgba(55,230,3, 0.2) " >1_1_11 - Доля выпускников 9 кл., не набравших мин. кол-во баллов по биологии в форме ОГЭ, к общей численности выпускников 9 кл., прошедших ОГЭ по биологии.</a><a class="dropdown-item text-dark text-sm"style="font-weight:bold;background:rgba(183,13,15, 0.2) " >1_1_12 - Первичный балл ОГЭ по русскому языку, являющийся нижней границей 25 % наиболее высоких результатов</a><a class="dropdown-item text-dark text-sm"style="font-weight:bold;background:rgba(67,160,94, 0.2) " >1_1_13 - Первичный балл ОГЭ по математике, являющейся нижней границей 25 % наиболее высоких результатов</a><a class="dropdown-item text-dark text-sm"style="font-weight:bold;background:rgba(195,41,111, 0.2) " >1_1_14 - Доля участников ВПР 4 класса по математике, преодолевших границу низких результатов, к общей численности участников ВПР 4 класса по математике</a><a class="dropdown-item text-dark text-sm"style="font-weight:bold;background:rgba(32,205,180, 0.2) " >1_1_15 - Доля участников ВПР 4 класса по русскому языку, преодолевших границу низких результатов, к общей численности участников ВПР 4 класса по русскому языку</a><a class="dropdown-item text-dark text-sm"style="font-weight:bold;background:rgba(11,93,187, 0.2) " >1_1_16 - Доля участников ВПР 4 класса по окружающему миру, преодолевших границу низких результатов, к общей численности участников ВПР 4 класса по окружающему миру</a><a class="dropdown-item text-dark text-sm"style="font-weight:bold;background:rgba(148,1,80, 0.2) " >1_1_17 - Доля обучающихся 4-8 кл. в рамках ВПР, правильно выполнивших практикоориентированные задания, к общей численности выполнивших диагност. работы, включающую в себя практикоориентированные задания.</a><a class="dropdown-item text-dark text-sm"style="font-weight:bold;background:rgba(38,60,123, 0.2) " >1_2_1 - Доля выпускников 11 кл. текущего года, выбравших один и тот же учебный предмет в форме ОГЭ и в форме ЕГЭ, к общей численности выпускников 11 кл., прошедших ГИА.</a><a class="dropdown-item text-dark text-sm"style="font-weight:bold;background:rgba(23,225,164, 0.2) " >1_2_2 - Доля выпускников 11 кл. текущего года, выбравших профильную математику, к общей численности выпускников 11 кл. текущего года</a><a class="dropdown-item text-dark text-sm"style="font-weight:bold;background:rgba(29,216,205, 0.2) " >1_2_3 - Доля выпускников 11 кл. текущего года, выбравших в качестве экзамена физику, к общей численности выпускников 11 кл. текущего года</a><a class="dropdown-item text-dark text-sm"style="font-weight:bold;background:rgba(158,224,226, 0.2) " >1_2_4 - Доля выпускников 11 кл. текущего года, выбравших в качестве экзамена химию, к общей численности выпускников 11 кл. текущего года</a><a class="dropdown-item text-dark text-sm"style="font-weight:bold;background:rgba(177,209,255, 0.2) " >1_2_5 - Доля выпускников 11 кл. текущего года, выбравших в качестве экзамена биологию, к общей численности выпускников 11 кл. текущего года</a><a class="dropdown-item text-dark text-sm"style="font-weight:bold;background:rgba(188,169,22, 0.2) " >1_2_6 - Доля выпускников 9 кл. текущего года, выбравших в качестве экзамена физику, к общей численности выпускников 9 кл. текущего года</a><a class="dropdown-item text-dark text-sm"style="font-weight:bold;background:rgba(203,108,72, 0.2) " >1_2_7 - Доля выпускников 9 кл. текущего года, выбравших в качестве экзамена химию, к общей численности выпускников 9 кл. текущего года</a><a class="dropdown-item text-dark text-sm"style="font-weight:bold;background:rgba(68,169,23, 0.2) " >1_2_8 - Доля выпускников 9 кл. текущего года, выбравших в качестве экзамена биологию, к общей численности выпускников 9 кл. текущего года</a>                </div>
+
+            </div>
+        </div>
+        <div class="card-body" id="ioko">
+
+            <div class="chart"><div class="btn-group"><button class="btn btn-warning btn-sm inversion">Инверсия фильтра</button></div><canvas id="stackedBarChart0" style="min-height: 500px; height: 80vh; max-height: 80vh; max-width: 100%;"></canvas><script>$(document).ready(function() {fetchDataAndCreateChart("bar",0,0);});</script></div>
+                <script>
+
+                    var charts = [];
+                    let filter = '';
+                    function filter_diagrams(){
+                        if(charts[0]) {
+                            chart = charts[0];
+                            var ci = chart;
+
+                            ci.data.datasets.forEach(function (e, i) {
+                                var meta = ci.getDatasetMeta(i);
+
+                                if (!meta.hidden) {
+                                    //console.log(ci.getDatasetMeta(i)._dataset.label);
+                                    filter += ci.getDatasetMeta(i)._dataset.label + '~';
+                                }
+                            });
+                            return filter;
+                        }
+                        else
+                            return "1.1.1~1.1.2~1.1.3~1.1.4~1.1.5~1.1.6~1.1.7~1.1.8~1.1.9~1.1.10~1.1.11~1.1.12~1.1.13~1.1.14~1.1.15~1.1.16~1.1.17~1.2.1~1.2.2~1.2.3~1.2.4~1.2.5~1.2.6~1.2.7~1.2.8";
+                    }
+
+                    // Функция для загрузки данных с AJAX
+                    function fetchDataAndCreateChart(type_chart, i, chet) {
+                        $.ajax({
+                            url: '/reports_rgi/ajax_chart.php',
+                            method: 'GET',
+                            data: 'proc=get_data&type_chart=' + type_chart + '' +
+                                '&get_data_type=oo'
+                                + '&get_data_year=2024'
+                                + '&get_data_select=243055'
+                                + '&filter=' + filter_diagrams()
+                                + '&get_data_step=20'
+                                + '&get_data_offset=' + chet,
+                            success: function (response) {
+                                if (response != 'error') {
+                                    createChart(response, '#stackedBarChart' + chet,"bar");
+                                } else
+                                    create_toasts('warning', 'Ошибка работы с данными, попробуйте перейти на эту страницу ещё раз');
+                            },
+                            error: function (error) {
+                                console.error('Ошибка работы с данными:', error);
+                            }
+                        });
+                    }
+
+                    var chart = null;
+
+                    function createChart(chartData, obj_name,type_diagram='bar') {
+
+                        var ctx = $(obj_name).get(0).getContext('2d');
+                        chart = new Chart(ctx, {
+                            type: type_diagram,
+                            data: chartData,
+                            options: {
+                                onClick: function(e,data, context) {
+                                    // console.log(context)
+                                    const activeElement = data[0];
+                                    // console.log('activeElement',activeElement);
+                                    if (activeElement) {
+                                        let code_oo = context.data.labels[activeElement.index];
+                                        if(code_oo==='Сар.обл')
+                                            window.location.href = '/reports_rgi/?year=2024&all';
+                                        else
+                                        if((code_oo.toString().substr(3,3))==='000')
+                                            window.location.href = '/reports_rgi/?year=2024&mup='+(code_oo.toString().substr(0,3))+ '&filter='+filter_diagrams();
+                                        else
+                                            window.location.href = '/reports_rgi/?year=2024&oo='+code_oo+ '&filter='+filter_diagrams();
+                                    }
+                                },
+                                tooltips: {
+                                    callbacks: {
+                                        label: function (tooltipItem, data) {
+                                            // console.log(tooltipItem, data)
+                                            if (tooltipItem.datasetIndex === 0) {
+                                                return 'Label: ' + data.datasets[tooltipItem.datasetIndex].label + ' Value: ' + data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+                                            }
+                                        }
+                                    }
+                                },
+                                responsive: true,
+                                maintainAspectRatio: false,
+                                interaction: {
+                                    intersect: false, // Отключение стандартного тултипа взаимодействия
+                                },
+
+                                plugins: {
+                                    legend: {
+                                        position: 'top',
+                                        labels: {
+                                            fontColor: 'rgb(255, 99, 132)'
+                                        },
+                                        onClick: function(e, legendItem) {
+                                            change_filter(legendItem);
+                                        },
+                                    },
+                                    tooltip: {
+                                        callbacks: {
+                                            label: function (context) {
+                                                // console.log(context.label)
+                                                // console.log(chartData.code_oo)
+                                                var opisanie = chartData.tooltips[context.dataset.label];
+                                                var label = context.dataset.label + ' = ' + context.raw + '%' || '';
+                                                label+= ' '+ chartData.code_oo[context.label];
+                                                return label;
+                                            },
+                                            footer: function (tooltipItems, context) {
+                                                return '\n' + chartData.tooltips[tooltipItems[0].dataset.label];
+                                            },
+                                        }
+                                    }
+                                },
+                                indexAxis: 'y',
+                                scales: {
+                                    x: {
+                                        beginAtZero: true,
+                                        stacked: true,
+                                        min: 0,
+                                        max: 1200,
+                                    },
+                                    y: {
+                                        beginAtZero: true,
+                                        stacked: true
+                                    },
+                                },
+                                sorted:false,
+                            }
+                        });
+
+                        charts.push(chart);
+
+                        var sort_filter = "1.1.1~1.1.2~1.1.3~1.1.4~1.1.5~1.1.6~1.1.7~1.1.8~1.1.9~1.1.10~1.1.11~1.1.12~1.1.13~1.1.14~1.1.15~1.1.16~1.1.17~1.2.1~1.2.2~1.2.3~1.2.4~1.2.5~1.2.6~1.2.7~1.2.8";
+                        if(sort_filter.trim()!='') {
+                            var filtred = sort_filter.split('~');
+                            if (filtred.length > 0) {
+                                chart.data.datasets.forEach(function (e, i) {
+                                    var meta = chart.getDatasetMeta(i);
+                                    if (!filtred.includes(meta._dataset.label))
+                                        meta.hidden = meta.hidden === null ? !meta.hidden : null;
+                                });
+
+                                chart.update();
+                            }
+                        }
+                    }
+
+                    // function  change_filter_sidebar(legendItem_sidebar){
+                    //     charts.forEach(chart => {
+                    //         var ci = chart;
+                    //
+                    //         ci.data.datasets.forEach(function (e, i) {
+                    //             var meta = ci.getDatasetMeta(i);
+                    //
+                    //             if (i._dataset.label == legendItem_sidebar) {
+                    //                 meta.hidden = meta.hidden === null ? !meta.hidden : null;
+                    //             }
+                    //         });
+                    //
+                    //         ci.update();
+                    //     })
+                    // }
+
+                    function  change_filter(legendItem){
+                        charts.forEach(chart => {
+                            var index = legendItem.datasetIndex;
+                            var ci = chart;
+
+                            ci.data.datasets.forEach(function (e, i) {
+                                var meta = ci.getDatasetMeta(i);
+
+                                if (i == index) {
+                                    meta.hidden = meta.hidden === null ? !meta.hidden : null;
+                                }
+                            });
+
+                            ci.update();
+                        })
+                    }
+
+                    $(function () {
+                        const inversions = document.querySelectorAll('.inversion');
+                        inversions.forEach(inversion => {
+                            inversion.addEventListener('click', function() {
+                                charts.forEach(chart => {
+                                    var ci = chart;
+
+                                    ci.data.datasets.forEach(function(e, i) {
+                                        var meta = ci.getDatasetMeta(i);
+
+                                        meta.hidden = meta.hidden === null ? !meta.hidden : null;
+                                    });
+
+                                    ci.update();
+                                });
+                            });
+                        });
+
+                    });
+
+
+                    function filter_diagrams_click(){
+                        var searchParams = new URLSearchParams(window.location.search);
+                        let newUrl = '/reports_rgi/?';
+                        searchParams.forEach((value, key) => {
+                            // console.log('Key: ' + key + ', Value: ' + value);
+                            if(key!='filter') newUrl += '&'+key + (value!=''?'=' + value:'');
+                        });
+                        newUrl += '&filter='+filter_diagrams();
+                        // console.log(newUrl)
+                        window.location.href = newUrl;
+                    }
+
+                </script>
+
+                        </div>
+    </div>
+    <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+
+
+    </section>
+
+
+<script>
+    $(document).ready(function() {
+       $('#image_full_screen').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            var imageSrc = button.data('src');
+            var dataid = button.data('id'); 
+            
+            $(".modal-slider").empty();
+            var modal = $(this);
+            if(dataid===undefined){
+                modal.find('.modal-body img')[0].style.display = "initial"; 
+                modal.find('.modal-body img').attr('src', imageSrc); 
+            }
+            else{
+                let triggerElement = null;
+                triggerElement = $("[data-id=\""+dataid+"\"]");
+                let sliderParent = null;
+                sliderParent = triggerElement.closest(".main_slider");
+                let clonedSlider = null;
+                clonedSlider = sliderParent.clone();
+                $(".modal-slider").append(clonedSlider);
+                main_slider();
+            }
+        });
+    });
+</script>
+
+<div class="modal fade" id="image_full_screen" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-body p-0 m-0 d-flex justify-content-center align-items-center">
+            
+                <div class="modal-slider"> </div>
+                
+                <img src="" class="img-fluid  " alt="Image" onerror="this.style.display = 'none';">
+                
+                <div class="ribbon-wrapper ribbon">
+                    <div class="ribbon bg-danger">
+                        <i class="fas fa-plus" data-bs-dismiss="modal"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+ 
+
+<script>
+    $(document).ready(function() {
+       $('#video_full_screen').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            var imageSrc = button.data('src');
+            var modal = $(this);
+            modal.find('.modal-body video').attr('src', imageSrc); 
+        });
+        $('#video_full_screen').on('hidden.bs.modal', function (event) {
+            var video = $(this).find('video')[0];
+            video.pause();
+        });
+    });
+</script>
+
+<div class="modal fade" id="video_full_screen" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen" role="document">
+        <div class="modal-content">
+            <div class="modal-body p-0 m-0 d-flex justify-content-center align-items-center">
+                <video src="" controls="controls" autoplay></video>
+                <div class="ribbon-wrapper ribbon">
+                    <div class="ribbon bg-danger">
+                        <i class="fas fa-plus" data-bs-dismiss="modal"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ </div>
+
+<footer class="main-footer ">
+    
+    <div class="footer-copyright text-center py-3">
+        <strong class="text-dark">ГАУ СО РЦОКО  &copy; 2026</strong>
+    </div>
+</footer>
+
+
+<aside class="control-sidebar control-sidebar-dark">
+</aside>
+</div>
+
+
+
+            <link rel="stylesheet" href="/plugins/datatables/jquery.dataTables.min.css" />
+            <link rel="stylesheet" href="/plugins/datatables/DateTime-1.4.0/css/dataTables.dateTime.min.css" />
+            <link rel="stylesheet" href="/plugins/datatables/Buttons-2.3.6/css/buttons.bootstrap5.min.css" />
+            <link rel="stylesheet" href="/plugins/datatables/Buttons-2.3.6/css/buttons.dataTables.min.css" />
+            <link rel="stylesheet" href="/plugins/datatables/ButtonOption/print.css" >
+            <link rel="stylesheet" href="/plugins/datatables/RowReorder-1.3.3/css/rowReorder.dataTables.min.css" />
+            <link rel="stylesheet" href="/plugins/datatables/Responsive-2.4.1/css/responsive.bootstrap.min.css" />
+            <link rel="stylesheet" href="/plugins/datatables/FixedColumns-4.2.2/css/fixedColumns.dataTables.min.css" />
+            <link rel="stylesheet" href="/plugins/datatables/FixedHeader-3.3.2/css/fixedHeader.dataTables.min.css" />
+            <link rel="stylesheet" href="/plugins/datatables/Select-1.6.2/css/select.dataTables.min.css" />
+            <link rel="stylesheet" href="/plugins/datatables/RowGroup-1.4.0/css/rowGroup.dataTables.min.css" />
+
+            <link rel="stylesheet" href="/plugins/daterangepicker/daterangepicker.css" />
+            <link rel="stylesheet" href="/plugins/bootstrap-datepicker/bootstrap-datepicker.min.css" />
+
+            <link rel="stylesheet"  src="/plugins/chart.js/Chart.min.css">
+            
+            <!-- summernote -->
+            <link rel="stylesheet" href="/plugins/summernote_bs5/summernote-bs4.min.css">
+            <script src="/plugins/summernote_bs5/summernote-bs4.js"></script>
+            <script src="/plugins/summernote_bs5/lang/summernote-ru-RU.js"></script>
+
+            <link rel="stylesheet" href="/plugins/select2-410-rc0/css/select2.css">
+            <link rel="stylesheet" href="/plugins/select2-410-rc0/css/select2-bootstrap-5-theme.min.css">
+    
+            <script src="/plugins/datatables/DateTime-1.4.0/js/moment.min.js"></script>    
+            
+            <script src="/plugins/datatables/jquery.dataTables.min.js"></script>
+            <script src="/plugins/datatables/Buttons-2.3.6/js/dataTables.buttons.min.js"></script>
+            <script src="/plugins/datatables/Buttons-2.3.6/js/buttons.bootstrap5.min.js"></script>
+            <script src="/plugins/datatables/ButtonOption/colvis.js"></script>
+            <script src="/plugins/datatables/ButtonOption/cdn.datatables.net_buttons_2.4.1_js_buttons.html5.min.js"></script>
+            <script src="/plugins/datatables/ButtonOption/cdnjs.cloudflare.com_ajax_libs_jszip_3.10.1_jszip.min.js"></script>
+            <script src="/plugins/datatables/ButtonOption/pdfmake.min.js"></script>
+            <script src="/plugins/datatables/ButtonOption/cdnjs.cloudflare.com_ajax_libs_pdfmake_0.1.53_vfs_fonts.js"></script>
+            <script src="/plugins/datatables/RowReorder-1.3.3/js/dataTables.rowReorder.min.js"></script>
+            <script src="/plugins/datatables/Responsive-2.4.1/js/dataTables.responsive.min.js"></script>
+            <script src="/plugins/datatables/FixedHeader-3.3.2/js/dataTables.fixedHeader.min.js"></script>
+            <script src="/plugins/datatables/FixedColumns-4.2.2/js/dataTables.fixedColumns.min.js"></script>
+            
+            <script src="/plugins/datatables/Select-1.6.2/js/dataTables.select.min.js"></script>
+            <script src="/plugins/datatables/RowGroup-1.4.0/js/dataTables.rowGroup.min.js"></script>
+            
+            <!-- DataRangePicker -->
+            <script src="/plugins/daterangepicker/daterangepicker.js"></script>
+            <script src="/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+            <script src="/plugins/bootstrap-datepicker/bootstrap-datepicker.ru.min.js"></script>
+            <!-- ChartJS -->
+            <script src="/plugins/chart.js/chart.umd.min.js"></script>
+            
+            <!-- Select2 -->
+            <script src="/plugins/select2-410-rc0/js/select2.full.min.js"></script>
+            <script src="/plugins/select2/js/select2.min.js"></script>
+            <script src="/plugins/select2/js/i18n/ru.js"></script>
+            
+        <script src="/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+
+<script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="/plugins/ekko-lightbox/ekko-lightbox.min.js"></script>
+
+<script src="/vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="/plugins/toastr/toastr.min.js"></script>
+
+<script src="/plugins/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+
+<script src="/dist/js/adminlte.min.js"></script>
+
+<script src="/dist/js/my_includes.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        $("[rel='tooltip']").tooltip();
+    });
+
+</script>
+</body>
+</html>

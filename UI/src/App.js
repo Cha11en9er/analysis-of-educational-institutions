@@ -169,6 +169,8 @@ function App() {
   const [sortBy, setSortBy] = useState('rating_total');
   const [showAnalysisPage, setShowAnalysisPage] = useState(false);
   const [showAnalytics, setShowAnalytics] = useState(false);
+  const [activeLayers, setActiveLayers] = useState([]);
+  const [institutionToast, setInstitutionToast] = useState(null);
   const [analyticsReviews, setAnalyticsReviews] = useState([]);
   const [analyticsLoading, setAnalyticsLoading] = useState(false);
   const [analyticsAppliedTopics, setAnalyticsAppliedTopics] = useState([]);
@@ -202,6 +204,42 @@ function App() {
     fetchSchools(p);
   }, [fetchSchools]);
 
+  // Слои учреждений: загрузка один раз в db-режиме
+  useEffect(() => {
+    let cancelled = false;
+    const KINDS = ['sport_do', 'arts_do', 'preschool', 'internat_cadet', 'spo', 'vuz'];
+    Promise.all(
+      KINDS.map((kind) =>
+        axios
+          .get(`${API_URL}/api/institutions`, { params: { kind } })
+          .then(({ data }) => [kind, data.institutions || []])
+          .catch(() => [kind, []])
+      )
+    ).then((pairs) => {
+      if (cancelled) return;
+      window.__uchgradInstitutions = Object.fromEntries(pairs);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  // Клик по учреждению — тост с адресом/ссылкой (карточка-минимум)
+  useEffect(() => {
+    window.__uchgradInstitutionClick = (it) => {
+      setInstitutionToast(it);
+    };
+    return () => {
+      delete window.__uchgradInstitutionClick;
+    };
+  }, []);
+
+  const toggleLayer = useCallback((kind) => {
+    setActiveLayers((prev) =>
+      prev.includes(kind) ? prev.filter((k) => k !== kind) : [...prev, kind]
+    );
+  }, []);
+
   const handleSchoolClick = useCallback(
     async (school) => {
       setShowAnalysisPage(false);
@@ -209,8 +247,13 @@ function App() {
       setSchoolDetailLoading(true);
       setSchoolDetail(null);
       try {
-        const { data } = await axios.get(`${API_URL}/api/schools/${school.school_id}`);
-        setSchoolDetail(data);
+        const [{ data: detail }, { data: catchment }] = await Promise.all([
+          axios.get(`${API_URL}/api/schools/${school.school_id}`),
+          axios
+            .get(`${API_URL}/api/schools/${school.school_id}/catchment`)
+            .catch(() => ({ data: null })),
+        ]);
+        setSchoolDetail({ ...detail, catchment: catchment?.points || [] });
       } catch (err) {
         const msg = err.response?.data?.detail || err.message || 'Ошибка загрузки';
         setToast({ message: msg, type: 'error' });
@@ -431,6 +474,7 @@ function App() {
               selectedSchool={schoolDetail}
               onSchoolClick={handleSchoolClick}
               preferencesActive={preferencesActive}
+              activeLayers={activeLayers}
             />
             {showSchoolDetail && schoolDetail && (
               <SchoolBottomCard
@@ -441,6 +485,28 @@ function App() {
                 onClose={handleCloseBottomCard}
                 onOpenDetails={handleOpenAnalysisPage}
               />
+            )}
+            {!showSchoolDetail && (
+              <div className="map-layers-panel">
+                <span className="layers-title">Слои:</span>
+                {[
+                  ['sport_do', 'Спорт'],
+                  ['arts_do', 'Творческие'],
+                  ['preschool', 'Садики'],
+                  ['internat_cadet', 'Кадеты'],
+                  ['vuz', 'Вузы'],
+                  ['spo', 'СПО'],
+                ].map(([kind, label]) => (
+                  <button
+                    type="button"
+                    key={kind}
+                    className={`layer-chip ${activeLayers.includes(kind) ? 'on' : ''}`}
+                    onClick={() => toggleLayer(kind)}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
             )}
           </>
         )}
@@ -455,6 +521,28 @@ function App() {
           loading={loading}
           onToast={setToast}
         />
+      )}
+      {institutionToast && (
+        <div className="institution-card" role="status">
+          <button
+            type="button"
+            className="bottom-card-close"
+            onClick={() => setInstitutionToast(null)}
+            aria-label="Закрыть"
+          >
+            ✕
+          </button>
+          <div className="inst-name">{institutionToast.name}</div>
+          <div className="inst-address">{institutionToast.address || 'Адрес не указан'}</div>
+          <div className="inst-links">
+            {institutionToast.phone && <span className="inst-item">{institutionToast.phone}</span>}
+            {institutionToast.site && (
+              <a href={institutionToast.site} target="_blank" rel="noopener noreferrer">
+                Сайт учреждения
+              </a>
+            )}
+          </div>
+        </div>
       )}
       {toast && (
         <Toast
