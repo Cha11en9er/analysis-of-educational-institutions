@@ -13,6 +13,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import time
 import urllib.parse
 import urllib.request
@@ -67,9 +68,25 @@ def geocode_once(api_key: str, query: str) -> tuple[str, float | None, float | N
     return status, float(pos[1]), float(pos[0])
 
 
+def normalize_query(addr: str) -> str:
+    """Nominatim любит улицы словами, не любит индексы и сокращения 'д.'."""
+    q = addr.strip()
+    q = re.sub(r"^\d{6},?\s*", "", q)            # почтовый индекс
+    q = re.sub(r"\bд\.\s*", "", q)               # 'д. 138' -> '138'
+    q = re.sub(r"\bул\.\s*", "улица ", q)
+    q = re.sub(r"\bпр-кт\b", "проспект", q)
+    q = re.sub(r"\bпр-д\b", "проезд", q)
+    q = re.sub(r"\bб-р\b", "бульвар", q)
+    return q
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--limit", type=int, default=300)
+    parser.add_argument(
+        "--retry-failed", action="store_true",
+        help="Сбросить status=fail в pending перед прогоном",
+    )
     parser.add_argument(
         "--provider", choices=["yandex", "nominatim"], default="nominatim",
         help="nominatim — без ключа (1 req/s); yandex — требует ключ с правом HTTP-геокодера",
@@ -90,6 +107,10 @@ def main() -> None:
     done = ok = fail = ambiguous = 0
     try:
         with conn, conn.cursor(cursor_factory=psycopg2.extras.DictCursor) as cur:
+            if args.retry_failed:
+                cur.execute("UPDATE sa.institution SET geocode_status='pending' WHERE geocode_status='fail'")
+                conn.commit()
+                print("fail -> pending сброшен")
             cur.execute(
                 """
                 SELECT institution_id, name, address FROM sa.institution
@@ -105,7 +126,7 @@ def main() -> None:
             for row in rows:
                 if done >= args.limit:
                     break
-                query = f"Россия, {row['address']}"
+                query = f"Россия, {normalize_query(row['address'])}"
                 try:
                     if args.provider == "nominatim":
                         status, lat, lon = geocode_nominatim(query)
