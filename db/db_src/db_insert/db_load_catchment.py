@@ -61,6 +61,15 @@ def main() -> None:
                     "status": "ok",
                 }
             else:
+                addr_rows.setdefault(key, {
+                    "district": district,
+                    "street_norm": street,
+                    "house_norm": house,
+                    "resolved": None,
+                    "lat": None,
+                    "lon": None,
+                    "status": "pending",
+                })
                 unresolved += 1
 
     print(f"Связей школа×улица×дом: {sum(len(v) for v in links.values())}")
