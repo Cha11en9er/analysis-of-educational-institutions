@@ -216,7 +216,9 @@ export default function MapView({ schools, selectedSchool, onSchoolClick, prefer
         map.addChild(feature);
         layers.features.push(feature);
       }
+    }
 
+    if (showAttachedLayer) {
       (addressesForSelected || []).forEach((row) => {
         if (row.lat == null || row.lon == null) return;
         const dot = document.createElement('div');
