@@ -26,6 +26,19 @@ import psycopg2  # noqa: E402
 import psycopg2.extras  # noqa: E402
 
 API = "https://geocode-maps.yandex.ru/1.x/"
+NOMINATIM = "https://nominatim.openstreetmap.org/search"
+UA_NOMINATIM = {"User-Agent": "uchgrad.ru/1.0 (schools map; contact: rcoko@sarrcoko.ru)"}
+
+
+def geocode_nominatim(query: str) -> tuple[str, float | None, float | None]:
+    """OSM Nominatim: без ключа, лимит 1 запрос/сек. Точность грубее Яндекса."""
+    params = {"q": query, "format": "json", "limit": 1, "addressdetails": 0, "countrycodes": "ru"}
+    req = urllib.request.Request(NOMINATIM + "?" + urllib.parse.urlencode(params), headers=UA_NOMINATIM)
+    with urllib.request.urlopen(req, timeout=30) as r:
+        d = json.loads(r.read().decode("utf-8"))
+    if not d:
+        return "fail", None, None
+    return "ok", float(d[0]["lat"]), float(d[0]["lon"])
 
 
 def geocode_once(api_key: str, query: str) -> tuple[str, float | None, float | None]:
@@ -57,10 +70,14 @@ def geocode_once(api_key: str, query: str) -> tuple[str, float | None, float | N
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--limit", type=int, default=300)
+    parser.add_argument(
+        "--provider", choices=["yandex", "nominatim"], default="nominatim",
+        help="nominatim — без ключа (1 req/s); yandex — требует ключ с правом HTTP-геокодера",
+    )
     args = parser.parse_args()
 
     api_key = (os.getenv("YANDEX_API_KEY") or "").strip()
-    if not api_key:
+    if args.provider == "yandex" and not api_key:
         raise SystemExit("YANDEX_API_KEY не найден в .env")
 
     conn = psycopg2.connect(
@@ -90,7 +107,10 @@ def main() -> None:
                     break
                 query = f"Россия, {row['address']}"
                 try:
-                    status, lat, lon = geocode_once(api_key, query)
+                    if args.provider == "nominatim":
+                        status, lat, lon = geocode_nominatim(query)
+                    else:
+                        status, lat, lon = geocode_once(api_key, query)
                 except Exception as e:
                     print("ERROR", row["institution_id"], str(e)[:80])
                     time.sleep(1)
@@ -112,7 +132,7 @@ def main() -> None:
                     ambiguous += 1
                 else:
                     fail += 1
-                time.sleep(0.12)
+                time.sleep(0.12 if args.provider == "yandex" else 1.1)
     finally:
         conn.close()
     print(f"Итог: обработано {done} | ok {ok} | ambiguous {ambiguous} | fail {fail}")
