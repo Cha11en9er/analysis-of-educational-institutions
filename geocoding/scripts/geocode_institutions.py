@@ -29,6 +29,8 @@ import psycopg2.extras  # noqa: E402
 API = "https://geocode-maps.yandex.ru/1.x/"
 NOMINATIM = "https://nominatim.openstreetmap.org/search"
 UA_NOMINATIM = {"User-Agent": "uchgrad.ru/1.0 (schools map; contact: rcoko@sarrcoko.ru)"}
+# Ключ ограничен Referrer https://uchgrad.ru/* — запросы от имени сайта обязаны его нести.
+YANDEX_HEADERS = {"Referer": "https://uchgrad.ru/"}
 
 
 def geocode_nominatim(query: str) -> tuple[str, float | None, float | None]:
@@ -50,7 +52,7 @@ def geocode_once(api_key: str, query: str) -> tuple[str, float | None, float | N
         "results": 1,
         "lang": "ru_RU",
     }
-    req = urllib.request.Request(API + "?" + urllib.parse.urlencode(params))
+    req = urllib.request.Request(API + "?" + urllib.parse.urlencode(params), headers=YANDEX_HEADERS)
     with urllib.request.urlopen(req, timeout=30) as r:
         d = json.loads(r.read().decode("utf-8"))
     members = (
