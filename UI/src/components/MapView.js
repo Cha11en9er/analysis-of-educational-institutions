@@ -90,9 +90,7 @@ export default function MapView({ schools, selectedSchool, onSchoolClick, prefer
     [catchmentPoints, attachmentKey]
   );
 
-  const showAttachedLayer = Boolean(
-    selectedSchool && attachmentKey && addressesForSelected.length > 0
-  );
+  const showAttachedLayer = Boolean(selectedSchool && addressesForSelected.length > 0);
 
   const addressCoverageFeature = useMemo(
     () => buildAddressCoverageFeature(addressesForSelected),
