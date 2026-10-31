@@ -47,6 +47,8 @@ export default function MapView({
   const mapRef = useRef(null);
   const layersRef = useRef({ markers: [], features: [], houses: [], institutions: [] });
   const viewRef = useRef({ center: SARATOV_CENTER, zoom: DEFAULT_ZOOM });
+  const lastSchoolsKeyRef = useRef(null);
+  const cameraAdjustedRef = useRef(false);
   const onSchoolClickRef = useRef(onSchoolClick);
   const [mapError, setMapError] = useState(null);
   const [mapReady, setMapReady] = useState(false);
@@ -239,7 +241,12 @@ export default function MapView({
       layersRef.current.institutions = list;
     }
 
-    // Подгонка вида
+    // Подгонка вида: только при смене набора школ (не при закрытии карточки)
+    const schoolsKey = validSchools.map((s2) => s2.school_id).join(',');
+    if (lastSchoolsKeyRef.current !== schoolsKey) {
+      lastSchoolsKeyRef.current = schoolsKey;
+      cameraAdjustedRef.current = false; // новый набор — разрешаем одну подгонку
+    }
     if (showAttachedLayer) {
       const pts = [];
       const sc = lonLatOfSchool(selectedSchool);
@@ -261,13 +268,18 @@ export default function MapView({
     } else if (selectedSchool) {
       const coords = lonLatOfSchool(selectedSchool);
       if (coords) {
-        viewRef.current = { center: coords, zoom: 16 };
-        map.setLocation({ center: coords, zoom: 16, duration: 800 });
+        // не сбрасываем настройки камеры: центр — на школу, зум сохраняем текущий
+        // (поднимаем только если смотрим на весь город)
+        const currentZoom = map.location?.zoom ?? viewRef.current.zoom ?? DEFAULT_ZOOM;
+        const zoom = currentZoom >= 14 ? currentZoom : 15;
+        viewRef.current = { center: coords, zoom };
+        map.setLocation({ center: coords, zoom, duration: 600 });
       }
-    } else if (validSchools.length > 0 && validSchools.length <= 80) {
+    } else if (!cameraAdjustedRef.current && validSchools.length > 0) {
       const bounds = boundsFromLonLats(validSchools.map(lonLatOfSchool).filter(Boolean));
       if (bounds) {
         map.setLocation({ bounds, duration: 300 });
+        cameraAdjustedRef.current = true;
       }
     }
   }, [
