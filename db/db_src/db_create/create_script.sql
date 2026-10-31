@@ -184,3 +184,6 @@ ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS ownership TEXT NOT NULL DEFAULT '
 ALTER TABLE sa.institution ADD COLUMN IF NOT EXISTS inst_group TEXT; -- school|preschool|vuz|other
 ALTER TABLE sa.institution ADD COLUMN IF NOT EXISTS our_school_id INTEGER REFERENCES sa.school(school_id);
 CREATE INDEX IF NOT EXISTS idx_institution_group ON sa.institution(inst_group);
+
+-- Миграция 31.10.26: institution не должен каскадно очищаться при TRUNCATE sa.school
+ALTER TABLE sa.institution DROP CONSTRAINT IF EXISTS institution_our_school_id_fkey;
