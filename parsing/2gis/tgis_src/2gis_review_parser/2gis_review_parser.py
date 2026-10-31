@@ -31,6 +31,7 @@ CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 TGIS_ROOT = os.path.dirname(os.path.dirname(CURRENT_DIR))
 DATA_DIR = os.path.join(TGIS_ROOT, "2gis_data")
 OUTPUT_DIR = os.path.join(DATA_DIR, "tgis_output")
+REVIEWS_DATA_DIR = os.path.join(DATA_DIR, "tgis_input")
 REVIEWS_OUTPUT_FILE = os.path.join(OUTPUT_DIR, "2gis_school_reviews.json")
 
 

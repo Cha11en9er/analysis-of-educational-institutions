@@ -214,6 +214,7 @@ async def get_schools_for_map(
     has_sports_ground: Optional[bool] = Query(None),
     has_sports_complex: Optional[bool] = Query(None),
     ownership: Optional[str] = Query(None, description="public|private"),
+    city: str = Query("Саратов"),
     pref_olympiads: bool = Query(False),
     pref_bullying: bool = Query(False),
     pref_staff: bool = Query(False),
@@ -282,9 +283,9 @@ async def get_schools_for_map(
                 s.olympiad_winners_count, s.ownership
             FROM sa.school s
             LEFT JOIN sa.rating r ON r.school_id = s.school_id
-            WHERE 1=1
+            WHERE s.city = %s
         """
-        params: list[Any] = []
+        params: list[Any] = [city]
         if year_min is not None:
             query += " AND s.year_built >= %s"
             params.append(year_min)

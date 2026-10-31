@@ -1,0 +1,107 @@
+[
+ {
+  "id": 9001,
+  "name_2gis": "МОУ «СОШ № 33 им.П.А.Столыпина»",
+  "short_name": "СОШ № 33 им.П.А.Столыпина",
+  "address": "г. Энгельс, ул. Тельмана, 150",
+  "building_type": "Основное здание",
+  "area_sqm": 1139.8,
+  "floors": 2,
+  "underground_floors": null,
+  "material": "смеш",
+  "year_built": 1980,
+  "reconstruction_year": null,
+  "capacity": null,
+  "has_sports_complex": null,
+  "has_pool": null,
+  "has_stadium": null,
+  "has_sports_ground": 1,
+  "latitude": 51.509919,
+  "longitude": 45.987625,
+  "cadastral_number": "64:48:000000:15467",
+  "rating_2gis": null,
+  "rating_yandex": 4.7,
+  "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+  "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+  "link_2gis": null,
+  "reviews_link_2gis": null,
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    45.987625,
+    51.509919
+   ]
+  },
+  "link_gosuslugi": "https://engschool33.gosuslugi.ru/"
+ },
+ {
+  "id": 9002,
+  "name_2gis": "МОУ «СОШ № 5 имени В Хомяковой»",
+  "short_name": "СОШ № 5 имени В Хомяковой",
+  "address": "г. Энгельс, ул. Менделеева, 27",
+  "building_type": "Основное здание",
+  "area_sqm": 1139.8,
+  "floors": 2,
+  "underground_floors": null,
+  "material": "смеш",
+  "year_built": 1980,
+  "reconstruction_year": null,
+  "capacity": null,
+  "has_sports_complex": null,
+  "has_pool": null,
+  "has_stadium": null,
+  "has_sports_ground": 1,
+  "latitude": 51.509919,
+  "longitude": 45.987625,
+  "cadastral_number": "64:48:000000:15467",
+  "rating_2gis": null,
+  "rating_yandex": 4.7,
+  "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+  "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+  "link_2gis": null,
+  "reviews_link_2gis": null,
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    45.987625,
+    51.509919
+   ]
+  },
+  "link_gosuslugi": "https://engschool5.gosuslugi.ru/"
+ },
+ {
+  "id": 9003,
+  "name_2gis": "ГАОУ СО «Гимназия № 8»",
+  "short_name": "Гимназия № 8",
+  "address": "г. Энгельс, ул. Тельмана, 3",
+  "building_type": "Основное здание",
+  "area_sqm": 1139.8,
+  "floors": 2,
+  "underground_floors": null,
+  "material": "смеш",
+  "year_built": 1980,
+  "reconstruction_year": null,
+  "capacity": null,
+  "has_sports_complex": null,
+  "has_pool": null,
+  "has_stadium": null,
+  "has_sports_ground": 1,
+  "latitude": 51.509919,
+  "longitude": 45.987625,
+  "cadastral_number": "64:48:000000:15467",
+  "rating_2gis": null,
+  "rating_yandex": 4.7,
+  "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+  "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+  "link_2gis": null,
+  "reviews_link_2gis": null,
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    45.987625,
+    51.509919
+   ]
+  },
+  "link_gosuslugi": "https://enggimn8.gosuslugi.ru/"
+ }
+]

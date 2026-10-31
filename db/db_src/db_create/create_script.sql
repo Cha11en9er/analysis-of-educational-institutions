@@ -201,3 +201,9 @@ CREATE TABLE IF NOT EXISTS sa.geocode_log (
     note TEXT
 );
 CREATE INDEX IF NOT EXISTS idx_geocode_log_date ON sa.geocode_log(run_date);
+
+-- Миграция 01.11.26: школы других городов (Энгельс) — паспорт здания необязателен
+ALTER TABLE sa.school ALTER COLUMN floors DROP NOT NULL;
+ALTER TABLE sa.school ALTER COLUMN year_built DROP NOT NULL;
+ALTER TABLE sa.school ALTER COLUMN school_address DROP NOT NULL;
+ALTER TABLE sa.school ALTER COLUMN building_info DROP NOT NULL;

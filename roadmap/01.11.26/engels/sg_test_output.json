@@ -1,0 +1,219 @@
+[
+  {
+    "id": 9001,
+    "name_2gis": "МОУ «СОШ № 33 им.П.А.Столыпина»",
+    "short_name": "СОШ № 33 им.П.А.Столыпина",
+    "address": "г. Энгельс, ул. Тельмана, 150",
+    "building_type": "Основное здание",
+    "area_sqm": 1139.8,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "смеш",
+    "year_built": 1980,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.509919,
+    "longitude": 45.987625,
+    "cadastral_number": "64:48:000000:15467",
+    "rating_2gis": null,
+    "rating_yandex": 4.7,
+    "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+    "link_2gis": null,
+    "reviews_link_2gis": null,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.987625,
+        51.509919
+      ]
+    },
+    "link_gosuslugi": "https://engschool33.gosuslugi.ru/",
+    "specialization": [
+      "Технологический",
+      "Социально-экономический",
+      "Гуманитарный",
+      "Eстественно-научный",
+      "Универсальный"
+    ],
+    "EGE": "68,3% - средний балл на ЕГЭ в 2026 году по школе",
+    "VUZ": "98,8% - выпускников, поступивших в ВУЗы в 2026 году",
+    "Olympiads": [],
+    "Medals": [
+      "19 - выпускников награждены федеральной медалью «За особые успехи в учении» I и II степени в 2026 году"
+    ],
+    "other_results": [
+      "1 - ученик сдал 2 экзамена (химия, биология) на 100 баллов по результатам сдачи ГИА в 2026 году",
+      "1 - выпускница награждена Почетным знаком Губернатора Саратовской области в 2026 году"
+    ],
+    "results_kpi_raw": [
+      "1 - ученик сдал 2 экзамена (химия, биология) на 100 баллов по результатам сдачи ГИА в 2026 году",
+      "1 - выпускница награждена Почетным знаком Губернатора Саратовской области в 2026 году",
+      "19 - выпускников награждены федеральной медалью «За особые успехи в учении» I и II степени в 2026 году",
+      "68,3% - средний балл на ЕГЭ в 2026 году по школе",
+      "98,8% - выпускников, поступивших в ВУЗы в 2026 году"
+    ],
+    "infrastructure": "https://engschool33.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": "68,3% - средний балл на ЕГЭ в 2026 году по школе",
+    "VUZ_2026": "98,8% - выпускников, поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": null,
+    "Medals_2026": [
+      "19 - выпускников награждены федеральной медалью «За особые успехи в учении» I и II степени в 2026 году"
+    ],
+    "other_results_2026": [
+      "1 - ученик сдал 2 экзамена (химия, биология) на 100 баллов по результатам сдачи ГИА в 2026 году",
+      "1 - выпускница награждена Почетным знаком Губернатора Саратовской области в 2026 году"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-31T10:31:01.050568+00:00"
+  },
+  {
+    "id": 9002,
+    "name_2gis": "МОУ «СОШ № 5 имени В Хомяковой»",
+    "short_name": "СОШ № 5 имени В Хомяковой",
+    "address": "г. Энгельс, ул. Менделеева, 27",
+    "building_type": "Основное здание",
+    "area_sqm": 1139.8,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "смеш",
+    "year_built": 1980,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.509919,
+    "longitude": 45.987625,
+    "cadastral_number": "64:48:000000:15467",
+    "rating_2gis": null,
+    "rating_yandex": 4.7,
+    "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+    "link_2gis": null,
+    "reviews_link_2gis": null,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.987625,
+        51.509919
+      ]
+    },
+    "link_gosuslugi": "https://engschool5.gosuslugi.ru/",
+    "specialization": [
+      "Универсальный профиль",
+      "Технологический профиль"
+    ],
+    "EGE": "46,3 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "77,1% - Выпускников поступивших в ВУЗы в 2025 году",
+    "Olympiads": [
+      "41 - Призёры и победители Всероссийской олимпиады за 3 года (Муниципальный этап)",
+      "2 - Призёра Всероссийской олимпиады за 3 года (Региональный этап)"
+    ],
+    "Medals": [
+      "2 - Выпускника с медалью I степени за 2026 год",
+      "3 - Выпускник с медалью II степени за 2026 год"
+    ],
+    "other_results": [
+      "1 - Получивший 100 балов по итогам ГИА"
+    ],
+    "results_kpi_raw": [
+      "41 - Призёры и победители Всероссийской олимпиады за 3 года (Муниципальный этап)",
+      "2 - Выпускника с медалью I степени за 2026 год",
+      "46,3 - Средний балл на ЕГЭ в 2026 году",
+      "77,1% - Выпускников поступивших в ВУЗы в 2025 году",
+      "2 - Призёра Всероссийской олимпиады за 3 года (Региональный этап)",
+      "3 - Выпускник с медалью II степени за 2026 год",
+      "1 - Получивший 100 балов по итогам ГИА"
+    ],
+    "infrastructure": "https://engschool5.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": "46,3 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "41 - Призёры и победители Всероссийской олимпиады за 3 года (Муниципальный этап)",
+      "2 - Призёра Всероссийской олимпиады за 3 года (Региональный этап)"
+    ],
+    "Medals_2026": [
+      "2 - Выпускника с медалью I степени за 2026 год",
+      "3 - Выпускник с медалью II степени за 2026 год"
+    ],
+    "other_results_2026": [
+      "1 - Получивший 100 балов по итогам ГИА"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-31T10:31:13.570172+00:00"
+  },
+  {
+    "id": 9003,
+    "name_2gis": "ГАОУ СО «Гимназия № 8»",
+    "short_name": "Гимназия № 8",
+    "address": "г. Энгельс, ул. Тельмана, 3",
+    "building_type": "Основное здание",
+    "area_sqm": 1139.8,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "смеш",
+    "year_built": 1980,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.509919,
+    "longitude": 45.987625,
+    "cadastral_number": "64:48:000000:15467",
+    "rating_2gis": null,
+    "rating_yandex": 4.7,
+    "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+    "link_2gis": null,
+    "reviews_link_2gis": null,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.987625,
+        51.509919
+      ]
+    },
+    "link_gosuslugi": "https://enggimn8.gosuslugi.ru/",
+    "specialization": [
+      "Гуманитарный",
+      "Технологический",
+      "Естественно-научный",
+      "Социально-экономический"
+    ],
+    "EGE": "66,69 - средний балл на ЕГЭ в 2026 году",
+    "VUZ": "97,3% - выпускников 2026 года поступили в ВУЗы РФ",
+    "Olympiads": [],
+    "Medals": [
+      "14 - (29,7%) выпускников 2026 года закончили гимназию с медалью I и II степени."
+    ],
+    "other_results": [
+      "5 - победителей и призеров регионального этапа ВсОШ в 2026 году"
+    ],
+    "results_kpi_raw": [
+      "5 - победителей и призеров регионального этапа ВсОШ в 2026 году",
+      "14 - (29,7%) выпускников 2026 года закончили гимназию с медалью I и II степени.",
+      "66,69 - средний балл на ЕГЭ в 2026 году",
+      "97,3% - выпускников 2026 года поступили в ВУЗы РФ"
+    ],
+    "infrastructure": "https://enggimn8.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": "66,69 - средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "97,3% - выпускников 2026 года поступили в ВУЗы РФ",
+    "Olympiads_2026": null,
+    "Medals_2026": [
+      "14 - (29,7%) выпускников 2026 года закончили гимназию с медалью I и II степени."
+    ],
+    "other_results_2026": [
+      "5 - победителей и призеров регионального этапа ВсОШ в 2026 году"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-31T10:31:23.971986+00:00"
+  }
+]

@@ -1,0 +1,13 @@
+{
+ "source": "test_engels",
+ "topic": "Школы Энгельса (тест)",
+ "data": [
+  {
+   "id": "9001",
+   "name": "МОУ «СОШ № 33 им. П.А. Столыпина»",
+   "url": "https://2gis.ru/engels/firm/6052240280256633",
+   "2gis_review_url": "https://2gis.ru/engels/firm/6052240280256633/tab/reviews",
+   "adres": "г. Энгельс, ул. Тельмана, 150"
+  }
+ ]
+}
