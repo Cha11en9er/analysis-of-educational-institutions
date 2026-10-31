@@ -1,0 +1,1401 @@
+[
+  {
+    "id": 9100,
+    "name_2gis": "МОУ «СОШ № 1»",
+    "short_name": "СОШ № 1",
+    "address": "413117, Саратовская обл., г. Энгельс, ул. Транспортная, д. 30",
+    "building_type": "Основное здание",
+    "area_sqm": 1139.8,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "смеш",
+    "year_built": 1980,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.509919,
+    "longitude": 45.987625,
+    "cadastral_number": "64:48:000000:15467",
+    "rating_2gis": null,
+    "rating_yandex": 4.7,
+    "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+    "link_2gis": null,
+    "reviews_link_2gis": null,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.987625,
+        51.509919
+      ]
+    },
+    "link_gosuslugi": "https://shkola1engels-r64.gosweb.gosuslugi.ru/",
+    "_code_oo": 238123,
+    "specialization": [
+      "История"
+    ],
+    "EGE": "62,0 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "92% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads": [],
+    "Medals": [
+      "15 - Выпускников с медалью за 2026 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "15 - Выпускников с медалью за 2026 год",
+      "62,0 - Средний балл на ЕГЭ в 2026 году",
+      "92% - Выпускников поступивших в ВУЗы в 2026 году"
+    ],
+    "infrastructure": "https://shkola1engels-r64.gosweb.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": "62,0 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "92% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": null,
+    "Medals_2026": [
+      "15 - Выпускников с медалью за 2026 год"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-31T11:29:58.997632+00:00"
+  },
+  {
+    "id": 9101,
+    "name_2gis": "МОУ «СОШ № 33 им.П.А.Столыпина»",
+    "short_name": "СОШ № 33 им.П.А.Столыпина",
+    "address": "413100, Саратовская обл., г. Энгельс, ул. Тельмана, д. 2",
+    "building_type": "Основное здание",
+    "area_sqm": 1139.8,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "смеш",
+    "year_built": 1980,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.509919,
+    "longitude": 45.987625,
+    "cadastral_number": "64:48:000000:15467",
+    "rating_2gis": null,
+    "rating_yandex": 4.7,
+    "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+    "link_2gis": null,
+    "reviews_link_2gis": null,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.987625,
+        51.509919
+      ]
+    },
+    "link_gosuslugi": "https://engschool33.gosuslugi.ru/",
+    "_code_oo": 238153,
+    "specialization": [
+      "Технологический",
+      "Социально-экономический",
+      "Гуманитарный",
+      "Eстественно-научный",
+      "Универсальный"
+    ],
+    "EGE": "68,3% - средний балл на ЕГЭ в 2026 году по школе",
+    "VUZ": "98,8% - выпускников, поступивших в ВУЗы в 2026 году",
+    "Olympiads": [],
+    "Medals": [
+      "19 - выпускников награждены федеральной медалью «За особые успехи в учении» I и II степени в 2026 году"
+    ],
+    "other_results": [
+      "1 - ученик сдал 2 экзамена (химия, биология) на 100 баллов по результатам сдачи ГИА в 2026 году",
+      "1 - выпускница награждена Почетным знаком Губернатора Саратовской области в 2026 году"
+    ],
+    "results_kpi_raw": [
+      "1 - ученик сдал 2 экзамена (химия, биология) на 100 баллов по результатам сдачи ГИА в 2026 году",
+      "1 - выпускница награждена Почетным знаком Губернатора Саратовской области в 2026 году",
+      "19 - выпускников награждены федеральной медалью «За особые успехи в учении» I и II степени в 2026 году",
+      "68,3% - средний балл на ЕГЭ в 2026 году по школе",
+      "98,8% - выпускников, поступивших в ВУЗы в 2026 году"
+    ],
+    "infrastructure": "https://engschool33.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": "68,3% - средний балл на ЕГЭ в 2026 году по школе",
+    "VUZ_2026": "98,8% - выпускников, поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": null,
+    "Medals_2026": [
+      "19 - выпускников награждены федеральной медалью «За особые успехи в учении» I и II степени в 2026 году"
+    ],
+    "other_results_2026": [
+      "1 - ученик сдал 2 экзамена (химия, биология) на 100 баллов по результатам сдачи ГИА в 2026 году",
+      "1 - выпускница награждена Почетным знаком Губернатора Саратовской области в 2026 году"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-31T11:30:12.645557+00:00"
+  },
+  {
+    "id": 9102,
+    "name_2gis": "МАОУ «СОШ № 7»",
+    "short_name": "СОШ № 7",
+    "address": "413153, Саратовская область, м. район Энгельсский, с.п. Терновское, с. Узморье, улица Революционная, зд. 9",
+    "building_type": "Основное здание",
+    "area_sqm": 1139.8,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "смеш",
+    "year_built": 1980,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.509919,
+    "longitude": 45.987625,
+    "cadastral_number": "64:48:000000:15467",
+    "rating_2gis": null,
+    "rating_yandex": 4.7,
+    "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+    "link_2gis": null,
+    "reviews_link_2gis": null,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.987625,
+        51.509919
+      ]
+    },
+    "link_gosuslugi": "https://shkola7engels-r64.gosweb.gosuslugi.ru/",
+    "_code_oo": 238323,
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "3 - Выпускника в 2026 году"
+    ],
+    "results_kpi_raw": [
+      "3 - Выпускника в 2026 году"
+    ],
+    "infrastructure": "https://shkola7engels-r64.gosweb.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "3 - Выпускника в 2026 году"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-31T11:30:20.962050+00:00"
+  },
+  {
+    "id": 9103,
+    "name_2gis": "МОУ «СОШ № 9»",
+    "short_name": "СОШ № 9",
+    "address": "413100, Саратовская область, г. Энгельс, ул. Телеграфная, д. 88",
+    "building_type": "Основное здание",
+    "area_sqm": 1139.8,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "смеш",
+    "year_built": 1980,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.509919,
+    "longitude": 45.987625,
+    "cadastral_number": "64:48:000000:15467",
+    "rating_2gis": null,
+    "rating_yandex": 4.7,
+    "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+    "link_2gis": null,
+    "reviews_link_2gis": null,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.987625,
+        51.509919
+      ]
+    },
+    "link_gosuslugi": "https://shkola9engels-r64.gosweb.gosuslugi.ru/",
+    "_code_oo": 238403,
+    "specialization": [
+      "Технологический (инженерный) профиль",
+      "Социально-экономический",
+      "Естественно-научный"
+    ],
+    "EGE": "63 - Средний балл на ЕГЭ в 2025 году",
+    "VUZ": "100% - Выпускников поступивших в ВУЗы в 2025 году",
+    "Olympiads": [
+      "2 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals": [
+      "4 - Выпускник с золотой медалью за 2025 год"
+    ],
+    "other_results": [
+      "Телефон - 8 (8453) 74-50-56",
+      "6 - почетных работников",
+      "2 - кандидата наук",
+      "17 - учителей высшей категории",
+      "3 - отличника просвещения",
+      "26 - учителей первой категории",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_kpi_raw": [
+      "2 - Призеров Всероссийской олимпиады за 3 года",
+      "4 - Выпускник с золотой медалью за 2025 год",
+      "63 - Средний балл на ЕГЭ в 2025 году",
+      "100% - Выпускников поступивших в ВУЗы в 2025 году",
+      "Телефон - 8 (8453) 74-50-56",
+      "6 - почетных работников",
+      "2 - кандидата наук",
+      "17 - учителей высшей категории",
+      "3 - отличника просвещения",
+      "26 - учителей первой категории",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "infrastructure": "https://shkola9engels-r64.gosweb.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "2 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": [
+      "Телефон - 8 (8453) 74-50-56",
+      "6 - почетных работников",
+      "2 - кандидата наук",
+      "17 - учителей высшей категории",
+      "3 - отличника просвещения",
+      "26 - учителей первой категории",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-31T11:30:32.138573+00:00"
+  },
+  {
+    "id": 9104,
+    "name_2gis": "МОУ «СОШ № 19 им. И.П. Кузнецова»",
+    "short_name": "СОШ № 19 им. И.П. Кузнецова",
+    "address": "413124, Саратовская обл., г. Энгельс, ул. Студенческая, д. 26А",
+    "building_type": "Основное здание",
+    "area_sqm": 1139.8,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "смеш",
+    "year_built": 1980,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.509919,
+    "longitude": 45.987625,
+    "cadastral_number": "64:48:000000:15467",
+    "rating_2gis": null,
+    "rating_yandex": 4.7,
+    "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+    "link_2gis": null,
+    "reviews_link_2gis": null,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.987625,
+        51.509919
+      ]
+    },
+    "link_gosuslugi": "https://shkola19engels-r64.gosweb.gosuslugi.ru/   ",
+    "_code_oo": 238083,
+    "EGE": "56,5 - Средний балл на ЕГЭ в 2021 году",
+    "VUZ": "68% - Выпускников поступивших в ВУЗы в 2022 году",
+    "Olympiads": [
+      "5 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals": [
+      "5 - Выпускников с золотой медалью за 2022 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "5 - Призеров Всероссийской олимпиады за 3 года",
+      "5 - Выпускников с золотой медалью за 2022 год",
+      "56,5 - Средний балл на ЕГЭ в 2021 году",
+      "68% - Выпускников поступивших в ВУЗы в 2022 году"
+    ],
+    "infrastructure": "https://shkola19engels-r64.gosweb.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "5 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-31T11:30:43.809686+00:00"
+  },
+  {
+    "id": 9105,
+    "name_2gis": "МОУ «СОШ № 18 им. А.А. Мыльникова»",
+    "short_name": "СОШ № 18 им. А.А. Мыльникова",
+    "address": "413116, Саратовская обл., г. Энгельс, пр-д Функциональный, д. 8",
+    "building_type": "Основное здание",
+    "area_sqm": 1139.8,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "смеш",
+    "year_built": 1980,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.509919,
+    "longitude": 45.987625,
+    "cadastral_number": "64:48:000000:15467",
+    "rating_2gis": null,
+    "rating_yandex": 4.7,
+    "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+    "link_2gis": null,
+    "reviews_link_2gis": null,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.987625,
+        51.509919
+      ]
+    },
+    "link_gosuslugi": "https://shkola18engels-r64.gosweb.gosuslugi.ru/",
+    "_code_oo": 238028,
+    "specialization": [
+      "Естественнонаучный",
+      "Технологический",
+      "Социально-экономический"
+    ],
+    "EGE": "60,85 - Средний балл на ЕГЭ в 2025 году",
+    "VUZ": "93,3% - Выпускников поступивших в ВУЗы в 2025 году",
+    "Olympiads": [],
+    "Medals": [
+      "4 - Выпускников с золотой медалью за 2025 год",
+      "6 - Выпускников с серебряной медалью за 2025 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "4 - Выпускников с золотой медалью за 2025 год",
+      "60,85 - Средний балл на ЕГЭ в 2025 году",
+      "93,3% - Выпускников поступивших в ВУЗы в 2025 году",
+      "6 - Выпускников с серебряной медалью за 2025 год"
+    ],
+    "infrastructure": "https://shkola18engels-r64.gosweb.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-31T11:30:57.089759+00:00"
+  },
+  {
+    "id": 9106,
+    "name_2gis": "МОУ «СОШ № 3»",
+    "short_name": "СОШ № 3",
+    "address": "413116, Саратовская обл., г. Энгельс, ул. Менделеева, д. 7",
+    "building_type": "Основное здание",
+    "area_sqm": 1139.8,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "смеш",
+    "year_built": 1980,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.509919,
+    "longitude": 45.987625,
+    "cadastral_number": "64:48:000000:15467",
+    "rating_2gis": null,
+    "rating_yandex": 4.7,
+    "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+    "link_2gis": null,
+    "reviews_link_2gis": null,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.987625,
+        51.509919
+      ]
+    },
+    "link_gosuslugi": "https://engschool3.gosuslugi.ru",
+    "_code_oo": 238363,
+    "specialization": [
+      "Универсальный профиль"
+    ],
+    "EGE": "38 - Средний балл на ЕГЭ",
+    "VUZ": "27% - Выпускников поступивших в ВУЗы",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "7 - Победителей региональных конкурсов",
+      "72 - Победителей муниципальных конкурсов",
+      "12 - Победителей всероссийских конкурсов",
+      "900 - Учебных мест в школе"
+    ],
+    "results_kpi_raw": [
+      "7 - Победителей региональных конкурсов",
+      "72 - Победителей муниципальных конкурсов",
+      "38 - Средний балл на ЕГЭ",
+      "27% - Выпускников поступивших в ВУЗы",
+      "12 - Победителей всероссийских конкурсов",
+      "900 - Учебных мест в школе"
+    ],
+    "infrastructure": "https://engschool3.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": "38 - Средний балл на ЕГЭ",
+    "VUZ_2026": "27% - Выпускников поступивших в ВУЗы",
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "7 - Победителей региональных конкурсов",
+      "72 - Победителей муниципальных конкурсов",
+      "12 - Победителей всероссийских конкурсов",
+      "900 - Учебных мест в школе"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-31T11:31:08.975759+00:00"
+  },
+  {
+    "id": 9107,
+    "name_2gis": "МОУ «СОШ № 26»",
+    "short_name": "СОШ № 26",
+    "address": "413118, Саратовская обл., г. Энгельс, ул. Маяковского, д. 167",
+    "building_type": "Основное здание",
+    "area_sqm": 1139.8,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "смеш",
+    "year_built": 1980,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.509919,
+    "longitude": 45.987625,
+    "cadastral_number": "64:48:000000:15467",
+    "rating_2gis": null,
+    "rating_yandex": 4.7,
+    "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+    "link_2gis": null,
+    "reviews_link_2gis": null,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.987625,
+        51.509919
+      ]
+    },
+    "link_gosuslugi": "https://shkola26engels-r64.gosweb.gosuslugi.ru/",
+    "_code_oo": 238383,
+    "VUZ": "0% - Выпускников поступивших в ВУЗы в 2022 году",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [
+      "0% - Выпускников поступивших в ВУЗы в 2022 году"
+    ],
+    "infrastructure": "https://shkola26engels-r64.gosweb.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-31T11:31:19.568941+00:00"
+  },
+  {
+    "id": 9108,
+    "name_2gis": "МОУ «СОШ № 12им. В.Ф. Суханова»",
+    "short_name": "СОШ № 12им. В.Ф. Суханова",
+    "address": "413100, Саратовская обл., г. Энгельс, ул. Пушкина, д. 1а",
+    "building_type": "Основное здание",
+    "area_sqm": 1139.8,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "смеш",
+    "year_built": 1980,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.509919,
+    "longitude": 45.987625,
+    "cadastral_number": "64:48:000000:15467",
+    "rating_2gis": null,
+    "rating_yandex": 4.7,
+    "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+    "link_2gis": null,
+    "reviews_link_2gis": null,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.987625,
+        51.509919
+      ]
+    },
+    "link_gosuslugi": "http://shkola12engels-r64.gosweb.gosuslugi.ru/",
+    "_code_oo": 238053,
+    "specialization": [
+      "Гуманитарный профиль",
+      "Технологический (информационно-технологический) профиль",
+      "Агротехнический, естественно-научный профиль"
+    ],
+    "EGE": "60,3 - Средний балл на ЕГЭ в 2025 году",
+    "VUZ": "90,6% - Выпускников поступивших в ВУЗы в 2025 году",
+    "Olympiads": [
+      "53 - Победителей и призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals": [
+      "6 - Выпускников с медалью \"За особые успехи в учении I степени\" 2025 год"
+    ],
+    "other_results": [
+      "91 - Высший балл ЕГЭ по русскому языку в 2025 году",
+      "88 - Высший балл ЕГЭ по английскому языку в 2025 году",
+      "100 - Высший балл ЕГЭ по физике в 2025 году",
+      "Телефон - 8 (8453) 56-94-36",
+      "9 - Почетные работники общего образования",
+      "1 - кандидатов педагогических наук",
+      "26 - учителей высшей категории",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_kpi_raw": [
+      "53 - Победителей и призеров Всероссийской олимпиады за 3 года",
+      "6 - Выпускников с медалью \"За особые успехи в учении I степени\" 2025 год",
+      "60,3 - Средний балл на ЕГЭ в 2025 году",
+      "90,6% - Выпускников поступивших в ВУЗы в 2025 году",
+      "91 - Высший балл ЕГЭ по русскому языку в 2025 году",
+      "88 - Высший балл ЕГЭ по английскому языку в 2025 году",
+      "100 - Высший балл ЕГЭ по физике в 2025 году",
+      "Телефон - 8 (8453) 56-94-36",
+      "9 - Почетные работники общего образования",
+      "1 - кандидатов педагогических наук",
+      "26 - учителей высшей категории",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "infrastructure": "https://shkola12engels-r64.gosweb.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "53 - Победителей и призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": [
+      "Телефон - 8 (8453) 56-94-36",
+      "9 - Почетные работники общего образования",
+      "1 - кандидатов педагогических наук",
+      "26 - учителей высшей категории",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-31T11:31:32.515431+00:00",
+    "EGE_prev": "100 - Высший балл ЕГЭ по физике в 2025 году",
+    "EGE_history": [
+      "100 - Высший балл ЕГЭ по физике в 2025 году"
+    ],
+    "other_results_prev": [
+      "Телефон - 8 (8453) 56-94-36",
+      "9 - Почетные работники общего образования",
+      "1 - кандидатов педагогических наук",
+      "26 - учителей высшей категории",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "other_results_history": [
+      [
+        "Телефон - 8 (8453) 56-94-36",
+        "9 - Почетные работники общего образования",
+        "1 - кандидатов педагогических наук",
+        "26 - учителей высшей категории",
+        "Записать ребенка в школу - Получить электронную услугу",
+        "Правила приема в школу - Информация и условия для поступления в школу"
+      ]
+    ]
+  },
+  {
+    "id": 9109,
+    "name_2gis": "МОУ «СОШ № 31»",
+    "short_name": "СОШ № 31",
+    "address": "413123, Российская Федерация, Саратовская область, Энгельсский муниципальный район, р. п. Приволжский, улица Гагарина, дом 65а",
+    "building_type": "Основное здание",
+    "area_sqm": 1139.8,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "смеш",
+    "year_built": 1980,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.509919,
+    "longitude": 45.987625,
+    "cadastral_number": "64:48:000000:15467",
+    "rating_2gis": null,
+    "rating_yandex": 4.7,
+    "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+    "link_2gis": null,
+    "reviews_link_2gis": null,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.987625,
+        51.509919
+      ]
+    },
+    "link_gosuslugi": "https://shkola31privolzhskij-r64.gosweb.gosuslugi.ru/",
+    "_code_oo": 238133,
+    "EGE": "64 - Средний балл на ЕГЭ в 2025 году",
+    "VUZ": "85% - Выпускников поступивших в ВУЗы в 2025 году",
+    "Olympiads": [
+      "142 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals": [
+      "5 - Выпускников с золотой медалью за 2025 год"
+    ],
+    "other_results": [
+      "143 - Обучающихся выполнили нормативы ВФСК ГТО на знаки отличия"
+    ],
+    "results_kpi_raw": [
+      "142 - Призеров Всероссийской олимпиады за 3 года",
+      "5 - Выпускников с золотой медалью за 2025 год",
+      "64 - Средний балл на ЕГЭ в 2025 году",
+      "85% - Выпускников поступивших в ВУЗы в 2025 году",
+      "143 - Обучающихся выполнили нормативы ВФСК ГТО на знаки отличия"
+    ],
+    "infrastructure": "https://shkola31privolzhskij-r64.gosweb.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "142 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": [
+      "143 - Обучающихся выполнили нормативы ВФСК ГТО на знаки отличия"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-31T11:31:43.803866+00:00"
+  },
+  {
+    "id": 9110,
+    "name_2gis": "МОУ «СОШ № 20 им. М.И. Кулькиной»",
+    "short_name": "СОШ № 20 им. М.И. Кулькиной",
+    "address": "413112, Саратовская обл., г. Энгельс, ул. Мира, д. 20",
+    "building_type": "Основное здание",
+    "area_sqm": 1139.8,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "смеш",
+    "year_built": 1980,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.509919,
+    "longitude": 45.987625,
+    "cadastral_number": "64:48:000000:15467",
+    "rating_2gis": null,
+    "rating_yandex": 4.7,
+    "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+    "link_2gis": null,
+    "reviews_link_2gis": null,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.987625,
+        51.509919
+      ]
+    },
+    "link_gosuslugi": "https://shkola20engels-r64.gosweb.gosuslugi.ru/",
+    "_code_oo": 238093,
+    "specialization": [
+      "Технологический",
+      "Социально-экономический",
+      "Универсальный"
+    ],
+    "EGE": "63,6 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "86% - Выпускников поступивших в ВУЗы в 2025 году",
+    "Olympiads": [
+      "22 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals": [
+      "1 - Выпускников с медалью II степени за 2026 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "22 - Призеров Всероссийской олимпиады за 3 года",
+      "1 - Выпускников с медалью II степени за 2026 год",
+      "63,6 - Средний балл на ЕГЭ в 2026 году",
+      "86% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "EGE_2026": "63,6 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "22 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": [
+      "1 - Выпускников с медалью II степени за 2026 год"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-31T11:31:54.739235+00:00"
+  },
+  {
+    "id": 9111,
+    "name_2gis": "МАОУ «СОШ № 29 им. А.И. Михеля»",
+    "short_name": "СОШ № 29 им. А.И. Михеля",
+    "address": "413105, Саратовская обл., г. Энгельс, 1-й микрорайон, д. 13 Б",
+    "building_type": "Основное здание",
+    "area_sqm": 1139.8,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "смеш",
+    "year_built": 1980,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.509919,
+    "longitude": 45.987625,
+    "cadastral_number": "64:48:000000:15467",
+    "rating_2gis": null,
+    "rating_yandex": 4.7,
+    "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+    "link_2gis": null,
+    "reviews_link_2gis": null,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.987625,
+        51.509919
+      ]
+    },
+    "link_gosuslugi": "https://shkola29engels-r64.gosweb.gosuslugi.ru/",
+    "_code_oo": 238373,
+    "VUZ": "75% - Выпускников поступивших в ВУЗы в 2026 году",
+    "EGE": "41,1% - Средний балл на ЕГЭ в 2026 году",
+    "Olympiads": [
+      "511 - Победители и призеры Всероссийской олимпиады школьников за 2 года на школьном и муниципальном уровне"
+    ],
+    "Medals": [],
+    "other_results": [
+      "3 - Выпускника в 2026 г получили аттестат особого образца ООО"
+    ],
+    "results_kpi_raw": [
+      "511 - Победители и призеры Всероссийской олимпиады школьников за 2 года на школьном и муниципальном уровне",
+      "3 - Выпускника в 2026 г получили аттестат особого образца ООО",
+      "75% - Выпускников поступивших в ВУЗы в 2026 году",
+      "41,1% - Средний балл на ЕГЭ в 2026 году"
+    ],
+    "infrastructure": "https://shkola29engels-r64.gosweb.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": "41,1% - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "75% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "511 - Победители и призеры Всероссийской олимпиады школьников за 2 года на школьном и муниципальном уровне"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": [
+      "3 - Выпускника в 2026 г получили аттестат особого образца ООО"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-31T11:32:05.266818+00:00"
+  },
+  {
+    "id": 9112,
+    "name_2gis": "МОУ «СОШ № 5 имени В Хомяковой»",
+    "short_name": "СОШ № 5 имени В Хомяковой",
+    "address": "413116, Саратовская обл., г. Энгельс, ул. Менделеева, д. 3а",
+    "building_type": "Основное здание",
+    "area_sqm": 1139.8,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "смеш",
+    "year_built": 1980,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.509919,
+    "longitude": 45.987625,
+    "cadastral_number": "64:48:000000:15467",
+    "rating_2gis": null,
+    "rating_yandex": 4.7,
+    "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+    "link_2gis": null,
+    "reviews_link_2gis": null,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.987625,
+        51.509919
+      ]
+    },
+    "link_gosuslugi": "https://engschool5.gosuslugi.ru",
+    "_code_oo": 238033,
+    "specialization": [
+      "Универсальный профиль",
+      "Технологический профиль"
+    ],
+    "EGE": "46,3 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "77,1% - Выпускников поступивших в ВУЗы в 2025 году",
+    "Olympiads": [
+      "41 - Призёры и победители Всероссийской олимпиады за 3 года (Муниципальный этап)",
+      "2 - Призёра Всероссийской олимпиады за 3 года (Региональный этап)"
+    ],
+    "Medals": [
+      "2 - Выпускника с медалью I степени за 2026 год",
+      "3 - Выпускник с медалью II степени за 2026 год"
+    ],
+    "other_results": [
+      "1 - Получивший 100 балов по итогам ГИА"
+    ],
+    "results_kpi_raw": [
+      "41 - Призёры и победители Всероссийской олимпиады за 3 года (Муниципальный этап)",
+      "2 - Выпускника с медалью I степени за 2026 год",
+      "46,3 - Средний балл на ЕГЭ в 2026 году",
+      "77,1% - Выпускников поступивших в ВУЗы в 2025 году",
+      "2 - Призёра Всероссийской олимпиады за 3 года (Региональный этап)",
+      "3 - Выпускник с медалью II степени за 2026 год",
+      "1 - Получивший 100 балов по итогам ГИА"
+    ],
+    "infrastructure": "https://engschool5.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": "46,3 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "41 - Призёры и победители Всероссийской олимпиады за 3 года (Муниципальный этап)",
+      "2 - Призёра Всероссийской олимпиады за 3 года (Региональный этап)"
+    ],
+    "Medals_2026": [
+      "2 - Выпускника с медалью I степени за 2026 год",
+      "3 - Выпускник с медалью II степени за 2026 год"
+    ],
+    "other_results_2026": [
+      "1 - Получивший 100 балов по итогам ГИА"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-31T11:32:15.636017+00:00"
+  },
+  {
+    "id": 9113,
+    "name_2gis": "МОУ «СОШ № 30 им. П.М. Коваленко»",
+    "short_name": "СОШ № 30 им. П.М. Коваленко",
+    "address": "413125, Саратовская обл., г. Энгельс, ул. Колотилова, соор. 82",
+    "building_type": "Основное здание",
+    "area_sqm": 1139.8,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "смеш",
+    "year_built": 1980,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.509919,
+    "longitude": 45.987625,
+    "cadastral_number": "64:48:000000:15467",
+    "rating_2gis": null,
+    "rating_yandex": 4.7,
+    "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+    "link_2gis": null,
+    "reviews_link_2gis": null,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.987625,
+        51.509919
+      ]
+    },
+    "link_gosuslugi": "https://engschool30.gosuslugi.ru",
+    "_code_oo": 238027,
+    "specialization": [
+      "Технологический профиль",
+      "Естественно-научный профиль",
+      "Социально-экономический профиль"
+    ],
+    "EGE": "57,93 - Средний балл ЕГЭ в 2026 году",
+    "VUZ": "71% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads": [],
+    "Medals": [
+      "7 - Выпускников награждены медалью \"За особые успехи в учении\" в 2026 году"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "7 - Выпускников награждены медалью \"За особые успехи в учении\" в 2026 году",
+      "57,93 - Средний балл ЕГЭ в 2026 году",
+      "71% - Выпускников поступивших в ВУЗы в 2026 году"
+    ],
+    "infrastructure": "https://engschool30.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": "57,93 - Средний балл ЕГЭ в 2026 году",
+    "VUZ_2026": "71% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": null,
+    "Medals_2026": [
+      "7 - Выпускников награждены медалью \"За особые успехи в учении\" в 2026 году"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-31T11:32:31.567910+00:00"
+  },
+  {
+    "id": 9114,
+    "name_2gis": "МОУ «СОШ № 32 имени А.С. Пушкина»",
+    "short_name": "СОШ № 32 имени А.С. Пушкина",
+    "address": "413111, Саратовская обл., г. Энгельс, ул. Минская, д. 29",
+    "building_type": "Основное здание",
+    "area_sqm": 1139.8,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "смеш",
+    "year_built": 1980,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.509919,
+    "longitude": 45.987625,
+    "cadastral_number": "64:48:000000:15467",
+    "rating_2gis": null,
+    "rating_yandex": 4.7,
+    "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+    "link_2gis": null,
+    "reviews_link_2gis": null,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.987625,
+        51.509919
+      ]
+    },
+    "link_gosuslugi": "https://shkola32engels-r64.gosweb.gosuslugi.ru/",
+    "_code_oo": 238047,
+    "EGE": "59,29 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "97% - Выпускников поступили в ВУЗы в 2026 году",
+    "Olympiads": [],
+    "Medals": [
+      "20 - Выпускника награждены Федеральной медалью «За особые успехи в учении I и II степени\" в 2026 году"
+    ],
+    "other_results": [
+      "109 - Победителей и призеров муниципального этапа ВСОШ за 3 года"
+    ],
+    "results_kpi_raw": [
+      "109 - Победителей и призеров муниципального этапа ВСОШ за 3 года",
+      "20 - Выпускника награждены Федеральной медалью «За особые успехи в учении I и II степени\" в 2026 году",
+      "59,29 - Средний балл на ЕГЭ в 2026 году",
+      "97% - Выпускников поступили в ВУЗы в 2026 году"
+    ],
+    "infrastructure": "https://shkola32engels-r64.gosweb.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": "59,29 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "97% - Выпускников поступили в ВУЗы в 2026 году",
+    "Olympiads_2026": null,
+    "Medals_2026": [
+      "20 - Выпускника награждены Федеральной медалью «За особые успехи в учении I и II степени\" в 2026 году"
+    ],
+    "other_results_2026": [
+      "109 - Победителей и призеров муниципального этапа ВСОШ за 3 года"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-31T11:32:40.525739+00:00"
+  },
+  {
+    "id": 9115,
+    "name_2gis": "МОУ «СОШ № 16»",
+    "short_name": "СОШ № 16",
+    "address": "413105, Саратовская обл., г. Энгельс, ул. Одесская, д. 34",
+    "building_type": "Основное здание",
+    "area_sqm": 1139.8,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "смеш",
+    "year_built": 1980,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.509919,
+    "longitude": 45.987625,
+    "cadastral_number": "64:48:000000:15467",
+    "rating_2gis": null,
+    "rating_yandex": 4.7,
+    "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+    "link_2gis": null,
+    "reviews_link_2gis": null,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.987625,
+        51.509919
+      ]
+    },
+    "link_gosuslugi": "https://engschool16.gosuslugi.ru/",
+    "_code_oo": 238063,
+    "specialization": [
+      "Универсальный"
+    ],
+    "EGE": "61 - Средний балл на ЕГЭ в 2025 году",
+    "VUZ": "74% - Выпускников поступивших в ВУЗы в 2025 году",
+    "Olympiads": [
+      "316 - Призеров и победителей Всероссийской олимпиады за 3 года"
+    ],
+    "Medals": [
+      "1 - Выпускник с золотой медалью за 2025 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "316 - Призеров и победителей Всероссийской олимпиады за 3 года",
+      "1 - Выпускник с золотой медалью за 2025 год",
+      "61 - Средний балл на ЕГЭ в 2025 году",
+      "74% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "infrastructure": "https://engschool16.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "316 - Призеров и победителей Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-31T11:33:27.106038+00:00"
+  },
+  {
+    "id": 9116,
+    "name_2gis": "МОУ «СОШ № 2 им. Димитрия Донского»",
+    "short_name": "СОШ № 2 им. Димитрия Донского",
+    "address": "413100, Саратовская обл., г. Энгельс, ул. Свердлова, д. 122",
+    "building_type": "Основное здание",
+    "area_sqm": 1139.8,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "смеш",
+    "year_built": 1980,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.509919,
+    "longitude": 45.987625,
+    "cadastral_number": "64:48:000000:15467",
+    "rating_2gis": null,
+    "rating_yandex": 4.7,
+    "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+    "link_2gis": null,
+    "reviews_link_2gis": null,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.987625,
+        51.509919
+      ]
+    },
+    "link_gosuslugi": "https://shkola2engels-r64.gosweb.gosuslugi.ru/",
+    "_code_oo": 238393,
+    "specialization": [
+      "Универсальный профиль"
+    ],
+    "EGE": "48 - Средний балл по ЕГЭ в 2025-2026 учебном году",
+    "Olympiads": [],
+    "Medals": [
+      "1 - Серебряный медалист - Пятакова Вероника в 2026 году"
+    ],
+    "other_results": [
+      "44 % - Качество знаний за 2025-2026 учебный год",
+      "99 % - Успеваемость за 2025-2026 учебный год",
+      "95% - Выпускников поступивших в 10 классы и СУЗы в 2026 году"
+    ],
+    "results_kpi_raw": [
+      "1 - Серебряный медалист - Пятакова Вероника в 2026 году",
+      "44 % - Качество знаний за 2025-2026 учебный год",
+      "99 % - Успеваемость за 2025-2026 учебный год",
+      "95% - Выпускников поступивших в 10 классы и СУЗы в 2026 году",
+      "48 - Средний балл по ЕГЭ в 2025-2026 учебном году"
+    ],
+    "infrastructure": "https://shkola2engels-r64.gosweb.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": "48 - Средний балл по ЕГЭ в 2025-2026 учебном году",
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": [
+      "1 - Серебряный медалист - Пятакова Вероника в 2026 году"
+    ],
+    "other_results_2026": [
+      "44 % - Качество знаний за 2025-2026 учебный год",
+      "99 % - Успеваемость за 2025-2026 учебный год",
+      "95% - Выпускников поступивших в 10 классы и СУЗы в 2026 году"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-31T11:33:39.502718+00:00"
+  },
+  {
+    "id": 9117,
+    "name_2gis": "ГБОУ СО «Школа АОП № 17 г.Энгельса»",
+    "short_name": "Школа АОП № 17 г.Энгельса",
+    "address": "413115 Саратовская область, г.Энгельс, ул. Рабочая 109А",
+    "building_type": "Основное здание",
+    "area_sqm": 1139.8,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "смеш",
+    "year_built": 1980,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.509919,
+    "longitude": 45.987625,
+    "cadastral_number": "64:48:000000:15467",
+    "rating_2gis": null,
+    "rating_yandex": 4.7,
+    "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+    "link_2gis": null,
+    "reviews_link_2gis": null,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.987625,
+        51.509919
+      ]
+    },
+    "link_gosuslugi": "https://sh64-engels-r64.gosweb.gosuslugi.ru",
+    "_code_oo": 249188,
+    "Olympiads": [
+      "15 - Победителей Региональной очной предметной олимпиады"
+    ],
+    "Medals": [],
+    "other_results": [
+      "21 - Победителей Всероссийских творческих конкурсов",
+      "2 - Победителей муниципального фестиваля ВФСК \"ГТО\"",
+      "6 - Победителей районной Спартакиады",
+      "5 - Победителей муниципального фестиваля «Калейдоскоп талантов»",
+      "Телефон - 8(8453)55-60-67",
+      "1 - Заслуженный учитель РФ",
+      "6 - Почетных работников общего образования",
+      "14 - Учителей высшей категории",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_kpi_raw": [
+      "15 - Победителей Региональной очной предметной олимпиады",
+      "21 - Победителей Всероссийских творческих конкурсов",
+      "2 - Победителей муниципального фестиваля ВФСК \"ГТО\"",
+      "6 - Победителей районной Спартакиады",
+      "5 - Победителей муниципального фестиваля «Калейдоскоп талантов»",
+      "Телефон - 8(8453)55-60-67",
+      "1 - Заслуженный учитель РФ",
+      "6 - Почетных работников общего образования",
+      "14 - Учителей высшей категории",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "infrastructure": "https://sh64-engels-r64.gosweb.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "15 - Победителей Региональной очной предметной олимпиады"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": [
+      "21 - Победителей Всероссийских творческих конкурсов",
+      "2 - Победителей муниципального фестиваля ВФСК \"ГТО\"",
+      "6 - Победителей районной Спартакиады",
+      "5 - Победителей муниципального фестиваля «Калейдоскоп талантов»",
+      "Телефон - 8(8453)55-60-67",
+      "1 - Заслуженный учитель РФ",
+      "6 - Почетных работников общего образования",
+      "14 - Учителей высшей категории",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-31T11:33:50.485792+00:00"
+  },
+  {
+    "id": 9118,
+    "name_2gis": "ГАОУ СО «Центр образования «Родник знаний»",
+    "short_name": "Родник знаний",
+    "address": "413100 Саратовская область, г. Энгельс, площадь Свободы, д. 11",
+    "building_type": "Основное здание",
+    "area_sqm": 1139.8,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "смеш",
+    "year_built": 1980,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.509919,
+    "longitude": 45.987625,
+    "cadastral_number": "64:48:000000:15467",
+    "rating_2gis": null,
+    "rating_yandex": 4.7,
+    "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+    "link_2gis": null,
+    "reviews_link_2gis": null,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.987625,
+        51.509919
+      ]
+    },
+    "link_gosuslugi": "https://rz-164.gosuslugi.ru/",
+    "_code_oo": 249044,
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "Наши выпускники поступили в: - ГАПОУ СО «Энгельсский политехникум», ГАПОУ СО «СКИПО для инвалидов и лиц с ОВЗ», ФКПОУ «Межрегиональный центр(колледж)» Минтруда России, г. Санкт- Петербург, г. Павловск , Волгоградский профессиональный техникум кадровых ресурсов, Пензенский базовый мед.",
+      "26 - Продолжают учебу по специальности с 2023-2025 гг",
+      "21 - Трудоустройство учащихся с 2023-2025 гг",
+      "41% - Выпускников поступивших в колледжи в 2025 году",
+      "55 - Количество выпускников с 2023-2025 гг",
+      "Телефон - 8 (8453) 56-84-10",
+      "85 - Педагогов высшей категории",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_kpi_raw": [
+      "Наши выпускники поступили в: - ГАПОУ СО «Энгельсский политехникум», ГАПОУ СО «СКИПО для инвалидов и лиц с ОВЗ», ФКПОУ «Межрегиональный центр(колледж)» Минтруда России, г. Санкт- Петербург, г. Павловск , Волгоградский профессиональный техникум кадровых ресурсов, Пензенский базовый мед.",
+      "26 - Продолжают учебу по специальности с 2023-2025 гг",
+      "21 - Трудоустройство учащихся с 2023-2025 гг",
+      "41% - Выпускников поступивших в колледжи в 2025 году",
+      "55 - Количество выпускников с 2023-2025 гг",
+      "Телефон - 8 (8453) 56-84-10",
+      "85 - Педагогов высшей категории",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "infrastructure": "https://rz-164.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "Наши выпускники поступили в: - ГАПОУ СО «Энгельсский политехникум», ГАПОУ СО «СКИПО для инвалидов и лиц с ОВЗ», ФКПОУ «Межрегиональный центр(колледж)» Минтруда России, г. Санкт- Петербург, г. Павловск , Волгоградский профессиональный техникум кадровых ресурсов, Пензенский базовый мед.",
+      "Телефон - 8 (8453) 56-84-10",
+      "85 - Педагогов высшей категории",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-31T11:34:03.068642+00:00"
+  },
+  {
+    "id": 9119,
+    "name_2gis": "ГАОУ СО «Гимназия № 8»",
+    "short_name": "Гимназия № 8",
+    "address": "Российская Федерация, 413111, Саратовская обл., г. Энгельс, ул. Ленинградская, д. 30",
+    "building_type": "Основное здание",
+    "area_sqm": 1139.8,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "смеш",
+    "year_built": 1980,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.509919,
+    "longitude": 45.987625,
+    "cadastral_number": "64:48:000000:15467",
+    "rating_2gis": null,
+    "rating_yandex": 4.7,
+    "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+    "link_2gis": null,
+    "reviews_link_2gis": null,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.987625,
+        51.509919
+      ]
+    },
+    "link_gosuslugi": "https://enggimn8.gosuslugi.ru/",
+    "_code_oo": 251015,
+    "specialization": [
+      "Гуманитарный",
+      "Технологический",
+      "Естественно-научный",
+      "Социально-экономический"
+    ],
+    "EGE": "66,69 - средний балл на ЕГЭ в 2026 году",
+    "VUZ": "97,3% - выпускников 2026 года поступили в ВУЗы РФ",
+    "Olympiads": [],
+    "Medals": [
+      "14 - (29,7%) выпускников 2026 года закончили гимназию с медалью I и II степени."
+    ],
+    "other_results": [
+      "5 - победителей и призеров регионального этапа ВсОШ в 2026 году"
+    ],
+    "results_kpi_raw": [
+      "5 - победителей и призеров регионального этапа ВсОШ в 2026 году",
+      "14 - (29,7%) выпускников 2026 года закончили гимназию с медалью I и II степени.",
+      "66,69 - средний балл на ЕГЭ в 2026 году",
+      "97,3% - выпускников 2026 года поступили в ВУЗы РФ"
+    ],
+    "infrastructure": "https://enggimn8.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": "66,69 - средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "97,3% - выпускников 2026 года поступили в ВУЗы РФ",
+    "Olympiads_2026": null,
+    "Medals_2026": [
+      "14 - (29,7%) выпускников 2026 года закончили гимназию с медалью I и II степени."
+    ],
+    "other_results_2026": [
+      "5 - победителей и призеров регионального этапа ВсОШ в 2026 году"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-31T11:34:13.332959+00:00"
+  }
+]

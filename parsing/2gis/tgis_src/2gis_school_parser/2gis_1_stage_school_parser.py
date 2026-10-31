@@ -63,7 +63,7 @@ class TwoGisSchoolParser:
         chrome_options.add_argument("--disable-blink-features=AutomationControlled")
         chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
         chrome_options.add_experimental_option('useAutomationExtension', False)
-        chrome_options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
+        chrome_options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.76 Safari/537.36")
         
         # Отключаем изображения для ускорения
         prefs = {
@@ -301,8 +301,11 @@ class TwoGisSchoolParser:
             return False
     
     def generate_page_url(self, page_num):
-        """Генерирует URL для страницы"""
-        base_url = "https://2gis.ru/saratov/search/Школы%20саратова"
+        """Генерирует URL для страницы. Город — через env GIS_CITY_SLUG/GIS_CITY_QUERY"""
+        import os
+        city_slug = os.environ.get("GIS_CITY_SLUG", "saratov")
+        query = os.environ.get("GIS_CITY_QUERY", "Школы саратова")
+        base_url = f"https://2gis.ru/{city_slug}/search/{urllib.parse.quote(query)}"
         
         if page_num == 1:
             # Первая страница без /page/
@@ -383,7 +386,7 @@ def main():
         all_schools = []
         
         # Проходим по всем страницам от 1 до 18
-        total_pages = 18
+        total_pages = int(os.environ.get("GIS_TOTAL_PAGES", "18"))
         for page in range(1, total_pages + 1):
             print(f"\n{'='*60}")
             print(f"Обработка страницы {page}/{total_pages}")

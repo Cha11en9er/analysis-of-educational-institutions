@@ -98,7 +98,7 @@ def build_driver(*, headed: bool = True) -> webdriver.Chrome:
     opts.add_argument("--lang=ru-RU")
     opts.add_argument(
         "--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-        "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        "(KHTML, like Gecko) Chrome/156.0.8078.76 Safari/537.36"
     )
     opts.add_argument("--disable-blink-features=AutomationControlled")
     opts.add_experimental_option("excludeSwitches", ["enable-automation"])
@@ -310,10 +310,14 @@ def extract_fields_from_dom(driver: webdriver.Chrome, url: str) -> dict[str, Any
             all_kpi_raw.append(line)
             low_desc = desc.lower()
 
-            if "вуз" in low_desc:
+            if "егэ" in low_desc and ("высший балл" in low_desc or "стобалльн" in low_desc):
+                # «Высший балл ЕГЭ по …», «сдал на 100 баллов» — не средний балл
+                other_results.append(line)
+            elif "вуз" in low_desc:
                 parsed["VUZ"] = line
             elif "егэ" in low_desc:
-                parsed["EGE"] = line
+                if "средний балл" in low_desc or "EGE" not in parsed:
+                    parsed["EGE"] = line  # средний балл приоритетнее прочих упоминаний ЕГЭ
             elif "олимпиад" in low_desc:
                 olympiads.append(line)
             elif "медал" in low_desc:
