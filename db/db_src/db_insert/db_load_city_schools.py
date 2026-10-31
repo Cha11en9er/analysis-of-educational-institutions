@@ -52,15 +52,32 @@ def main() -> None:
                     """
                     INSERT INTO sa.school (
                         school_id, name_ym, school_address, building_info,
-                        ownership, city, link_yandex, location
-                    ) VALUES (%s,%s,%s,%s,%s,%s,%s,ST_GeogFromText(%s))
+                        ownership, city, location
+                    ) VALUES (%s,%s,%s,%s,%s,%s,ST_GeogFromText(%s))
                     ON CONFLICT (school_id) DO UPDATE SET
                         name_ym=EXCLUDED.name_ym, school_address=EXCLUDED.school_address,
                         building_info=EXCLUDED.building_info, ownership=EXCLUDED.ownership,
-                        city=EXCLUDED.city, link_yandex=EXCLUDED.link_yandex,
-                        location=EXCLUDED.location, updated_at=CURRENT_TIMESTAMP
+                        city=EXCLUDED.city, location=EXCLUDED.location,
+                        updated_at=CURRENT_TIMESTAMP
                     """,
                     batch,
+                )
+                link_rows = [
+                    (b[0], b[5], b[6])  # school_id, link_yandex, site (gosuslugi)
+                    for b in batch
+                ]
+                execute_batch(
+                    cur,
+                    """
+                    INSERT INTO sa.link (
+                        school_id, link_yandex, link_gosuslugi
+                    ) VALUES (%s,%s,%s)
+                    ON CONFLICT (school_id) DO UPDATE SET
+                        link_yandex=EXCLUDED.link_yandex,
+                        link_gosuslugi=EXCLUDED.link_gosuslugi,
+                        updated_at=CURRENT_TIMESTAMP
+                    """,
+                    link_rows,
                 )
         print("Загрузка школ городов завершена.")
     finally:
