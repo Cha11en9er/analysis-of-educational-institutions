@@ -156,6 +156,15 @@ def main() -> None:
                 else:
                     fail += 1
                 time.sleep(0.12 if args.provider == "yandex" else 1.1)
+        with conn, conn.cursor() as cur:
+            cur.execute(
+                """
+                INSERT INTO sa.geocode_log (provider, requests, ok_count, ambiguous_count, fail_count)
+                VALUES (%s, %s, %s, %s, %s)
+                """,
+                (args.provider, done, ok, ambiguous, fail),
+            )
+            conn.commit()
     finally:
         conn.close()
     print(f"Итог: обработано {done} | ok {ok} | ambiguous {ambiguous} | fail {fail}")

@@ -37,7 +37,9 @@ import psycopg2.extras  # noqa: E402
 API = "https://geocode-maps.yandex.ru/1.x/"
 YANDEX_HEADERS = {"Referer": "https://uchgrad.ru/"}
 
-DAILY_LIMIT_CAP = 950  # жёсткий потолок за прогон (лимит Яндекса ~1000/сутки)
+DAILY_LIMIT_CAP = 850   # потолок за прогон с запасом (лимит Яндекса 1000/сутки)
+# Расхождение суток Яндекса и наших логов может стоить блокировки ключа —
+# поэтому бюджет всегда = min(--limit, CAP, 1000 - потрачено сегодня по sa.geocode_log).
 
 
 def normalize_query(city: str, district: str | None, street: str, house: str) -> str:
@@ -92,6 +94,16 @@ def main() -> None:
     done = ok = ambiguous = fail = 0
     try:
         with conn, conn.cursor(cursor_factory=psycopg2.extras.DictCursor) as cur:
+            cur.execute(
+                "SELECT COALESCE(SUM(requests), 0) FROM sa.geocode_log WHERE run_date = CURRENT_DATE"
+            )
+            spent_today = cur.fetchone()[0]
+            budget = max(0, min(limit, DAILY_LIMIT_CAP, 1000 - spent_today))
+            print(f"[daily] потрачено сегодня по журналу: {spent_today}/1000 -> бюджет пачки: {budget}")
+            if budget == 0:
+                print("[daily] дневной лимит исчерпан по журналу — выходим (ключ не трогаем)")
+                return
+
             if args.retry_failed:
                 cur.execute(
                     """
@@ -111,13 +123,13 @@ def main() -> None:
                 ORDER BY a.address_id
                 LIMIT %s
                 """,
-                (limit,),
+                (budget,),
             )
             rows = cur.fetchall()
-            print(f"[daily] к геокодированию в этой пачке: {len(rows)} (лимит {limit})")
+            print(f"[daily] к геокодированию в этой пачке: {len(rows)} (бюджет {budget})")
 
             for row in rows:
-                if done >= limit:
+                if done >= budget:
                     break
                 query = normalize_query(row["city"], row["district"], row["street_norm"], row["house_norm"])
                 try:
@@ -164,13 +176,13 @@ def main() -> None:
                 WHERE run_date = CURRENT_DATE
                 """
             )
-            spent_today = cur.fetchone()[0]
+            spent_after = cur.fetchone()[0]
     finally:
         conn.close()
 
     print(
         f"[daily] прогон: {done} (ok {ok} / ambiguous {ambiguous} / fail {fail}) | "
-        f"осталось pending: {pending_left} | потрачено сегодня: {spent_today}/1000"
+        f"осталось pending: {pending_left} | потрачено сегодня: {spent_after}/1000"
     )
 
 
