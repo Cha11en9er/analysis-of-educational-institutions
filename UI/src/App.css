@@ -1087,3 +1087,16 @@
 .inst-links { display: flex; flex-direction: column; gap: 4px; margin-top: 8px; font-size: 0.82rem; }
 .inst-links a { color: #1d4ed8; text-decoration: none; }
 .inst-item { color: #475569; }
+
+/* Селектор групп/города/владения в сайдбаре */
+.group-selector-section { margin-bottom: 0.9rem; }
+.group-selector, .ownership-selector { display: flex; flex-wrap: wrap; gap: 5px; }
+.group-btn {
+  font-size: 0.8rem; font-weight: 600; color: #475569;
+  background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 999px;
+  padding: 5px 13px; cursor: pointer; transition: all 0.12s;
+}
+.group-btn:hover { border-color: #fb923c; color: #c2410c; }
+.group-btn.on { background: #fff7ed; border-color: #f97316; color: #c2410c; }
+.group-btn.city.on { background: #eff6ff; border-color: #3b82f6; color: #1d4ed8; }
+.ownership-selector { margin-top: 6px; }
