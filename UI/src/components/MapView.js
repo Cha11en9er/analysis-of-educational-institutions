@@ -1,9 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import {
-  ADDRESS_CLUSTER_LINK_METERS,
-  buildAddressCoverageFeature,
-  featureBoundsLatLng,
-} from '../utils/buildAddressCoverageGeoJSON';
+import { featureBoundsLatLng } from '../utils/buildAddressCoverageGeoJSON';
 import {
   getAttachedAddressesForKey,
   getSchoolAttachmentKey,
@@ -97,11 +93,6 @@ export default function MapView({
   );
 
   const showAttachedLayer = Boolean(selectedSchool && addressesForSelected.length > 0);
-
-  const addressCoverageFeature = useMemo(
-    () => buildAddressCoverageFeature(addressesForSelected),
-    [addressesForSelected]
-  );
 
   // Инициализация карты
   useEffect(() => {
@@ -202,27 +193,8 @@ export default function MapView({
       });
     }
 
-    if (showAttachedLayer && addressCoverageFeature?.geometry) {
-      const geom = addressCoverageFeature.geometry;
-      if (geom.type === 'Polygon' || geom.type === 'MultiPolygon') {
-        const feature = new YMapFeature({
-          geometry: {
-            type: geom.type,
-            coordinates: geom.coordinates,
-          },
-          style: {
-            stroke: [{ width: 2, color: '#2563eb' }],
-            fill: 'rgba(59, 130, 246, 0.18)',
-          },
-          properties: {
-            hint: `Полигон: кластеры ≤ ${ADDRESS_CLUSTER_LINK_METERS} м`,
-          },
-        });
-        map.addChild(feature);
-        layers.features.push(feature);
-      }
-    }
-
+    // Зона прикрепления: только точки домов (обводки/полигоны решим после полного
+    // геокода всех адресов — см. .cursor/rules/geocoding.mdc)
     if (showAttachedLayer) {
       (addressesForSelected || []).forEach((row) => {
         if (row.lat == null || row.lon == null) return;
@@ -275,10 +247,11 @@ export default function MapView({
       (addressesForSelected || []).forEach((a) => {
         if (a.lat != null && a.lon != null) pts.push([a.lon, a.lat]);
       });
-      const bb = featureBoundsLatLng(addressCoverageFeature);
-      if (bb) {
-        // featureBoundsLatLng → [[lat,lon],[lat,lon]]
-        pts.push([bb[0][1], bb[0][0]], [bb[1][1], bb[1][0]]);
+      // границы по самим точкам домов
+      if (pts.length > 1) {
+        const lats = pts.map((p) => p[1]);
+        const lons = pts.map((p) => p[0]);
+        pts.push([Math.min(lats), Math.min(lons)], [Math.max(lats), Math.max(lons)]);
       }
       const bounds = boundsFromLonLats(pts);
       if (bounds) {
@@ -304,7 +277,6 @@ export default function MapView({
     selectedSchool,
     showAttachedLayer,
     addressesForSelected,
-    addressCoverageFeature,
     institutionsGroup,
   ]);
 

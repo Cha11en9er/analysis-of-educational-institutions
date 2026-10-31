@@ -187,3 +187,17 @@ CREATE INDEX IF NOT EXISTS idx_institution_group ON sa.institution(inst_group);
 
 -- Миграция 31.10.26: institution не должен каскадно очищаться при TRUNCATE sa.school
 ALTER TABLE sa.institution DROP CONSTRAINT IF EXISTS institution_our_school_id_fkey;
+
+-- Миграция 31.10.26 (2): журнал геокодирования (лимиты Яндекса ~1000/сутки)
+CREATE TABLE IF NOT EXISTS sa.geocode_log (
+    log_id SERIAL PRIMARY KEY,
+    run_date DATE NOT NULL DEFAULT CURRENT_DATE,
+    provider TEXT NOT NULL DEFAULT 'yandex',
+    requests INTEGER NOT NULL DEFAULT 0,
+    ok_count INTEGER NOT NULL DEFAULT 0,
+    ambiguous_count INTEGER NOT NULL DEFAULT 0,
+    fail_count INTEGER NOT NULL DEFAULT 0,
+    pending_left INTEGER,
+    note TEXT
+);
+CREATE INDEX IF NOT EXISTS idx_geocode_log_date ON sa.geocode_log(run_date);
