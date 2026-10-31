@@ -49,7 +49,7 @@ export default function MapView({
 }) {
   const containerRef = useRef(null);
   const mapRef = useRef(null);
-  const layersRef = useRef({ markers: [], features: [], houses: [], institutions: {} });
+  const layersRef = useRef({ markers: [], features: [], houses: [], institutions: [] });
   const viewRef = useRef({ center: SARATOV_CENTER, zoom: DEFAULT_ZOOM });
   const onSchoolClickRef = useRef(onSchoolClick);
   const [mapError, setMapError] = useState(null);
