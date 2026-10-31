@@ -19,3 +19,4 @@ UPDATE sa.school SET rating_ege=48.0, ege_year=2025, ege_average_score=48.0, uni
 UPDATE sa.school SET rating_ege=NULL, ege_year=NULL, ege_average_score=NULL, university_admission_percent=NULL, university_admission_year=NULL, olympiad_winners_count=15, rating_total=NULL WHERE school_id=100000+249188;
 UPDATE sa.school SET rating_ege=NULL, ege_year=NULL, ege_average_score=NULL, university_admission_percent=NULL, university_admission_year=NULL, olympiad_winners_count=NULL, rating_total=NULL WHERE school_id=100000+249044;
 UPDATE sa.school SET rating_ege=66.69, ege_year=2026, ege_average_score=66.69, university_admission_percent=97.3, university_admission_year=2026, olympiad_winners_count=NULL, rating_total=76.42 WHERE school_id=100000+251015;
+UPDATE sa.school SET rating_ege=NULL, ege_year=NULL, ege_average_score=NULL, university_admission_percent=NULL, university_admission_year=NULL, olympiad_winners_count=NULL, rating_total=NULL WHERE school_id=100000+238113;

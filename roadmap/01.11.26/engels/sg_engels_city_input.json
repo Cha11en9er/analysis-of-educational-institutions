@@ -718,5 +718,40 @@
   },
   "link_gosuslugi": "https://enggimn8.gosuslugi.ru/",
   "_code_oo": 251015
+ },
+ {
+  "id": 9124,
+  "name_2gis": "МАОУ «СОШ № 7»",
+  "short_name": "СОШ № 7",
+  "address": "г. Энгельс",
+  "building_type": "Основное здание",
+  "area_sqm": 1139.8,
+  "floors": 2,
+  "underground_floors": null,
+  "material": "смеш",
+  "year_built": 1980,
+  "reconstruction_year": null,
+  "capacity": null,
+  "has_sports_complex": null,
+  "has_pool": null,
+  "has_stadium": null,
+  "has_sports_ground": 1,
+  "latitude": 51.509919,
+  "longitude": 45.987625,
+  "cadastral_number": "64:48:000000:15467",
+  "rating_2gis": null,
+  "rating_yandex": 4.7,
+  "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+  "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+  "link_2gis": null,
+  "reviews_link_2gis": null,
+  "location": {
+   "type": "Point",
+   "coordinates": [
+    45.987625,
+    51.509919
+   ]
+  },
+  "link_gosuslugi": "https://shkola7engels-r64.gosweb.gosuslugi.ru/"
  }
 ]
