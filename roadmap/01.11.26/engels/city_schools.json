@@ -622,5 +622,18 @@
   "link_yandex": "https://yandex.ru/maps/org/upravleniye_federalnoy_sluzhby_ispolneniya_nakazaniy_po_saratovskoy_oblasti/1064892128",
   "latitude": 51.462617,
   "longitude": 46.127762
+ },
+ {
+  "school_id": 100238999,
+  "code_oo": 238999,
+  "name_full": "МОУ «СОШ «Патриот» с кадетскими классами имени Героя РФ Дейнеко Юрия Михайловича» Энгельсского муниципального района Саратовской области",
+  "name_short": "МОУ «СОШ «Патриот» с кадетскими классами им. Ю.М. Дейнеко»",
+  "city": "Энгельс",
+  "ownership": "public",
+  "address": "г. Энгельс, ул. Волоха, д. 16",
+  "site": "https://shkolapatriotengels-r64.gosweb.gosuslugi.ru",
+  "link_yandex": null,
+  "latitude": 51.488502,
+  "longitude": 46.118587
  }
 ]

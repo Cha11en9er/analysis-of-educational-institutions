@@ -1,0 +1,1 @@
+UPDATE sa.school SET rating_ege=54.45, ege_year=2025, ege_average_score=54.45, university_admission_percent=89.0, university_admission_year=2025, rating_total=63.35 WHERE school_id=100238999;

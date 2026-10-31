@@ -1,0 +1,65 @@
+[
+  {
+    "id": 9150,
+    "name_2gis": "МОУ «СОШ «Патриот» с кадетскими классами им. Ю.М. Дейнеко»",
+    "short_name": "СОШ «Патриот»",
+    "address": "г. Энгельс, ул. Волоха, д. 16",
+    "building_type": "Основное здание",
+    "area_sqm": 1139.8,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "смеш",
+    "year_built": 1980,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.509919,
+    "longitude": 45.987625,
+    "cadastral_number": "64:48:000000:15467",
+    "rating_2gis": null,
+    "rating_yandex": 4.7,
+    "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+    "link_2gis": null,
+    "reviews_link_2gis": null,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.987625,
+        51.509919
+      ]
+    },
+    "link_gosuslugi": "https://shkolapatriotengels-r64.gosweb.gosuslugi.ru",
+    "specialization": [
+      "Технологический (инженерный)",
+      "Социально-экономический",
+      "Универсальный"
+    ],
+    "EGE": "54,45 - Средний балл на ЕГЭ в 2025 году",
+    "VUZ": "89% - Выпускников поступивших в ВУЗы в 2025 году",
+    "Olympiads": [
+      "54 - Призеров Всероссийской олимпиады школьников в 2025 году"
+    ],
+    "Medals": [],
+    "other_results": [
+      "8 - выпускников 9 класса получили аттестат об основном общем образовании с отличием в 2025 году"
+    ],
+    "results_kpi_raw": [
+      "54 - Призеров Всероссийской олимпиады школьников в 2025 году",
+      "8 - выпускников 9 класса получили аттестат об основном общем образовании с отличием в 2025 году",
+      "54,45 - Средний балл на ЕГЭ в 2025 году",
+      "89% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "infrastructure": "https://shkolapatriotengels-r64.gosweb.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-10-31T14:38:04.404757+00:00"
+  }
+]
