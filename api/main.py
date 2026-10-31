@@ -591,9 +591,12 @@ async def get_institutions(
             WHERE city = %s AND latitude IS NOT NULL
         """
         params: list[Any] = [city]
-        if group:
+        if group and group != "school":
             sql += " AND inst_group = %s"
             params.append(group)
+        else:
+            # школы городов — полноценные записи sa.school, институции-дубли не отдаём
+            sql += " AND (inst_group IS NULL OR inst_group <> 'school')"
         if kind:
             sql += " AND kind = %s"
             params.append(kind)

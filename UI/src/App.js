@@ -186,6 +186,7 @@ function App() {
       try {
         const p = { ...params };
         if (schoolOwnership !== 'all') p.ownership = schoolOwnership;
+        p.city = selectedCity;
         const { data } = await axios.get(`${API_URL}/api/schools/map`, { params: p });
         setSchools(data.schools || []);
         const count = data.count ?? (data.schools || []).length;
@@ -201,16 +202,18 @@ function App() {
         setLoading(false);
       }
     },
-    [schoolOwnership]
+    [schoolOwnership, selectedCity]
   );
 
-  // смена общие/частные — перезагрузка школ с текущими фильтрами
+  // смена общие/частные или города — перезагрузка школ с текущими фильтрами
   useEffect(() => {
     if (mapFetchOnce.current !== true) return;
     const p = buildParams(searchSubmitted || searchQuery, filterState, filtersApplied, preferenceState, preferencesActive);
     fetchSchools(p);
+    setSelectedSchoolId(null);
+    setSchoolDetail(null);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [schoolOwnership]);
+  }, [schoolOwnership, selectedCity]);
 
   useEffect(() => {
     if (mapFetchOnce.current) return;
@@ -218,7 +221,9 @@ function App() {
     const s = loadStoredPreferences();
     const { active, ...rest } = s;
     const p = buildParams('', defaultFilterState, false, rest, active);
+    p.city = selectedCity;
     fetchSchools(p);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fetchSchools]);
 
   // Клик по учреждению — карточка-минимум (имя/адрес/сайт)
