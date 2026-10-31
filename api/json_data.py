@@ -66,6 +66,7 @@ def school_to_map_item(raw: dict[str, Any]) -> dict[str, Any]:
         "rating_total": raw.get("rating_total"),
         "ege_average_score": raw.get("ege_average_score"),
         "olympiad_winners_count": raw.get("olympiad_winners_count"),
+        "ownership": raw.get("ownership") or "public",
         "has_review_analysis": sid in review_analysis_school_ids(),
     }
 
@@ -126,11 +127,14 @@ def filter_schools_for_map(
     has_stadium: Optional[bool] = None,
     has_sports_ground: Optional[bool] = None,
     has_sports_complex: Optional[bool] = None,
+    ownership: Optional[str] = None,
 ) -> list[dict[str, Any]]:
     out: list[dict[str, Any]] = []
     needle = (search or "").strip().lower()
 
     for raw in load_schools_raw():
+        if ownership in ("public", "private") and raw.get("ownership") != ownership:
+            continue
         year = raw.get("year_built")
         if year_min is not None and (year is None or int(year) < year_min):
             continue

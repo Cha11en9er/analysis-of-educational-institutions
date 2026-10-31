@@ -169,31 +169,48 @@ function App() {
   const [sortBy, setSortBy] = useState('rating_total');
   const [showAnalysisPage, setShowAnalysisPage] = useState(false);
   const [showAnalytics, setShowAnalytics] = useState(false);
-  const [activeLayers, setActiveLayers] = useState([]);
   const [institutionToast, setInstitutionToast] = useState(null);
+  // Разграничение заведений: группа для селектора + город + общие/частные внутри школ
+  const [selectedGroup, setSelectedGroup] = useState('schools'); // schools|preschool|vuz|other
+  const [selectedCity, setSelectedCity] = useState('Саратов'); // Саратов|Энгельс
+  const [schoolOwnership, setSchoolOwnership] = useState('all'); // all|public|private
+  const [institutionsByGroup, setInstitutionsByGroup] = useState({}); // group -> list
   const [analyticsReviews, setAnalyticsReviews] = useState([]);
   const [analyticsLoading, setAnalyticsLoading] = useState(false);
   const [analyticsAppliedTopics, setAnalyticsAppliedTopics] = useState([]);
   const [analyticsInterval, setAnalyticsInterval] = useState('month');
 
-  const fetchSchools = useCallback(async (params = {}) => {
-    setLoading(true);
-    try {
-      const { data } = await axios.get(`${API_URL}/api/schools/map`, { params });
-      setSchools(data.schools || []);
-      const count = data.count ?? (data.schools || []).length;
-      setTotalCount(count);
-      return count;
-    } catch (err) {
-      const msg = err.response?.data?.detail || err.message || 'Ошибка загрузки данных';
-      setToast({ message: `Ошибка при использовании фильтра: ${msg}`, type: 'error' });
-      setSchools([]);
-      setTotalCount(0);
-      return 0;
-    } finally {
-      setLoading(false);
-    }
-  }, []);
+  const fetchSchools = useCallback(
+    async (params = {}) => {
+      setLoading(true);
+      try {
+        const p = { ...params };
+        if (schoolOwnership !== 'all') p.ownership = schoolOwnership;
+        const { data } = await axios.get(`${API_URL}/api/schools/map`, { params: p });
+        setSchools(data.schools || []);
+        const count = data.count ?? (data.schools || []).length;
+        setTotalCount(count);
+        return count;
+      } catch (err) {
+        const msg = err.response?.data?.detail || err.message || 'Ошибка загрузки данных';
+        setToast({ message: `Ошибка при использовании фильтра: ${msg}`, type: 'error' });
+        setSchools([]);
+        setTotalCount(0);
+        return 0;
+      } finally {
+        setLoading(false);
+      }
+    },
+    [schoolOwnership]
+  );
+
+  // смена общие/частные — перезагрузка школ с текущими фильтрами
+  useEffect(() => {
+    if (mapFetchOnce.current !== true) return;
+    const p = buildParams(searchSubmitted || searchQuery, filterState, filtersApplied, preferenceState, preferencesActive);
+    fetchSchools(p);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [schoolOwnership]);
 
   useEffect(() => {
     if (mapFetchOnce.current) return;
@@ -204,27 +221,7 @@ function App() {
     fetchSchools(p);
   }, [fetchSchools]);
 
-  // Слои учреждений: загрузка один раз в db-режиме
-  useEffect(() => {
-    let cancelled = false;
-    const KINDS = ['sport_do', 'arts_do', 'preschool', 'internat_cadet', 'spo', 'vuz'];
-    Promise.all(
-      KINDS.map((kind) =>
-        axios
-          .get(`${API_URL}/api/institutions`, { params: { kind } })
-          .then(({ data }) => [kind, data.institutions || []])
-          .catch(() => [kind, []])
-      )
-    ).then((pairs) => {
-      if (cancelled) return;
-      window.__uchgradInstitutions = Object.fromEntries(pairs);
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
-  // Клик по учреждению — тост с адресом/ссылкой (карточка-минимум)
+  // Клик по учреждению — карточка-минимум (имя/адрес/сайт)
   useEffect(() => {
     window.__uchgradInstitutionClick = (it) => {
       setInstitutionToast(it);
@@ -234,11 +231,29 @@ function App() {
     };
   }, []);
 
-  const toggleLayer = useCallback((kind) => {
-    setActiveLayers((prev) =>
-      prev.includes(kind) ? prev.filter((k) => k !== kind) : [...prev, kind]
-    );
-  }, []);
+  // Загрузка учреждений по выбранной группе и городу (для не-школьных групп)
+  useEffect(() => {
+    if (selectedGroup === 'schools') return undefined;
+    let cancelled = false;
+    axios
+      .get(`${API_URL}/api/institutions`, {
+        params: { group: selectedGroup, city: selectedCity },
+      })
+      .then(({ data }) => {
+        if (!cancelled) {
+          setInstitutionsByGroup((prev) => ({
+            ...prev,
+            [`${selectedCity}_${selectedGroup}`]: data.institutions || [],
+          }));
+        }
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [selectedGroup, selectedCity]);
+
+  const groupInstitutions = institutionsByGroup[`${selectedCity}_${selectedGroup}`] || [];
 
   const handleSchoolClick = useCallback(
     async (school) => {
@@ -441,6 +456,14 @@ function App() {
           onSelectSchool={handleSchoolClick}
           sortBy={sortBy}
           onSortChange={setSortBy}
+          selectedGroup={selectedGroup}
+          onGroupChange={setSelectedGroup}
+          selectedCity={selectedCity}
+          onCityChange={setSelectedCity}
+          schoolOwnership={schoolOwnership}
+          onOwnershipChange={setSchoolOwnership}
+          groupInstitutions={groupInstitutions}
+          onSelectInstitution={setInstitutionToast}
           searchQuery={searchQuery}
           onSearchChange={setSearchQuery}
           onSearchSubmit={handleSearchSubmit}
@@ -471,12 +494,16 @@ function App() {
             )}
             <MapView
               schools={schools}
-              selectedSchool={schoolDetail}
+              selectedSchool={selectedGroup === 'schools' ? schoolDetail : null}
               onSchoolClick={handleSchoolClick}
               preferencesActive={preferencesActive}
-              activeLayers={activeLayers}
+              institutionsGroup={
+                selectedGroup === 'schools'
+                  ? null
+                  : { group: selectedGroup, items: groupInstitutions }
+              }
             />
-            {showSchoolDetail && schoolDetail && (
+            {showSchoolDetail && selectedGroup === 'schools' && schoolDetail && (
               <SchoolBottomCard
                 school={schoolDetail}
                 rank={rankOf(schoolDetail.school_id)}
@@ -485,28 +512,6 @@ function App() {
                 onClose={handleCloseBottomCard}
                 onOpenDetails={handleOpenAnalysisPage}
               />
-            )}
-            {!showSchoolDetail && (
-              <div className="map-layers-panel">
-                <span className="layers-title">Слои:</span>
-                {[
-                  ['sport_do', 'Спорт'],
-                  ['arts_do', 'Творческие'],
-                  ['preschool', 'Садики'],
-                  ['internat_cadet', 'Кадеты'],
-                  ['vuz', 'Вузы'],
-                  ['spo', 'СПО'],
-                ].map(([kind, label]) => (
-                  <button
-                    type="button"
-                    key={kind}
-                    className={`layer-chip ${activeLayers.includes(kind) ? 'on' : ''}`}
-                    onClick={() => toggleLayer(kind)}
-                  >
-                    {label}
-                  </button>
-                ))}
-              </div>
             )}
           </>
         )}

@@ -1100,6 +1100,17 @@ def transform_school(
         "floors": school.get("floors"),
         "underground_floors": school.get("underground_floors"),
         "wall_material": normalize_wall_material(school.get("material")),
+        # Форма собственности: частные (ЧОУ/АНО/религиозные) vs общие (муниципальные/государственные).
+        # В rating_total не входит — только для фильтра «Общие/Частные» на сайте.
+        "ownership": (
+            "private"
+            if re.search(
+                r"\bчоу\b|\bаноо\b|\bано\b|\bноу\b|частн|православн|иудейск|еврейск|приходск",
+                f"{school.get('name_2gis') or ''} {school.get('short_name') or ''}",
+                re.IGNORECASE,
+            )
+            else "public"
+        ),
     }
     return record
 

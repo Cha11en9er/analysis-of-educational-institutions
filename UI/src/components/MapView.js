@@ -40,7 +40,13 @@ function boundsFromLonLats(points) {
   ];
 }
 
-export default function MapView({ schools, selectedSchool, onSchoolClick, preferencesActive, activeLayers }) {
+export default function MapView({
+  schools,
+  selectedSchool,
+  onSchoolClick,
+  preferencesActive,
+  institutionsGroup,
+}) {
   const containerRef = useRef(null);
   const mapRef = useRef(null);
   const layersRef = useRef({ markers: [], features: [], houses: [], institutions: {} });
@@ -164,36 +170,37 @@ export default function MapView({ schools, selectedSchool, onSchoolClick, prefer
     clearLayer(layers.markers);
     clearLayer(layers.features);
     clearLayer(layers.houses);
-    // слои учреждений — чистим все активные
-    Object.values(layersRef.current.institutions).forEach((list) => clearLayer(list));
-    layersRef.current.institutions = {};
+    clearLayer(layers.institutions);
 
-    validSchools.forEach((school) => {
-      const coords = lonLatOfSchool(school);
-      if (!coords) return;
-      const { diameter, html } = getSchoolMarkerStyle(school, markerScale);
-      const wrap = document.createElement('div');
-      wrap.className = 'school-marker-yandex';
-      wrap.style.width = `${diameter}px`;
-      wrap.style.height = `${diameter}px`;
-      wrap.style.cursor = 'pointer';
-      wrap.title = schoolMarkerTitle(school);
-      wrap.innerHTML = html;
-      wrap.addEventListener('click', (e) => {
-        e.stopPropagation();
-        onSchoolClickRef.current?.(school);
+    // Школы рисуем только в группе «schools»
+    if (institutionsGroup?.group === 'schools' || !institutionsGroup) {
+      validSchools.forEach((school) => {
+        const coords = lonLatOfSchool(school);
+        if (!coords) return;
+        const { diameter, html } = getSchoolMarkerStyle(school, markerScale);
+        const wrap = document.createElement('div');
+        wrap.className = 'school-marker-yandex';
+        wrap.style.width = `${diameter}px`;
+        wrap.style.height = `${diameter}px`;
+        wrap.style.cursor = 'pointer';
+        wrap.title = schoolMarkerTitle(school);
+        wrap.innerHTML = html;
+        wrap.addEventListener('click', (e) => {
+          e.stopPropagation();
+          onSchoolClickRef.current?.(school);
+        });
+
+        const marker = new YMapMarker(
+          {
+            coordinates: coords,
+            zIndex: selectedSchool?.school_id === school.school_id ? 20 : 10,
+          },
+          wrap
+        );
+        map.addChild(marker);
+        layers.markers.push(marker);
       });
-
-      const marker = new YMapMarker(
-        {
-          coordinates: coords,
-          zIndex: selectedSchool?.school_id === school.school_id ? 20 : 10,
-        },
-        wrap
-      );
-      map.addChild(marker);
-      layers.markers.push(marker);
-    });
+    }
 
     if (showAttachedLayer && addressCoverageFeature?.geometry) {
       const geom = addressCoverageFeature.geometry;
@@ -228,37 +235,36 @@ export default function MapView({ schools, selectedSchool, onSchoolClick, prefer
       });
     }
 
-    // Слои учреждений (не-школы): маркеры других цветов
-    if (Array.isArray(activeLayers) && activeLayers.length > 0 && window.__uchgradInstitutions) {
-      const LAYER_COLORS = {
+    // Учреждения выбранной группы (не-школы): маркеры цветов по kind
+    if (institutionsGroup && Array.isArray(institutionsGroup.items)) {
+      const KIND_COLORS = {
         sport_do: '#16a34a',
         arts_do: '#a855f7',
         preschool: '#0ea5e9',
         internat_cadet: '#f59e0b',
         spo: '#64748b',
         vuz: '#dc2626',
+        general: '#ea580c',
+        other: '#64748b',
       };
-      activeLayers.forEach((kind) => {
-        const items = (window.__uchgradInstitutions[kind] || []).filter(
-          (it) => it.location?.coordinates
-        );
-        const list = [];
-        items.forEach((it) => {
-          const [lon, lat] = it.location.coordinates;
-          const el = document.createElement('div');
-          el.className = 'institution-marker-yandex';
-          el.style.background = LAYER_COLORS[kind] || '#64748b';
-          el.title = `${it.name}\n${it.address || ''}`;
-          el.addEventListener('click', (e) => {
-            e.stopPropagation();
-            window.__uchgradInstitutionClick?.(it);
-          });
-          const marker = new YMapMarker({ coordinates: [lon, lat], zIndex: 8 }, el);
-          map.addChild(marker);
-          list.push(marker);
+      const list = [];
+      institutionsGroup.items.forEach((it) => {
+        const c = it.location?.coordinates;
+        if (!c) return;
+        const [lon, lat] = c;
+        const el = document.createElement('div');
+        el.className = 'institution-marker-yandex';
+        el.style.background = KIND_COLORS[it.kind] || '#64748b';
+        el.title = `${it.name}\n${it.address || ''}`;
+        el.addEventListener('click', (e) => {
+          e.stopPropagation();
+          window.__uchgradInstitutionClick?.(it);
         });
-        layersRef.current.institutions[kind] = list;
+        const marker = new YMapMarker({ coordinates: [lon, lat], zIndex: 8 }, el);
+        map.addChild(marker);
+        list.push(marker);
       });
+      layersRef.current.institutions = list;
     }
 
     // Подгонка вида
@@ -299,7 +305,7 @@ export default function MapView({ schools, selectedSchool, onSchoolClick, prefer
     showAttachedLayer,
     addressesForSelected,
     addressCoverageFeature,
-    activeLayers,
+    institutionsGroup,
   ]);
 
   const zoomBy = (delta) => {

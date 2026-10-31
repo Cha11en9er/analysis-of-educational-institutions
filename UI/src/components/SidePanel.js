@@ -44,6 +44,14 @@ export default function SidePanel({
   onSelectSchool,
   sortBy,
   onSortChange,
+  selectedGroup,
+  onGroupChange,
+  selectedCity,
+  onCityChange,
+  schoolOwnership,
+  onOwnershipChange,
+  groupInstitutions,
+  onSelectInstitution,
   searchQuery,
   onSearchChange,
   onSearchSubmit,
@@ -97,6 +105,59 @@ export default function SidePanel({
           <p className="panel-subtitle">Школы · рейтинги, ЕГЭ, отзывы</p>
         </div>
       </div>
+
+      <section className="group-selector-section">
+        <label className="label">Заведения</label>
+        <div className="group-selector">
+          {[
+            ['schools', 'Школы'],
+            ['preschool', 'Садики'],
+            ['vuz', 'Вузы'],
+            ['other', 'Иные'],
+          ].map(([g, label]) => (
+            <button
+              type="button"
+              key={g}
+              className={`group-btn ${selectedGroup === g ? 'on' : ''}`}
+              onClick={() => onGroupChange(g)}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+        <label className="label" style={{ marginTop: '0.6rem' }}>Город</label>
+        <div className="group-selector">
+          {['Саратов', 'Энгельс'].map((c) => (
+            <button
+              type="button"
+              key={c}
+              className={`group-btn city ${selectedCity === c ? 'on' : ''}`}
+              onClick={() => onCityChange(c)}
+            >
+              {c}
+            </button>
+          ))}
+        </div>
+        {selectedGroup === 'schools' && (
+          <div className="ownership-selector">
+            {[
+              ['all', 'Все'],
+              ['public', 'Общие'],
+              ['private', 'Частные'],
+            ].map(([o, label]) => (
+              <button
+                type="button"
+                key={o}
+                className={`group-btn ownership ${schoolOwnership === o ? 'on' : ''}`}
+                onClick={() => onOwnershipChange(o)}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        )}
+      </section>
+
       <div className="preference-panel-row">
         <button
           type="button"
@@ -109,6 +170,8 @@ export default function SidePanel({
         {preferencesActive && <span className="preference-badge">подбор вкл.</span>}
       </div>
 
+      {selectedGroup === 'schools' ? (
+        <>
       <section className="search-section">
         <label className="label">Поиск</label>
         <div className="search-row">
@@ -273,6 +336,34 @@ export default function SidePanel({
           ))}
         </div>
       </section>
+          </>
+        ) : (
+          <section className="school-list-section">
+            <div className="school-list-header">
+              <span className="school-count">
+                Найдено: <strong>{groupInstitutions.filter((i) => i.location?.coordinates).length}</strong>
+              </span>
+            </div>
+            <div className="school-list">
+              {groupInstitutions.filter((i) => i.location?.coordinates).map((it) => (
+                <button
+                  type="button"
+                  key={it.institution_id}
+                  className="school-row"
+                  onClick={() => onSelectInstitution(it)}
+                >
+                  <span className="school-row-body">
+                    <span className="school-row-name">{it.name}</span>
+                    <span className="school-row-meta">{it.address || ''}</span>
+                  </span>
+                </button>
+              ))}
+              {groupInstitutions.length === 0 && (
+                <div className="school-list-empty">Нет данных для этой группы и города</div>
+              )}
+            </div>
+          </section>
+        )}
     </aside>
   );
 }

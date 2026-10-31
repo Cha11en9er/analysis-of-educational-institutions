@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Загрузка sa.institution из выгрузки каталога РЦОКО (слой не-школ: спорт/творческие/
-садики/вузы/СПО/интернаты). Школьный рейтинг sa.school не затрагивается.
+Загрузка sa.institution из выгрузки каталога РЦОКО.
+Группы для селектора сайта: school (школы вне рейтинга — Энгельс и др.) / preschool /
+vuz / other (спорт + творческие + СПО + интернаты/кадеты + прочие).
 
-Вход:  db/db_data/db_input_institutions/institutions_rcoko.json
+Вход:  db/db_data/db_input_institutions/institutions_rcoko.json (city/ownership внутри)
 Запуск из корня репозитория (на сервере — в venv):
-  python db/db_src/db_insert/db_load_institutions.py [--city-strict]
+  python db/db_src/db_insert/db_load_institutions.py [--cities "Саратов,Энгельс"]
 Идемпотентен: upsert по code_oo.
 """
 
@@ -23,40 +24,58 @@ from db_config_sa import get_connection
 SCRIPT_DIR = Path(__file__).resolve().parent
 INPUT = SCRIPT_DIR.parent.parent / "db_data" / "db_input_institutions" / "institutions_rcoko.json"
 
-# Слои, которые выкладываем на карту (general — уже на карте как школы)
-KINDS_TO_LOAD = ("sport_do", "arts_do", "preschool", "internat_cadet", "spo", "vuz")
+# kind -> группа селектора сайта
+KIND_TO_GROUP = {
+    "general": "school",
+    "preschool": "preschool",
+    "vuz": "vuz",
+    "sport_do": "other",
+    "arts_do": "other",
+    "spo": "other",
+    "internat_cadet": "other",
+    "other": "other",
+}
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--city-strict", action="store_true",
-        help="Только адреса с 'г. Саратов' (иначе город/пригороды по полю city)",
+        "--cities", default="Саратов,Энгельс",
+        help="Города для загрузки (через запятую)",
     )
     args = parser.parse_args()
+    cities = [c.strip() for c in args.cities.split(",") if c.strip()]
 
     rows = json.loads(INPUT.read_text(encoding="utf-8"))
     batch = []
+    seen_codes = set()
     for r in rows:
-        if r["kind"] not in KINDS_TO_LOAD:
+        if r.get("city") not in cities:
             continue
-        addr = r.get("address") or ""
-        if args.city_strict and "г. саратов" not in addr.lower():
+        if r["kind"] not in KIND_TO_GROUP:
             continue
+        code = r.get("code_oo")
+        if code in seen_codes:
+            continue
+        seen_codes.add(code)
         if not r.get("name"):
             continue
         batch.append(
             (
-                r["code_oo"],
+                code,
                 r["kind"],
+                KIND_TO_GROUP[r["kind"]],
+                r.get("ownership") or "public",
+                r.get("city"),
                 r["name"],
                 r.get("name_full"),
-                addr or None,
+                r.get("address") or None,
                 r.get("phone"),
                 r.get("site"),
+                r.get("in_uchgrad_school_id"),
             )
         )
-    print(f"К загрузке: {len(batch)} учреждений (kinds: {sorted({b[1] for b in batch})})")
+    print(f"К загрузке: {len(batch)} учреждений (города: {cities})")
 
     conn = get_connection()
     try:
@@ -66,11 +85,15 @@ def main() -> None:
                     cur,
                     """
                     INSERT INTO sa.institution (
-                        code_oo, kind, name, name_full, address, phone, site
-                    ) VALUES (%s,%s,%s,%s,%s,%s,%s)
+                        code_oo, kind, inst_group, ownership, city, name, name_full,
+                        address, phone, site, our_school_id
+                    ) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
                     ON CONFLICT (code_oo) DO UPDATE SET
-                        kind=EXCLUDED.kind, name=EXCLUDED.name, name_full=EXCLUDED.name_full,
+                        kind=EXCLUDED.kind, inst_group=EXCLUDED.inst_group,
+                        ownership=EXCLUDED.ownership, city=EXCLUDED.city,
+                        name=EXCLUDED.name, name_full=EXCLUDED.name_full,
                         address=EXCLUDED.address, phone=EXCLUDED.phone, site=EXCLUDED.site,
+                        our_school_id=EXCLUDED.our_school_id,
                         updated_at=CURRENT_TIMESTAMP
                     """,
                     batch,

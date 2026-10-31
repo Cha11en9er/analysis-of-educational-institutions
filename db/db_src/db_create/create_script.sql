@@ -175,3 +175,12 @@ CREATE TABLE IF NOT EXISTS sa.school_address (
     PRIMARY KEY (school_id, address_id)
 );
 CREATE INDEX IF NOT EXISTS idx_school_address_school ON sa.school_address(school_id);
+
+-- Миграция 30.10.26 (вечер): группы заведений + общие/частные + город
+ALTER TABLE sa.institution ADD COLUMN IF NOT EXISTS ownership TEXT NOT NULL DEFAULT 'public';
+ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS ownership TEXT NOT NULL DEFAULT 'public';
+
+-- Миграция 30.10.26 (вечер, 2): группы селектора и связь с нашими школами
+ALTER TABLE sa.institution ADD COLUMN IF NOT EXISTS inst_group TEXT; -- school|preschool|vuz|other
+ALTER TABLE sa.institution ADD COLUMN IF NOT EXISTS our_school_id INTEGER REFERENCES sa.school(school_id);
+CREATE INDEX IF NOT EXISTS idx_institution_group ON sa.institution(inst_group);

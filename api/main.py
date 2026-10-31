@@ -213,6 +213,7 @@ async def get_schools_for_map(
     has_stadium: Optional[bool] = Query(None),
     has_sports_ground: Optional[bool] = Query(None),
     has_sports_complex: Optional[bool] = Query(None),
+    ownership: Optional[str] = Query(None, description="public|private"),
     pref_olympiads: bool = Query(False),
     pref_bullying: bool = Query(False),
     pref_staff: bool = Query(False),
@@ -232,6 +233,8 @@ async def get_schools_for_map(
             status_code=400,
             detail="Рейтинг: минимальное значение не может быть больше максимального",
         )
+    if ownership not in (None, "public", "private"):
+        raise HTTPException(status_code=400, detail="ownership: public или private")
 
     if use_json():
         try:
@@ -245,6 +248,7 @@ async def get_schools_for_map(
                 has_stadium=has_stadium,
                 has_sports_ground=has_sports_ground,
                 has_sports_complex=has_sports_complex,
+                ownership=ownership,
             )
         except FileNotFoundError as e:
             raise HTTPException(status_code=500, detail=str(e)) from e
@@ -275,7 +279,7 @@ async def get_schools_for_map(
                 s.has_sports_complex, s.has_pool, s.has_stadium, s.has_sports_ground,
                 ST_X(s.location::geometry) AS lon, ST_Y(s.location::geometry) AS lat,
                 r.rating_yandex, s.rating_total, s.ege_average_score,
-                s.olympiad_winners_count
+                s.olympiad_winners_count, s.ownership
             FROM sa.school s
             LEFT JOIN sa.rating r ON r.school_id = s.school_id
             WHERE 1=1
@@ -305,6 +309,9 @@ async def get_schools_for_map(
         if has_sports_complex is not None:
             query += " AND s.has_sports_complex = %s"
             params.append(has_sports_complex)
+        if ownership in ("public", "private"):
+            query += " AND s.ownership = %s"
+            params.append(ownership)
         if search and search.strip():
             search_term = f"%{search.strip()}%"
             query += " AND (s.name_2gis ILIKE %s OR s.name_ym ILIKE %s OR s.school_address ILIKE %s)"
@@ -339,6 +346,7 @@ async def get_schools_for_map(
                     "rating_total": float(row[12]) if row[12] is not None else None,
                     "ege_average_score": float(row[13]) if row[13] is not None else None,
                     "olympiad_winners_count": row[14],
+                    "ownership": row[15],
                 }
             )
         cursor.close()
@@ -546,12 +554,27 @@ async def get_school_reviews(
     )
 
 
+KIND_TO_GROUP = {
+    "general": "school",
+    "preschool": "preschool",
+    "vuz": "vuz",
+    "sport_do": "other",
+    "arts_do": "other",
+    "spo": "other",
+    "internat_cadet": "other",
+    "other": "other",
+}
+
+
 @app.get("/api/institutions")
 async def get_institutions(
     kind: Optional[str] = Query(None),
+    group: Optional[str] = Query(None, description="school|preschool|vuz|other"),
+    ownership: Optional[str] = Query(None, description="public|private"),
     city: str = Query("Саратов"),
 ):
-    """Слои учреждений вне школьного рейтинга (спорт/творческие/садики/вузы/СПО/интернаты)."""
+    """Слои заведений вне школьного рейтинга (Энгельс/Саратов): школы-вне-рейтинга,
+    садики, вузы, иные (спорт/творческие/СПО/кадеты)."""
     if use_json():
         raise HTTPException(status_code=501, detail="Слои учреждений доступны только в db-режиме")
     import psycopg2
@@ -561,30 +584,38 @@ async def get_institutions(
         conn = get_db_connection()
         cur = conn.cursor()
         sql = """
-            SELECT institution_id, code_oo, kind, name, address, phone, site,
-                   latitude, longitude, geocode_status
+            SELECT institution_id, code_oo, kind, inst_group, ownership, name, address,
+                   phone, site, latitude, longitude
             FROM sa.institution
             WHERE city = %s AND latitude IS NOT NULL
         """
         params: list[Any] = [city]
+        if group:
+            sql += " AND inst_group = %s"
+            params.append(group)
         if kind:
             sql += " AND kind = %s"
             params.append(kind)
-        cur.execute(sql + " ORDER BY kind, name", params)
+        if ownership in ("public", "private"):
+            sql += " AND ownership = %s"
+            params.append(ownership)
+        cur.execute(sql + " ORDER BY name", params)
         rows = cur.fetchall()
         items = [
             {
                 "institution_id": r[0],
                 "code_oo": r[1],
                 "kind": r[2],
-                "name": r[3],
-                "address": r[4],
-                "phone": r[5],
-                "site": r[6],
+                "group": r[3] or KIND_TO_GROUP.get(r[2], "other"),
+                "ownership": r[4],
+                "name": r[5],
+                "address": r[6],
+                "phone": r[7],
+                "site": r[8],
                 "location": {
                     "type": "Point",
-                    "coordinates": [float(r[8]), float(r[7])]
-                    if r[7] is not None and r[8] is not None
+                    "coordinates": [float(r[10]), float(r[9])]
+                    if r[9] is not None and r[10] is not None
                     else None,
                 },
             }
