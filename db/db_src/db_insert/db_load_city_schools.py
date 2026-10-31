@@ -38,6 +38,7 @@ def main() -> None:
                 s.get("ownership") or "public",
                 s.get("city") or "Энгельс",
                 s.get("link_yandex"),
+                s.get("site"),
                 f"SRID=4326;POINT({s['longitude']} {s['latitude']})",
             )
         )
@@ -60,10 +61,10 @@ def main() -> None:
                         city=EXCLUDED.city, location=EXCLUDED.location,
                         updated_at=CURRENT_TIMESTAMP
                     """,
-                    batch,
+                    [(b[0], b[1], b[2], b[3], b[4], b[5], b[8]) for b in batch],
                 )
                 link_rows = [
-                    (b[0], b[5], b[6])  # school_id, link_yandex, site (gosuslugi)
+                    (b[0], b[6], b[7])  # school_id, link_yandex, link_gosuslugi (site)
                     for b in batch
                 ]
                 execute_batch(
