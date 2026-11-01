@@ -28,7 +28,7 @@ export default function SchoolDetailPanel({ school, onBack, onStatistics }) {
       <section className="detail-block">
         <div className="detail-row">
           <span className="detail-label">Адрес</span>
-          <span className="detail-value">{school.school_address || '—'}</span>
+          <span className="detail-value">{school.school_address || 'нет данных'}</span>
         </div>
       </section>
 
@@ -36,7 +36,7 @@ export default function SchoolDetailPanel({ school, onBack, onStatistics }) {
         <section className="detail-block detail-block-geocode-test">
           <div className="detail-label">Прикреплённые адреса (геокод)</div>
           <p className="detail-geocode-hint">
-            На карте для <strong>{nHouses}</strong> адресов: оранжевые кружки — точки (отладка), синий контур —
+            На карте для <strong>{nHouses}</strong> адресов: оранжевые кружки это точки (отладка), синий контур
             острые полигоны (кластер до 200 м + оболочка). Данные:{' '}
             <code>UI/src/data/geocoded_addresses_by_school.json</code> (ключ <code>{attachKey}</code>). Обновление:{' '}
             <code>python geocoding/scripts/geocode_ans_stage1_bundle.py</code>.
@@ -47,14 +47,14 @@ export default function SchoolDetailPanel({ school, onBack, onStatistics }) {
       <section className="detail-block">
         <div className="detail-row">
           <span className="detail-label">Тип здания</span>
-          <span className="detail-value">{school.building_type || '—'}</span>
+          <span className="detail-value">{school.building_type || 'нет данных'}</span>
         </div>
       </section>
 
       <section className="detail-block">
         <div className="detail-row">
           <span className="detail-label">Кол-во этажей</span>
-          <span className="detail-value">{school.floors != null ? school.floors : '—'}</span>
+          <span className="detail-value">{school.floors != null ? school.floors : 'нет данных'}</span>
         </div>
       </section>
 
@@ -71,14 +71,14 @@ export default function SchoolDetailPanel({ school, onBack, onStatistics }) {
               Ссылка на школу в Яндекс.Картах
             </a>
           )}
-          {!school.link_2gis && !school.link_yandex && <span className="detail-value">—</span>}
+          {!school.link_2gis && !school.link_yandex && <span className="detail-value">нет данных</span>}
         </div>
       </section>
 
       <section className="detail-block">
         <div className="detail-row">
           <span className="detail-label">Год постройки</span>
-          <span className="detail-value">{school.year_built != null ? school.year_built : '—'}</span>
+          <span className="detail-value">{school.year_built != null ? school.year_built : 'нет данных'}</span>
         </div>
       </section>
 

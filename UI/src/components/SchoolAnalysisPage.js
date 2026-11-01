@@ -99,7 +99,7 @@ export default function SchoolAnalysisPage({ school, rank, total, onBack, onShow
         <div className="ap-score">
           <span className="ap-score-label">Итоговый балл</span>
           <span className="ap-score-value">
-            {school.rating_total != null ? Number(school.rating_total).toFixed(2) : '—'}
+            {school.rating_total != null ? Number(school.rating_total).toFixed(2) : 'нет данных'}
           </span>
           <span className="ap-score-caption">баллов</span>
         </div>
@@ -120,11 +120,11 @@ export default function SchoolAnalysisPage({ school, rank, total, onBack, onShow
         </div>
         <div className="ap-card ap-metric">
           <span className="ap-metric-label">Средний балл ЕГЭ{school.ege_year ? ` ${school.ege_year}` : ''}</span>
-          <span className="ap-metric-value">{school.ege_average_score > 0 ? Number(school.ege_average_score).toFixed(1) : '—'}</span>
+          <span className="ap-metric-value">{school.ege_average_score > 0 ? Number(school.ege_average_score).toFixed(1) : 'нет данных'}</span>
         </div>
         <div className="ap-card ap-metric">
           <span className="ap-metric-label">Олимпиады</span>
-          <span className="ap-metric-value">{school.olympiad_winners_count || '—'}</span>
+          <span className="ap-metric-value">{school.olympiad_winners_count || 'нет данных'}</span>
           {school.olympiad_winners_count > 0 && (
             <span className="ap-metric-sub">победителей и призёров</span>
           )}
@@ -132,7 +132,7 @@ export default function SchoolAnalysisPage({ school, rank, total, onBack, onShow
         <div className="ap-card ap-metric">
           <span className="ap-metric-label">Поступление в вузы{school.university_admission_year ? ` ${school.university_admission_year}` : ''}</span>
           <span className="ap-metric-value">
-            {school.university_admission_percent != null ? `${Math.round(school.university_admission_percent)}%` : '—'}
+            {school.university_admission_percent != null ? `${Math.round(school.university_admission_percent)}%` : 'нет данных'}
           </span>
         </div>
       </div>
@@ -140,12 +140,12 @@ export default function SchoolAnalysisPage({ school, rank, total, onBack, onShow
       <section className="ap-card ap-section">
         <h3>О здании</h3>
         <div className="ap-kv-grid">
-          <div className="ap-kv"><span>Год постройки</span><b>{school.year_built ?? '—'}</b></div>
-          <div className="ap-kv"><span>Год реконструкции</span><b>{school.reconstruction_year ?? '—'}</b></div>
-          <div className="ap-kv"><span>Этажность</span><b>{school.floors ?? '—'}</b></div>
-          <div className="ap-kv"><span>Вместимость</span><b>{school.capacity ? `${school.capacity} мест` : '—'}</b></div>
-          <div className="ap-kv"><span>Площадь</span><b>{school.area_sqm ? `${Number(school.area_sqm).toLocaleString('ru-RU')} м²` : '—'}</b></div>
-          <div className="ap-kv"><span>Материал</span><b>{school.wall_material || '—'}</b></div>
+          <div className="ap-kv"><span>Год постройки</span><b>{school.year_built ?? 'нет данных'}</b></div>
+          <div className="ap-kv"><span>Год реконструкции</span><b>{school.reconstruction_year ?? 'нет данных'}</b></div>
+          <div className="ap-kv"><span>Этажность</span><b>{school.floors ?? 'нет данных'}</b></div>
+          <div className="ap-kv"><span>Вместимость</span><b>{school.capacity ? `${school.capacity} мест` : 'нет данных'}</b></div>
+          <div className="ap-kv"><span>Площадь</span><b>{school.area_sqm ? `${Number(school.area_sqm).toLocaleString('ru-RU')} м²` : 'нет данных'}</b></div>
+          <div className="ap-kv"><span>Материал</span><b>{school.wall_material || 'нет данных'}</b></div>
         </div>
       </section>
 
@@ -184,7 +184,7 @@ export default function SchoolAnalysisPage({ school, rank, total, onBack, onShow
         <p className="ap-muted ap-section-hint">
           Мы проанализировали отзывы о школе из открытых источников с помощью нейросетей, чтобы выделить
           главные темы и общую тональность мнений родителей и учеников. Публикуются только агрегированные
-          оценки — без исходных текстов.
+          оценки, без исходных текстов.
           {loadingReviews ? ' Загрузка…' : totalMentions > 0 ? ` Основа: ${reviews.length} отзывов.` : ' Отзывов с анализом пока нет.'}
         </p>
 

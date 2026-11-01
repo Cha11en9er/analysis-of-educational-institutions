@@ -245,7 +245,7 @@ export default function MapView({
     const schoolsKey = validSchools.map((s2) => s2.school_id).join(',');
     if (lastSchoolsKeyRef.current !== schoolsKey) {
       lastSchoolsKeyRef.current = schoolsKey;
-      cameraAdjustedRef.current = false; // новый набор — разрешаем одну подгонку
+      cameraAdjustedRef.current = false; // новый набор разрешает одну подгонку
     }
     if (showAttachedLayer) {
       const pts = [];

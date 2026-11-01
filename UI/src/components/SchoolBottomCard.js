@@ -101,7 +101,7 @@ export default function SchoolBottomCard({ school, rank, total, maxima, onClose,
             <div className="bottom-card-address">{school.school_address}</div>
           </div>
           <div className="bottom-card-score">
-            <span className="score-value">{school.rating_total != null ? Number(school.rating_total).toFixed(1) : '—'}</span>
+            <span className="score-value">{school.rating_total != null ? Number(school.rating_total).toFixed(1) : 'нет данных'}</span>
             <span className="score-caption">баллов</span>
           </div>
         </div>
@@ -115,6 +115,9 @@ export default function SchoolBottomCard({ school, rank, total, maxima, onClose,
           )}
           {school.ege_average_score != null && school.ege_average_score > 0 && (
             <div className="fact"><span className="fact-src">ЕГЭ{school.ege_year ? ` ${school.ege_year}` : ''}</span><span className="fact-val">{Number(school.ege_average_score).toFixed(1)}</span></div>
+          )}
+          {school.university_admission_percent != null && school.university_admission_percent > 0 && (
+            <div className="fact"><span className="fact-src">В вузы{school.university_admission_year ? ` ${school.university_admission_year}` : ''}</span><span className="fact-val">{Math.round(school.university_admission_percent)}%</span></div>
           )}
           {school.olympiad_winners_count != null && school.olympiad_winners_count > 0 && (
             <div className="fact"><span className="fact-src">Олимпиады</span><span className="fact-val">{school.olympiad_winners_count}</span></div>
