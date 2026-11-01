@@ -1040,7 +1040,7 @@
   "in_uchgrad_school_id": null
  },
  {
-  "kind": "vuz",
+  "kind": "general",
   "code_oo": 238023,
   "city": "Энгельс",
   "ownership": "public",
@@ -6162,7 +6162,7 @@
   "in_uchgrad_school_id": null
  },
  {
-  "kind": "other",
+  "kind": "vuz",
   "code_oo": 249036,
   "city": "Саратов",
   "ownership": "public",
@@ -7020,7 +7020,7 @@
   "in_uchgrad_school_id": null
  },
  {
-  "kind": "other",
+  "kind": "vuz",
   "code_oo": 254014,
   "city": "Саратов",
   "ownership": "private",
@@ -7046,7 +7046,7 @@
   "in_uchgrad_school_id": null
  },
  {
-  "kind": "other",
+  "kind": "vuz",
   "code_oo": 254031,
   "city": "Саратов",
   "ownership": "public",
@@ -7228,7 +7228,7 @@
   "in_uchgrad_school_id": null
  },
  {
-  "kind": "vuz",
+  "kind": "other",
   "code_oo": 256002,
   "city": "Саратов",
   "ownership": "public",
@@ -7644,7 +7644,7 @@
   "in_uchgrad_school_id": null
  },
  {
-  "kind": "vuz",
+  "kind": "other",
   "code_oo": 256012,
   "city": "Саратов",
   "ownership": "public",
