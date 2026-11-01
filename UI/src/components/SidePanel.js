@@ -31,7 +31,7 @@ function sortSchools(schools, sortKey) {
     const va = val(a);
     const vb = val(b);
     if (va == null && vb == null) return (a.school_id || 0) - (b.school_id || 0);
-    if (va == null) return 1; // школы без данных — вниз списка
+    if (va == null) return 1; // школы без данных идут вниз списка
     if (vb == null) return -1;
     return sortKey === 'year_built' ? vb - va : vb - va;
   });
@@ -102,7 +102,7 @@ export default function SidePanel({
         <img src={logo} alt="УчГрад" className="brand-logo" />
         <div>
           <h1 className="panel-title">УчГрад</h1>
-          <p className="panel-subtitle">Школы · рейтинги, ЕГЭ, отзывы</p>
+          <p className="panel-subtitle">Рейтинги школ, ЕГЭ и отзывы</p>
         </div>
       </div>
 
@@ -312,7 +312,7 @@ export default function SidePanel({
         <div className="school-list">
           {loading && rankedSchools.length === 0 && <div className="school-list-empty">Загрузка…</div>}
           {!loading && rankedSchools.length === 0 && (
-            <div className="school-list-empty">Ничего не найдено — измените фильтры</div>
+            <div className="school-list-empty">Ничего не найдено. Измените фильтры</div>
           )}
           {rankedSchools.map((s, idx) => (
             <button
@@ -327,7 +327,7 @@ export default function SidePanel({
                 <span className="school-row-meta">
                   {s.rating_total != null && <span className="pts">{Number(s.rating_total).toFixed(1)} pts</span>}
                   {s.ege_average_score != null && s.ege_average_score > 0 && (
-                    <span className="ege">· ЕГЭ {Math.round(s.ege_average_score)}</span>
+                    <span className="ege"> ЕГЭ {Math.round(s.ege_average_score)}</span>
                   )}
                 </span>
               </span>

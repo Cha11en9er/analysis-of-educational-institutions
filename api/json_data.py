@@ -170,6 +170,17 @@ def filter_schools_for_map(
 
         out.append(school_to_map_item(raw))
 
+    # здания-пары: наследуем флаг анализа отзывов от пары с отзывами
+    by_name: dict[str, bool] = {}
+    for sch in out:
+        key = (sch.get("name_ym") or sch.get("name_2gis") or "").strip().lower()
+        if key:
+            by_name[key] = by_name.get(key, False) or sch["has_review_analysis"]
+    for sch in out:
+        key = (sch.get("name_ym") or sch.get("name_2gis") or "").strip().lower()
+        if key and not sch["has_review_analysis"] and by_name.get(key):
+            sch["has_review_analysis"] = True
+
     out.sort(key=lambda s: s["school_id"])
     return out
 

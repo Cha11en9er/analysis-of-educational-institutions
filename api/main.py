@@ -359,6 +359,16 @@ async def get_schools_for_map(
         analyz_ids = review_analysis_school_ids()
         for sch in schools:
             sch["has_review_analysis"] = sch["school_id"] in analyz_ids
+        # здания-пары (одно учреждение, два адреса): наследуем флаг от пары с отзывами
+        by_name: dict[str, bool] = {}
+        for sch in schools:
+            key = (sch.get("name_ym") or sch.get("name_2gis") or "").strip().lower()
+            if key:
+                by_name[key] = by_name.get(key, False) or sch["has_review_analysis"]
+        for sch in schools:
+            key = (sch.get("name_ym") or sch.get("name_2gis") or "").strip().lower()
+            if key and not sch["has_review_analysis"] and by_name.get(key):
+                sch["has_review_analysis"] = True
 
         schools = apply_preference_scores(
             schools,
