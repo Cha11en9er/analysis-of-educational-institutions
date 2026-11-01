@@ -1105,7 +1105,7 @@
   "in_uchgrad_school_id": null
  },
  {
-  "kind": "internat_cadet",
+  "kind": "general",
   "code_oo": 238353,
   "city": "Энгельс",
   "ownership": "public",
@@ -3497,7 +3497,7 @@
   "in_uchgrad_school_id": 11
  },
  {
-  "kind": "other",
+  "kind": "general",
   "code_oo": 245802,
   "city": "Саратов",
   "ownership": "public",
@@ -6929,7 +6929,7 @@
   "in_uchgrad_school_id": null
  },
  {
-  "kind": "other",
+  "kind": "vuz",
   "code_oo": 252019,
   "city": "Саратов",
   "ownership": "private",
@@ -6968,7 +6968,7 @@
   "in_uchgrad_school_id": null
  },
  {
-  "kind": "general",
+  "kind": "other",
   "code_oo": 253018,
   "city": "Энгельс",
   "ownership": "public",
@@ -6981,7 +6981,7 @@
   "in_uchgrad_school_id": null
  },
  {
-  "kind": "general",
+  "kind": "other",
   "code_oo": 253023,
   "city": "Саратов",
   "ownership": "public",
@@ -7332,7 +7332,7 @@
   "in_uchgrad_school_id": null
  },
  {
-  "kind": "other",
+  "kind": "internat_cadet",
   "code_oo": 255001,
   "city": "Саратов",
   "ownership": "public",
@@ -7644,7 +7644,7 @@
   "in_uchgrad_school_id": null
  },
  {
-  "kind": "vuz",
+  "kind": "other",
   "code_oo": 256012,
   "city": "Саратов",
   "ownership": "public",
