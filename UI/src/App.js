@@ -4,6 +4,7 @@ import './App.css';
 import MapView from './components/MapView';
 import SidePanel from './components/SidePanel';
 import SchoolBottomCard from './components/SchoolBottomCard';
+import InstitutionBottomCard from './components/InstitutionBottomCard';
 import SchoolAnalysisPage from './components/SchoolAnalysisPage';
 import AnalyticsView, { AnalyticsChart } from './components/AnalyticsView';
 import Toast from './components/Toast';
@@ -226,9 +227,12 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fetchSchools]);
 
-  // Клик по учреждению — карточка-минимум (имя/адрес/сайт)
+  // Клик по учреждению открывает его карточку и закрывает школьную
   useEffect(() => {
     window.__uchgradInstitutionClick = (it) => {
+      setSelectedSchoolId(null);
+      setSchoolDetail(null);
+      setShowAnalysisPage(false);
       setInstitutionToast(it);
     };
     return () => {
@@ -263,6 +267,7 @@ function App() {
   const handleSchoolClick = useCallback(
     async (school) => {
       setShowAnalysisPage(false);
+      setInstitutionToast(null);
       setSelectedSchoolId(school.school_id);
       setSchoolDetailLoading(true);
       setSchoolDetail(null);
@@ -312,6 +317,22 @@ function App() {
   }), [schools]);
 
   const handleOpenAnalysisPage = useCallback(() => setShowAnalysisPage(true), []);
+
+  const handleGroupChange = useCallback((g) => {
+    setInstitutionToast(null);
+    setSelectedSchoolId(null);
+    setSchoolDetail(null);
+    setShowAnalysisPage(false);
+    setSelectedGroup(g);
+  }, []);
+
+  const handleCityChange = useCallback((c) => {
+    setInstitutionToast(null);
+    setSelectedSchoolId(null);
+    setSchoolDetail(null);
+    setShowAnalysisPage(false);
+    setSelectedCity(c);
+  }, []);
 
   const handleCloseBottomCard = useCallback(() => {
     setSelectedSchoolId(null);
@@ -462,9 +483,9 @@ function App() {
           sortBy={sortBy}
           onSortChange={setSortBy}
           selectedGroup={selectedGroup}
-          onGroupChange={setSelectedGroup}
+          onGroupChange={handleGroupChange}
           selectedCity={selectedCity}
-          onCityChange={setSelectedCity}
+          onCityChange={handleCityChange}
           schoolOwnership={schoolOwnership}
           onOwnershipChange={setSchoolOwnership}
           groupInstitutions={groupInstitutions}
@@ -518,6 +539,12 @@ function App() {
                 onOpenDetails={handleOpenAnalysisPage}
               />
             )}
+            {selectedGroup !== 'schools' && institutionToast && (
+              <InstitutionBottomCard
+                institution={institutionToast}
+                onClose={() => setInstitutionToast(null)}
+              />
+            )}
           </>
         )}
       </main>
@@ -531,28 +558,6 @@ function App() {
           loading={loading}
           onToast={setToast}
         />
-      )}
-      {institutionToast && (
-        <div className="institution-card" role="status">
-          <button
-            type="button"
-            className="bottom-card-close"
-            onClick={() => setInstitutionToast(null)}
-            aria-label="Закрыть"
-          >
-            ✕
-          </button>
-          <div className="inst-name">{institutionToast.name}</div>
-          <div className="inst-address">{institutionToast.address || 'Адрес не указан'}</div>
-          <div className="inst-links">
-            {institutionToast.phone && <span className="inst-item">{institutionToast.phone}</span>}
-            {institutionToast.site && (
-              <a href={institutionToast.site} target="_blank" rel="noopener noreferrer">
-                Сайт учреждения
-              </a>
-            )}
-          </div>
-        </div>
       )}
       {toast && (
         <Toast
