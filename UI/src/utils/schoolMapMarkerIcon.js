@@ -1,13 +1,11 @@
 import { schoolHasAttachedHouseData } from './schoolAttachment';
 
-const BLUE = '#2563eb';
-const RASPBERRY = '#be185d';
+const RASPBERRY = '#be185d'; // единый цвет всех школ в любом городе
 
 /**
  * Параметры круглого HTML-маркера школы (без Leaflet).
  */
 export function getSchoolMarkerStyle(school, { prefsActive, scoreMin, scoreMax } = {}) {
-  const hasRa = school.has_review_analysis === true;
   const attached = schoolHasAttachedHouseData(school);
 
   let diameter = 20;
@@ -21,7 +19,7 @@ export function getSchoolMarkerStyle(school, { prefsActive, scoreMin, scoreMax }
     opacity = 0.4 + clamped * 0.6;
   }
 
-  const fill = hasRa ? RASPBERRY : BLUE;
+  const fill = RASPBERRY;
   const roadsSvg = attached
     ? `<svg class="school-marker-roads" viewBox="0 0 14 14" width="68%" height="68%" aria-hidden="true" style="pointer-events:none"><path d="M1 7h12M2 3.5h8M4 10.5h8" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.35" stroke-linecap="round"/></svg>`
     : '';

@@ -211,16 +211,13 @@ export default function MapView({
 
     // Учреждения выбранной группы (не-школы): маркеры цветов по kind
     if (institutionsGroup && Array.isArray(institutionsGroup.items)) {
-      const KIND_COLORS = {
-        sport_do: '#16a34a',
-        arts_do: '#a855f7',
+      // один цвет на всю группу (садики голубые, вузы красные, иные зелёные)
+      const GROUP_COLORS = {
         preschool: '#0ea5e9',
-        internat_cadet: '#f59e0b',
-        spo: '#64748b',
         vuz: '#dc2626',
-        general: '#ea580c',
-        other: '#64748b',
+        other: '#16a34a',
       };
+      const groupColor = GROUP_COLORS[institutionsGroup.group] || '#64748b';
       const list = [];
       institutionsGroup.items.forEach((it) => {
         const c = it.location?.coordinates;
@@ -228,7 +225,7 @@ export default function MapView({
         const [lon, lat] = c;
         const el = document.createElement('div');
         el.className = 'institution-marker-yandex';
-        el.style.background = KIND_COLORS[it.kind] || '#64748b';
+        el.style.background = groupColor;
         el.title = `${it.name}\n${it.address || ''}`;
         el.addEventListener('click', (e) => {
           e.stopPropagation();
