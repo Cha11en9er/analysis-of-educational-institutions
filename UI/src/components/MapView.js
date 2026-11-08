@@ -52,8 +52,6 @@ export default function MapView({
   const onSchoolClickRef = useRef(onSchoolClick);
   const [mapError, setMapError] = useState(null);
   const [mapReady, setMapReady] = useState(false);
-  const [housesVisible, setHousesVisible] = useState(false);
-  const housesVisibleRef = useRef(false);
 
   useEffect(() => {
     onSchoolClickRef.current = onSchoolClick;
@@ -119,16 +117,6 @@ export default function MapView({
         map.addChild(new YMapDefaultFeaturesLayer());
 
         mapRef.current = map;
-        try {
-          map.on('update', () => {
-            const zoom = map.location?.zoom ?? 0;
-            const visible = zoom >= 15;
-            housesVisibleRef.current = visible;
-            setHousesVisible(visible);
-          });
-        } catch (e) {
-          console.warn('Не удалось подписаться на обновления карты', e);
-        }
         setMapReady(true);
         setMapError(null);
       } catch (err) {
@@ -211,7 +199,7 @@ export default function MapView({
     // геокода всех адресов — см. .cursor/rules/geocoding.mdc)
     // Дома прикрепления: точки только на близком зуме (иначе фриз на сотнях маркеров);
     // кластеризатор ymaps3 требует importmap — отложено
-    if (showAttachedLayer && housesVisible) {
+    if (showAttachedLayer) {
       const houseFeatures = (addressesForSelected || [])
         .filter((row) => row.lat != null && row.lon != null)
         .map((row, idx) => ({
@@ -293,31 +281,13 @@ export default function MapView({
       lastSchoolsKeyRef.current = schoolsKey;
       cameraAdjustedRef.current = false; // новый набор разрешает одну подгонку
     }
-    if (showAttachedLayer) {
-      const pts = [];
-      const sc = lonLatOfSchool(selectedSchool);
-      if (sc) pts.push(sc);
-      (addressesForSelected || []).forEach((a) => {
-        if (a.lat != null && a.lon != null) pts.push([a.lon, a.lat]);
-      });
-      // границы по самим точкам домов
-      if (pts.length > 1) {
-        const lats = pts.map((p) => p[1]);
-        const lons = pts.map((p) => p[0]);
-        pts.push([Math.min(lats), Math.min(lons)], [Math.max(lats), Math.max(lons)]);
-      }
-      const bounds = boundsFromLonLats(pts);
-      if (bounds) {
-        map.setLocation({ bounds, duration: 300 });
-        viewRef.current = { ...viewRef.current, zoom: 16 };
-      }
-    } else if (selectedSchool) {
+    if (selectedSchool) {
       const coords = lonLatOfSchool(selectedSchool);
       if (coords) {
-        // не сбрасываем настройки камеры: центр — на школу, зум сохраняем текущий
-        // (поднимаем только если смотрим на весь город)
+        // камера не «отдаляется»: центр на школу, текущий зум сохраняем
+        // (поднимаем только если смотрели на весь город)
         const currentZoom = map.location?.zoom ?? viewRef.current.zoom ?? DEFAULT_ZOOM;
-        const zoom = currentZoom >= 14 ? currentZoom : 15;
+        const zoom = Math.max(currentZoom, 15);
         viewRef.current = { center: coords, zoom };
         map.setLocation({ center: coords, zoom, duration: 600 });
       }
