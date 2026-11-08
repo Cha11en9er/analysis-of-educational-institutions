@@ -53,7 +53,6 @@ export default function MapView({
   const onSchoolClickRef = useRef(onSchoolClick);
   const [mapError, setMapError] = useState(null);
   const [mapReady, setMapReady] = useState(false);
-  const [housesZoom, setHousesZoom] = useState(false);
 
   useEffect(() => {
     onSchoolClickRef.current = onSchoolClick;
@@ -120,20 +119,6 @@ export default function MapView({
 
         mapRef.current = map;
         try {
-          let lastGate = -1;
-          map.addChild(new ymaps3.YMapListener({
-            onUpdate: () => {
-              const zoom = map.location?.zoom ?? 0;
-              const gate = zoom >= 16;
-              if (gate !== lastGate) {
-                lastGate = gate;
-                setHousesZoom(gate);
-              }
-            },
-          }));
-        } catch (e) {
-          console.warn('Не удалось добавить слушатель карты', e);
-        }
         setMapReady(true);
         setMapError(null);
       } catch (err) {
@@ -215,7 +200,7 @@ export default function MapView({
     // Зона прикрепления: точки домов при открытой карточке
     document.title = 'DBG sel=' + (selectedSchool ? selectedSchool.school_id : 'null') + ' catch=' + (selectedSchool?.catchment?.length ?? 'u') + ' sal=' + showAttachedLayer + ' ready=' + mapReady;
     // Дома прикрепления: DOM-маркеры только на близком зуме (иначе фриз)
-    if (showAttachedLayer && housesZoom) {
+    if (showAttachedLayer) {
       (addressesForSelected || []).forEach((row) => {
         if (row.lat == null || row.lon == null) return;
         const dot = document.createElement('div');
@@ -268,7 +253,7 @@ export default function MapView({
         // камера не «отдаляется»: центр на школу, текущий зум сохраняем
         // (поднимаем только если смотрели на весь город)
         const currentZoom = map.location?.zoom ?? viewRef.current.zoom ?? DEFAULT_ZOOM;
-        const zoom = Math.max(currentZoom, 15);
+        const zoom = Math.max(currentZoom, 16);
         viewRef.current = { center: coords, zoom };
         map.setLocation({ center: coords, zoom, duration: 600 });
       }
