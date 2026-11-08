@@ -228,8 +228,15 @@ function App() {
     const m = window.location.pathname.match(/^\/school\/(\d+)\/?$/);
     if (m) {
       const sid = Number(m[1]);
-      axios.get(`${API_URL}/api/schools/${sid}`)
-        .then(({ data }) => { setSchoolDetail(data); setSelectedSchoolId(sid); setSchoolDetailLoading(false); })
+      Promise.all([
+        axios.get(`${API_URL}/api/schools/${sid}`),
+        axios.get(`${API_URL}/api/schools/${sid}/catchment`).catch(() => ({ data: null })),
+      ])
+        .then(([{ data: detail }, { data: catchment }]) => {
+          setSchoolDetail({ ...detail, catchment: catchment?.points || [] });
+          setSelectedSchoolId(sid);
+          setSchoolDetailLoading(false);
+        })
         .catch(() => setSchoolDetailLoading(false));
       setSelectedSchoolId(sid);
       setSchoolDetailLoading(true);
