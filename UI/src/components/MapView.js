@@ -118,7 +118,6 @@ export default function MapView({
         map.addChild(new YMapDefaultFeaturesLayer());
 
         mapRef.current = map;
-        try {
         setMapReady(true);
         setMapError(null);
       } catch (err) {
