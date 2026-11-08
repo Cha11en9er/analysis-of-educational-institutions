@@ -53,6 +53,7 @@ export default function MapView({
   const onSchoolClickRef = useRef(onSchoolClick);
   const [mapError, setMapError] = useState(null);
   const [mapReady, setMapReady] = useState(false);
+  const [housesZoom, setHousesZoom] = useState(false);
 
   useEffect(() => {
     onSchoolClickRef.current = onSchoolClick;
@@ -118,6 +119,21 @@ export default function MapView({
         map.addChild(new YMapDefaultFeaturesLayer());
 
         mapRef.current = map;
+        try {
+          let lastGate = -1;
+          map.addChild(new ymaps3.YMapListener({
+            onUpdate: () => {
+              const zoom = map.location?.zoom ?? 0;
+              const gate = zoom >= 16;
+              if (gate !== lastGate) {
+                lastGate = gate;
+                setHousesZoom(gate);
+              }
+            },
+          }));
+        } catch (e) {
+          console.warn('Не удалось добавить слушатель карты', e);
+        }
         setMapReady(true);
         setMapError(null);
       } catch (err) {
@@ -198,27 +214,17 @@ export default function MapView({
 
     // Зона прикрепления: точки домов при открытой карточке
     document.title = 'DBG sel=' + (selectedSchool ? selectedSchool.school_id : 'null') + ' catch=' + (selectedSchool?.catchment?.length ?? 'u') + ' sal=' + showAttachedLayer + ' ready=' + mapReady;
-    // Дома прикрепления: canvas-слой (один canvas на все дома — без DOM-фриза
-    // при сотнях точек). Данные — housesDataRef, рисуются на каждый кадр карты.
-    housesDataRef.current = showAttachedLayer
-      ? (addressesForSelected || []).filter((row) => row.lat != null && row.lon != null)
-      : [];
-    if (showAttachedLayer && housesDataRef.current.length > 0) {
-      const housesLayer = new YMapCustomLayer({
-        render: (ctx, params) => {
-          ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-          const proj = params.projection;
-          ctx.fillStyle = 'rgba(249, 115, 22, 0.9)';
-          for (const row of housesDataRef.current) {
-            const [x, y] = proj.toScreenCoordinates([row.lon, row.lat]);
-            ctx.beginPath();
-            ctx.arc(x, y, 4, 0, Math.PI * 2);
-            ctx.fill();
-          }
-        },
+    // Дома прикрепления: DOM-маркеры только на близком зуме (иначе фриз)
+    if (showAttachedLayer && housesZoom) {
+      (addressesForSelected || []).forEach((row) => {
+        if (row.lat == null || row.lon == null) return;
+        const dot = document.createElement('div');
+        dot.className = 'house-marker-yandex';
+        dot.title = row.address || `${row.lat}, ${row.lon}`;
+        const house = new YMapMarker({ coordinates: [row.lon, row.lat], zIndex: 15 }, dot);
+        map.addChild(house);
+        layers.houses.push(house);
       });
-      map.addChild(housesLayer);
-      layers.houses.push(housesLayer);
     }
 
     // Учреждения выбранной группы (не-школы): маркеры цветов по kind
