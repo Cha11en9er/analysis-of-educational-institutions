@@ -82,8 +82,9 @@ export function loadYmaps3(apiKey) {
 
     // Модуль кластеризации (дефолтная тема Яндекса) для домов прикрепления
     try {
-      window.__ymaps3Clusterer = await window.ymaps3.import(
-        '@yandex/ymaps3-default-ui-theme@0.0.25/dist/esm/index.mjs'
+      // модуль self-contained (без import 'ymaps3') — обычный dynamic import
+      window.__ymaps3Clusterer = await import(
+        'https://unpkg.com/@yandex/ymaps3-default-ui-theme@0.0.25/dist/esm/index.mjs'
       );
     } catch (e) {
       console.warn('Не удалось загрузить модуль кластеризации', e);
