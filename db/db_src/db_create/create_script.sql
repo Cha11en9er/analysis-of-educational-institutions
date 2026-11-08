@@ -210,3 +210,6 @@ ALTER TABLE sa.school ALTER COLUMN building_info DROP NOT NULL;
 
 -- Миграция 01.11.26 (2): медианная цена жилья в прикреплённых домах
 ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS price_median NUMERIC(12,0);
+
+-- Миграция 08.11.26: review_id 2ГИС бывает крупнее INT — BIGINT
+ALTER TABLE sa.review ALTER COLUMN review_id TYPE BIGINT;
