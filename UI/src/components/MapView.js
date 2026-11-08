@@ -196,7 +196,7 @@ export default function MapView({
     }
 
     // Зона прикрепления: точки домов при открытой карточке
-    document.title = 'DBG sal=' + showAttachedLayer + ' addr=' + (addressesForSelected || []).length;
+    document.title = 'DBG sel=' + (selectedSchool ? selectedSchool.school_id : 'null') + ' catch=' + (selectedSchool?.catchment?.length ?? 'u') + ' sal=' + showAttachedLayer + ' ready=' + mapReady;
     if (showAttachedLayer) {
       const houseFeatures = (addressesForSelected || [])
         .filter((row) => row.lat != null && row.lon != null)
