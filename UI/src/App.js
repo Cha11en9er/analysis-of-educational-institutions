@@ -23,6 +23,10 @@ function resolveApiUrl() {
 }
 const API_URL = resolveApiUrl();
 
+const axiosApi = axios.create({
+  headers: { 'Cache-Control': 'no-cache' },
+});
+
 const LS_PREFS = 'schoolMapPreferences';
 const LS_MODAL_DISMISSED = 'schoolPreferencesModalDismissed';
 
@@ -188,7 +192,7 @@ function App() {
         const p = { ...params };
         if (schoolOwnership !== 'all') p.ownership = schoolOwnership;
         p.city = selectedCity;
-        const { data } = await axios.get(`${API_URL}/api/schools/map`, { params: p });
+        const { data } = await axiosApi.get(`${API_URL}/api/schools/map`, { params: p });
         setSchools(data.schools || []);
         const count = data.count ?? (data.schools || []).length;
         setTotalCount(count);
@@ -229,15 +233,16 @@ function App() {
     if (m) {
       const sid = Number(m[1]);
       Promise.all([
-        axios.get(`${API_URL}/api/schools/${sid}`),
-        axios.get(`${API_URL}/api/schools/${sid}/catchment`).catch(() => ({ data: null })),
+        axiosApi.get(`${API_URL}/api/schools/${sid}`),
+        axiosApi.get(`${API_URL}/api/schools/${sid}/catchment`).catch(() => ({ data: null })),
       ])
         .then(([{ data: detail }, { data: catchment }]) => {
+          document.title = 'DBG route catch=' + (catchment?.points || []).length;
           setSchoolDetail({ ...detail, catchment: catchment?.points || [] });
           setSelectedSchoolId(sid);
           setSchoolDetailLoading(false);
         })
-        .catch(() => setSchoolDetailLoading(false));
+        .catch((e) => { document.title = 'DBG route ERR ' + String(e).slice(0, 60); setSchoolDetailLoading(false); });
       setSelectedSchoolId(sid);
       setSchoolDetailLoading(true);
     }
@@ -291,7 +296,7 @@ function App() {
       try {
         window.history.pushState({}, '', `/school/${school.school_id}`);
         const [{ data: detail }, { data: catchment }] = await Promise.all([
-          axios.get(`${API_URL}/api/schools/${school.school_id}`),
+          axiosApi.get(`${API_URL}/api/schools/${school.school_id}`),
           axios
             .get(`${API_URL}/api/schools/${school.school_id}/catchment`)
             .catch(() => ({ data: null })),

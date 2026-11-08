@@ -37,7 +37,7 @@ export default function SchoolAnalysisPage({ school, rank, total, onBack, onShow
     let cancelled = false;
     setLoadingReviews(true);
     axios
-      .get(`${API_URL}/api/schools/${school.school_id}/reviews/topics`)
+      .get(`${API_URL}/api/schools/${school.school_id}/reviews/topics`, { headers: { 'Cache-Control': 'no-cache' } })
       .then(({ data }) => { if (!cancelled) setReviews(data.reviews || []); })
       .catch(() => { if (!cancelled) setReviews([]); })
       .finally(() => { if (!cancelled) setLoadingReviews(false); });

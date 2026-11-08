@@ -195,10 +195,8 @@ export default function MapView({
       });
     }
 
-    // Зона прикрепления: только точки домов (обводки/полигоны решим после полного
-    // геокода всех адресов — см. .cursor/rules/geocoding.mdc)
-    // Дома прикрепления: точки только на близком зуме (иначе фриз на сотнях маркеров);
-    // кластеризатор ymaps3 требует importmap — отложено
+    // Зона прикрепления: точки домов при открытой карточке
+    document.title = 'DBG sal=' + showAttachedLayer + ' addr=' + (addressesForSelected || []).length;
     if (showAttachedLayer) {
       const houseFeatures = (addressesForSelected || [])
         .filter((row) => row.lat != null && row.lon != null)
@@ -244,6 +242,7 @@ export default function MapView({
           layers.houses.push(house);
         });
       }
+      document.title = 'DBG att=' + showAttachedLayer + ' feats=' + houseFeatures.length + ' clusMod=' + !!window.__ymaps3Clusterer;
     }
 
     // Учреждения выбранной группы (не-школы): маркеры цветов по kind
