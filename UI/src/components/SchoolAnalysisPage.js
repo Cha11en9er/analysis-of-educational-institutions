@@ -135,6 +135,14 @@ export default function SchoolAnalysisPage({ school, rank, total, onBack, onShow
             {school.university_admission_percent != null ? `${Math.round(school.university_admission_percent)}%` : 'нет данных'}
           </span>
         </div>
+        <div className="ap-card ap-metric">
+          <span className="ap-metric-label">Медиана жилья в прикреплённых домах</span>
+          <span className="ap-metric-value">
+            {school.price_median != null && school.price_median > 0
+              ? `${(school.price_median / 1e6).toFixed(1)} млн ₽`
+              : 'нет данных'}
+          </span>
+        </div>
       </div>
 
       <section className="ap-card ap-section">

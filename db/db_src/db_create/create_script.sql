@@ -207,3 +207,6 @@ ALTER TABLE sa.school ALTER COLUMN floors DROP NOT NULL;
 ALTER TABLE sa.school ALTER COLUMN year_built DROP NOT NULL;
 ALTER TABLE sa.school ALTER COLUMN school_address DROP NOT NULL;
 ALTER TABLE sa.school ALTER COLUMN building_info DROP NOT NULL;
+
+-- Миграция 01.11.26 (2): медианная цена жилья в прикреплённых домах
+ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS price_median NUMERIC(12,0);

@@ -8,6 +8,7 @@ DATA_SOURCE=db — старый режим PostgreSQL.
 from __future__ import annotations
 
 import json as json_lib
+import re
 import os
 import sys
 from datetime import date
@@ -418,7 +419,8 @@ async def get_school_by_id(school_id: int):
                 s.rating_ege, s.rating_olympiads, s.rating_teachers, s.rating_mto,
                 s.rating_psychological_climate, s.rating_sports_infrastructure,
                 s.rating_profiles,
-                s.capacity, s.building_info->>'area_sqm' AS area_sqm, s.material
+                s.capacity, s.building_info->>'area_sqm' AS area_sqm, s.material,
+                s.price_median
             FROM sa.school s
             LEFT JOIN sa.link l ON l.school_id = s.school_id
             LEFT JOIN sa.rating r ON r.school_id = s.school_id
@@ -487,6 +489,7 @@ async def get_school_by_id(school_id: int):
             "capacity": row[35],
             "area_sqm": _num(row[36]),
             "wall_material": row[37],
+            "price_median": int(row[38]) if row[38] is not None else None,
         }
     except psycopg2.Error as e:
         raise HTTPException(status_code=500, detail=f"Ошибка БД: {str(e)}") from e
@@ -681,6 +684,72 @@ async def get_school_catchment(school_id: int):
             for r in rows
         ]
         return {"school_id": school_id, "points": points, "count": len(points)}
+    except psycopg2.Error as e:
+        raise HTTPException(status_code=500, detail=f"Ошибка БД: {str(e)}") from e
+    finally:
+        if conn:
+            conn.close()
+
+
+
+@app.get("/api/schools/by-address")
+async def get_schools_by_address(
+    address: str = Query(..., min_length=5, max_length=300),
+    city: Optional[str] = Query(None),
+):
+    """Партнёрский поиск: адрес дома -> школы, за которыми он закреплён (M:N).
+
+    Пример: /api/schools/by-address?address=Тельмана улица 2&city=Энгельс
+    Возвращает школы с координатами и ссылкой на карточку на сайте.
+    """
+    if use_json():
+        raise HTTPException(status_code=501, detail="Поиск по адресу доступен только в db-режиме")
+    import psycopg2
+
+    addr = address.strip()
+    tokens = re.split(r"[,\s]+", addr)
+    house = next((t for t in reversed(tokens) if re.search(r"\d", t)), None)
+    street = " ".join(t for t in tokens if t != house).strip()
+    if not street or not house:
+        raise HTTPException(status_code=400, detail="Не удалось разобрать адрес: нужна улица и номер дома")
+
+    house_digits = re.sub(r"\D", "", house)
+    conn = None
+    try:
+        conn = get_db_connection()
+        cur = conn.cursor()
+        cur.execute(
+            r"""
+            SELECT s.school_id, s.name_ym, s.name_2gis, s.city, s.ownership,
+                   ST_Y(s.location::geometry) AS lat, ST_X(s.location::geometry) AS lon,
+                   a.street_norm, a.house_norm, a.resolved
+            FROM sa.address a
+            JOIN sa.school_address sal ON sal.address_id = a.address_id
+            JOIN sa.school s ON s.school_id = sal.school_id
+            WHERE a.geocode_status = 'ok'
+              AND a.street_norm ILIKE %s
+              AND (a.house_norm = %s OR regexp_replace(a.house_norm, '\D', '', 'g') = %s)
+            ORDER BY s.school_id
+            """,
+            ("%" + street + "%", house, house_digits),
+        )
+        rows = cur.fetchall()
+        cur.close()
+        schools = []
+        for r in rows:
+            item = {
+                "school_id": r[0],
+                "name": r[1] or r[2],
+                "city": r[3],
+                "ownership": r[4],
+                "matched_address": (r[7] or "") + ", " + (r[8] or ""),
+                "resolved_address": r[9],
+                "url": "https://uchgrad.ru/school/" + str(r[0]),
+            }
+            if r[5] is not None and r[6] is not None:
+                item["location"] = {"type": "Point", "coordinates": [float(r[6]), float(r[5])]}
+            schools.append(item)
+        return {"address": addr, "count": len(schools), "schools": schools}
     except psycopg2.Error as e:
         raise HTTPException(status_code=500, detail=f"Ошибка БД: {str(e)}") from e
     finally:

@@ -122,6 +122,9 @@ export default function SchoolBottomCard({ school, rank, total, maxima, onClose,
           {school.olympiad_winners_count != null && school.olympiad_winners_count > 0 && (
             <div className="fact"><span className="fact-src">Олимпиады</span><span className="fact-val">{school.olympiad_winners_count}</span></div>
           )}
+          {school.price_median != null && school.price_median > 0 && (
+            <div className="fact"><span className="fact-src">Медиана жилья</span><span className="fact-val">{(school.price_median / 1e6).toFixed(1)} млн</span></div>
+          )}
         </div>
 
         {components.length > 0 && (

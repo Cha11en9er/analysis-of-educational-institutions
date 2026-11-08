@@ -79,6 +79,16 @@ export function loadYmaps3(apiKey) {
     }
 
     await window.ymaps3.ready;
+
+    // Модуль кластеризации (дефолтная тема Яндекса) для домов прикрепления
+    try {
+      window.__ymaps3Clusterer = await window.ymaps3.import(
+        '@yandex/ymaps3-default-ui-theme@0.9/dist/browser/index.js'
+      );
+    } catch (e) {
+      console.warn('Не удалось загрузить модуль кластеризации', e);
+    }
+
     return window.ymaps3;
   })();
 

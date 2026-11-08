@@ -224,6 +224,16 @@ function App() {
     const p = buildParams('', defaultFilterState, false, rest, active);
     p.city = selectedCity;
     fetchSchools(p);
+    // прямой заход по ссылке вида /school/{id} (партнёрская интеграция)
+    const m = window.location.pathname.match(/^\/school\/(\d+)\/?$/);
+    if (m) {
+      const sid = Number(m[1]);
+      axios.get(`${API_URL}/api/schools/${sid}`)
+        .then(({ data }) => { setSchoolDetail(data); setSelectedSchoolId(sid); setSchoolDetailLoading(false); })
+        .catch(() => setSchoolDetailLoading(false));
+      setSelectedSchoolId(sid);
+      setSchoolDetailLoading(true);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fetchSchools]);
 
@@ -272,6 +282,7 @@ function App() {
       setSchoolDetailLoading(true);
       setSchoolDetail(null);
       try {
+        window.history.pushState({}, '', `/school/${school.school_id}`);
         const [{ data: detail }, { data: catchment }] = await Promise.all([
           axios.get(`${API_URL}/api/schools/${school.school_id}`),
           axios
@@ -337,6 +348,9 @@ function App() {
   const handleCloseBottomCard = useCallback(() => {
     setSelectedSchoolId(null);
     setSchoolDetail(null);
+    if (window.location.pathname !== '/') {
+      window.history.pushState({}, '', '/');
+    }
   }, []);
 
   const handleStatistics = useCallback(() => {
@@ -359,10 +373,16 @@ function App() {
     setShowAnalytics(false);
     setAnalyticsReviews([]);
     setAnalyticsAppliedTopics([]);
+    if (window.location.pathname !== '/') {
+      window.history.pushState({}, '', '/');
+    }
   }, []);
 
   const handleBackFromAnalysisPage = useCallback(() => {
     setShowAnalysisPage(false);
+    if (window.location.pathname !== '/') {
+      window.history.pushState({}, '', '/');
+    }
   }, []);
 
   const handleSearchSubmit = useCallback(() => {

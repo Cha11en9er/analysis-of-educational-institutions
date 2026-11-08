@@ -197,16 +197,53 @@ export default function MapView({
 
     // Зона прикрепления: только точки домов (обводки/полигоны решим после полного
     // геокода всех адресов — см. .cursor/rules/geocoding.mdc)
+    // Дома прикрепления: кластеризатор (текст страницы рендерится шрифтом-заглушкой,
+    // но данные в state; кластер решает фриз при сотнях домов)
     if (showAttachedLayer) {
-      (addressesForSelected || []).forEach((row) => {
-        if (row.lat == null || row.lon == null) return;
-        const dot = document.createElement('div');
-        dot.className = 'house-marker-yandex';
-        dot.title = row.address || `${row.lat}, ${row.lon}`;
-        const house = new YMapMarker({ coordinates: [row.lon, row.lat], zIndex: 15 }, dot);
-        map.addChild(house);
-        layers.houses.push(house);
-      });
+      const houseFeatures = (addressesForSelected || [])
+        .filter((row) => row.lat != null && row.lon != null)
+        .map((row, idx) => ({
+          type: 'Feature',
+          id: idx,
+          geometry: { type: 'Point', coordinates: [row.lon, row.lat] },
+          properties: { address: row.address || `${row.lat}, ${row.lon}` },
+        }));
+
+      const clustererMod = window.__ymaps3Clusterer;
+      if (clustererMod && houseFeatures.length > 0) {
+        const { YMapClusterer, methodGrid } = clustererMod;
+        const clusterer = new YMapClusterer({
+          method: methodGrid({ gridSize: 48 }),
+          features: houseFeatures,
+          marker: (feature) => {
+            const dot = document.createElement('div');
+            dot.className = 'house-marker-yandex';
+            dot.title = feature.properties.address;
+            return new YMapMarker(
+              { coordinates: feature.geometry.coordinates, zIndex: 15 },
+              dot
+            );
+          },
+          cluster: (cluster) => {
+            const el = document.createElement('div');
+            el.className = 'house-cluster-yandex';
+            el.textContent = String(cluster.features.length);
+            return new YMapMarker({ coordinates: cluster.coordinates, zIndex: 14 }, el);
+          },
+        });
+        map.addChild(clusterer);
+        layers.houses.push(clusterer);
+      } else if (houseFeatures.length > 0) {
+        // fallback: модуль кластеризации не загрузился — рисуем как раньше
+        houseFeatures.forEach((f) => {
+          const dot = document.createElement('div');
+          dot.className = 'house-marker-yandex';
+          dot.title = f.properties.address;
+          const house = new YMapMarker({ coordinates: f.geometry.coordinates, zIndex: 15 }, dot);
+          map.addChild(house);
+          layers.houses.push(house);
+        });
+      }
     }
 
     // Учреждения выбранной группы (не-школы): маркеры цветов по kind
