@@ -52,6 +52,8 @@ export default function MapView({
   const onSchoolClickRef = useRef(onSchoolClick);
   const [mapError, setMapError] = useState(null);
   const [mapReady, setMapReady] = useState(false);
+  const [housesVisible, setHousesVisible] = useState(false);
+  const housesVisibleRef = useRef(false);
 
   useEffect(() => {
     onSchoolClickRef.current = onSchoolClick;
@@ -117,6 +119,16 @@ export default function MapView({
         map.addChild(new YMapDefaultFeaturesLayer());
 
         mapRef.current = map;
+        try {
+          map.on('update', () => {
+            const zoom = map.location?.zoom ?? 0;
+            const visible = zoom >= 15;
+            housesVisibleRef.current = visible;
+            setHousesVisible(visible);
+          });
+        } catch (e) {
+          console.warn('Не удалось подписаться на обновления карты', e);
+        }
         setMapReady(true);
         setMapError(null);
       } catch (err) {
@@ -197,9 +209,9 @@ export default function MapView({
 
     // Зона прикрепления: только точки домов (обводки/полигоны решим после полного
     // геокода всех адресов — см. .cursor/rules/geocoding.mdc)
-    // Дома прикрепления: кластеризатор (текст страницы рендерится шрифтом-заглушкой,
-    // но данные в state; кластер решает фриз при сотнях домов)
-    if (showAttachedLayer) {
+    // Дома прикрепления: точки только на близком зуме (иначе фриз на сотнях маркеров);
+    // кластеризатор ymaps3 требует importmap — отложено
+    if (showAttachedLayer && housesVisible) {
       const houseFeatures = (addressesForSelected || [])
         .filter((row) => row.lat != null && row.lon != null)
         .map((row, idx) => ({
