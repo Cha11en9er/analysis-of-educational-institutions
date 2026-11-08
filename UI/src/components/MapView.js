@@ -46,6 +46,7 @@ export default function MapView({
   const containerRef = useRef(null);
   const mapRef = useRef(null);
   const layersRef = useRef({ markers: [], features: [], houses: [], institutions: [] });
+  const housesDataRef = useRef([]);
   const viewRef = useRef({ center: SARATOV_CENTER, zoom: DEFAULT_ZOOM });
   const lastSchoolsKeyRef = useRef(null);
   const cameraAdjustedRef = useRef(false);
@@ -197,52 +198,27 @@ export default function MapView({
 
     // Зона прикрепления: точки домов при открытой карточке
     document.title = 'DBG sel=' + (selectedSchool ? selectedSchool.school_id : 'null') + ' catch=' + (selectedSchool?.catchment?.length ?? 'u') + ' sal=' + showAttachedLayer + ' ready=' + mapReady;
-    if (showAttachedLayer) {
-      const houseFeatures = (addressesForSelected || [])
-        .filter((row) => row.lat != null && row.lon != null)
-        .map((row, idx) => ({
-          type: 'Feature',
-          id: idx,
-          geometry: { type: 'Point', coordinates: [row.lon, row.lat] },
-          properties: { address: row.address || `${row.lat}, ${row.lon}` },
-        }));
-
-      const clustererMod = window.__ymaps3Clusterer;
-      if (clustererMod && houseFeatures.length > 0) {
-        const { YMapClusterer, methodGrid } = clustererMod;
-        const clusterer = new YMapClusterer({
-          method: methodGrid({ gridSize: 48 }),
-          features: houseFeatures,
-          marker: (feature) => {
-            const dot = document.createElement('div');
-            dot.className = 'house-marker-yandex';
-            dot.title = feature.properties.address;
-            return new YMapMarker(
-              { coordinates: feature.geometry.coordinates, zIndex: 15 },
-              dot
-            );
-          },
-          cluster: (cluster) => {
-            const el = document.createElement('div');
-            el.className = 'house-cluster-yandex';
-            el.textContent = String(cluster.features.length);
-            return new YMapMarker({ coordinates: cluster.coordinates, zIndex: 14 }, el);
-          },
-        });
-        map.addChild(clusterer);
-        layers.houses.push(clusterer);
-      } else if (houseFeatures.length > 0) {
-        // fallback: модуль кластеризации не загрузился — рисуем как раньше
-        houseFeatures.forEach((f) => {
-          const dot = document.createElement('div');
-          dot.className = 'house-marker-yandex';
-          dot.title = f.properties.address;
-          const house = new YMapMarker({ coordinates: f.geometry.coordinates, zIndex: 15 }, dot);
-          map.addChild(house);
-          layers.houses.push(house);
-        });
-      }
-      document.title = 'DBG att=' + showAttachedLayer + ' feats=' + houseFeatures.length + ' clusMod=' + !!window.__ymaps3Clusterer;
+    // Дома прикрепления: canvas-слой (один canvas на все дома — без DOM-фриза
+    // при сотнях точек). Данные — housesDataRef, рисуются на каждый кадр карты.
+    housesDataRef.current = showAttachedLayer
+      ? (addressesForSelected || []).filter((row) => row.lat != null && row.lon != null)
+      : [];
+    if (showAttachedLayer && housesDataRef.current.length > 0) {
+      const housesLayer = new YMapCustomLayer({
+        render: (ctx, params) => {
+          ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+          const proj = params.projection;
+          ctx.fillStyle = 'rgba(249, 115, 22, 0.9)';
+          for (const row of housesDataRef.current) {
+            const [x, y] = proj.toScreenCoordinates([row.lon, row.lat]);
+            ctx.beginPath();
+            ctx.arc(x, y, 4, 0, Math.PI * 2);
+            ctx.fill();
+          }
+        },
+      });
+      map.addChild(housesLayer);
+      layers.houses.push(housesLayer);
     }
 
     // Учреждения выбранной группы (не-школы): маркеры цветов по kind
