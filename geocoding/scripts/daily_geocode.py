@@ -107,7 +107,8 @@ def main() -> None:
             if args.retry_failed:
                 cur.execute(
                     """
-                    UPDATE sa.address SET geocode_status='pending'
+                    UPDATE sa.address SET geocode_status='pending',
+                        latitude=NULL, longitude=NULL, geocoded_at=NULL
                     WHERE geocode_status IN ('fail', 'ambiguous')
                     """
                 )
