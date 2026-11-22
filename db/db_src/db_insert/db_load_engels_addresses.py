@@ -85,13 +85,31 @@ def main() -> None:
     for c in catalog:
         name2sid.setdefault(nkey(c['name_short']), 100000 + c['code_oo'])
         name2sid.setdefault(nkey(c['name_full']), 100000 + c['code_oo'])
+    catalog_keys = [(nkey(c['name_short']), 100000 + c['code_oo']) for c in catalog]
+
+    def resolve(name: str):
+        """Точное имя → по номеру школы → по вхождению (в приказе имена короче)."""
+        k = nkey(name)
+        if k in name2sid:
+            return name2sid[k]
+        m = re.search(r'(\d+)', k)
+        if m:
+            num = m.group(1)
+            same_num = [(ck, sid) for ck, sid in catalog_keys if re.search(r'(\d+)', ck)
+                        and re.search(r'(\d+)', ck).group(1) == num]
+            if len(same_num) == 1:
+                return same_num[0][1]
+        for ck, sid in catalog_keys:
+            if ck.startswith(k) or k.startswith(ck):
+                return sid
+        return None
 
     addr_rows: list[tuple] = []
     link_rows: list[tuple] = []
     unmatched: set[str] = set()
 
     def add(school_name: str, street: str, house: str) -> None:
-        sid = name2sid.get(nkey(school_name))
+        sid = resolve(school_name)
         if sid is None:
             unmatched.add(school_name)
             return
