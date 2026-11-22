@@ -102,6 +102,12 @@ def main() -> None:
         for ck, sid in catalog_keys:
             if ck.startswith(k) or k.startswith(ck):
                 return sid
+        # запасной вариант: сравнение без пробелов (в исходных данных бывают склейки)
+        kc = k.replace(' ', '')
+        for ck, sid in catalog_keys:
+            cc = ck.replace(' ', '')
+            if cc.startswith(kc) or kc.startswith(cc):
+                return sid
         return None
 
     addr_rows: list[tuple] = []
