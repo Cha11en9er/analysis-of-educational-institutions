@@ -1,0 +1,177 @@
+[
+ {
+  "review_id": "3530180000",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3530180001",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3530180002",
+  "topics": {
+   "еда": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3530180003",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3530180004",
+  "topics": {
+   "еда": "neutral"
+  },
+  "overall": "neg"
+ },
+ {
+  "review_id": "3530180005",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3530180006",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3530180007",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3530180008",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3530180009",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3530180010",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3530180011",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3530180012",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3530180013",
+  "topics": {
+   "уборка": "neg"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3530180014",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3530180015",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3530180016",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3530180017",
+  "topics": {
+   "охрана": "neutral"
+  },
+  "overall": "neutral"
+ },
+ {
+  "review_id": "3530180018",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3530180019",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3530180020",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3530180021",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3530180022",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3530180023",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3530180024",
+  "topics": {
+   "уборка": "neg"
+  },
+  "overall": "neg"
+ },
+ {
+  "review_id": "3530180025",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3530180026",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3530180027",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3530180028",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3530180029",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3530180030",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3530180031",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3530180032",
+  "topics": {},
+  "overall": "neg"
+ }
+]

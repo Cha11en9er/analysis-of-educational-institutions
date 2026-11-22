@@ -1,0 +1,344 @@
+[
+ {
+  "review_id": "11666635",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "21094355",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "neg"
+ },
+ {
+  "review_id": "42918366",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "60593387",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "108880298",
+  "topics": {
+   "администрация": "neg"
+  },
+  "overall": "neg"
+ },
+ {
+  "review_id": "233123748",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "2510150000",
+  "topics": {
+   "администрация": "neg"
+  },
+  "overall": "neg"
+ },
+ {
+  "review_id": "2510150001",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "2510150002",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "neg"
+ },
+ {
+  "review_id": "2510150003",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "2510150004",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "2510150005",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150000",
+  "topics": {
+   "учителя": "pos",
+   "инфраструктура": "pos"
+  },
+  "overall": "neg"
+ },
+ {
+  "review_id": "3510150001",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150002",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150003",
+  "topics": {
+   "учителя": "pos",
+   "инфраструктура": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150004",
+  "topics": {
+   "учителя": "pos",
+   "инфраструктура": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150005",
+  "topics": {
+   "учителя": "pos",
+   "инфраструктура": "pos",
+   "уборка": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150006",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3510150007",
+  "topics": {
+   "учителя": "pos",
+   "администрация": "pos"
+  },
+  "overall": "neg"
+ },
+ {
+  "review_id": "3510150008",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150009",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150010",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150011",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150012",
+  "topics": {
+   "учителя": "neg"
+  },
+  "overall": "neg"
+ },
+ {
+  "review_id": "3510150013",
+  "topics": {
+   "инфраструктура": "neutral",
+   "уборка": "neutral"
+  },
+  "overall": "neutral"
+ },
+ {
+  "review_id": "3510150014",
+  "topics": {
+   "учителя": "neutral"
+  },
+  "overall": "neg"
+ },
+ {
+  "review_id": "3510150015",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150016",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150017",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150018",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150019",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150020",
+  "topics": {
+   "ремонт": "neutral",
+   "инфраструктура": "neutral"
+  },
+  "overall": "neg"
+ },
+ {
+  "review_id": "3510150021",
+  "topics": {
+   "учителя": "neutral"
+  },
+  "overall": "neg"
+ },
+ {
+  "review_id": "3510150022",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150023",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150024",
+  "topics": {
+   "учителя": "neutral"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150025",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150026",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3510150027",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150028",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3510150029",
+  "topics": {},
+  "overall": "neutral"
+ },
+ {
+  "review_id": "3510150030",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150031",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150032",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150033",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150034",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3510150035",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150036",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150037",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150038",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3510150039",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150040",
+  "topics": {
+   "инфраструктура": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150041",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3510150042",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3510150043",
+  "topics": {},
+  "overall": "neg"
+ }
+]

@@ -1,0 +1,62 @@
+[
+ {
+  "review_id": "37863978",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "46807103",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "123991348",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "139101104",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "2381340000",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "2381340001",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "2381340002",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "2381340003",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3381340000",
+  "topics": {
+   "ремонт": "neutral",
+   "инфраструктура": "neutral"
+  },
+  "overall": "neg"
+ }
+]

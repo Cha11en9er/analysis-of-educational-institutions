@@ -1,0 +1,160 @@
+[
+ {
+  "review_id": "123335898",
+  "topics": {
+   "учителя": "pos",
+   "еда": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "129916026",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "173850048",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "2383830000",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "2383830001",
+  "topics": {
+   "учителя": "pos",
+   "еда": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "2383830002",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383830000",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "neg"
+ },
+ {
+  "review_id": "3383830001",
+  "topics": {
+   "инфраструктура": "neutral"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383830002",
+  "topics": {
+   "ремонт": "pos",
+   "еда": "pos",
+   "охрана": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383830003",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383830004",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383830005",
+  "topics": {
+   "охрана": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383830006",
+  "topics": {
+   "ремонт": "pos",
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383830007",
+  "topics": {
+   "еда": "neutral"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383830008",
+  "topics": {
+   "учителя": "pos",
+   "еда": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383830009",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383830010",
+  "topics": {
+   "учителя": "pos",
+   "администрация": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383830011",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383830012",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383830013",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383830014",
+  "topics": {
+   "еда": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383830015",
+  "topics": {},
+  "overall": "neutral"
+ },
+ {
+  "review_id": "3383830016",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383830017",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383830018",
+  "topics": {},
+  "overall": "pos"
+ }
+]

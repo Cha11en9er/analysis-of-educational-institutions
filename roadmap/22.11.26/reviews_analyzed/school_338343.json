@@ -1,0 +1,135 @@
+[
+ {
+  "review_id": "2383430000",
+  "topics": {
+   "инфраструктура": "neutral"
+  },
+  "overall": "neutral"
+ },
+ {
+  "review_id": "2383430001",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "2383430002",
+  "topics": {
+   "учителя": "pos",
+   "инфраструктура": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "2383430003",
+  "topics": {
+   "учителя": "pos",
+   "инфраструктура": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "2383430004",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383430000",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383430001",
+  "topics": {
+   "учителя": "pos",
+   "еда": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383430002",
+  "topics": {
+   "инфраструктура": "neg"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383430003",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383430004",
+  "topics": {
+   "ремонт": "pos",
+   "инфраструктура": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383430005",
+  "topics": {
+   "учителя": "neg",
+   "еда": "neg",
+   "инфраструктура": "neg"
+  },
+  "overall": "neg"
+ },
+ {
+  "review_id": "3383430006",
+  "topics": {
+   "учителя": "pos",
+   "еда": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383430007",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383430008",
+  "topics": {
+   "учителя": "neutral"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383430009",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383430010",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383430011",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383430012",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383430013",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383430014",
+  "topics": {},
+  "overall": "pos"
+ }
+]

@@ -1,0 +1,267 @@
+[
+ {
+  "review_id": "49723708",
+  "topics": {
+   "учителя": "pos",
+   "инфраструктура": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "2383630000",
+  "topics": {
+   "учителя": "pos",
+   "инфраструктура": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "2383630001",
+  "topics": {
+   "учителя": "pos",
+   "инфраструктура": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383630000",
+  "topics": {
+   "ремонт": "pos",
+   "учителя": "pos",
+   "администрация": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383630001",
+  "topics": {
+   "ремонт": "pos",
+   "администрация": "pos",
+   "инфраструктура": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383630002",
+  "topics": {
+   "ремонт": "neg"
+  },
+  "overall": "neg"
+ },
+ {
+  "review_id": "3383630003",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383630004",
+  "topics": {
+   "ремонт": "neg"
+  },
+  "overall": "neg"
+ },
+ {
+  "review_id": "3383630005",
+  "topics": {
+   "учителя": "pos",
+   "еда": "pos",
+   "администрация": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383630006",
+  "topics": {
+   "учителя": "pos",
+   "администрация": "neg"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383630007",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383630008",
+  "topics": {
+   "учителя": "pos",
+   "уборка": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383630009",
+  "topics": {
+   "учителя": "neg",
+   "администрация": "neg",
+   "инфраструктура": "neg"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383630010",
+  "topics": {
+   "ремонт": "neutral"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383630011",
+  "topics": {
+   "учителя": "pos",
+   "инфраструктура": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383630012",
+  "topics": {
+   "учителя": "pos",
+   "администрация": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383630013",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383630014",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383630015",
+  "topics": {
+   "ремонт": "neutral"
+  },
+  "overall": "neg"
+ },
+ {
+  "review_id": "3383630016",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383630017",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3383630018",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3383630019",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383630020",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383630021",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383630022",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383630023",
+  "topics": {
+   "учителя": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383630024",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383630025",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383630026",
+  "topics": {
+   "учителя": "pos",
+   "инфраструктура": "pos"
+  },
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383630027",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383630028",
+  "topics": {
+   "ремонт": "neutral"
+  },
+  "overall": "neg"
+ },
+ {
+  "review_id": "3383630029",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3383630030",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3383630031",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383630032",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3383630033",
+  "topics": {},
+  "overall": "pos"
+ },
+ {
+  "review_id": "3383630034",
+  "topics": {},
+  "overall": "neg"
+ },
+ {
+  "review_id": "3383630035",
+  "topics": {
+   "ремонт": "neutral"
+  },
+  "overall": "neg"
+ },
+ {
+  "review_id": "6052240280256616",
+  "topics": {
+   "учителя": "pos",
+   "инфраструктура": "pos"
+  },
+  "overall": "pos"
+ }
+]
