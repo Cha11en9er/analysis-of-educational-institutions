@@ -21,6 +21,9 @@ export default function InstitutionBottomCard({ institution, onClose }) {
   return (
     <div className="school-bottom-card">
       <button type="button" className="bottom-card-close" onClick={onClose} aria-label="Закрыть карточку">✕</button>
+      {institution.photo && (
+        <img className="bottom-card-photo" src={institution.photo} alt={institution.name} loading="lazy" />
+      )}
       <div className="bottom-card-head">
         <div className="bottom-card-title">
           <div className="bottom-card-name">{institution.name}</div>

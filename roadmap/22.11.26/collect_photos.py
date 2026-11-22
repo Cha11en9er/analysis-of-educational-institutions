@@ -102,21 +102,26 @@ def pick_photo(html: str) -> str | None:
 
 
 def download(url: str, path: str):
-    url = url.replace('%s', 'L_width')
-    req = urllib.request.Request(url, headers={'User-Agent': UA})
-    with urllib.request.urlopen(req, timeout=40) as r:
-        data = r.read()
-    if len(data) < 3000 or data[:2] != b'\xff\xd8':
-        return None
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, 'wb') as f:
-        f.write(data)
-    try:
-        from PIL import Image
-        with Image.open(path) as im:
-            return im.size
-    except Exception:
-        return (0, 0)
+    """Скачивание картинки. Возвращает (w, h) или None, если не удалось."""
+    for candidate in (url.replace('%s', 'L_width'), url.replace('%s', 'X_width'), url):
+        try:
+            req = urllib.request.Request(candidate, headers={'User-Agent': UA})
+            with urllib.request.urlopen(req, timeout=40) as r:
+                data = r.read()
+        except Exception:
+            continue
+        if len(data) < 3000 or data[:2] != b'\xff\xd8':
+            continue
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, 'wb') as f:
+            f.write(data)
+        try:
+            from PIL import Image
+            with Image.open(path) as im:
+                return im.size
+        except Exception:
+            return (0, 0)
+    return None
 
 
 def main() -> None:

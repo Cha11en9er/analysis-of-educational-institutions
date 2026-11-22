@@ -56,6 +56,64 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Фотографии заведений: манифест roadmap/22.11.26/photos_manifest.json -> путь в /images
+_PHOTO_MANIFEST = None
+_PHOTO_KIND_DIRS = {
+    "general": "schools", "preschool": "kindergartens", "vuz": "universities",
+    "sport_do": "sport", "arts_do": "arts", "spo": "college",
+    "internat_cadet": "boarding", "other": "other",
+}
+
+
+def _norm_name(s: str) -> str:
+    s = (s or "").lower().replace("ё", "е")
+    s = re.sub(r"[^а-яa-z0-9]+", " ", s)
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def photo_path(kind: str, city: str, code_oo=None, name: str | None = None,
+               school_id: int | None = None) -> str | None:
+    """Путь к фото в UI/public/images или None.
+
+    Сопоставление: по коду ОО -> по названию (Саратов без кодов ОО) -> по school_id.
+    """
+    global _PHOTO_MANIFEST
+    if _PHOTO_MANIFEST is None:
+        manifest_path = (
+            Path(__file__).resolve().parent.parent / "roadmap" / "22.11.26" / "photos_manifest.json"
+        )
+        try:
+            _PHOTO_MANIFEST = json.loads(manifest_path.read_text(encoding="utf-8"))
+        except Exception:
+            _PHOTO_MANIFEST = {}
+    if not _PHOTO_MANIFEST:
+        return None
+
+    norm = _norm_name(name)
+    for entry in _PHOTO_MANIFEST.values():
+        if entry.get("kind") != kind or entry.get("city") != city:
+            continue
+        if not entry.get("photo"):
+            continue
+        if code_oo is not None and entry.get("code_oo") == code_oo:
+            return "/images/" + entry["photo"]
+    if norm:
+        for entry in _PHOTO_MANIFEST.values():
+            if entry.get("kind") != kind or entry.get("city") != city:
+                continue
+            if not entry.get("photo"):
+                continue
+            if _norm_name(entry.get("name")) == norm:
+                return "/images/" + entry["photo"]
+    if school_id is not None:
+        for entry in _PHOTO_MANIFEST.values():
+            if entry.get("kind") != kind or entry.get("city") != city:
+                continue
+            if entry.get("school_id") == school_id and entry.get("photo"):
+                return "/images/" + entry["photo"]
+    return None
+
+
 DB_CONFIG = {
     "host": os.getenv("DB_HOST"),
     "port": os.getenv("DB_PORT"),
@@ -485,7 +543,7 @@ async def get_school_by_id(school_id: int):
                 s.rating_psychological_climate, s.rating_sports_infrastructure,
                 s.rating_profiles,
                 s.capacity, s.building_info->>'area_sqm' AS area_sqm, s.material,
-                s.price_median
+                s.price_median, s.building_info
             FROM sa.school s
             LEFT JOIN sa.link l ON l.school_id = s.school_id
             LEFT JOIN sa.rating r ON r.school_id = s.school_id
@@ -510,8 +568,10 @@ async def get_school_by_id(school_id: int):
         def _num(v):
             return float(v) if v is not None else None
 
+        code_oo = (row[38] or {}).get("code_oo") if isinstance(row[38], dict) else None
         return {
             "school_id": row[0],
+            "photo": photo_path("general", row[19], code_oo, row[1] or row[2], row[0]),
             "name_2gis": row[1],
             "name_ym": row[2],
             "school_address": row[3],
@@ -686,6 +746,7 @@ async def get_institutions(
         items = [
             {
                 "institution_id": r[0],
+                "photo": photo_path(r[2], r[3], r[1], r[4]),
                 "code_oo": r[1],
                 "kind": r[2],
                 "group": r[3] or KIND_TO_GROUP.get(r[2], "other"),

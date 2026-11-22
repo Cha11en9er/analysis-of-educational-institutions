@@ -88,6 +88,9 @@ export default function SchoolBottomCard({ school, rank, total, maxima, onClose,
     <div className="school-bottom-card">
       <button type="button" className="bottom-card-close" onClick={onClose} aria-label="Закрыть карточку">✕</button>
       <div className="bottom-card-main">
+        {school.photo && (
+          <img className="bottom-card-photo" src={school.photo} alt={name} loading="lazy" />
+        )}
         <div className="bottom-card-head">
           <div className="bottom-card-rank">
             {rank != null ? `#${rank}` : ''}
