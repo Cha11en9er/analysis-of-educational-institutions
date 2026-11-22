@@ -23,6 +23,14 @@ function resolveApiUrl() {
 }
 const API_URL = resolveApiUrl();
 
+const SITE_TITLE = 'УчГрад: информация об обучающих учреждениях';
+
+function schoolTitle(school) {
+  if (!school) return SITE_TITLE;
+  const name = school.name_ym || school.name_2gis || `Школа ${school.school_id}`;
+  return `${name} — УчГрад`;
+}
+
 const axiosApi = axios.create({
   headers: { 'Cache-Control': 'no-cache' },
 });
@@ -237,12 +245,11 @@ function App() {
         axiosApi.get(`${API_URL}/api/schools/${sid}/catchment`).catch(() => ({ data: null })),
       ])
         .then(([{ data: detail }, { data: catchment }]) => {
-          document.title = 'DBG route catch=' + (catchment?.points || []).length;
           setSchoolDetail({ ...detail, catchment: catchment?.points || [] });
           setSelectedSchoolId(sid);
           setSchoolDetailLoading(false);
         })
-        .catch((e) => { document.title = 'DBG route ERR ' + String(e).slice(0, 60); setSchoolDetailLoading(false); });
+        .catch(() => setSchoolDetailLoading(false));
       setSelectedSchoolId(sid);
       setSchoolDetailLoading(true);
     }
@@ -471,6 +478,14 @@ function App() {
   }, []);
 
   const showSchoolDetail = selectedSchoolId != null && !showAnalytics;
+
+  // Название вкладки: имя выбранной школы (иначе — общее)
+  useEffect(() => {
+    document.title = schoolTitle(schoolDetail);
+    return () => {
+      document.title = SITE_TITLE;
+    };
+  }, [schoolDetail]);
 
   if (showAnalysisPage && schoolDetail) {
     return (

@@ -1,10 +1,10 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { featureBoundsLatLng } from '../utils/buildAddressCoverageGeoJSON';
 import {
   getAttachedAddressesForKey,
   getSchoolAttachmentKey,
 } from '../utils/schoolAttachment';
 import { getSchoolMarkerStyle, schoolMarkerTitle } from '../utils/schoolMapMarkerIcon';
+import { buildCatchmentPolygons } from '../utils/catchmentPolygons';
 import { getYandexMapsApiKey, loadYmaps3 } from '../utils/loadYmaps3';
 
 /** Яндекс: [lon, lat] */
@@ -46,7 +46,6 @@ export default function MapView({
   const containerRef = useRef(null);
   const mapRef = useRef(null);
   const layersRef = useRef({ markers: [], features: [], houses: [], institutions: [] });
-  const housesDataRef = useRef([]);
   const viewRef = useRef({ center: SARATOV_CENTER, zoom: DEFAULT_ZOOM });
   const lastSchoolsKeyRef = useRef(null);
   const cameraAdjustedRef = useRef(false);
@@ -196,9 +195,27 @@ export default function MapView({
       });
     }
 
-    // Зона прикрепления: точки домов при открытой карточке
-    document.title = 'DBG sel=' + (selectedSchool ? selectedSchool.school_id : 'null') + ' catch=' + (selectedSchool?.catchment?.length ?? 'u') + ' sal=' + showAttachedLayer + ' ready=' + mapReady;
-    // Дома прикрепления: DOM-маркеры только на близком зуме (иначе фриз)
+    // Зона прикрепления: полигоны по внешним точкам домов (разные группы — разные фигуры).
+    // Точки домов остаются нарисованными поверх — видно, как строится полигон.
+    if (showAttachedLayer) {
+      const polys = buildCatchmentPolygons(addressesForSelected || []);
+      polys.forEach((poly) => {
+        const geom = poly.geometry;
+        if (!geom) return;
+        const feature = new YMapFeature({
+          geometry: geom,
+          style: {
+            stroke: [{ width: 2, color: 'rgba(249, 115, 22, 0.75)' }],
+            fill: 'rgba(249, 115, 22, 0.12)',
+          },
+          properties: { hint: `Зона прикрепления: ${poly.count} домов` },
+        });
+        map.addChild(feature);
+        layers.features.push(feature);
+      });
+    }
+
+    // Дома прикрепления: точки домов при открытой карточке
     if (showAttachedLayer) {
       (addressesForSelected || []).forEach((row) => {
         if (row.lat == null || row.lon == null) return;
