@@ -47,7 +47,8 @@ def normalize_query(city: str, district: str | None, street: str, house: str) ->
     parts = ["Россия", "Саратовская область", city]
     if district:
         parts.append(f"{district} район")
-    parts.append(f"{street} {house}")
+    # house='*' — улица целиком (зона школы по приказу): без номера дома
+    parts.append(f"{street} {house}".strip() if house != "*" else street)
     return ", ".join(parts)
 
 
