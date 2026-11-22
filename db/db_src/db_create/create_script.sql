@@ -213,3 +213,6 @@ ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS price_median NUMERIC(12,0);
 
 -- Миграция 08.11.26: review_id 2ГИС бывает крупнее INT — BIGINT
 ALTER TABLE sa.review ALTER COLUMN review_id TYPE BIGINT;
+
+-- Миграция 31.10.26: счётчик попыток геокодирования (очередь: сначала не пробованные)
+ALTER TABLE sa.address ADD COLUMN IF NOT EXISTS attempts INTEGER NOT NULL DEFAULT 0;

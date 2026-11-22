@@ -110,7 +110,7 @@ def main() -> None:
                     """
                     UPDATE sa.address SET geocode_status='pending',
                         latitude=NULL, longitude=NULL, geocoded_at=NULL
-                    WHERE geocode_status IN ('fail', 'ambiguous')
+                    WHERE geocode_status IN ('fail', 'ambiguous') AND attempts < 2
                     """
                 )
                 conn.commit()
@@ -122,7 +122,7 @@ def main() -> None:
                 FROM sa.address a
                 WHERE a.geocode_status = 'pending' AND a.latitude IS NULL
                   AND EXISTS (SELECT 1 FROM sa.school_address s WHERE s.address_id = a.address_id)
-                ORDER BY a.address_id
+                ORDER BY a.attempts, a.address_id
                 LIMIT %s
                 """,
                 (budget,),
