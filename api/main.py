@@ -83,7 +83,7 @@ def photo_path(kind: str, city: str, code_oo=None, name: str | None = None,
             Path(__file__).resolve().parent.parent / "roadmap" / "22.11.26" / "photos_manifest.json"
         )
         try:
-            _PHOTO_MANIFEST = json.loads(manifest_path.read_text(encoding="utf-8"))
+            _PHOTO_MANIFEST = json_lib.loads(manifest_path.read_text(encoding="utf-8"))
         except Exception:
             _PHOTO_MANIFEST = {}
     if not _PHOTO_MANIFEST:
