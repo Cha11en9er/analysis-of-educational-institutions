@@ -7,6 +7,7 @@
 .app {
   display: flex;
   height: 100vh;
+  height: 100dvh;
   width: 100%;
   overflow: hidden;
 }
@@ -1063,7 +1064,7 @@
     max-width: none;
     max-height: 40vh;
     border-radius: 16px 16px 0 0;
-    padding: 10px 12px 44px;
+    padding: 10px 12px calc(44px + env(safe-area-inset-bottom, 0px));
   }
   /* Пока открыта карточка — список и фильтры уступают место карте */
   .app-card-open .side-panel { display: none; }
