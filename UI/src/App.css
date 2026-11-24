@@ -1061,10 +1061,13 @@
     transform: none;
     width: 100%;
     max-width: none;
-    max-height: 44vh;
+    max-height: 40vh;
     border-radius: 16px 16px 0 0;
-    padding: 10px 12px 14px;
+    padding: 10px 12px 44px;
   }
+  /* Пока открыта карточка — список и фильтры уступают место карте */
+  .app-card-open .side-panel { display: none; }
+  .app-card-open .school-list { max-height: none; }
   .bottom-card-head { gap: 8px; }
   .bottom-card-photo { width: 44px; height: 44px; flex-basis: 44px; border-radius: 9px; }
   .bottom-card-name { font-size: 0.92rem; white-space: normal; }
@@ -1075,6 +1078,8 @@
   .bottom-card-facts { gap: 12px; margin-top: 8px; }
   .bottom-card-actions { gap: 6px; margin-top: 8px; }
   .bottom-details-btn { margin-left: 0; width: 100%; text-align: center; }
+  .component-row { grid-template-columns: 76px 1fr auto; gap: 8px; }
+  .component-val { font-size: 0.74rem; }
 }
 
 /* Низкие экраны (ноутбуки в полноэкранном режиме, landscape-телефоны) */

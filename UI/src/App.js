@@ -508,8 +508,10 @@ function App() {
     );
   }
 
+  const cardOpen = !!(schoolDetail || institutionToast);
+
   return (
-    <div className="app">
+    <div className={`app${cardOpen ? ' app-card-open' : ''}`}>
       {showAnalytics ? (
         <AnalyticsView
           school={schoolDetail}
