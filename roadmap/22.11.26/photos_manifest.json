@@ -2934,5 +2934,265 @@
   "org_url": "https://yandex.ru/maps/org/detskiy_sad_99_izumrudny_gorod/87814483299/",
   "photo": null,
   "source": null
+ },
+ "preschool|Саратов|243251|МДОУ «ЦРР - детский сад № 107 «Пчелка»": {
+  "code_oo": 243251,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «ЦРР - детский сад № 107 «Пчелка»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_107_zolotinka/1114074244/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|243261|МДОУ «Детский сад № 91 «Одуванчик»": {
+  "code_oo": 243261,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад № 91 «Одуванчик»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_91_borovichok/200246173619/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|244011|МАДОУ «Детский сад № 2 «Песенка»": {
+  "code_oo": 244011,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МАДОУ «Детский сад № 2 «Песенка»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_103_uchebny_korpus_2_neposedy/118410851646/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|244031|МДОУ «Детский сад № 14 «Ёжик» Фрунзенского района г. Саратова": {
+  "code_oo": 244031,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад № 14 «Ёжик» Фрунзенского района г. Саратова",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_14_yozhik/1074074184/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|244051|МДОУ «Детский сад № 25 «Маячок»": {
+  "code_oo": 244051,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад № 25 «Маячок»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_25_akvarel/29528045829/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|244081|МДОУ «Детский сад № 180 «Солнышко»": {
+  "code_oo": 244081,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад № 180 «Солнышко»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_180/1056845125/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|244091|МДОУ «Детский сад комбинированного вида №186 «Белочка» Фрунзенского района г.Саратова": {
+  "code_oo": 244091,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад комбинированного вида №186 «Белочка» Фрунзенского района г.Саратова",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_186_belochka/1106802290/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|244111|МДОУ «Детский сад комбинированного вида №221 «Росинка»": {
+  "code_oo": 244111,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад комбинированного вида №221 «Росинка»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|244121|МАДОУ «Детский сад № 236 «Лукоморье»": {
+  "code_oo": 244121,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МАДОУ «Детский сад № 236 «Лукоморье»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|245011|МДОУ «Детский сад № 5»": {
+  "code_oo": 245011,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад № 5»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_5/173756327192/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|245031|МДОУ «ЦРР - детский сад № 18 «Город чудес»": {
+  "code_oo": 245031,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «ЦРР - детский сад № 18 «Город чудес»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_18_golubok/1013252279/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|245041|МДОУ «Детский сад № 30»": {
+  "code_oo": 245041,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад № 30»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|245071|МДОУ «Детский сад комбинированного вида № 65» Кировского района г.Саратова": {
+  "code_oo": 245071,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад комбинированного вида № 65» Кировского района г.Саратова",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_65/1018860435/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|245111|МДОУ «Детский сад комбинированного вида №131»": {
+  "code_oo": 245111,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад комбинированного вида №131»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|245121|МДОУ «Детский сад комбинированного вида № 136»": {
+  "code_oo": 245121,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад комбинированного вида № 136»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|245141|МДОУ «Детский сад № 148»": {
+  "code_oo": 245141,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад № 148»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_148_kalinka/1043481165/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|245171|МДОУ «Детский сад комбинированного вида № 226»": {
+  "code_oo": 245171,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад комбинированного вида № 226»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_226_solnyshko/1049043617/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|245181|МАДОУ «ЦРР - детский сад № 123 «Планета детства»": {
+  "code_oo": 245181,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МАДОУ «ЦРР - детский сад № 123 «Планета детства»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|245191|МДОУ «Детский сад № 144»": {
+  "code_oo": 245191,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад № 144»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_144_lesovichok/1089871466/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|245201|МАДОУ «Детский сад № 122»": {
+  "code_oo": 245201,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МАДОУ «Детский сад № 122»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_122_zolotoy_klyuchik/1007934391/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|245211|МАДОУ «ЦРР - детский сад № 215 «Капельки солнца»": {
+  "code_oo": 245211,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МАДОУ «ЦРР - детский сад № 215 «Капельки солнца»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|245221|МДОУ «Детский сад № 7 «Звездочка»": {
+  "code_oo": 245221,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад № 7 «Звездочка»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_7/1102727886/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|245231|МБДОУ «Детский сад компенсирующего вида № 137»": {
+  "code_oo": 245231,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МБДОУ «Детский сад компенсирующего вида № 137»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|246011|МДОУ «Детский сад комбинированного вида № 17»": {
+  "code_oo": 246011,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад комбинированного вида № 17»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_17/1087035280/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|246021|МДОУ «Детский сад № 46»": {
+  "code_oo": 246021,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад № 46»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_46/1112333402/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|246031|МДОУ «Детский сад № 48»": {
+  "code_oo": 246031,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад № 48»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_48_alyonka/1119158339/",
+  "photo": null,
+  "source": null
  }
 }
