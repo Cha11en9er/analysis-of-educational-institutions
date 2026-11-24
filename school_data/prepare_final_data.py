@@ -379,6 +379,15 @@ def parse_vuz_cell(raw: Any) -> tuple[float | None, int | None]:
     return round(original_percent, 1), data_year
 
 
+# Признаки предметного балла: «средний балл по русскому языку» — не общий балл школы.
+# «Общий средний балл» и «по всем предметам» — общий, их не отметаем.
+_SUBJECT_MARKERS = (
+    "русск", "математ", "информат", "физик", "хими", "биолог", "обществознан",
+    "истор", "географ", "литератур", "английск", "немецк", "французск",
+    "геометр", "алгебр", "профильн", "предмет",
+)
+
+
 def _parse_ege_raw_score_and_year(raw: Any) -> tuple[float, int] | tuple[None, None]:
     if raw is None or (isinstance(raw, float) and pd.isna(raw)):
         return None, None
@@ -392,8 +401,15 @@ def _parse_ege_raw_score_and_year(raw: Any) -> tuple[float, int] | tuple[None, N
     # «Высший балл», «максимальное количество баллов», «сдал на 100 баллов» — другой показатель.
     if not any(mark in low for mark in ("средний балл", "средний результат")):
         return None, None
+    if any(s in low for s in _SUBJECT_MARKERS) and not (
+        "общий" in low or "всем предмет" in low
+    ):
+        return None, None
     score_match = re.search(r"(\d+(?:[.,]\d+)?)\s*-", text)
     if not score_match:
+        return None, None
+    # «82/75,15 - Средний балл … по русскому языку/общий» — несколько значений, общий неочевиден
+    if "/" in text.split("-", 1)[0]:
         return None, None
     score = float(score_match.group(1).replace(",", "."))
 

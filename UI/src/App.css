@@ -895,58 +895,72 @@
 .school-row-meta { font-size: 0.75rem; color: #6c757d; margin-top: 1px; white-space: nowrap; }
 .school-row-meta .pts { color: #b45309; font-weight: 600; }
 
-/* Нижняя карточка школы поверх карты — белая */
+/* Нижняя карточка школы поверх карты — белая, компактная, не перекрывает карту */
 .school-bottom-card {
   position: absolute;
   left: 50%;
-  bottom: 18px;
+  bottom: 14px;
   transform: translateX(-50%);
-  width: min(700px, calc(100% - 36px));
+  width: min(620px, calc(100% - 28px));
+  max-height: min(58vh, 440px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
   background: #ffffff;
   color: #0f172a;
   border: 1px solid #e2e8f0;
-  border-radius: 18px;
-  box-shadow: 0 20px 55px rgba(15, 23, 42, 0.22);
-  padding: 16px 18px;
+  border-radius: 16px;
+  box-shadow: 0 16px 44px rgba(15, 23, 42, 0.20);
+  padding: 12px 14px;
   z-index: 30;
+  scrollbar-width: thin;
 }
-.bottom-card-close { position: absolute; top: 10px; right: 10px; background: transparent; border: none; color: #94a3b8; font-size: 14px; cursor: pointer; padding: 4px 7px; border-radius: 999px; }
+.school-bottom-card::-webkit-scrollbar { width: 8px; }
+.school-bottom-card::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 999px; }
+.bottom-card-close { position: absolute; top: 8px; right: 8px; background: transparent; border: none; color: #94a3b8; font-size: 14px; cursor: pointer; padding: 4px 7px; border-radius: 999px; }
 .bottom-card-close:hover { color: #0f172a; background: #f1f5f9; }
-.bottom-card-head { display: flex; align-items: center; gap: 14px; padding-right: 26px; }
+.bottom-card-head { display: flex; align-items: center; gap: 10px; padding-right: 26px; }
 .bottom-card-rank {
   display: flex; flex-direction: column; align-items: center; justify-content: center;
-  min-width: 58px; padding: 6px 10px; border-radius: 14px;
+  min-width: 44px; padding: 4px 8px; border-radius: 12px;
   background: linear-gradient(135deg, #fff7ed, #ffedd5); border: 1px solid #fed7aa;
 }
-.bottom-card-rank { font-size: 1.05rem; font-weight: 800; color: #c2410c; line-height: 1.05; }
-.bottom-card-rank-total { font-size: 0.6rem; font-weight: 600; color: #ea580c; letter-spacing: 0.4px; text-transform: uppercase; margin-top: 2px; }
+.bottom-card-rank { font-size: 0.95rem; font-weight: 800; color: #c2410c; line-height: 1.05; }
+.bottom-card-rank-total { font-size: 0.58rem; font-weight: 600; color: #ea580c; letter-spacing: 0.4px; text-transform: uppercase; margin-top: 2px; }
 .bottom-card-title { flex: 1 1 auto; min-width: 0; }
-.bottom-card-name { font-size: 1.02rem; font-weight: 700; color: #0f172a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: flex; align-items: center; }
-.bottom-card-address { font-size: 0.8rem; color: #64748b; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.bottom-card-score { display: flex; flex-direction: column; align-items: center; min-width: 76px; padding: 8px 14px; border-radius: 14px; background: #f8fafc; border: 1px solid #e2e8f0; }
-.bottom-card-score .score-value { font-size: 1.45rem; font-weight: 800; color: #25426a; line-height: 1; }
-.bottom-card-score .score-caption { font-size: 0.65rem; color: #64748b; margin-top: 3px; }
-.bottom-card-facts { display: flex; gap: 22px; flex-wrap: wrap; margin-top: 12px; }
-.fact { display: flex; flex-direction: column; align-items: center; min-width: 52px; }
-.fact-src { font-size: 0.66rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
-.fact-val { font-size: 1.02rem; font-weight: 700; color: #0f172a; font-variant-numeric: tabular-nums; }
-.bottom-card-components { margin-top: 12px; }
-.components-title { font-size: 0.66rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 6px; font-weight: 600; }
-.component-row { display: grid; grid-template-columns: 110px 1fr minmax(40px, auto); align-items: center; gap: 10px; margin-bottom: 4px; }
-.component-label { font-size: 0.78rem; color: #475569; }
+.bottom-card-name { font-size: 0.98rem; font-weight: 700; color: #0f172a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: flex; align-items: center; gap: 6px; }
+.bottom-card-address { font-size: 0.78rem; color: #64748b; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bottom-card-score { display: flex; flex-direction: column; align-items: center; min-width: 62px; padding: 6px 10px; border-radius: 12px; background: #f8fafc; border: 1px solid #e2e8f0; }
+.bottom-card-score .score-value { font-size: 1.2rem; font-weight: 800; color: #25426a; line-height: 1; }
+.bottom-card-score .score-caption { font-size: 0.62rem; color: #64748b; margin-top: 3px; }
+.bottom-card-facts { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 10px; }
+.fact { display: flex; flex-direction: column; align-items: center; min-width: 46px; }
+.fact-src { font-size: 0.64rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+.fact-val { font-size: 0.98rem; font-weight: 700; color: #0f172a; font-variant-numeric: tabular-nums; }
+.bottom-card-toggle {
+  display: inline-flex; align-items: center; gap: 6px;
+  margin-top: 10px; padding: 5px 12px;
+  font-size: 0.76rem; font-weight: 600; color: #475569;
+  background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 999px; cursor: pointer;
+}
+.bottom-card-toggle:hover { color: #c2410c; border-color: #fb923c; }
+.toggle-caret { font-size: 0.7rem; color: #94a3b8; }
+.bottom-card-components { margin-top: 10px; }
+.components-title { font-size: 0.64rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 6px; font-weight: 600; }
+.component-row { display: grid; grid-template-columns: 104px 1fr minmax(40px, auto); align-items: center; gap: 10px; margin-bottom: 4px; }
+.component-label { font-size: 0.76rem; color: #475569; }
 .component-track { height: 6px; border-radius: 999px; background: #f1f5f9; overflow: hidden; }
 .component-bar { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #fdba74, #f97316); }
-.component-val { font-size: 0.78rem; color: #0f172a; text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; overflow: visible; }
+.component-val { font-size: 0.76rem; color: #0f172a; text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; overflow: visible; }
 .bottom-card-chips { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
-.bottom-card-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+.bottom-card-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
 .bottom-link {
-  font-size: 0.78rem; color: #1d4ed8; text-decoration: none; padding: 6px 12px;
+  font-size: 0.76rem; color: #1d4ed8; text-decoration: none; padding: 6px 11px;
   border: 1px solid #bfdbfe; border-radius: 999px; background: #eff6ff;
 }
 .bottom-link:hover { background: #dbeafe; }
 .bottom-details-btn {
-  font-size: 0.8rem; font-weight: 700; color: #ffffff; background: linear-gradient(135deg, #fb923c, #ea580c);
-  border: none; border-radius: 999px; padding: 8px 16px; cursor: pointer; margin-left: auto;
+  font-size: 0.78rem; font-weight: 700; color: #ffffff; background: linear-gradient(135deg, #fb923c, #ea580c);
+  border: none; border-radius: 999px; padding: 7px 14px; cursor: pointer; margin-left: auto;
 }
 .bottom-details-btn:hover { filter: brightness(1.06); }
 
@@ -1039,6 +1053,34 @@
   .school-list { max-height: 30vh; }
   .component-row { grid-template-columns: 92px 1fr 36px; }
   .ap-bar-row { grid-template-columns: 96px 1fr 40px; }
+  /* Карточка школы на телефоне — нижний лист, карта остаётся сверху */
+  .school-bottom-card {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: none;
+    width: 100%;
+    max-width: none;
+    max-height: 44vh;
+    border-radius: 16px 16px 0 0;
+    padding: 10px 12px 14px;
+  }
+  .bottom-card-head { gap: 8px; }
+  .bottom-card-photo { width: 44px; height: 44px; flex-basis: 44px; border-radius: 9px; }
+  .bottom-card-name { font-size: 0.92rem; white-space: normal; }
+  .bottom-card-address { font-size: 0.74rem; }
+  .bottom-card-rank { min-width: 38px; padding: 3px 6px; }
+  .bottom-card-score { min-width: 54px; padding: 5px 8px; }
+  .bottom-card-score .score-value { font-size: 1.05rem; }
+  .bottom-card-facts { gap: 12px; margin-top: 8px; }
+  .bottom-card-actions { gap: 6px; margin-top: 8px; }
+  .bottom-details-btn { margin-left: 0; width: 100%; text-align: center; }
+}
+
+/* Низкие экраны (ноутбуки в полноэкранном режиме, landscape-телефоны) */
+@media (max-height: 620px) {
+  .school-bottom-card { max-height: 54vh; }
+  .bottom-card-photo { width: 44px; height: 44px; flex-basis: 44px; }
 }
 
 /* ===== UI v3: слои учреждений + карточка учреждения ===== */
@@ -1103,13 +1145,13 @@
   font-variant-numeric: tabular-nums;
 }
 
-/* Фото заведения в нижней карточке */
+/* Фото заведения в нижней карточке — компактная миниатюра в шапке */
 .bottom-card-photo {
-  width: 100%;
-  height: 168px;
+  width: 54px;
+  height: 54px;
+  flex: 0 0 54px;
   object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 12px;
+  border-radius: 10px;
   background: #f1f5f9;
 }
 

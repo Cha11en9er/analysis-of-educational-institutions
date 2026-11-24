@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const SPORTS_LABELS = [
   { key: 'has_sports_complex', label: 'ФОК' },
@@ -72,10 +72,13 @@ export function avgReviewRating(school) {
 }
 
 /**
- * Нижняя карточка выбранной школы поверх карты (белая, как на Replit-версии).
+ * Карточка выбранной школы поверх карты.
+ * Компактная по умолчанию (фото-миниатюра, строка фактов), развернутые
+ * показатели рейтинга — по кнопке, чтобы карта оставалась видна.
  * Тексты отзывов не показываются нигде — только агрегаты.
  */
 export default function SchoolBottomCard({ school, rank, total, maxima, onClose, onOpenDetails }) {
+  const [expanded, setExpanded] = useState(false);
   if (!school) return null;
   const name = school.name_ym || school.name_2gis || `Школа ${school.school_id}`;
   const sports = SPORTS_LABELS.filter(({ key }) => school[key] === true);
@@ -83,15 +86,16 @@ export default function SchoolBottomCard({ school, rank, total, maxima, onClose,
     .map((comp) => ({ label: comp.label, ...componentValue(school, comp, maxima) }))
     .filter((c) => c.text != null);
   const star = avgReviewRating(school);
+  const hasDetails = components.length > 0 || sports.length > 0;
 
   return (
     <div className="school-bottom-card">
       <button type="button" className="bottom-card-close" onClick={onClose} aria-label="Закрыть карточку">✕</button>
       <div className="bottom-card-main">
-        {school.photo && (
-          <img className="bottom-card-photo" src={school.photo} alt={name} loading="lazy" />
-        )}
         <div className="bottom-card-head">
+          {school.photo && (
+            <img className="bottom-card-photo" src={school.photo} alt={name} loading="lazy" />
+          )}
           <div className="bottom-card-rank">
             {rank != null ? `#${rank}` : ''}
             <span className="bottom-card-rank-total">из {total}</span>
@@ -146,25 +150,41 @@ export default function SchoolBottomCard({ school, rank, total, maxima, onClose,
           )}
         </div>
 
-        {components.length > 0 && (
-          <div className="bottom-card-components">
-            <div className="components-title">Компоненты рейтинга</div>
-            {components.map(({ label, text, width }) => (
-              <div className="component-row" key={label}>
-                <span className="component-label">{label}</span>
-                <div className="component-track">
-                  <div className="component-bar" style={{ width: `${width}%` }} />
-                </div>
-                <span className="component-val">{text}</span>
-              </div>
-            ))}
-          </div>
+        {hasDetails && (
+          <button
+            type="button"
+            className="bottom-card-toggle"
+            onClick={() => setExpanded((v) => !v)}
+            aria-expanded={expanded}
+          >
+            {expanded ? 'Скрыть показатели' : 'Показатели рейтинга'}
+            <span className="toggle-caret">{expanded ? '▴' : '▾'}</span>
+          </button>
         )}
 
-        {sports.length > 0 && (
-          <div className="bottom-card-chips">
-            {sports.map(({ label }) => <span className="chip" key={label}>{label}</span>)}
-          </div>
+        {expanded && (
+          <>
+            {components.length > 0 && (
+              <div className="bottom-card-components">
+                <div className="components-title">Компоненты рейтинга</div>
+                {components.map(({ label, text, width }) => (
+                  <div className="component-row" key={label}>
+                    <span className="component-label">{label}</span>
+                    <div className="component-track">
+                      <div className="component-bar" style={{ width: `${width}%` }} />
+                    </div>
+                    <span className="component-val">{text}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {sports.length > 0 && (
+              <div className="bottom-card-chips">
+                {sports.map(({ label }) => <span className="chip" key={label}>{label}</span>)}
+              </div>
+            )}
+          </>
         )}
 
         <div className="bottom-card-actions">

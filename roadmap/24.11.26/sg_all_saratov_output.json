@@ -5359,5 +5359,2667 @@
     ],
     "results_target_year": 2026,
     "results_parsed_at": "2026-11-24T17:37:37.791630+00:00"
+  },
+  {
+    "id": 58,
+    "name_2gis": "МОУ Средняя общеобразовательная школа №64 им. Героя Советского Союза И.В. Панфилова",
+    "short_name": "Школа №64",
+    "address": "ул Стахановская, зд. 8",
+    "building_type": "Основное здание",
+    "area_sqm": 2643.4,
+    "floors": 4,
+    "underground_floors": 1,
+    "material": "кирп",
+    "year_built": 1958,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.602897,
+    "longitude": 45.908762,
+    "cadastral_number": "64:48:040229:38",
+    "rating_2gis": 3.9,
+    "rating_yandex": 4.3,
+    "link_yandex": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_64/120490931607/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_64/120490931607/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280256822",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280256822/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.908762,
+        51.602897
+      ]
+    },
+    "link_gosuslugi": "https://shk64-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/osnovnye-svedeniya/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "parse_error": "TimeoutError: Капча/блок не сняты за 600с",
+    "results_parsed_at": "2026-11-24T18:08:52.567515+00:00"
+  },
+  {
+    "id": 59,
+    "name_2gis": "МОУ Средняя общеобразовательная школа №38",
+    "short_name": "Школа №38",
+    "address": "ул Южная, зд 46",
+    "building_type": "Основное здание",
+    "area_sqm": 4514.8,
+    "floors": 4,
+    "underground_floors": null,
+    "material": null,
+    "year_built": 1963,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.502536,
+    "longitude": 45.91293,
+    "cadastral_number": "64:48:020238:271",
+    "rating_2gis": 2.0,
+    "rating_yandex": 3.2,
+    "link_yandex": "https://yandex.com/maps/org/mou_sosh_38/1113508152/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/mou_sosh_38/1113508152/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280256654",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280256654/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.91293,
+        51.502536
+      ]
+    },
+    "link_gosuslugi": "https://shk38-sar.gosuslugi.ru/",
+    "specialization": [
+      "История",
+      "Математика",
+      "Русский язык",
+      "Обществознание",
+      "Информатика"
+    ],
+    "EGE": "54,5 - Средний балл на ЕГЭ в 2025 году",
+    "VUZ": "43% - Выпускников поступивших в ВУЗы в 2025 году",
+    "Olympiads": [
+      "251 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals": [
+      "03 - Выпускников с золотой медалью за 2025 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "251 - Призеров Всероссийской олимпиады за 3 года",
+      "03 - Выпускников с золотой медалью за 2025 год",
+      "54,5 - Средний балл на ЕГЭ в 2025 году",
+      "43% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "infrastructure": "https://shk38-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "251 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:09:15.447175+00:00"
+  },
+  {
+    "id": 6,
+    "name_2gis": "МОУ Средняя общеобразовательная школа №73 им. К.Д. Шукшина",
+    "short_name": "Школа №73",
+    "address": "пр-д 2-й Магнитный, д 44",
+    "building_type": "Основное здание",
+    "area_sqm": 5210.4,
+    "floors": 4,
+    "underground_floors": 1,
+    "material": "кирп",
+    "year_built": 1972,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": null,
+    "latitude": 51.559349,
+    "longitude": 46.02548,
+    "cadastral_number": "64:48:030225:1389",
+    "rating_2gis": 3.9,
+    "rating_yandex": 3.8,
+    "link_yandex": "https://yandex.com/maps/org/secondary_school_73/1032739814/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/secondary_school_73/1032739814/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280256848",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280256848/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        46.02548,
+        51.559349
+      ]
+    },
+    "link_gosuslugi": "https://shk73-sar.gosuslugi.ru/",
+    "specialization": [
+      "История",
+      "Математика",
+      "Русский язык",
+      "Универсальный профиль"
+    ],
+    "EGE": "63,2 - Средний балл на ЕГЭ в 2023 году",
+    "VUZ": "84% - Выпускников поступивших в ВУЗы в 2023 году",
+    "Olympiads": [],
+    "Medals": [
+      "4 - Выпускников с золотой медалью за 2023 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "4 - Выпускников с золотой медалью за 2023 год",
+      "63,2 - Средний балл на ЕГЭ в 2023 году",
+      "84% - Выпускников поступивших в ВУЗы в 2023 году"
+    ],
+    "infrastructure": "https://shk73-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:09:28.413351+00:00"
+  },
+  {
+    "id": 60,
+    "name_2gis": "МОУ Лицей №53",
+    "short_name": "Лицей №53",
+    "address": "пр-д 4-й Чернышевского, зд 2",
+    "building_type": "Основное здание",
+    "area_sqm": 7346.2,
+    "floors": 4,
+    "underground_floors": 1,
+    "material": null,
+    "year_built": 1979,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.507867,
+    "longitude": 45.981085,
+    "cadastral_number": "64:48:020305:1217",
+    "rating_2gis": 4.1,
+    "rating_yandex": 4.0,
+    "link_yandex": "https://yandex.com/maps/org/lyceum_53_saratov/1062463037/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/lyceum_53_saratov/1062463037/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280256715",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280256715/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.981085,
+        51.507867
+      ]
+    },
+    "link_gosuslugi": "https://lic53-sar.gosuslugi.ru/",
+    "specialization": [
+      "Социально-экономический профиль",
+      "Технологический профиль",
+      "Гуманитарный профиль",
+      "Естественно-научный профиль"
+    ],
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "1 - Место Городского смотра-конкурса школьных музеев ОУ МО «Город Саратов»",
+      "1 - Место Городского конкурса детских экологических театров и агитбригад",
+      "1 - Место Городского конкурса «Лучший музей о ВОВ»",
+      "1 - Место Международного детского фестиваля - конкурса «Наследники традиций»"
+    ],
+    "results_kpi_raw": [
+      "1 - Место Городского смотра-конкурса школьных музеев ОУ МО «Город Саратов»",
+      "1 - Место Городского конкурса детских экологических театров и агитбригад",
+      "1 - Место Городского конкурса «Лучший музей о ВОВ»",
+      "1 - Место Международного детского фестиваля - конкурса «Наследники традиций»"
+    ],
+    "infrastructure": "https://lic53-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "1 - Место Городского смотра-конкурса школьных музеев ОУ МО «Город Саратов»",
+      "1 - Место Городского конкурса детских экологических театров и агитбригад",
+      "1 - Место Городского конкурса «Лучший музей о ВОВ»",
+      "1 - Место Международного детского фестиваля - конкурса «Наследники традиций»"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:09:47.465365+00:00"
+  },
+  {
+    "id": 61,
+    "name_2gis": "МАОУ Лицей №62",
+    "short_name": "Лицей №62",
+    "address": "пл Ильинская, зд 1А",
+    "building_type": "Основное здание",
+    "area_sqm": 1643.0,
+    "floors": 2,
+    "underground_floors": 1,
+    "material": "кирп",
+    "year_built": 1978,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.521212,
+    "longitude": 46.016057,
+    "cadastral_number": "64:48:000000:5402",
+    "rating_2gis": 3.9,
+    "rating_yandex": 4.2,
+    "link_yandex": "https://yandex.com/maps/org/maou_lyceum_62/1132108231/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/maou_lyceum_62/1132108231/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280257291",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280257291/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        46.016057,
+        51.521212
+      ]
+    },
+    "link_gosuslugi": "https://lyceum62.gosuslugi.ru/",
+    "EGE": "75 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "100% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads": [
+      "129 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals": [
+      "51 - Выпускников с золотой медалью за 5 лет"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "129 - Призеров Всероссийской олимпиады за 3 года",
+      "51 - Выпускников с золотой медалью за 5 лет",
+      "75 - Средний балл на ЕГЭ в 2026 году",
+      "100% - Выпускников поступивших в ВУЗы в 2026 году"
+    ],
+    "infrastructure": "https://lyceum62.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": "75 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "100% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "129 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": [
+      "51 - Выпускников с золотой медалью за 5 лет"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:09:59.074300+00:00"
+  },
+  {
+    "id": 62,
+    "name_2gis": "МАОУ Гимназия №108",
+    "short_name": "Гимназия №108",
+    "address": "пр-кт 50 лет Октября, зд 107",
+    "building_type": "Основное здание",
+    "area_sqm": 5514.4,
+    "floors": 5,
+    "underground_floors": 1,
+    "material": "кирп",
+    "year_built": 1964,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.585054,
+    "longitude": 45.960882,
+    "cadastral_number": "64:48:040808:35",
+    "rating_2gis": 3.5,
+    "rating_yandex": 3.4,
+    "link_yandex": "https://yandex.com/maps/org/gimnaziya_108/1067532669/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/gimnaziya_108/1067532669/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280256545",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280256545/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.960882,
+        51.585054
+      ]
+    },
+    "link_gosuslugi": "https://gim108-sar.gosuslugi.ru/",
+    "specialization": [
+      "Универсальный"
+    ],
+    "EGE": "60,3 - Средний балл на ЕГЭ в 2025 году",
+    "VUZ": "88% - Выпускников поступивших в ВУЗы в 2025 году",
+    "Olympiads": [
+      "58 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals": [
+      "4 - Выпускников с золотой медалью за 2025 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "58 - Призеров Всероссийской олимпиады за 3 года",
+      "4 - Выпускников с золотой медалью за 2025 год",
+      "60,3 - Средний балл на ЕГЭ в 2025 году",
+      "88% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "infrastructure": "https://gim108-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "58 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:10:08.905903+00:00"
+  },
+  {
+    "id": 63,
+    "name_2gis": "МАОУ Лицей №15",
+    "short_name": "Лицей №15",
+    "address": "пр-кт Энтузиастов, зд 14 стр 1",
+    "building_type": "Основное здание",
+    "area_sqm": 7574.5,
+    "floors": 3,
+    "underground_floors": null,
+    "material": "смеш",
+    "year_built": 1932,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": 1,
+    "has_sports_ground": 1,
+    "latitude": 51.505484,
+    "longitude": 45.952743,
+    "cadastral_number": "64:48:020322:372",
+    "rating_2gis": 4.0,
+    "rating_yandex": 4.2,
+    "link_yandex": "https://yandex.com/maps/org/lyceum_15/1388328792/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/lyceum_15/1388328792/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280266592",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280266592/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.952743,
+        51.505484
+      ]
+    },
+    "link_gosuslugi": "https://lic15-sar.gosuslugi.ru/",
+    "EGE": "74,14 - Средний балл на ЕГЭ в 2025 году",
+    "VUZ": "100% - Выпускников поступивших в ВУЗы в 2025 году",
+    "Olympiads": [
+      "315 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals": [
+      "15 - Выпускников награждены медалью \"За особые успехи в учении\" за 2025 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "315 - Призеров Всероссийской олимпиады за 3 года",
+      "15 - Выпускников награждены медалью \"За особые успехи в учении\" за 2025 год",
+      "74,14 - Средний балл на ЕГЭ в 2025 году",
+      "100% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "infrastructure": "https://lic15-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "315 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:10:19.186188+00:00"
+  },
+  {
+    "id": 64,
+    "name_2gis": "МОУ Гимназия №7 им. К. Д. Ушинского",
+    "short_name": "Гимназия №7",
+    "address": "ул Федоровская, д 3",
+    "building_type": "Основное здание",
+    "area_sqm": 3563.2,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "кирп",
+    "year_built": 1999,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.575814,
+    "longitude": 46.070261,
+    "cadastral_number": "64:48:010115:6360",
+    "rating_2gis": 2.7,
+    "rating_yandex": 4.4,
+    "link_yandex": "https://yandex.com/maps/org/gymnasium_7/1032138559/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/gymnasium_7/1032138559/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280262278",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280262278/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        46.070261,
+        51.575814
+      ]
+    },
+    "link_gosuslugi": "https://gim7-sar.gosuslugi.ru/",
+    "specialization": [
+      "Гуманитарный профиль",
+      "Технологический профиль (химико-биологическое направление)",
+      "Технологический профиль (физико-математическое направление)"
+    ],
+    "EGE": "64,61 - средний балл на ЕГЭ в 2026 году",
+    "VUZ": "100% - выпускников поступивших в ВУЗы в 2024 году",
+    "Olympiads": [
+      "46 - призеров муниципального этапа Всероссийской олимпиады школьников за 3 года"
+    ],
+    "Medals": [
+      "14 - выпускников награждены медалью \"За особые успехи в учении I степени\" в 2026 году",
+      "7 - выпускников награждены медалью \"За особые успехи в учении II степени\" в 2026 году"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "46 - призеров муниципального этапа Всероссийской олимпиады школьников за 3 года",
+      "14 - выпускников награждены медалью \"За особые успехи в учении I степени\" в 2026 году",
+      "7 - выпускников награждены медалью \"За особые успехи в учении II степени\" в 2026 году",
+      "64,61 - средний балл на ЕГЭ в 2026 году",
+      "100% - выпускников поступивших в ВУЗы в 2024 году"
+    ],
+    "infrastructure": "https://gim7-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": "64,61 - средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "46 - призеров муниципального этапа Всероссийской олимпиады школьников за 3 года"
+    ],
+    "Medals_2026": [
+      "14 - выпускников награждены медалью \"За особые успехи в учении I степени\" в 2026 году",
+      "7 - выпускников награждены медалью \"За особые успехи в учении II степени\" в 2026 году"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:10:30.417059+00:00"
+  },
+  {
+    "id": 65,
+    "name_2gis": "МОУ Средняя общеобразовательная школа №49",
+    "short_name": "Школа №49",
+    "address": "ул Перспективная, зд 10А",
+    "building_type": "Основное здание",
+    "area_sqm": 7420.0,
+    "floors": 3,
+    "underground_floors": 1,
+    "material": "панель",
+    "year_built": 1981,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.604648,
+    "longitude": 45.988299,
+    "cadastral_number": "64:48:040408:351",
+    "rating_2gis": 5.0,
+    "rating_yandex": 3.3,
+    "link_yandex": "https://yandex.com/maps/org/mou_sosh_49_leninskogo_rayona_goroda_saratova/2392968816/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/mou_sosh_49_leninskogo_rayona_goroda_saratova/2392968816/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280256686",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280256686/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.988299,
+        51.604648
+      ]
+    },
+    "link_gosuslugi": "https://shk49-sar.gosuslugi.ru/",
+    "EGE": "53,9 - Средний балл на ЕГЭ в 2025 году",
+    "VUZ": "75 % - Выпускников поступивших в ВУЗы в 2025 году",
+    "Olympiads": [],
+    "Medals": [
+      "1 - Выпускник с золотой медалью за 2025 год",
+      "1 - Выпускник с золотой медалью за 2023 год",
+      "1 - выпускник с серебряной медалью в 2024 году"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "1 - Выпускник с золотой медалью за 2025 год",
+      "53,9 - Средний балл на ЕГЭ в 2025 году",
+      "75 % - Выпускников поступивших в ВУЗы в 2025 году",
+      "1 - Выпускник с золотой медалью за 2023 год",
+      "1 - выпускник с серебряной медалью в 2024 году"
+    ],
+    "infrastructure": "https://shk49-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:10:42.886094+00:00"
+  },
+  {
+    "id": 66,
+    "name_2gis": "МОУ Национальная (татарская) гимназия им. героя Советского Союза Г.Г. Рамаева",
+    "short_name": "Татарская Гимназия",
+    "address": "ул Радищева, д 64/32",
+    "building_type": "Часть здания",
+    "area_sqm": 2500.0,
+    "floors": 4,
+    "underground_floors": 1,
+    "material": "кирп",
+    "year_built": 1882,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": null,
+    "latitude": 51.532111,
+    "longitude": 46.03935,
+    "cadastral_number": "64:48:030342:4820",
+    "rating_2gis": 4.7,
+    "rating_yandex": 4.0,
+    "link_yandex": "https://yandex.com/maps/org/munitsipalnoye_obshcheobrazovatelnoye_uchrezhdeniye_litsey_4/1010589817/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/munitsipalnoye_obshcheobrazovatelnoye_uchrezhdeniye_litsey_4/1010589817/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280266554",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280266554/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        46.03935,
+        51.532111
+      ]
+    },
+    "link_gosuslugi": "нету в excel",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:10:46.109203+00:00"
+  },
+  {
+    "id": 67,
+    "name_2gis": "МОУ Лицей прикладных наук им. Д.И. Трубецкова",
+    "short_name": "Лицей прикладных наук",
+    "address": "ул Комсомольская, зд 39",
+    "building_type": "Основное здание",
+    "area_sqm": 1080.6,
+    "floors": 4,
+    "underground_floors": 1,
+    "material": "кирп",
+    "year_built": 1867,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": null,
+    "latitude": 51.530912,
+    "longitude": 46.043662,
+    "cadastral_number": "64:48:010321:27",
+    "rating_2gis": 4.2,
+    "rating_yandex": 4.5,
+    "link_yandex": "https://yandex.com/maps/org/litsey_prikladnykh_nauk/1061363313/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/litsey_prikladnykh_nauk/1061363313/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280266628",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280266628/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        46.043662,
+        51.530912
+      ]
+    },
+    "link_gosuslugi": "https://moulpn.gosuslugi.ru/",
+    "specialization": [
+      "Технологический"
+    ],
+    "VUZ": "100% - Выпускников поступивших в ВУЗы в 2025 году",
+    "EGE": "71.3 - Средний балл на ЕГЭ в 2025 году",
+    "Olympiads": [
+      "60 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [
+      "60 - Призеров Всероссийской олимпиады за 3 года",
+      "100% - Выпускников поступивших в ВУЗы в 2025 году",
+      "71.3 - Средний балл на ЕГЭ в 2025 году"
+    ],
+    "infrastructure": "https://moulpn.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "60 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:10:56.484606+00:00"
+  },
+  {
+    "id": 68,
+    "name_2gis": "МОУ Основная общеобразовательная школа №26 им. В.Д. Хомяковой",
+    "short_name": "Школа №26",
+    "address": "ул Ново- Крекингская, зд 47 стр 1",
+    "building_type": "Основное здание",
+    "area_sqm": 3736.3,
+    "floors": 3,
+    "underground_floors": null,
+    "material": null,
+    "year_built": 1986,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": 1,
+    "has_sports_ground": null,
+    "latitude": 51.468211,
+    "longitude": 45.915176,
+    "cadastral_number": "64:48:020438:28",
+    "rating_2gis": 4.5,
+    "rating_yandex": 3.7,
+    "link_yandex": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola_26_mou/244703926854/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola_26_mou/244703926854/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280256587",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280256587/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.915176,
+        51.468211
+      ]
+    },
+    "link_gosuslugi": "https://shk26-sar.gosuslugi.ru/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "100% - учеников, получивших аттестат об общем образовании",
+      "98% - Выпускников, поступивших в СУЗы в 2022 году",
+      "25% - обучающихся, получивших значки ГТО",
+      "100% - обучающихся, охваченных программами дополнительного образования"
+    ],
+    "results_kpi_raw": [
+      "100% - учеников, получивших аттестат об общем образовании",
+      "98% - Выпускников, поступивших в СУЗы в 2022 году",
+      "25% - обучающихся, получивших значки ГТО",
+      "100% - обучающихся, охваченных программами дополнительного образования"
+    ],
+    "infrastructure": "https://shk26-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "100% - учеников, получивших аттестат об общем образовании",
+      "25% - обучающихся, получивших значки ГТО",
+      "100% - обучающихся, охваченных программами дополнительного образования"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:11:14.523191+00:00"
+  },
+  {
+    "id": 7,
+    "name_2gis": "МОУ Средняя общеобразовательная школа №45",
+    "short_name": "Школа №45",
+    "address": "ул Дегтярная, зд 12",
+    "building_type": "Основное здание",
+    "area_sqm": 4245.2,
+    "floors": 3,
+    "underground_floors": null,
+    "material": "кирп",
+    "year_built": 1971,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": 1,
+    "has_sports_ground": null,
+    "latitude": 51.516572,
+    "longitude": 45.992718,
+    "cadastral_number": "64:48:050311:238",
+    "rating_2gis": 3.4,
+    "rating_yandex": 3.9,
+    "link_yandex": "https://yandex.com/maps/org/mei_secondary_school_45/1134269325/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/mei_secondary_school_45/1134269325/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280256681",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280256681/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.992718,
+        51.516572
+      ]
+    },
+    "link_gosuslugi": "https://shk45-sar.gosuslugi.ru/",
+    "specialization": [
+      "Естественно - научное",
+      "Технологическое",
+      "Социально-экономическое"
+    ],
+    "EGE": "56,4 - Общий средний балл ЕГЭ 2026 года",
+    "VUZ": "81,5 % - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads": [
+      "17 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals": [
+      "2 - В 2026г. 2 выпускника 11А награждены медалью \"За особые успехи в учении\" 1 степени"
+    ],
+    "other_results": [
+      "ЕГЭ-2026 - Самые высокие баллы: Русский язык-91, Литература-89, Математика-82, Обществознание-88",
+      "1 - Выпускница 11 класса награждена Почетным знаком Губернатора Саратовской области \"За отличие в учебе\" в 2026 г.",
+      "1 - Выпускница награждена нагрудным знаком главы МО \"Город Саратов\" \"За особые успехи в учении\" за 2026 год",
+      "2026г - В 2026г. выпускники 11 класса поступили в НИУ МГСУ, СГУ, СГЮА, СГМУ"
+    ],
+    "results_kpi_raw": [
+      "ЕГЭ-2026 - Самые высокие баллы: Русский язык-91, Литература-89, Математика-82, Обществознание-88",
+      "2 - В 2026г. 2 выпускника 11А награждены медалью \"За особые успехи в учении\" 1 степени",
+      "56,4 - Общий средний балл ЕГЭ 2026 года",
+      "81,5 % - Выпускников поступивших в ВУЗы в 2026 году",
+      "1 - Выпускница 11 класса награждена Почетным знаком Губернатора Саратовской области \"За отличие в учебе\" в 2026 г.",
+      "1 - Выпускница награждена нагрудным знаком главы МО \"Город Саратов\" \"За особые успехи в учении\" за 2026 год",
+      "2026г - В 2026г. выпускники 11 класса поступили в НИУ МГСУ, СГУ, СГЮА, СГМУ",
+      "17 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "infrastructure": "https://shk45-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": "56,4 - Общий средний балл ЕГЭ 2026 года",
+    "VUZ_2026": "81,5 % - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "17 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": [
+      "2 - В 2026г. 2 выпускника 11А награждены медалью \"За особые успехи в учении\" 1 степени"
+    ],
+    "other_results_2026": [
+      "ЕГЭ-2026 - Самые высокие баллы: Русский язык-91, Литература-89, Математика-82, Обществознание-88",
+      "1 - Выпускница 11 класса награждена Почетным знаком Губернатора Саратовской области \"За отличие в учебе\" в 2026 г.",
+      "1 - Выпускница награждена нагрудным знаком главы МО \"Город Саратов\" \"За особые успехи в учении\" за 2026 год",
+      "2026г - В 2026г. выпускники 11 класса поступили в НИУ МГСУ, СГУ, СГЮА, СГМУ"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:11:32.516082+00:00"
+  },
+  {
+    "id": 70,
+    "name_2gis": "МОУ Гимназия №7 им. К. Д. Ушинского",
+    "short_name": "Гимназия №7 новый корпус",
+    "address": "ул Муленкова, зд 10А",
+    "building_type": "Основное здание",
+    "area_sqm": 16269.2,
+    "floors": 4,
+    "underground_floors": 1,
+    "material": "кирп",
+    "year_built": 2016,
+    "reconstruction_year": null,
+    "capacity": 825,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.577818,
+    "longitude": 46.079316,
+    "cadastral_number": "64:48:010115:11275",
+    "rating_2gis": 4.4,
+    "rating_yandex": 4.2,
+    "link_yandex": "https://yandex.com/maps/org/gimnaziya_7/161310028795/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/gimnaziya_7/161310028795/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/70000001030556823",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/70000001030556823/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        46.079316,
+        51.577818
+      ]
+    },
+    "link_gosuslugi": "https://gim7-sar.gosuslugi.ru/",
+    "specialization": [
+      "Гуманитарный профиль",
+      "Технологический профиль (химико-биологическое направление)",
+      "Технологический профиль (физико-математическое направление)"
+    ],
+    "EGE": "64,61 - средний балл на ЕГЭ в 2026 году",
+    "VUZ": "100% - выпускников поступивших в ВУЗы в 2024 году",
+    "Olympiads": [
+      "46 - призеров муниципального этапа Всероссийской олимпиады школьников за 3 года"
+    ],
+    "Medals": [
+      "14 - выпускников награждены медалью \"За особые успехи в учении I степени\" в 2026 году",
+      "7 - выпускников награждены медалью \"За особые успехи в учении II степени\" в 2026 году"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "46 - призеров муниципального этапа Всероссийской олимпиады школьников за 3 года",
+      "14 - выпускников награждены медалью \"За особые успехи в учении I степени\" в 2026 году",
+      "7 - выпускников награждены медалью \"За особые успехи в учении II степени\" в 2026 году",
+      "64,61 - средний балл на ЕГЭ в 2026 году",
+      "100% - выпускников поступивших в ВУЗы в 2024 году"
+    ],
+    "infrastructure": "https://gim7-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": "64,61 - средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "46 - призеров муниципального этапа Всероссийской олимпиады школьников за 3 года"
+    ],
+    "Medals_2026": [
+      "14 - выпускников награждены медалью \"За особые успехи в учении I степени\" в 2026 году",
+      "7 - выпускников награждены медалью \"За особые успехи в учении II степени\" в 2026 году"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:11:41.640587+00:00"
+  },
+  {
+    "id": 71,
+    "name_2gis": "ГБОУ Школа-интернат для обучающихся по адаптированным образовательным программам №3 г. Саратова",
+    "short_name": "Школа-интернат №3",
+    "address": "пр-д Селекционный, зд 3",
+    "building_type": "Основное здание",
+    "area_sqm": 2696.2,
+    "floors": 2,
+    "underground_floors": 1,
+    "material": "кирп",
+    "year_built": 1993,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.570591,
+    "longitude": 46.000767,
+    "cadastral_number": "64:48:040454:130",
+    "rating_2gis": 5.0,
+    "rating_yandex": 4.9,
+    "link_yandex": "https://yandex.com/maps/org/gbou_so_shkola_internat_aop_3_g_saratova/228497961048/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/gbou_so_shkola_internat_aop_3_g_saratova/228497961048/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280292293",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280292293/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        46.000767,
+        51.570591
+      ]
+    },
+    "link_gosuslugi": "https://sh-int3-saratov-r64.gosweb.gosuslugi.ru/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "Телефон - +7 (8452) 64-69-22",
+      "2 - кандидата наук",
+      "29 - учителей высшей категории",
+      "22 - учителя первой категории",
+      "6 - Почетных работников общего образования РФ - почетное звание",
+      "2 - Отличника народного просвещения - нагрудный знак",
+      "2 - Почетных работника воспитания и просвещения РФ - нагрудный знак",
+      "4 - Почетных работника общего образования РФ - нагрудный знак",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_kpi_raw": [
+      "Телефон - +7 (8452) 64-69-22",
+      "2 - кандидата наук",
+      "29 - учителей высшей категории",
+      "22 - учителя первой категории",
+      "6 - Почетных работников общего образования РФ - почетное звание",
+      "2 - Отличника народного просвещения - нагрудный знак",
+      "2 - Почетных работника воспитания и просвещения РФ - нагрудный знак",
+      "4 - Почетных работника общего образования РФ - нагрудный знак",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "infrastructure": "https://sh-int3-saratov-r64.gosweb.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "Телефон - +7 (8452) 64-69-22",
+      "2 - кандидата наук",
+      "29 - учителей высшей категории",
+      "22 - учителя первой категории",
+      "6 - Почетных работников общего образования РФ - почетное звание",
+      "2 - Отличника народного просвещения - нагрудный знак",
+      "2 - Почетных работника воспитания и просвещения РФ - нагрудный знак",
+      "4 - Почетных работника общего образования РФ - нагрудный знак",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:11:56.753118+00:00"
+  },
+  {
+    "id": 72,
+    "name_2gis": "МАОУ Прогимназия № 237 Семицветик г. Саратова",
+    "short_name": "Прогимназия №237 Семицветик",
+    "address": "ул Посадского, зд 308А",
+    "building_type": "Основное здание",
+    "area_sqm": 2080.9,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "кирп",
+    "year_built": 1982,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.546586,
+    "longitude": 46.008655,
+    "cadastral_number": "64:48:010244:287",
+    "rating_2gis": null,
+    "rating_yandex": 4.8,
+    "link_yandex": "https://yandex.com/maps/org/progymnasium_237_semitsvetik/1098995346/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/progymnasium_237_semitsvetik/1098995346/reviews/",
+    "link_2gis": null,
+    "reviews_link_2gis": null,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        46.008655,
+        51.546586
+      ]
+    },
+    "link_gosuslugi": "https://shk237-sar.gosuslugi.ru/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "31 - Педагогов",
+      "178 - Обучающихся",
+      "130 - Воспитанников",
+      "8/5 - Классов/групп"
+    ],
+    "results_kpi_raw": [
+      "31 - Педагогов",
+      "178 - Обучающихся",
+      "130 - Воспитанников",
+      "8/5 - Классов/групп"
+    ],
+    "infrastructure": "https://shk237-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "31 - Педагогов",
+      "178 - Обучающихся",
+      "130 - Воспитанников",
+      "8/5 - Классов/групп"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:12:11.995429+00:00"
+  },
+  {
+    "id": 73,
+    "name_2gis": "МОУ Основная общеобразовательная школа №78",
+    "short_name": "Школа №78",
+    "address": "ул Огородная, зд 173",
+    "building_type": "Основное здание",
+    "area_sqm": 1770.1,
+    "floors": 2,
+    "underground_floors": null,
+    "material": null,
+    "year_built": 1954,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": null,
+    "latitude": 51.506477,
+    "longitude": 45.929387,
+    "cadastral_number": "64:48:020633:8765",
+    "rating_2gis": 3.5,
+    "rating_yandex": 3.6,
+    "link_yandex": "https://yandex.com/maps/org/mou_osnovnaya_obshcheobrazovatelnaya_shkola_78/181981552893/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/mou_osnovnaya_obshcheobrazovatelnaya_shkola_78/181981552893/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280256859",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280256859/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.929387,
+        51.506477
+      ]
+    },
+    "link_gosuslugi": "https://shk78-sar.gosuslugi.ru/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [],
+    "infrastructure": "https://shk78-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:12:34.785803+00:00"
+  },
+  {
+    "id": 74,
+    "name_2gis": "МОУ Гимназия №5",
+    "short_name": "Гимназия №5",
+    "address": "ул Азовская, зд. 15",
+    "building_type": "Основное здание",
+    "area_sqm": 4245.0,
+    "floors": 3,
+    "underground_floors": null,
+    "material": null,
+    "year_built": 1964,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.476447,
+    "longitude": 45.895377,
+    "cadastral_number": "64:48:020462:835",
+    "rating_2gis": 5.0,
+    "rating_yandex": 3.3,
+    "link_yandex": "https://yandex.com/maps/org/gimnaziya_5/27235900030/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/gimnaziya_5/27235900030/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280256661",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280256661/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.895377,
+        51.476447
+      ]
+    },
+    "link_gosuslugi": "https://gim5-sar.gosuslugi.ru/",
+    "specialization": [
+      "Гуманитарный профиль",
+      "Технологический профиль. 1",
+      "Технологический профиль. 2",
+      "Универсальный профиль"
+    ],
+    "VUZ": "80% - Выпускников поступивших в ВУЗы в 2022 году",
+    "Olympiads": [],
+    "Medals": [
+      "5 - Выпускников с золотой медалью за 2022 год"
+    ],
+    "other_results": [
+      "8 - Выпускников 9 классов с аттестатом с отличием в 2022 году"
+    ],
+    "results_kpi_raw": [
+      "5 - Выпускников с золотой медалью за 2022 год",
+      "80% - Выпускников поступивших в ВУЗы в 2022 году",
+      "8 - Выпускников 9 классов с аттестатом с отличием в 2022 году"
+    ],
+    "infrastructure": "https://gim5-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:13:29.203075+00:00"
+  },
+  {
+    "id": 75,
+    "name_2gis": "ГАОУ Инженерный лицей",
+    "short_name": "Инженерный лицей",
+    "address": "ул Клочкова, д 85",
+    "building_type": "Основное здание",
+    "area_sqm": 2337.0,
+    "floors": 3,
+    "underground_floors": null,
+    "material": "кирп",
+    "year_built": 1957,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.528015,
+    "longitude": 45.959005,
+    "cadastral_number": "64:48:050139:16",
+    "rating_2gis": 4.5,
+    "rating_yandex": 4.2,
+    "link_yandex": "https://yandex.com/maps/org/litsey_internat_6/1052539347/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/litsey_internat_6/1052539347/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280393652",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280393652/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.959005,
+        51.528015
+      ]
+    },
+    "link_gosuslugi": "https://inlic-sar.gosuslugi.ru/",
+    "specialization": [
+      "Технологический"
+    ],
+    "EGE": "63 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "95% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads": [],
+    "Medals": [
+      "05 - Выпускников, получивших медаль \"За особые успехи в учении\" I степени за 2026 год",
+      "01 - Выпускников, получивших медаль \"За особые успехи в учении\" II степени за 2026 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "05 - Выпускников, получивших медаль \"За особые успехи в учении\" I степени за 2026 год",
+      "63 - Средний балл на ЕГЭ в 2026 году",
+      "95% - Выпускников поступивших в ВУЗы в 2026 году",
+      "01 - Выпускников, получивших медаль \"За особые успехи в учении\" II степени за 2026 год"
+    ],
+    "infrastructure": "https://inlic-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": "63 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "95% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": null,
+    "Medals_2026": [
+      "05 - Выпускников, получивших медаль \"За особые успехи в учении\" I степени за 2026 год",
+      "01 - Выпускников, получивших медаль \"За особые успехи в учении\" II степени за 2026 год"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:13:42.237007+00:00"
+  },
+  {
+    "id": 76,
+    "name_2gis": "МОУ Лицей №50 им. Загороднева В.И.",
+    "short_name": "Лицей №50",
+    "address": "ул Загороднева, зд 16",
+    "building_type": "Основное здание",
+    "area_sqm": 5717.7,
+    "floors": 5,
+    "underground_floors": 1,
+    "material": null,
+    "year_built": 1986,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.595445,
+    "longitude": 45.95719,
+    "cadastral_number": "64:48:040332:31",
+    "rating_2gis": 5.0,
+    "rating_yandex": 4.3,
+    "link_yandex": "https://yandex.com/maps/org/lyceum_50/158041622369/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/lyceum_50/158041622369/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280256702",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280256702/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.95719,
+        51.595445
+      ]
+    },
+    "link_gosuslugi": "https://lic50-sar.gosuslugi.ru/",
+    "specialization": [
+      "Математический профиль"
+    ],
+    "EGE": "62 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "49 - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads": [],
+    "Medals": [
+      "8 - Выпусков награждены медалями \"За особые успехи в учении\" в 2026 году"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "8 - Выпусков награждены медалями \"За особые успехи в учении\" в 2026 году",
+      "62 - Средний балл на ЕГЭ в 2026 году",
+      "49 - Выпускников поступивших в ВУЗы в 2026 году"
+    ],
+    "infrastructure": "https://lic50-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": "62 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "49 - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": null,
+    "Medals_2026": [
+      "8 - Выпусков награждены медалями \"За особые успехи в учении\" в 2026 году"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:13:55.255248+00:00"
+  },
+  {
+    "id": 77,
+    "name_2gis": "МОУ Гимназия №75 им. Д.М. Карбышева",
+    "short_name": "Гимназия №75",
+    "address": "ул Осенняя, зд 5",
+    "building_type": "Основное здание",
+    "area_sqm": 3451.9,
+    "floors": 5,
+    "underground_floors": 1,
+    "material": "кирп",
+    "year_built": 1954,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.589811,
+    "longitude": 45.963775,
+    "cadastral_number": "64:48:040342:406",
+    "rating_2gis": 3.4,
+    "rating_yandex": 4.0,
+    "link_yandex": "https://yandex.com/maps/org/mou_sosh_75/197267336586/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/mou_sosh_75/197267336586/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280256852",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280256852/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.963775,
+        51.589811
+      ]
+    },
+    "link_gosuslugi": "https://gim75-sar.gosuslugi.ru/",
+    "specialization": [
+      "Математика",
+      "Информатика",
+      "Обществознание",
+      "Биология",
+      "Химия"
+    ],
+    "EGE": "65 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "96% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads": [
+      "210 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals": [
+      "9 - Выпускники с золотой (6) и серебряной (3) медалями за 2026 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "210 - Призеров Всероссийской олимпиады за 3 года",
+      "9 - Выпускники с золотой (6) и серебряной (3) медалями за 2026 год",
+      "65 - Средний балл на ЕГЭ в 2026 году",
+      "96% - Выпускников поступивших в ВУЗы в 2026 году"
+    ],
+    "infrastructure": "https://gim75-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": "65 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "96% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "210 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": [
+      "9 - Выпускники с золотой (6) и серебряной (3) медалями за 2026 год"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:14:08.510036+00:00"
+  },
+  {
+    "id": 78,
+    "name_2gis": "ГАОУ Лицей гуманитарных наук",
+    "short_name": "Лицей гуманитарных наук",
+    "address": "ул Большая Садовая, зд 224А",
+    "building_type": "Здание с новыми корпусами",
+    "area_sqm": 5123.0,
+    "floors": 4,
+    "underground_floors": 1,
+    "material": "кирп",
+    "year_built": 1950,
+    "reconstruction_year": 2007,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": 1,
+    "has_sports_ground": null,
+    "latitude": 51.550736,
+    "longitude": 46.011296,
+    "cadastral_number": "64:48:030334:87, 64:48:000000:216392, 64:48:030333:105, 64:48:030334:71",
+    "rating_2gis": 3.5,
+    "rating_yandex": 4.2,
+    "link_yandex": "https://yandex.com/maps/org/lyceum_of_humanities/1008160365/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/lyceum_of_humanities/1008160365/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280266608",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280266608/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        46.011296,
+        51.550736
+      ]
+    },
+    "link_gosuslugi": "https://lgn-sar.gosuslugi.ru/",
+    "specialization": [
+      "Гуманитарный профиль",
+      "Естественно-научный профиль",
+      "Технологический профиль"
+    ],
+    "EGE": "85 - Средний балл ЕГЭ информатика - 2025/2026",
+    "Olympiads": [
+      "25 - Призеров Всероссийской олимпиады - 2025-2026"
+    ],
+    "Medals": [
+      "9 - МЕДАЛИСТОВ - 2025/2026"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "25 - Призеров Всероссийской олимпиады - 2025-2026",
+      "9 - МЕДАЛИСТОВ - 2025/2026",
+      "90 - Средний балл ЕГЭ русский язык - 2025/2026",
+      "90 - Средний балл ЕГЭ английский язык - 2025/2026",
+      "90 - Средний балл ЕГЭ история - 2025/2026",
+      "90 - Средний балл ЕГЭ химия - 2025/2026",
+      "85 - Средний балл ЕГЭ профильная математика - 2025/2026",
+      "85 - Средний балл ЕГЭ информатика - 2025/2026"
+    ],
+    "EGE_2026": "85 - Средний балл ЕГЭ информатика - 2025/2026",
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "25 - Призеров Всероссийской олимпиады - 2025-2026"
+    ],
+    "Medals_2026": [
+      "9 - МЕДАЛИСТОВ - 2025/2026"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:14:26.309618+00:00"
+  },
+  {
+    "id": 79,
+    "name_2gis": "МАОУ Лицей №37",
+    "short_name": "Лицей №37",
+    "address": "пер Мирный, д 3",
+    "building_type": "Основное здание",
+    "area_sqm": 3523.5,
+    "floors": 4,
+    "underground_floors": 1,
+    "material": "кирп",
+    "year_built": 1955,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": 1,
+    "has_sports_ground": 1,
+    "latitude": 51.531405,
+    "longitude": 46.015599,
+    "cadastral_number": "64:48:060207:270",
+    "rating_2gis": 3.5,
+    "rating_yandex": 4.1,
+    "link_yandex": "https://yandex.com/maps/org/litsey_37/1022515372/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/litsey_37/1022515372/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280257284",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280257284/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        46.015599,
+        51.531405
+      ]
+    },
+    "link_gosuslugi": "https://lic37-sar.gosuslugi.ru/",
+    "specialization": [
+      "Естественно-научное",
+      "Гуманитарное",
+      "Технологическое"
+    ],
+    "VUZ": "100% - Выпускников поступили в ВУЗы в 2026 году",
+    "EGE": "79 - Средний балл на ЕГЭ в 2026 году",
+    "Olympiads": [
+      "181 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals": [
+      "6 - Выпускников с золотой медалью в 2026 году",
+      "2 - Выпускников с серебряной медалью за 2026 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "181 - Призеров Всероссийской олимпиады за 3 года",
+      "6 - Выпускников с золотой медалью в 2026 году",
+      "2 - Выпускников с серебряной медалью за 2026 год",
+      "100% - Выпускников поступили в ВУЗы в 2026 году",
+      "79 - Средний балл на ЕГЭ в 2026 году"
+    ],
+    "infrastructure": "https://lic37-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": "79 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "100% - Выпускников поступили в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "181 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": [
+      "6 - Выпускников с золотой медалью в 2026 году",
+      "2 - Выпускников с серебряной медалью за 2026 год"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:14:48.066055+00:00"
+  },
+  {
+    "id": 8,
+    "name_2gis": "ГАОУ Средняя общеобразовательная школа №2 с углубленным изучением отдельных предметов им. В.П. Тихонова",
+    "short_name": "Школа №2",
+    "address": "ул Мичурина, д 16",
+    "building_type": "Основное здание",
+    "area_sqm": 4554.8,
+    "floors": 7,
+    "underground_floors": 1,
+    "material": "кирп",
+    "year_built": 1908,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": 1,
+    "has_sports_ground": 1,
+    "latitude": 51.52959,
+    "longitude": 46.010622,
+    "cadastral_number": "64:48:000000:15966",
+    "rating_2gis": 2.8,
+    "rating_yandex": 3.9,
+    "link_yandex": "https://yandex.com/maps/org/shkola_2_s_uglublennym_izucheniyem_otdelnykh_predmetov_im_v_p_tikhonova/83182503409/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/shkola_2_s_uglublennym_izucheniyem_otdelnykh_predmetov_im_v_p_tikhonova/83182503409/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280256534",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280256534/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        46.010622,
+        51.52959
+      ]
+    },
+    "link_gosuslugi": "https://shk2-sar.gosuslugi.ru/",
+    "specialization": [
+      "Социально-экономический профиль",
+      "Естественно-научный профиль",
+      "Технологический профиль"
+    ],
+    "EGE": "62 - Средний балл по русскому языку на ЕГЭ в 2026 году",
+    "VUZ": "84% - Выпускников поступили в ВУЗы в 2026 году",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [
+      "62 - Средний балл по русскому языку на ЕГЭ в 2026 году",
+      "84% - Выпускников поступили в ВУЗы в 2026 году"
+    ],
+    "infrastructure": "https://shk2-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": "62 - Средний балл по русскому языку на ЕГЭ в 2026 году",
+    "VUZ_2026": "84% - Выпускников поступили в ВУЗы в 2026 году",
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:15:07.951297+00:00"
+  },
+  {
+    "id": 80,
+    "name_2gis": "ГАОУ Физико-технический лицей №1",
+    "short_name": "Физико-технический лицей №1",
+    "address": "ул Московская, зд 143А",
+    "building_type": "Основное здание",
+    "area_sqm": 2253.2,
+    "floors": 3,
+    "underground_floors": 1,
+    "material": "кирп",
+    "year_built": 1936,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": null,
+    "latitude": 51.537277,
+    "longitude": 46.015634,
+    "cadastral_number": "64:48:030342:440, 64:48:030457:753",
+    "rating_2gis": 4.1,
+    "rating_yandex": 4.4,
+    "link_yandex": "https://yandex.com/maps/org/maou_physicotechnical_lyceum_1/1053419817/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/maou_physicotechnical_lyceum_1/1053419817/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280263306",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280263306/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        46.015634,
+        51.537277
+      ]
+    },
+    "link_gosuslugi": "https://ftl-sar.gosuslugi.ru/",
+    "specialization": [
+      "Технологический профиль",
+      "Естественно-научный профиль"
+    ],
+    "VUZ": "100% - Выпускников поступивших в ВУЗы в 2026 году",
+    "EGE": "86 - Средний балл на ЕГЭ по химии в 2026 году",
+    "Olympiads": [
+      "9 - Победителей и призеров в заключительного этапа Всероссийской олимпиады за 3 года"
+    ],
+    "Medals": [
+      "17 - Выпускников с медалью за 2026 год"
+    ],
+    "other_results": [
+      "8 - Количество стобалльников в 2026"
+    ],
+    "results_kpi_raw": [
+      "9 - Победителей и призеров в заключительного этапа Всероссийской олимпиады за 3 года",
+      "17 - Выпускников с медалью за 2026 год",
+      "8 - Количество стобалльников в 2026",
+      "100% - Выпускников поступивших в ВУЗы в 2026 году",
+      "83 - Средний балл на ЕГЭ по информатике в 2026 году",
+      "85 - Средний балл на ЕГЭ по профильной математике в 2026 году",
+      "77 - Средний балл на ЕГЭ по физике в 2026 году",
+      "86 - Средний балл на ЕГЭ по химии в 2026 году"
+    ],
+    "infrastructure": "https://ftl-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": "86 - Средний балл на ЕГЭ по химии в 2026 году",
+    "VUZ_2026": "100% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "9 - Победителей и призеров в заключительного этапа Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": [
+      "17 - Выпускников с медалью за 2026 год"
+    ],
+    "other_results_2026": [
+      "8 - Количество стобалльников в 2026"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:15:24.050699+00:00"
+  },
+  {
+    "id": 81,
+    "name_2gis": "МОУ Гимназия №34",
+    "short_name": "Гимназия №34",
+    "address": "пр-кт Энтузиастов, зд 48",
+    "building_type": "Основное здание",
+    "area_sqm": 2973.0,
+    "floors": 4,
+    "underground_floors": null,
+    "material": null,
+    "year_built": 1963,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.497798,
+    "longitude": 45.934364,
+    "cadastral_number": "64:48:020321:1227",
+    "rating_2gis": 4.3,
+    "rating_yandex": 4.2,
+    "link_yandex": "https://yandex.com/maps/org/gimnaziya_34_imeni_g_d_yermolayeva/37872328167/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/gimnaziya_34_imeni_g_d_yermolayeva/37872328167/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280256532",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280256532/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.934364,
+        51.497798
+      ]
+    },
+    "link_gosuslugi": "https://gim34-sar.gosuslugi.ru/",
+    "VUZ": "81% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads": [
+      "3 - Призер регионального этапа Всероссийской олимпиады школьников"
+    ],
+    "Medals": [
+      "6 - Выпускников с золотой медалью \"За успехи в учении\" I степени за 2026 год",
+      "7 - Выпускников с серебряной медалью \"За успехи в учении\" II степени за 2026 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "3 - Призер регионального этапа Всероссийской олимпиады школьников",
+      "6 - Выпускников с золотой медалью \"За успехи в учении\" I степени за 2026 год",
+      "7 - Выпускников с серебряной медалью \"За успехи в учении\" II степени за 2026 год",
+      "81% - Выпускников поступивших в ВУЗы в 2026 году"
+    ],
+    "infrastructure": "https://gim34-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": "81% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "3 - Призер регионального этапа Всероссийской олимпиады школьников"
+    ],
+    "Medals_2026": [
+      "6 - Выпускников с золотой медалью \"За успехи в учении\" I степени за 2026 год",
+      "7 - Выпускников с серебряной медалью \"За успехи в учении\" II степени за 2026 год"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:15:35.396652+00:00"
+  },
+  {
+    "id": 82,
+    "name_2gis": "МАОУ Лицей математики и информатики",
+    "short_name": "Лицей математики и информатики",
+    "address": "ул Посадского, д 24Б",
+    "building_type": "Основное здание",
+    "area_sqm": 3134.8,
+    "floors": 3,
+    "underground_floors": 1,
+    "material": "кирп",
+    "year_built": 1913,
+    "reconstruction_year": 2019,
+    "capacity": null,
+    "has_sports_complex": 1,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.543562,
+    "longitude": 46.019641,
+    "cadastral_number": "64:48:010243:218, 64:48:030435:314",
+    "rating_2gis": 3.7,
+    "rating_yandex": 4.2,
+    "link_yandex": "https://yandex.com/maps/org/lyceum_of_mathematics_and_informatics/1083755421/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/lyceum_of_mathematics_and_informatics/1083755421/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280257714",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280257714/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        46.019641,
+        51.543562
+      ]
+    },
+    "link_gosuslugi": "https://lmi-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/osnovnye-svedeniya/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:15:46.151474+00:00"
+  },
+  {
+    "id": 83,
+    "name_2gis": "Лицей №3",
+    "short_name": "Лицей №3",
+    "address": "ул Советская, д 46",
+    "building_type": "Основное здание",
+    "area_sqm": 6344.5,
+    "floors": 5,
+    "underground_floors": 1,
+    "material": "кирп",
+    "year_built": 1973,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": null,
+    "latitude": 51.529635,
+    "longitude": 46.020252,
+    "cadastral_number": "64:48:050301:284",
+    "rating_2gis": 4.1,
+    "rating_yandex": 4.1,
+    "link_yandex": "https://yandex.com/maps/org/litsey_3_im_a_s_pushkina/1021305516/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/litsey_3_im_a_s_pushkina/1021305516/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280257712",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280257712/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        46.020252,
+        51.529635
+      ]
+    },
+    "link_gosuslugi": "https://lic3-sar.gosuslugi.ru/",
+    "specialization": [
+      "Технологический профиль (физико-математическое направление)",
+      "Технологический профиль (химико-биологическое направление)",
+      "Социально-экономический профиль",
+      "Психолого-педагогический профиль"
+    ],
+    "VUZ": "92% - Выпускников поступивших в ВУЗы в 2024 году",
+    "Olympiads": [
+      "12 - Призеров регионального этапа Всероссийской олимпиады за 3 года"
+    ],
+    "Medals": [],
+    "other_results": [
+      "9 - Выпускников с аттестатом особого образца I и II степени в 2024 году",
+      "65 - Средний балл по математике профильного уровня в 2024 году"
+    ],
+    "results_kpi_raw": [
+      "12 - Призеров регионального этапа Всероссийской олимпиады за 3 года",
+      "9 - Выпускников с аттестатом особого образца I и II степени в 2024 году",
+      "65 - Средний балл по математике профильного уровня в 2024 году",
+      "92% - Выпускников поступивших в ВУЗы в 2024 году"
+    ],
+    "infrastructure": "https://lic3-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "12 - Призеров регионального этапа Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:16:06.575774+00:00"
+  },
+  {
+    "id": 84,
+    "name_2gis": "МОУ Лицей №4",
+    "short_name": "Лицей №4",
+    "address": "ул Радищева, д 64/32",
+    "building_type": "Часть здания",
+    "area_sqm": 2000.0,
+    "floors": 4,
+    "underground_floors": 1,
+    "material": "кирп",
+    "year_built": 1882,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": null,
+    "latitude": 51.534033,
+    "longitude": 46.037769,
+    "cadastral_number": "64:48:030342:4820",
+    "rating_2gis": 3.7,
+    "rating_yandex": 4.1,
+    "link_yandex": "https://yandex.com/maps/org/national_tatar_gymnasium/223623648005/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/national_tatar_gymnasium/223623648005/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280256669",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280256669/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        46.037769,
+        51.534033
+      ]
+    },
+    "link_gosuslugi": "https://lic4-sar.gosuslugi.ru/",
+    "specialization": [
+      "Гуманитарный профиль",
+      "Технологический профиль (физико-математическое направление)",
+      "Технологический профиль (химико-биологическое направление)"
+    ],
+    "VUZ": "100% - выпускников, поступивших в ВУЗы в 2025 году",
+    "EGE": "64,4 - средний балл ЕГЭ в 2025 году",
+    "Olympiads": [
+      "159 - призеров муниципального этапа всероссийской олимпиады школьников за 3 года",
+      "11 - призеров регионального этапа всероссийской олимпиады школьников за 3 года"
+    ],
+    "Medals": [
+      "7 - выпускников награждены медалью \"За особые успехи в учении I степени\" в 2025 году",
+      "4 - выпускника награждены медалью \"За особые успехи в учении II степени\" в 2025 году"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "7 - выпускников награждены медалью \"За особые успехи в учении I степени\" в 2025 году",
+      "100% - выпускников, поступивших в ВУЗы в 2025 году",
+      "159 - призеров муниципального этапа всероссийской олимпиады школьников за 3 года",
+      "11 - призеров регионального этапа всероссийской олимпиады школьников за 3 года",
+      "64,4 - средний балл ЕГЭ в 2025 году",
+      "4 - выпускника награждены медалью \"За особые успехи в учении II степени\" в 2025 году"
+    ],
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "159 - призеров муниципального этапа всероссийской олимпиады школьников за 3 года",
+      "11 - призеров регионального этапа всероссийской олимпиады школьников за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:16:23.981240+00:00"
+  },
+  {
+    "id": 85,
+    "name_2gis": "МОУ Основная общеобразовательная школа №81",
+    "short_name": "Школа №81",
+    "address": "ул Васильковская, д 17",
+    "building_type": "Основное здание",
+    "area_sqm": 1877.2,
+    "floors": 3,
+    "underground_floors": 1,
+    "material": null,
+    "year_built": 1951,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": 1,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.477619,
+    "longitude": 45.924105,
+    "cadastral_number": "64:48:020354:875",
+    "rating_2gis": 2.3,
+    "rating_yandex": 3.7,
+    "link_yandex": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola_81/1045200569/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola_81/1045200569/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280256862",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280256862/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.924105,
+        51.477619
+      ]
+    },
+    "link_gosuslugi": "https://shk81-sar.gosuslugi.ru/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [],
+    "infrastructure": "https://shk81-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:16:37.461848+00:00"
+  },
+  {
+    "id": 87,
+    "name_2gis": "МОУ Средняя общеобразовательная школа №83",
+    "short_name": "Школа №83",
+    "address": "ул Крымская, зд 2",
+    "building_type": "Основное здание",
+    "area_sqm": 5052.7,
+    "floors": 5,
+    "underground_floors": 1,
+    "material": "кирп",
+    "year_built": 1954,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.489902,
+    "longitude": 45.928749,
+    "cadastral_number": "64:48:020331:1356",
+    "rating_2gis": 2.7,
+    "rating_yandex": 4.0,
+    "link_yandex": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_83/1013287750/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_83/1013287750/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/70000001037362342",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/70000001037362342/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.928749,
+        51.489902
+      ]
+    },
+    "link_gosuslugi": "https://shk83-sar.gosuslugi.ru/",
+    "VUZ": "100% - выпускников, поступивших в ВУЗы в 2025г",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "81 - Балл по русскому языку в 2025г",
+      "18 - Балла по математике (база) в 2025г",
+      "70 - Баллов по биологии в 2025 г",
+      "70 - Баллов по истории в 2025г"
+    ],
+    "results_kpi_raw": [
+      "81 - Балл по русскому языку в 2025г",
+      "18 - Балла по математике (база) в 2025г",
+      "70 - Баллов по биологии в 2025 г",
+      "70 - Баллов по истории в 2025г",
+      "100% - выпускников, поступивших в ВУЗы в 2025г"
+    ],
+    "infrastructure": "https://shk83-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:16:48.027613+00:00"
+  },
+  {
+    "id": 88,
+    "name_2gis": "ГБОУ Школа-интернат для обучающихся по адаптированным образовательным программам №4",
+    "short_name": "Школа-интернат №4 адаптированная",
+    "address": "ул Чернышевского, зд 157",
+    "building_type": "Основное здание",
+    "area_sqm": 4245.3,
+    "floors": 3,
+    "underground_floors": null,
+    "material": "кирп",
+    "year_built": 1882,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": null,
+    "latitude": 51.523913,
+    "longitude": 46.034122,
+    "cadastral_number": "64:48:010304:663",
+    "rating_2gis": null,
+    "rating_yandex": 4.5,
+    "link_yandex": "https://yandex.com/maps/org/boarding_school_4/18629834848/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/boarding_school_4/18629834848/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280292297",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280292297/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        46.034122,
+        51.523913
+      ]
+    },
+    "link_gosuslugi": "https://shkola-internat4.gosuslugi.ru/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "Телефон - 8 (8452) 28 -69-17",
+      "4 - Почетных работника общего образования",
+      "2 - Отличника народного просвещения",
+      "19 - учителей высшей категории",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_kpi_raw": [
+      "Телефон - 8 (8452) 28 -69-17",
+      "4 - Почетных работника общего образования",
+      "2 - Отличника народного просвещения",
+      "19 - учителей высшей категории",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "infrastructure": "https://shkola-internat4.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "Телефон - 8 (8452) 28 -69-17",
+      "4 - Почетных работника общего образования",
+      "2 - Отличника народного просвещения",
+      "19 - учителей высшей категории",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:17:01.706831+00:00"
+  },
+  {
+    "id": 89,
+    "name_2gis": "ГБОУ Школа для обучающихся по адаптированным образовательным программам №4 г. Саратова",
+    "short_name": "Школа №4",
+    "address": "ул Загороднева, зд 19",
+    "building_type": "Основное здание",
+    "area_sqm": 3902.9,
+    "floors": 3,
+    "underground_floors": null,
+    "material": "кирп",
+    "year_built": 1967,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.595619,
+    "longitude": 45.959939,
+    "cadastral_number": "64:48:040340:43",
+    "rating_2gis": 5.0,
+    "rating_yandex": 3.9,
+    "link_yandex": "https://yandex.com/maps/org/special_correctional_general_education_school_4_of_the_viii_type/15410306125/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/special_correctional_general_education_school_4_of_the_viii_type/15410306125/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280256664",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280256664/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.959939,
+        51.595619
+      ]
+    },
+    "link_gosuslugi": "https://shkola-internat4.gosuslugi.ru/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "Телефон - 8 (8452) 28 -69-17",
+      "4 - Почетных работника общего образования",
+      "2 - Отличника народного просвещения",
+      "19 - учителей высшей категории",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_kpi_raw": [
+      "Телефон - 8 (8452) 28 -69-17",
+      "4 - Почетных работника общего образования",
+      "2 - Отличника народного просвещения",
+      "19 - учителей высшей категории",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "infrastructure": "https://shkola-internat4.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "Телефон - 8 (8452) 28 -69-17",
+      "4 - Почетных работника общего образования",
+      "2 - Отличника народного просвещения",
+      "19 - учителей высшей категории",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:17:10.718558+00:00"
+  },
+  {
+    "id": 9,
+    "name_2gis": "МОУ Средняя общеобразовательная школа №9",
+    "short_name": "Школа №9",
+    "address": "ул Соляная, д 17",
+    "building_type": "Основное здание",
+    "area_sqm": 2988.5,
+    "floors": 4,
+    "underground_floors": 1,
+    "material": "кирп",
+    "year_built": 1936,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": null,
+    "latitude": 51.529209,
+    "longitude": 46.049708,
+    "cadastral_number": "64:48:010333:59",
+    "rating_2gis": 3.8,
+    "rating_yandex": 4.1,
+    "link_yandex": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_9_volzhskogo_rayona_g_saratova/1096289996/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_9_volzhskogo_rayona_g_saratova/1096289996/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280256518",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280256518/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        46.049708,
+        51.529209
+      ]
+    },
+    "link_gosuslugi": "https://school9saratov.gosuslugi.ru/",
+    "EGE": "57 - Средний балл ЕГЭ в 2024 году",
+    "Olympiads": [
+      "110 - Призеров школьного этата Всероссийской олимпиады школьников"
+    ],
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [
+      "57 - Средний балл ЕГЭ в 2024 году",
+      "110 - Призеров школьного этата Всероссийской олимпиады школьников"
+    ],
+    "infrastructure": "https://school9saratov.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "110 - Призеров школьного этата Всероссийской олимпиады школьников"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:17:23.194448+00:00"
+  },
+  {
+    "id": 90,
+    "name_2gis": "МАОУ Средняя общеобразовательная школа №16",
+    "short_name": "Школа №16",
+    "address": "ул Брянская, д 3",
+    "building_type": "Основное здание",
+    "area_sqm": 3000.0,
+    "floors": 4,
+    "underground_floors": null,
+    "material": null,
+    "year_built": 1960,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": 1,
+    "has_sports_ground": 1,
+    "latitude": 51.462729,
+    "longitude": 45.930878,
+    "cadastral_number": "64:48:020445:373",
+    "rating_2gis": 5.0,
+    "rating_yandex": 3.9,
+    "link_yandex": "https://yandex.com/maps/org/kadetskaya_shkola_16/1781697901/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/kadetskaya_shkola_16/1781697901/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280256552",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280256552/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.930878,
+        51.462729
+      ]
+    },
+    "link_gosuslugi": "https://shk16-sar.gosuslugi.ru/",
+    "specialization": [
+      "Универсальный профиль"
+    ],
+    "EGE": "47,8 - Средний балл на ЕГЭ в 2021 году",
+    "VUZ": "63% - Выпускников поступивших в ВУЗы в 2021-2022 году",
+    "Olympiads": [
+      "115 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals": [],
+    "other_results": [],
+    "results_kpi_raw": [
+      "115 - Призеров Всероссийской олимпиады за 3 года",
+      "47,8 - Средний балл на ЕГЭ в 2021 году",
+      "63% - Выпускников поступивших в ВУЗы в 2021-2022 году"
+    ],
+    "infrastructure": "https://shk16-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "115 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:17:34.324187+00:00"
+  },
+  {
+    "id": 91,
+    "name_2gis": "ГБОУ Школа-интернат для обучающихся по адаптированным образовательным программам №5",
+    "short_name": "Школа-интернат №5 адаптированная",
+    "address": "ул Рогожина, зд 22",
+    "building_type": "Основное здание",
+    "area_sqm": 3022.1,
+    "floors": 4,
+    "underground_floors": 1,
+    "material": "кирп",
+    "year_built": 1914,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.535624,
+    "longitude": 46.058044,
+    "cadastral_number": "64:48:000000:22831",
+    "rating_2gis": 3.0,
+    "rating_yandex": 4.2,
+    "link_yandex": "https://yandex.com/maps/org/gosudarstvennoye_byudzhetnoye_obshcheobrazovatelnoye_uchrezhdeniye_so_shkola_internat_dlya_obuchayushchikhsya_po_adaptirovannym_obrazovatelnym_programmam_5_g_saratova/1010417963/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/gosudarstvennoye_byudzhetnoye_obshcheobrazovatelnoye_uchrezhdeniye_so_shkola_internat_dlya_obuchayushchikhsya_po_adaptirovannym_obrazovatelnym_programmam_5_g_saratova/1010417963/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280266750",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280266750/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        46.058044,
+        51.535624
+      ]
+    },
+    "link_gosuslugi": "https://sh-int5-saratov-r64.gosweb.gosuslugi.ru/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "В 2026 году наши выпускники поступили в - ГАПОУ СО \"Саратовский колледж водного транспорта, строительства и сервиса\"; ГАПОУ СО «Саратовский комплекс-интернат профессионального обучения для инвалидов и лиц с ОВЗ»; ГАПОУ СО «Саратовский политехнический колледж»",
+      "100% - Обучающихся было охвачено внеурочной деятельностью",
+      "100% - Успеваемость по трудовому обучению составляет",
+      "100% - Продолжили обучение в организациях СПО и НПО",
+      "100% - Качество знаний по трудовому обучению",
+      "Телефон - +7 (8452) 28-72-90",
+      "5 - Почетных работников общего образования",
+      "1 - кандидат психологических наук",
+      "31 - учитель высшей и первой категории",
+      "1 - Почетный наставник РФ",
+      "1 - Заслуженный учитель РФ",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_kpi_raw": [
+      "В 2026 году наши выпускники поступили в - ГАПОУ СО \"Саратовский колледж водного транспорта, строительства и сервиса\"; ГАПОУ СО «Саратовский комплекс-интернат профессионального обучения для инвалидов и лиц с ОВЗ»; ГАПОУ СО «Саратовский политехнический колледж»",
+      "100% - Обучающихся было охвачено внеурочной деятельностью",
+      "100% - Успеваемость по трудовому обучению составляет",
+      "100% - Продолжили обучение в организациях СПО и НПО",
+      "100% - Качество знаний по трудовому обучению",
+      "Телефон - +7 (8452) 28-72-90",
+      "5 - Почетных работников общего образования",
+      "1 - кандидат психологических наук",
+      "31 - учитель высшей и первой категории",
+      "1 - Почетный наставник РФ",
+      "1 - Заслуженный учитель РФ",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "infrastructure": "https://sh-int5-saratov-r64.gosweb.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "В 2026 году наши выпускники поступили в - ГАПОУ СО \"Саратовский колледж водного транспорта, строительства и сервиса\"; ГАПОУ СО «Саратовский комплекс-интернат профессионального обучения для инвалидов и лиц с ОВЗ»; ГАПОУ СО «Саратовский политехнический колледж»",
+      "100% - Обучающихся было охвачено внеурочной деятельностью",
+      "100% - Успеваемость по трудовому обучению составляет",
+      "100% - Продолжили обучение в организациях СПО и НПО",
+      "100% - Качество знаний по трудовому обучению",
+      "Телефон - +7 (8452) 28-72-90",
+      "5 - Почетных работников общего образования",
+      "1 - кандидат психологических наук",
+      "31 - учитель высшей и первой категории",
+      "1 - Почетный наставник РФ",
+      "1 - Заслуженный учитель РФ",
+      "Записать ребенка в школу - Получить электронную услугу",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:17:47.604551+00:00"
+  },
+  {
+    "id": 92,
+    "name_2gis": "МОУ Гимназия №89",
+    "short_name": "Гимназия №89",
+    "address": "ул Мало-Елшанская, зд 5",
+    "building_type": "Здание с новыми корпусами",
+    "area_sqm": 15197.9,
+    "floors": 9,
+    "underground_floors": 1,
+    "material": "кирп",
+    "year_built": 1949,
+    "reconstruction_year": 2018,
+    "capacity": null,
+    "has_sports_complex": 1,
+    "has_pool": 1,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.60917,
+    "longitude": 45.91204,
+    "cadastral_number": "64:48:040302:263, 64:48:040124:415, 64:48:040303:55",
+    "rating_2gis": 4.5,
+    "rating_yandex": 4.4,
+    "link_yandex": "https://yandex.com/maps/org/gimnaziya_89/70848925534/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/gimnaziya_89/70848925534/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280256871",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280256871/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.91204,
+        51.60917
+      ]
+    },
+    "link_gosuslugi": "https://gim89-sar.gosuslugi.ru/",
+    "VUZ": "86% - Выпускников поступивших в ВУЗы в 2026 году",
+    "EGE": "61% - Средний балл на ЕГЭ в 2026 году",
+    "Olympiads": [
+      "11 - Победителей и призеров муниципального и регионального этапов Всероссийской олимпиады школьников"
+    ],
+    "Medals": [
+      "3 - Выпускников с золотой медалью за 2026 год"
+    ],
+    "other_results": [
+      "97 - Победителей и призеров в спортивных соревнованиях",
+      "256 - победителей и призеров муниципального и регионального этапов конкурсов"
+    ],
+    "results_kpi_raw": [
+      "11 - Победителей и призеров муниципального и регионального этапов Всероссийской олимпиады школьников",
+      "97 - Победителей и призеров в спортивных соревнованиях",
+      "256 - победителей и призеров муниципального и регионального этапов конкурсов",
+      "86% - Выпускников поступивших в ВУЗы в 2026 году",
+      "3 - Выпускников с золотой медалью за 2026 год",
+      "61% - Средний балл на ЕГЭ в 2026 году"
+    ],
+    "EGE_2026": "61% - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "86% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "11 - Победителей и призеров муниципального и регионального этапов Всероссийской олимпиады школьников"
+    ],
+    "Medals_2026": [
+      "3 - Выпускников с золотой медалью за 2026 год"
+    ],
+    "other_results_2026": [
+      "97 - Победителей и призеров в спортивных соревнованиях",
+      "256 - победителей и призеров муниципального и регионального этапов конкурсов"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:18:06.946792+00:00"
+  },
+  {
+    "id": 93,
+    "name_2gis": "ГБОУ Школа для обучающихся по адаптированным образовательным программам №2 г. Саратова",
+    "short_name": "Школа №2 адаптированная",
+    "address": "ул Гоголя, зд 42",
+    "building_type": "Основное здание",
+    "area_sqm": 1350.8,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "кирп",
+    "year_built": 1887,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": null,
+    "latitude": 51.537826,
+    "longitude": 46.031499,
+    "cadastral_number": "64:48:030409:241, 64:48:000000:42034",
+    "rating_2gis": null,
+    "rating_yandex": 4.1,
+    "link_yandex": "https://yandex.com/maps/org/gosudarstvennoye_byudzhetnoye_obshcheobrazovatelnoye_uchrezhdeniye_saratovskoy_oblasti_shkola_dlya_obuchayushchikhsya_po_adaptivnym_obrazovatelnym_programmam_2_goroda_saratov/72111282236/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/gosudarstvennoye_byudzhetnoye_obshcheobrazovatelnoye_uchrezhdeniye_saratovskoy_oblasti_shkola_dlya_obuchayushchikhsya_po_adaptivnym_obrazovatelnym_programmam_2_goroda_saratov/72111282236/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280256558",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280256558/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        46.031499,
+        51.537826
+      ]
+    },
+    "link_gosuslugi": "https://korschool2.gosuslugi.ru/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "Телефон - 8(8452)-73-40-34",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_kpi_raw": [
+      "Телефон - 8(8452)-73-40-34",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "infrastructure": "https://korschool2.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "Телефон - 8(8452)-73-40-34",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:18:20.296747+00:00"
+  },
+  {
+    "id": 94,
+    "name_2gis": "МАОУ Лицей №36",
+    "short_name": "Лицей №36",
+    "address": "ул Одесская, зд 7",
+    "building_type": "Основное здание",
+    "area_sqm": 8891.6,
+    "floors": 3,
+    "underground_floors": 1,
+    "material": "кирп",
+    "year_built": 1990,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": 1,
+    "has_sports_ground": 1,
+    "latitude": 51.577672,
+    "longitude": 45.963981,
+    "cadastral_number": "64:48:040816:197",
+    "rating_2gis": 4.5,
+    "rating_yandex": 4.1,
+    "link_yandex": "https://yandex.com/maps/org/maou_litsey_36/1122418848/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/maou_litsey_36/1122418848/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280256652",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280256652/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.963981,
+        51.577672
+      ]
+    },
+    "link_gosuslugi": "https://lic36-sar.gosuslugi.ru/",
+    "specialization": [
+      "Технологический профиль",
+      "Социально-экономический профиль"
+    ],
+    "EGE": "62 - Средний балл на ЕГЭ в 2025 году",
+    "VUZ": "90% - Выпускников поступивших в ВУЗы в 2025 году",
+    "Olympiads": [
+      "420 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals": [],
+    "other_results": [
+      "16 - Выпускников с аттестатом с отличием за 2025 год"
+    ],
+    "results_kpi_raw": [
+      "420 - Призеров Всероссийской олимпиады за 3 года",
+      "16 - Выпускников с аттестатом с отличием за 2025 год",
+      "62 - Средний балл на ЕГЭ в 2025 году",
+      "90% - Выпускников поступивших в ВУЗы в 2025 году"
+    ],
+    "infrastructure": "https://lic36-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "420 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:18:39.863389+00:00"
+  },
+  {
+    "id": 95,
+    "name_2gis": "МАОУ Медико-биологический лицей",
+    "short_name": "Медико-биологический лицей",
+    "address": "ул Блинова, зд 27",
+    "building_type": "Основное здание",
+    "area_sqm": 12285.0,
+    "floors": 5,
+    "underground_floors": 1,
+    "material": "кирп",
+    "year_built": 2012,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.600229,
+    "longitude": 46.002411,
+    "cadastral_number": "64:48:040420:108",
+    "rating_2gis": 4.5,
+    "rating_yandex": 4.3,
+    "link_yandex": "https://yandex.com/maps/org/maou_mediko_biologichesky_litsey_goroda_saratova/1174614164/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/maou_mediko_biologichesky_litsey_goroda_saratova/1174614164/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280266524",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280266524/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        46.002411,
+        51.600229
+      ]
+    },
+    "link_gosuslugi": "https://mbl-sar.gosuslugi.ru/",
+    "EGE": "75/77,86 - Средний балл на ЕГЭ в 2026 году по русскому языку/по профильной математике",
+    "VUZ": "100% - Выпускников, поступивших в ВУЗы в 2026 году",
+    "Olympiads": [
+      "11/109 - Победителей и призеров Всероссийской олимпиады за 3 года (муниципальный и региональный уровни)"
+    ],
+    "Medals": [
+      "8 - Выпускников с медалью за 2026 год ( 6 - золотая медаль, 2 - серебряная медаль)"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "11/109 - Победителей и призеров Всероссийской олимпиады за 3 года (муниципальный и региональный уровни)",
+      "8 - Выпускников с медалью за 2026 год ( 6 - золотая медаль, 2 - серебряная медаль)",
+      "75/77,86 - Средний балл на ЕГЭ в 2026 году по русскому языку/по профильной математике",
+      "100% - Выпускников, поступивших в ВУЗы в 2026 году"
+    ],
+    "infrastructure": "https://mbl-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": "75/77,86 - Средний балл на ЕГЭ в 2026 году по русскому языку/по профильной математике",
+    "VUZ_2026": "100% - Выпускников, поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "11/109 - Победителей и призеров Всероссийской олимпиады за 3 года (муниципальный и региональный уровни)"
+    ],
+    "Medals_2026": [
+      "8 - Выпускников с медалью за 2026 год ( 6 - золотая медаль, 2 - серебряная медаль)"
+    ],
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:18:51.757149+00:00"
+  },
+  {
+    "id": 96,
+    "name_2gis": "МОУ Лицей №107",
+    "short_name": "Лицей №107",
+    "address": "ул Державинская, д 10",
+    "building_type": "Основное здание",
+    "area_sqm": 8807.5,
+    "floors": 3,
+    "underground_floors": null,
+    "material": "кирп",
+    "year_built": 2002,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.573485,
+    "longitude": 46.066246,
+    "cadastral_number": "64:48:010115:8736",
+    "rating_2gis": 4.0,
+    "rating_yandex": 4.2,
+    "link_yandex": "https://yandex.com/maps/org/lyceum_107/1021761978/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/lyceum_107/1021761978/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280266504",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280266504/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        46.066246,
+        51.573485
+      ]
+    },
+    "link_gosuslugi": "https://lic107-sar.gosuslugi.ru/",
+    "specialization": [
+      "Гуманитарный",
+      "Технологический"
+    ],
+    "EGE": "60 - Средний балл на ЕГЭ в 2022 году",
+    "VUZ": "93% - Выпускников поступивших в ВУЗы в 2022 году",
+    "Olympiads": [
+      "60 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals": [
+      "4 - Выпускников с золотой медалью за 2022 год"
+    ],
+    "other_results": [],
+    "results_kpi_raw": [
+      "60 - Призеров Всероссийской олимпиады за 3 года",
+      "4 - Выпускников с золотой медалью за 2022 год",
+      "60 - Средний балл на ЕГЭ в 2022 году",
+      "93% - Выпускников поступивших в ВУЗы в 2022 году"
+    ],
+    "infrastructure": "https://lic107-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "60 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:19:04.815258+00:00"
+  },
+  {
+    "id": 97,
+    "name_2gis": "ГБОУ Школа для обучающихся по адаптированным образовательным программам №6 г. Саратова",
+    "short_name": "Школа №6",
+    "address": "ул Пролетарская, зд 8",
+    "building_type": "Основное здание",
+    "area_sqm": 1352.7,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "кирп",
+    "year_built": 1937,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.51248,
+    "longitude": 45.959544,
+    "cadastral_number": "64:48:020619:661",
+    "rating_2gis": 4.5,
+    "rating_yandex": 3.4,
+    "link_yandex": "https://yandex.com/maps/org/school_6/1075874246/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/school_6/1075874246/reviews/",
+    "link_2gis": "https://2gis.ru/saratov/firm/6052240280292317",
+    "reviews_link_2gis": "https://2gis.ru/saratov/firm/6052240280292317/tab/reviews",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.959544,
+        51.51248
+      ]
+    },
+    "link_gosuslugi": "https://sh6-saratov-r64.gosweb.gosuslugi.ru/",
+    "Olympiads": [],
+    "Medals": [],
+    "other_results": [
+      "32 - Выпускника 9 классов 2026 г.",
+      "5 - Отличников",
+      "15 - Выпускников поступили в НПО",
+      "Телефон - +78452960148",
+      "Телефон - +7(8452) 96-01-48",
+      "13 - учителей высшей категории",
+      "6 - учителей первой категории",
+      "4 - Отличник народного просвещения - нагрудный зна",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_kpi_raw": [
+      "32 - Выпускника 9 классов 2026 г.",
+      "5 - Отличников",
+      "15 - Выпускников поступили в НПО",
+      "Телефон - +78452960148",
+      "Телефон - +7(8452) 96-01-48",
+      "13 - учителей высшей категории",
+      "6 - учителей первой категории",
+      "4 - Отличник народного просвещения - нагрудный зна",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "infrastructure": "https://sh6-saratov-r64.gosweb.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": [
+      "32 - Выпускника 9 классов 2026 г.",
+      "5 - Отличников",
+      "15 - Выпускников поступили в НПО",
+      "Телефон - +78452960148",
+      "Телефон - +7(8452) 96-01-48",
+      "13 - учителей высшей категории",
+      "6 - учителей первой категории",
+      "4 - Отличник народного просвещения - нагрудный зна",
+      "Правила приема в школу - Информация и условия для поступления в школу"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T18:19:16.289488+00:00"
   }
 ]

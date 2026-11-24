@@ -270,8 +270,11 @@ export default function MapView({
         // (поднимаем только если смотрели на весь город)
         const currentZoom = map.location?.zoom ?? viewRef.current.zoom ?? DEFAULT_ZOOM;
         const zoom = Math.max(currentZoom, 16);
-        viewRef.current = { center: coords, zoom };
-        map.setLocation({ center: coords, zoom, duration: 600 });
+        // Карточка школы занимает нижнюю часть экрана — сдвигаем точку выше центра
+        const shift = Math.min(0.02, 0.0035 * Math.pow(2, 16 - zoom));
+        const center = [coords[0], coords[1] - shift];
+        viewRef.current = { center, zoom };
+        map.setLocation({ center, zoom, duration: 600 });
       }
     } else if (!cameraAdjustedRef.current && validSchools.length > 0) {
       const bounds = boundsFromLonLats(validSchools.map(lonLatOfSchool).filter(Boolean));
