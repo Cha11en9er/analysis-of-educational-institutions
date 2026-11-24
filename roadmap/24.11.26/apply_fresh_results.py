@@ -47,6 +47,12 @@ def main() -> None:
     extract = json.loads(EXTRACT.read_text(encoding="utf-8"))
     fresh_raw = json.loads(FRESH.read_text(encoding="utf-8"))
     fresh = {int(x["id"]): x for x in fresh_raw if x.get("id") is not None}
+    # перепрогон по исправленным ссылкам (Гимназия №4 и др.) — приоритетнее
+    recheck = REPO / "roadmap" / "24.11.26" / "sg_recheck_out.json"
+    if recheck.exists():
+        for x in json.loads(recheck.read_text(encoding="utf-8")):
+            if x.get("id") is not None:
+                fresh[int(x["id"])] = x
 
     stats = {"set": 0, "drop": 0, "keep": 0, "no_fresh": 0, "vuz_set": 0}
     for rec in extract:
@@ -59,11 +65,19 @@ def main() -> None:
             continue
         new_ege = f.get("EGE_2026") or f.get("EGE")
         action, val = classify(new_ege)
+        current = str(rec.get("EGE") or "").lower()
+        was_not_average = any(m in current for m in NOT_AVERAGE)
         if action == "SET":
             rec["EGE"] = new_ege
             rec["EGE_2026"] = new_ege
             stats["set"] += 1
         elif action == "DROP":
+            rec["EGE"] = None
+            rec["EGE_2026"] = None
+            stats["drop"] += 1
+        elif was_not_average and not new_ege:
+            # раньше лежал «высший/максимальный балл», а в свежем прогоне его нет ->
+            # это был не средний балл: убираем (иначе значение в рейтинге будет неверным)
             rec["EGE"] = None
             rec["EGE_2026"] = None
             stats["drop"] += 1

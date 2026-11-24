@@ -511,6 +511,11 @@ def ege_for_school(
     ege_map: dict[int, tuple[float, int]],
 ) -> tuple[float | None, int | None]:
     school_id = school.get("id")
+    # Приоритет: свежая выгрузка sg_main (обновляется прогоном), затем ручной Excel-файл
+    # (может отставать по году — аудит 24.11.2026 это зафиксировал).
+    raw = _parse_ege_raw_score_and_year(school.get("EGE"))
+    if raw != (None, None):
+        return raw
     if school_id is not None:
         try:
             mapped = ege_map.get(int(school_id))
@@ -518,7 +523,7 @@ def ege_for_school(
                 return mapped
         except (TypeError, ValueError):
             pass
-    return _parse_ege_raw_score_and_year(school.get("EGE"))
+    return raw
 
 
 def _extract_olympiad_entries(school: dict[str, Any]) -> list[str]:
@@ -1082,7 +1087,7 @@ def transform_school(
         "rating_sports_infrastructure": sports_rating_points(sports),
         "rating_psychological_climate": review.get("rating_psychological_climate"),
         "rating_profiles": rating_profiles_value,
-        "ege_average_score": float(ege_score) if ege_score is not None else 0.0,
+        "ege_average_score": float(ege_score) if ege_score is not None else None,
         "ege_year": ege_year,
         "rating_university_admission": university_admission_rating(vuz_percent),
         "university_admission_percent": vuz_percent,

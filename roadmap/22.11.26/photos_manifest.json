@@ -1830,5 +1830,1109 @@
   "org_url": "https://yandex.ru/maps/org/detskaya_muzykalnaya_shkola_2/1098885770/",
   "photo": null,
   "source": null
+ },
+ "arts_do|Саратов|250214|ГПОУ «СХУ имени А.П. Боголюбова (техникум)»": {
+  "code_oo": 250214,
+  "kind": "arts_do",
+  "city": "Саратов",
+  "name": "ГПОУ «СХУ имени А.П. Боголюбова (техникум)»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/saratovskoye_khudozhestvennoye_uchilishche_imeni_a_p_bogolyubova/1015674738/",
+  "photo": null,
+  "source": null
+ },
+ "internat_cadet|Саратов|249014|ГБОУ СО «Школа-интернат АОП № 3 г.Саратова»": {
+  "code_oo": 249014,
+  "kind": "internat_cadet",
+  "city": "Саратов",
+  "name": "ГБОУ СО «Школа-интернат АОП № 3 г.Саратова»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/shkola_internat_3/228497961048/",
+  "photo": null,
+  "source": null
+ },
+ "internat_cadet|Саратов|249024|ГБОУ СО «Школа-интернат АОП№ 4 г.Саратова»": {
+  "code_oo": 249024,
+  "kind": "internat_cadet",
+  "city": "Саратов",
+  "name": "ГБОУ СО «Школа-интернат АОП№ 4 г.Саратова»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/shkola_internat_dlya_obuchayushchikhsya_po_adaptirovannym_obshcheobrazovatelnym_programmam_4/18629834848/",
+  "photo": null,
+  "source": null
+ },
+ "internat_cadet|Саратов|249032|ГБОУ СО «СКШ № 1 им. Б.Н.Ерёмина»": {
+  "code_oo": 249032,
+  "kind": "internat_cadet",
+  "city": "Саратов",
+  "name": "ГБОУ СО «СКШ № 1 им. Б.Н.Ерёмина»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/kadetskaya_shkola_internat_1/1701101127/",
+  "photo": null,
+  "source": null
+ },
+ "internat_cadet|Саратов|249036|Медицинский предуниверсарий СГМУ им. В.И. Разумовского": {
+  "code_oo": 249036,
+  "kind": "internat_cadet",
+  "city": "Саратов",
+  "name": "Медицинский предуниверсарий СГМУ им. В.И. Разумовского",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/sgmu_imeni_v_i_razumovskogo_tsentr_dovuzovskogo_obrazovaniya_meditsinskiy_preduniversariy/1312708201/",
+  "photo": null,
+  "source": null
+ },
+ "internat_cadet|Саратов|249046|ГАПОУ СО «Саратовский областной образовательный комплекс - Политехнический колледж - Лицей-интернат 64»": {
+  "code_oo": 249046,
+  "kind": "internat_cadet",
+  "city": "Саратов",
+  "name": "ГАПОУ СО «Саратовский областной образовательный комплекс - Политехнический колледж - Лицей-интернат 64»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/saratovskiy_politekhnicheskiy_kolledzh/1044220400/",
+  "photo": null,
+  "source": null
+ },
+ "internat_cadet|Саратов|249064|ГАОУ СО «Школа «Уникум»": {
+  "code_oo": 249064,
+  "kind": "internat_cadet",
+  "city": "Саратов",
+  "name": "ГАОУ СО «Школа «Уникум»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/shkola_unikum/1031121342/",
+  "photo": null,
+  "source": null
+ },
+ "internat_cadet|Саратов|249088|ГБОУ СО «Школа-интернат № 5 АОП г.Саратова»": {
+  "code_oo": 249088,
+  "kind": "internat_cadet",
+  "city": "Саратов",
+  "name": "ГБОУ СО «Школа-интернат № 5 АОП г.Саратова»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/gbou_so_shkola_internat_dlya_obuchayushchikhsya_po_adaptirovannym_obrazovatelnym_programmam_5_g_saratova/1010417963/",
+  "photo": "boarding/saratov/249088.jpg",
+  "source": "https://avatars.mds.yandex.net/get-altay/218662/2a0000016148da4f6fcfcbcfffc03201e09e/L_height",
+  "width": 500,
+  "height": 281
+ },
+ "internat_cadet|Саратов|249138|ГБОУ СО «Центр образования» г. Саратова": {
+  "code_oo": 249138,
+  "kind": "internat_cadet",
+  "city": "Саратов",
+  "name": "ГБОУ СО «Центр образования» г. Саратова",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/shkola_internat_3/228497961048/",
+  "photo": null,
+  "source": null
+ },
+ "internat_cadet|Саратов|249148|ГБОУ СО «Школа АОП № 2 г.Саратова»": {
+  "code_oo": 249148,
+  "kind": "internat_cadet",
+  "city": "Саратов",
+  "name": "ГБОУ СО «Школа АОП № 2 г.Саратова»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "internat_cadet|Саратов|249158|ГБОУ СО «Школа АОП № 4 г.Саратова»": {
+  "code_oo": 249158,
+  "kind": "internat_cadet",
+  "city": "Саратов",
+  "name": "ГБОУ СО «Школа АОП № 4 г.Саратова»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/spetsialnaya_korrektsionnaya_obshcheobrazovatelnaya_shkola_4_viii_vida/15410306125/",
+  "photo": null,
+  "source": null
+ },
+ "internat_cadet|Саратов|249168|ГБОУ СО «Школа АОП № 6 г.Саратова»": {
+  "code_oo": 249168,
+  "kind": "internat_cadet",
+  "city": "Саратов",
+  "name": "ГБОУ СО «Школа АОП № 6 г.Саратова»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/shkola_6/1075874246/",
+  "photo": null,
+  "source": null
+ },
+ "internat_cadet|Саратов|255001|ГАПОУ СО «СКИПО для инвалидов и лиц с ОВЗ»": {
+  "code_oo": 255001,
+  "kind": "internat_cadet",
+  "city": "Саратов",
+  "name": "ГАПОУ СО «СКИПО для инвалидов и лиц с ОВЗ»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/saratovskiy_kompleks_internat_professionalnogo_obucheniya_dlya_invalidov_i_lits_s_ovz/115166088366/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|232000|Департамент Гагаринского административного района муниципального образования «Город Саратов»": {
+  "code_oo": 232000,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "Департамент Гагаринского административного района муниципального образования «Город Саратов»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/administratsiya_gagarinskogo_rayona/1062551827/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|241000|комитет по образованию администрации муниципального образования «Город Саратов»": {
+  "code_oo": 241000,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "комитет по образованию администрации муниципального образования «Город Саратов»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|241010|МАУДО «ДТДиМ им. О.П. Табакова»": {
+  "code_oo": 241010,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "МАУДО «ДТДиМ им. О.П. Табакова»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/dvorets_tvorchestva_detey_i_molodezhi_imeni_o_p_tabakova/91269287975/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|241030|МАУДО «ДюЦПВТ»": {
+  "code_oo": 241030,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "МАУДО «ДюЦПВТ»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detsko_yunosheskiy_tsentr_patrioticheskogo_vospitaniya_i_turizma/1119077614/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|241040|МКУДО «Центр технического творчества детей и молодежи»": {
+  "code_oo": 241040,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "МКУДО «Центр технического творчества детей и молодежи»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/tsentr_tekhnicheskogo_tvorchestva_detey_i_molodezhi/1103153032/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|242000|Администрация Октябрьского района муниципального образования «Город Саратов»": {
+  "code_oo": 242000,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "Администрация Октябрьского района муниципального образования «Город Саратов»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/administratsiya_oktyabrskogo_rayona_goroda_saratova/1113362182/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|242010|МУДО ЦДОдД": {
+  "code_oo": 242010,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "МУДО ЦДОдД",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|242020|МУДО «ДООЦ «Восход»": {
+  "code_oo": 242020,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "МУДО «ДООЦ «Восход»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|243020|МУДО «ДДТ»": {
+  "code_oo": 243020,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "МУДО «ДДТ»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|244000|Администрация Фрунзенского района муниципального образования «Город Саратов»": {
+  "code_oo": 244000,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "Администрация Фрунзенского района муниципального образования «Город Саратов»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/administratsiya_frunzenskogo_rayona/1526253910/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|244010|МАУ ДО «ДЮЦ»": {
+  "code_oo": 244010,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "МАУ ДО «ДЮЦ»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detsko_yunosheskiy_tsentr_pervy_g_kirova/1059294768/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|245000|Администрация Кировского района муниципального образования «Город Саратов»": {
+  "code_oo": 245000,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "Администрация Кировского района муниципального образования «Город Саратов»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/administratsiya_kirovskogo_munitsipalnogo_rayona/39734610689/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|245010|МАУДО ЦДТ «Созвездие-К»": {
+  "code_oo": 245010,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "МАУДО ЦДТ «Созвездие-К»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/maudo_tsdt_sozvezdiye_k/1117046715/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|246000|Администрация Ленинского района муниципального образования &laquo;Город Саратов&raquo;": {
+  "code_oo": 246000,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "Администрация Ленинского района муниципального образования &laquo;Город Саратов&raquo;",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/administratsiya_leninskogo_munitsipalnogo_rayona/62869135197/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|246010|МУ ДО «ЦДТ» Ленинского района г. Саратова": {
+  "code_oo": 246010,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "МУ ДО «ЦДТ» Ленинского района г. Саратова",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/tsentr_detskogo_tvorchestva_leninskogo_rayona_goroda_saratova/1718117939/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|246020|МУДО «ДДТ «Солнечный»": {
+  "code_oo": 246020,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "МУДО «ДДТ «Солнечный»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|246781|МУ ДО «ДООЦ «Мечта»": {
+  "code_oo": 246781,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "МУ ДО «ДООЦ «Мечта»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/mechta/95977571245/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|247000|Администрация Заводского района муниципального образования «Город Саратов»": {
+  "code_oo": 247000,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "Администрация Заводского района муниципального образования «Город Саратов»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/administratsiya_zavodskogo_rayona_goroda_saratova/1050133022/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|247010|МУДО «ЦДО»": {
+  "code_oo": 247010,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "МУДО «ЦДО»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|247090|МУ ДО «ДООЦ «Дубки»": {
+  "code_oo": 247090,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "МУ ДО «ДООЦ «Дубки»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/dubki/28059908977/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|249025|ГБУ СОДО &laquo;ОЦЭКИТ&raquo;": {
+  "code_oo": 249025,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "ГБУ СОДО &laquo;ОЦЭКИТ&raquo;",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/oblastnoy_tsentr_ekologii_krayevedeniya_i_turizma/1019684373/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|252010|ООО «Аристотель»": {
+  "code_oo": 252010,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "ООО «Аристотель»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/aristotel/131370736677/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|252020|ООО «Центр Ларчик»": {
+  "code_oo": 252020,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "ООО «Центр Ларчик»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|253023|ФГКОУ «СОШ № 152»": {
+  "code_oo": 253023,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "ФГКОУ «СОШ № 152»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/fgkou_sosh_152/42664643195/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|255012|ГБУ СО «ЦСПСиД г. Саратова»": {
+  "code_oo": 255012,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "ГБУ СО «ЦСПСиД г. Саратова»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/tsentr_sotsialnoy_pomoshchi_semye_i_detyam_g_saratova/1073840506/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|255013|ГАУ СО СРЦ «Возвращение»": {
+  "code_oo": 255013,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "ГАУ СО СРЦ «Возвращение»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/saratovskiy_oblastnoy_sotsialno_reabilitatsionny_tsentr_vozvrashcheniye/199454764223/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|255047|ГБУ СО «ОРЦ»": {
+  "code_oo": 255047,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "ГБУ СО «ОРЦ»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/reabilitatsionny_tsentr_dlya_detey_i_podrostkov/1037143442/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|255059|ГАУ СО «ЦАРИ»": {
+  "code_oo": 255059,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "ГАУ СО «ЦАРИ»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/tsentr_adaptatsii_i_reabilitatsii_invalidov/1101706993/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|255066|МАУ ДО «ДООСЦ»": {
+  "code_oo": 255066,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "МАУ ДО «ДООСЦ»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_ozdorovitelno_obrazovatelny_sportivny_tsentr/222672654778/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|256001|ГУЗ «Областная клиническая больница»; ГУЗ «ОКБ»": {
+  "code_oo": 256001,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "ГУЗ «Областная клиническая больница»; ГУЗ «ОКБ»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/oblastnaya_klinicheskaya_bolnitsa/1780875605/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|256002|ГУЗ «СГКБ № 6 имени Академика В.Н. Кошелева»": {
+  "code_oo": 256002,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "ГУЗ «СГКБ № 6 имени Академика В.Н. Кошелева»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/saratovskaya_gorodskaya_klinicheskaya_bolnitsa_6_imeni_akademika_v_n_kosheleva/1257908225/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|256003|ГУЗ «СГПНД»": {
+  "code_oo": 256003,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "ГУЗ «СГПНД»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/saratovskiy_gorodskoy_psikhonevrologicheskiy_dispanser/1581285661/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|256004|ГУЗ «СОДКБ»": {
+  "code_oo": 256004,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "ГУЗ «СОДКБ»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/saratovskaya_oblastnaya_detskaya_klinicheskaya_bolnitsa/1013973947/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|256005|ГУЗ«ОКПБ»": {
+  "code_oo": 256005,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "ГУЗ«ОКПБ»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/oblastnaya_klinicheskaya_psikhiatricheskaya_bolnitsa_svyatoy_sofii/1084984291/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|256006|ГУЗ «ОКПТД»": {
+  "code_oo": 256006,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "ГУЗ «ОКПТД»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/oblastnoy_klinicheskiy_protivotuberkulezny_dispanser/7685225947/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|256007|ГУЗ СО «ПТС для детей»": {
+  "code_oo": 256007,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "ГУЗ СО «ПТС для детей»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/protivotuberkulyozny_sanatoriy_dlya_detey/1325891038/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|256008|ГУЗ «ДПТД»": {
+  "code_oo": 256008,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "ГУЗ «ДПТД»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_protivotuberkulezny_dispanser/129790568228/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|256009|ГУЗ «Специализированный дом ребенка» г. Саратова": {
+  "code_oo": 256009,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "ГУЗ «Специализированный дом ребенка» г. Саратова",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/dom_rebyonka/1059458718/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|256012|Клиническая больница им. С.Р. Миротворцева СГМУ": {
+  "code_oo": 256012,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "Клиническая больница им. С.Р. Миротворцева СГМУ",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/sgmu_imeni_v_i_razumovskogo_klinicheskiy_tsentr_universitetskaya_klinicheskaya_bolnitsa_1_imeni_s_r_mirotvortseva/1077889069/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|257120|ГАУ СО «ФСЦ «Урожай»": {
+  "code_oo": 257120,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "ГАУ СО «ФСЦ «Урожай»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/urozhay/1340504057/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|257130|ГБУ «СОСЦРСС»": {
+  "code_oo": 257130,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "ГБУ «СОСЦРСС»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|258130|ГАУ ДПО «Саратовский областной учебно-методический центр»": {
+  "code_oo": 258130,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "ГАУ ДПО «Саратовский областной учебно-методический центр»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/regionalny_tsentr_podderzhki_odarennykh_detey/1228038554/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|259010|«ЦВСНП ГУ МВД России по Саратовской области»": {
+  "code_oo": 259010,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "«ЦВСНП ГУ МВД России по Саратовской области»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/tsentr_vremennogo_soderzhaniya_dlya_nesovershennoletnikh_pravonarushiteley_glavnoye_upravleniye_mvd_rossii_po_saratovskoy_oblasti/217701954548/",
+  "photo": "other/saratov/259010.jpg",
+  "source": "https://avatars.mds.yandex.net/get-altay/4380921/2a000001774c0d93838850a23ab33b0fe2b7/L_height",
+  "width": 500,
+  "height": 375
+ },
+ "other|Саратов|259020|ФКУ СИЗО-1 УФСИН России по Саратовской области": {
+  "code_oo": 259020,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "ФКУ СИЗО-1 УФСИН России по Саратовской области",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/sledstvenny_izolyator_1/144796807916/",
+  "photo": null,
+  "source": null
+ },
+ "other|Саратов|264010|ГАУ ДО «Региональный центр допризывной подготовки молодежи»": {
+  "code_oo": 264010,
+  "kind": "other",
+  "city": "Саратов",
+  "name": "ГАУ ДО «Региональный центр допризывной подготовки молодежи»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/regionalny_tsentr_doprizyvnoy_podgotovki_molodezhi/1020363756/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|232021|МАДОУ «Детский сад № 1 поселка Красный Текстильщик»": {
+  "code_oo": 232021,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МАДОУ «Детский сад № 1 поселка Красный Текстильщик»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_1_solnechnyye_luchiki/1190872761/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|232051|МАДОУ «Детский сад «Солнышко» села Багаевка»": {
+  "code_oo": 232051,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МАДОУ «Детский сад «Солнышко» села Багаевка»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_solnyshko/1258633899/",
+  "photo": "kindergartens/saratov/232051.jpg",
+  "source": "https://avatars.mds.yandex.net/get-altay/11047134/2a0000018e7f89edd910bb4ba645e6bf3704/%s",
+  "width": 0,
+  "height": 0
+ },
+ "preschool|Саратов|232061|МАДОУ «Детский сад «Теремок» хутора Бартоломеевский»": {
+  "code_oo": 232061,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МАДОУ «Детский сад «Теремок» хутора Бартоломеевский»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_202_teremok/65930320803/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|232071|МАДОУ «Детский сад «Рябинка» с. Березина Речка»": {
+  "code_oo": 232071,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МАДОУ «Детский сад «Рябинка» с. Березина Речка»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/ryabinka/120392257106/",
+  "photo": "kindergartens/saratov/232071.jpg",
+  "source": "https://avatars.mds.yandex.net/get-altay/1024093/2a000001614ae5c8605682051bdc7347657f/%s",
+  "width": 0,
+  "height": 0
+ },
+ "preschool|Саратов|232121|МАДОУ «Детский сад р.п. Красный Октябрь»": {
+  "code_oo": 232121,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МАДОУ «Детский сад р.п. Красный Октябрь»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|232131|МАДОУ «Детский сад с. Михайловка»": {
+  "code_oo": 232131,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МАДОУ «Детский сад с. Михайловка»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_keplyonok/13033373392/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|232141|МАДОУ «Детский сад села Поповка»": {
+  "code_oo": 232141,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МАДОУ «Детский сад села Поповка»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|232161|МАДОУ «Светлячок» с. Рыбушка": {
+  "code_oo": 232161,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МАДОУ «Светлячок» с. Рыбушка",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_svetlyachok/196264657555/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|232201|МАДОУ «Детский сад р.п. Соколовый»": {
+  "code_oo": 232201,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МАДОУ «Детский сад р.п. Соколовый»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|232211|МАДОУ «Детский сад села Сосновка»": {
+  "code_oo": 232211,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МАДОУ «Детский сад села Сосновка»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|232221|МАДОУ «Детский сад ст. Тарханы»": {
+  "code_oo": 232221,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МАДОУ «Детский сад ст. Тарханы»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|232231|МАДОУ «Детский сад «Сказка» поселка Тепличный»": {
+  "code_oo": 232231,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МАДОУ «Детский сад «Сказка» поселка Тепличный»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/skazka/82997858479/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|232241|МАДОУ «Детский сад «Теремок» села Усть-Курдюм»": {
+  "code_oo": 232241,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МАДОУ «Детский сад «Теремок» села Усть-Курдюм»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_teremok/1704263262/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|232251|МАДОУ «Детский сад «Тополек» с. Шевыревка»": {
+  "code_oo": 232251,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МАДОУ «Детский сад «Тополек» с. Шевыревка»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_topolyok/1085135519/",
+  "photo": "kindergartens/saratov/232251.jpg",
+  "source": "https://avatars.mds.yandex.net/get-altay/10647561/2a0000018c8afbe960c92b823c3158f15d1b/%s",
+  "width": 0,
+  "height": 0
+ },
+ "preschool|Саратов|232261|МАДОУ «Детский сад с.Сторожевка\"": {
+  "code_oo": 232261,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МАДОУ «Детский сад с.Сторожевка\"",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad/17969969718/",
+  "photo": "kindergartens/saratov/232261.jpg",
+  "source": "https://avatars.mds.yandex.net/get-altay/1031166/2a0000016224d1a822b28d1ce1eb3dd246f6/%s",
+  "width": 0,
+  "height": 0
+ },
+ "preschool|Саратов|242011|МДОУ «Детский сад № 4»": {
+  "code_oo": 242011,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад № 4»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_4/1236920091/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|242021|МДОУ «Детский сад № 15»": {
+  "code_oo": 242021,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад № 15»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/mkdou_15_goroda_kirova/145698423567/",
+  "photo": "kindergartens/saratov/242021.jpg",
+  "source": "https://avatars.mds.yandex.net/get-altay/11047134/2a0000018e7f89edd910bb4ba645e6bf3704/%s",
+  "width": 0,
+  "height": 0
+ },
+ "preschool|Саратов|242031|МДОУ «Детский сад № 21» Октябрьского района г.Саратова": {
+  "code_oo": 242031,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад № 21» Октябрьского района г.Саратова",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_21/1009350510/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|242051|МДОУ «Детский сад комбинированного вида № 24 «Кораблик» Октябрьского района города Саратова": {
+  "code_oo": 242051,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад комбинированного вида № 24 «Кораблик» Октябрьского района города Саратова",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_kombinirovannogo_vida_24_korablik/93478400196/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|242061|МДОУ «Детский сад комбинированного вида №31 «Колосок»": {
+  "code_oo": 242061,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад комбинированного вида №31 «Колосок»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|242071|МДОУ «Детский сад №40» Октябрьского района г. Саратова": {
+  "code_oo": 242071,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад №40» Октябрьского района г. Саратова",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_40/1033941167/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|242081|МДОУ «Детский сад комбинированного вида № 54» г. Саратова": {
+  "code_oo": 242081,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад комбинированного вида № 54» г. Саратова",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_54/101716034107/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|242091|МДОУ «Детский сад комбинированного вида № 56» Октябрьского района г. Саратова": {
+  "code_oo": 242091,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад комбинированного вида № 56» Октябрьского района г. Саратова",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|242111|МДОУ «Детский сад № 104»": {
+  "code_oo": 242111,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад № 104»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|242121|МДОУ «Детский сад № 116»": {
+  "code_oo": 242121,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад № 116»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|242131|МДОУ «Детский сад № 121»": {
+  "code_oo": 242131,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад № 121»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|242141|МДОУ «Детский сад № 189» Октябрьского района г. Саратова": {
+  "code_oo": 242141,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад № 189» Октябрьского района г. Саратова",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_189/1101745110/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|242151|МДОУ «Детский сад № 213»": {
+  "code_oo": 242151,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад № 213»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_213/1024620196/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|242161|МДОУ «Детский сад № 235»": {
+  "code_oo": 242161,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад № 235»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_235_krokha/1129268809/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|242171|МДОУ «ЦРР - детский сад № 1»": {
+  "code_oo": 242171,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «ЦРР - детский сад № 1»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_1_solnechnyye_luchiki/1190872761/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|242181|МБДОУ «Детский сад комбинированного вида № 3»": {
+  "code_oo": 242181,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МБДОУ «Детский сад комбинированного вида № 3»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|242191|МДОУ «ЦРР - детский сад № 13»": {
+  "code_oo": 242191,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «ЦРР - детский сад № 13»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_13/1124683239/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|242201|МДОУ «ЦРР - детский сад № 79»": {
+  "code_oo": 242201,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «ЦРР - детский сад № 79»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_79_lastochka/52124819857/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|242221|МДОУ «Детский сад № 119» г.Саратова": {
+  "code_oo": 242221,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад № 119» г.Саратова",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_119/1115005165/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|243031|МДОУ ЦРР - детский сад № 20 «Аленький цветочек»": {
+  "code_oo": 243031,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ ЦРР - детский сад № 20 «Аленький цветочек»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/tsentr_razvitiya_rebyonka_detskiy_sad_20_alenkiy_tsvetochek/175351868555/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|243041|МДОУ «Детский сад комбинированного вида № 26»": {
+  "code_oo": 243041,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад комбинированного вида № 26»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_26_belosnezhka/1071815737/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|243061|МДОУ «Детский сад №33»": {
+  "code_oo": 243061,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад №33»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_33/1131279629/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|243071|МДОУ ЦРР- детский сад № 35 «Фантастика»": {
+  "code_oo": 243071,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ ЦРР- детский сад № 35 «Фантастика»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/tsentr_razvitiya_rebyonka_detskiy_sad_35_fantastika/115051190987/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|243101|МДОУ «Детский сад № 50»": {
+  "code_oo": 243101,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад № 50»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|243111|МДОУ «Детский сад № 52»": {
+  "code_oo": 243111,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад № 52»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_52_tsvetik_semitsvetik/1000261397/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|243121|МДОУ «Детский сад комбинированного вида №68»": {
+  "code_oo": 243121,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад комбинированного вида №68»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_68/1077921476/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|243141|МДОУ Детский сад № 94 «Вишенка»": {
+  "code_oo": 243141,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ Детский сад № 94 «Вишенка»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_94_vishenka/145932089602/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|243161|МДОУ «Детский сад общеразвивающего вида № 97»": {
+  "code_oo": 243161,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад общеразвивающего вида № 97»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_97/1073569287/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|243171|МДОУ «Детский сад общеразвивающего вида № 139»": {
+  "code_oo": 243171,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад общеразвивающего вида № 139»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|243181|МДОУ Национальный татарский детский сад № 154 «Чишмэ»": {
+  "code_oo": 243181,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ Национальный татарский детский сад № 154 «Чишмэ»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/natsionalny_tatarskiy_detskiy_sad_154_chishme_rodnik/1112002446/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|243191|МДОУ Детский сад № 173 « Тополёк »": {
+  "code_oo": 243191,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ Детский сад № 173 « Тополёк »",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_173/198586232132/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|243201|МДОУ Детский сад № 240 «Ручеек»": {
+  "code_oo": 243201,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ Детский сад № 240 «Ручеек»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_240/63357357267/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|243211|МДОУ «ЦРР - детский сад № 243 «Апельсин»": {
+  "code_oo": 243211,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «ЦРР - детский сад № 243 «Апельсин»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|243221|МДОУ «ЦРР - детский сад № 101 «Жар-птица»": {
+  "code_oo": 243221,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «ЦРР - детский сад № 101 «Жар-птица»",
+  "school_id": null,
+  "org_url": null,
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|243231|МДОУ «ЦРР - детский сад № 98 «Алые паруса»": {
+  "code_oo": 243231,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «ЦРР - детский сад № 98 «Алые паруса»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_202_teremok/65930320803/",
+  "photo": null,
+  "source": null
+ },
+ "preschool|Саратов|243241|МДОУ «Детский сад комбинированного вида № 99 «Изумрудный город»": {
+  "code_oo": 243241,
+  "kind": "preschool",
+  "city": "Саратов",
+  "name": "МДОУ «Детский сад комбинированного вида № 99 «Изумрудный город»",
+  "school_id": null,
+  "org_url": "https://yandex.ru/maps/org/detskiy_sad_99_izumrudny_gorod/87814483299/",
+  "photo": null,
+  "source": null
  }
 }
