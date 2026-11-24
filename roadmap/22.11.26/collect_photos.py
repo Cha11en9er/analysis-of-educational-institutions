@@ -39,6 +39,14 @@ GEO = {'Саратов': '46.031248', 'Энгельс': '46.112284'}
 CITY_SLUG = {'Саратов': 'saratov', 'Энгельс': 'engels'}
 
 
+def save_manifest(manifest: dict) -> None:
+    """Атомарная запись манифеста: сначала во временный файл, потом замена."""
+    tmp = MANIFEST + '.tmp'
+    with open(tmp, 'w', encoding='utf-8') as f:
+        json.dump(manifest, f, ensure_ascii=False, indent=1)
+    os.replace(tmp, MANIFEST)
+
+
 def load_targets() -> list[dict]:
     """Школы (Саратов из final_school_data.json, Энгельс из city_schools.json)
     + прочие учреждения (институты из выгрузки БД)."""
@@ -91,27 +99,46 @@ def find_org_url(page, name: str, city: str) -> str | None:
 
 
 # Признаки снимка здания (аудит 24.11 нашёл «не фото здания»: люди/интерьер/цветы)
-BUILDING_HINTS = ('здание', 'школ', 'фасад', 'территори', 'корпус')
+BUILDING_HINTS = ('здание', 'школ', 'фасад', 'территори', 'корпус', 'вход', 'кирпич', 'стен')
 NOT_BUILDING_HINTS = ('цвет', 'интерьер', 'класс', 'урок', 'праздник', 'выпускн', 'мероприяти',
                        'столов', 'спортзал', 'бассейн', 'дети', 'ученик', 'концерт', 'акция',
-                       'проблем', 'дефект', 'жалоб', 'скандал', 'последств')
+                       'проблем', 'дефект', 'жалоб', 'скандал', 'последств', 'логотип',
+                       'выставк', 'ярмарк', 'субботник', 'посадк', 'полив', 'снег', 'осень')
+# Подпись обычного фото организации: «Название, Город, фото»
+GENERIC_HINTS = ('фото',)
+
+
+def _img_pairs(html: str) -> list[tuple[str, str]]:
+    """Список (подпись, ссылка) для всех <img> с картинками Яндекс.Карт."""
+    pairs = []
+    for m in re.finditer(r'<img[^>]*>', html):
+        tag = m.group(0)
+        src = re.search(r'src="(https://avatars\.mds\.yandex\.net/[^"]+)"', tag)
+        if not src:
+            continue
+        alt = re.search(r'(?:alt|title)="([^"]{0,160})"', tag)
+        pairs.append((alt.group(1) if alt else '', src.group(1)))
+    return pairs
 
 
 def pick_photo(html: str) -> str | None:
     """Выбирает снимок здания: сначала картинка с подписью про здание, иначе og:image."""
-    pairs = re.findall(
-        r'<img[^>]+(?:alt|title)="([^"]{0,120})"[^>]*src="(https://avatars\.mds\.yandex\.net/[^"]+)"'
-        r'|<img[^>]+src="(https://avatars\.mds\.yandex\.net/[^"]+)"[^>]+(?:alt|title)="([^"]{0,120})"',
-        html,
-    )
-    for a, b in pairs:
-        alt, url = (a, b) if a.startswith('http') else (b, a)
+    pairs = _img_pairs(html)
+    generic = None
+    for alt, url in pairs:
         low = alt.lower()
         if any(n in low for n in NOT_BUILDING_HINTS):
             continue
         if any(h in low for h in BUILDING_HINTS):
             return url
+        if generic is None and any(h in low for h in GENERIC_HINTS):
+            generic = url
+    if generic:
+        return generic
     og = re.search(r'property="og:image" content="([^"]+)"', html)
+    if og and 'avatars.mds.yandex.net' in og.group(1):
+        return og.group(1)
+    og = re.search(r'content="([^"]+)"[^>]*property="og:image"', html)
     if og and 'avatars.mds.yandex.net' in og.group(1):
         return og.group(1)
     avs = sorted(set(re.findall(r'https://avatars\.mds\.yandex\.net/[^\s"\'\\)]+', html)))
@@ -119,6 +146,9 @@ def pick_photo(html: str) -> str | None:
         if 'get-altay' in a:
             return a
     return avs[0] if avs else None
+
+
+IMG_MAGIC = (b'\xff\xd8', b'\x89PNG', b'RIFF')
 
 
 def download(url: str, path: str):
@@ -130,7 +160,7 @@ def download(url: str, path: str):
                 data = r.read()
         except Exception:
             continue
-        if len(data) < 3000 or data[:2] != b'\xff\xd8':
+        if len(data) < 3000 or not data.startswith(IMG_MAGIC):
             continue
         os.makedirs(os.path.dirname(path), exist_ok=True)
         with open(path, 'wb') as f:
@@ -149,6 +179,10 @@ def main() -> None:
     ap.add_argument('--limit', type=int, default=0)
     ap.add_argument('--city', default=None)
     ap.add_argument('--kind', default=None)
+    ap.add_argument('--repick', action='store_true',
+                    help='пересобрать фото у всех (иначе только у тех, где фото нет)')
+    ap.add_argument('--only-missing', action='store_true',
+                    help='только те, у кого фото нет или файл отсутствует')
     args = ap.parse_args()
 
     targets = load_targets()
@@ -158,7 +192,7 @@ def main() -> None:
         targets = [t for t in targets if t['kind'] == args.kind]
     if args.limit:
         targets = targets[:args.limit]
-    print(f'Цели: {len(targets)}')
+    print(f'Цели: {len(targets)}', flush=True)
 
     manifest = json.load(open(MANIFEST, encoding='utf-8')) if os.path.exists(MANIFEST) else {}
     done = 0
@@ -168,7 +202,13 @@ def main() -> None:
         page = ctx.new_page()
         for t in targets:
             key = f"{t['kind']}|{t['city']}|{t['code_oo']}|{t['name']}"
-            if key in manifest:
+            old = manifest.get(key) or {}
+            old_photo = old.get('photo')
+            if old_photo and not args.repick:
+                done += 1
+                continue
+            if args.only_missing and old_photo and os.path.exists(
+                    os.path.join(OUT_ROOT, old_photo.replace('/', os.sep))):
                 done += 1
                 continue
             url = t.get('yandex_url')
@@ -181,7 +221,8 @@ def main() -> None:
                 try:
                     page.goto(url.rstrip('/') + '/', timeout=40000, wait_until='domcontentloaded')
                     page.wait_for_timeout(4500)
-                    photo = pick_photo(page.content())
+                    html = page.content()
+                    photo = pick_photo(html)
                 except Exception as e:
                     print('ERR', t['name'], str(e)[:50], flush=True)
             entry = {
@@ -195,16 +236,25 @@ def main() -> None:
                 fname = f"{t['code_oo'] or t.get('school_id')}.jpg"
                 rel = f"{kind_dir}/{city_dir}/{fname}"
                 size = download(photo, os.path.join(OUT_ROOT, rel.replace('/', os.sep)))
-                entry['photo'] = rel
-                entry['width'], entry['height'] = size or (0, 0)
+                if size:
+                    entry['photo'] = rel
+                    entry['width'], entry['height'] = size
+                elif old_photo:
+                    # не удалось скачать новое фото — оставляем прежнее
+                    entry['photo'] = old_photo
+                    entry['width'], entry['height'] = old.get('width', 0), old.get('height', 0)
+            elif old_photo:
+                entry['photo'] = old_photo
+                entry['width'], entry['height'] = old.get('width', 0), old.get('height', 0)
             manifest[key] = entry
             done += 1
-            print(f"{done}/{len(targets)} {t['kind']:14} {t['city']:8} {(t['name'] or '')[:38]:40} -> {entry['photo']}", flush=True)
-            json.dump(manifest, open(MANIFEST, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+            flag = '' if entry['photo'] else '  НЕТ ФОТО'
+            print(f"{done}/{len(targets)} {t['kind']:14} {t['city']:8} {(t['name'] or '')[:38]:40} -> {entry['photo']}{flag}", flush=True)
+            save_manifest(manifest)
             time.sleep(0.7)
         b.close()
 
-    json.dump(manifest, open(MANIFEST, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    save_manifest(manifest)
     with_photo = sum(1 for v in manifest.values() if v.get('photo'))
     print(f'Готово: {done}, с фото {with_photo}, без {len(manifest) - with_photo}')
 
