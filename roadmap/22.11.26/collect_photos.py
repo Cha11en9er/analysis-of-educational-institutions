@@ -90,7 +90,27 @@ def find_org_url(page, name: str, city: str) -> str | None:
     return None
 
 
+# Признаки снимка здания (аудит 24.11 нашёл «не фото здания»: люди/интерьер/цветы)
+BUILDING_HINTS = ('здание', 'школ', 'фасад', 'территори', 'корпус')
+NOT_BUILDING_HINTS = ('цвет', 'интерьер', 'класс', 'урок', 'праздник', 'выпускн', 'мероприяти',
+                       'столов', 'спортзал', 'бассейн', 'дети', 'ученик', 'концерт', 'акция',
+                       'проблем', 'дефект', 'жалоб', 'скандал', 'последств')
+
+
 def pick_photo(html: str) -> str | None:
+    """Выбирает снимок здания: сначала картинка с подписью про здание, иначе og:image."""
+    pairs = re.findall(
+        r'<img[^>]+(?:alt|title)="([^"]{0,120})"[^>]*src="(https://avatars\.mds\.yandex\.net/[^"]+)"'
+        r'|<img[^>]+src="(https://avatars\.mds\.yandex\.net/[^"]+)"[^>]+(?:alt|title)="([^"]{0,120})"',
+        html,
+    )
+    for a, b in pairs:
+        alt, url = (a, b) if a.startswith('http') else (b, a)
+        low = alt.lower()
+        if any(n in low for n in NOT_BUILDING_HINTS):
+            continue
+        if any(h in low for h in BUILDING_HINTS):
+            return url
     og = re.search(r'property="og:image" content="([^"]+)"', html)
     if og and 'avatars.mds.yandex.net' in og.group(1):
         return og.group(1)

@@ -387,6 +387,11 @@ def _parse_ege_raw_score_and_year(raw: Any) -> tuple[float, int] | tuple[None, N
     if not text or text.lower() in {"нету", "нет", "none", "null"}:
         return None, None
 
+    low = text.lower()
+    # В рейтинг ЕГЭ берём ТОЛЬКО средний балл школы.
+    # «Высший балл», «максимальное количество баллов», «сдал на 100 баллов» — другой показатель.
+    if not any(mark in low for mark in ("средний балл", "средний результат")):
+        return None, None
     score_match = re.search(r"(\d+(?:[.,]\d+)?)\s*-", text)
     if not score_match:
         return None, None
@@ -399,7 +404,11 @@ def _parse_ege_raw_score_and_year(raw: Any) -> tuple[float, int] | tuple[None, N
 
 
 def _find_ege_column(df: pd.DataFrame) -> str | None:
-    pattern = re.compile(r"(\d+(?:[.,]\d+)?)\s*-.*?(20\d{2})", flags=re.IGNORECASE)
+    # только строки со «средним баллом» — «максимальный/высший балл» — другой показатель
+    pattern = re.compile(
+        r"(\d+(?:[.,]\d+)?)\s*-\s*средний[^|]*?(20\d{2})",
+        flags=re.IGNORECASE,
+    )
     best_col = None
     best_cnt = 0
     for col in df.columns:

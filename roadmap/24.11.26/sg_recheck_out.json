@@ -1,0 +1,203 @@
+[
+  {
+    "id": 48,
+    "name_2gis": "МОУ «СОШ № 44 имени Героя России Н.В. Исаева»",
+    "short_name": "СОШ № 44 имени Героя России Н.В. Исаева",
+    "address": "Саратов",
+    "building_type": "Основное здание",
+    "area_sqm": 1139.8,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "смеш",
+    "year_built": 1980,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.509919,
+    "longitude": 45.987625,
+    "cadastral_number": "64:48:000000:15467",
+    "rating_2gis": null,
+    "rating_yandex": 4.7,
+    "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+    "link_2gis": null,
+    "reviews_link_2gis": null,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.987625,
+        51.509919
+      ]
+    },
+    "link_gosuslugi": "https://shk44-sar.gosuslugi.ru/",
+    "specialization": [
+      "Универсальный",
+      "Социально- экономический"
+    ],
+    "VUZ": "80% - Выпускников поступивших в ВУЗы в 2023 году",
+    "Olympiads": [
+      "242 - Призеров Всероссийской олимпиады за 2022/2023 учебный год"
+    ],
+    "Medals": [
+      "2 - Выпускников с золотой медалью за 2023 год"
+    ],
+    "other_results": [
+      "91 - Высший балл на ЕГЭ в 2023 году"
+    ],
+    "results_kpi_raw": [
+      "242 - Призеров Всероссийской олимпиады за 2022/2023 учебный год",
+      "2 - Выпускников с золотой медалью за 2023 год",
+      "91 - Высший балл на ЕГЭ в 2023 году",
+      "80% - Выпускников поступивших в ВУЗы в 2023 году"
+    ],
+    "infrastructure": "https://shk44-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": null,
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T17:09:24.750560+00:00"
+  },
+  {
+    "id": 13,
+    "name_2gis": "МОУ «СОШ № 97 имени Героя Советского Союза В.Г. Клочкова»",
+    "short_name": "СОШ № 97 имени Героя Советского Союза В.Г. Клочкова",
+    "address": "Саратов",
+    "building_type": "Основное здание",
+    "area_sqm": 1139.8,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "смеш",
+    "year_built": 1980,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.509919,
+    "longitude": 45.987625,
+    "cadastral_number": "64:48:000000:15467",
+    "rating_2gis": null,
+    "rating_yandex": 4.7,
+    "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+    "link_2gis": null,
+    "reviews_link_2gis": null,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.987625,
+        51.509919
+      ]
+    },
+    "link_gosuslugi": "https://shk97-sar.gosuslugi.ru/",
+    "VUZ": "79% - Выпускников поступивших в ВУЗы в 2024 году",
+    "Olympiads": [
+      "12 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals": [
+      "8 - Выпускников с золотой и серебряной медалями за 2024 год"
+    ],
+    "other_results": [
+      "86 - максимальное количество баллов по ЕГЭ в 2024 году"
+    ],
+    "results_kpi_raw": [
+      "12 - Призеров Всероссийской олимпиады за 3 года",
+      "8 - Выпускников с золотой и серебряной медалями за 2024 год",
+      "86 - максимальное количество баллов по ЕГЭ в 2024 году",
+      "79% - Выпускников поступивших в ВУЗы в 2024 году"
+    ],
+    "infrastructure": "https://shk97-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": null,
+    "VUZ_2026": null,
+    "Olympiads_2026": [
+      "12 - Призеров Всероссийской олимпиады за 3 года"
+    ],
+    "Medals_2026": null,
+    "other_results_2026": null,
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T17:09:45.576651+00:00"
+  },
+  {
+    "id": 34,
+    "name_2gis": "ГАОУ СО «Гимназия № 4»",
+    "short_name": "Гимназия № 4",
+    "address": "Саратов",
+    "building_type": "Основное здание",
+    "area_sqm": 1139.8,
+    "floors": 2,
+    "underground_floors": null,
+    "material": "смеш",
+    "year_built": 1980,
+    "reconstruction_year": null,
+    "capacity": null,
+    "has_sports_complex": null,
+    "has_pool": null,
+    "has_stadium": null,
+    "has_sports_ground": 1,
+    "latitude": 51.509919,
+    "longitude": 45.987625,
+    "cadastral_number": "64:48:000000:15467",
+    "rating_2gis": null,
+    "rating_yandex": 4.7,
+    "link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
+    "reviews_link_yandex": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/reviews/",
+    "link_2gis": null,
+    "reviews_link_2gis": null,
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        45.987625,
+        51.509919
+      ]
+    },
+    "link_gosuslugi": "https://gim4-sar.gosuslugi.ru/",
+    "specialization": [
+      "Cоциально-экономический",
+      "Технологический",
+      "Естественно-научный",
+      "Гуманитарный"
+    ],
+    "EGE": "75,6 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ": "100% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads": [
+      "237 - Призера муниципального этапа Всероссийской олимпиады школьников за 3 года"
+    ],
+    "Medals": [
+      "21 - Выпускник с медалью \"За особые успехи в учении\" за 2026 год"
+    ],
+    "other_results": [
+      "53,85 % - выпускников 80-100 баллов по обязательным предметам",
+      "5 - обучающихся отмечены Знаком Губернатора"
+    ],
+    "results_kpi_raw": [
+      "237 - Призера муниципального этапа Всероссийской олимпиады школьников за 3 года",
+      "21 - Выпускник с медалью \"За особые успехи в учении\" за 2026 год",
+      "75,6 - Средний балл на ЕГЭ в 2026 году",
+      "100% - Выпускников поступивших в ВУЗы в 2026 году",
+      "100 - баллов у 3 выпускников на ЕГЭ в 2026 году",
+      "53,85 % - выпускников 80-100 баллов по обязательным предметам",
+      "5 - обучающихся отмечены Знаком Губернатора"
+    ],
+    "infrastructure": "https://gim4-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/materialno-tehnicheskoe-obespechenie-dostupnaya-sreda/",
+    "EGE_2026": "75,6 - Средний балл на ЕГЭ в 2026 году",
+    "VUZ_2026": "100% - Выпускников поступивших в ВУЗы в 2026 году",
+    "Olympiads_2026": [
+      "237 - Призера муниципального этапа Всероссийской олимпиады школьников за 3 года"
+    ],
+    "Medals_2026": [
+      "21 - Выпускник с медалью \"За особые успехи в учении\" за 2026 год"
+    ],
+    "other_results_2026": [
+      "53,85 % - выпускников 80-100 баллов по обязательным предметам",
+      "5 - обучающихся отмечены Знаком Губернатора"
+    ],
+    "results_target_year": 2026,
+    "results_parsed_at": "2026-11-24T17:10:03.758647+00:00"
+  }
+]

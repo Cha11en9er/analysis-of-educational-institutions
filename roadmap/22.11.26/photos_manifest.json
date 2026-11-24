@@ -6,10 +6,8 @@
   "name": "Прогимназия Идеал",
   "school_id": 1,
   "org_url": "https://yandex.com/maps/org/progimnaziya_ideal/1003889825/",
-  "photo": "schools/saratov/1.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/7631548/2a000001833b0b3fa935ba6e9bdd2ccdd1d7/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №77": {
   "code_oo": null,
@@ -18,10 +16,8 @@
   "name": "Школа №77",
   "school_id": 2,
   "org_url": "https://yandex.com/maps/org/secondary_school_77/1028265778/",
-  "photo": "schools/saratov/2.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1903890/2a0000018af1ae79466726212c1a09d7c6b1/L_height",
-  "width": 500,
-  "height": 319
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №6": {
   "code_oo": null,
@@ -30,10 +26,8 @@
   "name": "Школа №6",
   "school_id": 3,
   "org_url": "https://yandex.com/maps/org/secondary_school_6/90738861676/",
-  "photo": "schools/saratov/3.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/13289089/2a00000192f5534100016cc07c6f6a6854b1/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №18": {
   "code_oo": null,
@@ -42,10 +36,8 @@
   "name": "Школа №18",
   "school_id": 4,
   "org_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_18_s_uglublennym_izucheniyem_predmetov_frunzenskogo_rayona_goroda_saratova/92543720504/",
-  "photo": "schools/saratov/4.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/14007310/2a0000019547327786e55abc94ebf384e351/L_height",
-  "width": 500,
-  "height": 343
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №70": {
   "code_oo": null,
@@ -54,10 +46,8 @@
   "name": "Школа №70",
   "school_id": 5,
   "org_url": "https://yandex.com/maps/org/secondary_school_70/107243058092/",
-  "photo": "schools/saratov/5.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/16264361/2a000001997ba0f65a94dfeef0acd4d49bec/L_height",
-  "width": 375,
-  "height": 500
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №73": {
   "code_oo": null,
@@ -66,10 +56,8 @@
   "name": "Школа №73",
   "school_id": 6,
   "org_url": "https://yandex.com/maps/org/secondary_school_73/1032739814/",
-  "photo": "schools/saratov/6.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/11368589/2a0000018c8557f197ea99d981651d898eb5/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №45": {
   "code_oo": null,
@@ -78,10 +66,8 @@
   "name": "Школа №45",
   "school_id": 7,
   "org_url": "https://yandex.com/maps/org/mei_secondary_school_45/1134269325/",
-  "photo": "schools/saratov/7.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/15181550/2a0000019666f79f43a49b8c2355023e54f0/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №2": {
   "code_oo": null,
@@ -90,10 +76,8 @@
   "name": "Школа №2",
   "school_id": 8,
   "org_url": "https://yandex.com/maps/org/shkola_2_s_uglublennym_izucheniyem_otdelnykh_predmetov_im_v_p_tikhonova/83182503409/",
-  "photo": "schools/saratov/8.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/218662/2a000001614c6bae5686597098c807f8c430/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №9": {
   "code_oo": null,
@@ -102,10 +86,8 @@
   "name": "Школа №9",
   "school_id": 9,
   "org_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_9_volzhskogo_rayona_g_saratova/1096289996/",
-  "photo": "schools/saratov/9.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/920214/2a00000161fdc9e21e0651517b0c0610e183/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Гимназия №2": {
   "code_oo": null,
@@ -114,10 +96,8 @@
   "name": "Гимназия №2",
   "school_id": 10,
   "org_url": "https://yandex.com/maps/org/mou_gymnasium_2_of_the_city_of_saratov/1044083499/",
-  "photo": "schools/saratov/10.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/15074774/2a0000019530ebd18ec34be755a9f86e7967/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №14": {
   "code_oo": null,
@@ -126,10 +106,8 @@
   "name": "Школа №14",
   "school_id": 11,
   "org_url": "https://yandex.com/maps/org/school_14/1068794906/",
-  "photo": "schools/saratov/11.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/8072793/2a000001886085f2709fad704ddafb2234a9/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №94": {
   "code_oo": null,
@@ -138,10 +116,8 @@
   "name": "Школа №94",
   "school_id": 12,
   "org_url": "https://yandex.com/maps/org/mou_sosh_94/1017609783/",
-  "photo": "schools/saratov/12.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/15487932/2a00000198fb099dfe364aacde7dcedf3f56/L_height",
-  "width": 376,
-  "height": 500
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №97": {
   "code_oo": null,
@@ -150,10 +126,8 @@
   "name": "Школа №97",
   "school_id": 13,
   "org_url": "https://yandex.com/maps/org/mou_97/85769787611/",
-  "photo": "schools/saratov/13.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/15683978/2a00000198e02512947575cdf82227ff8b19/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Православная гимназия Сергия Радонежского": {
   "code_oo": null,
@@ -162,10 +136,8 @@
   "name": "Православная гимназия Сергия Радонежского",
   "school_id": 14,
   "org_url": "https://yandex.com/maps/org/munitsipalnoye_obshcheobrazovatelnoye_ucherezhdeniyesrednyaya_obshcheobrazovatelnaya_shkola_10_volzhskogo_rayona_g_saratov/177322688958/",
-  "photo": "schools/saratov/14.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/18376122/2a00000199436038091444eef40ef244e606/L_height",
-  "width": 500,
-  "height": 377
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №23": {
   "code_oo": null,
@@ -174,10 +146,8 @@
   "name": "Школа №23",
   "school_id": 15,
   "org_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_23/189525180132/",
-  "photo": "schools/saratov/15.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/212783/2a0000018879e94072612476bcdd7066121c/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №76": {
   "code_oo": null,
@@ -186,10 +156,8 @@
   "name": "Школа №76",
   "school_id": 16,
   "org_url": "https://yandex.com/maps/org/mou_srednyaya_obshcheobrazovatelnaya_shkola_76/1211441882/",
-  "photo": "schools/saratov/16.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/771751/2a0000015e4cc9c3b863e2dfc0cbde3ac8f5/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №1": {
   "code_oo": null,
@@ -198,10 +166,8 @@
   "name": "Школа №1",
   "school_id": 17,
   "org_url": "https://yandex.com/maps/org/mou_sosh_1_frunzenskogo_rayona_goroda_saratova/199355486831/",
-  "photo": "schools/saratov/17.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/223006/2a0000015b3bb632882ada3df497c786dd51/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №51": {
   "code_oo": null,
@@ -210,10 +176,8 @@
   "name": "Школа №51",
   "school_id": 18,
   "org_url": "https://yandex.com/maps/org/munitsipalnoye_obshcheobrazovatelnoye_uchrezhdeniye_srednyaya_obshcheobrazovatelnaya_shkola_51/1041347543/",
-  "photo": "schools/saratov/18.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/4236413/2a0000017a199a50f3f49a31c964ed997be4/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Лицей-интернет естесственных наук": {
   "code_oo": null,
@@ -222,10 +186,8 @@
   "name": "Лицей-интернет естесственных наук",
   "school_id": 19,
   "org_url": "https://yandex.com/maps/org/litsey_internat_yestestvennykh_nauk/1046815252/",
-  "photo": "schools/saratov/19.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/788991/2a000001611fbf766078dcfb07abe76588f2/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №21": {
   "code_oo": null,
@@ -234,10 +196,8 @@
   "name": "Школа №21",
   "school_id": 20,
   "org_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_21_im_p_a_stolypina/1029954455/",
-  "photo": "schools/saratov/20.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/15081387/2a000001958688369b5863e61e9cac94e30d/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №59": {
   "code_oo": null,
@@ -246,10 +206,8 @@
   "name": "Школа №59",
   "school_id": 21,
   "org_url": "https://yandex.com/maps/org/munitsipalnoye_obrazovatelnoye_uchrezhdeniye_srednyaya_obshcheobrazovatelnaya_shkola_59_s_uglublennym_izucheniyem_predmetov/86852847691/",
-  "photo": "schools/saratov/21.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/12728107/2a0000018ff356d39274ed1cbe4d49723a02/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №55": {
   "code_oo": null,
@@ -258,10 +216,8 @@
   "name": "Школа №55",
   "school_id": 22,
   "org_url": "https://yandex.com/maps/org/secondary_school_55/1061907716/",
-  "photo": "schools/saratov/22.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/212783/2a0000015cedd461e8cfed252db20ac32072/L_height",
-  "width": 500,
-  "height": 281
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №84": {
   "code_oo": null,
@@ -270,10 +226,8 @@
   "name": "Школа №84",
   "school_id": 24,
   "org_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_84/245199771434/",
-  "photo": "schools/saratov/24.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/15386900/2a000001983802b96a010206b01d69b5b952/L_height",
-  "width": 500,
-  "height": 377
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №46": {
   "code_oo": null,
@@ -282,10 +236,8 @@
   "name": "Школа №46",
   "school_id": 25,
   "org_url": "https://yandex.com/maps/org/mou_sosh_46/1076928061/",
-  "photo": "schools/saratov/25.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/15182949/2a00000196a0c7426be4318ea38a65144840/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №100": {
   "code_oo": null,
@@ -294,10 +246,8 @@
   "name": "Школа №100",
   "school_id": 26,
   "org_url": "https://yandex.com/maps/org/shkola_100/1057602578/",
-  "photo": "schools/saratov/26.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/4441482/2a000001794b0069a608f84f86da7c17edea/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №106": {
   "code_oo": null,
@@ -306,10 +256,8 @@
   "name": "Школа №106",
   "school_id": 27,
   "org_url": "https://yandex.com/maps/org/secondary_school_106/210122755916/",
-  "photo": "schools/saratov/27.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/14733519/2a00000197b446966a04f64d8eddd978c6e7/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №72": {
   "code_oo": null,
@@ -318,10 +266,8 @@
   "name": "Школа №72",
   "school_id": 28,
   "org_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_72/83700291925/",
-  "photo": "schools/saratov/28.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/236825/2a0000015bc787ab64141f61db1f92dd3a41/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №22": {
   "code_oo": null,
@@ -342,10 +288,8 @@
   "name": "Школа №43э",
   "school_id": 30,
   "org_url": "https://yandex.com/maps/org/secondary_school_no_43_named_after_v_f_margelov/106386579987/",
-  "photo": "schools/saratov/30.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1371846/2a00000163c63207b0b9b6e1f0618cd36e97/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №17": {
   "code_oo": null,
@@ -354,10 +298,8 @@
   "name": "Школа №17",
   "school_id": 31,
   "org_url": "https://yandex.com/maps/org/basic_secondary_school_17/1131316636/",
-  "photo": "schools/saratov/31.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/374295/2a0000015b3b961434e70503e839e9dbf6b5/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Гимназия №1": {
   "code_oo": null,
@@ -366,10 +308,8 @@
   "name": "Гимназия №1",
   "school_id": 32,
   "org_url": "https://yandex.com/maps/org/gymnasium_1/1074329395/",
-  "photo": "schools/saratov/32.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/10869107/2a0000018b588250271894cde87904009ce7/L_height",
-  "width": 500,
-  "height": 281
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №102": {
   "code_oo": null,
@@ -378,10 +318,8 @@
   "name": "Школа №102",
   "school_id": 33,
   "org_url": "https://yandex.com/maps/org/shkola_102/134553044381/",
-  "photo": "schools/saratov/33.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/11124269/2a00000190a07fe2e4fab12206fe7c4572a9/L_height",
-  "width": 500,
-  "height": 377
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Гимназия №4": {
   "code_oo": null,
@@ -390,10 +328,8 @@
   "name": "Гимназия №4",
   "school_id": 34,
   "org_url": "https://yandex.com/maps/org/gymnasium_4/1110657902/",
-  "photo": "schools/saratov/34.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1592431/2a000001760e1f4db4281968361f39d69254/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №8": {
   "code_oo": null,
@@ -402,10 +338,8 @@
   "name": "Школа №8",
   "school_id": 35,
   "org_url": "https://yandex.com/maps/org/school_8/1082134116/",
-  "photo": "schools/saratov/35.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/14350490/2a0000019690b2da59a30f6c8bff5cf6ba86/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №71": {
   "code_oo": null,
@@ -414,10 +348,8 @@
   "name": "Школа №71",
   "school_id": 36,
   "org_url": "https://yandex.com/maps/org/secondary_school_71/1006274417/",
-  "photo": "schools/saratov/36.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/10242164/2a00000191c4acc0a47790eb845844807699/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №66": {
   "code_oo": null,
@@ -426,10 +358,8 @@
   "name": "Школа №66",
   "school_id": 37,
   "org_url": "https://yandex.com/maps/org/secondary_school_no_66_named_after_n_i_vavilov/1133728010/",
-  "photo": "schools/saratov/37.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/10373230/2a000001920716850868dea4e416f58ea88d/L_height",
-  "width": 375,
-  "height": 500
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа Иволгино": {
   "code_oo": null,
@@ -438,10 +368,8 @@
   "name": "Школа Иволгино",
   "school_id": 38,
   "org_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_ivolgino/113743269350/",
-  "photo": "schools/saratov/38.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/11004775/2a0000018c551a6bc4b46c4cf052402133ab/L_height",
-  "width": 375,
-  "height": 500
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Гимназия №3": {
   "code_oo": null,
@@ -450,10 +378,8 @@
   "name": "Гимназия №3",
   "school_id": 39,
   "org_url": "https://yandex.com/maps/org/gymnasium_3/1041553719/",
-  "photo": "schools/saratov/39.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/788991/2a00000161226ac4f7b2a6dfa45c287e5ec3/L_height",
-  "width": 375,
-  "height": 500
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Гимназия №31": {
   "code_oo": null,
@@ -462,10 +388,8 @@
   "name": "Гимназия №31",
   "school_id": 40,
   "org_url": "https://yandex.com/maps/org/gimnaziya_31/1053734696/",
-  "photo": "schools/saratov/40.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/3923004/2a00000175b7f9d8b47261adcc43ba83cb6b/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №54": {
   "code_oo": null,
@@ -474,10 +398,8 @@
   "name": "Школа №54",
   "school_id": 41,
   "org_url": "https://yandex.com/maps/org/shkola_54/1797953720/",
-  "photo": "schools/saratov/41.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/4303674/2a0000017758da06a51df93733d031a799bc/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Лицей №2": {
   "code_oo": null,
@@ -486,10 +408,8 @@
   "name": "Лицей №2",
   "school_id": 42,
   "org_url": "https://yandex.com/maps/org/litsey_2/1129908336/",
-  "photo": "schools/saratov/42.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/774756/2a0000015f581ed8a917514a878750790564/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №40": {
   "code_oo": null,
@@ -498,10 +418,8 @@
   "name": "Школа №40",
   "school_id": 43,
   "org_url": "https://yandex.com/maps/org/shkola_40/42110567774/",
-  "photo": "schools/saratov/43.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1246719/2a00000163c6245d5e032aa2d554aaddfb24/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №41": {
   "code_oo": null,
@@ -510,10 +428,8 @@
   "name": "Школа №41",
   "school_id": 44,
   "org_url": "https://yandex.com/maps/org/secondary_school_41/1078289826/",
-  "photo": "schools/saratov/44.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/492546/2a0000015e4cd616e749802ef1d78313f951/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №101": {
   "code_oo": null,
@@ -522,10 +438,8 @@
   "name": "Школа №101",
   "school_id": 45,
   "org_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_101/1049005491/",
-  "photo": "schools/saratov/45.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/979642/2a00000160ba1685ebaf2ac14a0151b1815c/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Гимназия гуманитарных наук": {
   "code_oo": null,
@@ -534,10 +448,8 @@
   "name": "Гимназия гуманитарных наук",
   "school_id": 46,
   "org_url": "https://yandex.com/maps/org/gymnasium_of_humanities/1116621737/",
-  "photo": "schools/saratov/46.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/4447467/2a000001797fa5f96605ba792c8d2943b39d/L_height",
-  "width": 375,
-  "height": 500
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Лицей №47": {
   "code_oo": null,
@@ -546,10 +458,8 @@
   "name": "Лицей №47",
   "school_id": 47,
   "org_url": "https://yandex.com/maps/org/lyceum_47/1043541140/",
-  "photo": "schools/saratov/47.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1371862/2a00000162f89675a0056366a108d9a6cf7f/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №44": {
   "code_oo": null,
@@ -558,10 +468,8 @@
   "name": "Школа №44",
   "school_id": 48,
   "org_url": "https://yandex.com/maps/org/shkola_44/106290889117/",
-  "photo": "schools/saratov/48.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/226077/2a0000016231310cfcad24dfe59012dff220/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа-предуниверситариум СГУ": {
   "code_oo": null,
@@ -570,10 +478,8 @@
   "name": "Школа-предуниверситариум СГУ",
   "school_id": 49,
   "org_url": "https://yandex.com/maps/org/litsey_internat_64/98803499793/",
-  "photo": "schools/saratov/49.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/5751673/2a0000017e1bc0c66f4dffa30fc4f9474ad1/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №48": {
   "code_oo": null,
@@ -582,10 +488,8 @@
   "name": "Школа №48",
   "school_id": 50,
   "org_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_48/38102825946/",
-  "photo": "schools/saratov/50.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/481843/2a000001622c662791c17ab139d8426c9c12/L_height",
-  "width": 416,
-  "height": 312
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №103": {
   "code_oo": null,
@@ -594,10 +498,8 @@
   "name": "Школа №103",
   "school_id": 51,
   "org_url": "https://yandex.com/maps/org/secondary_school_103/1010150388/",
-  "photo": "schools/saratov/51.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/16410529/2a000001983b3b1447e583f3d4919dffb971/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №60": {
   "code_oo": null,
@@ -606,10 +508,8 @@
   "name": "Школа №60",
   "school_id": 52,
   "org_url": "https://yandex.com/maps/org/mou_sosh_60/1052700989/",
-  "photo": "schools/saratov/52.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/212783/2a0000015e4cda198fa8cde5e93be085e3d4/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №61": {
   "code_oo": null,
@@ -618,10 +518,8 @@
   "name": "Школа №61",
   "school_id": 53,
   "org_url": "https://yandex.com/maps/org/shkola_61/88383529263/",
-  "photo": "schools/saratov/53.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/4667561/2a00000178b4c816de2d6c75d4ea8687bb48/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Лицей Звезда": {
   "code_oo": null,
@@ -630,10 +528,8 @@
   "name": "Лицей Звезда",
   "school_id": 54,
   "org_url": "https://yandex.com/maps/org/zvezda/192903085019/",
-  "photo": "schools/saratov/54.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/2356223/2a0000017247784e595495efa28da235e71e/L_height",
-  "width": 500,
-  "height": 333
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №57": {
   "code_oo": null,
@@ -642,10 +538,8 @@
   "name": "Школа №57",
   "school_id": 55,
   "org_url": "https://yandex.com/maps/org/munitsipalnoye_obshcheobrazovatelnoye_uchrezhdeniye_srednyaya_obshcheobrazovatelnaya_shkola_57/65307562578/",
-  "photo": "schools/saratov/55.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/223006/2a0000015b16c799ca08c9cc41d2c02496c4/L_height",
-  "width": 500,
-  "height": 333
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №86": {
   "code_oo": null,
@@ -654,10 +548,8 @@
   "name": "Школа №86",
   "school_id": 56,
   "org_url": "https://yandex.com/maps/org/sarschool86/16042452222/",
-  "photo": "schools/saratov/56.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/4737312/2a000001794af3d9e7bb9b99aa44a042c0b3/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа-интернат Уникум": {
   "code_oo": null,
@@ -666,10 +558,8 @@
   "name": "Школа-интернат Уникум",
   "school_id": 57,
   "org_url": "https://yandex.com/maps/org/shkola_unikum/1031121342/",
-  "photo": "schools/saratov/57.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/15416005/2a0000019774c72d68c9671a28ff93fccc91/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №64": {
   "code_oo": null,
@@ -678,10 +568,8 @@
   "name": "Школа №64",
   "school_id": 58,
   "org_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_64/120490931607/",
-  "photo": "schools/saratov/58.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/10878699/2a000001944622e0c09f19a61b8e242b18a3/L_height",
-  "width": 375,
-  "height": 500
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №38": {
   "code_oo": null,
@@ -690,10 +578,8 @@
   "name": "Школа №38",
   "school_id": 59,
   "org_url": "https://yandex.com/maps/org/mou_sosh_38/1113508152/",
-  "photo": "schools/saratov/59.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/14599414/2a00000196f2cc241d7950230c3f63256a33/L_height",
-  "width": 375,
-  "height": 500
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Лицей №53": {
   "code_oo": null,
@@ -702,10 +588,8 @@
   "name": "Лицей №53",
   "school_id": 60,
   "org_url": "https://yandex.com/maps/org/lyceum_53_saratov/1062463037/",
-  "photo": "schools/saratov/60.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/5098810/2a0000018281d54aaac616ea79c84d4b0984/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Лицей №62": {
   "code_oo": null,
@@ -714,10 +598,8 @@
   "name": "Лицей №62",
   "school_id": 61,
   "org_url": "https://yandex.com/maps/org/maou_lyceum_62/1132108231/",
-  "photo": "schools/saratov/61.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/402558/2a0000015f76f703aca2f3752e8f2a459a49/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Гимназия №108": {
   "code_oo": null,
@@ -726,10 +608,8 @@
   "name": "Гимназия №108",
   "school_id": 62,
   "org_url": "https://yandex.com/maps/org/gimnaziya_108/1067532669/",
-  "photo": "schools/saratov/62.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/223006/2a0000015b16c80d43acbcde13fe8254030d/L_height",
-  "width": 500,
-  "height": 333
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Лицей №15": {
   "code_oo": null,
@@ -738,10 +618,8 @@
   "name": "Лицей №15",
   "school_id": 63,
   "org_url": "https://yandex.com/maps/org/lyceum_15/1388328792/",
-  "photo": "schools/saratov/63.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/2408669/2a000001748c611737ce2e6d1e0f53e53116/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Гимназия №7": {
   "code_oo": null,
@@ -750,10 +628,8 @@
   "name": "Гимназия №7",
   "school_id": 64,
   "org_url": "https://yandex.com/maps/org/gymnasium_7/1032138559/",
-  "photo": "schools/saratov/64.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1245631/2a0000016706757424a7db20a94e8fe00f6f/L_height",
-  "width": 500,
-  "height": 200
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №49": {
   "code_oo": null,
@@ -762,10 +638,8 @@
   "name": "Школа №49",
   "school_id": 65,
   "org_url": "https://yandex.com/maps/org/mou_sosh_49_leninskogo_rayona_goroda_saratova/2392968816/",
-  "photo": "schools/saratov/65.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/367512/2a0000015b39a59252e29227731427643cf6/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Татарская Гимназия": {
   "code_oo": null,
@@ -774,10 +648,8 @@
   "name": "Татарская Гимназия",
   "school_id": 66,
   "org_url": "https://yandex.com/maps/org/munitsipalnoye_obshcheobrazovatelnoye_uchrezhdeniye_litsey_4/1010589817/",
-  "photo": "schools/saratov/66.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/7652307/2a00000187f4d740e2c2a1e85add002efccc/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Лицей прикладных наук": {
   "code_oo": null,
@@ -786,10 +658,8 @@
   "name": "Лицей прикладных наук",
   "school_id": 67,
   "org_url": "https://yandex.com/maps/org/litsey_prikladnykh_nauk/1061363313/",
-  "photo": "schools/saratov/67.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/219656/2a0000016147957ce829c224b8289b6bfe1b/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №26": {
   "code_oo": null,
@@ -798,10 +668,8 @@
   "name": "Школа №26",
   "school_id": 68,
   "org_url": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola_26_mou/244703926854/",
-  "photo": "schools/saratov/68.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/6928818/2a000001842ea869689fb6a96bb832c2449a/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Покровская православная гимназия": {
   "code_oo": null,
@@ -810,10 +678,8 @@
   "name": "Покровская православная гимназия",
   "school_id": 69,
   "org_url": "https://yandex.com/maps/org/pokrovskaya_pravoslavnaya_klassicheskaya_gimnaziya_imeni_svyatogo_aleksandra_nevskogo/1225212315/",
-  "photo": "schools/saratov/69.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/16299341/2a0000019c0849370b9702d736d447eadf52/L_height",
-  "width": 500,
-  "height": 377
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа-интернат №3": {
   "code_oo": null,
@@ -822,10 +688,8 @@
   "name": "Школа-интернат №3",
   "school_id": 71,
   "org_url": "https://yandex.com/maps/org/gbou_so_shkola_internat_aop_3_g_saratova/228497961048/",
-  "photo": "schools/saratov/71.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/11400795/2a0000018dd1629d37146346610613666f2d/L_height",
-  "width": 281,
-  "height": 500
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Прогимназия №237 Семицветик": {
   "code_oo": null,
@@ -834,10 +698,8 @@
   "name": "Прогимназия №237 Семицветик",
   "school_id": 72,
   "org_url": "https://yandex.com/maps/org/progymnasium_237_semitsvetik/1098995346/",
-  "photo": "schools/saratov/72.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/248099/2a0000018769eaaa72e9ca41e3307af52462/L_height",
-  "width": 500,
-  "height": 311
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №78": {
   "code_oo": null,
@@ -846,10 +708,8 @@
   "name": "Школа №78",
   "school_id": 73,
   "org_url": "https://yandex.com/maps/org/mou_osnovnaya_obshcheobrazovatelnaya_shkola_78/181981552893/",
-  "photo": "schools/saratov/73.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/902827/2a0000016286e0b4471141202efb1a4921fc/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Гимназия №5": {
   "code_oo": null,
@@ -858,10 +718,8 @@
   "name": "Гимназия №5",
   "school_id": 74,
   "org_url": "https://yandex.com/maps/org/gimnaziya_5/27235900030/",
-  "photo": "schools/saratov/74.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/4465274/2a000001775a311cea8020439703e229114b/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Инженерный лицей": {
   "code_oo": null,
@@ -870,10 +728,8 @@
   "name": "Инженерный лицей",
   "school_id": 75,
   "org_url": "https://yandex.com/maps/org/litsey_internat_6/1052539347/",
-  "photo": "schools/saratov/75.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1335362/2a000001634f18130bdd247438d00d25376b/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Лицей №50": {
   "code_oo": null,
@@ -882,10 +738,8 @@
   "name": "Лицей №50",
   "school_id": 76,
   "org_url": "https://yandex.com/maps/org/lyceum_50/158041622369/",
-  "photo": "schools/saratov/76.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/4465779/2a00000177ecf476cf09907a41fc92722ccb/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Гимназия №75": {
   "code_oo": null,
@@ -894,10 +748,8 @@
   "name": "Гимназия №75",
   "school_id": 77,
   "org_url": "https://yandex.com/maps/org/mou_sosh_75/197267336586/",
-  "photo": "schools/saratov/77.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/10261179/2a0000018f9a47972c82ed84adc0546c1036/L_height",
-  "width": 500,
-  "height": 376
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Лицей гуманитарных наук": {
   "code_oo": null,
@@ -906,10 +758,8 @@
   "name": "Лицей гуманитарных наук",
   "school_id": 78,
   "org_url": "https://yandex.com/maps/org/lyceum_of_humanities/1008160365/",
-  "photo": "schools/saratov/78.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/941278/2a00000161fdc8fa36681c5dbff78d26fc11/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Лицей №37": {
   "code_oo": null,
@@ -918,10 +768,8 @@
   "name": "Лицей №37",
   "school_id": 79,
   "org_url": "https://yandex.com/maps/org/litsey_37/1022515372/",
-  "photo": "schools/saratov/79.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/7379963/2a000001832e9ce57ba2a2a382da0b743f07/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Физико-технический лицей №1": {
   "code_oo": null,
@@ -930,10 +778,8 @@
   "name": "Физико-технический лицей №1",
   "school_id": 80,
   "org_url": "https://yandex.com/maps/org/maou_physicotechnical_lyceum_1/1053419817/",
-  "photo": "schools/saratov/80.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/200322/2a0000015b9694cbcaa431a8cfabdf41b751/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Гимназия №34": {
   "code_oo": null,
@@ -942,10 +788,8 @@
   "name": "Гимназия №34",
   "school_id": 81,
   "org_url": "https://yandex.com/maps/org/gimnaziya_34_imeni_g_d_yermolayeva/37872328167/",
-  "photo": "schools/saratov/81.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/236825/2a0000015c20eab5e15d41ac4f556bff96d0/L_height",
-  "width": 478,
-  "height": 303
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Лицей математики и информатики": {
   "code_oo": null,
@@ -954,10 +798,8 @@
   "name": "Лицей математики и информатики",
   "school_id": 82,
   "org_url": "https://yandex.com/maps/org/lyceum_of_mathematics_and_informatics/1083755421/",
-  "photo": "schools/saratov/82.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1899063/2a00000187d225f5f3a11b81c075c9ae7649/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Лицей №3": {
   "code_oo": null,
@@ -966,10 +808,8 @@
   "name": "Лицей №3",
   "school_id": 83,
   "org_url": "https://yandex.com/maps/org/litsey_3_im_a_s_pushkina/1021305516/",
-  "photo": "schools/saratov/83.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/13951679/2a000001955133086869c710e0dbd3172e8b/L_height",
-  "width": 500,
-  "height": 377
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Лицей №4": {
   "code_oo": null,
@@ -978,10 +818,8 @@
   "name": "Лицей №4",
   "school_id": 84,
   "org_url": "https://yandex.com/maps/org/national_tatar_gymnasium/223623648005/",
-  "photo": "schools/saratov/84.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/14171651/2a000001930197c85387b38a4d97b450bf6d/L_height",
-  "width": 500,
-  "height": 281
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №81": {
   "code_oo": null,
@@ -990,10 +828,8 @@
   "name": "Школа №81",
   "school_id": 85,
   "org_url": "https://yandex.com/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola_81/1045200569/",
-  "photo": "schools/saratov/85.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/4437253/2a0000017bf547c0e2034e5916ce6fc39d18/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №83": {
   "code_oo": null,
@@ -1002,10 +838,8 @@
   "name": "Школа №83",
   "school_id": 87,
   "org_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_83/1013287750/",
-  "photo": "schools/saratov/87.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/3912953/2a0000017670e5a03b6a71cecb31cca2f2b3/L_height",
-  "width": 500,
-  "height": 383
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа-интернат №4 адаптированная": {
   "code_oo": null,
@@ -1014,10 +848,8 @@
   "name": "Школа-интернат №4 адаптированная",
   "school_id": 88,
   "org_url": "https://yandex.com/maps/org/boarding_school_4/18629834848/",
-  "photo": "schools/saratov/88.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/15423471/2a000001967c078d79b6f8b766f10c105613/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №4": {
   "code_oo": null,
@@ -1026,10 +858,8 @@
   "name": "Школа №4",
   "school_id": 89,
   "org_url": "https://yandex.com/maps/org/special_correctional_general_education_school_4_of_the_viii_type/15410306125/",
-  "photo": "schools/saratov/89.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/8075227/2a000001874b3fa443971751e4e4532b0af4/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №16": {
   "code_oo": null,
@@ -1038,10 +868,8 @@
   "name": "Школа №16",
   "school_id": 90,
   "org_url": "https://yandex.com/maps/org/kadetskaya_shkola_16/1781697901/",
-  "photo": "schools/saratov/90.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/7981565/2a000001842e431c6f2dbde45a22dad2de98/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа-интернат №5 адаптированная": {
   "code_oo": null,
@@ -1062,10 +890,8 @@
   "name": "Гимназия №89",
   "school_id": 92,
   "org_url": "https://yandex.com/maps/org/gimnaziya_89/70848925534/",
-  "photo": "schools/saratov/92.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/4324292/2a000001794af843324a1d53eb629749776f/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №2 адаптированная": {
   "code_oo": null,
@@ -1074,10 +900,8 @@
   "name": "Школа №2 адаптированная",
   "school_id": 93,
   "org_url": "https://yandex.com/maps/org/gosudarstvennoye_byudzhetnoye_obshcheobrazovatelnoye_uchrezhdeniye_saratovskoy_oblasti_shkola_dlya_obuchayushchikhsya_po_adaptivnym_obrazovatelnym_programmam_2_goroda_saratov/72111282236/",
-  "photo": "schools/saratov/93.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1032555/2a00000186cba4f18b21d62289f9b0ec0f54/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Лицей №36": {
   "code_oo": null,
@@ -1086,10 +910,8 @@
   "name": "Лицей №36",
   "school_id": 94,
   "org_url": "https://yandex.com/maps/org/maou_litsey_36/1122418848/",
-  "photo": "schools/saratov/94.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/239474/2a0000015fbd7ceba9bb85ed121165a0da2a/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Медико-биологический лицей": {
   "code_oo": null,
@@ -1098,10 +920,8 @@
   "name": "Медико-биологический лицей",
   "school_id": 95,
   "org_url": "https://yandex.com/maps/org/maou_mediko_biologichesky_litsey_goroda_saratova/1174614164/",
-  "photo": "schools/saratov/95.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/3569559/2a0000018246a7c0d1b6e02733219f81ba82/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Лицей №107": {
   "code_oo": null,
@@ -1110,10 +930,8 @@
   "name": "Лицей №107",
   "school_id": 96,
   "org_url": "https://yandex.com/maps/org/lyceum_107/1021761978/",
-  "photo": "schools/saratov/96.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/998237/2a000001622c7a3733f259ae043295130d88/L_height",
-  "width": 486,
-  "height": 340
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа с этнокультурным еврейским компонентом": {
   "code_oo": null,
@@ -1122,10 +940,8 @@
   "name": "Школа с этнокультурным еврейским компонентом",
   "school_id": 98,
   "org_url": "https://yandex.com/maps/org/secondary_school_with_an_ethnocultural_jewish_component/1160168382/",
-  "photo": "schools/saratov/98.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/4802381/2a0000017a1510c643d2fe4dc6003d19ee92/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Гимназия ДАР": {
   "code_oo": null,
@@ -1134,10 +950,8 @@
   "name": "Гимназия ДАР",
   "school_id": 100,
   "org_url": "https://yandex.com/maps/org/gymnasium_d_a_r/1065478073/",
-  "photo": "schools/saratov/100.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/965007/2a00000162874cdf59b6e18d31a247e64e52/L_height",
-  "width": 500,
-  "height": 345
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Татарская Гимназия начальная школа": {
   "code_oo": null,
@@ -1146,10 +960,8 @@
   "name": "Татарская Гимназия начальная школа",
   "school_id": 101,
   "org_url": "https://yandex.com/maps/org/national_tatar_gymnasium_primary_school/1731589729/",
-  "photo": "schools/saratov/101.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/758957/2a00000160717bb348ab27488099142ba158/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Гимназия №87": {
   "code_oo": null,
@@ -1158,10 +970,8 @@
   "name": "Гимназия №87",
   "school_id": 102,
   "org_url": "https://yandex.com/maps/org/gimnaziya_87/1044478710/",
-  "photo": "schools/saratov/102.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/920214/2a00000162216f70c8a317ee39d8dafb4672/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Гимназия №58": {
   "code_oo": null,
@@ -1170,10 +980,8 @@
   "name": "Гимназия №58",
   "school_id": 103,
   "org_url": "https://yandex.com/maps/org/gimnaziya_58/44228629428/",
-  "photo": "schools/saratov/103.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/4303652/2a000001775a008743979bff5f0a1ec683ad/L_height",
-  "width": 500,
-  "height": 281
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №80 Ласточкино": {
   "code_oo": null,
@@ -1182,10 +990,8 @@
   "name": "Школа №80 Ласточкино",
   "school_id": 104,
   "org_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_80_lastochkino/10978663729/",
-  "photo": "schools/saratov/104.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/9368060/2a0000018a50a13f479c9b3f8fcda81f856c/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №66 Эврика": {
   "code_oo": null,
@@ -1194,10 +1000,8 @@
   "name": "Школа №66 Эврика",
   "school_id": 105,
   "org_url": "https://yandex.com/maps/org/secondary_school_66_named_after_n_i_vavilov_building_eureka/1060813617/",
-  "photo": "schools/saratov/105.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/14910910/2a0000019803fce9a944b33bcfa11118867d/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Лицей №56": {
   "code_oo": null,
@@ -1206,10 +1010,8 @@
   "name": "Лицей №56",
   "school_id": 106,
   "org_url": "https://yandex.com/maps/org/lyceum_56/143737145201/",
-  "photo": "schools/saratov/106.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/892711/2a0000015ff64042466e636d64aaf6ccb1b4/L_height",
-  "width": 500,
-  "height": 332
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №46 Городские Просторы": {
   "code_oo": null,
@@ -1218,10 +1020,8 @@
   "name": "Школа №46 Городские Просторы",
   "school_id": 107,
   "org_url": "https://yandex.com/maps/org/srednyaya_shkola_46_korpus_2_gorodskiye_prostory/39057501147/",
-  "photo": "schools/saratov/107.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/15452616/2a00000198d9b71c8d0d26550547df700ac8/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Гуманитарно-экономический лицей": {
   "code_oo": null,
@@ -1230,10 +1030,8 @@
   "name": "Гуманитарно-экономический лицей",
   "school_id": 108,
   "org_url": "https://yandex.com/maps/org/gumanitarno_ekonomicheskiy_litsey/162780296026/",
-  "photo": "schools/saratov/108.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/15413593/2a00000197df5e57cc0acbd922684477b816/L_height",
-  "width": 500,
-  "height": 281
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №95": {
   "code_oo": null,
@@ -1242,10 +1040,8 @@
   "name": "Школа №95",
   "school_id": 162,
   "org_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_95_mou/1133121667/",
-  "photo": "schools/saratov/162.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/367512/2a0000015b3b95c3094f5fb1d32964e22cfc/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №67": {
   "code_oo": null,
@@ -1254,10 +1050,8 @@
   "name": "Школа №67",
   "school_id": 163,
   "org_url": "https://yandex.com/maps/org/shkola_67_imeni_o_i_yankovskogo/1115737362/",
-  "photo": "schools/saratov/163.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1371862/2a00000163573460f62778d877584bb979d9/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа Аврора": {
   "code_oo": null,
@@ -1266,10 +1060,8 @@
   "name": "Школа Аврора",
   "school_id": 165,
   "org_url": "https://yandex.com/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_avrora/132394050649/",
-  "photo": "schools/saratov/165.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/15283873/2a000001978e306f7e6dc15d8a1a22bbe427/L_height",
-  "width": 500,
-  "height": 377
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Лицей №24": {
   "code_oo": null,
@@ -1278,10 +1070,8 @@
   "name": "Лицей №24",
   "school_id": 167,
   "org_url": "https://yandex.com/maps/org/munitsipalnoye_obrazovatelnoye_uchrezhdeniye_srednyaya_obshcheobrazovatelnaya_shkola_93/227625211666/",
-  "photo": "schools/saratov/167.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/9954022/2a00000188c95160328899e67cf9154512ea/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Гуманитарно-экономический лицей корпус СОШ 12": {
   "code_oo": null,
@@ -1290,10 +1080,8 @@
   "name": "Гуманитарно-экономический лицей корпус СОШ 12",
   "school_id": 168,
   "org_url": "https://yandex.com/maps/org/mou_gumanitarno_ekonomichesky_litsey/1092967532/",
-  "photo": "schools/saratov/168.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/3915926/2a00000175a22b4c32449665195edb914e96/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №90": {
   "code_oo": null,
@@ -1302,10 +1090,8 @@
   "name": "Школа №90",
   "school_id": 169,
   "org_url": "https://yandex.com/maps/org/secondary_school_90/106467648031/",
-  "photo": "schools/saratov/169.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/13970739/2a0000019247d36b7ecf488095f2a2c64303/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Лицей Солярис": {
   "code_oo": null,
@@ -1314,10 +1100,8 @@
   "name": "Лицей Солярис",
   "school_id": 170,
   "org_url": "https://yandex.com/maps/org/solaris/34634068768/",
-  "photo": "schools/saratov/170.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1363278/2a00000165e71f7a4c389820f4f761d687dc/L_height",
-  "width": 500,
-  "height": 151
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Школа №91": {
   "code_oo": null,
@@ -1326,10 +1110,8 @@
   "name": "Школа №91",
   "school_id": 171,
   "org_url": "https://yandex.com/maps/org/munitsipalnoye_obshcheobrazovatelnoye_uchrezhdeniye_osnovnaya_obshcheobrazovatelnaya_shkola_91/1074530766/",
-  "photo": "schools/saratov/171.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/6674804/2a0000018429901d70bbec1d18329fadaa84/L_height",
-  "width": 500,
-  "height": 377
+  "photo": null,
+  "source": null
  },
  "general|Саратов|None|Гимназия Авиатор": {
   "code_oo": null,
@@ -1338,10 +1120,8 @@
   "name": "Гимназия Авиатор",
   "school_id": 173,
   "org_url": "https://yandex.com/maps/org/gymnasium_34_aviator_branch/85144212428/",
-  "photo": "schools/saratov/173.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/4562719/2a0000017bf024eee82dcda4392aeb5210f2/L_height",
-  "width": 500,
-  "height": 282
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238123|МОУ «СОШ № 24 им. В.И. Пономаренко»": {
   "code_oo": 238123,
@@ -1350,10 +1130,8 @@
   "name": "МОУ «СОШ № 24 им. В.И. Пономаренко»",
   "school_id": 338123,
   "org_url": "https://yandex.ru/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_24/1081553607",
-  "photo": "schools/engels/238123.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/4475806/2a000001794b017dfcba3cce88a056d0b5c2/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238153|МОУ «СОШ № 33 им.П.А.Столыпина»": {
   "code_oo": 238153,
@@ -1362,10 +1140,8 @@
   "name": "МОУ «СОШ № 33 им.П.А.Столыпина»",
   "school_id": 338153,
   "org_url": "https://yandex.ru/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_33_imeni_p_a_stolypina/1010497567",
-  "photo": "schools/engels/238153.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/16318204/2a00000197fea4157f9db11dc9a5dd0ab54e/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238103|МОУ «СОШ № 21 им. И.М. Каплунова»": {
   "code_oo": 238103,
@@ -1374,10 +1150,8 @@
   "name": "МОУ «СОШ № 21 им. И.М. Каплунова»",
   "school_id": 338103,
   "org_url": "https://yandex.ru/maps/org/srednyaya_obshcheobrazovatelnayaya_shkola_21/167301814790",
-  "photo": "schools/engels/238103.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/15438512/2a00000198a330e5bd6fdd7396c5cbfa1e3d/L_height",
-  "width": 500,
-  "height": 333
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238253|МОУ «СОШ п. Коминтерн»": {
   "code_oo": 238253,
@@ -1386,10 +1160,8 @@
   "name": "МОУ «СОШ п. Коминтерн»",
   "school_id": 338253,
   "org_url": "https://yandex.ru/maps/org/srednyaya_obshcheobrazovatelnaya_shkola/1133944251",
-  "photo": "schools/engels/238253.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/15183726/2a00000195928765dc989243a7e2b4762f23/L_height",
-  "width": 375,
-  "height": 500
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238213|МОУ «СОШ с. Заветное»": {
   "code_oo": 238213,
@@ -1398,10 +1170,8 @@
   "name": "МОУ «СОШ с. Заветное»",
   "school_id": 338213,
   "org_url": "https://yandex.ru/maps/org/srednyaya_obshcheobrazovatelnaya_shkola/146206339145",
-  "photo": "schools/engels/238213.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/813485/2a0000015eb4174307cc2ae8ffa2c8881105/L_height",
-  "width": 320,
-  "height": 213
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238323|МОУ «СОШ с. Узморье им. Ю.А. Гагарина»": {
   "code_oo": 238323,
@@ -1410,10 +1180,8 @@
   "name": "МОУ «СОШ с. Узморье им. Ю.А. Гагарина»",
   "school_id": 338323,
   "org_url": "https://yandex.ru/maps/org/shkola_imeni_yu_a_gagarina/180109005529",
-  "photo": "schools/engels/238323.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/4663168/2a00000178e4d12236490d4f3c2ee81fd757/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238143|МОУ «СОШ им. Ю.А. Гагарина»": {
   "code_oo": 238143,
@@ -1422,10 +1190,8 @@
   "name": "МОУ «СОШ им. Ю.А. Гагарина»",
   "school_id": 338143,
   "org_url": "https://yandex.ru/maps/org/shkola_imeni_yu_a_gagarina/180109005529",
-  "photo": "schools/engels/238143.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/4663168/2a00000178e4d12236490d4f3c2ee81fd757/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238013|МОУ «СОШ № 1»": {
   "code_oo": 238013,
@@ -1434,10 +1200,8 @@
   "name": "МОУ «СОШ № 1»",
   "school_id": 338013,
   "org_url": "https://yandex.ru/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_1/1017872808",
-  "photo": "schools/engels/238013.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1042100/2a00000186224d2c3da9fba6cf379fc023d9/L_height",
-  "width": 500,
-  "height": 182
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238403|МОУ «СОШ № 10»": {
   "code_oo": 238403,
@@ -1446,10 +1210,8 @@
   "name": "МОУ «СОШ № 10»",
   "school_id": 338403,
   "org_url": "https://yandex.ru/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_10/177322688958",
-  "photo": "schools/engels/238403.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/18376122/2a00000199436038091444eef40ef244e606/L_height",
-  "width": 500,
-  "height": 377
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238173|МОУ «СОШ п. Бурный им. П.В. Волоха»": {
   "code_oo": 238173,
@@ -1470,10 +1232,8 @@
   "name": "МОУ «СОШ с. Зеленый Дол»",
   "school_id": 338223,
   "org_url": "https://yandex.ru/maps/org/srednyaya_obshcheobrazovatelnaya_shkola/1065221235",
-  "photo": "schools/engels/238223.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/993981/2a0000016294ab1d42adb8116760b14aaae6/L_height",
-  "width": 336,
-  "height": 448
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238043|МОУ «СОШ № 9»": {
   "code_oo": 238043,
@@ -1482,10 +1242,8 @@
   "name": "МОУ «СОШ № 9»",
   "school_id": 338043,
   "org_url": "https://yandex.ru/maps/org/srednyaya_obshcheobrazovatelnayaya_shkola_9/1099896337",
-  "photo": "schools/engels/238043.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1372264/2a00000163ca7fd8b0def83ebd3884333966/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238083|МОУ «СОШ № 19 им. И.П. Кузнецова»": {
   "code_oo": 238083,
@@ -1494,10 +1252,8 @@
   "name": "МОУ «СОШ № 19 им. И.П. Кузнецова»",
   "school_id": 338083,
   "org_url": "https://yandex.ru/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_19/1630480282",
-  "photo": "schools/engels/238083.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/15286626/2a000001977b0efb2e97d8d2c949345555ae/L_height",
-  "width": 500,
-  "height": 230
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238028|МКОУ «В(С)ОШ № 7»": {
   "code_oo": 238028,
@@ -1506,10 +1262,8 @@
   "name": "МКОУ «В(С)ОШ № 7»",
   "school_id": 338028,
   "org_url": "https://yandex.ru/maps/org/shkola_7/61665237099",
-  "photo": "schools/engels/238028.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/4080739/2a000001775e1e1be794bd5d07a9a92b29c4/L_height",
-  "width": 375,
-  "height": 500
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238073|МОУ «СОШ № 18 им. А.А. Мыльникова»": {
   "code_oo": 238073,
@@ -1518,10 +1272,8 @@
   "name": "МОУ «СОШ № 18 им. А.А. Мыльникова»",
   "school_id": 338073,
   "org_url": "https://yandex.ru/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_18/1025226318",
-  "photo": "schools/engels/238073.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/18112381/2a0000019c443e0607ca853fcbbf062ff2a1/L_height",
-  "width": 500,
-  "height": 231
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238074|МОУ «ООШ п. Анисовский»": {
   "code_oo": 238074,
@@ -1542,10 +1294,8 @@
   "name": "МОУ «ООШ п. Лощинный»",
   "school_id": 338104,
   "org_url": "https://yandex.ru/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola/31241374117",
-  "photo": "schools/engels/238104.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/5236021/2a0000017c1307aa54372c61f8184adbd7f0/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238113|МАОУ «СОШ № 7»": {
   "code_oo": 238113,
@@ -1554,10 +1304,8 @@
   "name": "МАОУ «СОШ № 7»",
   "school_id": 338113,
   "org_url": "https://yandex.ru/maps/org/shkola_7/61665237099",
-  "photo": "schools/engels/238113.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/4080739/2a000001775e1e1be794bd5d07a9a92b29c4/L_height",
-  "width": 375,
-  "height": 500
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238134|МАОУ «ООШ с. Степное»": {
   "code_oo": 238134,
@@ -1566,10 +1314,8 @@
   "name": "МАОУ «ООШ с. Степное»",
   "school_id": 338134,
   "org_url": "https://yandex.ru/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola/1007438790",
-  "photo": "schools/engels/238134.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/15232415/2a000001997ca6de30e005f1e613e850a7f7/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238283|МОУ «СОШ п. Новопушкинское»": {
   "code_oo": 238283,
@@ -1578,10 +1324,8 @@
   "name": "МОУ «СОШ п. Новопушкинское»",
   "school_id": 338283,
   "org_url": "https://yandex.ru/maps/org/srednyaya_obshcheobrazovatelnaya_shkola/1691542469",
-  "photo": "schools/engels/238283.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/492546/2a0000015e7a80545f94b27db09a3393c57d/L_height",
-  "width": 400,
-  "height": 300
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238293|МОУ «СОШ п. имени К. Маркса»": {
   "code_oo": 238293,
@@ -1590,10 +1334,8 @@
   "name": "МОУ «СОШ п. имени К. Маркса»",
   "school_id": 338293,
   "org_url": "https://yandex.ru/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_30_imeni_p_m_kovalenko/1012684278",
-  "photo": "schools/engels/238293.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/4618902/2a000001775a3b1ddd93ae729b5757c9c14a/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238363|МОУ «СОШ № 3»": {
   "code_oo": 238363,
@@ -1602,10 +1344,8 @@
   "name": "МОУ «СОШ № 3»",
   "school_id": 338363,
   "org_url": "https://yandex.ru/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_3/1779220141",
-  "photo": "schools/engels/238363.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/4285172/2a000001775a2e58d4f227206a2aa3e25461/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238184|МОУ «ООШ п. Взлетный»": {
   "code_oo": 238184,
@@ -1626,10 +1366,8 @@
   "name": "МОУ «ООШ с. Квасниковка»",
   "school_id": 338084,
   "org_url": "https://yandex.ru/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola/31241374117",
-  "photo": "schools/engels/238084.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/5236021/2a0000017c1307aa54372c61f8184adbd7f0/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238263|МОУ «СОШ п. Придорожный»": {
   "code_oo": 238263,
@@ -1638,10 +1376,8 @@
   "name": "МОУ «СОШ п. Придорожный»",
   "school_id": 338263,
   "org_url": "https://yandex.ru/maps/org/srednyaya_obshcheobrazovatelnayaya_shkola/1071003412",
-  "photo": "schools/engels/238263.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/212783/2a0000015eb48cb620ff5bdd2998e11eff90/L_height",
-  "width": 500,
-  "height": 250
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238383|МОУ «СОШ № 26»": {
   "code_oo": 238383,
@@ -1650,10 +1386,8 @@
   "name": "МОУ «СОШ № 26»",
   "school_id": 338383,
   "org_url": "https://yandex.ru/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola_26/1036273587",
-  "photo": "schools/engels/238383.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/10878699/2a000001926a79411dd6a340f4cd426a4c70/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238053|МОУ «СОШ № 12им. В.Ф. Суханова»": {
   "code_oo": 238053,
@@ -1662,10 +1396,8 @@
   "name": "МОУ «СОШ № 12им. В.Ф. Суханова»",
   "school_id": 338053,
   "org_url": "https://yandex.ru/maps/org/shkola_12_imeni_geroya_sovetskogo_soyuza_vitaliya_fedorovicha_sukhanova/1766018137",
-  "photo": "schools/engels/238053.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/4437246/2a0000017846e9710370620a818a6a6fd648/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238133|МОУ «СОШ № 31»": {
   "code_oo": 238133,
@@ -1674,10 +1406,8 @@
   "name": "МОУ «СОШ № 31»",
   "school_id": 338133,
   "org_url": "https://yandex.ru/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_31/1192949001",
-  "photo": "schools/engels/238133.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/492546/2a0000015e6160de5e25645ebb13e23eacc5/L_height",
-  "width": 500,
-  "height": 337
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238164|МОУ «ООШ п. Прибрежный»": {
   "code_oo": 238164,
@@ -1686,10 +1416,8 @@
   "name": "МОУ «ООШ п. Прибрежный»",
   "school_id": 338164,
   "org_url": "https://yandex.ru/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola/31241374117",
-  "photo": "schools/engels/238164.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/5236021/2a0000017c1307aa54372c61f8184adbd7f0/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238303|МОУ «СОШ п. Пробуждениеим. Л.А. Кассиля»": {
   "code_oo": 238303,
@@ -1698,10 +1426,8 @@
   "name": "МОУ «СОШ п. Пробуждениеим. Л.А. Кассиля»",
   "school_id": 338303,
   "org_url": "https://yandex.ru/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_30_imeni_p_m_kovalenko/1012684278",
-  "photo": "schools/engels/238303.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/4618902/2a000001775a3b1ddd93ae729b5757c9c14a/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238343|МОУ «СОШ с. Шумейка им. М.П. Дергилёва»": {
   "code_oo": 238343,
@@ -1710,10 +1436,8 @@
   "name": "МОУ «СОШ с. Шумейка им. М.П. Дергилёва»",
   "school_id": 338343,
   "org_url": "https://yandex.ru/maps/org/srednyaya_obshcheobrazovatelnaya_shkola/205363559312",
-  "photo": "schools/engels/238343.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/240733/2a0000015e7a94171970ae88b1792dc0913f/L_height",
-  "width": 192,
-  "height": 125
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238093|МОУ «СОШ № 20 им. М.И. Кулькиной»": {
   "code_oo": 238093,
@@ -1722,10 +1446,8 @@
   "name": "МОУ «СОШ № 20 им. М.И. Кулькиной»",
   "school_id": 338093,
   "org_url": "https://yandex.ru/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_20/1118149027",
-  "photo": "schools/engels/238093.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/6200226/2a00000182f7dec4f48415a3853094574287/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238373|МАОУ «СОШ № 29 им. А.И. Михеля»": {
   "code_oo": 238373,
@@ -1734,10 +1456,8 @@
   "name": "МАОУ «СОШ № 29 им. А.И. Михеля»",
   "school_id": 338373,
   "org_url": "https://yandex.ru/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola_29/1042176292",
-  "photo": "schools/engels/238373.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/374295/2a0000015b33856451a43c9c6909a0cf77e9/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238163|МОУ «СОШ № 42 им. Г.С. Титова»": {
   "code_oo": 238163,
@@ -1746,10 +1466,8 @@
   "name": "МОУ «СОШ № 42 им. Г.С. Титова»",
   "school_id": 338163,
   "org_url": "https://yandex.ru/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_42/1140685497",
-  "photo": "schools/engels/238163.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/16503558/2a00000199fa9b2596c4b759e9b6b8187fab/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238203|МОУ «СОШ с. Генеральскоеим. Р.Е. Ароновой»": {
   "code_oo": 238203,
@@ -1758,10 +1476,8 @@
   "name": "МОУ «СОШ с. Генеральскоеим. Р.Е. Ароновой»",
   "school_id": 338203,
   "org_url": "https://yandex.ru/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_imeni_r_ye_aronovoy/1108758041",
-  "photo": "schools/engels/238203.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/859900/2a0000015e9ee469393f66d07fad98d4c797/L_height",
-  "width": 500,
-  "height": 281
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238033|МОУ «СОШ № 5 имени В Хомяковой»": {
   "code_oo": 238033,
@@ -1770,10 +1486,8 @@
   "name": "МОУ «СОШ № 5 имени В Хомяковой»",
   "school_id": 338033,
   "org_url": "https://yandex.ru/maps/org/sosh_5_imeni_v_khomyakovoy/1019906385",
-  "photo": "schools/engels/238033.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/3219045/2a00000176a197b5c89f2fe93f368547dbb7/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238027|МОУ «СОШ № 30 им. П.М. Коваленко»": {
   "code_oo": 238027,
@@ -1782,10 +1496,8 @@
   "name": "МОУ «СОШ № 30 им. П.М. Коваленко»",
   "school_id": 338027,
   "org_url": "https://yandex.ru/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_30_imeni_p_m_kovalenko/1012684278",
-  "photo": "schools/engels/238027.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/4618902/2a000001775a3b1ddd93ae729b5757c9c14a/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238047|МОУ «СОШ № 32 имени А.С. Пушкина»": {
   "code_oo": 238047,
@@ -1794,10 +1506,8 @@
   "name": "МОУ «СОШ № 32 имени А.С. Пушкина»",
   "school_id": 338047,
   "org_url": "https://yandex.ru/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_32_imeni_aleksandra_sergeyevicha_pushkina/1190544070",
-  "photo": "schools/engels/238047.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/2930751/2a00000174670b2e38c431fd9d3f1d720342/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238063|МОУ «СОШ № 16»": {
   "code_oo": 238063,
@@ -1806,10 +1516,8 @@
   "name": "МОУ «СОШ № 16»",
   "school_id": 338063,
   "org_url": "https://yandex.ru/maps/org/srednyaya_obshcheobrazovatelnaya_shkola_16/1005060804",
-  "photo": "schools/engels/238063.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/16437561/2a00000199f295b44d2d0c41943231effce0/L_height",
-  "width": 500,
-  "height": 377
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238114|МОУ «ООШ с. Ленинское»": {
   "code_oo": 238114,
@@ -1818,10 +1526,8 @@
   "name": "МОУ «ООШ с. Ленинское»",
   "school_id": 338114,
   "org_url": "https://yandex.ru/maps/org/osnovnaya_obshcheobrazovatelnaya_shkola/31241374117",
-  "photo": "schools/engels/238114.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/5236021/2a0000017c1307aa54372c61f8184adbd7f0/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|238393|МОУ «СОШ № 2 им. Димитрия Донского»": {
   "code_oo": 238393,
@@ -1842,10 +1548,8 @@
   "name": "ГБОУ СО «Школа АОП № 17 г.Энгельса»",
   "school_id": 349188,
   "org_url": "https://yandex.ru/maps/org/shkola_17/1048459492",
-  "photo": "schools/engels/249188.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/16341471/2a00000198f3869b29928520b8b376789c9e/L_height",
-  "width": 500,
-  "height": 230
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|249044|ГАОУ СО «Центр образования «Родник знаний»": {
   "code_oo": 249044,
@@ -1854,10 +1558,8 @@
   "name": "ГАОУ СО «Центр образования «Родник знаний»",
   "school_id": 349044,
   "org_url": "https://yandex.ru/maps/org/rodnik_znaniy/1033965030",
-  "photo": "schools/engels/249044.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1344805/2a000001630eb097a73f1ab63814101e78eb/L_height",
-  "width": 500,
-  "height": 281
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|251015|ГАОУ СО «Гимназия № 8»": {
   "code_oo": 251015,
@@ -1866,10 +1568,8 @@
   "name": "ГАОУ СО «Гимназия № 8»",
   "school_id": 351015,
   "org_url": "https://yandex.ru/maps/org/gimnaziya_8/1111789428",
-  "photo": "schools/engels/251015.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/4336915/2a000001775e45fab1d59a09fc286cab5071/L_height",
-  "width": 375,
-  "height": 500
+  "photo": null,
+  "source": null
  },
  "general|Энгельс|253018|ФКОУ В(С)ОШ УФСИН России по Саратовской области": {
   "code_oo": 253018,
@@ -1878,10 +1578,8 @@
   "name": "ФКОУ В(С)ОШ УФСИН России по Саратовской области",
   "school_id": 353018,
   "org_url": "https://yandex.ru/maps/org/upravleniye_federalnoy_sluzhby_ispolneniya_nakazaniy_po_saratovskoy_oblasti/1064892128",
-  "photo": "schools/engels/253018.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/6950449/2a000001831f3b0a4b8a4ca0b9194d13244c/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "arts_do|Саратов|242070|МБУДО &laquo;ДМШ № 6&raquo;": {
   "code_oo": 242070,
@@ -1900,10 +1598,8 @@
   "name": "МБУДО «ДМШ № 12»",
   "school_id": null,
   "org_url": "https://yandex.ru/maps/org/pervaya_detskaya_muzykalnaya_shkola_goroda_kirova/1056289845/",
-  "photo": "arts/saratov/242080.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1881447/2a0000016ae322ef0ddd7980b0d2872949e3/L_height",
-  "width": 500,
-  "height": 281
+  "photo": null,
+  "source": null
  },
  "arts_do|Саратов|242090|МБУДО «ДМШ № 14»": {
   "code_oo": 242090,
@@ -1912,10 +1608,8 @@
   "name": "МБУДО «ДМШ № 14»",
   "school_id": null,
   "org_url": "https://yandex.ru/maps/org/pervaya_detskaya_muzykalnaya_shkola_goroda_kirova/1056289845/",
-  "photo": "arts/saratov/242090.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1881447/2a0000016ae322ef0ddd7980b0d2872949e3/L_height",
-  "width": 500,
-  "height": 281
+  "photo": null,
+  "source": null
  },
  "arts_do|Саратов|242100|МБУДО &laquo;ДМШ №21&raquo;": {
   "code_oo": 242100,
@@ -1944,10 +1638,8 @@
   "name": "МАУ ДО &laquo;ДШИ им. В.В. Ковалева&raquo; МО &laquo;Город Саратов&raquo;",
   "school_id": null,
   "org_url": "https://yandex.ru/maps/org/detskaya_shkola_iskusstv_im_v_v_kovalyova/1054970760/",
-  "photo": "arts/saratov/243060.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/15148849/2a00000194ae578a03e115ea50d8f19abae2/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "arts_do|Саратов|243070|МБУДО «ДШИ № 19»": {
   "code_oo": 243070,
@@ -1956,10 +1648,8 @@
   "name": "МБУДО «ДШИ № 19»",
   "school_id": null,
   "org_url": "https://yandex.ru/maps/org/pervaya_detskaya_muzykalnaya_shkola_goroda_kirova/1056289845/",
-  "photo": "arts/saratov/243070.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1881447/2a0000016ae322ef0ddd7980b0d2872949e3/L_height",
-  "width": 500,
-  "height": 281
+  "photo": null,
+  "source": null
  },
  "arts_do|Саратов|245060|МБУДО &laquo;ДХШ им.М.В.Тельтевской&raquo;": {
   "code_oo": 245060,
@@ -1968,10 +1658,8 @@
   "name": "МБУДО &laquo;ДХШ им.М.В.Тельтевской&raquo;",
   "school_id": null,
   "org_url": "https://yandex.ru/maps/org/mbu_do_detskaya_khudozhestvennaya_shkola_goroda_kirova/1086028358/",
-  "photo": "arts/saratov/245060.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1779701/2a0000016ae30c16153d4b96d45573fb9a72/L_height",
-  "width": 448,
-  "height": 299
+  "photo": null,
+  "source": null
  },
  "arts_do|Саратов|245070|МБУДО &laquo;ДМШ № 7&raquo;": {
   "code_oo": 245070,
@@ -1980,10 +1668,8 @@
   "name": "МБУДО &laquo;ДМШ № 7&raquo;",
   "school_id": null,
   "org_url": "https://yandex.ru/maps/org/pervaya_detskaya_muzykalnaya_shkola_goroda_kirova/1056289845/",
-  "photo": "arts/saratov/245070.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1881447/2a0000016ae322ef0ddd7980b0d2872949e3/L_height",
-  "width": 500,
-  "height": 281
+  "photo": null,
+  "source": null
  },
  "arts_do|Саратов|245080|МБУДО «ДШИ № 10»": {
   "code_oo": 245080,
@@ -1992,10 +1678,8 @@
   "name": "МБУДО «ДШИ № 10»",
   "school_id": null,
   "org_url": "https://yandex.ru/maps/org/pervaya_detskaya_muzykalnaya_shkola_goroda_kirova/1056289845/",
-  "photo": "arts/saratov/245080.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1881447/2a0000016ae322ef0ddd7980b0d2872949e3/L_height",
-  "width": 500,
-  "height": 281
+  "photo": null,
+  "source": null
  },
  "arts_do|Саратов|245090|МБУДО &laquo;ДШИ № 15 им. Л.Л. Христиансена&raquo;": {
   "code_oo": 245090,
@@ -2004,10 +1688,8 @@
   "name": "МБУДО &laquo;ДШИ № 15 им. Л.Л. Христиансена&raquo;",
   "school_id": null,
   "org_url": "https://yandex.ru/maps/org/dshi_15_im_l_l_khristiansena/12596731744/",
-  "photo": "arts/saratov/245090.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/11398069/2a000001923987840f6658ed0cd9aaa92ca3/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "arts_do|Саратов|246030|МБУДО «ДМШ № 22»": {
   "code_oo": 246030,
@@ -2016,10 +1698,8 @@
   "name": "МБУДО «ДМШ № 22»",
   "school_id": null,
   "org_url": "https://yandex.ru/maps/org/pervaya_detskaya_muzykalnaya_shkola_goroda_kirova/1056289845/",
-  "photo": "arts/saratov/246030.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1881447/2a0000016ae322ef0ddd7980b0d2872949e3/L_height",
-  "width": 500,
-  "height": 281
+  "photo": null,
+  "source": null
  },
  "arts_do|Саратов|246040|МБУДО «ДМШ № 3»": {
   "code_oo": 246040,
@@ -2028,10 +1708,8 @@
   "name": "МБУДО «ДМШ № 3»",
   "school_id": null,
   "org_url": "https://yandex.ru/maps/org/pervaya_detskaya_muzykalnaya_shkola_goroda_kirova/1056289845/",
-  "photo": "arts/saratov/246040.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1881447/2a0000016ae322ef0ddd7980b0d2872949e3/L_height",
-  "width": 500,
-  "height": 281
+  "photo": null,
+  "source": null
  },
  "arts_do|Саратов|246050|МБУДО &laquo;ДМШ № 4&raquo;": {
   "code_oo": 246050,
@@ -2040,10 +1718,8 @@
   "name": "МБУДО &laquo;ДМШ № 4&raquo;",
   "school_id": null,
   "org_url": "https://yandex.ru/maps/org/detskaya_muzykalnaya_shkola_4_goroda_kirova/145626513932/",
-  "photo": "arts/saratov/246050.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1909414/2a0000016ae32057343d4493bc440898c671/L_height",
-  "width": 500,
-  "height": 276
+  "photo": null,
+  "source": null
  },
  "arts_do|Саратов|246060|МБУДО &laquo;ДМШ № 5&raquo;": {
   "code_oo": 246060,
@@ -2052,10 +1728,8 @@
   "name": "МБУДО &laquo;ДМШ № 5&raquo;",
   "school_id": null,
   "org_url": "https://yandex.ru/maps/org/pervaya_detskaya_muzykalnaya_shkola_goroda_kirova/1056289845/",
-  "photo": "arts/saratov/246060.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1881447/2a0000016ae322ef0ddd7980b0d2872949e3/L_height",
-  "width": 500,
-  "height": 281
+  "photo": null,
+  "source": null
  },
  "arts_do|Саратов|246070|МБУДО &laquo;ДМШ № 9&raquo;": {
   "code_oo": 246070,
@@ -2074,10 +1748,8 @@
   "name": "МБУДО «ДШИ № 11»",
   "school_id": null,
   "org_url": "https://yandex.ru/maps/org/detskaya_shkola_iskusstv_11/35499023155/",
-  "photo": "arts/saratov/246080.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1879888/2a0000016ae2f833b36b132a37a865a4f6b1/L_height",
-  "width": 500,
-  "height": 201
+  "photo": null,
+  "source": null
  },
  "arts_do|Саратов|246090|МБУДО «ДШИ № 13»": {
   "code_oo": 246090,
@@ -2086,10 +1758,8 @@
   "name": "МБУДО «ДШИ № 13»",
   "school_id": null,
   "org_url": "https://yandex.ru/maps/org/pervaya_detskaya_muzykalnaya_shkola_goroda_kirova/1056289845/",
-  "photo": "arts/saratov/246090.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1881447/2a0000016ae322ef0ddd7980b0d2872949e3/L_height",
-  "width": 500,
-  "height": 281
+  "photo": null,
+  "source": null
  },
  "arts_do|Саратов|246100|МБУДО &laquo;ДШИ № 16&raquo;": {
   "code_oo": 246100,
@@ -2108,10 +1778,8 @@
   "name": "МБУДО &laquo;ДШИ № 17 им. М.Н. Симанского&raquo;",
   "school_id": null,
   "org_url": "https://yandex.ru/maps/org/detskaya_shkola_iskusstv_17_imeni_m_n_simanskogo/93872592116/",
-  "photo": "arts/saratov/246110.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/4284571/2a0000017a19b53b17465f486cd2d70771bc/L_height",
-  "width": 500,
-  "height": 375
+  "photo": null,
+  "source": null
  },
  "arts_do|Саратов|246120|МБУДО «ДШИ № 18»": {
   "code_oo": 246120,
@@ -2120,10 +1788,8 @@
   "name": "МБУДО «ДШИ № 18»",
   "school_id": null,
   "org_url": "https://yandex.ru/maps/org/pervaya_detskaya_muzykalnaya_shkola_goroda_kirova/1056289845/",
-  "photo": "arts/saratov/246120.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1881447/2a0000016ae322ef0ddd7980b0d2872949e3/L_height",
-  "width": 500,
-  "height": 281
+  "photo": null,
+  "source": null
  },
  "arts_do|Саратов|246130|МБУДО &laquo;ДШИ № 20&raquo;": {
   "code_oo": 246130,
@@ -2142,10 +1808,8 @@
   "name": "МБУДО &laquo;ДХШ&raquo;",
   "school_id": null,
   "org_url": "https://yandex.ru/maps/org/mbu_do_detskaya_khudozhestvennaya_shkola_goroda_kirova/1086028358/",
-  "photo": "arts/saratov/247030.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1779701/2a0000016ae30c16153d4b96d45573fb9a72/L_height",
-  "width": 448,
-  "height": 299
+  "photo": null,
+  "source": null
  },
  "arts_do|Саратов|247040|МБУДО «ДШИ №1»": {
   "code_oo": 247040,
@@ -2154,10 +1818,8 @@
   "name": "МБУДО «ДШИ №1»",
   "school_id": null,
   "org_url": "https://yandex.ru/maps/org/pervaya_detskaya_muzykalnaya_shkola_goroda_kirova/1056289845/",
-  "photo": "arts/saratov/247040.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1881447/2a0000016ae322ef0ddd7980b0d2872949e3/L_height",
-  "width": 500,
-  "height": 281
+  "photo": null,
+  "source": null
  },
  "arts_do|Саратов|247050|МБУДО «ДШИ №2»": {
   "code_oo": 247050,
@@ -2166,1291 +1828,7 @@
   "name": "МБУДО «ДШИ №2»",
   "school_id": null,
   "org_url": "https://yandex.ru/maps/org/detskaya_muzykalnaya_shkola_2/1098885770/",
-  "photo": "arts/saratov/247050.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1526642/2a0000016ae30f6902f2bb9911b625544e66/L_height",
-  "width": 500,
-  "height": 375
- },
- "arts_do|Саратов|250214|ГПОУ «СХУ имени А.П. Боголюбова (техникум)»": {
-  "code_oo": 250214,
-  "kind": "arts_do",
-  "city": "Саратов",
-  "name": "ГПОУ «СХУ имени А.П. Боголюбова (техникум)»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/saratovskoye_khudozhestvennoye_uchilishche_imeni_a_p_bogolyubova/1015674738/",
-  "photo": "arts/saratov/250214.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1524599/2a0000016ae2fc176cdabfc5aa37550aceed/L_height",
-  "width": 500,
-  "height": 333
- },
- "internat_cadet|Саратов|249014|ГБОУ СО «Школа-интернат АОП № 3 г.Саратова»": {
-  "code_oo": 249014,
-  "kind": "internat_cadet",
-  "city": "Саратов",
-  "name": "ГБОУ СО «Школа-интернат АОП № 3 г.Саратова»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/shkola_internat_3/228497961048/",
-  "photo": "boarding/saratov/249014.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/11400795/2a0000018dd1629d37146346610613666f2d/L_height",
-  "width": 281,
-  "height": 500
- },
- "internat_cadet|Саратов|249024|ГБОУ СО «Школа-интернат АОП№ 4 г.Саратова»": {
-  "code_oo": 249024,
-  "kind": "internat_cadet",
-  "city": "Саратов",
-  "name": "ГБОУ СО «Школа-интернат АОП№ 4 г.Саратова»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/shkola_internat_dlya_obuchayushchikhsya_po_adaptirovannym_obshcheobrazovatelnym_programmam_4/18629834848/",
-  "photo": "boarding/saratov/249024.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/15423471/2a000001967c078d79b6f8b766f10c105613/L_height",
-  "width": 500,
-  "height": 375
- },
- "internat_cadet|Саратов|249032|ГБОУ СО «СКШ № 1 им. Б.Н.Ерёмина»": {
-  "code_oo": 249032,
-  "kind": "internat_cadet",
-  "city": "Саратов",
-  "name": "ГБОУ СО «СКШ № 1 им. Б.Н.Ерёмина»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/kadetskaya_shkola_internat_1/1701101127/",
-  "photo": "boarding/saratov/249032.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/212783/2a0000015e6164b4f0dc488357b420f8c26e/L_height",
-  "width": 500,
-  "height": 333
- },
- "internat_cadet|Саратов|249036|Медицинский предуниверсарий СГМУ им. В.И. Разумовского": {
-  "code_oo": 249036,
-  "kind": "internat_cadet",
-  "city": "Саратов",
-  "name": "Медицинский предуниверсарий СГМУ им. В.И. Разумовского",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/sgmu_imeni_v_i_razumovskogo_tsentr_dovuzovskogo_obrazovaniya_meditsinskiy_preduniversariy/1312708201/",
-  "photo": "boarding/saratov/249036.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/372953/2a0000015e28aa7f56b0e9e405eafeaaa2b0/L_height",
-  "width": 500,
-  "height": 375
- },
- "internat_cadet|Саратов|249046|ГАПОУ СО «Саратовский областной образовательный комплекс - Политехнический колледж - Лицей-интернат 64»": {
-  "code_oo": 249046,
-  "kind": "internat_cadet",
-  "city": "Саратов",
-  "name": "ГАПОУ СО «Саратовский областной образовательный комплекс - Политехнический колледж - Лицей-интернат 64»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/saratovskiy_politekhnicheskiy_kolledzh/1044220400/",
-  "photo": "boarding/saratov/249046.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/13419691/2a00000190a038494593ea483706a327e19f/L_height",
-  "width": 500,
-  "height": 377
- },
- "internat_cadet|Саратов|249064|ГАОУ СО «Школа «Уникум»": {
-  "code_oo": 249064,
-  "kind": "internat_cadet",
-  "city": "Саратов",
-  "name": "ГАОУ СО «Школа «Уникум»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/shkola_unikum/1031121342/",
-  "photo": "boarding/saratov/249064.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/15416005/2a0000019774c72d68c9671a28ff93fccc91/L_height",
-  "width": 500,
-  "height": 375
- },
- "internat_cadet|Саратов|249088|ГБОУ СО «Школа-интернат № 5 АОП г.Саратова»": {
-  "code_oo": 249088,
-  "kind": "internat_cadet",
-  "city": "Саратов",
-  "name": "ГБОУ СО «Школа-интернат № 5 АОП г.Саратова»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/gbou_so_shkola_internat_dlya_obuchayushchikhsya_po_adaptirovannym_obrazovatelnym_programmam_5_g_saratova/1010417963/",
-  "photo": "boarding/saratov/249088.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/218662/2a0000016148da4f6fcfcbcfffc03201e09e/L_height",
-  "width": 500,
-  "height": 281
- },
- "internat_cadet|Саратов|249138|ГБОУ СО «Центр образования» г. Саратова": {
-  "code_oo": 249138,
-  "kind": "internat_cadet",
-  "city": "Саратов",
-  "name": "ГБОУ СО «Центр образования» г. Саратова",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/shkola_internat_3/228497961048/",
-  "photo": "boarding/saratov/249138.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/11400795/2a0000018dd1629d37146346610613666f2d/L_height",
-  "width": 281,
-  "height": 500
- },
- "internat_cadet|Саратов|249148|ГБОУ СО «Школа АОП № 2 г.Саратова»": {
-  "code_oo": 249148,
-  "kind": "internat_cadet",
-  "city": "Саратов",
-  "name": "ГБОУ СО «Школа АОП № 2 г.Саратова»",
-  "school_id": null,
-  "org_url": null,
   "photo": null,
   "source": null
- },
- "internat_cadet|Саратов|249158|ГБОУ СО «Школа АОП № 4 г.Саратова»": {
-  "code_oo": 249158,
-  "kind": "internat_cadet",
-  "city": "Саратов",
-  "name": "ГБОУ СО «Школа АОП № 4 г.Саратова»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/spetsialnaya_korrektsionnaya_obshcheobrazovatelnaya_shkola_4_viii_vida/15410306125/",
-  "photo": "boarding/saratov/249158.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/8075227/2a000001874b3fa443971751e4e4532b0af4/L_height",
-  "width": 500,
-  "height": 375
- },
- "internat_cadet|Саратов|249168|ГБОУ СО «Школа АОП № 6 г.Саратова»": {
-  "code_oo": 249168,
-  "kind": "internat_cadet",
-  "city": "Саратов",
-  "name": "ГБОУ СО «Школа АОП № 6 г.Саратова»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/shkola_6/1075874246/",
-  "photo": "boarding/saratov/249168.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/374295/2a0000015b3ba77d8728b314d8efc5aa99d1/L_height",
-  "width": 375,
-  "height": 500
- },
- "internat_cadet|Саратов|255001|ГАПОУ СО «СКИПО для инвалидов и лиц с ОВЗ»": {
-  "code_oo": 255001,
-  "kind": "internat_cadet",
-  "city": "Саратов",
-  "name": "ГАПОУ СО «СКИПО для инвалидов и лиц с ОВЗ»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/saratovskiy_kompleks_internat_professionalnogo_obucheniya_dlya_invalidov_i_lits_s_ovz/115166088366/",
-  "photo": "boarding/saratov/255001.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/963534/2a00000162871335e7896438621a36fc22a7/L_height",
-  "width": 500,
-  "height": 375
- },
- "other|Саратов|232000|Департамент Гагаринского административного района муниципального образования «Город Саратов»": {
-  "code_oo": 232000,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "Департамент Гагаринского административного района муниципального образования «Город Саратов»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/administratsiya_gagarinskogo_rayona/1062551827/",
-  "photo": "other/saratov/232000.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1371862/2a00000163bb7ac447f3ef37bf893a909c0e/L_height",
-  "width": 500,
-  "height": 231
- },
- "other|Саратов|241000|комитет по образованию администрации муниципального образования «Город Саратов»": {
-  "code_oo": 241000,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "комитет по образованию администрации муниципального образования «Город Саратов»",
-  "school_id": null,
-  "org_url": null,
-  "photo": null,
-  "source": null
- },
- "other|Саратов|241010|МАУДО «ДТДиМ им. О.П. Табакова»": {
-  "code_oo": 241010,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "МАУДО «ДТДиМ им. О.П. Табакова»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/dvorets_tvorchestva_detey_i_molodezhi_imeni_o_p_tabakova/91269287975/",
-  "photo": "other/saratov/241010.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/200322/2a0000015b195a9b4ace054a4ecdf1892b9b/L_height",
-  "width": 500,
-  "height": 332
- },
- "other|Саратов|241030|МАУДО «ДюЦПВТ»": {
-  "code_oo": 241030,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "МАУДО «ДюЦПВТ»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detsko_yunosheskiy_tsentr_patrioticheskogo_vospitaniya_i_turizma/1119077614/",
-  "photo": "other/saratov/241030.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/372953/2a0000015e4c962931d8fcc27461c2b9dcd4/L_height",
-  "width": 500,
-  "height": 375
- },
- "other|Саратов|241040|МКУДО «Центр технического творчества детей и молодежи»": {
-  "code_oo": 241040,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "МКУДО «Центр технического творчества детей и молодежи»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/tsentr_tekhnicheskogo_tvorchestva_detey_i_molodezhi/1103153032/",
-  "photo": "other/saratov/241040.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/5457543/2a0000017e58b6cb9cce7cd5d7209a407d26/L_height",
-  "width": 500,
-  "height": 375
- },
- "other|Саратов|242000|Администрация Октябрьского района муниципального образования «Город Саратов»": {
-  "code_oo": 242000,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "Администрация Октябрьского района муниципального образования «Город Саратов»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/administratsiya_oktyabrskogo_rayona_goroda_saratova/1113362182/",
-  "photo": "other/saratov/242000.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1042100/2a000001691a26196c3a6d47a3c3f0789440/L_height",
-  "width": 500,
-  "height": 375
- },
- "other|Саратов|242010|МУДО ЦДОдД": {
-  "code_oo": 242010,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "МУДО ЦДОдД",
-  "school_id": null,
-  "org_url": null,
-  "photo": null,
-  "source": null
- },
- "other|Саратов|242020|МУДО «ДООЦ «Восход»": {
-  "code_oo": 242020,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "МУДО «ДООЦ «Восход»",
-  "school_id": null,
-  "org_url": null,
-  "photo": null,
-  "source": null
- },
- "other|Саратов|243020|МУДО «ДДТ»": {
-  "code_oo": 243020,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "МУДО «ДДТ»",
-  "school_id": null,
-  "org_url": null,
-  "photo": null,
-  "source": null
- },
- "other|Саратов|244000|Администрация Фрунзенского района муниципального образования «Город Саратов»": {
-  "code_oo": 244000,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "Администрация Фрунзенского района муниципального образования «Город Саратов»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/administratsiya_frunzenskogo_rayona/1526253910/",
-  "photo": "other/saratov/244000.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/15629777/2a000001999c2e748ccab2977b454956f4c0/L_height",
-  "width": 500,
-  "height": 375
- },
- "other|Саратов|244010|МАУ ДО «ДЮЦ»": {
-  "code_oo": 244010,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "МАУ ДО «ДЮЦ»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/mau_do_dyuts_yubileyny/1118813459/",
-  "photo": "other/saratov/244010.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/2799320/2a000001768cda0d4c5d30ed49e10626a939/L_height",
-  "width": 500,
-  "height": 375
- },
- "other|Саратов|245000|Администрация Кировского района муниципального образования «Город Саратов»": {
-  "code_oo": 245000,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "Администрация Кировского района муниципального образования «Город Саратов»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/administratsiya_kirovskogo_rayona/177665653316/",
-  "photo": "other/saratov/245000.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/14312158/2a000001937d5ac161fe892aad9263fd77bd/L_height",
-  "width": 500,
-  "height": 375
- },
- "other|Саратов|245010|МАУДО ЦДТ «Созвездие-К»": {
-  "code_oo": 245010,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "МАУДО ЦДТ «Созвездие-К»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/maudo_tsdt_sozvezdiye_k/1117046715/",
-  "photo": "other/saratov/245010.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/2816622/2a00000173ba3c7a253b8dce25b9284a941d/L_height",
-  "width": 500,
-  "height": 375
- },
- "other|Саратов|246000|Администрация Ленинского района муниципального образования &laquo;Город Саратов&raquo;": {
-  "code_oo": 246000,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "Администрация Ленинского района муниципального образования &laquo;Город Саратов&raquo;",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/administratsiya_leninskogo_munitsipalnogo_rayona/62869135197/",
-  "photo": "other/saratov/246000.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/2359468/2a00000173db5bc7d66cf4b53b96490c8b80/L_height",
-  "width": 500,
-  "height": 333
- },
- "other|Саратов|246010|МУ ДО «ЦДТ» Ленинского района г. Саратова": {
-  "code_oo": 246010,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "МУ ДО «ЦДТ» Ленинского района г. Саратова",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/tsentr_detskogo_tvorchestva_leninskogo_rayona_goroda_saratova/1718117939/",
-  "photo": "other/saratov/246010.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/16497373/2a00000197fea0cabd9910ed92ce7ec29d13/L_height",
-  "width": 500,
-  "height": 377
- },
- "other|Саратов|246020|МУДО «ДДТ «Солнечный»": {
-  "code_oo": 246020,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "МУДО «ДДТ «Солнечный»",
-  "school_id": null,
-  "org_url": null,
-  "photo": null,
-  "source": null
- },
- "other|Саратов|246781|МУ ДО «ДООЦ «Мечта»": {
-  "code_oo": 246781,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "МУ ДО «ДООЦ «Мечта»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/mechta/95977571245/",
-  "photo": "other/saratov/246781.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/16431464/2a000001977ee77233f6179452097855bd34/L_height",
-  "width": 500,
-  "height": 200
- },
- "other|Саратов|247000|Администрация Заводского района муниципального образования «Город Саратов»": {
-  "code_oo": 247000,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "Администрация Заводского района муниципального образования «Город Саратов»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/administratsiya_zavodskogo_rayona_goroda_saratova/1050133022/",
-  "photo": "other/saratov/247000.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1881714/2a000001755fd45a80ae03f9e3ef008cdd31/L_height",
-  "width": 500,
-  "height": 375
- },
- "other|Саратов|247010|МУДО «ЦДО»": {
-  "code_oo": 247010,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "МУДО «ЦДО»",
-  "school_id": null,
-  "org_url": null,
-  "photo": null,
-  "source": null
- },
- "other|Саратов|247090|МУ ДО «ДООЦ «Дубки»": {
-  "code_oo": 247090,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "МУ ДО «ДООЦ «Дубки»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/dubki/28059908977/",
-  "photo": "other/saratov/247090.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/5255911/2a0000018249b0385b6b81bb2bbb1804032a/L_height",
-  "width": 500,
-  "height": 375
- },
- "other|Саратов|249025|ГБУ СОДО &laquo;ОЦЭКИТ&raquo;": {
-  "code_oo": 249025,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "ГБУ СОДО &laquo;ОЦЭКИТ&raquo;",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/oblastnoy_tsentr_ekologii_krayevedeniya_i_turizma/1019684373/",
-  "photo": "other/saratov/249025.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1344805/2a00000186e0366b5c165b3777dba1287298/L_height",
-  "width": 500,
-  "height": 243
- },
- "other|Саратов|252010|ООО «Аристотель»": {
-  "code_oo": 252010,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "ООО «Аристотель»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/aristotel/131370736677/",
-  "photo": "other/saratov/252010.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/5235198/2a0000017ba787d3b417a07f5f0c58920a8f/L_height",
-  "width": 500,
-  "height": 375
- },
- "other|Саратов|252020|ООО «Центр Ларчик»": {
-  "code_oo": 252020,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "ООО «Центр Ларчик»",
-  "school_id": null,
-  "org_url": null,
-  "photo": null,
-  "source": null
- },
- "other|Саратов|253023|ФГКОУ «СОШ № 152»": {
-  "code_oo": 253023,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "ФГКОУ «СОШ № 152»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/fgkou_sosh_152/42664643195/",
-  "photo": "other/saratov/253023.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/17670872/2a000001a1dfe36b54a45c4b0ff938e495f8/L_height",
-  "width": 500,
-  "height": 225
- },
- "other|Саратов|255012|ГБУ СО «ЦСПСиД г. Саратова»": {
-  "code_oo": 255012,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "ГБУ СО «ЦСПСиД г. Саратова»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/tsentr_sotsialnoy_pomoshchi_semye_i_detyam_g_saratova/1073840506/",
-  "photo": "other/saratov/255012.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/2799320/2a00000175e92ebf68eeaf0d814d6aa14659/L_height",
-  "width": 500,
-  "height": 375
- },
- "other|Саратов|255013|ГАУ СО СРЦ «Возвращение»": {
-  "code_oo": 255013,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "ГАУ СО СРЦ «Возвращение»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/saratovskiy_oblastnoy_sotsialno_reabilitatsionny_tsentr_vozvrashcheniye/199454764223/",
-  "photo": "other/saratov/255013.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/774406/2a00000162e7fac618efc62f36f37fb6ea4e/L_height",
-  "width": 500,
-  "height": 281
- },
- "other|Саратов|255047|ГБУ СО «ОРЦ»": {
-  "code_oo": 255047,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "ГБУ СО «ОРЦ»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/reabilitatsionny_tsentr_dlya_detey_i_podrostkov/1037143442/",
-  "photo": "other/saratov/255047.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1090799/2a000001622d583c8313af244da9819a4625/L_height",
-  "width": 360,
-  "height": 360
- },
- "other|Саратов|255059|ГАУ СО «ЦАРИ»": {
-  "code_oo": 255059,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "ГАУ СО «ЦАРИ»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/tsentr_adaptatsii_i_reabilitatsii_invalidov/1101706993/",
-  "photo": "other/saratov/255059.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/10639454/2a0000018a73444a9c27264336189fc30236/L_height",
-  "width": 500,
-  "height": 375
- },
- "other|Саратов|255066|МАУ ДО «ДООСЦ»": {
-  "code_oo": 255066,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "МАУ ДО «ДООСЦ»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_ozdorovitelno_obrazovatelny_sportivny_tsentr/222672654778/",
-  "photo": "other/saratov/255066.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/15232415/2a00000197dc5d8e482bdf80415320af2311/L_height",
-  "width": 500,
-  "height": 375
- },
- "other|Саратов|256001|ГУЗ «Областная клиническая больница»; ГУЗ «ОКБ»": {
-  "code_oo": 256001,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "ГУЗ «Областная клиническая больница»; ГУЗ «ОКБ»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/oblastnaya_klinicheskaya_bolnitsa/1780875605/",
-  "photo": "other/saratov/256001.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/14333651/2a000001948c50aca5dcd7c405548dbc5c29/L_height",
-  "width": 500,
-  "height": 281
- },
- "other|Саратов|256002|ГУЗ «СГКБ № 6 имени Академика В.Н. Кошелева»": {
-  "code_oo": 256002,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "ГУЗ «СГКБ № 6 имени Академика В.Н. Кошелева»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/saratovskaya_gorodskaya_klinicheskaya_bolnitsa_6_imeni_akademika_v_n_kosheleva/1257908225/",
-  "photo": "other/saratov/256002.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/367512/2a0000015b9efb1339e3c1a7e453bf9bbb49/L_height",
-  "width": 375,
-  "height": 500
- },
- "other|Саратов|256003|ГУЗ «СГПНД»": {
-  "code_oo": 256003,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "ГУЗ «СГПНД»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/saratovskiy_gorodskoy_psikhonevrologicheskiy_dispanser/1581285661/",
-  "photo": "other/saratov/256003.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/6950449/2a0000018475aabba717c09340b1cc130a3e/L_height",
-  "width": 500,
-  "height": 333
- },
- "other|Саратов|256004|ГУЗ «СОДКБ»": {
-  "code_oo": 256004,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "ГУЗ «СОДКБ»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/saratovskaya_oblastnaya_detskaya_klinicheskaya_bolnitsa/1013973947/",
-  "photo": "other/saratov/256004.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/10702222/2a0000018b870c4be2d2aa79cc4faed37c7d/L_height",
-  "width": 500,
-  "height": 281
- },
- "other|Саратов|256005|ГУЗ«ОКПБ»": {
-  "code_oo": 256005,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "ГУЗ«ОКПБ»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/oblastnaya_klinicheskaya_psikhiatricheskaya_bolnitsa_svyatoy_sofii/1084984291/",
-  "photo": "other/saratov/256005.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/2812564/2a00000176712dfa48fe6ec942f7ff3db469/L_height",
-  "width": 500,
-  "height": 375
- },
- "other|Саратов|256006|ГУЗ «ОКПТД»": {
-  "code_oo": 256006,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "ГУЗ «ОКПТД»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/oblastnoy_klinicheskiy_protivotuberkulezny_dispanser/7685225947/",
-  "photo": "other/saratov/256006.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/13234017/2a0000018edfad96847ab1c86144204a48f3/L_height",
-  "width": 500,
-  "height": 375
- },
- "other|Саратов|256007|ГУЗ СО «ПТС для детей»": {
-  "code_oo": 256007,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "ГУЗ СО «ПТС для детей»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/protivotuberkulyozny_sanatoriy_dlya_detey/1325891038/",
-  "photo": "other/saratov/256007.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/2408669/2a000001743a99b1b8f20e7f57d92f3e36ab/L_height",
-  "width": 500,
-  "height": 375
- },
- "other|Саратов|256008|ГУЗ «ДПТД»": {
-  "code_oo": 256008,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "ГУЗ «ДПТД»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_protivotuberkulezny_dispanser/129790568228/",
-  "photo": "other/saratov/256008.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/3569559/2a0000018724b43d2c824c08433f970eff7d/L_height",
-  "width": 500,
-  "height": 375
- },
- "other|Саратов|256009|ГУЗ «Специализированный дом ребенка» г. Саратова": {
-  "code_oo": 256009,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "ГУЗ «Специализированный дом ребенка» г. Саратова",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/dom_rebyonka/1059458718/",
-  "photo": "other/saratov/256009.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/15182949/2a00000194b2d4b9b0da3f0f9ee8905afdc3/L_height",
-  "width": 376,
-  "height": 500
- },
- "other|Саратов|256012|Клиническая больница им. С.Р. Миротворцева СГМУ": {
-  "code_oo": 256012,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "Клиническая больница им. С.Р. Миротворцева СГМУ",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/sgmu_imeni_v_i_razumovskogo_klinicheskiy_tsentr_universitetskaya_klinicheskaya_bolnitsa_1_imeni_s_r_mirotvortseva/1077889069/",
-  "photo": "other/saratov/256012.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1938795/2a00000171d69db099e02782ae8474323a39/L_height",
-  "width": 410,
-  "height": 308
- },
- "other|Саратов|257120|ГАУ СО «ФСЦ «Урожай»": {
-  "code_oo": 257120,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "ГАУ СО «ФСЦ «Урожай»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/urozhay/1340504057/",
-  "photo": "other/saratov/257120.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/7659180/2a000001878aff7f9bfc658bc08c268ef3d7/L_height",
-  "width": 500,
-  "height": 375
- },
- "other|Саратов|257130|ГБУ «СОСЦРСС»": {
-  "code_oo": 257130,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "ГБУ «СОСЦРСС»",
-  "school_id": null,
-  "org_url": null,
-  "photo": null,
-  "source": null
- },
- "other|Саратов|258130|ГАУ ДПО «Саратовский областной учебно-методический центр»": {
-  "code_oo": 258130,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "ГАУ ДПО «Саратовский областной учебно-методический центр»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/regionalny_tsentr_podderzhki_odarennykh_detey/1228038554/",
-  "photo": "other/saratov/258130.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/2051686/2a0000016f1f90996d65ed8869f87b55f204/L_height",
-  "width": 500,
-  "height": 330
- },
- "other|Саратов|259010|«ЦВСНП ГУ МВД России по Саратовской области»": {
-  "code_oo": 259010,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "«ЦВСНП ГУ МВД России по Саратовской области»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/tsentr_vremennogo_soderzhaniya_dlya_nesovershennoletnikh_pravonarushiteley_glavnoye_upravleniye_mvd_rossii_po_saratovskoy_oblasti/217701954548/",
-  "photo": "other/saratov/259010.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/4380921/2a000001774c0d93838850a23ab33b0fe2b7/L_height",
-  "width": 500,
-  "height": 375
- },
- "other|Саратов|259020|ФКУ СИЗО-1 УФСИН России по Саратовской области": {
-  "code_oo": 259020,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "ФКУ СИЗО-1 УФСИН России по Саратовской области",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/sledstvenny_izolyator_1/144796807916/",
-  "photo": "other/saratov/259020.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/214458/2a000001628b2af9a7c6d8202a7d908ed054/L_height",
-  "width": 500,
-  "height": 375
- },
- "other|Саратов|264010|ГАУ ДО «Региональный центр допризывной подготовки молодежи»": {
-  "code_oo": 264010,
-  "kind": "other",
-  "city": "Саратов",
-  "name": "ГАУ ДО «Региональный центр допризывной подготовки молодежи»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/regionalny_tsentr_doprizyvnoy_podgotovki_molodezhi/1020363756/",
-  "photo": "other/saratov/264010.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/481843/2a00000161a83cbdab8e8322665831d8b02c/L_height",
-  "width": 500,
-  "height": 281
- },
- "preschool|Саратов|232021|МАДОУ «Детский сад № 1 поселка Красный Текстильщик»": {
-  "code_oo": 232021,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МАДОУ «Детский сад № 1 поселка Красный Текстильщик»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_1_solnechnyye_luchiki/1190872761/",
-  "photo": "kindergartens/saratov/232021.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/14782168/2a000001991f827fcfede2b197e46cf6f1a4/L_height",
-  "width": 500,
-  "height": 375
- },
- "preschool|Саратов|232051|МАДОУ «Детский сад «Солнышко» села Багаевка»": {
-  "code_oo": 232051,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МАДОУ «Детский сад «Солнышко» села Багаевка»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_solnyshko/1258633899/",
-  "photo": "kindergartens/saratov/232051.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/11047134/2a0000018e7f89edd910bb4ba645e6bf3704/%s",
-  "width": 0,
-  "height": 0
- },
- "preschool|Саратов|232061|МАДОУ «Детский сад «Теремок» хутора Бартоломеевский»": {
-  "code_oo": 232061,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МАДОУ «Детский сад «Теремок» хутора Бартоломеевский»",
-  "school_id": null,
-  "org_url": null,
-  "photo": null,
-  "source": null
- },
- "preschool|Саратов|232071|МАДОУ «Детский сад «Рябинка» с. Березина Речка»": {
-  "code_oo": 232071,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МАДОУ «Детский сад «Рябинка» с. Березина Речка»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/ryabinka/120392257106/",
-  "photo": "kindergartens/saratov/232071.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1024093/2a000001614ae5c8605682051bdc7347657f/%s",
-  "width": 0,
-  "height": 0
- },
- "preschool|Саратов|232121|МАДОУ «Детский сад р.п. Красный Октябрь»": {
-  "code_oo": 232121,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МАДОУ «Детский сад р.п. Красный Октябрь»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_keplyonok/13033373392/",
-  "photo": "kindergartens/saratov/232121.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/16888214/2a0000019ab16f91472b93c3c0f26e19d2cd/L_height",
-  "width": 500,
-  "height": 375
- },
- "preschool|Саратов|232131|МАДОУ «Детский сад с. Михайловка»": {
-  "code_oo": 232131,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МАДОУ «Детский сад с. Михайловка»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_46/1112333402/",
-  "photo": "kindergartens/saratov/232131.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/10447847/2a0000018ae89cd04865f5fa43d51d2a5e13/L_height",
-  "width": 500,
-  "height": 375
- },
- "preschool|Саратов|232141|МАДОУ «Детский сад села Поповка»": {
-  "code_oo": 232141,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МАДОУ «Детский сад села Поповка»",
-  "school_id": null,
-  "org_url": null,
-  "photo": null,
-  "source": null
- },
- "preschool|Саратов|232161|МАДОУ «Светлячок» с. Рыбушка": {
-  "code_oo": 232161,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МАДОУ «Светлячок» с. Рыбушка",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_svetlyachok/196264657555/",
-  "photo": "kindergartens/saratov/232161.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/13197739/2a000001923edf5474fbdc8f20b9d1277f19/L_height",
-  "width": 500,
-  "height": 333
- },
- "preschool|Саратов|232201|МАДОУ «Детский сад р.п. Соколовый»": {
-  "code_oo": 232201,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МАДОУ «Детский сад р.п. Соколовый»",
-  "school_id": null,
-  "org_url": null,
-  "photo": null,
-  "source": null
- },
- "preschool|Саратов|232211|МАДОУ «Детский сад села Сосновка»": {
-  "code_oo": 232211,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МАДОУ «Детский сад села Сосновка»",
-  "school_id": null,
-  "org_url": null,
-  "photo": null,
-  "source": null
- },
- "preschool|Саратов|232221|МАДОУ «Детский сад ст. Тарханы»": {
-  "code_oo": 232221,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МАДОУ «Детский сад ст. Тарханы»",
-  "school_id": null,
-  "org_url": null,
-  "photo": null,
-  "source": null
- },
- "preschool|Саратов|232231|МАДОУ «Детский сад «Сказка» поселка Тепличный»": {
-  "code_oo": 232231,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МАДОУ «Детский сад «Сказка» поселка Тепличный»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/skazka/82997858479/",
-  "photo": "kindergartens/saratov/232231.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/6222916/2a00000181282605490119c9557a625e2516/L_height",
-  "width": 375,
-  "height": 500
- },
- "preschool|Саратов|232241|МАДОУ «Детский сад «Теремок» села Усть-Курдюм»": {
-  "code_oo": 232241,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МАДОУ «Детский сад «Теремок» села Усть-Курдюм»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_teremok/1704263262/",
-  "photo": "kindergartens/saratov/232241.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/492154/2a000001628b2cd33ecc25f45230a5323448/L_height",
-  "width": 490,
-  "height": 368
- },
- "preschool|Саратов|232251|МАДОУ «Детский сад «Тополек» с. Шевыревка»": {
-  "code_oo": 232251,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МАДОУ «Детский сад «Тополек» с. Шевыревка»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_topolyok/1085135519/",
-  "photo": "kindergartens/saratov/232251.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/10647561/2a0000018c8afbe960c92b823c3158f15d1b/%s",
-  "width": 0,
-  "height": 0
- },
- "preschool|Саратов|232261|МАДОУ «Детский сад с.Сторожевка\"": {
-  "code_oo": 232261,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МАДОУ «Детский сад с.Сторожевка\"",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad/17969969718/",
-  "photo": "kindergartens/saratov/232261.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1031166/2a0000016224d1a822b28d1ce1eb3dd246f6/%s",
-  "width": 0,
-  "height": 0
- },
- "preschool|Саратов|242011|МДОУ «Детский сад № 4»": {
-  "code_oo": 242011,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «Детский сад № 4»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_4/1236920091/",
-  "photo": "kindergartens/saratov/242011.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/3986135/2a000001794afa102d4adb1cc66f5821052d/L_height",
-  "width": 500,
-  "height": 375
- },
- "preschool|Саратов|242021|МДОУ «Детский сад № 15»": {
-  "code_oo": 242021,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «Детский сад № 15»",
-  "school_id": null,
-  "org_url": null,
-  "photo": null,
-  "source": null
- },
- "preschool|Саратов|242031|МДОУ «Детский сад № 21» Октябрьского района г.Саратова": {
-  "code_oo": 242031,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «Детский сад № 21» Октябрьского района г.Саратова",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_21/1009350510/",
-  "photo": "kindergartens/saratov/242031.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/9114271/2a00000190cc8095c8d972e064b88151ec2a/L_height",
-  "width": 500,
-  "height": 375
- },
- "preschool|Саратов|242051|МДОУ «Детский сад комбинированного вида № 24 «Кораблик» Октябрьского района города Саратова": {
-  "code_oo": 242051,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «Детский сад комбинированного вида № 24 «Кораблик» Октябрьского района города Саратова",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_24_korablik/1104361452/",
-  "photo": "kindergartens/saratov/242051.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1420183/2a00000167f8a37ea613589bad6510be8cb9/L_height",
-  "width": 500,
-  "height": 331
- },
- "preschool|Саратов|242061|МДОУ «Детский сад комбинированного вида №31 «Колосок»": {
-  "code_oo": 242061,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «Детский сад комбинированного вида №31 «Колосок»",
-  "school_id": null,
-  "org_url": null,
-  "photo": null,
-  "source": null
- },
- "preschool|Саратов|242071|МДОУ «Детский сад №40» Октябрьского района г. Саратова": {
-  "code_oo": 242071,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «Детский сад №40» Октябрьского района г. Саратова",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_40/1033941167/",
-  "photo": "kindergartens/saratov/242071.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/2408158/2a00000174072ca48bd7aa787541f8f59dc4/L_height",
-  "width": 500,
-  "height": 375
- },
- "preschool|Саратов|242081|МДОУ «Детский сад комбинированного вида № 54» г. Саратова": {
-  "code_oo": 242081,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «Детский сад комбинированного вида № 54» г. Саратова",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_54/101716034107/",
-  "photo": "kindergartens/saratov/242081.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/15053227/2a00000194b2db14ad69b32897e9d0be3ce9/L_height",
-  "width": 376,
-  "height": 500
- },
- "preschool|Саратов|242091|МДОУ «Детский сад комбинированного вида № 56» Октябрьского района г. Саратова": {
-  "code_oo": 242091,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «Детский сад комбинированного вида № 56» Октябрьского района г. Саратова",
-  "school_id": null,
-  "org_url": null,
-  "photo": null,
-  "source": null
- },
- "preschool|Саратов|242111|МДОУ «Детский сад № 104»": {
-  "code_oo": 242111,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «Детский сад № 104»",
-  "school_id": null,
-  "org_url": null,
-  "photo": null,
-  "source": null
- },
- "preschool|Саратов|242121|МДОУ «Детский сад № 116»": {
-  "code_oo": 242121,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «Детский сад № 116»",
-  "school_id": null,
-  "org_url": null,
-  "photo": null,
-  "source": null
- },
- "preschool|Саратов|242131|МДОУ «Детский сад № 121»": {
-  "code_oo": 242131,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «Детский сад № 121»",
-  "school_id": null,
-  "org_url": null,
-  "photo": null,
-  "source": null
- },
- "preschool|Саратов|242141|МДОУ «Детский сад № 189» Октябрьского района г. Саратова": {
-  "code_oo": 242141,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «Детский сад № 189» Октябрьского района г. Саратова",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_189/1101745110/",
-  "photo": "kindergartens/saratov/242141.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/236825/2a0000015b3b5467eb14a461d81cd9fead00/L_height",
-  "width": 500,
-  "height": 375
- },
- "preschool|Саратов|242151|МДОУ «Детский сад № 213»": {
-  "code_oo": 242151,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «Детский сад № 213»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_213/1024620196/",
-  "photo": "kindergartens/saratov/242151.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/18112381/2a0000019dbe752fc38239f4aa3f4d68c855/L_height",
-  "width": 500,
-  "height": 375
- },
- "preschool|Саратов|242161|МДОУ «Детский сад № 235»": {
-  "code_oo": 242161,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «Детский сад № 235»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_235_krokha/1129268809/",
-  "photo": "kindergartens/saratov/242161.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/15074997/2a000001962f4a95fa32d7f7bf9d493bbbc5/L_height",
-  "width": 500,
-  "height": 375
- },
- "preschool|Саратов|242171|МДОУ «ЦРР - детский сад № 1»": {
-  "code_oo": 242171,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «ЦРР - детский сад № 1»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_1_solnechnyye_luchiki/1190872761/",
-  "photo": "kindergartens/saratov/242171.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/14782168/2a000001991f827fcfede2b197e46cf6f1a4/L_height",
-  "width": 500,
-  "height": 375
- },
- "preschool|Саратов|242181|МБДОУ «Детский сад комбинированного вида № 3»": {
-  "code_oo": 242181,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МБДОУ «Детский сад комбинированного вида № 3»",
-  "school_id": null,
-  "org_url": null,
-  "photo": null,
-  "source": null
- },
- "preschool|Саратов|242191|МДОУ «ЦРР - детский сад № 13»": {
-  "code_oo": 242191,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «ЦРР - детский сад № 13»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_13/1124683239/",
-  "photo": "kindergartens/saratov/242191.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/4530524/2a000001785a28923005a3dc218477dd0d05/L_height",
-  "width": 500,
-  "height": 375
- },
- "preschool|Саратов|242201|МДОУ «ЦРР - детский сад № 79»": {
-  "code_oo": 242201,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «ЦРР - детский сад № 79»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_79_lastochka/52124819857/",
-  "photo": "kindergartens/saratov/242201.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/993981/2a000001619b0c4159fa81bdcfeb11193f67/L_height",
-  "width": 500,
-  "height": 375
- },
- "preschool|Саратов|242221|МДОУ «Детский сад № 119» г.Саратова": {
-  "code_oo": 242221,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «Детский сад № 119» г.Саратова",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_119/1115005165/",
-  "photo": "kindergartens/saratov/242221.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/16105091/2a00000196ed02c1ee8bd196331bbcd59031/L_height",
-  "width": 500,
-  "height": 377
- },
- "preschool|Саратов|243031|МДОУ ЦРР - детский сад № 20 «Аленький цветочек»": {
-  "code_oo": 243031,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ ЦРР - детский сад № 20 «Аленький цветочек»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/tsentr_razvitiya_rebyonka_detskiy_sad_20_alenkiy_tsvetochek/175351868555/",
-  "photo": "kindergartens/saratov/243031.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/14193233/2a0000019301d3672d6712f6d859561fde03/L_height",
-  "width": 376,
-  "height": 500
- },
- "preschool|Саратов|243041|МДОУ «Детский сад комбинированного вида № 26»": {
-  "code_oo": 243041,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «Детский сад комбинированного вида № 26»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_26_belosnezhka/1071815737/",
-  "photo": "kindergartens/saratov/243041.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/14699088/2a0000019504fdbd38d16346c2782b0699f5/L_height",
-  "width": 500,
-  "height": 375
- },
- "preschool|Саратов|243061|МДОУ «Детский сад №33»": {
-  "code_oo": 243061,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «Детский сад №33»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_33/1131279629/",
-  "photo": "kindergartens/saratov/243061.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/14761495/2a0000019aacd0849c3a0e553a1bc7bb338c/L_height",
-  "width": 500,
-  "height": 375
- },
- "preschool|Саратов|243071|МДОУ ЦРР- детский сад № 35 «Фантастика»": {
-  "code_oo": 243071,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ ЦРР- детский сад № 35 «Фантастика»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/tsentr_razvitiya_rebyonka_detskiy_sad_35_fantastika/115051190987/",
-  "photo": "kindergartens/saratov/243071.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/374295/2a0000015b3ba1d0e1abb561187e63d6d448/L_height",
-  "width": 375,
-  "height": 500
- },
- "preschool|Саратов|243101|МДОУ «Детский сад № 50»": {
-  "code_oo": 243101,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «Детский сад № 50»",
-  "school_id": null,
-  "org_url": null,
-  "photo": null,
-  "source": null
- },
- "preschool|Саратов|243111|МДОУ «Детский сад № 52»": {
-  "code_oo": 243111,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «Детский сад № 52»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_52_tsvetik_semitsvetik/1000261397/",
-  "photo": "kindergartens/saratov/243111.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/15358610/2a00000196c4756c44557d667ce6bc182fe7/L_height",
-  "width": 500,
-  "height": 375
- },
- "preschool|Саратов|243121|МДОУ «Детский сад комбинированного вида №68»": {
-  "code_oo": 243121,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «Детский сад комбинированного вида №68»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_68/1077921476/",
-  "photo": "kindergartens/saratov/243121.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/5498343/2a0000017f0f4bac7220fab4fd6060527d23/L_height",
-  "width": 500,
-  "height": 375
- },
- "preschool|Саратов|243141|МДОУ Детский сад № 94 «Вишенка»": {
-  "code_oo": 243141,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ Детский сад № 94 «Вишенка»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_94_vishenka/145932089602/",
-  "photo": "kindergartens/saratov/243141.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/14920258/2a00000197d2c1ca08f60d889d02e5d1324e/L_height",
-  "width": 500,
-  "height": 281
- },
- "preschool|Саратов|243161|МДОУ «Детский сад общеразвивающего вида № 97»": {
-  "code_oo": 243161,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «Детский сад общеразвивающего вида № 97»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_97/1073569287/",
-  "photo": "kindergartens/saratov/243161.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/4538345/2a00000179e65a145a45132525b6f2dbbcb7/L_height",
-  "width": 500,
-  "height": 375
- },
- "preschool|Саратов|243171|МДОУ «Детский сад общеразвивающего вида № 139»": {
-  "code_oo": 243171,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «Детский сад общеразвивающего вида № 139»",
-  "school_id": null,
-  "org_url": null,
-  "photo": null,
-  "source": null
- },
- "preschool|Саратов|243181|МДОУ Национальный татарский детский сад № 154 «Чишмэ»": {
-  "code_oo": 243181,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ Национальный татарский детский сад № 154 «Чишмэ»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/natsionalny_tatarskiy_detskiy_sad_154_chishme_rodnik/1112002446/",
-  "photo": "kindergartens/saratov/243181.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/236825/2a0000015b95c2e4dc0a4ded73984be55e2c/L_height",
-  "width": 500,
-  "height": 375
- },
- "preschool|Саратов|243191|МДОУ Детский сад № 173 « Тополёк »": {
-  "code_oo": 243191,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ Детский сад № 173 « Тополёк »",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_173_topolyok/197886793835/",
-  "photo": "kindergartens/saratov/243191.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/15081387/2a000001948bfe1c16b60b2eb7856c6fa532/L_height",
-  "width": 500,
-  "height": 375
- },
- "preschool|Саратов|243201|МДОУ Детский сад № 240 «Ручеек»": {
-  "code_oo": 243201,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ Детский сад № 240 «Ручеек»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_240/63357357267/",
-  "photo": "kindergartens/saratov/243201.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/1024093/2a00000161ba055413e3eea29cdad8a4e379/L_height",
-  "width": 500,
-  "height": 332
- },
- "preschool|Саратов|243211|МДОУ «ЦРР - детский сад № 243 «Апельсин»": {
-  "code_oo": 243211,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «ЦРР - детский сад № 243 «Апельсин»",
-  "school_id": null,
-  "org_url": null,
-  "photo": null,
-  "source": null
- },
- "preschool|Саратов|243221|МДОУ «ЦРР - детский сад № 101 «Жар-птица»": {
-  "code_oo": 243221,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «ЦРР - детский сад № 101 «Жар-птица»",
-  "school_id": null,
-  "org_url": null,
-  "photo": null,
-  "source": null
- },
- "preschool|Саратов|243231|МДОУ «ЦРР - детский сад № 98 «Алые паруса»": {
-  "code_oo": 243231,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «ЦРР - детский сад № 98 «Алые паруса»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_202_teremok/65930320803/",
-  "photo": "kindergartens/saratov/243231.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/6409878/2a00000186e1d607697c7abee87b5b35eb32/L_height",
-  "width": 500,
-  "height": 375
- },
- "preschool|Саратов|243241|МДОУ «Детский сад комбинированного вида № 99 «Изумрудный город»": {
-  "code_oo": 243241,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «Детский сад комбинированного вида № 99 «Изумрудный город»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_99_izumrudny_gorod/87814483299/",
-  "photo": "kindergartens/saratov/243241.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/750770/2a00000162a6cc60830c2c603cc69e86e227/L_height",
-  "width": 500,
-  "height": 375
- },
- "preschool|Саратов|243251|МДОУ «ЦРР - детский сад № 107 «Пчелка»": {
-  "code_oo": 243251,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «ЦРР - детский сад № 107 «Пчелка»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_107_zolotinka/1114074244/",
-  "photo": "kindergartens/saratov/243251.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/15265650/2a00000196fcad9fe1722a627f9e6ae21fa1/L_height",
-  "width": 500,
-  "height": 375
- },
- "preschool|Саратов|243261|МДОУ «Детский сад № 91 «Одуванчик»": {
-  "code_oo": 243261,
-  "kind": "preschool",
-  "city": "Саратов",
-  "name": "МДОУ «Детский сад № 91 «Одуванчик»",
-  "school_id": null,
-  "org_url": "https://yandex.ru/maps/org/detskiy_sad_91_borovichok/200246173619/",
-  "photo": "kindergartens/saratov/243261.jpg",
-  "source": "https://avatars.mds.yandex.net/get-altay/10488540/2a0000018b09202bc65d27ecd7048fe67340/L_height",
-  "width": 500,
-  "height": 375
  }
 }

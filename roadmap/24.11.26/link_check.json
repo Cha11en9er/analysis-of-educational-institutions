@@ -1,0 +1,1370 @@
+[
+ {
+  "school_id": 2,
+  "city": "Саратов",
+  "name": "Школа №77",
+  "url": "https://shk77-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ №77\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 3,
+  "city": "Саратов",
+  "name": "Школа №6",
+  "url": "https://shk6-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ № 6\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 4,
+  "city": "Саратов",
+  "name": "Школа №18",
+  "url": "https://shk18-sar.gosuslugi.ru/",
+  "page_title": "МАОУ «СОШ № 18 УИП им. О.П. Табакова» Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 5,
+  "city": "Саратов",
+  "name": "Школа №70",
+  "url": "https://school70-sar.gosuslugi.ru/",
+  "page_title": "МАОУ \"СОШ № 70\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 6,
+  "city": "Саратов",
+  "name": "Школа №73",
+  "url": "https://shk73-sar.gosuslugi.ru/",
+  "page_title": "МАОУ «СОШ № 73 им. К.Д. Шукшина» Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 7,
+  "city": "Саратов",
+  "name": "Школа №45",
+  "url": "https://shk45-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ № 45\" МОУ \"СОШ № 45\" Октябрьского района г. Саратова Октябрьский район г. Саратова Саратовской области",
+  "status": "ok"
+ },
+ {
+  "school_id": 8,
+  "city": "Саратов",
+  "name": "Школа №2",
+  "url": "https://shk2-sar.gosuslugi.ru/",
+  "page_title": "ГАОУ СО \"СОШ № 2 УИП им. В.П. Тихонова\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 9,
+  "city": "Саратов",
+  "name": "Школа №9",
+  "url": "https://school9saratov.gosuslugi.ru/",
+  "page_title": "Муниципальное общеобразовательное учреждение «Средняя общеобразовательная школа № 9» \nВолжского района г. Саратова Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 10,
+  "city": "Саратов",
+  "name": "Гимназия №2",
+  "url": "https://gim2-sar.gosuslugi.ru/",
+  "page_title": "МАОУ \"ГИМНАЗИЯ №2\" г. САРАТОВА Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 11,
+  "city": "Саратов",
+  "name": "Школа №14",
+  "url": "https://shk14-sar.gosuslugi.ru/",
+  "page_title": "МАОУ \"ООШ № 14\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 12,
+  "city": "Саратов",
+  "name": "Школа №94",
+  "url": "https://shk94-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ № 94\" Ленинского района г. Саратова Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 13,
+  "city": "Саратов",
+  "name": "Школа №97",
+  "url": "https://shk97-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ № 97 ИМ. ГЕРОЯ СОВЕТСКОГО СОЮЗА В.Г. КЛОЧКОВА\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 14,
+  "city": "Саратов",
+  "name": "Православная гимназия Сергия Радонежского",
+  "url": "https://mourpkg.gosuslugi.ru/",
+  "page_title": "Школа - Главная страница",
+  "status": "mismatch"
+ },
+ {
+  "school_id": 15,
+  "city": "Саратов",
+  "name": "Школа №23",
+  "url": "https://school23saratov.gosuslugi.ru/",
+  "page_title": "МАОУ «СОШ № 23 им. С.В. Астраханцева» Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 16,
+  "city": "Саратов",
+  "name": "Школа №76",
+  "url": "https://shk76-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ №76 имени М.Г. Галицкого\" МОУ \"СОШ №76 имени М.Г.Галицкого\"",
+  "status": "ok"
+ },
+ {
+  "school_id": 17,
+  "city": "Саратов",
+  "name": "Школа №1",
+  "url": "https://shk1-sar.gosuslugi.ru/",
+  "page_title": "Муниципальное общеобразовательное учреждение \"Средняя общеобразовательная школа №1 им. Г.Г. Плотникова\" Фрунзенского района г. Саратова Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 18,
+  "city": "Саратов",
+  "name": "Школа №51",
+  "url": "https://shk51-sar.gosuslugi.ru/",
+  "page_title": "МАОУ \"СОШ № 51 имени Г. К. Жукова\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 20,
+  "city": "Саратов",
+  "name": "Школа №21",
+  "url": "https://shk21-sar.gosuslugi.ru/",
+  "page_title": "МАОУ \"СОШ № 21 им. П.А. Столыпина\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 21,
+  "city": "Саратов",
+  "name": "Школа №59",
+  "url": "https://shk59-sar.gosuslugi.ru/",
+  "page_title": "Школа - Главная страница",
+  "status": "mismatch"
+ },
+ {
+  "school_id": 22,
+  "city": "Саратов",
+  "name": "Школа №55",
+  "url": "https://school55sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ № 55\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 24,
+  "city": "Саратов",
+  "name": "Школа №84",
+  "url": "https://shk84-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ № 84\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 25,
+  "city": "Саратов",
+  "name": "Школа №46",
+  "url": "https://sch46-saratov.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ № 46\" г.Саратова Школа № 46 г.Саратова",
+  "status": "ok"
+ },
+ {
+  "school_id": 26,
+  "city": "Саратов",
+  "name": "Школа №100",
+  "url": "https://school100sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ №100\" г.Саратова Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 27,
+  "city": "Саратов",
+  "name": "Школа №106",
+  "url": "https://shkola106-saratov64.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ № 106\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 28,
+  "city": "Саратов",
+  "name": "Школа №72",
+  "url": "https://shkola-72-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ №72\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 29,
+  "city": "Саратов",
+  "name": "Школа №22",
+  "url": "https://shk22-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ № 22\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 30,
+  "city": "Саратов",
+  "name": "Школа №43э",
+  "url": "https://shk43-sar.gosuslugi.ru/",
+  "page_title": "Школа - Главная страница",
+  "status": "mismatch"
+ },
+ {
+  "school_id": 31,
+  "city": "Саратов",
+  "name": "Школа №17",
+  "url": "https://shk17-sar.gosuslugi.ru/",
+  "page_title": "МАОУ \"ООШ № 17\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 32,
+  "city": "Саратов",
+  "name": "Гимназия №1",
+  "url": "https://sargymn1.gosuslugi.ru/",
+  "page_title": "ГАОУ СО «Гимназия № 1» Гимназия 1 г. Саратов",
+  "status": "ok"
+ },
+ {
+  "school_id": 33,
+  "city": "Саратов",
+  "name": "Школа №102",
+  "url": "https://shk102-sar.gosuslugi.ru/",
+  "page_title": "МОУ «СОШ № 102» Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 34,
+  "city": "Саратов",
+  "name": "Гимназия №4",
+  "url": "https://shk102-sar.gosuslugi.ru/",
+  "page_title": "Школа - Главная страница",
+  "status": "mismatch"
+ },
+ {
+  "school_id": 35,
+  "city": "Саратов",
+  "name": "Школа №8",
+  "url": "https://shk8-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ №8\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 36,
+  "city": "Саратов",
+  "name": "Школа №71",
+  "url": "https://shk71-sar.gosuslugi.ru/",
+  "page_title": "МАОУ \"СОШ № 71 имени А.П.Шилина\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 37,
+  "city": "Саратов",
+  "name": "Школа №66",
+  "url": "https://school66vavilov.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ № 66 им. Н.И. Вавилова\" МОУ \"СОШ №66\" - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 38,
+  "city": "Саратов",
+  "name": "Школа Иволгино",
+  "url": "https://ivolgino.gosuslugi.ru/",
+  "page_title": "МАОУ \"СОШ \"Иволгино\" МАОУ \"СОШ \"Иволгино\" - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 39,
+  "city": "Саратов",
+  "name": "Гимназия №3",
+  "url": "https://gymn3sar.gosuslugi.ru/",
+  "page_title": "\"Гимназия № 3\" г. Саратова Гимназия №3 - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 40,
+  "city": "Саратов",
+  "name": "Гимназия №31",
+  "url": "https://gim31-sar.gosuslugi.ru/",
+  "page_title": "МАОУ \"Гимназия №31 имени В.И. Кузнецова\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 41,
+  "city": "Саратов",
+  "name": "Школа №54",
+  "url": "https://shk54-sar.gosuslugi.ru/",
+  "page_title": "МАОУ «СОШ № 54 имени И.А. Евтеева» Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 42,
+  "city": "Саратов",
+  "name": "Лицей №2",
+  "url": "https://lic2-sar.gosuslugi.ru/",
+  "page_title": "МОУ - Лицей № 2 Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 43,
+  "city": "Саратов",
+  "name": "Школа №40",
+  "url": "https://sc40sar.gosuslugi.ru/",
+  "page_title": "Средняя общеобразовательная школа № 40 Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 44,
+  "city": "Саратов",
+  "name": "Школа №41",
+  "url": "https://shk41-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ № 41\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 45,
+  "city": "Саратов",
+  "name": "Школа №101",
+  "url": "https://shk101-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ № 101\" г. Саратов Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 46,
+  "city": "Саратов",
+  "name": "Гимназия гуманитарных наук",
+  "url": "https://lgn-sar.gosuslugi.ru/",
+  "page_title": "ГАОУ СО \n«Лицей гуманитарных наук» Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 47,
+  "city": "Саратов",
+  "name": "Лицей №47",
+  "url": "https://lic47-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"Лицей № 47\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 48,
+  "city": "Саратов",
+  "name": "Школа №44",
+  "url": "https://shk44-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ № 44 имени Героя России Н.В. Исаева\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 49,
+  "city": "Саратов",
+  "name": "Школа-предуниверситариум СГУ",
+  "url": "нету в excel",
+  "page_title": "",
+  "status": "error: Page.goto: Protocol error (Page.navigate): Cannot navigate t"
+ },
+ {
+  "school_id": 50,
+  "city": "Саратов",
+  "name": "Школа №48",
+  "url": "https://shk48-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ № 48\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 51,
+  "city": "Саратов",
+  "name": "Школа №103",
+  "url": "https://shk103-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ № 103\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 52,
+  "city": "Саратов",
+  "name": "Школа №60",
+  "url": "https://shk60-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ № 60 имени Героя Советского Союза П.Ф.Батавина\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 53,
+  "city": "Саратов",
+  "name": "Школа №61",
+  "url": "https://shk61-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ № 61\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 54,
+  "city": "Саратов",
+  "name": "Лицей Звезда",
+  "url": "https://zvezda-sar.gosuslugi.ru/",
+  "page_title": "МАОУ \"Лицей \"Звезда\" Официальный сайт МАОУ \"Лицей \"Звезда\" город Саратов",
+  "status": "ok"
+ },
+ {
+  "school_id": 55,
+  "city": "Саратов",
+  "name": "Школа №57",
+  "url": "https://shk57-sar.gosuslugi.ru/",
+  "page_title": "муниципальное общеобразовательное учреждение \"Средняя общеобразовательная школа № 57 имени С.Ф. Тархова\" Ленинского района города Саратова Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 56,
+  "city": "Саратов",
+  "name": "Школа №86",
+  "url": "https://shk86-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ № 86\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 57,
+  "city": "Саратов",
+  "name": "Школа-интернат Уникум",
+  "url": "https://unikum64.gosuslugi.ru/",
+  "page_title": "ГАОУ СО \"Школа \" Уникум\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 58,
+  "city": "Саратов",
+  "name": "Школа №64",
+  "url": "https://shk64-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/osnovnye-svedeniya/",
+  "page_title": "Основные сведения",
+  "status": "mismatch"
+ },
+ {
+  "school_id": 59,
+  "city": "Саратов",
+  "name": "Школа №38",
+  "url": "https://shk38-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ №38\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 60,
+  "city": "Саратов",
+  "name": "Лицей №53",
+  "url": "https://lic53-sar.gosuslugi.ru/",
+  "page_title": "МОУ «Лицей №53» Лицей №53, г. Саратов",
+  "status": "ok"
+ },
+ {
+  "school_id": 61,
+  "city": "Саратов",
+  "name": "Лицей №62",
+  "url": "https://lyceum62.gosuslugi.ru/",
+  "page_title": "МАОУ «Лицей № 62» МАОУ «Лицей № 62» - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 62,
+  "city": "Саратов",
+  "name": "Гимназия №108",
+  "url": "https://gim108-sar.gosuslugi.ru/",
+  "page_title": "Школа - Главная страница",
+  "status": "mismatch"
+ },
+ {
+  "school_id": 63,
+  "city": "Саратов",
+  "name": "Лицей №15",
+  "url": "https://lic15-sar.gosuslugi.ru/",
+  "page_title": "МАОУ \"Лицей № 15\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 64,
+  "city": "Саратов",
+  "name": "Гимназия №7",
+  "url": "https://gim7-sar.gosuslugi.ru/",
+  "page_title": "Муниципальное общеобразовательное учреждение \"Гимназия № 7 имени К.Д. Ушинского\" Гимназия № 7 Саратов",
+  "status": "ok"
+ },
+ {
+  "school_id": 65,
+  "city": "Саратов",
+  "name": "Школа №49",
+  "url": "https://shk49-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ №49\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 66,
+  "city": "Саратов",
+  "name": "Татарская Гимназия",
+  "url": "нету в excel",
+  "page_title": "",
+  "status": "error: Page.goto: Protocol error (Page.navigate): Cannot navigate t"
+ },
+ {
+  "school_id": 67,
+  "city": "Саратов",
+  "name": "Лицей прикладных наук",
+  "url": "https://moulpn.gosuslugi.ru/",
+  "page_title": "Муниципальное общеобразовательное учреждение \"Лицей прикладных наук имени Д. И. Трубецкова\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 68,
+  "city": "Саратов",
+  "name": "Школа №26",
+  "url": "https://shk26-sar.gosuslugi.ru/",
+  "page_title": "Школа - Главная страница",
+  "status": "mismatch"
+ },
+ {
+  "school_id": 71,
+  "city": "Саратов",
+  "name": "Школа-интернат №3",
+  "url": "https://sh-int3-saratov-r64.gosweb.gosuslugi.ru/",
+  "page_title": "ГБОУ СО «Школа-интернат АОП № 3 г.Саратова» Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 72,
+  "city": "Саратов",
+  "name": "Прогимназия №237 Семицветик",
+  "url": "https://shk237-sar.gosuslugi.ru/",
+  "page_title": "МАОУ \"Прогимназия № 237 \"Семицветик\" г. Саратова Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 73,
+  "city": "Саратов",
+  "name": "Школа №78",
+  "url": "https://shk78-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"ООШ №78\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 74,
+  "city": "Саратов",
+  "name": "Гимназия №5",
+  "url": "https://gim5-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"ГИМНАЗИЯ №5\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 75,
+  "city": "Саратов",
+  "name": "Инженерный лицей",
+  "url": "https://inlic-sar.gosuslugi.ru/",
+  "page_title": "ГАОУ СО \"Инженерный лицей\" Инженерный лицей",
+  "status": "ok"
+ },
+ {
+  "school_id": 76,
+  "city": "Саратов",
+  "name": "Лицей №50",
+  "url": "https://lic50-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"Лицей №50 им. Загороднева В.И.\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 77,
+  "city": "Саратов",
+  "name": "Гимназия №75",
+  "url": "https://gim75-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"Гимназия № 75 имени Д.М. Карбышева\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 78,
+  "city": "Саратов",
+  "name": "Лицей гуманитарных наук",
+  "url": "https://lgn-sar.gosuslugi.ru/",
+  "page_title": "ГАОУ СО \n«Лицей гуманитарных наук» Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 79,
+  "city": "Саратов",
+  "name": "Лицей №37",
+  "url": "https://lic37-sar.gosuslugi.ru/",
+  "page_title": "МАОУ Лицей 37 Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 80,
+  "city": "Саратов",
+  "name": "Физико-технический лицей №1",
+  "url": "https://ftl-sar.gosuslugi.ru/",
+  "page_title": "ГАОУ СО \"ФТЛ № 1\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 81,
+  "city": "Саратов",
+  "name": "Гимназия №34",
+  "url": "https://gim34-sar.gosuslugi.ru/",
+  "page_title": "Гимназия №34 им. Г.Д. Ермолаева Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 82,
+  "city": "Саратов",
+  "name": "Лицей математики и информатики",
+  "url": "https://lmi-sar.gosuslugi.ru/svedeniya-ob-obrazovatelnoy-organizatsii/osnovnye-svedeniya/",
+  "page_title": "Основные сведения",
+  "status": "mismatch"
+ },
+ {
+  "school_id": 83,
+  "city": "Саратов",
+  "name": "Лицей №3",
+  "url": "https://lic3-sar.gosuslugi.ru/",
+  "page_title": "МАОУ \"Лицей №3 им. А.С. Пушкина\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 84,
+  "city": "Саратов",
+  "name": "Лицей №4",
+  "url": "https://lic4-sar.gosuslugi.ru/",
+  "page_title": "МУНИЦИПАЛЬНОЕ ОБЩЕОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ \"ЛИЦЕЙ № 4\" ВОЛЖСКОГО РАЙОНА Г. САРАТОВА Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 85,
+  "city": "Саратов",
+  "name": "Школа №81",
+  "url": "https://shk81-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"ООШ №81\" г. Саратов Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 87,
+  "city": "Саратов",
+  "name": "Школа №83",
+  "url": "https://shk83-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ № 83\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 88,
+  "city": "Саратов",
+  "name": "Школа-интернат №4 адаптированная",
+  "url": "https://shkola-internat4.gosuslugi.ru/",
+  "page_title": "ГБОУ СО \"Школа-интернат АОП №4 г.Саратова Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 89,
+  "city": "Саратов",
+  "name": "Школа №4",
+  "url": "https://shkola-internat4.gosuslugi.ru/",
+  "page_title": "ГБОУ СО \"Школа-интернат АОП №4 г.Саратова Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 90,
+  "city": "Саратов",
+  "name": "Школа №16",
+  "url": "https://shk16-sar.gosuslugi.ru/",
+  "page_title": "Муниципальное автономное общеобразовательное учреждение «Средняя общеобразовательная школа № 16» Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 91,
+  "city": "Саратов",
+  "name": "Школа-интернат №5 адаптированная",
+  "url": "https://sh-int5-saratov-r64.gosweb.gosuslugi.ru/",
+  "page_title": "ГБОУ СО \"Школа-интернат АОП № 5 г.Саратова\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 92,
+  "city": "Саратов",
+  "name": "Гимназия №89",
+  "url": "https://gim89-sar.gosuslugi.ru/",
+  "page_title": "Государственное автономное общеобразовательное учреждение Саратовской области \"Гимназия №  89\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 93,
+  "city": "Саратов",
+  "name": "Школа №2 адаптированная",
+  "url": "https://korschool2.gosuslugi.ru/",
+  "page_title": "ГБОУ СО «Школа АОП №2 г.Саратова» Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 94,
+  "city": "Саратов",
+  "name": "Лицей №36",
+  "url": "https://lic36-sar.gosuslugi.ru/",
+  "page_title": "МАОУ \"Лицей №36\" Лицей №36 г. Саратов",
+  "status": "ok"
+ },
+ {
+  "school_id": 95,
+  "city": "Саратов",
+  "name": "Медико-биологический лицей",
+  "url": "https://mbl-sar.gosuslugi.ru/",
+  "page_title": "МАОУ \"Медико - биологический лицей\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 96,
+  "city": "Саратов",
+  "name": "Лицей №107",
+  "url": "https://lic107-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"Лицей №107\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 97,
+  "city": "Саратов",
+  "name": "Школа №6",
+  "url": "https://sh6-saratov-r64.gosweb.gosuslugi.ru/",
+  "page_title": "ГБОУ СО \"Школа АОП №6 г. Саратова\" ГБОУ СО \"Школа АОП №6 г. Саратова\"",
+  "status": "ok"
+ },
+ {
+  "school_id": 101,
+  "city": "Саратов",
+  "name": "Татарская Гимназия начальная школа",
+  "url": "https://ntg-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"Национальная Татарская Гимназия\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 102,
+  "city": "Саратов",
+  "name": "Гимназия №87",
+  "url": "https://gim87-sar.gosuslugi.ru/",
+  "page_title": "МАОУ \"Гимназия №87\" МАОУ \"Гимназия №87\"| Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 103,
+  "city": "Саратов",
+  "name": "Гимназия №58",
+  "url": "https://gim58-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"Гимназия №58\" г. Саратов",
+  "status": "ok"
+ },
+ {
+  "school_id": 104,
+  "city": "Саратов",
+  "name": "Школа №80 Ласточкино",
+  "url": "https://sh-80-lastochkino-saratov-r64.gosweb.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ №80\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 105,
+  "city": "Саратов",
+  "name": "Школа №66 Эврика",
+  "url": "https://school66vavilov.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ № 66 им. Н.И. Вавилова\" МОУ \"СОШ №66\" - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 106,
+  "city": "Саратов",
+  "name": "Лицей №56",
+  "url": "https://lic56-sar.gosuslugi.ru/",
+  "page_title": "Школа - Главная страница",
+  "status": "mismatch"
+ },
+ {
+  "school_id": 107,
+  "city": "Саратов",
+  "name": "Школа №46 Городские Просторы",
+  "url": "https://sch46-saratov.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ № 46\" г.Саратова Школа № 46 г.Саратова",
+  "status": "ok"
+ },
+ {
+  "school_id": 108,
+  "city": "Саратов",
+  "name": "Гуманитарно-экономический лицей",
+  "url": "https://gel-sar.gosuslugi.ru/",
+  "page_title": "Школа - Главная страница",
+  "status": "mismatch"
+ },
+ {
+  "school_id": 109,
+  "city": "Саратов",
+  "name": "Физико-технический лицей №1",
+  "url": "https://ftl-sar.gosuslugi.ru/",
+  "page_title": "ГАОУ СО \"ФТЛ № 1\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 110,
+  "city": "Саратов",
+  "name": "Школа №16",
+  "url": "https://shk16-sar.gosuslugi.ru/",
+  "page_title": "Муниципальное автономное общеобразовательное учреждение «Средняя общеобразовательная школа № 16» Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 111,
+  "city": "Саратов",
+  "name": "Гимназия гуманитарных наук",
+  "url": "https://lgn-sar.gosuslugi.ru/",
+  "page_title": "ГАОУ СО \n«Лицей гуманитарных наук» Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 117,
+  "city": "Саратов",
+  "name": "Школа №10",
+  "url": "https://shk10-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ № 10\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 122,
+  "city": "Саратов",
+  "name": "Школа пос Расково",
+  "url": "https://raskovo.gosuslugi.ru/",
+  "page_title": "МАОУ \"СОШ п. Расково\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 130,
+  "city": "Саратов",
+  "name": "Школа с Клещевка",
+  "url": "https://kleshevka.gosuslugi.ru/",
+  "page_title": "МАОУ \"СОШ с.Клещевка\"",
+  "status": "ok"
+ },
+ {
+  "school_id": 153,
+  "city": "Саратов",
+  "name": "Школа №7",
+  "url": "https://shk7-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ №7\" г. Саратова Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 154,
+  "city": "Саратов",
+  "name": "Лицей Солярис корпус 2",
+  "url": "https://solaris.gosuslugi.ru/",
+  "page_title": "Добро пожаловать :: Лицей «Солярис»",
+  "status": "ok"
+ },
+ {
+  "school_id": 155,
+  "city": "Саратов",
+  "name": "Школа №5",
+  "url": "https://shk5-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ №5\", г. Саратов Школа № 5 г. Саратова",
+  "status": "ok"
+ },
+ {
+  "school_id": 156,
+  "city": "Саратов",
+  "name": "Школа №11",
+  "url": "https://shk11-sar.gosuslugi.ru/",
+  "page_title": "«Средняя общеобразовательная школа №11» Волжского района города Саратова Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 157,
+  "city": "Саратов",
+  "name": "Школа №77 корпус 2",
+  "url": "https://shk77-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ №77\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 158,
+  "city": "Саратов",
+  "name": "Школа №52",
+  "url": "https://shk52-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ № 52\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 160,
+  "city": "Саратов",
+  "name": "Школа №82",
+  "url": "https://shk82-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ №82\" г. Саратова Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 161,
+  "city": "Саратов",
+  "name": "Школа №63",
+  "url": "https://school63-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ № 63 с УИП\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 162,
+  "city": "Саратов",
+  "name": "Школа №95",
+  "url": "https://shk95-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ № 95 с УИОП\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 163,
+  "city": "Саратов",
+  "name": "Школа №67",
+  "url": "https://shk67-sar.gosuslugi.ru/",
+  "page_title": "Школа - Главная страница",
+  "status": "mismatch"
+ },
+ {
+  "school_id": 164,
+  "city": "Саратов",
+  "name": "Школа №8",
+  "url": "https://shk8-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ №8\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 165,
+  "city": "Саратов",
+  "name": "Школа Аврора",
+  "url": "https://shk8-sar.gosuslugi.ru/",
+  "page_title": "Школа - Главная страница",
+  "status": "mismatch"
+ },
+ {
+  "school_id": 167,
+  "city": "Саратов",
+  "name": "Лицей №24",
+  "url": "https://lic24-sar.gosuslugi.ru/",
+  "page_title": "МАОУ \"Лицей №24 имени М.М.Расковой\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 168,
+  "city": "Саратов",
+  "name": "Гуманитарно-экономический лицей корпус СОШ 12",
+  "url": "https://gel-sar.gosuslugi.ru/",
+  "page_title": "Школа - Главная страница",
+  "status": "mismatch"
+ },
+ {
+  "school_id": 169,
+  "city": "Саратов",
+  "name": "Школа №90",
+  "url": "https://shk90-sar.gosuslugi.ru/",
+  "page_title": "МАОУ \"СОШ № 90\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 170,
+  "city": "Саратов",
+  "name": "Лицей Солярис",
+  "url": "https://solaris.gosuslugi.ru/",
+  "page_title": "Добро пожаловать :: Лицей «Солярис»",
+  "status": "ok"
+ },
+ {
+  "school_id": 171,
+  "city": "Саратов",
+  "name": "Школа №91",
+  "url": "https://shk91-sar.gosuslugi.ru/",
+  "page_title": "МАОУ \"ООШ № 91\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 173,
+  "city": "Саратов",
+  "name": "Гимназия Авиатор",
+  "url": "https://aviator-sar.gosuslugi.ru/",
+  "page_title": "МОУ \"Гимназия \"Авиатор\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 338123,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ № 24 им. В.И. Пономаренко»",
+  "url": "https://schoolengl24.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ №24 им. В. И. Пономаренко\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 338153,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ № 33 им.П.А.Столыпина»",
+  "url": "https://engschool33.gosuslugi.ru/",
+  "page_title": "МОУ «СОШ №33 им. П.А. Столыпина» Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 338103,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ № 21 им. И.М. Каплунова»",
+  "url": "https://www.sch21eng2.ucoz.ru",
+  "page_title": "",
+  "status": "error: Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://www."
+ },
+ {
+  "school_id": 338253,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ п. Коминтерн»",
+  "url": "https://shkolakominternovskaya-r64.gosweb.gosuslugi.ru",
+  "page_title": "МОУ \"СОШ п. Коминтерн\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 338213,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ с. Заветное»",
+  "url": "https://shkolazavetnoe-r64.gosweb.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ с. Заветное\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 338323,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ с. Узморье им. Ю.А. Гагарина»",
+  "url": "https://shkolauzmorskaya-r64.gosweb.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ с. Узморье им. Ю.А. Гагарина\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 338018,
+  "city": "Энгельс",
+  "name": "МКОУ «В(С)ОШ № 6»",
+  "url": "https://shkola6engels-r64.gosweb.gosuslugi.ru",
+  "page_title": "МКОУ \"В(С)ОШ №6\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 338013,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ № 1»",
+  "url": "https://www.engschool1.ru",
+  "page_title": "",
+  "status": "error: Page.goto: net::ERR_BLOCKED_BY_CLIENT at https://www.engscho"
+ },
+ {
+  "school_id": 338403,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ № 10»",
+  "url": "https://shkola10engels-r64.gosweb.gosuslugi.ru",
+  "page_title": "МОУ \"СОШ № 10\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 338173,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ п. Бурный им. П.В. Волоха»",
+  "url": "https://shkolaburnyj-r64.gosweb.gosuslugi.ru/",
+  "page_title": "Школа - Главная страница",
+  "status": "mismatch"
+ },
+ {
+  "school_id": 338223,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ с. Зеленый Дол»",
+  "url": "https://www.engzelen.gosuslugi.ru",
+  "page_title": "",
+  "status": "error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.engzele"
+ },
+ {
+  "school_id": 338043,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ № 9»",
+  "url": "https://www.engschool9.ru",
+  "page_title": "",
+  "status": "error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.engscho"
+ },
+ {
+  "school_id": 338083,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ № 19 им. И.П. Кузнецова»",
+  "url": "https://shkola19engels-r64.gosweb.gosuslugi.ru/   ",
+  "page_title": "Школа - Главная страница",
+  "status": "mismatch"
+ },
+ {
+  "school_id": 338028,
+  "city": "Энгельс",
+  "name": "МКОУ «В(С)ОШ № 7»",
+  "url": "https://shkola7engels-r64.gosweb.gosuslugi.ru/",
+  "page_title": "МКОУ \"В(С)ОШ №7\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 338073,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ № 18 им. А.А. Мыльникова»",
+  "url": "https://www.школа18.рф",
+  "page_title": "403 Forbidden",
+  "status": "http_403"
+ },
+ {
+  "school_id": 338074,
+  "city": "Энгельс",
+  "name": "МОУ «ООШ п. Анисовский»",
+  "url": "https://shkolaanisovskij-r64.gosweb.gosuslugi.ru/",
+  "page_title": "Школа - Главная страница",
+  "status": "mismatch"
+ },
+ {
+  "school_id": 338104,
+  "city": "Энгельс",
+  "name": "МОУ «ООШ п. Лощинный»",
+  "url": "https://shkolaloshhinnyj-r64.gosweb.gosuslugi.ru/roditelyam-i-uchenikam/novosti/",
+  "page_title": "Новости",
+  "status": "mismatch"
+ },
+ {
+  "school_id": 338113,
+  "city": "Энгельс",
+  "name": "МАОУ «СОШ № 7»",
+  "url": "https://www.engschool7.my1.ru",
+  "page_title": "",
+  "status": "error: Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://www."
+ },
+ {
+  "school_id": 338134,
+  "city": "Энгельс",
+  "name": "МАОУ «ООШ с. Степное»",
+  "url": "https://shkolastepnovskaya-r64.gosweb.gosuslugi.ru",
+  "page_title": "МАОУ \"ООШ с. Степное\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 338283,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ п. Новопушкинское»",
+  "url": "https://soshnovopushkinskoe.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ п.Новопушкинское\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 338313,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ с. Терновка имени А.П. Калашникова»",
+  "url": "https://shkolaternovskaya-r64.gosweb.gosuslugi.ru",
+  "page_title": "МОУ \"СОШ с.Терновка имени А.П.Калашникова\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 338293,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ п. имени К. Маркса»",
+  "url": "https://school-kmarx.gosuslugi.ru/",
+  "page_title": "Школа - Главная страница",
+  "status": "mismatch"
+ },
+ {
+  "school_id": 338363,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ № 3»",
+  "url": "https://engschool3.gosuslugi.ru",
+  "page_title": "МОУ \"СОШ № 3\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 338183,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ с. Березовка»",
+  "url": "https://shkolaberezovskaya-r64.gosweb.gosuslugi.ru",
+  "page_title": "МОУ \"СОШ с. Березовка\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 338184,
+  "city": "Энгельс",
+  "name": "МОУ «ООШ п. Взлетный»",
+  "url": "https://shkolavzletnaja-r64.gosweb.gosuslugi.ru",
+  "page_title": "404 Not Found",
+  "status": "http_404"
+ },
+ {
+  "school_id": 338084,
+  "city": "Энгельс",
+  "name": "МОУ «ООШ с. Квасниковка»",
+  "url": "https://kvasnikovka.gosuslugi.ru/",
+  "page_title": "МОУ \"ООШ с. Квасниковка\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 338263,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ п. Придорожный»",
+  "url": "https://www.schoolpridorozh.ucoz.ru",
+  "page_title": "",
+  "status": "error: Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://www."
+ },
+ {
+  "school_id": 338383,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ № 26»",
+  "url": "https://shkola26engels-r64.gosweb.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ №26\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 338053,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ № 12им. В.Ф. Суханова»",
+  "url": "http://shkola12engels-r64.gosweb.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ №12 им. В.Ф.Суханова\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 338133,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ № 31»",
+  "url": "https://shkola31privolzhskij-r64.gosweb.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ № 31\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 338164,
+  "city": "Энгельс",
+  "name": "МОУ «ООШ п. Прибрежный»",
+  "url": "https://engpribr.gosuslugi.ru",
+  "page_title": "МОУ \"ООШ п.Прибрежный\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 338303,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ п. Пробуждениеим. Л.А. Кассиля»",
+  "url": "https://shkolaprobuzhdenie-r64.gosweb.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ п. Пробуждение им. Л.А. Кассиля\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 338343,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ с. Шумейка им. М.П. Дергилёва»",
+  "url": "https://www.shumeyka-school.ucoz.ru",
+  "page_title": "",
+  "status": "error: Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://www."
+ },
+ {
+  "school_id": 338093,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ № 20 им. М.И. Кулькиной»",
+  "url": "https://shkola20engels-r64.gosweb.gosuslugi.ru/",
+  "page_title": "Школа - Главная страница",
+  "status": "mismatch"
+ },
+ {
+  "school_id": 338373,
+  "city": "Энгельс",
+  "name": "МАОУ «СОШ № 29 им. А.И. Михеля»",
+  "url": "https://shkola29engels-r64.gosweb.gosuslugi.ru/",
+  "page_title": "МАОУ \"СОШ №29 им. А.И. Михеля\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 338163,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ № 42 им. Г.С. Титова»",
+  "url": "https://engschool42.gosuslugi.ru/",
+  "page_title": "Муниципальное общеобразовательное учреждение \"Средняя общеобразовательная школа №42 имени Героя Советского Союза Германа Степановича Титова\" Школа № 42 г. Энгельс",
+  "status": "ok"
+ },
+ {
+  "school_id": 338203,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ с. Генеральскоеим. Р.Е. Ароновой»",
+  "url": "https://shkolageneralskaya-r64.gosweb.gosuslugi.ru ",
+  "page_title": "МОУ \" СОШ с. Генеральское им. Р.Е. Ароновой\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 338033,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ № 5 имени В Хомяковой»",
+  "url": "https://engschool5.gosuslugi.ru",
+  "page_title": "МОУ \"СОШ № 5 имени В. Хомяковой\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 338027,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ № 30 им. П.М. Коваленко»",
+  "url": "https://engschool30.gosuslugi.ru",
+  "page_title": "МОУ \"СОШ №30 им. П.М. Коваленко\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 338047,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ № 32 имени А.С. Пушкина»",
+  "url": "https://shkola32engels-r64.gosweb.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ №32 имени А.С. Пушкина\" МОУ \"СОШ № 32\" Энгельс",
+  "status": "ok"
+ },
+ {
+  "school_id": 338063,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ № 16»",
+  "url": "https://engschool16.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ №16\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 338114,
+  "city": "Энгельс",
+  "name": "МОУ «ООШ с. Ленинское»",
+  "url": "https://www.leninskschkola.ucoz.ru",
+  "page_title": "",
+  "status": "error: Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://www."
+ },
+ {
+  "school_id": 338393,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ № 2 им. Димитрия Донского»",
+  "url": "https://shkola2engels-r64.gosweb.gosuslugi.ru/",
+  "page_title": "МОУ \"СОШ № 2 им. Димитрия Донского\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 349188,
+  "city": "Энгельс",
+  "name": "ГБОУ СО «Школа АОП № 17 г.Энгельса»",
+  "url": "https://sh64-engels-r64.gosweb.gosuslugi.ru",
+  "page_title": "ГБОУ СО \"Школа АОП № 17 г. Энгельса\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 349044,
+  "city": "Энгельс",
+  "name": "ГАОУ СО «Центр образования «Родник знаний»",
+  "url": "https://rz-164.gosuslugi.ru/",
+  "page_title": "ГАОУ СО «Центр образования «Родник знаний» ГАОУ СО «Центр образования «Родник знаний»",
+  "status": "ok"
+ },
+ {
+  "school_id": 351015,
+  "city": "Энгельс",
+  "name": "ГАОУ СО «Гимназия № 8»",
+  "url": "https://enggimn8.gosuslugi.ru/",
+  "page_title": "ГАОУ СО \"Гимназия № 8\" Школа - Главная страница",
+  "status": "ok"
+ },
+ {
+  "school_id": 353018,
+  "city": "Энгельс",
+  "name": "ФКОУ В(С)ОШ УФСИН России по Саратовской области",
+  "url": "https://www.tenderer.ru/contragent/6449037705-1066449017469-federalnoe-kazennoe-obscheobrazovatelnoe-uchrezhdenie-vechernyaya-smennaya-obscheobrazovatelnaya-shkola-upravleniya-federalnoy-sluzhby-ispolneniya-nakazaniy-po-saratovskoy-oblasti-g-engels",
+  "page_title": "ФЕДЕРАЛЬНОЕ КАЗЕННОЕ ОБЩЕОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ \"ВЕЧЕРНЯЯ (СМЕННАЯ) ОБЩЕОБРАЗОВАТЕЛЬНАЯ ШКОЛА УПРАВЛЕНИЯ ФЕДЕРАЛЬНОЙ СЛУЖБЫ ИСПОЛНЕНИЯ НАКАЗАНИЙ ПО САРАТОВСКОЙ ОБЛАСТИ\" г Энгельс. ИНН 6449037705, ",
+  "status": "mismatch"
+ },
+ {
+  "school_id": 100238999,
+  "city": "Энгельс",
+  "name": "МОУ «СОШ «Патриот» с кадетскими классами им. Ю.М. Дейнеко»",
+  "url": "https://shkolapatriotengels-r64.gosweb.gosuslugi.ru",
+  "page_title": "МОУ СОШ \"Патриот\" с кадетскими классами имени Героя Российской Федерации Дейнеко Юрия Михайловича» Школа - Главная страница",
+  "status": "ok"
+ }
+]

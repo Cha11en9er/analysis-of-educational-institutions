@@ -27,6 +27,9 @@ export default function InstitutionBottomCard({ institution, onClose }) {
       <div className="bottom-card-head">
         <div className="bottom-card-title">
           <div className="bottom-card-name">{institution.name}</div>
+          {institution.name_full && institution.name_full !== institution.name && (
+            <div className="bottom-card-fullname">{institution.name_full}</div>
+          )}
           <div className="bottom-card-address">{institution.address || 'Адрес не указан'}</div>
         </div>
       </div>

@@ -723,8 +723,8 @@ async def get_institutions(
         conn = get_db_connection()
         cur = conn.cursor()
         sql = """
-            SELECT institution_id, code_oo, kind, inst_group, ownership, name, address,
-                   phone, site, latitude, longitude
+            SELECT institution_id, code_oo, kind, inst_group, ownership, name, name_full,
+                   address, phone, site, latitude, longitude
             FROM sa.institution
             WHERE city = %s AND latitude IS NOT NULL
         """
@@ -752,13 +752,14 @@ async def get_institutions(
                 "group": r[3] or KIND_TO_GROUP.get(r[2], "other"),
                 "ownership": r[4],
                 "name": r[5],
-                "address": r[6],
-                "phone": r[7],
-                "site": r[8],
+                "name_full": r[6],
+                "address": r[7],
+                "phone": r[8],
+                "site": r[9],
                 "location": {
                     "type": "Point",
-                    "coordinates": [float(r[10]), float(r[9])]
-                    if r[9] is not None and r[10] is not None
+                    "coordinates": [float(r[11]), float(r[10])]
+                    if r[10] is not None and r[11] is not None
                     else None,
                 },
             }

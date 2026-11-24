@@ -310,7 +310,13 @@ def extract_fields_from_dom(driver: webdriver.Chrome, url: str) -> dict[str, Any
             all_kpi_raw.append(line)
             low_desc = desc.lower()
 
-            if "егэ" in low_desc and ("высший балл" in low_desc or "стобалльн" in low_desc):
+            if "егэ" in low_desc and (
+                "высший балл" in low_desc
+                or "стобалльн" in low_desc
+                or "максимальн" in low_desc
+                or "наивысш" in low_desc
+                or "лучший результат" in low_desc
+            ):
                 # «Высший балл ЕГЭ по …», «сдал на 100 баллов» — не средний балл
                 other_results.append(line)
             elif "вуз" in low_desc:

@@ -117,7 +117,23 @@ export default function SchoolBottomCard({ school, rank, total, maxima, onClose,
             <div className="fact"><span className="fact-src">Яндекс</span><span className="fact-val">{Number(school.rating_yandex).toFixed(1)}</span></div>
           )}
           {school.ege_average_score != null && school.ege_average_score > 0 && (
-            <div className="fact"><span className="fact-src">ЕГЭ{school.ege_year ? ` ${school.ege_year}` : ''}</span><span className="fact-val">{Number(school.ege_average_score).toFixed(1)}</span></div>
+            <div className="fact">
+              <span className="fact-src">
+                ЕГЭ{school.ege_year ? ` ${school.ege_year}` : ''}
+                {school.link_gosuslugi && (
+                  <a
+                    className="fact-source"
+                    href={school.link_gosuslugi}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Официальный источник данных"
+                  >
+                    источник
+                  </a>
+                )}
+              </span>
+              <span className="fact-val">{Number(school.ege_average_score).toFixed(1)}</span>
+            </div>
           )}
           {school.university_admission_percent != null && school.university_admission_percent > 0 && (
             <div className="fact"><span className="fact-src">В вузы{school.university_admission_year ? ` ${school.university_admission_year}` : ''}</span><span className="fact-val">{Math.round(school.university_admission_percent)}%</span></div>
