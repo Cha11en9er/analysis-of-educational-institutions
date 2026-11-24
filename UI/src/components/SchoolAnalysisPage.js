@@ -74,6 +74,8 @@ export default function SchoolAnalysisPage({ school, rank, total, onBack, onShow
   if (!school) return null;
   const name = school.name_ym || school.name_2gis || `Школа ${school.school_id}`;
   const sports = SPORTS_LABELS.filter(({ key }) => school[key] === true);
+  const subjects = Array.isArray(school.ege_subjects) ? school.ege_subjects : [];
+  const subjectsYear = subjects.find((s) => s.year)?.year || null;
   const star = avgReviewRating(school);
   const totalMentions = sentimentData.reduce((acc, d) => acc + d.value, 0);
 
@@ -121,6 +123,9 @@ export default function SchoolAnalysisPage({ school, rank, total, onBack, onShow
         <div className="ap-card ap-metric">
           <span className="ap-metric-label">Средний балл ЕГЭ{school.ege_year ? ` ${school.ege_year}` : ''}</span>
           <span className="ap-metric-value">{school.ege_average_score > 0 ? Number(school.ege_average_score).toFixed(1) : 'нет данных'}</span>
+          {(!school.ege_average_score || school.ege_average_score <= 0) && (
+            <span className="ap-metric-sub">школа публикует только баллы по предметам</span>
+          )}
         </div>
         <div className="ap-card ap-metric">
           <span className="ap-metric-label">Олимпиады</span>
@@ -144,6 +149,24 @@ export default function SchoolAnalysisPage({ school, rank, total, onBack, onShow
           </span>
         </div>
       </div>
+
+      {subjects.length > 0 && (
+        <section className="ap-card ap-section">
+          <h3>Баллы ЕГЭ по предметам{subjectsYear ? `, ${subjectsYear}` : ''}</h3>
+          <p className="ap-section-hint">
+            Школа публикует баллы по отдельным предметам, общий средний балл на сайте не указан.
+            В общий рейтинг эти значения не входят.
+          </p>
+          <div className="ap-kv-grid">
+            {subjects.map((s) => (
+              <div className="ap-kv" key={s.subject}>
+                <span>{s.subject}</span>
+                <b>{s.score != null ? Number(s.score).toFixed(1) : '—'}</b>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="ap-card ap-section">
         <h3>О здании</h3>

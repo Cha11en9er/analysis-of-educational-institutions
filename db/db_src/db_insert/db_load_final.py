@@ -104,6 +104,7 @@ def load_school_rows() -> tuple[list[tuple], list[tuple], list[tuple]]:
                 raw.get("rating_total"),
                 raw.get("ege_average_score"),
                 raw.get("ege_year"),
+                Json(raw.get("ege_subjects") or []),
                 raw.get("university_admission_percent"),
                 raw.get("university_admission_year"),
                 raw.get("olympiad_winners_count"),
@@ -239,14 +240,14 @@ def main() -> None:
                         floors, floor_under, material, reconstruction_year, year_built,
                         capacity, building_info,
                         has_sports_complex, has_pool, has_stadium, has_sports_ground,
-                        city, rating_total, ege_average_score, ege_year,
+                        city, rating_total, ege_average_score, ege_year, ege_subjects,
                         university_admission_percent, university_admission_year,
                         olympiad_winners_count, top_tags, administrative_district,
                         rating_ege, rating_olympiads, rating_teachers, rating_mto,
                         rating_psychological_climate, rating_sports_infrastructure,
                         rating_profiles, ownership, location
                     ) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,
-                              %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,
+                              %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,
                               ST_GeogFromText(%s))
                     ON CONFLICT (school_id) DO UPDATE SET
                         name_2gis=EXCLUDED.name_2gis, name_ym=EXCLUDED.name_ym,
@@ -260,6 +261,7 @@ def main() -> None:
                         city=EXCLUDED.city,
                         rating_total=EXCLUDED.rating_total,
                         ege_average_score=EXCLUDED.ege_average_score, ege_year=EXCLUDED.ege_year,
+                        ege_subjects=EXCLUDED.ege_subjects,
                         university_admission_percent=EXCLUDED.university_admission_percent,
                         university_admission_year=EXCLUDED.university_admission_year,
                         olympiad_winners_count=EXCLUDED.olympiad_winners_count,

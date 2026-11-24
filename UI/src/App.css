@@ -880,12 +880,12 @@
 .star-rating { display: inline-flex; align-items: center; gap: 4px; margin-left: 8px; vertical-align: middle; }
 .star-rating b { font-size: 0.86em; font-weight: 700; color: #b45309; font-variant-numeric: tabular-nums; }
 
-/* Рейтинг-лист школ */
-.school-list-section { display: flex; flex-direction: column; flex: 1 1 auto; min-height: 120px; margin-top: 1rem; border-top: 1px solid #dee2e6; padding-top: 0.75rem; }
-.school-list-header { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.5rem; }
+/* Рейтинг-лист школ: окно списка не должно сжиматься в пару строк */
+.school-list-section { display: flex; flex-direction: column; flex: 0 0 auto; min-height: 42vh; margin-top: 1rem; border-top: 1px solid #dee2e6; padding-top: 0.75rem; }
+.school-list-header { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.5rem; position: sticky; top: -1rem; background: #f8f9fa; padding: 0.25rem 0; z-index: 2; }
 .school-count { font-size: 0.85rem; color: #495057; white-space: nowrap; }
 .sort-select { padding: 0.3rem 0.5rem; border: 1px solid #ced4da; border-radius: 999px; font-size: 0.8rem; background: #fff; color: #212529; max-width: 58%; }
-.school-list { flex: 1 1 auto; overflow-y: auto; display: flex; flex-direction: column; gap: 0.35rem; padding-right: 2px; }
+.school-list { flex: 1 1 auto; max-height: 64vh; overflow-y: auto; display: flex; flex-direction: column; gap: 0.35rem; padding-right: 2px; }
 .school-list-empty { color: #6c757d; font-size: 0.85rem; padding: 1rem 0; text-align: center; }
 .school-row { display: flex; align-items: center; gap: 0.6rem; width: 100%; text-align: left; background: #fff; border: 1px solid #e9ecef; border-radius: 12px; padding: 0.55rem 0.7rem; cursor: pointer; transition: border-color 0.15s, box-shadow 0.15s; }
 .school-row:hover { border-color: #fb923c; }
@@ -946,6 +946,10 @@
 .bottom-card-toggle:hover { color: #c2410c; border-color: #fb923c; }
 .toggle-caret { font-size: 0.7rem; color: #94a3b8; }
 .bottom-card-components { margin-top: 10px; }
+.bottom-card-subjects { margin-top: 10px; }
+.subject-row { display: flex; justify-content: space-between; gap: 12px; padding: 3px 0; border-bottom: 1px dashed #eef2f7; }
+.subject-name { font-size: 0.78rem; color: #475569; }
+.subject-score { font-size: 0.8rem; font-weight: 700; color: #0f172a; font-variant-numeric: tabular-nums; }
 .components-title { font-size: 0.64rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 6px; font-weight: 600; }
 .component-row { display: grid; grid-template-columns: 104px 1fr minmax(40px, auto); align-items: center; gap: 10px; margin-bottom: 4px; }
 .component-label { font-size: 0.76rem; color: #475569; }
@@ -1116,7 +1120,7 @@
 .layer-chip.on { background: #fff7ed; border-color: #fb923c; color: #c2410c; }
 
 .institution-marker-yandex {
-  width: 14px; height: 14px; border-radius: 4px;
+  width: 20px; height: 20px; border-radius: 50%;
   border: 2px solid #fff; box-shadow: 0 1px 5px rgba(15, 23, 42, 0.4);
   cursor: pointer; transform: translate(-50%, -50%);
 }
@@ -1167,11 +1171,3 @@
   margin-top: 3px;
   line-height: 1.35;
 }
-.fact-source {
-  font-size: 0.62rem;
-  color: #94a3b8;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  margin-left: 5px;
-}
-.fact-source:hover { color: #c2410c; }

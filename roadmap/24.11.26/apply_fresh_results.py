@@ -4,54 +4,43 @@
 Обновление данных ЕГЭ/ВУЗ из свежей выгрузки sg_main в extract-файл, который читает
 prepare_final_data.py.
 
-Осторожные правила (по методике аудита 24.11.2026):
-  1) «Средний балл …»           -> обновляем балл и год;
-  2) «Высший/максимальный/сто…»  -> это НЕ средний: значение ЕГЭ очищаем (было ошибкой);
-  3) в новой выгрузке ничего нет  -> старые данные НЕ трогаем (нет подтверждения ошибки:
-     прогон мог не отдать блок результатов, это не значит «данных нет»).
+Правила (по методике аудита 24.11.2026 и уточнению владельца):
+  1) на странице школы есть «Общий средний балл ЕГЭ …» (в т.ч. «по всем предметам»)
+     -> обновляем общий балл и год;
+  2) есть только предметные баллы («по русскому языку», «информатика», «по химии»)
+     -> общий балл школы не подтверждён: прежнее значение очищаем, предметные баллы
+        сохраняем отдельно (в карточке школы они показываются, в рейтинг не идут);
+  3) «высший/максимальный/сто…» -> это не средний: значение ЕГЭ очищаем;
+  4) в новой выгрузке по ЕГЭ ничего нет -> старые данные НЕ трогаем (прогон мог не
+     отдать блок результатов, это не значит «данных нет»).
+
+Разбор строк — в school_data/ege_parser.py (общий модуль с prepare_final_data.py).
 
 Запуск из корня репозитория:
   python roadmap/24.11.26/apply_fresh_results.py
 """
 import json
-import re
+import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(REPO / "school_data"))
+from ege_parser import parse_ege_lines  # noqa: E402
+
 EXTRACT = REPO / "school_data" / "sd_2_stage_gosuslugi_infrastucture_output_extract.json"
 FRESH = REPO / "roadmap" / "24.11.26" / "sg_all_saratov_output.json"
 
-NOT_AVERAGE = ("высший балл", "стобалльн", "максимальн", "наивысш", "лучший результат")
-AVERAGE = ("средний балл", "средний результат")
-# Предметный балл («средний балл по русскому языку») — не общий балл школы.
-SUBJECT_MARKERS = (
-    "русск", "математ", "информат", "физик", "хими", "биолог", "обществознан",
-    "истор", "географ", "литератур", "английск", "немецк", "французск",
-    "геометр", "алгебр", "профильн", "предмет",
-)
 
-
-def classify(raw):
-    """-> ('SET'|'DROP'|'KEEP', (score, year) | None)"""
-    text = str(raw or "").strip()
-    if not text:
-        return "KEEP", None
-    low = text.lower()
-    if any(m in low for m in NOT_AVERAGE):
-        return "DROP", None
-    if not any(m in low for m in AVERAGE):
-        return "KEEP", None
-    if any(s in low for s in SUBJECT_MARKERS) and not ("общий" in low or "всем предмет" in low):
-        return "KEEP", None
-    m = re.match(r"\s*(\d+(?:[.,]\d+)?)\s*-", text)
-    if not m:
-        return "KEEP", None
-    if "/" in text.split("-", 1)[0]:
-        # несколько значений в одной строке — общий балл не выделить однозначно
-        return "KEEP", None
-    years = re.findall(r"(20\d{2})", text)
-    year = int(years[-1]) if years else None
-    return "SET", (round(float(m.group(1).replace(",", ".")), 2), year)
+def ege_lines_of(fresh_school: dict) -> list[str]:
+    """Все строки показателей ЕГЭ из выгрузки sg_main (KPI-блок «Результаты школы»)."""
+    raw = fresh_school.get("results_kpi_raw")
+    lines = [str(x) for x in raw] if isinstance(raw, list) else []
+    lines = [x for x in lines if "егэ" in x.lower()]
+    if not lines:
+        single = fresh_school.get("EGE_2026") or fresh_school.get("EGE")
+        if single:
+            lines = [str(single)]
+    return lines
 
 
 def main() -> None:
@@ -71,7 +60,7 @@ def main() -> None:
             if x.get("id") is not None:
                 fresh[int(x["id"])] = x
 
-    stats = {"set": 0, "drop": 0, "keep": 0, "no_fresh": 0, "vuz_set": 0}
+    stats = {"set": 0, "drop_subjects_only": 0, "drop_max": 0, "keep": 0, "no_fresh": 0, "vuz_set": 0}
     report = []
     for rec in extract:
         sid = rec.get("id")
@@ -81,36 +70,49 @@ def main() -> None:
         if not f:
             stats["no_fresh"] += 1
             continue
-        new_ege = f.get("EGE_2026") or f.get("EGE")
-        action, val = classify(new_ege)
-        current = str(rec.get("EGE") or "").lower()
-        was_not_average = any(m in current for m in NOT_AVERAGE)
+
         before = rec.get("EGE")
-        if action == "SET":
-            rec["EGE"] = new_ege
-            rec["EGE_2026"] = new_ege
+        lines = ege_lines_of(f)
+        parsed = parse_ege_lines(lines)
+        overall = parsed["overall"]
+
+        if overall is not None:
+            # строка-источник общего балла: та, где есть «общий» или предметов нет
+            overall_line = None
+            for line in parsed["raw_lines"]:
+                one = parse_ege_lines([line])
+                if one["overall"] is not None:
+                    overall_line = line
+                    break
+            rec["EGE"] = overall_line
+            rec["EGE_2026"] = overall_line
+            rec["EGE_LINES"] = parsed["raw_lines"]
             stats["set"] += 1
-        elif action == "DROP":
+        elif parsed["has_data"]:
+            # на странице есть только предметные баллы: общего балла школа не публикует
             rec["EGE"] = None
             rec["EGE_2026"] = None
-            stats["drop"] += 1
-        elif was_not_average and not new_ege:
-            # раньше лежал «высший/максимальный балл», а в свежем прогоне его нет ->
-            # это был не средний балл: убираем (иначе значение в рейтинге будет неверным)
+            rec["EGE_LINES"] = parsed["raw_lines"]
+            stats["drop_subjects_only"] += 1
+        elif parsed["has_max"]:
+            # школа публикует максимумы, а не средние: прежнее значение не подтверждено
             rec["EGE"] = None
             rec["EGE_2026"] = None
-            stats["drop"] += 1
+            rec["EGE_LINES"] = parsed["raw_lines"]
+            stats["drop_max"] += 1
         else:
+            # свежих данных по ЕГЭ нет — старое значение не трогаем
             stats["keep"] += 1
+
         if rec.get("EGE") != before:
             report.append({
                 "id": sid,
                 "name": rec.get("name") or rec.get("short_name") or rec.get("name_2gis"),
                 "before": before,
                 "after": rec.get("EGE"),
-                "action": action,
-                "fresh": new_ege,
+                "subjects": parsed["subjects"],
             })
+
         new_vuz = f.get("VUZ_2026") or f.get("VUZ")
         if new_vuz and str(new_vuz).strip():
             rec["VUZ"] = new_vuz
@@ -123,7 +125,8 @@ def main() -> None:
     )
     print("Обновлено записей:", stats)
     for r in report:
-        print(f"  {r['id']:>4} {str(r['name'])[:38]:40} {str(r['before'])[:28]:30} -> {str(r['after'])[:46]}")
+        subs = ", ".join(f"{s['subject']} {s['score']}" for s in r["subjects"]) or "-"
+        print(f"  {r['id']:>4} {str(r['name'])[:34]:36} {str(r['before'])[:26]:28} -> {str(r['after'])[:40]:42} | предметы: {subs}")
 
 
 if __name__ == "__main__":

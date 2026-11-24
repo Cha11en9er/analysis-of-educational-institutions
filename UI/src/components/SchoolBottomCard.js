@@ -86,7 +86,9 @@ export default function SchoolBottomCard({ school, rank, total, maxima, onClose,
     .map((comp) => ({ label: comp.label, ...componentValue(school, comp, maxima) }))
     .filter((c) => c.text != null);
   const star = avgReviewRating(school);
-  const hasDetails = components.length > 0 || sports.length > 0;
+  const subjects = Array.isArray(school.ege_subjects) ? school.ege_subjects : [];
+  const subjectsYear = subjects.find((s) => s.year)?.year || null;
+  const hasDetails = components.length > 0 || sports.length > 0 || subjects.length > 0;
 
   return (
     <div className="school-bottom-card">
@@ -122,20 +124,7 @@ export default function SchoolBottomCard({ school, rank, total, maxima, onClose,
           )}
           {school.ege_average_score != null && school.ege_average_score > 0 && (
             <div className="fact">
-              <span className="fact-src">
-                ЕГЭ{school.ege_year ? ` ${school.ege_year}` : ''}
-                {school.link_gosuslugi && (
-                  <a
-                    className="fact-source"
-                    href={school.link_gosuslugi}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Официальный источник данных"
-                  >
-                    источник
-                  </a>
-                )}
-              </span>
+              <span className="fact-src">ЕГЭ{school.ege_year ? ` ${school.ege_year}` : ''}</span>
               <span className="fact-val">{Number(school.ege_average_score).toFixed(1)}</span>
             </div>
           )}
@@ -157,7 +146,7 @@ export default function SchoolBottomCard({ school, rank, total, maxima, onClose,
             onClick={() => setExpanded((v) => !v)}
             aria-expanded={expanded}
           >
-            {expanded ? 'Скрыть показатели' : 'Показатели рейтинга'}
+            {expanded ? 'Скрыть' : 'Показать больше информации'}
             <span className="toggle-caret">{expanded ? '▴' : '▾'}</span>
           </button>
         )}
@@ -179,6 +168,22 @@ export default function SchoolBottomCard({ school, rank, total, maxima, onClose,
               </div>
             )}
 
+            {subjects.length > 0 && (
+              <div className="bottom-card-subjects">
+                <div className="components-title">
+                  Баллы ЕГЭ по предметам{subjectsYear ? ` (${subjectsYear})` : ''}
+                </div>
+                {subjects.map((s) => (
+                  <div className="subject-row" key={s.subject}>
+                    <span className="subject-name">{s.subject}</span>
+                    <span className="subject-score">
+                      {s.score != null ? Number(s.score).toFixed(1) : '—'}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            )}
+
             {sports.length > 0 && (
               <div className="bottom-card-chips">
                 {sports.map(({ label }) => <span className="chip" key={label}>{label}</span>)}
@@ -193,6 +198,17 @@ export default function SchoolBottomCard({ school, rank, total, maxima, onClose,
           )}
           {school.link_yandex && (
             <a href={school.link_yandex} target="_blank" rel="noopener noreferrer" className="bottom-link">Открыть в Яндекс Картах</a>
+          )}
+          {school.link_gosuslugi && (
+            <a
+              href={school.link_gosuslugi}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bottom-link"
+              title="Официальный сайт школы на Госуслугах"
+            >
+              Госуслуги школы
+            </a>
           )}
           <button type="button" className="bottom-details-btn" onClick={onOpenDetails}>
             Подробный анализ →

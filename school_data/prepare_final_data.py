@@ -20,6 +20,8 @@ from typing import Any
 
 import pandas as pd
 
+from ege_parser import ege_lines_from_school, parse_ege_lines
+
 BASE_DIR = Path(__file__).resolve().parent
 REPO_ROOT = BASE_DIR.parent
 INPUT_JSON = BASE_DIR / "sd_2_stage_gosuslugi_infrastucture_output_extract.json"
@@ -389,34 +391,21 @@ _SUBJECT_MARKERS = (
 
 
 def _parse_ege_raw_score_and_year(raw: Any) -> tuple[float, int] | tuple[None, None]:
+    """Разбор строки показателя ЕГЭ через общий парсер (school_data/ege_parser.py).
+
+    В рейтинг идёт ТОЛЬКО общий средний балл школы: «высший/максимальный балл» —
+    другой показатель, а «средний балл по русскому языку» — балл по предмету.
+    """
     if raw is None or (isinstance(raw, float) and pd.isna(raw)):
         return None, None
-
     text = str(raw).strip()
     if not text or text.lower() in {"нету", "нет", "none", "null"}:
         return None, None
-
-    low = text.lower()
-    # В рейтинг ЕГЭ берём ТОЛЬКО средний балл школы.
-    # «Высший балл», «максимальное количество баллов», «сдал на 100 баллов» — другой показатель.
-    if not any(mark in low for mark in ("средний балл", "средний результат")):
+    parsed = parse_ege_lines([text], require_ege=False)
+    overall = parsed["overall"]
+    if not overall:
         return None, None
-    if any(s in low for s in _SUBJECT_MARKERS) and not (
-        "общий" in low or "всем предмет" in low
-    ):
-        return None, None
-    score_match = re.search(r"(\d+(?:[.,]\d+)?)\s*-", text)
-    if not score_match:
-        return None, None
-    # «82/75,15 - Средний балл … по русскому языку/общий» — несколько значений, общий неочевиден
-    if "/" in text.split("-", 1)[0]:
-        return None, None
-    score = float(score_match.group(1).replace(",", "."))
-
-    years = [int(y) for y in re.findall(r"(20\d{2})", text)]
-    if not years:
-        return None, None
-    return round(score, 2), max(years)
+    return overall["score"], overall["year"]
 
 
 def _find_ege_column(df: pd.DataFrame) -> str | None:
@@ -522,6 +511,15 @@ def vuz_for_school(
     return parse_vuz_cell(school.get("VUZ"))
 
 
+def ege_details_for_school(school: dict[str, Any]) -> dict[str, Any]:
+    """Разбор всех показателей ЕГЭ школы из выгрузки sg_main.
+
+    -> {"overall": {"score": float, "year": int} | None,
+        "subjects": [{"subject": str, "score": float, "year": int}], ...}
+    """
+    return parse_ege_lines(ege_lines_from_school(school))
+
+
 def ege_for_school(
     school: dict[str, Any],
     ege_map: dict[int, tuple[float, int]],
@@ -529,9 +527,14 @@ def ege_for_school(
     school_id = school.get("id")
     # Приоритет: свежая выгрузка sg_main (обновляется прогоном), затем ручной Excel-файл
     # (может отставать по году — аудит 24.11.2026 это зафиксировал).
-    raw = _parse_ege_raw_score_and_year(school.get("EGE"))
-    if raw != (None, None):
-        return raw
+    details = ege_details_for_school(school)
+    overall = details["overall"]
+    if overall:
+        return overall["score"], overall["year"]
+    if details["has_data"] or details["has_max"]:
+        # на странице школы есть только предметные баллы (или максимумы): общего
+        # среднего балла школа не публикует, ручной Excel-файл тут не используем
+        return None, None
     if school_id is not None:
         try:
             mapped = ege_map.get(int(school_id))
@@ -539,7 +542,7 @@ def ege_for_school(
                 return mapped
         except (TypeError, ValueError):
             pass
-    return raw
+    return None, None
 
 
 def _extract_olympiad_entries(school: dict[str, Any]) -> list[str]:
@@ -846,6 +849,7 @@ def share_academic_across_buildings(
         ege_score = next((r["ege_average_score"] for r in group if r.get("ege_year") is not None), None)
         ege_year = next((r["ege_year"] for r in group if r.get("ege_year") is not None), None)
         ege_rating = next((r["rating_ege"] for r in group if r.get("rating_ege") is not None), None)
+        ege_subjects = next((r.get("ege_subjects") for r in group if r.get("ege_subjects")), None)
         vuz_pct = next(
             (r["university_admission_percent"] for r in group if r.get("university_admission_percent") is not None),
             None,
@@ -863,6 +867,8 @@ def share_academic_across_buildings(
                 r["ege_average_score"] = ege_score
                 r["ege_year"] = ege_year
                 r["rating_ege"] = ege_rating
+            if not r.get("ege_subjects") and ege_subjects:
+                r["ege_subjects"] = ege_subjects
             if r.get("university_admission_percent") is None and vuz_pct is not None:
                 r["university_admission_percent"] = vuz_pct
                 r["university_admission_year"] = vuz_year
@@ -1074,6 +1080,7 @@ def transform_school(
     capacity, capacity_source = capacity_for_school(school, capacity_map)
     vuz_percent, vuz_year = vuz_for_school(school, vuz_map)
     ege_score, ege_year = ege_for_school(school, ege_map)
+    ege_subjects = ege_details_for_school(school).get("subjects") or []
 
     olympiad: dict[str, Any] = {}
     if school_id is not None:
@@ -1105,6 +1112,7 @@ def transform_school(
         "rating_profiles": rating_profiles_value,
         "ege_average_score": float(ege_score) if ege_score is not None else None,
         "ege_year": ege_year,
+        "ege_subjects": ege_subjects,
         "rating_university_admission": university_admission_rating(vuz_percent),
         "university_admission_percent": vuz_percent,
         "university_admission_year": vuz_year,
@@ -1180,6 +1188,8 @@ def write_rating_matrix(path: Path, schools: list[dict[str, Any]]) -> None:
         "has_second_shift",
         "rating_total",
         "ege_average_score",
+        "ege_year",
+        "ege_subjects",
         "university_admission_percent",
         "rating_2gis",
         "rating_yandex",
@@ -1201,6 +1211,9 @@ def write_rating_matrix(path: Path, schools: list[dict[str, Any]]) -> None:
             val = s.get(h)
             if val is None:
                 row.append("")
+            elif isinstance(val, (list, dict)):
+                text = json.dumps(val, ensure_ascii=False).replace(";", ",").replace("\n", " ")
+                row.append(text)
             else:
                 text = str(val).replace(";", ",")
                 row.append(text)

@@ -167,10 +167,16 @@ export default function MapView({
 
     // Школы рисуем только в группе «schools»
     if (institutionsGroup?.group === 'schools' || !institutionsGroup) {
+      const selectedId = selectedSchool?.school_id ?? null;
       validSchools.forEach((school) => {
         const coords = lonLatOfSchool(school);
         if (!coords) return;
-        const { diameter, html } = getSchoolMarkerStyle(school, markerScale);
+        const isSelected = selectedId != null && school.school_id === selectedId;
+        const { diameter, html } = getSchoolMarkerStyle(school, {
+          ...markerScale,
+          selected: isSelected,
+          dimmed: selectedId != null && !isSelected,
+        });
         const wrap = document.createElement('div');
         wrap.className = 'school-marker-yandex';
         wrap.style.width = `${diameter}px`;
@@ -186,7 +192,8 @@ export default function MapView({
         const marker = new YMapMarker(
           {
             coordinates: coords,
-            zIndex: selectedSchool?.school_id === school.school_id ? 20 : 10,
+            // выбранная школа всегда поверх домов и остальных школ
+            zIndex: isSelected ? 500 : selectedId != null ? 9 : 10,
           },
           wrap
         );
@@ -230,7 +237,8 @@ export default function MapView({
 
     // Учреждения выбранной группы (не-школы): маркеры цветов по kind
     if (institutionsGroup && Array.isArray(institutionsGroup.items)) {
-      // один цвет на всю группу (садики голубые, вузы красные, иные зелёные)
+      // один цвет на всю группу (садики голубые, вузы красные, иные зелёные),
+      // форма та же, что у школ: круг с белой обводкой
       const GROUP_COLORS = {
         preschool: '#0ea5e9',
         vuz: '#dc2626',

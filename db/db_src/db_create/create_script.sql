@@ -110,6 +110,9 @@ ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS city TEXT NOT NULL DEFAULT 'Са�
 ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS rating_total NUMERIC(6,1);
 ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS ege_average_score NUMERIC(4,1);
 ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS ege_year INTEGER;
+-- Баллы ЕГЭ по предметам (школа публикует только предметные значения):
+-- [{"subject": "Русский язык", "score": 75.0, "year": 2026}]
+ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS ege_subjects JSONB;
 ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS university_admission_percent NUMERIC(5,1);
 ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS university_admission_year INTEGER;
 ALTER TABLE sa.school ADD COLUMN IF NOT EXISTS olympiad_winners_count INTEGER;

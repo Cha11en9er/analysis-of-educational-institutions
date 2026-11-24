@@ -539,7 +539,7 @@ async def get_school_by_id(school_id: int):
                 s.rating_psychological_climate, s.rating_sports_infrastructure,
                 s.rating_profiles,
                 s.capacity, s.building_info->>'area_sqm' AS area_sqm, s.material,
-                s.price_median, s.building_info
+                s.price_median, s.building_info, s.ege_subjects
             FROM sa.school s
             LEFT JOIN sa.link l ON l.school_id = s.school_id
             LEFT JOIN sa.rating r ON r.school_id = s.school_id
@@ -564,7 +564,7 @@ async def get_school_by_id(school_id: int):
         def _num(v):
             return float(v) if v is not None else None
 
-        code_oo = (row[38] or {}).get("code_oo") if isinstance(row[38], dict) else None
+        code_oo = (row[39] or {}).get("code_oo") if isinstance(row[39], dict) else None
         return {
             "school_id": row[0],
             "photo": photo_path("general", row[19], code_oo, row[1] or row[2], row[0],
@@ -596,6 +596,7 @@ async def get_school_by_id(school_id: int):
             "rating_total": _num(row[20]),
             "ege_average_score": _num(row[21]),
             "ege_year": row[22],
+            "ege_subjects": row[40] or [],
             "university_admission_percent": _num(row[23]),
             "university_admission_year": row[24],
             "olympiad_winners_count": row[25],
