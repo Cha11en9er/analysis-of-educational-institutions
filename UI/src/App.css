@@ -1004,7 +1004,12 @@
 @media (max-width: 700px) {
   .app { flex-direction: column; }
   .side-panel { width: 100%; max-width: none; min-width: 0; max-height: 45vh; }
-  .school-list { max-height: none; }
+  /* панель скроллится целиком, список не отдельным окошком */
+  .school-list-section { flex: 0 0 auto; min-height: 0; }
+  .school-list { overflow: visible; }
+  .brand-row { margin-bottom: 0.5rem; }
+  .group-selector-section { margin-bottom: 0.4rem; }
+  .search-section { margin-bottom: 0.5rem; }
   .component-row { grid-template-columns: 92px 1fr 36px; }
   .ap-bar-row { grid-template-columns: 96px 1fr 40px; }
   /* Карточка школы на телефоне — нижний лист, карта остаётся сверху */
