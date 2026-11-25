@@ -117,6 +117,8 @@ def load_school_rows() -> tuple[list[tuple], list[tuple], list[tuple]]:
                 raw.get("rating_psychological_climate"),
                 raw.get("rating_sports_infrastructure"),
                 raw.get("rating_profiles"),
+                raw.get("rating_maps"),
+                raw.get("rating_university_admission"),
                 raw.get("ownership") or "public",
                 f"SRID=4326;POINT({float(lon)} {float(lat)})",
             )
@@ -245,9 +247,10 @@ def main() -> None:
                         olympiad_winners_count, top_tags, administrative_district,
                         rating_ege, rating_olympiads, rating_teachers, rating_mto,
                         rating_psychological_climate, rating_sports_infrastructure,
-                        rating_profiles, ownership, location
+                        rating_profiles, rating_maps, rating_university_admission,
+                        ownership, location
                     ) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,
-                              %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,
+                              %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,
                               ST_GeogFromText(%s))
                     ON CONFLICT (school_id) DO UPDATE SET
                         name_2gis=EXCLUDED.name_2gis, name_ym=EXCLUDED.name_ym,
@@ -272,6 +275,8 @@ def main() -> None:
                         rating_psychological_climate=EXCLUDED.rating_psychological_climate,
                         rating_sports_infrastructure=EXCLUDED.rating_sports_infrastructure,
                         rating_profiles=EXCLUDED.rating_profiles,
+                        rating_maps=EXCLUDED.rating_maps,
+                        rating_university_admission=EXCLUDED.rating_university_admission,
                         ownership=EXCLUDED.ownership,
                         location=EXCLUDED.location, updated_at=CURRENT_TIMESTAMP
                     """,
