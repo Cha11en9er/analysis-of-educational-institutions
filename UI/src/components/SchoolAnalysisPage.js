@@ -86,9 +86,6 @@ export default function SchoolAnalysisPage({ school, rank, total, onBack }) {
       </button>
 
       <header className="ap-header">
-        {school.photo && (
-          <img className="ap-photo-wide" src={school.photo} alt={name} loading="lazy" />
-        )}
         <div className="ap-header-row">
           <div className="ap-header-main">
             <div className="ap-badges">
@@ -110,6 +107,10 @@ export default function SchoolAnalysisPage({ school, rank, total, onBack }) {
             <span className="ap-score-caption">баллов</span>
           </div>
         </div>
+
+        {school.photo && (
+          <img className="ap-photo-wide" src={school.photo} alt={name} loading="lazy" />
+        )}
 
         <div className="ap-facts">
           {school.rating_2gis != null && (
