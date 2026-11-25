@@ -93,11 +93,9 @@ export default function SchoolBottomCard({ school, rank, total, maxima, onClose,
   return (
     <div className="school-bottom-card">
       <button type="button" className="bottom-card-close" onClick={onClose} aria-label="Закрыть карточку">✕</button>
-      <div className="bottom-card-main">
+      <div className="bottom-card-top">
+        <div className="bottom-card-top-left">
         <div className="bottom-card-head">
-          {school.photo && (
-            <img className="bottom-card-photo" src={school.photo} alt={name} loading="lazy" />
-          )}
           <div className="bottom-card-rank">
             {rank != null ? `#${rank}` : ''}
             <span className="bottom-card-rank-total">из {total}</span>
@@ -150,6 +148,11 @@ export default function SchoolBottomCard({ school, rank, total, maxima, onClose,
             <span className="toggle-caret">{expanded ? '▴' : '▾'}</span>
           </button>
         )}
+        </div>
+        {school.photo && (
+          <img className="bottom-card-photo-side" src={school.photo} alt={name} loading="lazy" />
+        )}
+      </div>
 
         {expanded && (
           <>
@@ -214,7 +217,6 @@ export default function SchoolBottomCard({ school, rank, total, maxima, onClose,
             Подробный анализ →
           </button>
         </div>
-      </div>
     </div>
   );
 }

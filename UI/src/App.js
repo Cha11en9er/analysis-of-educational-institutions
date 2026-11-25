@@ -184,8 +184,6 @@ function App() {
   );
   const [toast, setToast] = useState(null);
   const mapFetchOnce = useRef(false);
-  // сами ли мы добавили запись /school/{id} в историю (для кнопки закрытия карточки)
-  const pushedEntryRef = useRef(false);
 
   const [selectedSchoolId, setSelectedSchoolId] = useState(null);
   const [schoolDetail, setSchoolDetail] = useState(null);
@@ -260,8 +258,7 @@ function App() {
       setSchoolDetail(null);
       setShowAnalysisPage(false);
       if (/^\/school\/\d+/.test(window.location.pathname)) {
-        window.history.pushState({}, '', '/');
-        pushedEntryRef.current = false;
+        window.history.replaceState({}, '', '/');
       }
       setInstitutionToast(it);
     };
@@ -320,8 +317,14 @@ function App() {
       setShowAnalysisPage(false);
       setInstitutionToast(null);
       setSelectedSchoolId(school.school_id);
-      window.history.pushState({}, '', `/school/${school.school_id}`);
-      pushedEntryRef.current = true;
+      const path = window.location.pathname;
+      if (/^\/school\/\d+(\/analysis)?\/?$/.test(path)) {
+        // уже открыта другая школа: меняем адрес на месте, чтобы «назад» и крестик
+        // всегда вели к общему списку, а не к предыдущей школе
+        window.history.replaceState({}, '', `/school/${school.school_id}`);
+      } else {
+        window.history.pushState({}, '', `/school/${school.school_id}`);
+      }
       loadSchoolDetail(school.school_id);
     },
     [loadSchoolDetail]
@@ -341,13 +344,11 @@ function App() {
           loadSchoolDetail(sid);
         }
         setShowAnalysisPage(Boolean(m[2]));
-        pushedEntryRef.current = true;
       } else {
         setShowAnalysisPage(false);
         setSelectedSchoolId(null);
         setSchoolDetail(null);
         setInstitutionToast(null);
-        pushedEntryRef.current = false;
       }
     };
     window.addEventListener('popstate', onPopState);
@@ -394,8 +395,7 @@ function App() {
     setSchoolDetail(null);
     setShowAnalysisPage(false);
     if (/^\/school\/\d+/.test(window.location.pathname)) {
-      window.history.pushState({}, '', '/');
-      pushedEntryRef.current = false;
+      window.history.replaceState({}, '', '/');
     }
     setSelectedGroup(g);
   }, []);
@@ -406,23 +406,19 @@ function App() {
     setSchoolDetail(null);
     setShowAnalysisPage(false);
     if (/^\/school\/\d+/.test(window.location.pathname)) {
-      window.history.pushState({}, '', '/');
-      pushedEntryRef.current = false;
+      window.history.replaceState({}, '', '/');
     }
     setSelectedCity(c);
   }, []);
 
   const handleCloseBottomCard = useCallback(() => {
-    if (pushedEntryRef.current && /^\/school\/\d+(\/analysis)?\/?$/.test(window.location.pathname)) {
-      // запись в историю добавили мы: назад вернёт карту (popstate закроет карточку)
-      window.history.back();
-      return;
-    }
+    // крестик в превью всегда закрывает карточку к общему списку,
+    // а не возвращает к предыдущей школе
     setSelectedSchoolId(null);
     setSchoolDetail(null);
     setShowAnalysisPage(false);
     if (window.location.pathname !== '/') {
-      window.history.pushState({}, '', '/');
+      window.history.replaceState({}, '', '/');
     }
   }, []);
 
