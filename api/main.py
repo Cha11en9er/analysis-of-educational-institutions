@@ -348,10 +348,10 @@ async def get_schools_for_map(
             query += " AND s.year_built <= %s"
             params.append(year_max)
         if rating_min is not None:
-            query += " AND r.rating_yandex >= %s"
+            query += " AND s.rating_total >= %s"
             params.append(rating_min)
         if rating_max is not None:
-            query += " AND r.rating_yandex <= %s"
+            query += " AND s.rating_total <= %s"
             params.append(rating_max)
         if has_pool is not None:
             query += " AND s.has_pool = %s"

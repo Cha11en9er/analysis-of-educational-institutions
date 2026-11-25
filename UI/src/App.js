@@ -8,7 +8,7 @@ import InstitutionBottomCard from './components/InstitutionBottomCard';
 import SchoolAnalysisPage from './components/SchoolAnalysisPage';
 import AnalyticsView, { AnalyticsChart } from './components/AnalyticsView';
 import Toast from './components/Toast';
-import PreferenceModal from './components/PreferenceModal';
+import FiltersModal from './components/FiltersModal';
 
 // Пустая строка = тот же origin (nginx проксирует /api → uvicorn).
 // На проде без .env — тот же origin; локальная разработка (localhost/127.0.0.1) — :8000.
@@ -24,6 +24,9 @@ function resolveApiUrl() {
 const API_URL = resolveApiUrl();
 
 const SITE_TITLE = 'УчГрад: информация об обучающих учреждениях';
+
+// Ключи подбора «что вам важно в школе» (см. FiltersModal)
+const PREF_KEYS = ['olympiads', 'bullying', 'staff', 'building', 'exam', 'location'];
 
 function schoolTitle(school) {
   if (!school) return SITE_TITLE;
@@ -146,15 +149,22 @@ function validateFilters(filterState, setToast) {
     setToast({ message: 'Рейтинг: минимальное значение не может быть больше максимального', type: 'error' });
     return false;
   }
-  if (rMin != null && (rMin < 1 || rMin > 5)) {
-    setToast({ message: 'Рейтинг должен быть от 1 до 5', type: 'error' });
+  if (rMin != null && (rMin < 0 || rMin > 110)) {
+    setToast({ message: 'Итоговый рейтинг школы от 0 до 110 баллов', type: 'error' });
     return false;
   }
-  if (rMax != null && (rMax < 1 || rMax > 5)) {
-    setToast({ message: 'Рейтинг должен быть от 1 до 5', type: 'error' });
+  if (rMax != null && (rMax < 0 || rMax > 110)) {
+    setToast({ message: 'Итоговый рейтинг школы от 0 до 110 баллов', type: 'error' });
     return false;
   }
   return true;
+}
+
+// есть ли в фильтрах хотя бы одно условие
+function filtersActive(f) {
+  const nums = [f.yearMin, f.yearMax, f.ratingMin, f.ratingMax];
+  if (nums.some((v) => v != null && v !== '')) return true;
+  return Object.values(f.sports || {}).some(Boolean);
 }
 
 function App() {
@@ -170,11 +180,13 @@ function App() {
   const [filtersApplied, setFiltersApplied] = useState(false);
   const [preferenceState, setPreferenceState] = useState(initPreferenceState);
   const [preferencesActive, setPreferencesActive] = useState(initPrefsActive);
-  const [showPreferenceModal, setShowPreferenceModal] = useState(
+  const [showFiltersModal, setShowFiltersModal] = useState(
     () => localStorage.getItem(LS_MODAL_DISMISSED) !== '1'
   );
   const [toast, setToast] = useState(null);
   const mapFetchOnce = useRef(false);
+  // сами ли мы добавили запись /school/{id} в историю (для кнопки закрытия карточки)
+  const pushedEntryRef = useRef(false);
 
   const [selectedSchoolId, setSelectedSchoolId] = useState(null);
   const [schoolDetail, setSchoolDetail] = useState(null);
@@ -236,22 +248,13 @@ function App() {
     const p = buildParams('', defaultFilterState, false, rest, active);
     p.city = selectedCity;
     fetchSchools(p);
-    // прямой заход по ссылке вида /school/{id} (партнёрская интеграция)
-    const m = window.location.pathname.match(/^\/school\/(\d+)\/?$/);
+    // прямой заход по ссылке вида /school/{id} или /school/{id}/analysis
+    const m = window.location.pathname.match(/^\/school\/(\d+)(\/analysis)?\/?$/);
     if (m) {
       const sid = Number(m[1]);
-      Promise.all([
-        axiosApi.get(`${API_URL}/api/schools/${sid}`),
-        axiosApi.get(`${API_URL}/api/schools/${sid}/catchment`).catch(() => ({ data: null })),
-      ])
-        .then(([{ data: detail }, { data: catchment }]) => {
-          setSchoolDetail({ ...detail, catchment: catchment?.points || [] });
-          setSelectedSchoolId(sid);
-          setSchoolDetailLoading(false);
-        })
-        .catch(() => setSchoolDetailLoading(false));
       setSelectedSchoolId(sid);
-      setSchoolDetailLoading(true);
+      if (m[2]) setShowAnalysisPage(true);
+      loadSchoolDetail(sid);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fetchSchools]);
@@ -262,6 +265,10 @@ function App() {
       setSelectedSchoolId(null);
       setSchoolDetail(null);
       setShowAnalysisPage(false);
+      if (/^\/school\/\d+/.test(window.location.pathname)) {
+        window.history.pushState({}, '', '/');
+        pushedEntryRef.current = false;
+      }
       setInstitutionToast(it);
     };
     return () => {
@@ -293,32 +300,67 @@ function App() {
 
   const groupInstitutions = institutionsByGroup[`${selectedCity}_${selectedGroup}`] || [];
 
+  const loadSchoolDetail = useCallback(async (sid) => {
+    setSchoolDetailLoading(true);
+    setSchoolDetail(null);
+    try {
+      const [{ data: detail }, { data: catchment }] = await Promise.all([
+        axiosApi.get(`${API_URL}/api/schools/${sid}`),
+        axios
+          .get(`${API_URL}/api/schools/${sid}/catchment`)
+          .catch(() => ({ data: null })),
+      ]);
+      setSchoolDetail({ ...detail, catchment: catchment?.points || [] });
+    } catch (err) {
+      const msg = err.response?.data?.detail || err.message || 'Ошибка загрузки';
+      setToast({ message: msg, type: 'error' });
+      setSelectedSchoolId(null);
+    } finally {
+      setSchoolDetailLoading(false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const handleSchoolClick = useCallback(
     async (school) => {
       setShowAnalysisPage(false);
       setInstitutionToast(null);
       setSelectedSchoolId(school.school_id);
-      setSchoolDetailLoading(true);
-      setSchoolDetail(null);
-      try {
-        window.history.pushState({}, '', `/school/${school.school_id}`);
-        const [{ data: detail }, { data: catchment }] = await Promise.all([
-          axiosApi.get(`${API_URL}/api/schools/${school.school_id}`),
-          axios
-            .get(`${API_URL}/api/schools/${school.school_id}/catchment`)
-            .catch(() => ({ data: null })),
-        ]);
-        setSchoolDetail({ ...detail, catchment: catchment?.points || [] });
-      } catch (err) {
-        const msg = err.response?.data?.detail || err.message || 'Ошибка загрузки';
-        setToast({ message: msg, type: 'error' });
-        setSelectedSchoolId(null);
-      } finally {
-        setSchoolDetailLoading(false);
-      }
+      window.history.pushState({}, '', `/school/${school.school_id}`);
+      pushedEntryRef.current = true;
+      loadSchoolDetail(school.school_id);
     },
-    []
+    [loadSchoolDetail]
   );
+
+  // Кнопки «назад/вперёд» браузера: путь определяет, что открыто.
+  // /school/{id}/analysis — подробный анализ, /school/{id} — карточка на карте, / — карта.
+  useEffect(() => {
+    const onPopState = () => {
+      const path = window.location.pathname;
+      const m = path.match(/^\/school\/(\d+)(\/analysis)?\/?$/);
+      if (m) {
+        const sid = Number(m[1]);
+        setShowAnalytics(false);
+        setInstitutionToast(null);
+        if (selectedSchoolId !== sid) {
+          setSelectedSchoolId(sid);
+          loadSchoolDetail(sid);
+        }
+        setShowAnalysisPage(Boolean(m[2]));
+        pushedEntryRef.current = true;
+      } else {
+        setShowAnalysisPage(false);
+        setShowAnalytics(false);
+        setSelectedSchoolId(null);
+        setSchoolDetail(null);
+        setInstitutionToast(null);
+        pushedEntryRef.current = false;
+      }
+    };
+    window.addEventListener('popstate', onPopState);
+    return () => window.removeEventListener('popstate', onPopState);
+  }, [selectedSchoolId, loadSchoolDetail]);
 
   // Ранг школы по итоговому рейтингу в текущей выборке
   const rankedIds = useMemo(() => {
@@ -346,13 +388,23 @@ function App() {
     olympiads: Math.max(0, ...schools.map((s) => s.olympiad_winners_count || 0)),
   }), [schools]);
 
-  const handleOpenAnalysisPage = useCallback(() => setShowAnalysisPage(true), []);
+  const handleOpenAnalysisPage = useCallback(() => {
+    setShowAnalysisPage(true);
+    const sid = selectedSchoolId;
+    if (sid != null && !/^\/school\/\d+\/analysis\/?$/.test(window.location.pathname)) {
+      window.history.pushState({}, '', `/school/${sid}/analysis`);
+    }
+  }, [selectedSchoolId]);
 
   const handleGroupChange = useCallback((g) => {
     setInstitutionToast(null);
     setSelectedSchoolId(null);
     setSchoolDetail(null);
     setShowAnalysisPage(false);
+    if (/^\/school\/\d+/.test(window.location.pathname)) {
+      window.history.pushState({}, '', '/');
+      pushedEntryRef.current = false;
+    }
     setSelectedGroup(g);
   }, []);
 
@@ -361,12 +413,22 @@ function App() {
     setSelectedSchoolId(null);
     setSchoolDetail(null);
     setShowAnalysisPage(false);
+    if (/^\/school\/\d+/.test(window.location.pathname)) {
+      window.history.pushState({}, '', '/');
+      pushedEntryRef.current = false;
+    }
     setSelectedCity(c);
   }, []);
 
   const handleCloseBottomCard = useCallback(() => {
+    if (pushedEntryRef.current && /^\/school\/\d+(\/analysis)?\/?$/.test(window.location.pathname)) {
+      // запись в историю добавили мы: назад вернёт карту (popstate закроет карточку)
+      window.history.back();
+      return;
+    }
     setSelectedSchoolId(null);
     setSchoolDetail(null);
+    setShowAnalysisPage(false);
     if (window.location.pathname !== '/') {
       window.history.pushState({}, '', '/');
     }
@@ -398,9 +460,11 @@ function App() {
   }, []);
 
   const handleBackFromAnalysisPage = useCallback(() => {
-    setShowAnalysisPage(false);
-    if (window.location.pathname !== '/') {
-      window.history.pushState({}, '', '/');
+    // переход «назад» возвращает карточку школы на карте (popstate подхватит путь)
+    if (/^\/school\/\d+\/analysis\/?$/.test(window.location.pathname)) {
+      window.history.back();
+    } else {
+      setShowAnalysisPage(false);
     }
   }, []);
 
@@ -412,69 +476,75 @@ function App() {
     });
   }, [searchQuery, filterState, filtersApplied, preferenceState, preferencesActive, fetchSchools]);
 
-  const handleApply = useCallback(() => {
-    if (!validateFilters(filterState, setToast)) return;
-    setFiltersApplied(true);
-    const params = buildParams(searchSubmitted || searchQuery, filterState, true, preferenceState, preferencesActive);
-    fetchSchools(params).then((count) => {
-      setToast({ message: `Найдено школ: ${count} после использования фильтра`, type: 'info' });
-    });
-  }, [filterState, searchSubmitted, searchQuery, preferenceState, preferencesActive, fetchSchools]);
-
-  const handleReset = useCallback(() => {
-    setFilterState(defaultFilterState);
-    setFiltersApplied(false);
+  const handleSearchClear = useCallback(() => {
     setSearchQuery('');
     setSearchSubmitted('');
-    const params = buildParams('', defaultFilterState, false, preferenceState, preferencesActive);
-    fetchSchools(params).then((count) => {
-      setToast({ message: `Найдено школ: ${count} после использования фильтра`, type: 'info' });
-    });
-  }, [fetchSchools, preferenceState, preferencesActive]);
+    const params = buildParams('', filterState, filtersApplied, preferenceState, preferencesActive);
+    fetchSchools(params);
+  }, [filterState, filtersApplied, preferenceState, preferencesActive, fetchSchools]);
 
-  const handlePreferenceBackdropClose = useCallback(() => {
-    localStorage.setItem(LS_MODAL_DISMISSED, '1');
-    setShowPreferenceModal(false);
-  }, []);
-
-  const handlePreferenceSkipNoPrefs = useCallback(() => {
-    localStorage.setItem(LS_MODAL_DISMISSED, '1');
-    setShowPreferenceModal(false);
-    setPreferencesActive(false);
-    persistPreferences(preferenceState, false);
-    const params = buildParams(searchSubmitted || searchQuery, filterState, filtersApplied, preferenceState, false);
-    fetchSchools(params).then((count) => {
-      setToast({ message: `Подбор отключён. Найдено школ: ${count}`, type: 'info' });
-    });
-  }, [searchSubmitted, searchQuery, filterState, filtersApplied, preferenceState, fetchSchools]);
-
-  const handlePreferenceApply = useCallback(
-    (form) => {
-      const next = {
-        olympiads: form.olympiads,
-        bullying: form.bullying,
-        staff: form.staff,
-        building: form.building,
-        exam: form.exam,
-        location: form.location,
-        userLat: form.userLat,
-        userLon: form.userLon,
-      };
-      setPreferenceState(next);
-      setPreferencesActive(true);
-      persistPreferences(next, true);
+  // Единая модалка: подбор («что вам важно») и фильтры применяются одним действием
+  const handleModalApply = useCallback(
+    (nextFilters, nextPrefs) => {
+      if (!validateFilters(nextFilters, setToast)) return;
+      const hasFilters = filtersActive(nextFilters);
+      const anyPref = PREF_KEYS.some((k) => nextPrefs[k]);
+      setFilterState(nextFilters);
+      setFiltersApplied(hasFilters);
+      setPreferenceState(nextPrefs);
+      setPreferencesActive(anyPref);
+      persistPreferences(nextPrefs, anyPref);
       localStorage.setItem(LS_MODAL_DISMISSED, '1');
-      setShowPreferenceModal(false);
-      const params = buildParams(searchSubmitted || searchQuery, filterState, filtersApplied, next, true);
+      setShowFiltersModal(false);
+      const params = buildParams(searchSubmitted || searchQuery, nextFilters, hasFilters, nextPrefs, anyPref);
       fetchSchools(params).then((count) => {
-        setToast({ message: `Подбор применён. Найдено школ: ${count}`, type: 'info' });
+        setToast({ message: `Найдено школ: ${count} после использования фильтра`, type: 'info' });
       });
     },
-    [searchSubmitted, searchQuery, filterState, filtersApplied, fetchSchools]
+    [searchSubmitted, searchQuery, fetchSchools]
   );
 
-  const handleOpenPreferenceModal = useCallback(() => {
-    setShowPreferenceModal(true);
+  // Снять один активный фильтр (чип в сайдбаре) и сразу обновить список
+  const handleRemoveChip = useCallback(
+    (kind) => {
+      const nextFilters = {
+        ...filterState,
+        sports: { ...(filterState.sports || {}) },
+      };
+      let nextPrefs = preferenceState;
+      if (kind === 'prefs') {
+        nextPrefs = {
+          ...preferenceState,
+          olympiads: false,
+          bullying: false,
+          staff: false,
+          building: false,
+          exam: false,
+          location: false,
+        };
+      } else if (kind === 'rating') {
+        nextFilters.ratingMin = null;
+        nextFilters.ratingMax = null;
+      } else if (kind === 'yearMin') {
+        nextFilters.yearMin = null;
+      } else if (kind === 'yearMax') {
+        nextFilters.yearMax = null;
+      } else if (kind.startsWith('sport:')) {
+        const key = kind.slice('sport:'.length);
+        nextFilters.sports = { ...(filterState.sports || {}), [key]: false };
+      }
+      handleModalApply(nextFilters, nextPrefs);
+    },
+    [filterState, preferenceState, handleModalApply]
+  );
+
+  const handleFiltersClose = useCallback(() => {
+    localStorage.setItem(LS_MODAL_DISMISSED, '1');
+    setShowFiltersModal(false);
+  }, []);
+
+  const handleOpenFilters = useCallback(() => {
+    setShowFiltersModal(true);
   }, []);
 
   const showSchoolDetail = selectedSchoolId != null && !showAnalytics;
@@ -542,14 +612,13 @@ function App() {
           searchQuery={searchQuery}
           onSearchChange={setSearchQuery}
           onSearchSubmit={handleSearchSubmit}
+          onSearchClear={handleSearchClear}
           filterState={filterState}
-          onFilterChange={setFilterState}
-          onApply={handleApply}
-          onReset={handleReset}
-          filtersApplied={filtersApplied}
-          loading={loading}
+          preferenceState={preferenceState}
           preferencesActive={preferencesActive}
-          onOpenPreferences={handleOpenPreferenceModal}
+          onOpenFilters={handleOpenFilters}
+          onRemoveChip={handleRemoveChip}
+          loading={loading}
         />
       )}
       <main className="map-area">
@@ -597,13 +666,13 @@ function App() {
           </>
         )}
       </main>
-      {!showAnalytics && !showSchoolDetail && (
-        <PreferenceModal
-          open={showPreferenceModal}
-          onBackdropClose={handlePreferenceBackdropClose}
-          onSkipWithoutPrefs={handlePreferenceSkipNoPrefs}
-          onApply={handlePreferenceApply}
-          initialForm={preferenceState}
+      {!showAnalytics && (
+        <FiltersModal
+          open={showFiltersModal}
+          onClose={handleFiltersClose}
+          onApply={handleModalApply}
+          initialFilters={filterState}
+          initialPrefs={preferenceState}
           loading={loading}
           onToast={setToast}
         />

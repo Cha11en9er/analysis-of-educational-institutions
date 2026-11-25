@@ -1,19 +1,22 @@
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import logo from '../logo.svg';
 import { StarRating, avgReviewRating } from './SchoolBottomCard';
 
-const FILTER_KEYS = {
-  year: 'Год постройки',
-  rating: 'Рейтинг',
-  sports: 'Наличие спорт объектов',
+const SPORTS_LABELS = {
+  has_stadium: 'Футбольное поле',
+  has_pool: 'Бассейн',
+  has_sports_ground: 'Спорт площадка',
+  has_sports_complex: 'Спорткомплекс',
 };
 
-const SPORTS_OPTIONS = [
-  { key: 'has_stadium', label: 'Футбольное поле' },
-  { key: 'has_pool', label: 'Бассейн' },
-  { key: 'has_sports_ground', label: 'Спорт площадка' },
-  { key: 'has_sports_complex', label: 'Спорткомплекс' },
-];
+const PREFS_LABELS = {
+  olympiads: 'олимпиады',
+  bullying: 'климат',
+  staff: 'учителя',
+  building: 'ремонт',
+  exam: 'ЕГЭ',
+  location: 'близость',
+};
 
 const SORT_OPTIONS = [
   { key: 'rating_total', label: 'По итоговому рейтингу' },
@@ -33,8 +36,35 @@ function sortSchools(schools, sortKey) {
     if (va == null && vb == null) return (a.school_id || 0) - (b.school_id || 0);
     if (va == null) return 1; // школы без данных идут вниз списка
     if (vb == null) return -1;
-    return sortKey === 'year_built' ? vb - va : vb - va;
+    return vb - va;
   });
+}
+
+/**
+ * Короткие подписи активных фильтров для чипов в сайдбаре.
+ */
+export function activeFilterChips(filterState, preferenceState, preferencesActive) {
+  const chips = [];
+  if (preferencesActive && preferenceState) {
+    const picked = Object.entries(PREFS_LABELS)
+      .filter(([key]) => preferenceState[key])
+      .map(([, label]) => label);
+    if (picked.length) chips.push({ kind: 'prefs', label: `Подбор: ${picked.join(', ')}` });
+  }
+  const f = filterState || {};
+  if (f.ratingMin != null && f.ratingMin !== '' && f.ratingMax != null && f.ratingMax !== '') {
+    chips.push({ kind: 'rating', label: `Рейтинг ${f.ratingMin}–${f.ratingMax}` });
+  } else if (f.ratingMin != null && f.ratingMin !== '') {
+    chips.push({ kind: 'rating', label: `Рейтинг от ${f.ratingMin}` });
+  } else if (f.ratingMax != null && f.ratingMax !== '') {
+    chips.push({ kind: 'rating', label: `Рейтинг до ${f.ratingMax}` });
+  }
+  if (f.yearMin != null && f.yearMin !== '') chips.push({ kind: 'yearMin', label: `Год от ${f.yearMin}` });
+  if (f.yearMax != null && f.yearMax !== '') chips.push({ kind: 'yearMax', label: `Год до ${f.yearMax}` });
+  Object.entries(f.sports || {}).forEach(([key, on]) => {
+    if (on) chips.push({ kind: `sport:${key}`, label: SPORTS_LABELS[key] || key });
+  });
+  return chips;
 }
 
 export default function SidePanel({
@@ -55,46 +85,19 @@ export default function SidePanel({
   searchQuery,
   onSearchChange,
   onSearchSubmit,
+  onSearchClear,
   filterState,
-  onFilterChange,
-  onApply,
-  onReset,
-  filtersApplied,
-  loading,
+  preferenceState,
   preferencesActive,
-  onOpenPreferences,
+  onOpenFilters,
+  onRemoveChip,
+  loading,
 }) {
-  const [openFilter, setOpenFilter] = useState(null);
-
   const rankedSchools = useMemo(() => sortSchools(schools || [], sortBy || 'rating_total'), [schools, sortBy]);
-
-  const toggleFilter = useCallback((key) => {
-    setOpenFilter((prev) => (prev === key ? null : key));
-  }, []);
-
-  const handleYearMin = (e) => {
-    const v = e.target.value.trim();
-    onFilterChange({ ...filterState, yearMin: v === '' ? null : v });
-  };
-  const handleYearMax = (e) => {
-    const v = e.target.value.trim();
-    onFilterChange({ ...filterState, yearMax: v === '' ? null : v });
-  };
-  const handleRatingMin = (e) => {
-    const v = e.target.value.trim();
-    onFilterChange({ ...filterState, ratingMin: v === '' ? null : v });
-  };
-  const handleRatingMax = (e) => {
-    const v = e.target.value.trim();
-    onFilterChange({ ...filterState, ratingMax: v === '' ? null : v });
-  };
-  const handleSportToggle = (key) => {
-    const current = filterState.sports || {};
-    onFilterChange({
-      ...filterState,
-      sports: { ...current, [key]: !current[key] },
-    });
-  };
+  const chips = useMemo(
+    () => activeFilterChips(filterState, preferenceState, preferencesActive),
+    [filterState, preferenceState, preferencesActive]
+  );
 
   return (
     <aside className="side-panel">
@@ -158,212 +161,137 @@ export default function SidePanel({
         )}
       </section>
 
-      <div className="preference-panel-row">
-        <button
-          type="button"
-          className="btn-preferences"
-          onClick={onOpenPreferences}
-          disabled={loading}
-        >
-          Что вам важно в школе?
-        </button>
-        {preferencesActive && <span className="preference-badge">подбор вкл.</span>}
-      </div>
-
       {selectedGroup === 'schools' ? (
         <>
-      <section className="search-section">
-        <label className="label">Поиск</label>
-        <div className="search-row">
-          <input
-            type="text"
-            className="search-input"
-            placeholder="Введите запрос..."
-            value={searchQuery}
-            onChange={(e) => onSearchChange(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && onSearchSubmit()}
-          />
-          <button
-            type="button"
-            className="search-btn"
-            onClick={onSearchSubmit}
-            aria-label="Найти"
-          >
-            <span className="search-icon">🔍</span>
-          </button>
-        </div>
-      </section>
-
-      <section className="filters-section">
-        <div className="filters-header">
-          <span className="label">Фильтры</span>
-        </div>
-
-        {Object.entries(FILTER_KEYS).map(([key, label]) => (
-          <div key={key} className="filter-block">
-            <button
-              type="button"
-              className={`filter-trigger ${openFilter === key ? 'open' : ''}`}
-              onClick={() => toggleFilter(key)}
-            >
-              {label}
-              <span className="filter-chevron">{openFilter === key ? '▼' : '▶'}</span>
-            </button>
-            {openFilter === key && (
-              <div className="filter-body">
-                {key === 'year' && (
-                  <div className="filter-year">
-                    <label>От</label>
-                    <input
-                      type="number"
-                      min={1800}
-                      max={2100}
-                      placeholder="год"
-                      value={filterState.yearMin ?? ''}
-                      onChange={handleYearMin}
-                    />
-                    <label>До</label>
-                    <input
-                      type="number"
-                      min={1800}
-                      max={2100}
-                      placeholder="год"
-                      value={filterState.yearMax ?? ''}
-                      onChange={handleYearMax}
-                    />
-                  </div>
-                )}
-                {key === 'rating' && (
-                  <div className="filter-rating">
-                    <label>От</label>
-                    <input
-                      type="number"
-                      min={1}
-                      max={5}
-                      step={0.1}
-                      placeholder="1"
-                      value={filterState.ratingMin ?? ''}
-                      onChange={handleRatingMin}
-                    />
-                    <label>До</label>
-                    <input
-                      type="number"
-                      min={1}
-                      max={5}
-                      step={0.1}
-                      placeholder="5"
-                      value={filterState.ratingMax ?? ''}
-                      onChange={handleRatingMax}
-                    />
-                  </div>
-                )}
-                {key === 'sports' && (
-                  <div className="filter-sports">
-                    {SPORTS_OPTIONS.map(({ key: optKey, label: optLabel }) => (
-                      <label key={optKey} className="checkbox-label">
-                        <input
-                          type="checkbox"
-                          checked={!!(filterState.sports && filterState.sports[optKey])}
-                          onChange={() => handleSportToggle(optKey)}
-                        />
-                        {optLabel}
-                      </label>
-                    ))}
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-        ))}
-
-        <div className="apply-row">
-          <button
-            type="button"
-            className="btn-apply"
-            onClick={onApply}
-            disabled={loading}
-          >
-            {loading ? 'Загрузка…' : 'Применить'}
-          </button>
-          {filtersApplied && (
-            <button type="button" className="btn-reset" onClick={onReset}>
-              Сбросить фильтры
-            </button>
-          )}
-        </div>
-      </section>
-
-      <section className="school-list-section">
-        <div className="school-list-header">
-          <span className="school-count">
-            Найдено школ: <strong>{totalCount != null ? totalCount : rankedSchools.length}</strong>
-          </span>
-          <select
-            className="sort-select"
-            value={sortBy || 'rating_total'}
-            onChange={(e) => onSortChange(e.target.value)}
-            aria-label="Сортировка списка"
-          >
-            {SORT_OPTIONS.map(({ key, label }) => (
-              <option key={key} value={key}>{label}</option>
-            ))}
-          </select>
-        </div>
-        <div className="school-list">
-          {loading && rankedSchools.length === 0 && <div className="school-list-empty">Загрузка…</div>}
-          {!loading && rankedSchools.length === 0 && (
-            <div className="school-list-empty">Ничего не найдено. Измените фильтры</div>
-          )}
-          {rankedSchools.map((s, idx) => (
-            <button
-              type="button"
-              key={s.school_id}
-              className={`school-row ${selectedSchoolId === s.school_id ? 'active' : ''}`}
-              onClick={() => onSelectSchool(s)}
-            >
-              <span className="school-rank">#{idx + 1}</span>
-              <span className="school-row-body">
-                <span className="school-row-name">{s.name_ym || s.name_2gis || `Школа ${s.school_id}`}</span>
-                <span className="school-row-meta">
-                  {s.rating_total != null && <span className="pts">{Number(s.rating_total).toFixed(1)} pts</span>}
-                  {s.ege_average_score != null && s.ege_average_score > 0 && (
-                    <span className="ege"> ЕГЭ {Math.round(s.ege_average_score)}</span>
-                  )}
-                </span>
-              </span>
-              <StarRating value={avgReviewRating(s)} size={12} />
-            </button>
-          ))}
-        </div>
-      </section>
-          </>
-        ) : (
-          <section className="school-list-section">
-            <div className="school-list-header">
-              <span className="school-count">
-                Найдено: <strong>{groupInstitutions.filter((i) => i.location?.coordinates).length}</strong>
-              </span>
-            </div>
-            <div className="school-list">
-              {groupInstitutions.filter((i) => i.location?.coordinates).map((it) => (
+          <section className="search-section">
+            <div className="search-row">
+              <input
+                type="text"
+                className="search-input"
+                placeholder="Поиск школы..."
+                value={searchQuery}
+                onChange={(e) => onSearchChange(e.target.value)}
+                onKeyDown={(e) => e.key === 'Enter' && onSearchSubmit()}
+              />
+              {searchQuery ? (
                 <button
                   type="button"
-                  key={it.institution_id}
-                  className="school-row"
-                  onClick={() => onSelectInstitution(it)}
+                  className="search-btn"
+                  onClick={onSearchClear}
+                  aria-label="Очистить поиск"
+                  title="Очистить поиск"
                 >
-                  <span className="school-row-body">
-                    <span className="school-row-name">{it.name}</span>
-                    <span className="school-row-meta">{it.address || ''}</span>
-                  </span>
+                  <span className="search-icon">✕</span>
                 </button>
-              ))}
-              {groupInstitutions.length === 0 && (
-                <div className="school-list-empty">Нет данных для этой группы и города</div>
+              ) : (
+                <button
+                  type="button"
+                  className="search-btn"
+                  onClick={onSearchSubmit}
+                  aria-label="Найти"
+                  title="Найти"
+                >
+                  <span className="search-icon">🔍</span>
+                </button>
               )}
             </div>
           </section>
-        )}
+
+          <div className="filters-row">
+            <button type="button" className="btn-filters" onClick={onOpenFilters}>
+              Фильтры и подбор
+              {chips.length > 0 && <span className="filters-count">{chips.length}</span>}
+            </button>
+          </div>
+
+          {chips.length > 0 && (
+            <div className="active-chips">
+              {chips.map((c) => (
+                <button
+                  type="button"
+                  key={c.kind}
+                  className="active-chip"
+                  onClick={() => onRemoveChip(c.kind)}
+                  title="Убрать фильтр"
+                >
+                  {c.label}
+                  <span className="chip-x">✕</span>
+                </button>
+              ))}
+            </div>
+          )}
+
+          <section className="school-list-section">
+            <div className="school-list-header">
+              <span className="school-count">
+                Найдено школ: <strong>{totalCount != null ? totalCount : rankedSchools.length}</strong>
+              </span>
+              <select
+                className="sort-select"
+                value={sortBy || 'rating_total'}
+                onChange={(e) => onSortChange(e.target.value)}
+                aria-label="Сортировка списка"
+              >
+                {SORT_OPTIONS.map(({ key, label }) => (
+                  <option key={key} value={key}>{label}</option>
+                ))}
+              </select>
+            </div>
+            <div className="school-list">
+              {loading && rankedSchools.length === 0 && <div className="school-list-empty">Загрузка…</div>}
+              {!loading && rankedSchools.length === 0 && (
+                <div className="school-list-empty">Ничего не найдено. Измените фильтры</div>
+              )}
+              {rankedSchools.map((s, idx) => (
+                <button
+                  type="button"
+                  key={s.school_id}
+                  className={`school-row ${selectedSchoolId === s.school_id ? 'active' : ''}`}
+                  onClick={() => onSelectSchool(s)}
+                >
+                  <span className="school-rank">#{idx + 1}</span>
+                  <span className="school-row-body">
+                    <span className="school-row-name">{s.name_ym || s.name_2gis || `Школа ${s.school_id}`}</span>
+                    <span className="school-row-meta">
+                      {s.rating_total != null && <span className="pts">{Number(s.rating_total).toFixed(1)} pts</span>}
+                      {s.ege_average_score != null && s.ege_average_score > 0 && (
+                        <span className="ege"> ЕГЭ {Math.round(s.ege_average_score)}</span>
+                      )}
+                    </span>
+                  </span>
+                  <StarRating value={avgReviewRating(s)} size={12} />
+                </button>
+              ))}
+            </div>
+          </section>
+        </>
+      ) : (
+        <section className="school-list-section">
+          <div className="school-list-header">
+            <span className="school-count">
+              Найдено: <strong>{groupInstitutions.filter((i) => i.location?.coordinates).length}</strong>
+            </span>
+          </div>
+          <div className="school-list">
+            {groupInstitutions.filter((i) => i.location?.coordinates).map((it) => (
+              <button
+                type="button"
+                key={it.institution_id}
+                className="school-row"
+                onClick={() => onSelectInstitution(it)}
+              >
+                <span className="school-row-body">
+                  <span className="school-row-name">{it.name}</span>
+                  <span className="school-row-meta">{it.address || ''}</span>
+                </span>
+              </button>
+            ))}
+            {groupInstitutions.length === 0 && (
+              <div className="school-list-empty">Нет данных для этой группы и города</div>
+            )}
+          </div>
+        </section>
+      )}
     </aside>
   );
 }

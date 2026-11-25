@@ -86,6 +86,9 @@ export default function SchoolAnalysisPage({ school, rank, total, onBack, onShow
       </button>
 
       <header className="ap-header">
+        {school.photo && (
+          <img className="ap-photo" src={school.photo} alt={name} loading="lazy" />
+        )}
         <div className="ap-header-main">
           <div className="ap-badges">
             {rank != null && <span className="ap-badge ap-badge-rank">#{rank} из {total}</span>}
