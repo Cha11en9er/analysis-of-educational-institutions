@@ -75,6 +75,18 @@ def main() -> None:
     try:
         with conn:
             with conn.cursor() as cur:
+                # в sa.school лежат только школы (в выгрузке отзывов попадались
+                # и другие организации, например садики) — отзывы без школы пропускаем
+                cur.execute("SELECT school_id FROM sa.school")
+                known = {r[0] for r in cur.fetchall()}
+                skipped_codes = sorted({sid - 100000 for (_, sid, *_r) in rows if sid not in known})
+                rows = [r for r in rows if r[1] in known]
+                ratings_2gis = [r for r in ratings_2gis if r[0] in known]
+                ratings_ym = [r for r in ratings_ym if r[0] in known]
+                if skipped_codes:
+                    print(f"Пропущено организаций без школы в БД: {len(skipped_codes)} "
+                          f"(коды ОО: {', '.join(map(str, skipped_codes))})")
+                print(f"Отзывов после фильтра: {len(rows)}")
                 execute_batch(
                     cur,
                     """
