@@ -411,8 +411,6 @@ async def get_schools_for_map(
                     "city_total": row[18],
                 }
             )
-        cursor.close()
-
         # RANK-02 (аудит 25.11): школы Энгельса в расчёте подбора — их показатели
         # приходят из sa.school, а не из final_school_data.json
         extra_rows = None
@@ -435,6 +433,8 @@ async def get_schools_for_map(
                 }
                 for r in cursor.fetchall()
             ]
+        cursor.close()
+
         bundle = load_preference_bundle(extra_rows=extra_rows)
         # Наличие анализа отзывов определяем по analyz-файлам (тот же критерий,
         # что и в json-режиме), а не по bundle.final_review_school_ids — папка
