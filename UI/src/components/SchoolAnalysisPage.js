@@ -28,7 +28,7 @@ const SENTIMENT_COLORS = { 'Позитивные': '#22c55e', 'Нейтраль�
  * Полная страница анализа школы в стиле Replit-версии: светлый фон, белые
  * карточки r16, Inter. Тексты отзывов не отображаются — только агрегаты.
  */
-export default function SchoolAnalysisPage({ school, rank, total, onBack, onShowDynamics }) {
+export default function SchoolAnalysisPage({ school, rank, total, onBack }) {
   const [reviews, setReviews] = useState([]);
   const [loadingReviews, setLoadingReviews] = useState(true);
 
@@ -87,71 +87,77 @@ export default function SchoolAnalysisPage({ school, rank, total, onBack, onShow
 
       <header className="ap-header">
         {school.photo && (
-          <img className="ap-photo" src={school.photo} alt={name} loading="lazy" />
+          <img className="ap-photo-wide" src={school.photo} alt={name} loading="lazy" />
         )}
-        <div className="ap-header-main">
-          <div className="ap-badges">
-            {rank != null && <span className="ap-badge ap-badge-rank">#{rank} из {total}</span>}
-            {school.building_type && <span className="ap-badge">{school.building_type}</span>}
-            {school.administrative_district && <span className="ap-badge">{school.administrative_district} район</span>}
+        <div className="ap-header-row">
+          <div className="ap-header-main">
+            <div className="ap-badges">
+              {rank != null && <span className="ap-badge ap-badge-rank">#{rank} из {total}</span>}
+              {school.building_type && <span className="ap-badge">{school.building_type}</span>}
+              {school.administrative_district && <span className="ap-badge">{school.administrative_district} район</span>}
+            </div>
+            <h1 className="ap-title">
+              {name}
+              <StarRating value={star} size={20} />
+            </h1>
+            <p className="ap-address">{school.school_address}{school.city ? ` · ${school.city}` : ''}</p>
           </div>
-          <h1 className="ap-title">
-            {name}
-            <StarRating value={star} size={20} />
-          </h1>
-          <p className="ap-address">{school.school_address}{school.city ? ` · ${school.city}` : ''}</p>
+          <div className="ap-score">
+            <span className="ap-score-label">Итоговый балл</span>
+            <span className="ap-score-value">
+              {school.rating_total != null ? Number(school.rating_total).toFixed(2) : 'нет данных'}
+            </span>
+            <span className="ap-score-caption">баллов</span>
+          </div>
         </div>
-        <div className="ap-score">
-          <span className="ap-score-label">Итоговый балл</span>
-          <span className="ap-score-value">
-            {school.rating_total != null ? Number(school.rating_total).toFixed(2) : 'нет данных'}
-          </span>
-          <span className="ap-score-caption">баллов</span>
+
+        <div className="ap-facts">
+          {school.rating_2gis != null && (
+            <div className="ap-fact"><span>2ГИС</span><b>{Number(school.rating_2gis).toFixed(1)}</b></div>
+          )}
+          {school.rating_yandex != null && (
+            <div className="ap-fact"><span>Яндекс</span><b>{Number(school.rating_yandex).toFixed(1)}</b></div>
+          )}
+          {school.ege_average_score != null && school.ege_average_score > 0 && (
+            <div className="ap-fact">
+              <span>ЕГЭ{school.ege_year ? ` ${school.ege_year}` : ''}</span>
+              <b>{Number(school.ege_average_score).toFixed(1)}</b>
+            </div>
+          )}
+          {school.university_admission_percent != null && school.university_admission_percent > 0 && (
+            <div className="ap-fact">
+              <span>В вузы{school.university_admission_year ? ` ${school.university_admission_year}` : ''}</span>
+              <b>{Math.round(school.university_admission_percent)}%</b>
+            </div>
+          )}
+          {school.olympiad_winners_count != null && school.olympiad_winners_count > 0 && (
+            <div className="ap-fact"><span>Олимпиады</span><b>{school.olympiad_winners_count}</b></div>
+          )}
+          {school.price_median != null && school.price_median > 0 && (
+            <div className="ap-fact"><span>Медиана жилья</span><b>{(school.price_median / 1e6).toFixed(1)} млн</b></div>
+          )}
+        </div>
+
+        <div className="ap-links">
+          {school.link_2gis && (
+            <a href={school.link_2gis} target="_blank" rel="noopener noreferrer" className="ap-link">Открыть в 2ГИС</a>
+          )}
+          {school.link_yandex && (
+            <a href={school.link_yandex} target="_blank" rel="noopener noreferrer" className="ap-link">Открыть в Яндекс Картах</a>
+          )}
+          {school.link_gosuslugi && (
+            <a
+              href={school.link_gosuslugi}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ap-link"
+              title="Официальный сайт школы на Госуслугах"
+            >
+              Госуслуги школы
+            </a>
+          )}
         </div>
       </header>
-
-      <div className="ap-metrics">
-        <div className="ap-card ap-metric">
-          <span className="ap-metric-label">Оценки пользователей</span>
-          <div className="ap-metric-ratings">
-            {school.rating_2gis != null && (
-              <span className="ap-rating"><StarRating value={Number(school.rating_2gis)} /> <i>2ГИС</i></span>
-            )}
-            {school.rating_yandex != null && (
-              <span className="ap-rating"><StarRating value={Number(school.rating_yandex)} /> <i>Яндекс</i></span>
-            )}
-            {school.rating_2gis == null && school.rating_yandex == null && <span className="ap-muted">Нет оценок</span>}
-          </div>
-        </div>
-        <div className="ap-card ap-metric">
-          <span className="ap-metric-label">Средний балл ЕГЭ{school.ege_year ? ` ${school.ege_year}` : ''}</span>
-          <span className="ap-metric-value">{school.ege_average_score > 0 ? Number(school.ege_average_score).toFixed(1) : 'нет данных'}</span>
-          {(!school.ege_average_score || school.ege_average_score <= 0) && (
-            <span className="ap-metric-sub">школа публикует только баллы по предметам</span>
-          )}
-        </div>
-        <div className="ap-card ap-metric">
-          <span className="ap-metric-label">Олимпиады</span>
-          <span className="ap-metric-value">{school.olympiad_winners_count || 'нет данных'}</span>
-          {school.olympiad_winners_count > 0 && (
-            <span className="ap-metric-sub">победителей и призёров</span>
-          )}
-        </div>
-        <div className="ap-card ap-metric">
-          <span className="ap-metric-label">Поступление в вузы{school.university_admission_year ? ` ${school.university_admission_year}` : ''}</span>
-          <span className="ap-metric-value">
-            {school.university_admission_percent != null ? `${Math.round(school.university_admission_percent)}%` : 'нет данных'}
-          </span>
-        </div>
-        <div className="ap-card ap-metric">
-          <span className="ap-metric-label">Медиана жилья в прикреплённых домах</span>
-          <span className="ap-metric-value">
-            {school.price_median != null && school.price_median > 0
-              ? `${(school.price_median / 1e6).toFixed(1)} млн ₽`
-              : 'нет данных'}
-          </span>
-        </div>
-      </div>
 
       {subjects.length > 0 && (
         <section className="ap-card ap-section">
@@ -256,11 +262,6 @@ export default function SchoolAnalysisPage({ school, rank, total, onBack, onShow
                 </ResponsiveContainer>
               </div>
             </div>
-            {onShowDynamics && (
-              <button type="button" className="ap-dynamics-btn" onClick={onShowDynamics}>
-                Динамика отзывов по месяцам →
-              </button>
-            )}
           </>
         )}
       </section>

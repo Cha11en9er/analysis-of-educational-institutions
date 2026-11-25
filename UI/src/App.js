@@ -6,7 +6,6 @@ import SidePanel from './components/SidePanel';
 import SchoolBottomCard from './components/SchoolBottomCard';
 import InstitutionBottomCard from './components/InstitutionBottomCard';
 import SchoolAnalysisPage from './components/SchoolAnalysisPage';
-import AnalyticsView, { AnalyticsChart } from './components/AnalyticsView';
 import Toast from './components/Toast';
 import FiltersModal from './components/FiltersModal';
 
@@ -193,17 +192,12 @@ function App() {
   const [schoolDetailLoading, setSchoolDetailLoading] = useState(false);
   const [sortBy, setSortBy] = useState('rating_total');
   const [showAnalysisPage, setShowAnalysisPage] = useState(false);
-  const [showAnalytics, setShowAnalytics] = useState(false);
   const [institutionToast, setInstitutionToast] = useState(null);
   // Разграничение заведений: группа для селектора + город + общие/частные внутри школ
   const [selectedGroup, setSelectedGroup] = useState('schools'); // schools|preschool|vuz|other
   const [selectedCity, setSelectedCity] = useState('Саратов'); // Саратов|Энгельс
   const [schoolOwnership, setSchoolOwnership] = useState('all'); // all|public|private
   const [institutionsByGroup, setInstitutionsByGroup] = useState({}); // group -> list
-  const [analyticsReviews, setAnalyticsReviews] = useState([]);
-  const [analyticsLoading, setAnalyticsLoading] = useState(false);
-  const [analyticsAppliedTopics, setAnalyticsAppliedTopics] = useState([]);
-  const [analyticsInterval, setAnalyticsInterval] = useState('month');
 
   const fetchSchools = useCallback(
     async (params = {}) => {
@@ -341,7 +335,6 @@ function App() {
       const m = path.match(/^\/school\/(\d+)(\/analysis)?\/?$/);
       if (m) {
         const sid = Number(m[1]);
-        setShowAnalytics(false);
         setInstitutionToast(null);
         if (selectedSchoolId !== sid) {
           setSelectedSchoolId(sid);
@@ -351,7 +344,6 @@ function App() {
         pushedEntryRef.current = true;
       } else {
         setShowAnalysisPage(false);
-        setShowAnalytics(false);
         setSelectedSchoolId(null);
         setSchoolDetail(null);
         setInstitutionToast(null);
@@ -429,31 +421,6 @@ function App() {
     setSelectedSchoolId(null);
     setSchoolDetail(null);
     setShowAnalysisPage(false);
-    if (window.location.pathname !== '/') {
-      window.history.pushState({}, '', '/');
-    }
-  }, []);
-
-  const handleStatistics = useCallback(() => {
-    if (!selectedSchoolId) return;
-    setShowAnalytics(true);
-    setAnalyticsAppliedTopics([]);
-  }, [selectedSchoolId]);
-
-  useEffect(() => {
-    if (!showAnalytics || !selectedSchoolId) return;
-    setAnalyticsLoading(true);
-    axios
-      .get(`${API_URL}/api/schools/${selectedSchoolId}/reviews/topics`)
-      .then(({ data }) => setAnalyticsReviews(data.reviews || []))
-      .catch(() => setAnalyticsReviews([]))
-      .finally(() => setAnalyticsLoading(false));
-  }, [showAnalytics, selectedSchoolId]);
-
-  const handleBackFromAnalytics = useCallback(() => {
-    setShowAnalytics(false);
-    setAnalyticsReviews([]);
-    setAnalyticsAppliedTopics([]);
     if (window.location.pathname !== '/') {
       window.history.pushState({}, '', '/');
     }
@@ -547,7 +514,7 @@ function App() {
     setShowFiltersModal(true);
   }, []);
 
-  const showSchoolDetail = selectedSchoolId != null && !showAnalytics;
+  const showSchoolDetail = selectedSchoolId != null;
 
   // Название вкладки: имя выбранной школы (иначе — общее)
   useEffect(() => {
@@ -565,7 +532,6 @@ function App() {
           rank={rankOf(schoolDetail.school_id)}
           total={rankedIds.length}
           onBack={handleBackFromAnalysisPage}
-          onShowDynamics={handleStatistics}
         />
         {toast && (
           <Toast
@@ -582,101 +548,77 @@ function App() {
 
   return (
     <div className={`app${cardOpen ? ' app-card-open' : ''}`}>
-      {showAnalytics ? (
-        <AnalyticsView
-          school={schoolDetail}
-          onBack={handleBackFromAnalytics}
-          reviews={analyticsReviews}
-          loading={analyticsLoading}
-          appliedTopics={analyticsAppliedTopics}
-          onApplyTopics={setAnalyticsAppliedTopics}
-          interval={analyticsInterval}
-          onIntervalChange={setAnalyticsInterval}
-        />
-      ) : (
-        <SidePanel
-          schools={schools}
-          totalCount={totalCount}
-          selectedSchoolId={selectedSchoolId}
-          onSelectSchool={handleSchoolClick}
-          sortBy={sortBy}
-          onSortChange={setSortBy}
-          selectedGroup={selectedGroup}
-          onGroupChange={handleGroupChange}
-          selectedCity={selectedCity}
-          onCityChange={handleCityChange}
-          schoolOwnership={schoolOwnership}
-          onOwnershipChange={setSchoolOwnership}
-          groupInstitutions={groupInstitutions}
-          onSelectInstitution={setInstitutionToast}
-          searchQuery={searchQuery}
-          onSearchChange={setSearchQuery}
-          onSearchSubmit={handleSearchSubmit}
-          onSearchClear={handleSearchClear}
-          filterState={filterState}
-          preferenceState={preferenceState}
-          preferencesActive={preferencesActive}
-          onOpenFilters={handleOpenFilters}
-          onRemoveChip={handleRemoveChip}
-          loading={loading}
-        />
-      )}
+      <SidePanel
+        schools={schools}
+        totalCount={totalCount}
+        selectedSchoolId={selectedSchoolId}
+        onSelectSchool={handleSchoolClick}
+        sortBy={sortBy}
+        onSortChange={setSortBy}
+        selectedGroup={selectedGroup}
+        onGroupChange={handleGroupChange}
+        selectedCity={selectedCity}
+        onCityChange={handleCityChange}
+        schoolOwnership={schoolOwnership}
+        onOwnershipChange={setSchoolOwnership}
+        groupInstitutions={groupInstitutions}
+        onSelectInstitution={setInstitutionToast}
+        searchQuery={searchQuery}
+        onSearchChange={setSearchQuery}
+        onSearchSubmit={handleSearchSubmit}
+        onSearchClear={handleSearchClear}
+        filterState={filterState}
+        preferenceState={preferenceState}
+        preferencesActive={preferencesActive}
+        onOpenFilters={handleOpenFilters}
+        onRemoveChip={handleRemoveChip}
+        loading={loading}
+      />
       <main className="map-area">
-        {showAnalytics ? (
-          <AnalyticsChart
-            reviews={analyticsReviews}
-            appliedTopics={analyticsAppliedTopics}
-            interval={analyticsInterval}
-            loading={analyticsLoading}
+        <>
+          {schoolDetailLoading && (
+            <div className="map-loading-overlay">
+              <span>Загрузка…</span>
+            </div>
+          )}
+          <MapView
+            schools={schools}
+            selectedSchool={selectedGroup === 'schools' ? schoolDetail : null}
+            onSchoolClick={handleSchoolClick}
+            preferencesActive={preferencesActive}
+            institutionsGroup={
+              selectedGroup === 'schools'
+                ? null
+                : { group: selectedGroup, items: groupInstitutions }
+            }
           />
-        ) : (
-          <>
-            {schoolDetailLoading && (
-              <div className="map-loading-overlay">
-                <span>Загрузка…</span>
-              </div>
-            )}
-            <MapView
-              schools={schools}
-              selectedSchool={selectedGroup === 'schools' ? schoolDetail : null}
-              onSchoolClick={handleSchoolClick}
-              preferencesActive={preferencesActive}
-              institutionsGroup={
-                selectedGroup === 'schools'
-                  ? null
-                  : { group: selectedGroup, items: groupInstitutions }
-              }
+          {showSchoolDetail && selectedGroup === 'schools' && schoolDetail && (
+            <SchoolBottomCard
+              school={schoolDetail}
+              rank={rankOf(schoolDetail.school_id)}
+              total={rankedIds.length}
+              maxima={maxima}
+              onClose={handleCloseBottomCard}
+              onOpenDetails={handleOpenAnalysisPage}
             />
-            {showSchoolDetail && selectedGroup === 'schools' && schoolDetail && (
-              <SchoolBottomCard
-                school={schoolDetail}
-                rank={rankOf(schoolDetail.school_id)}
-                total={rankedIds.length}
-                maxima={maxima}
-                onClose={handleCloseBottomCard}
-                onOpenDetails={handleOpenAnalysisPage}
-              />
-            )}
-            {selectedGroup !== 'schools' && institutionToast && (
-              <InstitutionBottomCard
-                institution={institutionToast}
-                onClose={() => setInstitutionToast(null)}
-              />
-            )}
-          </>
-        )}
+          )}
+          {selectedGroup !== 'schools' && institutionToast && (
+            <InstitutionBottomCard
+              institution={institutionToast}
+              onClose={() => setInstitutionToast(null)}
+            />
+          )}
+        </>
       </main>
-      {!showAnalytics && (
-        <FiltersModal
-          open={showFiltersModal}
-          onClose={handleFiltersClose}
-          onApply={handleModalApply}
-          initialFilters={filterState}
-          initialPrefs={preferenceState}
-          loading={loading}
-          onToast={setToast}
-        />
-      )}
+      <FiltersModal
+        open={showFiltersModal}
+        onClose={handleFiltersClose}
+        onApply={handleModalApply}
+        initialFilters={filterState}
+        initialPrefs={preferenceState}
+        loading={loading}
+        onToast={setToast}
+      />
       {toast && (
         <Toast
           message={toast.message}
