@@ -38,7 +38,11 @@ export default function InstitutionBottomCard({ institution, onClose }) {
         {institution.city && <span className="chip">{institution.city}</span>}
       </div>
       <div className="bottom-card-actions">
-        {institution.phone && <span className="inst-phone">{institution.phone}</span>}
+        {institution.phone && (
+          <a className="inst-phone" href={`tel:${institution.phone.replace(/[^+\d]/g, '')}`}>
+            {institution.phone}
+          </a>
+        )}
         {institution.site && (
           <a href={institution.site} target="_blank" rel="noopener noreferrer" className="bottom-link">
             Сайт учреждения

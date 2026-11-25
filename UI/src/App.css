@@ -918,6 +918,8 @@
 .bottom-card-components { margin-top: 10px; }
 .bottom-card-subjects { margin-top: 10px; }
 .subject-row { display: flex; justify-content: space-between; gap: 12px; padding: 3px 0; border-bottom: 1px dashed #eef2f7; }
+.subject-row.total-row { border-top: 1px solid #e2e8f0; margin-top: 4px; padding-top: 6px; }
+.components-note { font-size: 0.72rem; color: #94a3b8; margin: 6px 0 0; }
 .subject-name { font-size: 0.78rem; color: #475569; }
 .subject-score { font-size: 0.8rem; font-weight: 700; color: #0f172a; font-variant-numeric: tabular-nums; }
 .components-title { font-size: 0.64rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 6px; font-weight: 600; }

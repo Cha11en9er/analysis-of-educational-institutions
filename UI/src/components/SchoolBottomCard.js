@@ -11,21 +11,31 @@ const SPORTS_LABELS = [
 // ЕГЭ — средний балл; Олимпиады — число победителей/призёров;
 // Учителя/Оснащённость/Атмосфера — индекс по отзывам, шкала 0–10.
 export const RATING_COMPONENTS = [
-  { key: 'rating_ege', label: 'ЕГЭ', kind: 'ege' },
-  { key: 'olympiad_winners_count', label: 'Олимпиады', kind: 'olympiads' },
   { key: 'rating_teachers', label: 'Учителя', kind: 'score10' },
   { key: 'rating_mto', label: 'Оснащённость', kind: 'score10' },
   { key: 'rating_psychological_climate', label: 'Атмосфера', kind: 'score10' },
 ];
 
+// Слагаемые итогового балла (MET-02): тот же состав, что в compute_rating_total
+export const TOTAL_PARTS = [
+  { key: 'rating_ege', label: 'ЕГЭ' },
+  { key: 'rating_university_admission', label: 'Поступление в вузы' },
+  { key: 'rating_maps', label: 'Оценки карт' },
+  { key: 'rating_profiles', label: 'Профили' },
+  { key: 'rating_olympiads', label: 'Олимпиады' },
+  { key: 'rating_sports_infrastructure', label: 'Спортинфраструктура' },
+];
+
 export function formatWinners(n) {
+  // MET-05 (аудит 25.11): в показателе школы суммируются победители и призёры
+  // за указанный школой период, а не только победители текущего года
   const abs = Math.abs(n) % 100;
   const last = abs % 10;
-  if (n === 0) return 'нет победителей';
-  if (abs > 10 && abs < 20) return `${n} победителей`;
-  if (last > 1 && last < 5) return `${n} победителя`;
-  if (last === 1) return `${n} победитель`;
-  return `${n} победителей`;
+  if (n === 0) return 'нет победителей и призёров';
+  if (abs > 10 && abs < 20) return `${n} победителей и призёров`;
+  if (last > 1 && last < 5) return `${n} победителя и призёра`;
+  if (last === 1) return `${n} победитель и призёр`;
+  return `${n} победителей и призёров`;
 }
 
 /**
@@ -82,13 +92,23 @@ export default function SchoolBottomCard({ school, rank, total, maxima, onClose,
   if (!school) return null;
   const name = school.name_ym || school.name_2gis || `Школа ${school.school_id}`;
   const sports = SPORTS_LABELS.filter(({ key }) => school[key] === true);
-  const components = RATING_COMPONENTS
+  const reviewParts = RATING_COMPONENTS
     .map((comp) => ({ label: comp.label, ...componentValue(school, comp, maxima) }))
     .filter((c) => c.text != null);
+  // слагаемые итогового балла (MET-02): только компоненты формулы
+  const totalParts = TOTAL_PARTS.filter(({ key }) => typeof school[key] === 'number')
+    .map(({ key, label }) => ({
+      label,
+      value: `${Number(school[key]).toFixed(1)}`,
+    }));
+  if (school.has_second_shift === true && school.rating_total != null) {
+    totalParts.push({ label: 'Вторая смена', value: '-10.0' });
+  }
   const star = avgReviewRating(school);
   const subjects = Array.isArray(school.ege_subjects) ? school.ege_subjects : [];
   const subjectsYear = subjects.find((s) => s.year)?.year || null;
-  const hasDetails = components.length > 0 || sports.length > 0 || subjects.length > 0;
+  const hasDetails =
+    totalParts.length > 0 || reviewParts.length > 0 || sports.length > 0 || subjects.length > 0;
 
   return (
     <div className="school-bottom-card">
@@ -156,10 +176,33 @@ export default function SchoolBottomCard({ school, rank, total, maxima, onClose,
 
         {expanded && (
           <>
-            {components.length > 0 && (
+            {totalParts.length > 0 && (
               <div className="bottom-card-components">
-                <div className="components-title">Компоненты рейтинга</div>
-                {components.map(({ label, text, width }) => (
+                <div className="components-title">Слагаемые рейтинга</div>
+                {totalParts.map(({ label, value }) => (
+                  <div className="subject-row" key={label}>
+                    <span className="subject-name">{label}</span>
+                    <span className="subject-score">{value}</span>
+                  </div>
+                ))}
+                <div className="subject-row total-row">
+                  <span className="subject-name">Итоговый балл</span>
+                  <span className="subject-score">
+                    {school.rating_total != null ? Number(school.rating_total).toFixed(1) : '—'}
+                  </span>
+                </div>
+                {reviewParts.length > 0 && (
+                  <p className="components-note">
+                    Показатели из отзывов (учителя, оснащённость, атмосфера) в итог не входят.
+                  </p>
+                )}
+              </div>
+            )}
+
+            {reviewParts.length > 0 && (
+              <div className="bottom-card-components">
+                <div className="components-title">Показатели из отзывов</div>
+                {reviewParts.map(({ label, text, width }) => (
                   <div className="component-row" key={label}>
                     <span className="component-label">{label}</span>
                     <div className="component-track">

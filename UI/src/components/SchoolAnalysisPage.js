@@ -5,7 +5,7 @@ import {
   PieChart, Pie, Cell,
 } from 'recharts';
 import { TOPICS } from './AnalyticsView';
-import { StarRating, avgReviewRating, RATING_COMPONENTS, componentValue, formatWinners } from './SchoolBottomCard';
+import { StarRating, avgReviewRating, RATING_COMPONENTS, TOTAL_PARTS, componentValue, formatWinners } from './SchoolBottomCard';
 
 const API_URL =
   process.env.REACT_APP_API_URL !== undefined
@@ -68,10 +68,15 @@ export default function SchoolAnalysisPage({ school, rank, total, onBack }) {
   }).filter((d) => d.Позитивно + d.Нейтрально + d.Негативно > 0), [reviews]);
 
   const ratingBars = useMemo(() => RATING_COMPONENTS
-    .map((comp) => ({ label: comp.label, ...componentValue(school, comp) }))
-    .filter((c) => c.text != null), [school]);
+    .map((comp) => ({ label: comp.label, ...componentValue(school, comp, maxima) }))
+    .filter((c) => c.text != null), [school, maxima]);
 
   if (!school) return null;
+  const totalParts = TOTAL_PARTS.filter(({ key }) => typeof school[key] === 'number')
+    .map(({ key, label }) => ({ label, value: Number(school[key]).toFixed(1) }));
+  if (school.has_second_shift === true && school.rating_total != null) {
+    totalParts.push({ label: 'Вторая смена', value: '-10.0' });
+  }
   const name = school.name_ym || school.name_2gis || `Школа ${school.school_id}`;
   const sports = SPORTS_LABELS.filter(({ key }) => school[key] === true);
   const subjects = Array.isArray(school.ege_subjects) ? school.ege_subjects : [];
@@ -204,10 +209,34 @@ export default function SchoolAnalysisPage({ school, rank, total, onBack }) {
         </section>
       )}
 
+      {totalParts.length > 0 && (
+        <section className="ap-card ap-section">
+          <h3>Слагаемые рейтинга</h3>
+          <p className="ap-muted ap-section-hint">
+            Итоговый балл складывается из подтверждённых показателей; отсутствующие просто не добавляются.
+            Показатели из отзывов (учителя, оснащённость, атмосфера) в итог не входят.
+          </p>
+          <div className="ap-bars">
+            {totalParts.map(({ label, value }) => (
+              <div className="ap-bar-row" key={label}>
+                <span className="ap-bar-label">{label}</span>
+                <div className="ap-bar-track" />
+                <span className="ap-bar-val">{value}</span>
+              </div>
+            ))}
+            <div className="ap-bar-row">
+              <span className="ap-bar-label"><b>Итоговый балл</b></span>
+              <div className="ap-bar-track" />
+              <span className="ap-bar-val"><b>{school.rating_total != null ? Number(school.rating_total).toFixed(1) : '—'}</b></span>
+            </div>
+          </div>
+        </section>
+      )}
+
       {ratingBars.length > 0 && (
         <section className="ap-card ap-section">
-          <h3>Структура рейтинга</h3>
-          <p className="ap-muted ap-section-hint">Относительные показатели школы по ключевым метрикам</p>
+          <h3>Показатели из отзывов</h3>
+          <p className="ap-muted ap-section-hint">Шкала 0–10 по тематическому анализу отзывов</p>
           <div className="ap-bars">
             {ratingBars.map(({ label, text, width }) => (
               <div className="ap-bar-row" key={label}>
@@ -233,7 +262,7 @@ export default function SchoolAnalysisPage({ school, rank, total, onBack }) {
           <>
             <div className="ap-reviews-grid">
               <div className="ap-reviews-block">
-                <h4>Общая тональность</h4>
+                <h4>Тональность тематических упоминаний</h4>
                 <ResponsiveContainer width="100%" height={200}>
                   <PieChart>
                     <Pie data={sentimentData} dataKey="value" nameKey="name" innerRadius={52} outerRadius={76} paddingAngle={3}>

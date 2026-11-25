@@ -17,7 +17,9 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-INFRA_JSON = REPO_ROOT / "parsing/school_gosuslugi/sg_data/sg_data_output/sd_2_stage_gosuslugi_infrastucture_output.json"
+# MET-подбор (RANK-03, аудит 25.11): единый слой данных — final_school_data.json,
+# те же очищенные значения, что видит карточка (только общий средний ЕГЭ и т.д.)
+SCHOOLS_JSON = REPO_ROOT / "school_data/final_school_data.json"
 REVIEWS_PATTERN = str(
     REPO_ROOT / "review_data/rd_2_stage_analys/rd_separately_analyzed/school_reviews_separately_*_analyz.json"
 )
@@ -179,28 +181,60 @@ def _min_max_norm_present(values: Dict[int, float], school_id: int) -> Optional[
     return _min_max_norm(values, school_id, neutral=0.5)
 
 
-@lru_cache(maxsize=1)
-def load_preference_bundle() -> Dict[str, Any]:
-    """Загружает JSON и считает нормализованные метрики по school_id."""
-    by_id: Dict[int, Dict[str, float]] = {}
+_RAW_CACHE: Dict[int, Dict[str, float]] = {}
 
-    if INFRA_JSON.is_file():
-        with open(INFRA_JSON, "r", encoding="utf-8") as f:
+
+def _raw_school_metrics_from_final() -> Dict[int, Dict[str, float]]:
+    """Сырые показатели школ Саратова из final_school_data.json (кэшируется)."""
+    if _RAW_CACHE:
+        return _RAW_CACHE
+    if SCHOOLS_JSON.is_file():
+        with open(SCHOOLS_JSON, "r", encoding="utf-8") as f:
             schools = json.load(f)
         for obj in schools:
             sid = obj.get("id")
             if sid is None:
                 continue
             sid = int(sid)
-            by_id.setdefault(sid, {})
-            oly = _olympiad_score_from_school(obj)
-            by_id[sid]["_olympiad_raw"] = oly
-            ege, vuz = _parse_ege_vuz(obj)
+            _RAW_CACHE.setdefault(sid, {})
+            oly = obj.get("olympiad_winners_count")
+            if oly is not None:
+                _RAW_CACHE[sid]["_olympiad_raw"] = math.log1p(max(float(oly), 0.0))
+            ege = obj.get("ege_average_score")
             if ege is not None:
-                by_id[sid]["_ege_raw"] = ege
+                _RAW_CACHE[sid]["_ege_raw"] = float(ege)
+            vuz = obj.get("university_admission_percent")
             if vuz is not None:
-                by_id[sid]["_vuz_raw"] = vuz
-            by_id[sid]["_building_static_raw"] = _building_static(obj)
+                _RAW_CACHE[sid]["_vuz_raw"] = float(vuz)
+            _RAW_CACHE[sid]["_building_static_raw"] = _building_static(obj)
+    return _RAW_CACHE
+
+
+def load_preference_bundle(extra_rows: Optional[List[Dict[str, Any]]] = None) -> Dict[str, Any]:
+    """Считает нормализованные метрики по school_id.
+
+    extra_rows — школы городов (Энгельс) из БД: ege_average_score,
+    university_admission_percent, olympiad_winners_count и паспорт здания
+    (RANK-02: без них все школы Энгельса получали нейтральные 50).
+    """
+    by_id: Dict[int, Dict[str, float]] = {sid: dict(v) for sid, v in _raw_school_metrics_from_final().items()}
+
+    for obj in extra_rows or []:
+        sid = obj.get("id")
+        if sid is None:
+            continue
+        sid = int(sid)
+        by_id.setdefault(sid, {})
+        oly = obj.get("olympiad_winners_count")
+        if oly is not None:
+            by_id[sid]["_olympiad_raw"] = math.log1p(max(float(oly), 0.0))
+        ege = obj.get("ege_average_score")
+        if ege is not None:
+            by_id[sid]["_ege_raw"] = float(ege)
+        vuz = obj.get("university_admission_percent")
+        if vuz is not None:
+            by_id[sid]["_vuz_raw"] = float(vuz)
+        by_id[sid]["_building_static_raw"] = _building_static(obj)
 
     for path in glob(REVIEWS_PATTERN):
         sid = _school_id_from_review_filename(path)

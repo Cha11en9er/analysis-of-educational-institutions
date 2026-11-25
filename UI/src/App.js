@@ -196,6 +196,11 @@ function App() {
   const [selectedCity, setSelectedCity] = useState('Саратов'); // Саратов|Энгельс
   const [schoolOwnership, setSchoolOwnership] = useState('all'); // all|public|private
   const [institutionsByGroup, setInstitutionsByGroup] = useState({}); // group -> list
+  const [institutionsLoading, setInstitutionsLoading] = useState(false);
+  const [institutionsError, setInstitutionsError] = useState(null);
+  const [institutionQuery, setInstitutionQuery] = useState('');
+  const [selectedInstitutionId, setSelectedInstitutionId] = useState(null);
+  const [institutionsRetryNonce, setInstitutionsRetryNonce] = useState(0);
 
   const fetchSchools = useCallback(
     async (params = {}) => {
@@ -251,26 +256,43 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fetchSchools]);
 
-  // Клик по учреждению открывает его карточку и закрывает школьную
+  // Клик по учреждению открывает его карточку и закрывает школьную.
+  // UX-11 (аудит 25.11): выбор учреждения кодируется в адресе /institution/{id}.
+  const handleInstitutionClick = useCallback((it) => {
+    setSelectedSchoolId(null);
+    setSchoolDetail(null);
+    setShowAnalysisPage(false);
+    const path = window.location.pathname;
+    if (/^\/institution\/\d+/.test(path)) {
+      window.history.replaceState({}, '', `/institution/${it.institution_id}`);
+    } else {
+      window.history.pushState({}, '', `/institution/${it.institution_id}`);
+    }
+    setSelectedInstitutionId(it.institution_id);
+    setInstitutionToast(it);
+  }, []);
+
+  const handleCloseInstitutionCard = useCallback(() => {
+    setInstitutionToast(null);
+    setSelectedInstitutionId(null);
+    if (/^\/institution\/\d+/.test(window.location.pathname)) {
+      window.history.replaceState({}, '', '/');
+    }
+  }, []);
+
   useEffect(() => {
-    window.__uchgradInstitutionClick = (it) => {
-      setSelectedSchoolId(null);
-      setSchoolDetail(null);
-      setShowAnalysisPage(false);
-      if (/^\/school\/\d+/.test(window.location.pathname)) {
-        window.history.replaceState({}, '', '/');
-      }
-      setInstitutionToast(it);
-    };
+    window.__uchgradInstitutionClick = handleInstitutionClick;
     return () => {
       delete window.__uchgradInstitutionClick;
     };
-  }, []);
+  }, [handleInstitutionClick]);
 
   // Загрузка учреждений по выбранной группе и городу (для не-школьных групп)
   useEffect(() => {
     if (selectedGroup === 'schools') return undefined;
     let cancelled = false;
+    setInstitutionsLoading(true);
+    setInstitutionsError(null);
     axios
       .get(`${API_URL}/api/institutions`, {
         params: { group: selectedGroup, city: selectedCity },
@@ -281,13 +303,20 @@ function App() {
             ...prev,
             [`${selectedCity}_${selectedGroup}`]: data.institutions || [],
           }));
+          setInstitutionsLoading(false);
         }
       })
-      .catch(() => {});
+      .catch((err) => {
+        // UX-10: сбой запроса больше не выглядит как пустой каталог
+        if (!cancelled) {
+          setInstitutionsError(err.response?.data?.detail || err.message || 'ошибка сети');
+          setInstitutionsLoading(false);
+        }
+      });
     return () => {
       cancelled = true;
     };
-  }, [selectedGroup, selectedCity]);
+  }, [selectedGroup, selectedCity, institutionsRetryNonce]);
 
   const groupInstitutions = institutionsByGroup[`${selectedCity}_${selectedGroup}`] || [];
 
@@ -336,24 +365,53 @@ function App() {
     const onPopState = () => {
       const path = window.location.pathname;
       const m = path.match(/^\/school\/(\d+)(\/analysis)?\/?$/);
+      const im = path.match(/^\/institution\/(\d+)\/?$/);
       if (m) {
         const sid = Number(m[1]);
         setInstitutionToast(null);
+        setSelectedInstitutionId(null);
         if (selectedSchoolId !== sid) {
           setSelectedSchoolId(sid);
           loadSchoolDetail(sid);
         }
         setShowAnalysisPage(Boolean(m[2]));
+      } else if (im) {
+        const iid = Number(im[1]);
+        setSelectedSchoolId(null);
+        setSchoolDetail(null);
+        setShowAnalysisPage(false);
+        // прямая ссылка или возврат: открыть карточку учреждения
+        setSelectedInstitutionId(iid);
+        setInstitutionsLoading(true);
+        axios
+          .get(`${API_URL}/api/institutions/${iid}`)
+          .then(({ data }) => {
+            setInstitutionsByGroup((prev) => ({
+              ...prev,
+              [`${data.city}_${data.group}`]: [
+                ...((prev[`${data.city}_${data.group}`] || []).filter(
+                  (x) => x.institution_id !== iid
+                )),
+                data,
+              ],
+            }));
+            setInstitutionToast(data);
+            if (selectedGroup === 'schools') setSelectedGroup(data.group === 'school' ? 'other' : data.group);
+            if (selectedCity !== data.city) setSelectedCity(data.city);
+            setInstitutionsLoading(false);
+          })
+          .catch(() => setInstitutionsLoading(false));
       } else {
         setShowAnalysisPage(false);
         setSelectedSchoolId(null);
         setSchoolDetail(null);
         setInstitutionToast(null);
+        setSelectedInstitutionId(null);
       }
     };
     window.addEventListener('popstate', onPopState);
     return () => window.removeEventListener('popstate', onPopState);
-  }, [selectedSchoolId, loadSchoolDetail]);
+  }, [selectedSchoolId, selectedGroup, selectedCity, loadSchoolDetail]);
 
   // Ранг школы по итоговому рейтингу в текущей выборке
   const rankedIds = useMemo(() => {
@@ -370,10 +428,16 @@ function App() {
   }, [schools]);
   const rankOf = useCallback(
     (id) => {
+      // RANK-06 (аудит 25.11): место в городе считает API (rank по всем школам
+      // города) и не меняется от поиска/фильтров
+      const sch = schools.find((x) => x.school_id === id);
+      if (sch && typeof sch.city_rank === 'number' && sch.city_rank > 0) {
+        return sch.city_rank;
+      }
       const i = rankedIds.indexOf(id);
       return i === -1 ? null : i + 1;
     },
-    [rankedIds]
+    [rankedIds, schools]
   );
 
   // Максимумы по выборке — для относительного масштаба полосок компонентов
@@ -526,7 +590,8 @@ function App() {
         <SchoolAnalysisPage
           school={schoolDetail}
           rank={rankOf(schoolDetail.school_id)}
-          total={rankedIds.length}
+          total={schools[0]?.city_total || rankedIds.length}
+          maxima={maxima}
           onBack={handleBackFromAnalysisPage}
         />
         {toast && (
@@ -558,7 +623,7 @@ function App() {
         schoolOwnership={schoolOwnership}
         onOwnershipChange={setSchoolOwnership}
         groupInstitutions={groupInstitutions}
-        onSelectInstitution={setInstitutionToast}
+        onSelectInstitution={handleInstitutionClick}
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
         onSearchSubmit={handleSearchSubmit}
@@ -569,6 +634,12 @@ function App() {
         onOpenFilters={handleOpenFilters}
         onRemoveChip={handleRemoveChip}
         loading={loading}
+        instLoading={institutionsLoading}
+        instError={institutionsError}
+        onInstRetry={() => setInstitutionsRetryNonce((n) => n + 1)}
+        instQuery={institutionQuery}
+        onInstQueryChange={setInstitutionQuery}
+        selectedInstitutionId={selectedInstitutionId}
       />
       <main className="map-area">
         <>
@@ -592,7 +663,7 @@ function App() {
             <SchoolBottomCard
               school={schoolDetail}
               rank={rankOf(schoolDetail.school_id)}
-              total={rankedIds.length}
+              total={schools[0]?.city_total || rankedIds.length}
               maxima={maxima}
               onClose={handleCloseBottomCard}
               onOpenDetails={handleOpenAnalysisPage}
@@ -601,7 +672,7 @@ function App() {
           {selectedGroup !== 'schools' && institutionToast && (
             <InstitutionBottomCard
               institution={institutionToast}
-              onClose={() => setInstitutionToast(null)}
+              onClose={handleCloseInstitutionCard}
             />
           )}
         </>

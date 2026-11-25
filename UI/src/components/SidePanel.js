@@ -25,7 +25,19 @@ const SORT_OPTIONS = [
   { key: 'year_built', label: 'По году постройки (новые)' },
 ];
 
-function sortSchools(schools, sortKey) {
+function sortSchools(schools, sortKey, preferencesActive) {
+  // RANK-01 (аудит 25.11): при активном подборе список сортируется по
+  // preference_score — как обещает подбор, а не по общему рейтингу
+  if (preferencesActive) {
+    return [...schools].sort((a, b) => {
+      const va = typeof a.preference_score === 'number' && Number.isFinite(a.preference_score) ? a.preference_score : null;
+      const vb = typeof b.preference_score === 'number' && Number.isFinite(b.preference_score) ? b.preference_score : null;
+      if (va == null && vb == null) return (a.school_id || 0) - (b.school_id || 0);
+      if (va == null) return 1;
+      if (vb == null) return -1;
+      return vb - va;
+    });
+  }
   const val = (s) => {
     const v = s[sortKey];
     return typeof v === 'number' && Number.isFinite(v) ? v : null;
@@ -92,8 +104,28 @@ export default function SidePanel({
   onOpenFilters,
   onRemoveChip,
   loading,
+  instLoading,
+  instError,
+  onInstRetry,
+  instQuery,
+  onInstQueryChange,
+  selectedInstitutionId,
 }) {
-  const rankedSchools = useMemo(() => sortSchools(schools || [], sortBy || 'rating_total'), [schools, sortBy]);
+  const instSource = groupInstitutions.filter((i) => i.location?.coordinates);
+  const visibleInstitutions = useMemo(() => {
+    const q = (instQuery || '').trim().toLowerCase().replace(/ё/g, 'е');
+    if (!q) return instSource;
+    return instSource.filter((it) => {
+      const hay = `${it.name || ''} ${it.name_full || ''} ${it.address || ''}`
+        .toLowerCase()
+        .replace(/ё/g, 'е');
+      return hay.includes(q);
+    });
+  }, [instSource, instQuery]);
+  const rankedSchools = useMemo(
+    () => sortSchools(schools || [], sortBy || 'rating_total', preferencesActive),
+    [schools, sortBy, preferencesActive]
+  );
   const chips = useMemo(
     () => activeFilterChips(filterState, preferenceState, preferencesActive),
     [filterState, preferenceState, preferencesActive]
@@ -105,7 +137,7 @@ export default function SidePanel({
         <img src={logo} alt="УчГрад" className="brand-logo" />
         <div>
           <h1 className="panel-title">УчГрад</h1>
-          <p className="panel-subtitle">Рейтинги школ, ЕГЭ и отзывы</p>
+          <p className="panel-subtitle">Рейтинги и подбор учебных заведений</p>
         </div>
       </div>
 
@@ -114,7 +146,7 @@ export default function SidePanel({
         <div className="group-selector">
           {[
             ['schools', 'Школы'],
-            ['preschool', 'Садики'],
+            ['preschool', 'Детские сады'],
             ['vuz', 'Вузы'],
             ['other', 'Иные'],
           ].map(([g, label]) => (
@@ -249,11 +281,21 @@ export default function SidePanel({
                   className={`school-row ${selectedSchoolId === s.school_id ? 'active' : ''}`}
                   onClick={() => onSelectSchool(s)}
                 >
-                  <span className="school-rank">#{idx + 1}</span>
+                  <span className="school-rank">
+                    {(!preferencesActive && (sortBy || 'rating_total') === 'rating_total')
+                      ? `#${idx + 1}`
+                      : `${idx + 1}.`}
+                  </span>
                   <span className="school-row-body">
                     <span className="school-row-name">{s.name_ym || s.name_2gis || `Школа ${s.school_id}`}</span>
                     <span className="school-row-meta">
-                      {s.rating_total != null && <span className="pts">{Number(s.rating_total).toFixed(1)} pts</span>}
+                      {preferencesActive && typeof s.preference_score === 'number' ? (
+                        <span className="pts">совпадение {Math.round(s.preference_score)}%</span>
+                      ) : (
+                        s.rating_total != null && (
+                          <span className="pts">{Number(s.rating_total).toFixed(1)} балла</span>
+                        )
+                      )}
                       {s.ege_average_score != null && s.ege_average_score > 0 && (
                         <span className="ege"> ЕГЭ {Math.round(s.ege_average_score)}</span>
                       )}
@@ -267,17 +309,48 @@ export default function SidePanel({
         </>
       ) : (
         <section className="school-list-section">
+          <div className="search-section">
+            <div className="search-row">
+              <input
+                type="text"
+                className="search-input"
+                placeholder="Поиск по названию или адресу..."
+                value={instQuery}
+                onChange={(e) => onInstQueryChange(e.target.value)}
+              />
+              {instQuery && (
+                <button
+                  type="button"
+                  className="search-btn"
+                  onClick={() => onInstQueryChange('')}
+                  aria-label="Очистить поиск"
+                  title="Очистить поиск"
+                >
+                  <span className="search-icon">✕</span>
+                </button>
+              )}
+            </div>
+          </div>
           <div className="school-list-header">
             <span className="school-count">
-              Найдено: <strong>{groupInstitutions.filter((i) => i.location?.coordinates).length}</strong>
+              Найдено: <strong>{visibleInstitutions.length}</strong>
             </span>
           </div>
           <div className="school-list">
-            {groupInstitutions.filter((i) => i.location?.coordinates).map((it) => (
+            {instLoading && <div className="school-list-empty">Загрузка…</div>}
+            {!instLoading && instError && (
+              <div className="school-list-empty">
+                Не удалось загрузить учреждения: {instError}
+                <div style={{ marginTop: '0.5rem' }}>
+                  <button type="button" className="chip" onClick={onInstRetry}>Повторить</button>
+                </div>
+              </div>
+            )}
+            {!instLoading && !instError && visibleInstitutions.map((it) => (
               <button
                 type="button"
                 key={it.institution_id}
-                className="school-row"
+                className={`school-row ${selectedInstitutionId === it.institution_id ? 'active' : ''}`}
                 onClick={() => onSelectInstitution(it)}
               >
                 <span className="school-row-body">
@@ -286,8 +359,10 @@ export default function SidePanel({
                 </span>
               </button>
             ))}
-            {groupInstitutions.length === 0 && (
-              <div className="school-list-empty">Нет данных для этой группы и города</div>
+            {!instLoading && !instError && visibleInstitutions.length === 0 && (
+              <div className="school-list-empty">
+                {instQuery ? 'Ничего не найдено по запросу' : 'Нет данных для этой группы и города'}
+              </div>
             )}
           </div>
         </section>

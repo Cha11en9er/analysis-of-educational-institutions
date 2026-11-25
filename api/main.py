@@ -262,8 +262,8 @@ async def get_schools_for_map(
     search: Optional[str] = Query(None),
     year_min: Optional[int] = Query(None, ge=1800, le=2100),
     year_max: Optional[int] = Query(None, ge=1800, le=2100),
-    rating_min: Optional[float] = Query(None, ge=0.0, le=110.0),
-    rating_max: Optional[float] = Query(None, ge=0.0, le=110.0),
+    rating_min: Optional[float] = Query(None, ge=0.0, le=200.0),
+    rating_max: Optional[float] = Query(None, ge=0.0, le=200.0),
     has_pool: Optional[bool] = Query(None),
     has_stadium: Optional[bool] = Query(None),
     has_sports_ground: Optional[bool] = Query(None),
@@ -334,8 +334,11 @@ async def get_schools_for_map(
                 s.school_id, s.name_2gis, s.name_ym, s.school_address, s.year_built,
                 s.has_sports_complex, s.has_pool, s.has_stadium, s.has_sports_ground,
                 ST_X(s.location::geometry) AS lon, ST_Y(s.location::geometry) AS lat,
-                r.rating_yandex, s.rating_total, s.ege_average_score,
-                s.olympiad_winners_count, s.ownership
+                r.rating_yandex, r.rating_2gis, s.rating_total, s.ege_average_score,
+                s.olympiad_winners_count, s.ownership,
+                RANK() OVER (PARTITION BY s.city ORDER BY s.rating_total DESC NULLS LAST,
+                             s.school_id) AS city_rank,
+                COUNT(*) OVER (PARTITION BY s.city) AS city_total
             FROM sa.school s
             LEFT JOIN sa.rating r ON r.school_id = s.school_id
             WHERE s.city = %s
@@ -399,15 +402,40 @@ async def get_schools_for_map(
                         ),
                     },
                     "rating_yandex": float(rating) if rating is not None else None,
-                    "rating_total": float(row[12]) if row[12] is not None else None,
-                    "ege_average_score": float(row[13]) if row[13] is not None else None,
-                    "olympiad_winners_count": row[14],
-                    "ownership": row[15],
+                    "rating_2gis": float(row[12]) if row[12] is not None else None,
+                    "rating_total": float(row[13]) if row[13] is not None else None,
+                    "ege_average_score": float(row[14]) if row[14] is not None else None,
+                    "olympiad_winners_count": row[15],
+                    "ownership": row[16],
+                    "city_rank": row[17],
+                    "city_total": row[18],
                 }
             )
         cursor.close()
 
-        bundle = load_preference_bundle()
+        # RANK-02 (аудит 25.11): школы Энгельса в расчёте подбора — их показатели
+        # приходят из sa.school, а не из final_school_data.json
+        extra_rows = None
+        if pref_olympiads or pref_bullying or pref_staff or pref_building or pref_exam or pref_location:
+            cursor.execute(
+                "SELECT school_id AS id, ege_average_score, university_admission_percent, "
+                "olympiad_winners_count, building_type, floors, reconstruction_year "
+                "FROM sa.school WHERE city = %s",
+                (city,),
+            )
+            extra_rows = [
+                {
+                    "id": r[0],
+                    "ege_average_score": r[1],
+                    "university_admission_percent": r[2],
+                    "olympiad_winners_count": r[3],
+                    "building_type": r[4],
+                    "floors": r[5],
+                    "reconstruction_year": r[6],
+                }
+                for r in cursor.fetchall()
+            ]
+        bundle = load_preference_bundle(extra_rows=extra_rows)
         # Наличие анализа отзывов определяем по analyz-файлам (тот же критерий,
         # что и в json-режиме), а не по bundle.final_review_school_ids — папка
         # rd_3_stage, на которую ссылается preference_scoring, не используется.
@@ -539,7 +567,8 @@ async def get_school_by_id(school_id: int):
                 s.rating_psychological_climate, s.rating_sports_infrastructure,
                 s.rating_profiles,
                 s.capacity, s.building_info->>'area_sqm' AS area_sqm, s.material,
-                s.price_median, s.building_info, s.ege_subjects
+                s.price_median, s.building_info, s.ege_subjects,
+                s.rating_maps, s.rating_university_admission
             FROM sa.school s
             LEFT JOIN sa.link l ON l.school_id = s.school_id
             LEFT JOIN sa.rating r ON r.school_id = s.school_id
@@ -591,7 +620,9 @@ async def get_school_by_id(school_id: int):
             "link_gosuslugi": row[16],
             "rating_yandex": _num(row[17]),
             "rating_2gis": _num(row[18]),
-            "has_review_analysis": school_id in review_analysis_school_ids(),
+            "has_review_analysis": _has_review_topics(cursor, school_id)
+            if not use_json()
+            else school_id in review_analysis_school_ids(),
             "city": row[19],
             "rating_total": _num(row[20]),
             "ege_average_score": _num(row[21]),
@@ -609,7 +640,12 @@ async def get_school_by_id(school_id: int):
             "rating_psychological_climate": _num(row[32]),
             "rating_sports_infrastructure": _num(row[33]),
             "rating_profiles": _num(row[34]),
+            "rating_maps": _num(row[41]),
+            "rating_university_admission": _num(row[42]),
             "capacity": row[35],
+            "capacity_source": (row[39] or {}).get("capacity_source")
+            if isinstance(row[39], dict)
+            else None,
             "area_sqm": _num(row[36]),
             "wall_material": row[37],
             "price_median": int(row[38]) if row[38] is not None else None,
@@ -691,6 +727,15 @@ async def get_school_reviews(
     )
 
 
+def _has_review_topics(cursor, school_id: int) -> bool:
+    """Есть ли у школы размеченные отзывы (тот же источник, что отдаёт /reviews/topics)."""
+    cursor.execute(
+        "SELECT EXISTS(SELECT 1 FROM sa.review WHERE school_id=%s AND topics::text <> '{}')",
+        (school_id,),
+    )
+    return bool(cursor.fetchone()[0])
+
+
 KIND_TO_GROUP = {
     "general": "school",
     "preschool": "preschool",
@@ -725,6 +770,7 @@ async def get_institutions(
                    address, phone, site, latitude, longitude
             FROM sa.institution
             WHERE city = %s AND latitude IS NOT NULL
+              AND NOT COALESCE(catalog_excluded, FALSE)
         """
         params: list[Any] = [city]
         if group and group != "school":
@@ -765,6 +811,59 @@ async def get_institutions(
         ]
         cur.close()
         return {"institutions": items, "count": len(items)}
+    except psycopg2.Error as e:
+        raise HTTPException(status_code=500, detail=f"Ошибка БД: {str(e)}") from e
+    finally:
+        if conn:
+            conn.close()
+
+
+@app.get("/api/institutions/{institution_id}")
+async def get_institution_by_id(institution_id: int):
+    """Одна карточка учреждения для устойчивой ссылки /institution/{id} (UX-11)."""
+    if use_json():
+        raise HTTPException(status_code=501, detail="Слои учреждений доступны только в db-режиме")
+    import psycopg2
+
+    conn = None
+    try:
+        conn = get_db_connection()
+        cur = conn.cursor()
+        cur.execute(
+            """
+            SELECT institution_id, code_oo, kind, inst_group, ownership, name, name_full,
+                   address, phone, site, latitude, longitude, city
+            FROM sa.institution
+            WHERE institution_id = %s
+              AND NOT COALESCE(catalog_excluded, FALSE)
+            """,
+            (institution_id,),
+        )
+        r = cur.fetchone()
+        cur.close()
+        if not r:
+            raise HTTPException(status_code=404, detail="Учреждение не найдено")
+        city = r[12]
+        return {
+            "institution_id": r[0],
+            "photo": photo_path(r[2], city, r[1], r[5]),
+            "code_oo": r[1],
+            "kind": r[2],
+            "group": r[3] or KIND_TO_GROUP.get(r[2], "other"),
+            "ownership": r[4],
+            "name": r[5],
+            "name_full": r[6],
+            "address": r[7],
+            "phone": r[8],
+            "site": r[9],
+            "city": city,
+            "location": {
+                "type": "Point",
+                "coordinates": [float(r[11]), float(r[10])]
+                if r[10] is not None and r[11] is not None
+                else None,
+            },
+        }
     except psycopg2.Error as e:
         raise HTTPException(status_code=500, detail=f"Ошибка БД: {str(e)}") from e
     finally:

@@ -42,12 +42,14 @@ export default function MapView({
   onSchoolClick,
   preferencesActive,
   institutionsGroup,
+  selectedInstitutionId,
 }) {
   const containerRef = useRef(null);
   const mapRef = useRef(null);
   const layersRef = useRef({ markers: [], features: [], houses: [], institutions: [] });
   const viewRef = useRef({ center: SARATOV_CENTER, zoom: DEFAULT_ZOOM });
   const lastSchoolsKeyRef = useRef(null);
+  const lastInstKeyRef = useRef(null);
   const cameraAdjustedRef = useRef(false);
   const onSchoolClickRef = useRef(onSchoolClick);
   const [mapError, setMapError] = useState(null);
@@ -253,12 +255,25 @@ export default function MapView({
         const el = document.createElement('div');
         el.className = 'institution-marker-yandex';
         el.style.background = groupColor;
+        // MAP-01: при выбранном учреждении остальные приглушены,
+        // выбранная точка крупнее и выше маркеров домов
+        const isSelected = selectedInstitutionId != null && it.institution_id === selectedInstitutionId;
+        const isDimmed = selectedInstitutionId != null && !isSelected;
+        el.style.opacity = isDimmed ? '0.25' : '1';
+        if (isSelected) {
+          el.style.width = '26px';
+          el.style.height = '26px';
+          el.style.boxShadow = '0 0 0 3px rgba(37, 99, 235, 0.35), 0 1px 5px rgba(15, 23, 42, 0.4)';
+        }
         el.title = `${it.name}\n${it.address || ''}`;
         el.addEventListener('click', (e) => {
           e.stopPropagation();
           window.__uchgradInstitutionClick?.(it);
         });
-        const marker = new YMapMarker({ coordinates: [lon, lat], zIndex: 8 }, el);
+        const marker = new YMapMarker(
+          { coordinates: [lon, lat], zIndex: isSelected ? 500 : isDimmed ? 7 : 8 },
+          el
+        );
         map.addChild(marker);
         list.push(marker);
       });
@@ -270,6 +285,41 @@ export default function MapView({
     if (lastSchoolsKeyRef.current !== schoolsKey) {
       lastSchoolsKeyRef.current = schoolsKey;
       cameraAdjustedRef.current = false; // новый набор разрешает одну подгонку
+    }
+    // MAP-01/MAP-02: центрирование на выбранном учреждении и подгонка камеры
+    // под активный слой заведений
+    const instItems = institutionsGroup?.items || [];
+    const instKey = `${institutionsGroup?.group || ''}_${instItems.length}`;
+    if (instItems.length > 0 && lastInstKeyRef.current !== instKey) {
+      lastInstKeyRef.current = instKey;
+      cameraAdjustedRef.current = false;
+    }
+    const selectedInst =
+      instItems.find((it) => it.institution_id === selectedInstitutionId) || null;
+    if (!selectedSchool && selectedInst) {
+      const c = selectedInst.location?.coordinates;
+      if (c) {
+        const currentZoom = map.location?.zoom ?? viewRef.current.zoom ?? DEFAULT_ZOOM;
+        const zoom = Math.max(currentZoom, 16);
+        const shift = Math.min(0.02, 0.0035 * Math.pow(2, 16 - zoom));
+        const center = [c[0], c[1] - shift];
+        viewRef.current = { center, zoom };
+        map.setLocation({ center, zoom, duration: 600 });
+      }
+    } else if (
+      !selectedSchool &&
+      !selectedInst &&
+      !cameraAdjustedRef.current &&
+      instItems.length > 0 &&
+      validSchools.length === 0
+    ) {
+      const bounds = boundsFromLonLats(
+        instItems.map((it) => it.location?.coordinates).filter(Boolean)
+      );
+      if (bounds) {
+        map.setLocation({ bounds, duration: 300 });
+        cameraAdjustedRef.current = true;
+      }
     }
     if (selectedSchool) {
       const coords = lonLatOfSchool(selectedSchool);
@@ -299,6 +349,7 @@ export default function MapView({
     showAttachedLayer,
     addressesForSelected,
     institutionsGroup,
+    selectedInstitutionId,
   ]);
 
   const zoomBy = (delta) => {
