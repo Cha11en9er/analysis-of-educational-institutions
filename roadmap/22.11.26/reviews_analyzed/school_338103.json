@@ -1,38 +1,5 @@
 [
  {
-  "review_id": "23402707",
-  "topics": {},
-  "overall": "pos"
- },
- {
-  "review_id": "23572145",
-  "topics": {
-   "учителя": "pos",
-   "инфраструктура": "pos"
-  },
-  "overall": "pos"
- },
- {
-  "review_id": "38575554",
-  "topics": {
-   "учителя": "pos",
-   "инфраструктура": "pos"
-  },
-  "overall": "pos"
- },
- {
-  "review_id": "50160075",
-  "topics": {},
-  "overall": "pos"
- },
- {
-  "review_id": "265534324",
-  "topics": {
-   "инфраструктура": "neutral"
-  },
-  "overall": "neutral"
- },
- {
   "review_id": "2381030000",
   "topics": {
    "инфраструктура": "neutral"

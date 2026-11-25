@@ -1,30 +1,5 @@
 [
  {
-  "review_id": "38125718",
-  "topics": {
-   "ремонт": "neutral",
-   "охрана": "neutral"
-  },
-  "overall": "pos"
- },
- {
-  "review_id": "39522706",
-  "topics": {
-   "ремонт": "pos",
-   "учителя": "pos",
-   "инфраструктура": "pos"
-  },
-  "overall": "pos"
- },
- {
-  "review_id": "240372711",
-  "topics": {
-   "ремонт": "pos",
-   "учителя": "pos"
-  },
-  "overall": "pos"
- },
- {
   "review_id": "2384030000",
   "topics": {
    "ремонт": "pos",

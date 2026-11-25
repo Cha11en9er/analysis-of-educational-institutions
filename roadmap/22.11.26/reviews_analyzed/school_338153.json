@@ -1,90 +1,5 @@
 [
  {
-  "review_id": "17785708",
-  "topics": {
-   "учителя": "pos",
-   "инфраструктура": "pos"
-  },
-  "overall": "pos"
- },
- {
-  "review_id": "24065464",
-  "topics": {},
-  "overall": "pos"
- },
- {
-  "review_id": "32372656",
-  "topics": {
-   "еда": "neutral"
-  },
-  "overall": "pos"
- },
- {
-  "review_id": "46843852",
-  "topics": {},
-  "overall": "pos"
- },
- {
-  "review_id": "52280256",
-  "topics": {},
-  "overall": "neg"
- },
- {
-  "review_id": "56469513",
-  "topics": {},
-  "overall": "pos"
- },
- {
-  "review_id": "57552910",
-  "topics": {
-   "ремонт": "pos",
-   "учителя": "pos",
-   "еда": "pos",
-   "инфраструктура": "pos"
-  },
-  "overall": "pos"
- },
- {
-  "review_id": "68296906",
-  "topics": {
-   "охрана": "pos"
-  },
-  "overall": "neg"
- },
- {
-  "review_id": "76953102",
-  "topics": {},
-  "overall": "pos"
- },
- {
-  "review_id": "143181110",
-  "topics": {},
-  "overall": "pos"
- },
- {
-  "review_id": "241418646",
-  "topics": {},
-  "overall": "pos"
- },
- {
-  "review_id": "298623365",
-  "topics": {
-   "учителя": "pos",
-   "администрация": "pos"
-  },
-  "overall": "neg"
- },
- {
-  "review_id": "302880024",
-  "topics": {},
-  "overall": "pos"
- },
- {
-  "review_id": "305543539",
-  "topics": {},
-  "overall": "pos"
- },
- {
   "review_id": "2381530000",
   "topics": {},
   "overall": "pos"
@@ -950,13 +865,6 @@
  {
   "review_id": "3381530116",
   "topics": {},
-  "overall": "pos"
- },
- {
-  "review_id": "6052240280256633",
-  "topics": {
-   "учителя": "pos"
-  },
   "overall": "pos"
  }
 ]

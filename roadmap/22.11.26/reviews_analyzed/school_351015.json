@@ -1,45 +1,5 @@
 [
  {
-  "review_id": "11666635",
-  "topics": {
-   "учителя": "pos"
-  },
-  "overall": "pos"
- },
- {
-  "review_id": "21094355",
-  "topics": {
-   "учителя": "pos"
-  },
-  "overall": "neg"
- },
- {
-  "review_id": "42918366",
-  "topics": {
-   "учителя": "pos"
-  },
-  "overall": "pos"
- },
- {
-  "review_id": "60593387",
-  "topics": {},
-  "overall": "pos"
- },
- {
-  "review_id": "108880298",
-  "topics": {
-   "администрация": "neg"
-  },
-  "overall": "neg"
- },
- {
-  "review_id": "233123748",
-  "topics": {
-   "учителя": "pos"
-  },
-  "overall": "pos"
- },
- {
   "review_id": "2510150000",
   "topics": {
    "администрация": "neg"

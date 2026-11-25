@@ -1,37 +1,5 @@
 [
  {
-  "review_id": "40311551",
-  "topics": {},
-  "overall": "pos"
- },
- {
-  "review_id": "60156859",
-  "topics": {
-   "ремонт": "neg",
-   "администрация": "neg",
-   "инфраструктура": "neg",
-   "охрана": "neg"
-  },
-  "overall": "neg"
- },
- {
-  "review_id": "78099853",
-  "topics": {
-   "учителя": "neutral",
-   "инфраструктура": "neutral"
-  },
-  "overall": "neg"
- },
- {
-  "review_id": "91066114",
-  "topics": {
-   "ремонт": "pos",
-   "инфраструктура": "pos",
-   "охрана": "pos"
-  },
-  "overall": "pos"
- },
- {
   "review_id": "2380930000",
   "topics": {
    "ремонт": "pos",

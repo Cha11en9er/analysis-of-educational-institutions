@@ -1,61 +1,5 @@
 [
  {
-  "review_id": "11644262",
-  "topics": {
-   "инфраструктура": "pos"
-  },
-  "overall": "pos"
- },
- {
-  "review_id": "11918335",
-  "topics": {},
-  "overall": "pos"
- },
- {
-  "review_id": "29510748",
-  "topics": {},
-  "overall": "pos"
- },
- {
-  "review_id": "31875529",
-  "topics": {},
-  "overall": "pos"
- },
- {
-  "review_id": "38879156",
-  "topics": {
-   "учителя": "pos"
-  },
-  "overall": "pos"
- },
- {
-  "review_id": "54849530",
-  "topics": {
-   "учителя": "neutral"
-  },
-  "overall": "neg"
- },
- {
-  "review_id": "111978750",
-  "topics": {
-   "учителя": "neg",
-   "еда": "neg"
-  },
-  "overall": "neg"
- },
- {
-  "review_id": "189092580",
-  "topics": {
-   "учителя": "pos"
-  },
-  "overall": "neg"
- },
- {
-  "review_id": "313439585",
-  "topics": {},
-  "overall": "pos"
- },
- {
   "review_id": "2382530000",
   "topics": {
    "инфраструктура": "neutral"
@@ -188,12 +132,5 @@
   "review_id": "3382530004",
   "topics": {},
   "overall": "neutral"
- },
- {
-  "review_id": "6052240280292225",
-  "topics": {
-   "инфраструктура": "pos"
-  },
-  "overall": "pos"
  }
 ]

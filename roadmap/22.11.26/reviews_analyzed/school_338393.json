@@ -1,32 +1,5 @@
 [
  {
-  "review_id": "44487656",
-  "topics": {
-   "учителя": "pos",
-   "администрация": "pos"
-  },
-  "overall": "pos"
- },
- {
-  "review_id": "65976683",
-  "topics": {},
-  "overall": "pos"
- },
- {
-  "review_id": "115075575",
-  "topics": {
-   "администрация": "neg"
-  },
-  "overall": "neg"
- },
- {
-  "review_id": "149552477",
-  "topics": {
-   "еда": "neg"
-  },
-  "overall": "neg"
- },
- {
   "review_id": "2383930000",
   "topics": {
    "еда": "neg"

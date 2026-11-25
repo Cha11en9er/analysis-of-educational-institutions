@@ -1,32 +1,5 @@
 [
  {
-  "review_id": "48504063",
-  "topics": {},
-  "overall": "pos"
- },
- {
-  "review_id": "74119503",
-  "topics": {
-   "ремонт": "neutral"
-  },
-  "overall": "neutral"
- },
- {
-  "review_id": "165732591",
-  "topics": {
-   "учителя": "pos"
-  },
-  "overall": "pos"
- },
- {
-  "review_id": "308849311",
-  "topics": {
-   "еда": "pos",
-   "инфраструктура": "pos"
-  },
-  "overall": "pos"
- },
- {
   "review_id": "2380530000",
   "topics": {
    "ремонт": "neutral"
@@ -457,14 +430,6 @@
  {
   "review_id": "3380530058",
   "topics": {},
-  "overall": "pos"
- },
- {
-  "review_id": "6052240280292193",
-  "topics": {
-   "ремонт": "neutral",
-   "учителя": "pos"
-  },
   "overall": "pos"
  }
 ]

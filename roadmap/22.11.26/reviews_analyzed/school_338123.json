@@ -1,22 +1,5 @@
 [
  {
-  "review_id": "22255477",
-  "topics": {},
-  "overall": "pos"
- },
- {
-  "review_id": "90883083",
-  "topics": {
-   "инфраструктура": "neg"
-  },
-  "overall": "pos"
- },
- {
-  "review_id": "308409588",
-  "topics": {},
-  "overall": "pos"
- },
- {
   "review_id": "2381230000",
   "topics": {},
   "overall": "pos"
