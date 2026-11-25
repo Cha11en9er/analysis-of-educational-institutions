@@ -28,7 +28,7 @@ const SENTIMENT_COLORS = { 'Позитивные': '#22c55e', 'Нейтраль�
  * Полная страница анализа школы в стиле Replit-версии: светлый фон, белые
  * карточки r16, Inter. Тексты отзывов не отображаются — только агрегаты.
  */
-export default function SchoolAnalysisPage({ school, rank, total, onBack }) {
+export default function SchoolAnalysisPage({ school, rank, total, maxima, onBack }) {
   const [reviews, setReviews] = useState([]);
   const [loadingReviews, setLoadingReviews] = useState(true);
 
