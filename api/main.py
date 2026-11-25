@@ -134,6 +134,13 @@ def get_db_connection():
         raise HTTPException(status_code=500, detail=f"Ошибка подключения к БД: {str(e)}") from e
 
 
+_PREF_EXTRA_ROWS = None
+
+
+def _pref_extra_rows_cache():
+    return _PREF_EXTRA_ROWS
+
+
 def apply_preference_scores(
     schools: list[dict[str, Any]],
     *,
@@ -167,7 +174,7 @@ def apply_preference_scores(
         )
 
     try:
-        bundle = load_preference_bundle()
+        bundle = load_preference_bundle(extra_rows=_pref_extra_rows_cache())
     except Exception as e:
         raise HTTPException(
             status_code=500,
@@ -435,6 +442,8 @@ async def get_schools_for_map(
             ]
         cursor.close()
 
+        global _PREF_EXTRA_ROWS
+        _PREF_EXTRA_ROWS = extra_rows
         bundle = load_preference_bundle(extra_rows=extra_rows)
         # Наличие анализа отзывов определяем по analyz-файлам (тот же критерий,
         # что и в json-режиме), а не по bundle.final_review_school_ids — папка
