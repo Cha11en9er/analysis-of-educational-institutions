@@ -577,6 +577,8 @@ async def get_school_by_id(school_id: int):
             (school_id,),
         )
         row = cursor.fetchone()
+        # REV-03: флаг из тех же данных, что читает /reviews/topics
+        has_topics = _has_review_topics(cursor, school_id)
         cursor.close()
         if not row:
             raise HTTPException(status_code=404, detail="Школа не найдена")
@@ -620,7 +622,7 @@ async def get_school_by_id(school_id: int):
             "link_gosuslugi": row[16],
             "rating_yandex": _num(row[17]),
             "rating_2gis": _num(row[18]),
-            "has_review_analysis": _has_review_topics(cursor, school_id)
+            "has_review_analysis": has_topics
             if not use_json()
             else school_id in review_analysis_school_ids(),
             "city": row[19],
