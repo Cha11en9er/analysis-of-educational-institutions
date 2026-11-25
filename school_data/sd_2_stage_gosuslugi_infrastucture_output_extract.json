@@ -2573,7 +2573,7 @@
         51.540363
       ]
     },
-    "link_gosuslugi": "нету в excel",
+    "link_gosuslugi": null,
     "study_type": null,
     "specialization_extract": [
       "без специализации"
@@ -3443,7 +3443,7 @@
         51.532111
       ]
     },
-    "link_gosuslugi": "нету в excel",
+    "link_gosuslugi": null,
     "study_type": null,
     "specialization_extract": [
       "без специализации"
@@ -6547,7 +6547,7 @@
         51.611371
       ]
     },
-    "link_gosuslugi": "https://shk8-sar.gosuslugi.ru/",
+    "link_gosuslugi": "https://avrora-sar.gosuslugi.ru/",
     "specialization": [
       "Универсальный профиль"
     ],

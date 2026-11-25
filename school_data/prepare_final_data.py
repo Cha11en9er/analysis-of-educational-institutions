@@ -500,6 +500,11 @@ def vuz_for_school(
     school: dict[str, Any],
     vuz_map: dict[int, tuple[float | None, int | None]],
 ) -> tuple[float | None, int | None]:
+    # MET-10 (аудит 25.11): сначала свежая выгрузка sg_main (та же страница,
+    # что показывает карточка), старый Excel-файл — только как запасной источник
+    fresh = parse_vuz_cell(school.get("VUZ"))
+    if fresh != (None, None):
+        return fresh
     school_id = school.get("id")
     if school_id is not None:
         try:
@@ -508,7 +513,7 @@ def vuz_for_school(
                 return mapped
         except (TypeError, ValueError):
             pass
-    return parse_vuz_cell(school.get("VUZ"))
+    return fresh
 
 
 def ege_details_for_school(school: dict[str, Any]) -> dict[str, Any]:
@@ -721,6 +726,10 @@ def capacity_for_school(
         try:
             mapped = capacity_map.get(int(school_id))
             if mapped is not None:
+                # MET-12 (аудит 25.11): источник «алиса» — ответ помощника, не документ;
+                # до подтверждения вместимость не показываем и не используем в расчётах
+                if str(mapped[1] or '').strip().lower() in {'алиса', 'alisa'}:
+                    return None, None
                 return mapped
         except (TypeError, ValueError):
             pass
