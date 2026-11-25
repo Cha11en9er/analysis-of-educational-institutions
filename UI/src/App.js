@@ -253,7 +253,32 @@ function App() {
       if (m[2]) setShowAnalysisPage(true);
       loadSchoolDetail(sid);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+   
+    // прямой заход по ссылке вида /institution/{id}
+    const im = window.location.pathname.match(/^\/institution\/(\d+)\/?$/);
+    if (im) {
+      const iid = Number(im[1]);
+      setSelectedInstitutionId(iid);
+      setInstitutionsLoading(true);
+      axios
+        .get(`${API_URL}/api/institutions/${iid}`)
+        .then(({ data }) => {
+          setSelectedGroup(data.group === 'school' ? 'other' : data.group);
+          setSelectedCity(data.city || 'Саратов');
+          setInstitutionsByGroup((prev) => ({
+            ...prev,
+            [`${data.city}_${data.group}`]: [
+              ...((prev[`${data.city}_${data.group}`] || []).filter(
+                (x) => x.institution_id !== iid
+              )),
+              data,
+            ],
+          }));
+          setInstitutionToast(data);
+          setInstitutionsLoading(false);
+        })
+        .catch(() => setInstitutionsLoading(false));
+    } // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fetchSchools]);
 
   // Клик по учреждению открывает его карточку и закрывает школьную.
