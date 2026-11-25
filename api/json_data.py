@@ -141,7 +141,8 @@ def filter_schools_for_map(
         if year_max is not None and (year is None or int(year) > year_max):
             continue
 
-        rating = raw.get("rating_yandex")
+        # итоговый рейтинг школы (0-110), а не оценка карт (1-5)
+        rating = raw.get("rating_total")
         if rating_min is not None and (rating is None or float(rating) < rating_min):
             continue
         if rating_max is not None and (rating is None or float(rating) > rating_max):
