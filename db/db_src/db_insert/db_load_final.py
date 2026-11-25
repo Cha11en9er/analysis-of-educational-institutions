@@ -249,7 +249,7 @@ def main() -> None:
                         rating_psychological_climate, rating_sports_infrastructure,
                         rating_profiles, rating_maps, rating_university_admission,
                         ownership, location
-                    ) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,
+                    ) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,
                               %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,
                               ST_GeogFromText(%s))
                     ON CONFLICT (school_id) DO UPDATE SET
