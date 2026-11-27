@@ -54,22 +54,24 @@ def reset_pool() -> None:
 
 
 class PooledConnection:
-    """Обёртка над соединением: close() возвращает его в пул."""
+    """Обёртка над соединением: close() возвращает его в пул.
 
-    __slots__ = ("_pool", "_conn")
+    Обычные атрибуты (без __slots__): __getattr__ срабатывает только для
+    методов psycopg2 (cursor/commit/...), которых нет у обёртки.
+    """
 
     def __init__(self, pool: ThreadedConnectionPool, conn):
-        self.__dict__["_pool"] = pool
-        self.__dict__["_conn"] = conn
+        self._pool = pool
+        self._conn = conn
 
     def close(self) -> None:
         try:
-            self.__dict__["_pool"].putconn(self.__dict__["_conn"])
+            self._pool.putconn(self._conn)
         except Exception:
             pass
 
     def __getattr__(self, name: str) -> Any:
-        return getattr(self.__dict__["_conn"], name)
+        return getattr(self._conn, name)
 
 
 def get_pooled_connection():
