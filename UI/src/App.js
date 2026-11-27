@@ -595,6 +595,22 @@ function App() {
     setShowFiltersModal(false);
   }, []);
 
+  // Полный сброс из состояния «0 школ»: фильтры, поиск и подбор одним кликом
+  const handleResetAll = useCallback(() => {
+    const cleared = { yearMin: null, yearMax: null, ratingMin: null, ratingMax: null, sports: {} };
+    setFilterState(cleared);
+    setFiltersApplied(false);
+    setSearchQuery('');
+    setSearchSubmitted('');
+    setPreferenceState({ olympiads: false, bullying: false, staff: false, building: false, exam: false, location: false, userLat: null, userLon: null });
+    setPreferencesActive(false);
+    persistPreferences({ olympiads: false, bullying: false, staff: false, building: false, exam: false, location: false, userLat: null, userLon: null }, false);
+    const params = buildParams('', cleared, false, preferenceState, false);
+    fetchSchools(params).then((count) => {
+      setToast({ message: `Сброшено. Найдено школ: ${count}`, type: 'info' });
+    });
+  }, [fetchSchools]);
+
   const handleOpenFilters = useCallback(() => {
     setShowFiltersModal(true);
   }, []);
@@ -665,6 +681,7 @@ function App() {
         instQuery={institutionQuery}
         onInstQueryChange={setInstitutionQuery}
         selectedInstitutionId={selectedInstitutionId}
+        onResetAll={handleResetAll}
       />
       <main className="map-area">
         <>

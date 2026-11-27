@@ -741,11 +741,14 @@
 .fm-range input:focus { outline: none; border-color: #fb923c; }
 
 .fm-actions {
-  display: flex; gap: 10px; justify-content: flex-end;
+  display: flex; gap: 10px; justify-content: flex-end; align-items: center; flex-wrap: wrap;
   padding: 12px 18px 16px; border-top: 1px solid #eef2f7; background: #f8fafc;
 }
+.fm-actions .fm-btn-link { margin-right: auto; }
 .fm-btn { padding: 8px 18px; border-radius: 999px; font-size: 0.9rem; cursor: pointer; }
 .fm-btn-ghost { border: 1px solid #e2e8f0; background: #fff; color: #475569; }
+.fm-btn-link { border: none; background: transparent; color: #1d4ed8; text-decoration: underline; text-underline-offset: 3px; }
+.fm-btn-link:hover { color: #0f172a; }
 .fm-btn-ghost:hover { color: #0f172a; background: #f1f5f9; }
 .fm-btn-primary {
   border: none; background: linear-gradient(135deg, #fb923c, #ea580c);

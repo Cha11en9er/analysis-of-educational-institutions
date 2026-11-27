@@ -110,6 +110,7 @@ export default function SidePanel({
   instQuery,
   onInstQueryChange,
   selectedInstitutionId,
+  onResetAll,
 }) {
   const instSource = groupInstitutions.filter((i) => i.location?.coordinates);
   const visibleInstitutions = useMemo(() => {
@@ -272,7 +273,14 @@ export default function SidePanel({
             <div className="school-list">
               {loading && rankedSchools.length === 0 && <div className="school-list-empty">Загрузка…</div>}
               {!loading && rankedSchools.length === 0 && (
-                <div className="school-list-empty">Ничего не найдено. Измените фильтры</div>
+                <div className="school-list-empty">
+                  Ничего не найдено. Измените фильтры
+                  <div style={{ marginTop: '0.5rem' }}>
+                    <button type="button" className="chip" onClick={onResetAll}>
+                      Сбросить фильтры и поиск
+                    </button>
+                  </div>
+                </div>
               )}
               {rankedSchools.map((s, idx) => (
                 <button

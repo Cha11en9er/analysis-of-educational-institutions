@@ -93,8 +93,21 @@ export default function FiltersModal({
   }, [onToast]);
 
   const handleApply = useCallback(() => {
+    if (prefs.location && (prefs.userLat == null || prefs.userLon == null)) {
+      onToast?.({
+        message: 'Для «Близости расположения» нажмите «Моё местоположение» или снимите галочку — иначе подбор не сработает.',
+        type: 'error',
+      });
+      return;
+    }
     onApply(filters, prefs);
-  }, [filters, prefs, onApply]);
+  }, [filters, prefs, onApply, onToast]);
+
+  // Кнопка для тех, кому фильтры не нужны: окно просто закрывается,
+  // остаётся обычный список всех школ без подбора и условий
+  const handleJustSchools = useCallback(() => {
+    onApply({ ...defaultFilters, sports: {} }, { ...defaultPrefs });
+  }, [onApply]);
 
   const handleResetAll = useCallback(() => {
     setFilters({ ...defaultFilters, sports: {} });
@@ -189,6 +202,9 @@ export default function FiltersModal({
         </div>
 
         <div className="fm-actions">
+          <button type="button" className="fm-btn fm-btn-link" onClick={handleJustSchools}>
+            Мне не интересны фильтры, просто показать школы
+          </button>
           <button type="button" className="fm-btn fm-btn-ghost" onClick={handleResetAll}>
             Сбросить всё
           </button>
