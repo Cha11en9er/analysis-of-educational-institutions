@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import json as json_lib
 import re
+import time
 import os
 import sys
 from datetime import date
@@ -43,6 +44,8 @@ DATA_SOURCE = (os.getenv("DATA_SOURCE") or "json").strip().lower()
 
 app = FastAPI(title="Schools API", version="1.2.0")
 
+# Порядок важен: последний добавленный middleware выполняется первым.
+# CORS — внешний; gzip сжимает и кэшированные ответы; кэш — ближайший к обработчикам.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -55,6 +58,100 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+from fastapi import Request
+from fastapi.responses import Response as FastResponse
+from starlette.middleware.gzip import GZipMiddleware
+import db_pool
+import cache as api_cache
+
+app.add_middleware(GZipMiddleware, minimum_size=1024)
+
+# Что кэшируем и на сколько секунд (наплыв пользователей: БД бьёт редко,
+# большинство запросов отпускаются из памяти; при сбое БД отдаётся устаревшая копия)
+_CACHE_TTL = {
+    "/api/config": 300,
+    "/api/schools/map": 15,
+    "/api/institutions": 15,
+    "/api/schools": 30,
+}
+_CACHE_RE = (
+    (re.compile(r"^/api/schools/(\d+)/catchment$"), 120),
+    (re.compile(r"^/api/schools/(\d+)/reviews/topics$"), 60),
+    (re.compile(r"^/api/schools/(\d+)$"), 60),
+    (re.compile(r"^/api/institutions/(\d+)$"), 60),
+)
+_CACHE_SKIP_BODY = 3_000_000  # не храним ответы больше 3 МБ
+
+
+def _cache_route(path: str) -> tuple[str, int] | None:
+    ttl = _CACHE_TTL.get(path)
+    if ttl:
+        return path, ttl
+    for pattern, route_ttl in _CACHE_RE:
+        if pattern.match(path):
+            return path, route_ttl
+    return None
+
+
+def _stale_response(route_key: str, content_type: str) -> FastResponse | None:
+    hit = api_cache.peek(route_key)
+    if not hit:
+        return None
+    _, stored = hit
+    body, ctype = stored
+    return FastResponse(
+        content=body, media_type=ctype, headers={"X-Cache": "stale"}
+    )
+
+
+@app.middleware("http")
+async def api_cache_middleware(request: Request, call_next):
+    route = _cache_route(request.url.path) if request.method == "GET" else None
+    key = request.url.path + ("?" + request.url.query if request.url.query else "")
+    if route:
+        route_key, ttl = route
+        key = f"{route_key}|{key}"
+        hit = api_cache.peek(key)
+        if hit and time.time() - hit[0] <= ttl:
+            body, ctype = hit[1]
+            return FastResponse(content=body, media_type=ctype, headers={"X-Cache": "hit"})
+
+    response = await call_next(request)
+
+    if not route:
+        return response
+
+    # сбой обработчика (например, БД недоступна) — отдаём последнюю копию
+    if response.status_code >= 500:
+        stale = _stale_response(route_key, "application/json")
+        if stale:
+            return stale
+        return response
+
+    if response.status_code != 200:
+        return response
+
+    body = b""
+    async for chunk in response.body_iterator:
+        body += chunk
+    if len(body) <= _CACHE_SKIP_BODY:
+        api_cache._store[key] = (time.time(), (body, response.headers.get("content-type", "application/json")))
+        api_cache._order.append(key)
+        api_cache._evict_locked()
+    headers = dict(response.headers)
+    headers.pop("content-length", None)
+    headers["X-Cache"] = "miss"
+    return FastResponse(
+        content=body, status_code=200, headers=headers,
+        media_type=response.headers.get("content-type", "application/json"),
+    )
+
+
+@app.get("/healthz")
+async def healthz():
+    """Лёгкая проверка живости (без БД) — для nginx и мониторинга."""
+    return {"ok": True, "cache": api_cache.stats()}
 
 # Фотографии заведений: манифест roadmap/22.11.26/photos_manifest.json -> путь в /images
 _PHOTO_MANIFEST = None
@@ -124,14 +221,20 @@ def use_json() -> bool:
 
 
 def get_db_connection():
+    """Соединение из пула (наплыв пользователей: без открытия нового на каждый запрос)."""
+    if use_json():
+        try:
+            import psycopg2
+        except ImportError as e:
+            raise HTTPException(status_code=500, detail=f"psycopg2 не установлен: {e}") from e
+        try:
+            return psycopg2.connect(**DB_CONFIG)
+        except Exception as e:
+            raise HTTPException(status_code=500, detail=f"Ошибка подключения к БД: {str(e)}") from e
     try:
-        import psycopg2
-    except ImportError as e:
-        raise HTTPException(status_code=500, detail=f"psycopg2 не установлен: {e}") from e
-    try:
-        return psycopg2.connect(**DB_CONFIG)
+        return db_pool.get_pooled_connection()
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Ошибка подключения к БД: {str(e)}") from e
+        raise HTTPException(status_code=503, detail=f"БД временно недоступна: {str(e)}") from e
 
 
 _PREF_EXTRA_ROWS = None

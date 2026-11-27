@@ -9,7 +9,8 @@ WorkingDirectory=/opt/uchgrad
 # .env читает python-dotenv в api/main.py (не systemd EnvironmentFile —
 # там ломаются кавычки и спецсимволы вроде ) в пароле).
 Environment=DATA_SOURCE=db
-ExecStart=/opt/uchgrad/.venv/bin/uvicorn api.main:app --host 127.0.0.1 --port 8000
+# 4 воркера: каждый со своим пулом соединений и кэшем; суммарно до 40 соединений БД
+ExecStart=/opt/uchgrad/.venv/bin/uvicorn api.main:app --host 127.0.0.1 --port 8000 --workers 4
 Restart=always
 RestartSec=3
 
