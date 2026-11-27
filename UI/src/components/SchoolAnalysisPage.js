@@ -218,15 +218,13 @@ export default function SchoolAnalysisPage({ school, rank, total, maxima, onBack
           </p>
           <div className="ap-bars">
             {totalParts.map(({ label, value }) => (
-              <div className="ap-bar-row" key={label}>
+              <div className="ap-sum-row" key={label}>
                 <span className="ap-bar-label">{label}</span>
-                <div className="ap-bar-track" />
                 <span className="ap-bar-val">{value}</span>
               </div>
             ))}
-            <div className="ap-bar-row">
+            <div className="ap-sum-row">
               <span className="ap-bar-label"><b>Итоговый балл</b></span>
-              <div className="ap-bar-track" />
               <span className="ap-bar-val"><b>{school.rating_total != null ? Number(school.rating_total).toFixed(1) : '—'}</b></span>
             </div>
           </div>
@@ -280,10 +278,10 @@ export default function SchoolAnalysisPage({ school, rank, total, maxima, onBack
               <div className="ap-reviews-block">
                 <h4>Упоминания по темам</h4>
                 <ResponsiveContainer width="100%" height={300}>
-                  <BarChart data={topicData} layout="vertical" margin={{ top: 0, right: 12, left: 44, bottom: 0 }}>
+                  <BarChart data={topicData} layout="horizontal" margin={{ top: 0, right: 12, left: 44, bottom: 0 }}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-                    <XAxis type="number" tick={{ fill: '#64748b', fontSize: 12 }} />
-                    <YAxis type="category" dataKey="topic" tick={{ fill: '#64748b', fontSize: 12 }} width={96} />
+                    <XAxis type="category" dataKey="topic" tick={{ fill: '#64748b', fontSize: 11, angle: -30, textAnchor: 'end' }} interval={0} tickMargin={8} height={64} />
+                    <YAxis type="number" allowDecimals={false} tick={{ fill: '#64748b', fontSize: 11 }} width={36} />
                     <Tooltip contentStyle={tooltipStyle} />
                     <Bar dataKey="Позитивно" stackId="a" fill="#22c55e" radius={[3, 0, 0, 3]} />
                     <Bar dataKey="Нейтрально" stackId="a" fill="#cbd5e1" />

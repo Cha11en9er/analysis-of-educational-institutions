@@ -1021,6 +1021,10 @@
 
 .ap-bars { display: flex; flex-direction: column; gap: 10px; max-width: 640px; }
 .ap-bar-row { display: grid; grid-template-columns: 120px 1fr minmax(44px, auto); align-items: center; gap: 12px; }
+.ap-sum-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 4px 0; border-bottom: 1px dashed #eef2f7; }
+.ap-sum-row .ap-bar-label { flex: 1 1 auto; min-width: 0; }
+.ap-sum-row .ap-bar-track { display: none; }
+.ap-sum-row .ap-bar-val { flex: 0 0 auto; font-variant-numeric: tabular-nums; }
 .ap-bar-label { font-size: 0.85rem; color: #475569; }
 .ap-bar-track { height: 8px; border-radius: 999px; background: #f1f5f9; overflow: hidden; }
 .ap-bar-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #fdba74, #f97316); }
@@ -1034,7 +1038,10 @@
 .ap-legend li { display: flex; align-items: center; gap: 8px; }
 .ap-dot { width: 10px; height: 10px; border-radius: 999px; display: inline-block; }
 @media (max-width: 700px) {
-  .app { flex-direction: column; }
+  /* карта сверху, панель с информацией снизу; карточка школы — нижний лист */
+  .app { flex-direction: column-reverse; }
+  /* служебная кнопка Яндекса не налезает на карточку, когда она открыта */
+  .app-card-open .ymaps3--controls_bottom { display: none; }
   .side-panel { width: 100%; max-width: none; min-width: 0; max-height: 45vh; }
   /* панель скроллится целиком, список не отдельным окошком */
   .school-list-section { flex: 0 0 auto; min-height: 0; }
@@ -1063,9 +1070,12 @@
   .bottom-card-photo-side { flex-basis: 104px; width: 104px; }
   .bottom-card-close { top: 12px; right: 12px; }
   .bottom-card-photo { width: 44px; height: 44px; flex-basis: 44px; border-radius: 9px; }
-  .bottom-card-name { font-size: 0.92rem; white-space: normal; }
+  .bottom-card-name { font-size: 0.92rem; white-space: normal; overflow: visible; text-overflow: clip; }
+  .bottom-card-name .star-rating { flex: 0 0 auto; }
   .bottom-card-address { font-size: 0.74rem; }
-  .bottom-card-rank { min-width: 38px; padding: 3px 6px; }
+  .bottom-card-head { flex-wrap: wrap; }
+  .bottom-card-rank { min-width: 40px; padding: 3px 6px; }
+  .bottom-card-rank-total { white-space: nowrap; font-size: 0.54rem; }
   .bottom-card-score { min-width: 54px; padding: 5px 8px; }
   .bottom-card-score .score-value { font-size: 1.05rem; }
   .bottom-card-facts { gap: 12px; margin-top: 8px; }
