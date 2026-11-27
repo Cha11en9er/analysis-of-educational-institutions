@@ -124,7 +124,7 @@ async def api_cache_middleware(request: Request, call_next):
 
     # сбой обработчика (например, БД недоступна) — отдаём последнюю копию
     if response.status_code >= 500:
-        stale = _stale_response(route_key, "application/json")
+        stale = _stale_response(key, "application/json")
         if stale:
             return stale
         return response
